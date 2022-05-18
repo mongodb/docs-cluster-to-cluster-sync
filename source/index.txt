@@ -16,9 +16,9 @@ To learn more about :ref:`data migration <c2c-uses-migration>` and
 :ref:`cluster to cluster synchronization <c2c-uses-continue-sync>` with
 ``mongosync``, see the use case discussion pages.
 
-To get started with ``mongosync``, refer to the :ref:`quick start guide
+To get started with ``mongosync``, refer to the :ref:`Quick Start Guide
 <c2c-quickstart>`. For more detailed information, refer to the
-Installation or Connecting ``mongosnyc`` page that best fits your
+Installation or Connecting ``mongosync`` page that best fits your
 situation.
 
 The :ref:`Frequently Asked Questions (FAQ) <c2c-faq>` page addresses
