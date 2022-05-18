@@ -1,0 +1,6 @@
+ref: _untar-release
+copyable: true
+language: 'sh'
+code: |
+  tar -zxvf mongosync-{{platform}}-{{builder}}-{{version}}.tgz
+-

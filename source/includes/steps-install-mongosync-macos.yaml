@@ -9,7 +9,7 @@ pre: |
   |arrow| |mdb-download-link|
 
   a. In the :guilabel:`Version` dropdown, select the version of
-     MongoDB to download.
+     ``mongosync`` to download.
 
   #. In the :guilabel:`Platform` dropdown, select :guilabel:`macOS`.
 
