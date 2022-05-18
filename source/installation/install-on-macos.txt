@@ -15,15 +15,33 @@ Install on macOS
 Overview
 --------
 
-Use this tutorial to manually install MongoDB Cluster-to-Cluster Synchronization
+Use this tutorial to manually install ``mongosync``
 {+version+} on macOS using a downloaded ``.tgz`` tarball.
 
-MongoDB Cluster-to-Cluster Synchronization
-is available on select platforms.
+``mongosync`` is available on select platforms.
 
 MongoDB Cluster-to-Cluster Synchronization Version
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. include:: /includes/fact-install-past-mongosync.rst
 
+Considerations
+--------------
 
+Platform Support
+~~~~~~~~~~~~~~~~
+
+.. // TODO: Add include for platform support.
+
+Production Notes
+~~~~~~~~~~~~~~~~
+
+.. // TODO: Add include for production notes.
+
+Install ``mongosync``
+---------------------------------------------------
+
+Follow these steps to manually install ``mongosync`` from
+the ``.tgz``.
+
+.. include:: /includes/steps/install-mongosync-macos.rst
