@@ -6,24 +6,4 @@ Install on Linux
 
 .. default-domain:: mongodb
 
-.. contents:: On this page
-   :local:
-   :backlinks: none
-   :depth: 1
-   :class: twocols
-
-Overview
---------
-
-Use this tutorial to manually install MongoDB Cluster-to-Cluster Synchronization
-{+version+} on macOS using a downloaded ``.tgz`` tarball.
-
-MongoDB Cluster-to-Cluster Synchronization
-is available on select platforms.
-
-MongoDB Cluster-to-Cluster Synchronization Version
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-.. include:: /includes/fact-install-past-mongosync.rst
-
-
+Linux Install

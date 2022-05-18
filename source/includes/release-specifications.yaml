@@ -1,0 +1,7 @@
+ref: untar-release-osx-x86_64
+source:
+  file: release-base.yaml
+  ref: _untar-release
+replacement:
+  platform: 'macos'
+  builder: 'x86_64'
