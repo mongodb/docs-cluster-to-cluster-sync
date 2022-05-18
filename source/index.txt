@@ -6,11 +6,11 @@ MongoDB Cluster-to-Cluster Synchronization
 
 .. default-domain:: mongodb
 
-The :ref:`c2c-mongosync` tool connects MongoDB clusters and copies data
-from one cluster to another. ``mongosync`` can facilitate a one time
-data migration from one cluster to another, or ``mongosync`` can
-provide continuous cluster to cluster synchronization for disaster
-recovery and other uses.
+The :ref:`c2c-mongosync` tool connects MongoDB clusters so data can be
+copied between clusters. ``mongosync`` can facilitate a one time
+data migration from one cluster to a second cluster. ``mongosync`` can
+also provide continuous cluster to cluster data synchronization for
+disaster recovery and other uses.
 
 To learn more about :ref:`data migration <c2c-uses-migration>` and
 :ref:`cluster to cluster synchronization <c2c-uses-continue-sync>` with
