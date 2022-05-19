@@ -38,7 +38,7 @@ Considerations
 Platform Support
 ~~~~~~~~~~~~~~~~
 
-.. include:: /includes/fact-platform-support-macos.rst
+MongoDB Cluster to Cluster Sync |version| supports macOS 10.14 or later.
 
 Install Cluster to Cluster Sync
 ---------------------------------------------------
