@@ -4,6 +4,7 @@ title = "MongoDB Cluster-to-Cluster Synchronization"
 intersphinx = [ "https://docs.mongodb.com/manual/objects.inv" ]
 
 toc_landing_pages = ["/quickstart",
+                     "/installation/install-on-linux",
                      "reference/reference",
                      "/release-notes/release-notes",
                      "/faq"
