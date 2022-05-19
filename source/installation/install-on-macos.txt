@@ -38,7 +38,7 @@ Considerations
 Platform Support
 ~~~~~~~~~~~~~~~~
 
-MongoDB Cluster to Cluster Sync |version| supports macOS 10.14 or later.
+MongoDB Cluster to Cluster Sync {+version+} supports macOS 10.14 or later.
 
 Install Cluster to Cluster Sync
 ---------------------------------------------------

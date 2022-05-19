@@ -21,11 +21,11 @@ stepnum: 2
 level: 4
 source:
   file: steps-install-mongosync-on-linux.yaml
-  ref: extract
+  ref: extract-macos
 ---
 stepnum: 3
 level: 4
 source:
   file: steps-install-mongosync-on-linux.yaml
-  ref: ensure-binaries-in-path
+  ref: c2d-ensure-binary-in-path-macos
 ...
