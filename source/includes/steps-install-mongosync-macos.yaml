@@ -27,5 +27,5 @@ stepnum: 3
 level: 4
 source:
   file: steps-install-mongosync-on-linux.yaml
-  ref: c2d-ensure-binary-in-path-macos
+  ref: c2d-ensure-binary-in-path
 ...
