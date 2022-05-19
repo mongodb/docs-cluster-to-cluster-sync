@@ -6,4 +6,8 @@ Connect Two Atlas Clusters
 
 .. default-domain:: mongodb
 
+.. include /includes/fact-connect-intro
 
+This page provides instructions to connect two Atlas clusters to each
+other.
+ 
