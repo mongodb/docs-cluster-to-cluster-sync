@@ -6,4 +6,14 @@ Install on Linux
 
 .. default-domain:: mongodb
 
-Linux Install
+These documents provide instructions to install MongoDB Cluster to Cluster Sync
+for supported Linux systems.
+
+:ref:`c2c-install-rhel`
+   Install MongoDB Cluster to Cluster Sync and required dependencies on Red Hat
+   Enterprise Linux.
+
+.. toctree::
+   :hidden:
+
+   install-on-rhel

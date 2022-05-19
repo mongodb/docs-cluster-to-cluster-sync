@@ -1,8 +1,8 @@
-.. _c2c-install-macos:
+.. _c2c-install-rhel:
 
-================
-Install on macOS
-================
+==================
+Install on Red Hat
+==================
 
 .. default-domain:: mongodb
 
@@ -13,10 +13,9 @@ Install on macOS
    :class: twocols
 
 .. |arrow| unicode:: U+27A4
-.. |edition| replace:: Enterprise
-.. |distro-name| replace:: macOS
-.. |package-manager| replace:: ``brew``
-.. |executable-name| replace:: ``mongod``
+.. |distro-name| replace:: RHEL 
+.. |package-manager| replace:: ``yum``
+.. |executable-name| replace:: ``mongosync``
 .. |mdb-download-link| replace:: `MongoDB Download Center <https://www.mongodb.com/try/download/enterprise?tck=docs_server>`__
 
 Overview
@@ -38,12 +37,12 @@ Considerations
 Platform Support
 ~~~~~~~~~~~~~~~~
 
-.. include:: /includes/fact-platform-support-macos.rst
+.. include:: /includes/fact-platform-support-rhel.rst
 
 Install Cluster to Cluster Sync
----------------------------------------------------
+-------------------------------
 
 Follow these steps to manually install Cluster to Cluster Sync from
 the ``.tgz``.
 
-.. include:: /includes/steps/install-mongosync-macos.rst
+.. include:: /includes/steps/install-mongosync-on-linux.rst
