@@ -21,7 +21,7 @@ stepnum: 2
 level: 4
 source:
   file: steps-install-mongosync-on-linux.yaml
-  ref: extract-macos
+  ref: extract
 ---
 stepnum: 3
 level: 4

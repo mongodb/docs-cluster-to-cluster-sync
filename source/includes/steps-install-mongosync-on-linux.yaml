@@ -23,7 +23,7 @@ pre: |
 title: Extract the files from the downloaded archive.
 stepnum: 2
 level: 4
-ref: extract-linux
+ref: extract
 pre: |
   For example, from a system shell, you can extract using the ``tar`` command:
 
