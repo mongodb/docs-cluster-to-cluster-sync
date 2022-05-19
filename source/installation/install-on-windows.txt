@@ -15,13 +15,21 @@ Install on Windows
 Overview
 --------
 
-Use this tutorial to manually install MongoDB Cluster-to-Cluster Synchronization
-{+version+} on macOS using a downloaded ``.tgz`` tarball.
+Use this tutorial to manually install MongoDB Cluster to Cluster Sync
+{+version+} on Windows using a downloaded ``.tgz`` tarball.
 
-MongoDB Cluster-to-Cluster Synchronization
-is available on select platforms.
+MongoDB Cluster to Cluster Sync is available on select platforms.
 
-MongoDB Cluster-to-Cluster Synchronization Version
+Cluster to Cluster Sync Version
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. include:: /includes/fact-install-past-mongosync.rst
+
+Considerations
+---------------
+
+Platform Support
+~~~~~~~~~~~~~~~~
+
+Install Cluster to Cluster Sync
+--------------------------------
