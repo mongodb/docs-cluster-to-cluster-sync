@@ -47,3 +47,8 @@ Follow these steps to manually install Cluster to Cluster Sync from
 the ``.tgz``.
 
 .. include:: /includes/steps/install-mongosync-macos.rst
+
+Run Cluster to Cluster Sync
+---------------------------
+
+.. include:: /includes/run-c2c.rst
