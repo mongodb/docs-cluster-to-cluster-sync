@@ -21,8 +21,8 @@ situation.
 
 To learn more about ``mongosync`` use cases, see:
 
-- :ref:`cluster to cluster synchronization <c2c-uses-continue-sync>`
-- :ref:`data migration <c2c-uses-migration>`
+- :ref:`Cluster to Cluster Synchronization <c2c-uses-continue-sync>`
+- :ref:`Data Migration <c2c-uses-migration>`
 
 The :ref:`Frequently Asked Questions (FAQ) <c2c-faq>` page addresses
 common questions users have asked about ``mongosync``.
