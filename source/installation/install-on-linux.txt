@@ -19,12 +19,12 @@ Install on Linux
 Overview
 --------
 
-Use this tutorial to manually install MongoDB Cluster to Cluster Sync
+Use this tutorial to manually install MongoDB Cluster-to-Cluster Sync
 {+version+} on Linux using a downloaded ``.tgz`` tarball.
 
-Cluster to Cluster Sync is available on select platforms.
+Cluster-to-Cluster Sync is available on select platforms.
 
-Cluster to Cluster Version
+Cluster-to-Cluster Version
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. include:: /includes/fact-install-past-mongosync.rst
@@ -35,7 +35,7 @@ Considerations
 Platform Support
 ~~~~~~~~~~~~~~~~
 
-Cluster to Cluster Sync is available on the following Linux operating systems:
+Cluster-to-Cluster Sync is available on the following Linux operating systems:
 
 - Red Hat Enterprise Linux (RHEL) 8
 
@@ -44,15 +44,15 @@ Cluster to Cluster Sync is available on the following Linux operating systems:
 - Ubuntu 20.04
 
 
-Install Cluster to Cluster Sync
+Install Cluster-to-Cluster Sync
 -------------------------------
 
-Follow these steps to manually install Cluster to Cluster Sync from
+Follow these steps to manually install Cluster-to-Cluster Sync from
 the ``.tgz``.
 
 .. include:: /includes/steps/install-mongosync-on-linux.rst
 
-Run Cluster to Cluster Sync
+Run Cluster-to-Cluster Sync
 ---------------------------
 
 .. include:: /includes/run-c2c.rst
