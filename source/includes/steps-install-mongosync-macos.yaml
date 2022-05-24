@@ -13,7 +13,7 @@ pre: |
 
   #. In the :guilabel:`Platform` dropdown, select :guilabel:`macOS`.
 
-  #. In the :guilabel:`Package` dropdown, select :guilabel:`tgz`.
+  #. In the :guilabel:`Package` dropdown, select :guilabel:`shell (tgz)`.
 
   #. Click :guilabel:`Download`.
 ---
