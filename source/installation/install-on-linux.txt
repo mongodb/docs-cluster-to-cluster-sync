@@ -43,6 +43,11 @@ Cluster-to-Cluster Sync is available on the following Linux operating systems:
 
 - Ubuntu 20.04
 
+Version Requirements
+~~~~~~~~~~~~~~~~~~~~
+
+.. include:: /includes/fact-mongodb-version.rst
+
 
 Install Cluster-to-Cluster Sync
 -------------------------------

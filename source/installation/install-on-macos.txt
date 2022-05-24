@@ -40,6 +40,12 @@ Platform Support
 
 MongoDB Cluster-to-Cluster Sync {+version+} supports macOS 10.14 or later.
 
+Version Requirements
+~~~~~~~~~~~~~~~~~~~~
+
+.. include:: /includes/fact-mongodb-version.rst
+
+
 Install Cluster-to-Cluster Sync
 ---------------------------------------------------
 
