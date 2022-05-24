@@ -76,7 +76,7 @@ the ``.tgz``.
 
    .. step:: Extract the files from the downloaded archive.
 
-      For example, from a system shell, you can extract using the ``tar`` command:
+      For example, from a system shell, you can extract the file using the ``tar`` command:
 
       .. code-block:: bash
 
