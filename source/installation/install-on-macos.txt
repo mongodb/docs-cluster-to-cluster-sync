@@ -71,10 +71,36 @@ the ``.tgz``.
 
       #. Click :guilabel:`Download`.
 
-old 
-~~~~
+   .. step:: Extract the files from the downloaded archive.
 
-.. include:: /includes/steps/install-mongosync-macos.rst
+      For example, from a system shell, you can extract using the ``tar`` command:
+
+      .. code-block:: bash
+
+         tar -zxvf mongosync-*.tgz
+
+   .. step:: Ensure the binary is in a directory listed in your ``PATH`` environment variable.
+
+      The ``mongosync`` binary is in the ``dist/`` directory of the tarball.
+      You can either:
+
+      - Copy the binary into a directory listed in your ``PATH``
+        variable, such as ``/usr/local/bin`` (Update
+        ``/path/to/mongosync/dist`` with your installation
+        directory as appropriate)
+
+        .. code-block:: bash
+
+           sudo cp /path/to/mongosync/dist/* /usr/local/bin/
+
+       - Create symbolic links to the binaries from a directory listed in
+         your ``PATH`` variable, such as ``/usr/local/bin`` (Update
+         ``/path/to/mongosync/dist/`` with your installation
+         directory as appropriate):
+
+         .. code-block:: bash
+
+             sudo ln -s  /path/to/mongosync/dist/* /usr/local/bin/
 
 Run Cluster-to-Cluster Sync
 ---------------------------
