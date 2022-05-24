@@ -47,7 +47,7 @@ Version Requirements
 
 
 Install Cluster-to-Cluster Sync
----------------------------------------------------
+-------------------------------
 
 Follow these steps to manually install Cluster-to-Cluster Sync from
 the ``.tgz``.
