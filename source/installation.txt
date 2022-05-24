@@ -18,9 +18,6 @@ These documents provide instructions to install Mongosync.
 :doc:`installation/install-on-macos`
    Install the official build of Mongosync on macOS.
 
-:doc:`installation/install-on-windows`
-   Install the official build of Mongosync on Windows.
-
 .. toctree::
    :hidden:
 
