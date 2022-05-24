@@ -3,7 +3,7 @@ ref: download-mongosync-macos
 level: 4
 title: Download the tarball.
 pre: |
-  Download the Cluster-to-Cluster Sync ``tgz`` tarball from the following
+  Download the Cluster-to-Cluster Sync ``.tgz`` tarball from the following
   link:
 
   |arrow| |mdb-download-link|

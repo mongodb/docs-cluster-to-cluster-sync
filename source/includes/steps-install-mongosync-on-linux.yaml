@@ -6,7 +6,7 @@ level: 4
 ref: download-mongosync-linux
 pre: |
   After you have installed the required prerequisite packages, download
-  the Cluster-to-Cluster Sync ``tgz`` tarball from the following link:
+  the Cluster-to-Cluster Sync ``.tgz`` tarball from the following link:
 
   |arrow| |mdb-download-link|
 
