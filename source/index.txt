@@ -1,8 +1,8 @@
 .. _c2c-index:
 
-===============================
-MongoDB Cluster-to-Cluster Sync
-===============================
+=======================
+Cluster-to-Cluster Sync
+=======================
 
 .. default-domain:: mongodb
 
