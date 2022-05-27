@@ -35,7 +35,7 @@ common questions users have asked about ``mongosync``.
 
    /quickstart
    /installation
-   /running-mongosync
+   /using-mongosync
    /connecting
    /reference
    /release-notes
