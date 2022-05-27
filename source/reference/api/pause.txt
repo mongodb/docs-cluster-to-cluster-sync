@@ -42,7 +42,7 @@ The following example pauses the current synchronization operation.
 Request
 ~~~~~~~
 
-.. literalinclude:: /includes/api/requests/start.sh
+.. literalinclude:: /includes/api/requests/pause.sh
    :language: shell
 
 Response
