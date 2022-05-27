@@ -61,7 +61,7 @@ the source and ``cluster1`` is the destination.
 Request
 ~~~~~~~
 
-.. literalinclude:: /includes/api/requests/start.sh
+.. literalinclude:: /includes/api/requests/pause.sh
    :language: shell
 
 Response
