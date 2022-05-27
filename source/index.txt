@@ -11,7 +11,7 @@ data synchronization between two MongoDB clusters in the same or
 hybrid environments. Customers can enable {+c2c-product-name+} via
 the :ref:`mongosync` utility tool.
 
-``mongosync`` can continuous synchronize data between two clusters.
+``mongosync`` can continuously synchronize data between two clusters.
 You can use ``mongosync`` to create dedicated analytics, development,
 or testing environments that mirror your production environment.
 Synchronized clusters can also support location requirements for audit
