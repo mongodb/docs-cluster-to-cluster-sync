@@ -4,6 +4,8 @@
 Connect a Self-Managed Cluster to Atlas
 =======================================
 
+.. include:: /includes/preview-warning-interior-pages
+
 .. default-domain:: mongodb
 
 self-managed to atlas

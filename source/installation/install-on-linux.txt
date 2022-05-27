@@ -4,6 +4,8 @@
 Install on Linux
 ================
 
+.. include:: /includes/preview-warning-interior-pages
+
 .. default-domain:: mongodb
 
 .. contents:: On this page
