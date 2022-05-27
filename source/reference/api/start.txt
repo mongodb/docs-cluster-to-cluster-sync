@@ -15,8 +15,7 @@
 Description
 -----------
 
-The ``start`` endpoint starts the synchronization between a source and
-destination cluster.
+Starts the synchronization between a source and destination cluster.
 
 Request
 -------
