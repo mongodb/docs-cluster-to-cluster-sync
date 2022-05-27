@@ -1,0 +1,61 @@
+.. _c2c-api-pause:
+
+=========
+``pause``
+=========
+
+.. default-domain:: mongodb
+
+.. contents:: On this page
+   :local:
+   :backlinks: none
+   :depth: 2
+   :class: singlecol
+
+Description
+-----------
+
+Pauses the current synchronization operation. 
+
+Request
+-------
+
+.. code-block:: http
+
+   POST /api/v1/pause 
+
+Request Body Parameters
+~~~~~~~~~~~~~~~~~~~~~~~
+
+This endpoint does not use HTTP request body parameters.
+
+Response
+--------
+
+.. include:: /includes/api/tables/basic-response.rst
+
+Example
+-------
+
+The following example pauses the current synchronization operation.
+
+Request
+~~~~~~~
+
+.. literalinclude:: /includes/api/requests/start.sh
+   :language: shell
+
+Response
+~~~~~~~~
+
+.. literalinclude:: /includes/api/responses/success.sh
+   :language: shell
+
+Behavior
+--------
+
+If a ``pause`` request is sent when {+c2c-product-name+} is in a state
+other than ``RUNNING``, the request fails.
+
+After the ``pause`` request completes, {+c2c-product-name+} enters the
+``PAUSED`` state.
