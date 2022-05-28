@@ -17,6 +17,12 @@ Description
 
 Starts the synchronization between a source and destination cluster.
 
+Requirement
+-----------
+
+To use the ``start`` endpoint, the {+c2c-product-name+} must be in the
+``IDLE`` state.
+
 Request
 -------
 
@@ -73,5 +79,5 @@ Response
 Behavior
 --------
 
-If a ``start`` request is sent when {+c2c-product-name+} is in a state
-other than ``IDLE``, the request fails.
+If the ``start`` request is successful, {+c2c-product-name+} enters the
+``RUNNING`` state.
