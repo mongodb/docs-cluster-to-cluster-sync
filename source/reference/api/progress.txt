@@ -45,7 +45,7 @@ Request
 Response
 ~~~~~~~~
 
-.. literalinclude:: /includes/api/responses/progress.sh
+.. literalinclude:: /includes/api/responses/progress.json
    :language: json
 
 Behavior
