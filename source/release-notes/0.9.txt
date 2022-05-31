@@ -6,8 +6,6 @@ Release Notes for ``mongosync`` 0.9
 
 .. default-domain:: mongodb
 
-.. include:: /includes/preview-warning-top
-
 .. contents:: On this page
    :local:
    :backlinks: none
@@ -19,5 +17,5 @@ Release Notes for ``mongosync`` 0.9
 Preview Software
 ----------------
 
-.. include:: /includes/preview-warning-top
+.. include:: /includes/preview-warning
 
