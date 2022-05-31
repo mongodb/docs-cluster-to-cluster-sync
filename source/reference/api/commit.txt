@@ -23,8 +23,8 @@ Requirement
 To use the ``commit`` endpoint, the following conditions must be met:
 
 - The {+c2c-product-name+} must be in the ``RUNNING`` state. 
-- The ``canCommit`` boolean returned by the ``progress
-  <c2c-api-progress>`` endpoint must be ``true``.
+- The ``canCommit`` boolean returned by the :ref:`progress
+  <c2c-api-progress>` endpoint must be ``true``.
 
 Request
 -------
@@ -53,8 +53,8 @@ Confirm that the Synchronization is Ready
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Before sending a request to the ``commit`` endpoint, use the
-``progress`` endpoint to confirm that the synchronization is ready to
-be committed.
+:ref:`progress <c2c-api-progress>` endpoint to confirm that the
+synchronization is ready to be committed.
 
 Request
 ```````
@@ -69,11 +69,13 @@ Response
    :language: shell
    :emphasize-lines: 5
 
+The ``progress`` endpoint returned ``"canCommit":true``, which means
+that the ``commit`` request can run successfully.
+
 Send the Commit Request
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-The ``progress`` endpoint returned ``"canCommit":true``, which means
-that the ``commit`` request can run successfully.
+The following command sends a request to the ``commit`` endpoint:
 
 Request
 ```````
