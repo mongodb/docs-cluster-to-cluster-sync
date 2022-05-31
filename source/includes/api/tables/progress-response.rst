@@ -33,12 +33,12 @@
 
    * - ``collectionCopy``
      - object
-     - Describes the total amount of data being synchronized and the
+     - Describes the total amount of data being copied and the
        amount that has already been copied to the destination cluster.
 
    * - ``collectionCopy.estimatedTotalBytes``
      - integer
-     - Estimated total number of bytes to be synchronized.
+     - Estimated total number of bytes to be copied.
 
    * - ``collectionCopy.estimatedCopiedBytes``
      - integer
