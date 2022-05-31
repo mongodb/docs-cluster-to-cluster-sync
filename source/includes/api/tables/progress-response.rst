@@ -36,13 +36,11 @@
      - Describes the total amount of data being synchronized and the
        amount that has already been copied to the destination cluster.
 
-   * - | ``collectionCopy``
-       | ``.estimatedTotalBytes``
+   * - ``collectionCopy.estimatedTotalBytes``
      - integer
      - Estimated total number of bytes to be synchronized.
 
-   * - | ``collectionCopy``
-       | ``.estimatedCopiedBytes``
+   * - ``collectionCopy.estimatedCopiedBytes``
      - integer
      - Estimated number of bytes which have been copied to the
        destination cluster.
@@ -52,14 +50,12 @@
      - Describes the mapping direction for the synchronization, namely
        the source and destination clusters.
 
-   * - | ``directionMapping``
-       | ``.Source``
+   * - ``directionMapping.Source``
      - string
      - Source cluster. Returned in the form
        ``<cluster name>: <host>:<port>``.
 
-   * - | ``directionMapping``
-       | ``.Destination``
+   * - ``directionMapping.Destination``
      - string
      - Destination cluster. Returned in the form
        ``<cluster name>: <host>:<port>``.
