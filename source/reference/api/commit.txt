@@ -36,7 +36,7 @@ Request
 Request Body Parameters
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-This endpoint does not use HTTP request body parameters.
+.. include:: includes/api/facts/no-body-parameters.rst
 
 Response
 --------
