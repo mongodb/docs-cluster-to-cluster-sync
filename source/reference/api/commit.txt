@@ -59,7 +59,7 @@ synchronization is ready to be committed.
 Request
 ```````
 
-.. literalinclude:: /includes/api/requests/progress.json
+.. literalinclude:: /includes/api/requests/progress.sh
    :language: shell
 
 Response
