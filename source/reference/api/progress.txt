@@ -27,6 +27,8 @@ Request
 Response
 --------
 
+All response fields are wrapped in a top-level ``progress`` object.
+
 .. include:: /includes/api/tables/progress-response.rst
 
 Example
