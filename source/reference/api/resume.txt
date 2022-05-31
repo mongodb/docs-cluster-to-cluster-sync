@@ -15,8 +15,8 @@
 Description
 -----------
 
-Resumes a paused synchronization session based on resume data stored on
-the destination cluster.
+Resumes a paused synchronization session based on data stored on the
+destination cluster.
 
 Requirement
 -----------
