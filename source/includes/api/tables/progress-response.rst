@@ -7,7 +7,7 @@
      - Type
      - Description
 
-   * - state
+   * - ``state``
      - string
      - The current state of {+c2c-product-name+}.
 
