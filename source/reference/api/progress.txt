@@ -15,7 +15,7 @@
 Description
 -----------
 
-Returns information about the status of the synchronization process.
+Returns the status of the synchronization process.
 
 Request
 -------
