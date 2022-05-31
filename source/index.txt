@@ -6,7 +6,7 @@ Cluster-to-Cluster Sync
 
 .. warning:: {+c2c-full-product-name+} is preview software.
 
-   .. include:: /includes/preview-warning-top
+   .. include:: /includes/preview-warning
 
 .. default-domain:: mongodb
 

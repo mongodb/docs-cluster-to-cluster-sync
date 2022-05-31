@@ -6,7 +6,7 @@
 Using ``mongosync``
 ===================
 
-.. include:: /includes/preview-warning-interior-pages
+.. include:: /includes/preview-warning
  
 .. toctree::
    :titlesonly: 

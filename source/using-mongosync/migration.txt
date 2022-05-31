@@ -4,7 +4,7 @@
 Migrate Data to Another Cluster
 ===============================
 
-.. include:: /includes/preview-warning-interior-pages
+.. include:: /includes/preview-warning
 
 .. default-domain:: mongodb
 

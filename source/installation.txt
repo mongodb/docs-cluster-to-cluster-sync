@@ -4,7 +4,7 @@
 Installation
 ============
 
-.. include:: /includes/preview-warning-interior-pages
+.. include:: /includes/preview-warning
 
 .. contents:: On this page
    :local:
