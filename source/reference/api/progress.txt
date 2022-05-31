@@ -44,7 +44,7 @@ Response
 ~~~~~~~~
 
 .. literalinclude:: /includes/api/responses/progress.sh
-   :language: shell
+   :language: json
 
 Behavior
 --------
