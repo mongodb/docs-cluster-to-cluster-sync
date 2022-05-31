@@ -12,4 +12,5 @@ API
    /reference/api/commit
    /reference/api/pause
    /reference/api/progress
+   /reference/api/resume
    /reference/api/start
