@@ -9,5 +9,7 @@ API
 .. toctree::
    :titlesonly: 
 
+   /reference/api/commit
    /reference/api/pause
+   /reference/api/progress
    /reference/api/start
