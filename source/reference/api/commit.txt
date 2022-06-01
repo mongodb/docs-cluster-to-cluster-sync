@@ -28,16 +28,16 @@ Before using the ``commit`` endpoint:
 - Use the :ref:`progress <c2c-api-progress>` endpoint to confirm the
   following values:
 
-  - ``state`` is ``RUNNING``.
-  - ``canCommit`` is ``true``.
-  - ``lagTimeSeconds`` is ``0``.
+  - ``state: "RUNNING"``
+  - ``canCommit: true``
+  - ``lagTimeSeconds: 0``
 
     .. note:: lagTimeSeconds
 
        ``lagTimeSeconds`` indicates the time between the last applied
        event and time of the current latest event.
        
-       When ``lagTimeSeconds`` is ``0``, this signifies that the source and
+       When ``lagTimeSeconds`` is ``0``, this means that the source and
        destination clusters are in a consistent state.
 
 Request
