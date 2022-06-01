@@ -5,7 +5,9 @@
 Connecting ``mongosync``
 ========================
 
-.. include /includes/fact-connect-intro
+.. include:: /includes/preview-warning
+
+.. include:: /includes/fact-connect-intro
 
 .. contents:: On this page
    :local:
