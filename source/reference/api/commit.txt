@@ -17,14 +17,28 @@ Description
 
 Commits the synchronization operation to the destination cluster.
 
-Requirement
------------
+Requirements
+------------
 
-To use the ``commit`` endpoint, the following conditions must be met:
+Before using the ``commit`` endpoint:
 
-- The {+c2c-product-name+} must be in the ``RUNNING`` state. 
-- The ``canCommit`` boolean returned by the :ref:`progress
-  <c2c-api-progress>` endpoint must be ``true``.
+- Stop your application. This ensures that no additional writes occur on
+  the source cluster.
+
+- Use the :ref:`progress <c2c-api-progress>` endpoint to confirm the
+  following values:
+
+  - ``state`` is ``RUNNING``.
+  - ``canCommit`` is ``true``.
+  - ``lagTimeSeconds`` is ``0``.
+
+    .. note:: lagTimeSeconds
+
+       ``lagTimeSeconds`` indicates the time between the last applied
+       event and time of the current latest event.
+       
+       When ``lagTimeSeconds`` is ``0``, this signifies that the source and
+       destination clusters are in a consistent state.
 
 Request
 -------
@@ -69,8 +83,9 @@ Response
    :language: shell
    :emphasize-lines: 5
 
-The ``progress`` endpoint returned ``"canCommit":true``, which means
-that the ``commit`` request can run successfully.
+The ``progress`` endpoint returned ``"canCommit":true``, and
+``"lagTimeSeconds":0``, which means that the ``commit`` request can run
+successfully.
 
 Send the Commit Request
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -95,8 +110,3 @@ Behavior
 If the ``commit`` request is successful, {+c2c-product-name+} enters the
 ``COMMITTING`` state, then automatically transitions to the
 ``COMMITTED`` state.
-
-The amount of time that it takes {+c2c-product-name+} to transition from
-the ``COMMITTING`` state to the ``COMMITTED`` state is indicated by the
-``lagTimeSeconds`` in the :ref:`progress <c2c-api-progress>` endpoint
-output.

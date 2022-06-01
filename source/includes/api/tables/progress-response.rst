@@ -22,6 +22,7 @@
      - Provides extra information on the synchronization progress.
        Possible ``info`` values include:
 
+       - ``"collection copy"``
        - ``"change event application"``
        - ``"waiting for commit to complete"``
        - ``"commit completed"``
