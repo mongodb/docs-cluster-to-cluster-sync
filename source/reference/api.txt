@@ -2,15 +2,15 @@
 
 .. default-domain:: mongodb
 
-===
-API
-===
+=============
+API Endpoints
+=============
 
 .. toctree::
    :titlesonly: 
 
-   /reference/api/commit
-   /reference/api/pause
-   /reference/api/progress
-   /reference/api/resume
    /reference/api/start
+   /reference/api/progress
+   /reference/api/pause
+   /reference/api/resume
+   /reference/api/commit
