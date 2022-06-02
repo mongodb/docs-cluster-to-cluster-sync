@@ -1,0 +1,18 @@
+.. _c2c-states:
+
+==============================
+Cluster-to-Cluster Sync States
+==============================
+
+.. default-domain:: mongodb
+
+.. contents:: On this page
+   :local:
+   :backlinks: none
+   :depth: 2
+   :class: singlecol
+
+This page describes the states that {+c2c-product-name+} can be in.
+Different operations progress {+c2c-product-name+} to different states.
+The possible API operations you can run depend on the state of
+{+c2c-product-name+}.

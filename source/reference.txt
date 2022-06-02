@@ -9,4 +9,4 @@ Reference
 
    /reference/mongosync
    /reference/api
-
+   /reference/mongosync-states
