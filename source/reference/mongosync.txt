@@ -36,12 +36,14 @@ Global Options
 
    Sets the :ref:`connection URI <mongodb-uri>` for the first cluster.
    The first cluster can serve as either the source cluster or the
-   destination cluster in the sync process.
+   destination cluster in the sync process. Designate the source and
+   destination clusters in the call to the :ref:`c2c-api-start` API
+   endpoint.
 
    .. note::
 
       - The cluster must use MongoDB 6.0 or later.
-      - ``mongosync`` supports replica sets and shared clusters.
+      - ``mongosync`` supports replica sets and sharded clusters.
       - Standalone MongoDB instances are not supported.
 
    For more information on connecting ``mongosync``, see
@@ -50,13 +52,15 @@ Global Options
 .. option:: --cluster1 <URI>
 
    Sets the :ref:`connection URI <mongodb-uri>` for the second cluster.
-   The second cluster can serve as either the source cluster or the destination 
-   cluster in the sync process.
+   The second cluster can serve as either the source cluster or the
+   destination cluster in the sync process. Designate the source and
+   destination clusters in the call to the :ref:`c2c-api-start` API
+   endpoint.
 
    .. note::
 
       - The cluster must use MongoDB 6.0 or later.
-      - ``mongosync`` supports replica sets and shared clusters.
+      - ``mongosync`` supports replica sets and sharded clusters.
       - Standalone MongoDB instances are not supported.
 
    For more information on connecting ``mongosync``, see
@@ -66,8 +70,9 @@ Global Options
 
    *Default*: ``INFO``
 
-   Sets the verbosity level to use in log messages.  Cluster-to-Cluster Sync logs
-   all messages at the specified level as well as any messages at less severe levels.
+   Sets the verbosity level to use in log messages.
+   {+c2c-product-name+} logs all messages at the specified level and
+   any messages at lower levels.
 
    The ``--verbosity`` option supports the following values:
 
@@ -81,23 +86,26 @@ Global Options
 
 .. option:: --logPath <DIR>
 
-   Sets the path to the log directory. Cluster-to-Cluster Sync writes logs to
-   files in this directory.
+   Sets the path to the log directory. {+c2c-product-name+} writes logs
+   to files in this directory.
 
 .. option:: --port
 
    *Default*: ``27182``
 
-   Sets the port used by the HTTP server for the Cluster-to-Cluster Sync REST API.
+   Sets the port used by the HTTP server for the {+c2c-product-name+}
+   REST API.
 
 .. option:: --id <ID>
 
    Sets an identifier for the ``mongosync`` instance.
 
-   Use this option when running multiple instances of ``mongosync`` on a sharded
-   cluster, to synchronize the shards individually.  The ``--id`` option must
-   correspond to the shard ID of the shard it
-   syncs.  To find the shard ID, use the :dbcommand:`listShards` command.
+   Use this option when running multiple instances of ``mongosync`` on
+   a sharded cluster, to synchronize the shards individually. 
+   
+   The ``--id`` option must correspond to the shard ID of the shard it
+   syncs.  To find the shard ID, use the :dbcommand:`listShards`
+   command.
 
 .. option:: --config <filename>
 
