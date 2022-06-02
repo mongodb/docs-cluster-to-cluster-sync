@@ -30,7 +30,7 @@ Before using the ``commit`` endpoint:
 
   - ``state: "RUNNING"``
   - ``canCommit: true``
-  - (*Recommended*) ``lagTimeSeconds`` is near ``0``
+  - ``lagTimeSeconds`` is near ``0`` (*Recommended, but not required*)
 
     .. note:: lagTimeSeconds
 
