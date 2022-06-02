@@ -26,6 +26,12 @@ another and can keep the clusters in continuous sync.
 This document provides a complete overview of the ``mongosync`` command
 line options.
 
+.. note::
+
+   - The cluster must use MongoDB 6.0 or later.
+   - ``mongosync`` supports replica sets and sharded clusters.
+   - Standalone MongoDB instances are not supported.
+
 Options
 -------
 
@@ -35,16 +41,9 @@ Global Options
 .. option:: --cluster0 <URI>
 
    Sets the :ref:`connection URI <mongodb-uri>` for the first cluster.
-   The first cluster can serve as either the source cluster or the
-   destination cluster in the sync process. Designate the source and
-   destination clusters in the call to the :ref:`c2c-api-start` API
-   endpoint.
-
-   .. note::
-
-      - The cluster must use MongoDB 6.0 or later.
-      - ``mongosync`` supports replica sets and sharded clusters.
-      - Standalone MongoDB instances are not supported.
+   The first cluster can serve as either the source or the destination
+   in the sync process. Designate the source and destination clusters
+   in the call to the :ref:`c2c-api-start` API endpoint.
 
    For more information on connecting ``mongosync``, see
    :ref:`Connections <c2c-connecting>`.
@@ -52,16 +51,9 @@ Global Options
 .. option:: --cluster1 <URI>
 
    Sets the :ref:`connection URI <mongodb-uri>` for the second cluster.
-   The second cluster can serve as either the source cluster or the
-   destination cluster in the sync process. Designate the source and
-   destination clusters in the call to the :ref:`c2c-api-start` API
-   endpoint.
-
-   .. note::
-
-      - The cluster must use MongoDB 6.0 or later.
-      - ``mongosync`` supports replica sets and sharded clusters.
-      - Standalone MongoDB instances are not supported.
+   The second cluster can serve as either the source or the destination
+   in the sync process. Designate the source and destination clusters
+   in the call to the :ref:`c2c-api-start` API endpoint.
 
    For more information on connecting ``mongosync``, see
    :ref:`Connections <c2c-connecting>`.
