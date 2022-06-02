@@ -39,10 +39,10 @@ Global Options
    destination cluster in the sync process.
 
    .. note::
- 
-      The cluster must use MongoDB 6.0 or later.``mongosync`` supports
-      replica sets and shared clusters. Standalone MongoDB instances
-      are not supported.
+
+      - The cluster must use MongoDB 6.0 or later.
+      - ``mongosync`` supports replica sets and shared clusters.
+      - Standalone MongoDB instances are not supported.
 
    For more information on connecting ``mongosync``, see
    :ref:`Connections <c2c-connecting>`.
@@ -55,9 +55,9 @@ Global Options
 
    .. note::
 
-      The cluster must use MongoDB 6.0 or later.``mongosync`` supports
-      replica sets and shared clusters. Standalone MongoDB instances
-      are not supported.
+      - The cluster must use MongoDB 6.0 or later.
+      - ``mongosync`` supports replica sets and shared clusters.
+      - Standalone MongoDB instances are not supported.
 
    For more information on connecting ``mongosync``, see
    :ref:`Connections <c2c-connecting>`.
