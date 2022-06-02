@@ -31,7 +31,6 @@ Use the connection information you gathered to create the connection
 strings for ``cluster0`` and ``cluster1``:
 
 .. code-block:: shell
-   :copyable: false
 
    cluster0:
    mongodb://clusterAdmin:superSecret@clusterOne01.fancyCorp.com:20020,clusterOne02.fancyCorp.com:20020,clusterOne03.fancyCorp.com:20020
@@ -43,7 +42,6 @@ connect ``cluster0`` to ``cluster`` with ``mongosync``, enter the
 following command on one line:
 
 .. code-block:: shell
-   :copyable: false
 
    mongosync --cluster0 mongodb://clusterAdmin:superSecret@clusterOne01.fancyCorp.com:20020,
                        clusterOne02.fancyCorp.com:20020,
