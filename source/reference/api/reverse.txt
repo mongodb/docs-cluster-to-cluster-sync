@@ -19,10 +19,16 @@ Description
 
 Reverses the direction of a committed sync operation.
 
-For example, if you have a ``COMMITTED`` a sync operation where
-``cluster0`` is the source and ``cluster1`` is the destination, and only
-new writes occur on the destination cluster after the operation is
-``COMMITTED``, then you can use the ``reverse`` endpoint to sync writes
+For example:
+
+- You have a ``COMMITTED`` sync operation.
+
+- ``cluster0`` is the source and ``cluster1`` is the destination.
+
+- After the sync operation is ``COMMITTED``, new writes occur only on
+  the destination cluster.
+
+In this scenario, you can use the ``reverse`` endpoint to sync writes
 from ``cluster1`` to ``cluster0``.
 
 Requirements
@@ -34,7 +40,7 @@ To use the ``reverse`` endpoint:
   ``reversible`` and ``enableUserWriteBlocking`` options set to
   ``true``.
 
-- {+c2c-product-name+} must be in the ``COMMITTED`` state.
+- ``mongosync`` must be in the ``COMMITTED`` state.
 
 Request
 -------
@@ -57,7 +63,7 @@ Response
 Example
 -------
 
-The following reverses the direction of a committed sync operation.
+The following example reverses the direction of a committed sync operation.
 
 Request
 ~~~~~~~
@@ -75,8 +81,8 @@ Response
 Behavior
 --------
 
-If the ``reverse`` request is successful, {+c2c-product-name+} enters the
-``RUNNING`` state, with replication going in the reverse direction from
+If the ``reverse`` request is successful, ``mongosync`` enters the
+``RUNNING`` state. Replication continues in the reverse direction from
 the original sync job.
 
 To view the mapping direction for the synchronization of the source and
