@@ -29,7 +29,7 @@ Requirements
 
 To use the ``reverse`` endpoint:
 
-- Your original sync operation must have been started with the
+- You must have started your original sync operation with the
   ``reversible`` and ``enableUserWriteBlocking`` options set to
   ``true``.
 
