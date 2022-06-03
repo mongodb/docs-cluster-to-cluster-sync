@@ -26,6 +26,8 @@ To view the current state of {+c2c-product-name+}, use the
 :ref:`/progress <c2c-api-progress>`. endpoint. The endpoint returns the
 state in the ``state`` field.
 
+.. _c2c-states-descriptions:
+
 State Descriptions
 ------------------
 
