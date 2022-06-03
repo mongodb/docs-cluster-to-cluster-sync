@@ -58,7 +58,7 @@ Response
 ~~~~~~~~
 
 .. literalinclude:: /includes/api/responses/success.json
-   :language: shell
+   :language: json
    :copyable: false
 
 Behavior

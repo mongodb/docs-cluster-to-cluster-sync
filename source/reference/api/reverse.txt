@@ -24,11 +24,16 @@ is the source and ``cluster1`` is the destination, if you use the
 ``reverse`` endpoint, {+c2c-product-name+} will sync onging writes from
 ``cluster1`` to ``cluster0``.
 
-Requirement
------------
+Requirements
+------------
 
-To use the ``reverse`` endpoint, the {+c2c-product-name+} must be in the
-``COMMITTED`` state.
+To use the ``reverse`` endpoint:
+
+- Your original sync operation must have been started with the
+  ``reversible`` and ``enableUserWriteBlocking`` options set to
+  ``true``.
+
+- {+c2c-product-name+} must be in the ``COMMITTED`` state.
 
 Request
 -------
@@ -63,7 +68,7 @@ Response
 ~~~~~~~~
 
 .. literalinclude:: /includes/api/responses/success.json
-   :language: shell
+   :language: json
    :copyable: false
 
 Behavior
