@@ -108,6 +108,7 @@ Response
 
 .. literalinclude:: /includes/api/responses/success.json
    :language: json
+   :copyable: false
 
 Behavior
 --------
