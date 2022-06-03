@@ -30,7 +30,7 @@ State Descriptions
 ------------------
 
 The following table describes each state and the operations you can run
-when {+c2c-product-name+} is in each state.
+when {+c2c-product-name+} is in a given state.
 
 .. list-table::
    :header-rows: 1
