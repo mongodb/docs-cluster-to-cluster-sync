@@ -1,0 +1,73 @@
+.. _c2c-api-reverse:
+
+===========
+``reverse``
+===========
+
+.. include:: /includes/preview-warning
+
+.. default-domain:: mongodb
+
+.. contents:: On this page
+   :local:
+   :backlinks: none
+   :depth: 2
+   :class: singlecol
+
+Description
+-----------
+
+Reverses the direction of a committed sync operation.
+
+For example, if you have just committed a sync operation where
+``cluster0`` is the source and ``cluster1`` is the destination, if you
+use the ``reverse`` endpoint, {+c2c-product-name+} will sync writes from
+``cluster1`` to ``cluster0``.
+
+Requirement
+-----------
+
+To use the ``reverse`` endpoint, the {+c2c-product-name+} must be in the
+``COMMITTED`` state.
+
+Request
+-------
+
+.. code-block:: http
+   :copyable: false
+
+   POST /api/v1/reverse 
+
+Request Body Parameters
+~~~~~~~~~~~~~~~~~~~~~~~
+
+.. include:: includes/api/facts/no-body-parameters.rst
+
+Response
+--------
+
+.. include:: /includes/api/tables/basic-response.rst
+
+Example
+-------
+
+The following example starts a synchronization job where ``cluster0`` is
+the source and ``cluster1`` is the destination.
+
+Request
+~~~~~~~
+
+.. literalinclude:: /includes/api/requests/start.sh
+   :language: shell
+
+Response
+~~~~~~~~
+
+.. literalinclude:: /includes/api/responses/success.json
+   :language: shell
+
+Behavior
+--------
+
+If the ``start`` request is successful, {+c2c-product-name+} enters the
+``RUNNING`` state.
