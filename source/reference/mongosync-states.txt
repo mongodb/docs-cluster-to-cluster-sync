@@ -12,17 +12,60 @@ Cluster-to-Cluster Sync States
    :depth: 2
    :class: singlecol
 
-This page describes the states that {+c2c-product-name+} can be in.
-Different operations move {+c2c-product-name+} to different states.
-{+c2c-product-name+} is in a single state at a particular time. The
-possible API operations you can run depend on the state of
+
+{+c2c-product-name+} enters different states depending on the requests
+it receives. This page describes the states that {+c2c-product-name+}
+can be in. {+c2c-product-name+} is in a single state at a particular
+time. The possible API operations you can run depend on the state of
 {+c2c-product-name+}.
 
 View the Current State
 ----------------------
 
-To view the current state of {+c2c-product-name+}, use the ``/progress``
-endpoint.
+To view the current state of {+c2c-product-name+}, use the
+:ref:`/progress <c2c-api-progress>`. endpoint. The endpoint returns the
+state in the ``state`` field.
 
 State Descriptions
 ------------------
+
+The following table describes each state and the operations you can run
+when {+c2c-product-name+} is in each state.
+
+.. list-table::
+
+   * - State
+     - Description
+     - Possible API Operations
+
+   * - ``IDLE``
+     - {+c2c-product-name+} is initialized and ready for a sync job to
+       begin.
+     - - ``POST`` :ref:`/start <c2c-api-start>`
+       - ``GET`` :ref:`/progress <c2c-api-progress>`
+
+   * - ``RUNNING``
+     - The sync process is currently running. This state is where data
+       is initially synced to the destination cluster, and subsequent
+       writes are applied.
+     - - ``POST`` :ref:`/pause <c2c-api-pause>`
+       - ``POST`` :ref:`/commit <c2c-api-commit>`
+       - ``GET`` :ref:`/progress <c2c-api-progress>`
+
+   * - ``PAUSED``
+     - The sync process is paused. To resume the sync process, send a
+       request to the :ref:`/resume <c2c-api-resume>` endpoint.
+     - - ``POST`` :ref:`/resume <c2c-api-resume>`
+       - ``GET`` :ref:`/progress <c2c-api-progress>`
+
+   * - ``COMMITTING``
+     - The cutover for the sync process has started. The time it takes
+       to transition to the ``COMMITTED`` phase depends on
+       ``lagTimeSeconds``. To monitor ``lagTimeSeconds`` or see if
+       {+c2c-product-name+} has finished committing, use the
+       :ref:`/progress <c2c-api-progress>` endpoint.
+     - ``GET`` :ref:`/progress <c2c-api-progress>`
+
+   * - ``COMMITTED``
+     - The cutover for the sync process is complete.
+     - ``GET`` :ref:`/progress <c2c-api-progress>`
