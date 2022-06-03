@@ -60,8 +60,8 @@ Request Body Parameters
      - boolean
      - Optional
      - If set to ``true``, enables the synchronization operation to be
-       reversed. For more information, see the :ref:`c2c-api-reverse`
-       endpoint.
+       reversed. For more information, see the :ref:`reverse
+       <c2c-api-reverse>` endpoint.
        
        Default value is ``false``.
 
