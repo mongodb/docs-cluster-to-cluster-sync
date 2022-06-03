@@ -1,8 +1,8 @@
 .. _c2c-states:
 
-==============================
-Cluster-to-Cluster Sync States
-==============================
+====================
+``mongosync`` States
+====================
 
 .. default-domain:: mongodb
 
@@ -13,16 +13,15 @@ Cluster-to-Cluster Sync States
    :class: singlecol
 
 
-{+c2c-product-name+} enters different states depending on the requests
-it receives. This page describes the states that {+c2c-product-name+}
-can be in. {+c2c-product-name+} is in a single state at a particular
-time. The possible API operations you can run depend on the state of
-{+c2c-product-name+}.
+``mongosync`` enters different states depending on the requests it
+receives. This page describes the states that ``mongosync`` can be in.
+``mongosync`` is in a single state at a particular time. The possible
+API operations you can run depend on the state of ``mongosync``.
 
 View the Current State
 ----------------------
 
-To view the current state of {+c2c-product-name+}, use the
+To view the current state of ``mongosync``, use the
 :ref:`/progress <c2c-api-progress>`. endpoint. The endpoint returns the
 state in the ``state`` field.
 
@@ -32,7 +31,7 @@ State Descriptions
 ------------------
 
 The following table describes each state and the operations you can run
-when {+c2c-product-name+} is in a given state.
+when ``mongosync`` is in a given state.
 
 .. list-table::
    :header-rows: 1
@@ -43,14 +42,14 @@ when {+c2c-product-name+} is in a given state.
      - Possible API Operations
 
    * - ``IDLE``
-     - {+c2c-product-name+} is initialized and ready for a sync job to
+     - ``mongosync`` is initialized and ready for a sync job to
        begin.
      - - ``POST`` :ref:`/start <c2c-api-start>`
        - ``GET`` :ref:`/progress <c2c-api-progress>`
 
    * - ``RUNNING``
-     - The sync process is currently running. This state is where data
-       is initially synced to the destination cluster, and subsequent
+     - The sync process is currently running. In this state, data is
+       initially synced to the destination cluster, and subsequent
        writes are applied.
      - - ``POST`` :ref:`/pause <c2c-api-pause>`
        - ``POST`` :ref:`/commit <c2c-api-commit>`
@@ -66,7 +65,7 @@ when {+c2c-product-name+} is in a given state.
      - The cutover for the sync process has started. The time it takes
        to transition to the ``COMMITTED`` phase depends on
        ``lagTimeSeconds``. To monitor ``lagTimeSeconds`` or see if
-       {+c2c-product-name+} has finished committing, use the
+       ``mongosync`` has finished committing, use the
        :ref:`/progress <c2c-api-progress>` endpoint.
      - - ``GET`` :ref:`/progress <c2c-api-progress>`
 
