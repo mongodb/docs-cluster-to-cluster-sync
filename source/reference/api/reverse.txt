@@ -19,10 +19,11 @@ Description
 
 Reverses the direction of a committed sync operation.
 
-For example, if you have committed a sync operation where ``cluster0``
-is the source and ``cluster1`` is the destination, if you use the
-``reverse`` endpoint, {+c2c-product-name+} will sync onging writes from
-``cluster1`` to ``cluster0``.
+For example, if you have a ``COMMITTED`` a sync operation where
+``cluster0`` is the source and ``cluster1`` is the destination, and only
+new writes occur on the destination cluster after the operation is
+``COMMITTED``, then you can use the ``reverse`` endpoint to sync writes
+from ``cluster1`` to ``cluster0``.
 
 Requirements
 ------------
@@ -77,3 +78,7 @@ Behavior
 If the ``reverse`` request is successful, {+c2c-product-name+} enters the
 ``RUNNING`` state, with replication going in the reverse direction from
 the original sync job.
+
+To view the mapping direction for the synchronization of the source and
+destination clusters, use the :ref:`progress <c2c-api-progress>`
+endpoint and check the ``directionMapping`` object.
