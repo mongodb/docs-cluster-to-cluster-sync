@@ -14,9 +14,9 @@
 
 
 ``mongosync`` enters different states depending on the requests it
-receives. ``mongosync`` can only be in a single state at a particular
-time. The current ``mongosync`` states determines which API operations
-you can run.
+receives. ``mongosync`` can only be in a single state at a given time.
+The current ``mongosync`` states determines which API operations you can
+run.
 
 This page describes ``mongosync`` states.
 
