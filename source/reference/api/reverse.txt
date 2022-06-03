@@ -19,9 +19,9 @@ Description
 
 Reverses the direction of a committed sync operation.
 
-For example, if you have just committed a sync operation where
-``cluster0`` is the source and ``cluster1`` is the destination, if you
-use the ``reverse`` endpoint, {+c2c-product-name+} will sync writes from
+For example, if you have committed a sync operation where ``cluster0``
+is the source and ``cluster1`` is the destination, if you use the
+``reverse`` endpoint, {+c2c-product-name+} will sync writes from
 ``cluster1`` to ``cluster0``.
 
 Requirement
@@ -51,13 +51,12 @@ Response
 Example
 -------
 
-The following example starts a synchronization job where ``cluster0`` is
-the source and ``cluster1`` is the destination.
+The following reverses the direction of a committed sync operation.
 
 Request
 ~~~~~~~
 
-.. literalinclude:: /includes/api/requests/start.sh
+.. literalinclude:: /includes/api/requests/reverse.sh
    :language: shell
 
 Response
@@ -65,9 +64,11 @@ Response
 
 .. literalinclude:: /includes/api/responses/success.json
    :language: shell
+   :copyable: false
 
 Behavior
 --------
 
-If the ``start`` request is successful, {+c2c-product-name+} enters the
-``RUNNING`` state.
+If the ``reverse`` request is successful, {+c2c-product-name+} enters the
+``RUNNING`` state, with replication going in the reverse direction from
+the original sync job.
