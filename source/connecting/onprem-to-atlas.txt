@@ -27,6 +27,8 @@ Connection Strings
 
 .. include:: /includes/fact-connection-strings
 
+.. include:: /includes/fact-connect-sharded
+
 Authentication
 --------------
 
@@ -38,11 +40,6 @@ Roles
 -----
 
 .. include:: /includes/fact-atlas-roles
-
-Sharded Clusters
-----------------
-
-.. include:: /includes/fact-connect-sharded
 
 Behavior
 --------

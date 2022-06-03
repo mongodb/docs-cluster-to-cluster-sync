@@ -26,6 +26,8 @@ Connection Strings
 
 .. include:: /includes/fact-connection-strings
 
+.. include:: /includes/fact-connect-sharded
+
 Authentication
 --------------
 
