@@ -29,11 +29,6 @@ Authentication
 
 .. include:: /includes/fact-onprem-auth
 
-Sharded Clusters
-----------------
-
-.. include:: /includes/fact-connect-sharded
-
 Behavior
 --------
 
