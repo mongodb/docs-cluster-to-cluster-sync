@@ -80,17 +80,18 @@ Follow the instructions below to setup {+c2c-product-name+}.
       :ref:`Atlas admin <atlas-user-privileges>` role. The user must
       also be able to :ref:`read the oplog <ref-atlas-oplog>`.
 
-      To add an Atlas user, see: :ref:`mongodb-users`.
-
-      To add a user to a self-managed cluster, see: :ref:`create-users`.
-
-      To verify user permissions, run :method:`db.getUser()`.
-
       Destination Cluster Authentication Requirements
       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
       If the destination cluster is hosted in Atlas, the user must have
       the :ref:`Atlas admin <atlas-user-privileges>` role.
+
+      Cluster Definition Notes
+      ~~~~~~~~~~~~~~~~~~~~~~~~
+
+      - To add an Atlas user, see: :ref:`mongodb-users`.
+      - To add a user to a self-managed cluster, see: :ref:`create-users`.
+      - To verify user permissions, run :method:`db.getUser()`.
 
    .. step:: Download and install ``mongosync``
 
@@ -106,7 +107,7 @@ Follow the instructions below to setup {+c2c-product-name+}.
       #. Go to the {+mdb-download-center+}.
       #. Download the ``mongosync`` package for your host system.
       #. Unpack the ``mongosync`` package. The ``mongosync`` executable
-         will be in the ``bin`` directory. 
+         is in the ``bin`` directory. 
 
       For operating system specific installation instructions, see
       :ref:`c2c-install`.
@@ -160,13 +161,11 @@ Initialization Notes
 
 - When ``mongosync`` first connects to the source and destination
   clusters it is in the :ref:`IDLE <c2c-states-descriptions>` state.
-
 - ``mongosync`` does not synchronize data until it receives the
   :ref:`start <c2c-api-start>` command. 
-
-- ``cluster0`` and ``cluster1`` are just identifiers. Designate the
-   source and destination clusters with the :ref:`start
-   <c2c-api-start>` command.
+- Designate the source and destination clusters with the :ref:`start
+  <c2c-api-start>` command. "cluster0" and "cluster1" are just labels,
+  either cluster can be ``cluster0`` or ``cluster1``.
 
 Synchronize Data Between Clusters
 ---------------------------------
@@ -204,7 +203,9 @@ The API documentation provides details on using the following endpoints:
    * - :ref:`c2c-api-resume`
      - Resumes a paused synchronization session based on data stored on
        the destination cluster.
-   * - :ref:`start <c2c-api-start>`
+   * - :ref:`c2c-api-reverse`
+     - Reverses the direction of a committed sync operation.
+   * - :ref:`c2c-api-start`
      - Starts the synchronization between a source and destination
        cluster.
 
