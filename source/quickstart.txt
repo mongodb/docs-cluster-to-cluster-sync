@@ -8,6 +8,12 @@ Quickstart
 
 .. default-domain:: mongodb
 
+.. contents:: On this page
+   :local:
+   :backlinks: none
+   :depth: 2
+   :class: singlecol
+
 Overview
 --------
 
@@ -86,8 +92,8 @@ Follow the instructions below to setup {+c2c-product-name+}.
       If the destination cluster is hosted in Atlas, the user must have
       the :ref:`Atlas admin <atlas-user-privileges>` role.
 
-      Cluster Definition Notes
-      ~~~~~~~~~~~~~~~~~~~~~~~~
+      Cluster Authentication Notes
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
       - To add an Atlas user, see: :ref:`mongodb-users`.
       - To add a user to a self-managed cluster, see: :ref:`create-users`.
@@ -226,7 +232,4 @@ Synchronization Notes
 
   .. literalinclude:: /includes/api/requests/reverse.sh
    :language: shell
-
-Next Steps
-----------
 
