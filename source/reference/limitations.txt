@@ -6,7 +6,62 @@ Limitations
 
 .. include:: /includes/preview-warning
 
-limites
+{+c2c-full-product-name+} is under active development. This preview
+release has several limitations.
+
+General Limitations
+-------------------
+
+- The minimum supported version is MongoDB 6.0.
+- The minimum support Feature Compatibility Version is 6.0. 
+- MongoDB Community Edition is not supported.
+- The source and destination clusters must have the same release
+  version.
+- Environmental assumptions are not validated as pre-checks. 
+- The Primary cluster cannot be changed while syncing.
+- If write blocking is disabled,the client must prevent writes to the
+  source cluster after starting the commit process.
+- DDL operations are not supported during syncing. 
+- Filtered synchronization is not supported.
+- Network compression is not supported.
+- applyOps operations from the source cluster are not supported.
+
+Unsupported Collection Types
+----------------------------
+
+- Collections with collation are not supported.
+- Capped collections are not supported.
+- Time-series collections are not supported.
+
+
+Sharded Clusters
+----------------
+
+- The shard topologies must be the same in the source and target
+  clusters. The following configurations are not supported.
+
+  - Replica set to sharded cluster.
+  - Sharded cluster to replica set.
+  - M to N number of shards.
+
+- There is no replication for zone configuration.
+- Shards cannot be added or deleted while synchronizing.
+- Only indexes which exist on all shards are synchronized.
+- The shard key cannot be redefined RefineShardKey during resharding.
+
+
+Reversing
+---------
+- If the old source has unique indexes which ar partially distributed
+  across shards, reversing may cause CEA failures.
+- Unique indexes are a prerequisite.
+- Reversing is not supported when the last consistent point is removed
+  from the oplog.
+
+Multiple Clusters
+-----------------
+- Many-to-one cluster synch is not supported.
+
 
 .. contents:: On this page
    :local:
