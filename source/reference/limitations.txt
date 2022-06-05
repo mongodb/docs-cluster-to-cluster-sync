@@ -52,6 +52,7 @@ Sharded Clusters
 
 Reversing
 ---------
+
 - If the old source has unique indexes which ar partially distributed
   across shards, reversing may cause CEA failures.
 - Unique indexes are a prerequisite.
@@ -60,7 +61,9 @@ Reversing
 
 Multiple Clusters
 -----------------
-- Many-to-one cluster synch is not supported.
+
+- Many-to-one cluster synchronization is not supported.
+- One shard to many shards synchronization is not supported.
 
 
 .. contents:: On this page
