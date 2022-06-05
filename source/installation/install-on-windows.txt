@@ -61,8 +61,8 @@ the ``.zip``.
 
    .. step:: Download the zipfile.
 
-      Download the {+c2c-product-name+} ``.zip`` tarball from the
-      following link:
+      Download the {+c2c-product-name+} zipfile from the following
+      link:
 
       |arrow| {+mdb-download-center+}
 

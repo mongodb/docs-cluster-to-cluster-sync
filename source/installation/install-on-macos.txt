@@ -19,7 +19,6 @@ Install on macOS
 .. |distro-name| replace:: macOS
 .. |package-manager| replace:: ``brew``
 .. |executable-name| replace:: ``mongod``
-.. |mdb-download-link| replace:: `MongoDB Download Center <https://www.mongodb.com/try/download/enterprise?tck=docs_server>`__
 
 Overview
 --------
@@ -65,7 +64,7 @@ the ``.tgz``.
       Download the {+c2c-product-name+} ``.tgz`` tarball from the following
       link:
 
-      |arrow| |mdb-download-link|
+      |arrow| {+mdb-download-center+}
 
       a. In the :guilabel:`Version` dropdown, select the version of
          {+c2c-product-name+} to download.
