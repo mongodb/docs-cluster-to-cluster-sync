@@ -1,4 +1,4 @@
-.. _c2c-install-linux:
+.. _c2c-install-windows:
 
 ==================
 Install on Windows
