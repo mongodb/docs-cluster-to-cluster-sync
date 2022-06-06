@@ -20,7 +20,7 @@ Overview
 --------
 
 To configure {+c2c-full-product-name+} on Windows using a downloaded
-``.zip``, ZIP file, follow the steps on this page.
+ZIP file follow the steps on this page.
 
 .. bug in constant parser DOP-3025
 
@@ -59,8 +59,8 @@ the ZIP file.
 
    .. step:: Download the ZIP file.
 
-      Download the {+c2c-product-name+} ZIP file from the following
-      link:
+      Download the {+c2c-product-name+} ZIP file from the MongoDB
+      Download Center.
 
       |arrow| {+mdb-download-center+}
 
