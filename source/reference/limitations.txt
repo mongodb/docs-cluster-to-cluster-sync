@@ -44,6 +44,8 @@ General Limitations
 - Network compression is not supported.
 - :dbcommand:`applyOps` operations from the source cluster are not
   supported.
+- Serverless clusters are not supported.
+- The MongoDB Shared Tier is not supported.
 
 MongoDB Community Edition
 -------------------------
