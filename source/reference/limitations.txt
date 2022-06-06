@@ -10,11 +10,13 @@ Limitations
 release has several limitations. Review the list for changes after the
 {+c2c-product-name+} General Availability release.
 
-``mongosync`` does not check for compliance with the following
-limitations. Please ensure that your application is not affected by
-these limitations. Running ``mongosync`` in the presence of one of
-these limitations could lead to undefined behavior on the destination
-cluster.
+.. warning::
+
+   ``mongosync`` does not check for compliance with the following
+   limitations. Please ensure that your application is not affected by
+   these limitations. Running ``mongosync`` in the presence of one of
+   these limitations could lead to undefined behavior on the destination
+   cluster.
 
 General Limitations
 -------------------
@@ -22,11 +24,12 @@ General Limitations
 - The minimum supported server version is MongoDB 6.0.
 - The source and destination clusters must have the same release
   version.
-- The minimum supported Feature Compatibility Version (fCV) is 6.0.
+- The minimum supported :dbcommand:`Feature Compatibility Version
+  <setFeatureCompatibilityVersion>` is 6.0.
 - The source and destination clusters must have the same Feature
   Compatibility Version.
 - The destination cluster must be empty.
-- DDL operations are not supported during syncing. 
+- DDL operations are currently not supported during syncing. 
 - ``mongosync`` does not validate that the clusters or the environment
   are properly configured. 
 - The primary shard cannot be :dbcommand:`reassigned <movePrimary>`
@@ -52,8 +55,8 @@ discuss your requirements.
 Unsupported Collection Types
 ----------------------------
 
-- Collections with collation are not supported.
-- Capped collections are not supported.
+- Collections with collation are currently not supported.
+- Capped collections are currently not supported.
 - Time-series collections are not supported.
 
 
@@ -68,11 +71,12 @@ Sharded Clusters
   - Sharded cluster to replica set.
   - Unequal numbers of source and destination shards.
 
-- There is no replication for zone configuration.
+- There is no replication for zone configuration. ``mongosync``
+  replicates data, it does not inherit zones.
 - Shards cannot be added or removed while synchronizing.
 - Only indexes which exist on all shards are synchronized.
-- The shard key cannot be redefined using refineShardKey during
-  resharding.
+- The shard key cannot be :ref:`refined <shard-key-refine>` while
+  synchronizing.
 - The shard key cannot be modified using :dbcommand:`reshardCollection`
   during resharding.
 
