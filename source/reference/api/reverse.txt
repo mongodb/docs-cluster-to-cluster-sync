@@ -26,7 +26,8 @@ For example:
 - ``cluster0`` is the source and ``cluster1`` is the destination.
 
 - After the sync operation is ``COMMITTED``, new writes occur only on
-  the destination cluster.
+  the destination cluster. The source cluster will not accept new
+  writes.
 
 In this scenario, you can use the ``reverse`` endpoint to sync writes
 from ``cluster1`` to ``cluster0``.
@@ -82,8 +83,9 @@ Behavior
 --------
 
 If the ``reverse`` request is successful, ``mongosync`` enters the
-``RUNNING`` state. Replication continues in the reverse direction from
-the original sync job.
+``RUNNING`` state. The synchronization continues in the reverse
+direction from the original sync job. You do not need to restart the
+entire sync process to copy the original data.
 
 To view the mapping direction for the synchronization of the source and
 destination clusters, use the :ref:`progress <c2c-api-progress>`
