@@ -21,7 +21,7 @@ General Limitations
 - DDL operations are not supported during syncing. 
 - ``mongosync`` does not validate that the clusters or the environment
   are properly configured. 
-- The Primary cluster cannot be :dbcommand:`reassigned <movePrimary>`
+- The primary shard cannot be :dbcommand:`reassigned <movePrimary>`
   while syncing.
 - Other clients must not write to the destination cluster while
   ``mongosync`` is running.
@@ -31,7 +31,8 @@ General Limitations
 - Synchronizing a subset of the source data, "Filtered
   Synchronization", is not supported.
 - Network compression is not supported.
-- ``applyOps`` operations from the source cluster are not supported.
+- :dbcommand:`applyOps` operations from the source cluster are not
+  supported.
 
 MongoDB Community Edition
 -------------------------
