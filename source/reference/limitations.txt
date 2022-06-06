@@ -25,8 +25,8 @@ General Limitations
   while syncing.
 - Other clients must not write to the destination cluster while
   ``mongosync`` is running.
-- If write blocking is disabled, the client must :ref:`c2c-api-start 
-  <prevent writes>` to the source cluster before starting the commit
+- If write blocking is disabled, the client must :ref:`prevent writes
+  <c2c-api-start>` to the source cluster before starting the commit
   process.
 - Synchronizing a subset of the source data, "Filtered
   Synchronization", is not supported.
