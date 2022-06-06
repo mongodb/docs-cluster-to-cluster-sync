@@ -19,8 +19,8 @@ Install on Windows
 Overview
 --------
 
-Use this tutorial to manually install {+c2c-full-product-name+}
-{+version+} on Windows using a downloaded ``.zip`` zipfile.
+To configure {+c2c-full-product-name+} on Windows using a downloaded
+``.zip``, ZIP file, follow the steps on this page.
 
 .. bug in constant parser DOP-3025
 
@@ -31,8 +31,6 @@ Use this tutorial to manually install {+c2c-full-product-name+}
 
 Considerations
 --------------
-
-Consider the following when running {+c2c-full-product-name+} on Windows:
 
 Platform Support
 ~~~~~~~~~~~~~~~~
@@ -54,14 +52,14 @@ Install {+c2c-product-name+}
 -------------------------------
 
 Follow these steps to manually install {+c2c-product-name+} from
-the ``.zip``.
+the ZIP file.
 
 .. procedure::
    :style: normal
 
-   .. step:: Download the zipfile.
+   .. step:: Download the ZIP file.
 
-      Download the {+c2c-product-name+} zipfile from the following
+      Download the {+c2c-product-name+} ZIP file from the following
       link:
 
       |arrow| {+mdb-download-center+}

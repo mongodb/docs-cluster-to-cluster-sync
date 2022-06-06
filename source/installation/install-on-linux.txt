@@ -20,8 +20,8 @@ Install on Linux
 Overview
 --------
 
-Use this tutorial to manually install {+c2c-full-product-name+}
-{+version+} on Linux using a downloaded ``.tgz`` tarball.
+To configure {+c2c-full-product-name+} on Linux using a downloaded
+``.tgz`` tarball, follow the steps on this page.
 
 {+c2c-product-name+} is available on select platforms.
 
@@ -34,8 +34,6 @@ Use this tutorial to manually install {+c2c-full-product-name+}
 
 Considerations
 --------------
-
-Consider the following when running {+c2c-full-product-name+} on Linux:
 
 Platform Support
 ~~~~~~~~~~~~~~~~

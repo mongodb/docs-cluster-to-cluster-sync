@@ -23,8 +23,8 @@ Install on macOS
 Overview
 --------
 
-Use this tutorial to manually install {+c2c-full-product-name+}
-{+version+} on macOS using a downloaded ``.tgz`` tarball.
+To configure {+c2c-full-product-name+} on macOS using a downloaded
+``.tgz`` tarball, follow the steps on this page.
 
 .. bug in constant parser DOP-3025
 
@@ -35,8 +35,6 @@ Use this tutorial to manually install {+c2c-full-product-name+}
 
 Considerations
 --------------
-
-Consider the following when running {+c2c-product-name+} on macOS:
 
 Platform Support
 ~~~~~~~~~~~~~~~~

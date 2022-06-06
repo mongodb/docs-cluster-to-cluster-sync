@@ -1,5 +1,5 @@
 The ``mongosync`` binary is in the ``bin/`` directory of the
-unpacked zipfile. To add the location of the ``mongosync`` binary to
+extracted ZIP file. To add the location of the ``mongosync`` binary to
 your ``PATH``, do one of the following:
 
 - Copy the binary into a directory listed in your ``PATH``.
