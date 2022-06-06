@@ -36,8 +36,9 @@ General Limitations
 MongoDB Community Edition
 -------------------------
 
-- MongoDB Community Edition may not be supported.
-- Please contact a sales representative to discuss your requirements.
+{+c2c-product-name+} supports a limited number of operations with
+MongoDB Community Edition. Please contact a sales representative to
+discuss your requirements.
 
 Unsupported Collection Types
 ----------------------------
@@ -67,17 +68,18 @@ Sharded Clusters
 Reversing
 ---------
 
-- If the old source has unique indexes which are partially distributed
-  across shards, reversing may cause failures. Ensure that unique
-  indexes exist on all shards before reversing.
-- Reversing is not supported when the last consistent point is removed
-  from the oplog.
+If the old source has :ref:`unique indexes <index-type-unique>` which
+are partially distributed across shards, reversing may cause failures.
+Ensure that unique indexes exist on all shards before reversing.
+
 
 Multiple Clusters
 -----------------
 
-- Many-to-one cluster synchronization is not supported.
-- One shard to many shards synchronization is not supported.
+- Syncing multiple source clusters to one destination cluster is not
+  supported.
+- Syncing one source cluster to many destination clusters is not
+  supported.
 
 
 .. contents:: On this page
