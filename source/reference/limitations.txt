@@ -7,24 +7,37 @@ Limitations
 .. include:: /includes/preview-warning
 
 {+c2c-full-product-name+} is under active development. This preview
-release has several limitations.
+release has several limitations. Review the list for changes after the
+{+c2c-product-name+} General Availability release.
 
 General Limitations
 -------------------
 
 - The minimum supported version is MongoDB 6.0.
-- The minimum support Feature Compatibility Version is 6.0. 
-- MongoDB Community Edition is not supported.
+- The minimum supported Feature Compatibility Version is 6.0. 
+- The destination cluster must be empty.
 - The source and destination clusters must have the same release
   version.
-- Environmental assumptions are not validated as pre-checks. 
-- The Primary cluster cannot be changed while syncing.
-- If write blocking is disabled,the client must prevent writes to the
-  source cluster after starting the commit process.
 - DDL operations are not supported during syncing. 
-- Filtered synchronization is not supported.
+- ``mongosync`` does not validate that the clusters or the environment
+  are properly configured. 
+- The Primary cluster cannot be :dbcommand:`reassigned <movePrimary>`
+  while syncing.
+- Other clients must not write to the destination cluster while
+  ``mongosync`` is running.
+- If write blocking is disabled, the client must :ref:`c2c-api-start 
+  <prevent writes>` to the source cluster before starting the commit
+  process.
+- Synchronizing a subset of the source data, "Filtered
+  Synchronization", is not supported.
 - Network compression is not supported.
-- applyOps operations from the source cluster are not supported.
+- ``applyOps`` operations from the source cluster are not supported.
+
+MongoDB Community Edition
+-------------------------
+
+- MongoDB Community Edition may not be supported.
+- Please contact a sales representative to discuss your requirements.
 
 Unsupported Collection Types
 ----------------------------
@@ -37,12 +50,13 @@ Unsupported Collection Types
 Sharded Clusters
 ----------------
 
-- The shard topologies must be the same in the source and target
-  clusters. The following configurations are not supported.
+- The :ref:`shard topologies <sharding-introduction>` must be the same
+  in the source and target clusters. The following configurations are
+  not supported.
 
   - Replica set to sharded cluster.
   - Sharded cluster to replica set.
-  - M to N number of shards.
+  - Unequal numbers of source and destination shards.
 
 - There is no replication for zone configuration.
 - Shards cannot be added or deleted while synchronizing.
@@ -53,9 +67,9 @@ Sharded Clusters
 Reversing
 ---------
 
-- If the old source has unique indexes which ar partially distributed
-  across shards, reversing may cause CEA failures.
-- Unique indexes are a prerequisite.
+- If the old source has unique indexes which are partially distributed
+  across shards, reversing may cause failures. Ensure that unique
+  indexes exist on all shards before reversing.
 - Reversing is not supported when the last consistent point is removed
   from the oplog.
 
