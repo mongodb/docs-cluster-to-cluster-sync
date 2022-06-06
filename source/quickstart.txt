@@ -248,6 +248,6 @@ Synchronization Notes
 
 - You may need to increase the file descriptor ``ulimits`` on the host
   that is running ``mongosync``. This applies to any UNIX-like system,
-  but that macOS in particular has low defaults. See :ref:`UNIX ulimit
+  but macOS in particular has low defaults. See :ref:`UNIX ulimit
   settings <system-resource-utilization>`.
 
