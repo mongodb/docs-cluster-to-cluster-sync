@@ -54,7 +54,8 @@ Follow the instructions below to setup {+c2c-product-name+}.
         of nodes in the destination replica set does not have to equal
         the number of nodes in the source replica set.
       - If the source cluster is :ref:`sharded  <sharding-background>`,
-        the destination cluster must have the same number of shards. 
+        the destination cluster must have the same number of shards and
+        the same shard key. 
 
       The source and destination clusters must be:
       
@@ -211,21 +212,21 @@ The API documentation provides details on using the following endpoints:
    * - Endpoint
      - Description
  
-   * - :ref:`c2c-api-commit`
-     - Commits the synchronization operation to the destination
-       cluster.
-   * - :ref:`c2c-api-pause`
-     - Pauses the current synchronization operation.
-   * - :ref:`c2c-api-progress`
-     - Returns the status of the synchronization process.
-   * - :ref:`c2c-api-resume`
-     - Resumes a paused synchronization session based on data stored on
-       the destination cluster.
-   * - :ref:`c2c-api-reverse`
-     - Reverses the direction of a committed sync operation.
    * - :ref:`c2c-api-start`
      - Starts the synchronization between a source and destination
        cluster.
+   * - :ref:`c2c-api-progress`
+     - Returns the status of the synchronization process.
+   * - :ref:`c2c-api-pause`
+     - Pauses the current synchronization operation.
+   * - :ref:`c2c-api-resume`
+     - Resumes a paused synchronization session based on data stored on
+       the destination cluster.
+   * - :ref:`c2c-api-commit`
+     - Commits the synchronization operation to the destination
+       cluster.
+   * - :ref:`c2c-api-reverse`
+     - Reverses the direction of a committed sync operation.
 
 Synchronization Notes
 ~~~~~~~~~~~~~~~~~~~~~
