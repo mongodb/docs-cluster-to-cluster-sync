@@ -146,7 +146,7 @@ source to destination. For a given document, the total number of writes
 may differ between source and destination.
 
 Transactions may appear non-atomically on the destination cluster.
-Retryable writes, may not be retryable on the destination cluster. 
+Retryable writes may not be retryable on the destination cluster. 
 
 Read Consistency is not guaranteed on the destination cluster, the
 source and destination clusters may differ at a given point in time.
