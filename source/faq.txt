@@ -18,10 +18,10 @@ This page provides answers to some frequently asked questions we have
 encountered. If you have additional questions please contact MongoDB
 Support.
 
-Can ``mongosync`` run on it's own hardware? 
--------------------------------------------
+Can ``mongosync`` run on its own hardware? 
+------------------------------------------
 
-Yes, ``mongosync`` can run on it's own hardware. ``mongosync`` does not
+Yes, ``mongosync`` can run on its own hardware. ``mongosync`` does not
 have to run on the servers that host your MongoDB instances. When
 ``mongosync`` runs on its own hardware, it can use an operating system
 (OS) that is different than the OS on the source or destination
