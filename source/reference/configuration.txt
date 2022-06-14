@@ -46,6 +46,8 @@ Options
 
 .. setting:: id
 
+   *Type*: string
+
    Sets an identifier for the ``mongosync`` instance.
 
    Use this option when running multiple instances of ``mongosync`` on
