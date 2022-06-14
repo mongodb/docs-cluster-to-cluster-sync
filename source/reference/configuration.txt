@@ -1,0 +1,68 @@
+.. _c2c-configuration-file-options:
+
+Configuration File Options
+##########################
+
+.. contents:: On this page
+   :local:
+   :backlinks: none
+   :depth: 2
+   :class: singlecol
+
+.. TODO: Introduction
+
+Configuration File
+==================
+
+.. TODO: Introduction
+
+Options
+=======
+
+.. setting:: cluster0
+
+   *Type*: string
+
+
+   Sets the :ref:`connection URI <mongodb-uri>` for the first cluster.
+   The first cluster can serve as either the source or the destination
+   in the sync process. Designate the source and destination clusters
+   in the call to the :ref:`c2c-api-start` API endpoint.
+
+   For more information on connecting ``mongosync``, see
+   :ref:`Connections <c2c-connecting>`.
+
+.. setting:: cluster1
+
+   *Type*: string
+
+   Sets the :ref:`connection URI <mongodb-uri>` for the second cluster.
+   The second cluster can serve as either the source or the destination
+   in the sync process. Designate the source and destination clusters
+   in the call to the :ref:`c2c-api-start` API endpoint.
+
+   For more information on connecting ``mongosync``, see
+   :ref:`Connections <c2c-connecting>`.
+
+.. setting:: verbosity 
+
+   *Type*: string
+
+   *Default*: ``INFO``
+
+   Sets the verbosity level to use in log messages.
+   {+c2c-product-name+} logs all messages at the specified level and
+   any messages at lower levels.
+
+   .. |verbosity-opt-type| replace:: setting
+
+   .. include:: /includes/supported-verbosity-options.rst
+
+
+
+
+.. toctree::
+   :hidden:
+   :glob:
+
+   configuration/*

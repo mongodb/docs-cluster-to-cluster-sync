@@ -69,15 +69,7 @@ Global Options
    {+c2c-product-name+} logs all messages at the specified level and
    any messages at lower levels.
 
-   The ``--verbosity`` option supports the following values:
-
-   - ``TRACE``
-   - ``DEBUG``
-   - ``INFO``
-   - ``WARN``
-   - ``ERROR``
-   - ``FATAL``
-   - ``PANIC``
+   .. include:: /includes/supported-verbosity-options.rst
 
 .. option:: --logPath <DIR>
 
