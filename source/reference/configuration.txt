@@ -90,5 +90,6 @@ Options
 
 .. toctree::
    :hidden:
+   :glob:
 
-   configuration/file-setting-cli-option-mapping
+   configuration/*
