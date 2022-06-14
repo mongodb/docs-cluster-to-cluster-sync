@@ -1,4 +1,4 @@
-The ``--verbosity`` |verbosity-opt-type| supports the following values:
+The |verbosity-opt| |verbosity-opt-type| supports the following values:
 
 - ``TRACE``
 - ``DEBUG``
