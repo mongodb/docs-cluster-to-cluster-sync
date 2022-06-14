@@ -86,8 +86,6 @@ Options
    .. include:: /includes/supported-verbosity-options.rst
 
 
-
-
 .. toctree::
    :hidden:
    :glob:
