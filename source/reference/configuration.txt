@@ -92,4 +92,4 @@ Options
    :hidden:
    :glob:
 
-   configuration/*
+   /reference/configuration/file-setting-cli-option-mapping
