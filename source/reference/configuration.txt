@@ -1,7 +1,7 @@
 .. _c2c-config:
 
-Configuration File Options
-##########################
+Configuration File Settings
+###########################
 
 .. contents:: On this page
    :local:
