@@ -3,4 +3,13 @@
 Configuration File Settings and Command-Line Option Mapping
 ############################################################
 
-Testing
+The following table maps the :ref:`configuration file <c2c-config>` settings
+and the related ``mongosync`` :ref:`command-line <c2c-cli-options>` options.
+
+.. list-table::
+   :header-rows: 1
+
+   * - Configuration File Setting
+     - ``mongosync`` Option
+   * - :setting:`cluster0`
+     - :option:`mongosync --cluster0 <--cluster0>`

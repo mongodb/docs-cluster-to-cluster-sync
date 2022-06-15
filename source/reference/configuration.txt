@@ -1,4 +1,4 @@
-.. _c2c-configuration-file-options:
+.. _c2c-config:
 
 Configuration File Options
 ##########################
