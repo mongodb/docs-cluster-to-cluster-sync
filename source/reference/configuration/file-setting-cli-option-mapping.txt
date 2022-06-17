@@ -3,6 +3,10 @@
 Configuration File Settings and Command-Line Option Mapping
 ############################################################
 
+.. include:: /includes/preview-warning
+
+.. default-domain:: mongodb
+
 The following table maps the :ref:`configuration file <c2c-config>` settings
 and the related ``mongosync`` :ref:`command-line <c2c-cli-options>` options.
 
