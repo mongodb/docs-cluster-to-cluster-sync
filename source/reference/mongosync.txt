@@ -82,14 +82,10 @@ Global Options
 
 .. option:: --id <ID>
 
-   Sets an identifier for the ``mongosync`` instance.
+   .. include:: /includes/opts/id.rst
 
-   Use this option when running multiple instances of ``mongosync`` on
-   a sharded cluster, to synchronize the shards individually. 
-   
-   The ``--id`` option must correspond to the shard ID of the shard it
-   syncs.  To find the shard ID, use the :dbcommand:`listShards`
-   command.
+   To set the ``--id`` option from a configuration file,
+   see the :setting:`id` setting.
 
 .. option:: --config <filename>
 
@@ -130,6 +126,7 @@ Consistency
 cluster. Read Consistency is not guaranteed on the destination cluster,
 the source and destination clusters may differ at a given point in
 time. However, if new writes are halted on the source cluster, the
+time. 
 source and destination clusters will eventually hold the same data. 
 
 Individual writes may be reordered or combined as they are relayed from

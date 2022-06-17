@@ -11,7 +11,7 @@ Configuration File Settings
 
 You can configure :program:`mongosync` instances at startup using a configuration
 file.  The configuration file contains settings that are the equivalent of
-``mongsync`` command-line options.  See :ref:`c2c-config-setting-option-map`.
+``mongosync`` command-line options.  See :ref:`c2c-config-setting-option-map`.
 
 
 Configuration File
@@ -70,7 +70,7 @@ Options
    .. include:: /includes/opts/logPath.rst
 
    To set the ``logPath`` setting from the command-line,
-   see the :option:`--logpath` option.
+   see the :option:`--logPath` option.
 
 
 .. setting:: port
