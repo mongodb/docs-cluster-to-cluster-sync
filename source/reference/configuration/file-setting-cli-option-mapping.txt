@@ -13,3 +13,13 @@ and the related ``mongosync`` :ref:`command-line <c2c-cli-options>` options.
      - ``mongosync`` Option
    * - :setting:`cluster0`
      - :option:`mongosync --cluster0 <--cluster0>`
+   * - :setting:`cluster1`
+     - :option:`mongosync --cluster1 <--cluster1>`
+   * - :setting:`id`
+     - :option:`mongosync --id <--id>`
+   * - :setting:`logPath`
+     - :option:`mongosync --logPath <--logPath>`
+   * - :setting:`port` 
+     - :option:`mongosync --port`
+   * - :setting:`verbosity`
+     - :option:`mongosync --verbosity`
