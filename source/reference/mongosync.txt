@@ -126,15 +126,14 @@ Consistency
 cluster. Read Consistency is not guaranteed on the destination cluster,
 the source and destination clusters may differ at a given point in
 time. However, if new writes are halted on the source cluster, the
-time. 
-source and destination clusters will eventually hold the same data. 
+source and destination clusters will eventually hold the same data.
 
 Individual writes may be reordered or combined as they are relayed from
 source to destination. For a given document, the total number of writes
 may differ between source and destination.
 
 Transactions may appear non-atomically on the destination cluster.
-Retryable writes may not be retryable on the destination cluster. 
+Retryable writes may not be retryable on the destination cluster.
 
 Examples
 --------
