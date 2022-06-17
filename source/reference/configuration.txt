@@ -9,12 +9,24 @@ Configuration File Settings
    :depth: 2
    :class: singlecol
 
-.. TODO: Introduction
+You can configure :program:`mongosync` instances at startup using a configuration
+file.  The configuration file contains settings that are the equivalent of
+``mongsync`` command-line options.  See :ref:`c2c-config-setting-option-map`.
+
 
 Configuration File
 ==================
 
-.. TODO: Introduction
+To use a configuration file, you must start :program:`mongosync` with the
+:option:`--config` option specifying the path to the file.  For example:
+
+.. code-block:: console
+
+   $ cat mongosync.conf
+   cluster0: mongodb://192.0.2.10:27017
+   cluster1: mongodb://192.0.2.20:27017
+
+   $ mongosync --config mongosync.conf
 
 Options
 =======
@@ -23,7 +35,6 @@ Options
 
    *Type*: string
 
-
    Sets the :ref:`connection URI <mongodb-uri>` for the first cluster.
    The first cluster can serve as either the source or the destination
    in the sync process. Designate the source and destination clusters
@@ -31,6 +42,8 @@ Options
 
    For more information on connecting ``mongosync``, see
    :ref:`Connections <c2c-connecting>`.
+
+   To set ``cluster0`` from the command-line, see :option:`--cluster0`.
 
 .. setting:: cluster1
 
@@ -44,6 +57,8 @@ Options
    For more information on connecting ``mongosync``, see
    :ref:`Connections <c2c-connecting>`.
 
+   To set ``cluster1`` from the command-line, see :option:`--cluster1`.
+
 .. setting:: id
 
    *Type*: string
@@ -51,8 +66,8 @@ Options
    Sets an identifier for the ``mongosync`` instance.
 
    Use this option when running multiple instances of ``mongosync`` on
-   a sharded cluster, to synchronize the shards individually. 
-   
+   a sharded cluster, to synchronize the shards individually.
+
    The ``id`` setting must correspond to the shard ID of the shard it
    syncs.  To find the shard ID, use the :dbcommand:`listShards`
    command.
