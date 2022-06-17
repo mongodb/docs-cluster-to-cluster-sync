@@ -39,65 +39,58 @@ Options
 
    .. include:: /includes/opts/cluster0.rst
 
-   To set ``cluster0`` from the command-line, see :option:`--cluster0`.
+   To set the ``cluster0`` setting from the command-line,
+   see the :option:`--cluster0` option.
+
 
 .. setting:: cluster1
 
    *Type*: string
 
-   Sets the :ref:`connection URI <mongodb-uri>` for the second cluster.
-   The second cluster can serve as either the source or the destination
-   in the sync process. Designate the source and destination clusters
-   in the call to the :ref:`c2c-api-start` API endpoint.
+   .. include:: /includes/opts/cluster1.rst
 
-   For more information on connecting ``mongosync``, see
-   :ref:`Connections <c2c-connecting>`.
+   To set the ``cluster1`` setting from the command-line,
+   see the :option:`--cluster1` option.
 
-   To set ``cluster1`` from the command-line, see :option:`--cluster1`.
 
 .. setting:: id
 
    *Type*: string
 
-   Sets an identifier for the ``mongosync`` instance.
+   .. include:: /includes/opts/id.rst
 
-   Use this option when running multiple instances of ``mongosync`` on
-   a sharded cluster, to synchronize the shards individually.
+   To set the ``id`` setting from the command-line,
+   see the :option:`--id` option.
 
-   The ``id`` setting must correspond to the shard ID of the shard it
-   syncs.  To find the shard ID, use the :dbcommand:`listShards`
-   command.
 
 .. setting:: logPath
 
    *Type*: string
 
-   Sets the path to the log directory. {+c2c-product-name+} writes logs
-   to files in this directory.
+   .. include:: /includes/opts/logPath.rst
+
+   To set the ``logPath`` setting from the command-line,
+   see the :option:`--logpath` option.
+
 
 .. setting:: port
 
    *Type*: integer
 
-   *Default*: ``27182``
+   .. include:: /includes/opts/port.rst
 
-   Sets the port used by the HTTP server for the {+c2c-product-name+}
-   HTTP API.
+   To set the ``port`` setting from the command-line,
+   see the :option:`--port` option.
+
 
 .. setting:: verbosity 
 
    *Type*: string
 
-   *Default*: ``INFO``
+   .. include:: /includes/opts/verbosity.rst
 
-   Sets the verbosity level to use in log messages.
-   {+c2c-product-name+} logs all messages at the specified level and
-   any messages at lower levels.
-
-   The ``verbosity`` setting supports the following values:
-
-   .. include:: /includes/supported-verbosity-options.rst
-
+   To set the ``verbosity`` setting from the command-line,
+   see the :option:`--verbosity` option.
 
 .. toctree::
    :hidden:
