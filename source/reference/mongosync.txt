@@ -52,6 +52,7 @@ Global Options
    To set the ``--cluster0`` option from a configuration file,
    see the :setting:`cluster0` setting.
 
+
 .. option:: --cluster1 <URI>
 
    .. include:: /includes/opts/cluster0.rst
@@ -59,26 +60,18 @@ Global Options
    To set the ``--cluster1`` option from a configuration file,
    see the :setting:`cluster1` setting.
 
-.. option:: --verbosity <level>
 
-   .. include:: /includes/opts/verbosity.rst
+.. option:: --config <filename>
 
-   To set the ``--verbosity`` option from a configuration file,
-   see the :setting:`verbosity` setting.
+   Sets the path to the configuration file.
 
-.. option:: --logPath <DIR>
+   For more information, see :ref:`c2c-mongosync-config`.
 
-   .. include:: /includes/opts/logPath.rst
 
-   To set the ``--logPath`` option from a configuration file,
-   see the :setting:`logPath` setting.
+.. option:: --help, -h
 
-.. option:: --port
+   Prints usage information to stdout.
 
-   .. include:: /includes/opts/port.rst
-
-   To set the ``--port`` option from a configuration file,
-   see the :setting:`port` setting.
 
 .. option:: --id <ID>
 
@@ -87,19 +80,35 @@ Global Options
    To set the ``--id`` option from a configuration file,
    see the :setting:`id` setting.
 
-.. option:: --config <filename>
 
-   Sets the path to the configuration file.
+.. option:: --logPath <DIR>
 
-   For more information, see :ref:`c2c-mongosync-config`.
+   .. include:: /includes/opts/logPath.rst
+
+   To set the ``--logPath`` option from a configuration file,
+   see the :setting:`logPath` setting.
+
+
+.. option:: --port
+
+   .. include:: /includes/opts/port.rst
+
+   To set the ``--port`` option from a configuration file,
+   see the :setting:`port` setting.
+
+
+.. option:: --verbosity <level>
+
+   .. include:: /includes/opts/verbosity.rst
+
+   To set the ``--verbosity`` option from a configuration file,
+   see the :setting:`verbosity` setting.
+
 
 .. option:: --version, -v
 
    Prints ``mongosync`` version information to stdout.
 
-.. option:: --help, h
-
-   Prints usage information to stdout.
 
 Behavior
 --------
