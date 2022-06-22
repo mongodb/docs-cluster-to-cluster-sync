@@ -9,7 +9,7 @@ following ActionTypes:
 - setUserWriteBlockMode
 - bypassWriteBlockingMode
 
-The ``setUserWriteBlockMode`` and ``bypassWriteBlockingMode`` user
-actions are available starting in MongoDB 6.0. To create the custom
+The ``setUserWriteBlockMode`` and ``bypassWriteBlockingMode``
+ActionTypes are available starting in MongoDB 6.0. To create the custom
 roles, all clusters in a project must be on MongoDB 6.0 or higher.
 
