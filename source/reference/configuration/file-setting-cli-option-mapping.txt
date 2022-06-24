@@ -1,7 +1,7 @@
 .. _c2c-config-setting-option-map:
 
-Configuration File Settings and Command-Line Option Mapping
-############################################################
+Command-line Options to Configuration
+#####################################
 
 .. include:: /includes/preview-warning
 

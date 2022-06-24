@@ -29,7 +29,7 @@ For example:
 
    cluster0: "mongodb://192.0.2.10:27017"
    cluster1: "mongodb://192.0.2.20:27017"
-   logPath: "/var/log/mongodb/mongosync"
+   logPath: "/var/log/mongosync"
    verbosity: "WARN"
 
 To use a configuration file, start ``mongosync`` with the :option:`--config`
