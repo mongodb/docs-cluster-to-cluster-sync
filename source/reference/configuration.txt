@@ -107,4 +107,4 @@ Options
    :hidden:
    :glob:
 
-   /reference/configuration/file-setting-cli-option-mapping
+   Command-line Options </reference/configuration/file-setting-cli-option-mapping>
