@@ -44,13 +44,14 @@ General Limitations
 - Network compression is not supported.
 - :dbcommand:`applyOps` operations from the source cluster are not
   supported.
-- Serverless clusters are not supported.
-- The MongoDB Shared Tier is not supported.
 - The :data:`system.js <<database>.system.js>` collection is not
   replicated.
 - Documents that have dollar (``$``) prefixed field names are not
   supported. See :ref:`Field Names with Periods and Dollar Signs
   <crud-concepts-dot-dollar-considerations>`.
+- Serverless clusters are not supported.
+- The MongoDB Shared Tier is not supported.
+- :ref:`Queryable Execution <qe-manual-feature-qe>` is not supported.
 
 MongoDB Community Edition
 -------------------------
