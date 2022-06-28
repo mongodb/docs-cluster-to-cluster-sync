@@ -48,7 +48,7 @@ General Limitations
 - The MongoDB Shared Tier is not supported.
 - The :data:`system.js <<database>.system.js>` collection is not
   replicated.
-- Collections with dollar (``$``) prefixed field names are not
+- Documents that have dollar (``$``) prefixed field names are not
   supported.
 
 MongoDB Community Edition
