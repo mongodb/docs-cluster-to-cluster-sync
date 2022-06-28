@@ -50,7 +50,7 @@ General Limitations
   replicated.
 - Documents that have dollar (``$``) prefixed field names are not
   supported. See :ref:`Field Names with Periods and Dollar Signs
-  <crud-concepts-dot-dollar-considerations`.
+  <crud-concepts-dot-dollar-considerations>`.
 
 MongoDB Community Edition
 -------------------------
