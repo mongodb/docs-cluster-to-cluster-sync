@@ -49,7 +49,7 @@ General Limitations
 - The :data:`system.js <<database>.system.js>` collection is not
   replicated.
 - Documents that have dollar (``$``) prefixed field names are not
-  supported.
+  supported. See :ref:`crud-concepts-dot-dollar-considerations`.
 
 MongoDB Community Edition
 -------------------------
