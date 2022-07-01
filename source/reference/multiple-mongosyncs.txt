@@ -1,0 +1,215 @@
+.. _c2c-sharded-clusters:
+
+================
+Sharded Clusters
+================
+
+.. include:: /includes/preview-warning
+
+.. default-domain:: mongodb
+
+.. contents:: On this page
+   :local:
+   :backlinks: none
+   :depth: 1
+   :class: twocols
+
+To improve performance on :ref:`sharded clusters <sharded-cluster>`,
+configure a ``monogosync`` instance for each shard in the source
+cluster.
+
+.. _c2c-sharded-config:
+
+Configure Multiple ``mongosync`` Instances
+------------------------------------------
+
+#. Verify cluster configuration. 
+   The source cluster and destination cluster have the same number of
+   shards.
+
+#. Determine the shard IDs.
+
+   - Connect to the :binary:`mongos` for the source cluster with
+     :binary:`mongosh`.
+   - :dbcommand:`listShards` returns the shard IDs.
+
+   .. code-block:: javascript
+
+      db.adminCommand( { listShards: 1 } )
+
+   The information is in the ``shards`` array.
+
+   .. code-block:: javascript
+      :copyable: false
+      :emphasize-lines: 3,9
+
+        shards: [
+          {
+            _id: 'shard01',
+            host: 'shard01/localhost:27501,localhost:27502,localhost:27503',
+            state: 1,
+            topologyTime: Timestamp({ t: 1656612236, i: 2 })
+          },
+          {
+            _id: 'shard02',
+            host: 'shard02/localhost:27504,localhost:27505,localhost:27506',
+            state: 1,
+            topologyTime: Timestamp({ t: 1656612240, i: 4 })
+          }
+        ]
+
+   The :method:`sh.status()` method returns similar information.
+
+#. Connect the ``mongosync`` instances.
+
+   These instructions use a generic connection string. To modify the
+   connection string for your cluster architecture, refer to the
+   architecture specific :ref:`connection details <c2c-connecting>`.
+
+   A single host server can run multiple ``mongosync`` instances. To
+   improve performance, run ``mongosync`` on multiple host servers.
+
+   - Each ``mongosync`` instance connects to the same ``mongos``
+     instance in the source cluster.
+   - Each ``mongosync`` instance connects to the same ``mongos``
+     instance in the destination cluster.
+   - Each ``mongosync`` instance connects to a single shard in the
+     source cluster.
+   - Each ``mongosync`` instance specifies a unique port to use for
+     synchronization. Consider designating a range of ports to
+     simplify scripting {+c2c-product-name+} operations.
+
+   Start the first ``mongosync`` instance:
+
+   .. code-block:: javascript
+
+      mongosync \
+        --cluster0 "mongodb://user:password@cluster0host:27500" \
+        --cluster1 "mongodb://user:password@cluster1host:27500" \
+        --id shard01 --port 27601
+
+   Start a new ``mongosync`` instance for each shard in the source
+   cluster. Edit the ``--id`` and ``--port`` fields for each additional
+   ``mongosync`` instance.
+
+   .. code-block:: javascript
+     :emphasize-lines: 4
+
+      mongosync \
+        --cluster0 "mongodb://user:password@cluster0host:27500" \
+        --cluster1 "mongodb://user:password@cluster1host:27500" \
+        --id shard02 --port 27602
+
+.. _c2c-sharded-start:
+
+Start Multiple ``mongosync`` Instances
+--------------------------------------
+
+Use ``curl`` or another HTTP client to issue the :ref:`start
+<c2c-api-start>` command to each of the ``mongosync`` instances.
+
+.. code-block:: shell
+
+   curl monogsync01Host:27601/api/v1/start -XPOST --data \
+        '{ "source": "cluster0", "destination": "cluster1", \
+           "reversible": false, "enableUserWriteBlocking": false }'
+
+   curl monogsync02Host:27602/api/v1/start -XPOST --data \
+        '{ "source": "cluster0", "destination": "cluster1", \
+           "reversible": false, "enableUserWriteBlocking": false }'
+
+The ``start`` options, the ``--data`` values in the ``curl``
+command, must be the same for all of the ``mongosync`` instances.
+
+.. _c2c-sharded-progress:
+
+Check Progress on a Single ``mongosync`` Instance
+-------------------------------------------------
+
+Use ``curl`` or another HTTP client to issue the :ref:`progress
+<c2c-api-progress>` command to the ``mongosync`` instance.
+
+.. code-block:: shell
+
+   curl monogsync02Host:27602/api/v1/progress -XGET
+
+This command checks the progress of the ``mongosync`` instance that is
+running on ``monogsync02Host`` and using ``port 27602`` for
+synchronization.
+
+.. _c2c-sharded-pause:
+
+Pause Progress on a Single ``mongosync`` Instance
+-------------------------------------------------
+
+Use ``curl`` or another HTTP client to issue the :ref:`pause
+<c2c-api-pause>` command to the ``mongosync`` instance.
+
+.. code-block:: shell
+
+   curl monogsync01Host:27601/api/v1/pause -XPOST --data '{}'
+
+This command pauses the ``mongosync`` instance that is running on
+``monogsync01Host`` and using ``port 27601`` for synchronization. It
+does not pause any other ``mongosync`` instances that may be running.
+
+.. _c2c-sharded-resume:
+
+Resume Progress on a Single ``mongosync`` Instance
+--------------------------------------------------
+
+Use ``curl`` or another HTTP client to issue the :ref:`resume
+<c2c-api-resume>` command to the ``mongosync`` instance.
+
+.. code-block:: shell
+
+   curl monogsync01Host:27601/api/v1/resume -XPOST --data '{}'
+
+This command resumes synchronization on the ``mongosync`` instance that
+is running on ``monogsync01Host`` and using ``port 27601``. It does not
+resume synchronization on any other ``mongosync`` instances that may be
+running.
+
+.. _c2c-sharded-commit:
+
+Commit Sync From  Multiple ``mongosync`` Instances
+--------------------------------------------------
+
+When synchronization is complete, issue the :ref:`commit
+<c2c-api-commit>` command to each ``mongosync`` instance.
+
+The ``commit`` operation is blocking. The ``commit`` command will not
+return until ``commit`` has been called on every ``mongosync``
+instance.
+
+.. code-block:: shell
+
+   curl monogsync01Host:27601/api/v1/commit -XPOST --data '{}'
+
+This command only commits synchronization from the ``mongosync``
+instance that is running on ``monogsync01Host`` and using ``port
+27601``. Make additional calls to ``commit`` on any other
+``mongosync`` instances that may be running.
+
+.. _c2c-sharded-reverse:
+
+Reverse the Synchronization Direction
+-------------------------------------
+
+To reverse synchronization so that the original destination cluster
+acts as the source cluster, issue the :ref:`reverse <c2c-api-reverse>`
+command to each ``mongosync`` instance.
+
+The ``reverse`` operation is blocking. The ``reverse`` command will not
+return until ``reverse`` has been called on every ``mongosync``
+instance.
+
+.. code-block:: shell
+
+   curl monogsync01Host:27601/api/v1/reverse -XPOST --data '{}'
+
+This command reverses synchronization on the ``mongosync``
+instance that is running on ``monogsync01Host`` and using ``port
+27601``. Make additional calls to ``reverse`` on any other
+``mongosync`` instances that may be running.
+

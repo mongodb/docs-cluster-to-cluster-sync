@@ -8,6 +8,7 @@ Reference
    :titlesonly: 
 
    /reference/mongosync
+   /reference/multiple-mongosyncs
    /reference/api
    /reference/mongosync-states
    /reference/limitations
