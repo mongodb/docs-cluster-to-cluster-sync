@@ -34,87 +34,87 @@ To configure multiple ``mongosync`` instances:
 Verify cluster configuration
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-   The source cluster and destination cluster must have the same number
-   of shards.
+The source cluster and destination cluster must have the same number
+of shards.
 
 .. _c2c-shard-config-determine:
 
 Determine the shard IDs
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-   - Connect to the :binary:`mongos` for the source cluster with
-     :binary:`mongosh`.
-   - To get the shard IDs, run the :dbcommand:`listShards` command.
+- Connect to the :binary:`mongos` for the source cluster with
+  :binary:`mongosh`.
+- To get the shard IDs, run the :dbcommand:`listShards` command.
 
-   .. code-block:: javascript
+.. code-block:: javascript
 
-      db.adminCommand( { listShards: 1 } )
+   db.adminCommand( { listShards: 1 } )
 
-   The information is in the ``shards`` array.
+The information is in the ``shards`` array.
 
-   .. code-block:: javascript
-      :copyable: false
-      :emphasize-lines: 3,9
+.. code-block:: javascript
+   :copyable: false
+   :emphasize-lines: 3,9
 
-        shards: [
-          {
-            _id: 'shard01',
-            host: 'shard01/localhost:27501,localhost:27502,localhost:27503',
-            state: 1,
-            topologyTime: Timestamp({ t: 1656612236, i: 2 })
-          },
-          {
-            _id: 'shard02',
-            host: 'shard02/localhost:27504,localhost:27505,localhost:27506',
-            state: 1,
-            topologyTime: Timestamp({ t: 1656612240, i: 4 })
-          }
-        ]
+     shards: [
+       {
+         _id: 'shard01',
+         host: 'shard01/localhost:27501,localhost:27502,localhost:27503',
+         state: 1,
+         topologyTime: Timestamp({ t: 1656612236, i: 2 })
+       },
+       {
+         _id: 'shard02',
+         host: 'shard02/localhost:27504,localhost:27505,localhost:27506',
+         state: 1,
+         topologyTime: Timestamp({ t: 1656612240, i: 4 })
+       }
+     ]
 
-   The :method:`sh.status()` method returns similar information.
+The :method:`sh.status()` method returns similar information.
 
 .. _c2c-shard-config-connect:
 
 Connect the ``mongosync`` instances
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-   These instructions use a generic connection string. To modify the
-   connection string for your cluster architecture, refer to the
-   architecture specific :ref:`connection details <c2c-connecting>`.
+These instructions use a generic connection string. To modify the
+connection string for your cluster architecture, refer to the
+architecture specific :ref:`connection details <c2c-connecting>`.
 
-   A single host server can run multiple ``mongosync`` instances. To
-   improve performance, run ``mongosync`` on multiple host servers.
+A single host server can run multiple ``mongosync`` instances. To
+improve performance, run ``mongosync`` on multiple host servers.
 
-   Each ``mongosync`` instance:
+Each ``mongosync`` instance:
 
-   - Connects to the same ``mongos`` instance in the source cluster.
-   - Connects to the same ``mongos`` instance in the destination
-     cluster.
-   - Connects to a single shard in the source cluster.
-   - Specifies a unique port to use for during synchronization.
-     Consider designating a range of ports to simplify scripting
-     {+c2c-product-name+} operations.
+- Connects to the same ``mongos`` instance in the source cluster.
+- Connects to the same ``mongos`` instance in the destination
+  cluster.
+- Connects to a single shard in the source cluster.
+- Specifies a unique port to use for during synchronization.
+  Consider designating a range of ports to simplify scripting
+  {+c2c-product-name+} operations.
 
-   Start the first ``mongosync`` instance:
+Start the first ``mongosync`` instance:
 
-   .. code-block:: javascript
+.. code-block:: javascript
 
-      mongosync \
-        --cluster0 "mongodb://user:password@cluster0host:27500" \
-        --cluster1 "mongodb://user:password@cluster1host:27500" \
-        --id shard01 --port 27601
+   mongosync \
+     --cluster0 "mongodb://user:password@cluster0host:27500" \
+     --cluster1 "mongodb://user:password@cluster1host:27500" \
+     --id shard01 --port 27601
 
-   Start a new ``mongosync`` instance for each shard in the source
-   cluster. Edit the ``--id`` and ``--port`` fields for each additional
-   ``mongosync`` instance.
+Start a new ``mongosync`` instance for each shard in the source
+cluster. Edit the ``--id`` and ``--port`` fields for each additional
+``mongosync`` instance.
 
-   .. code-block:: javascript
-     :emphasize-lines: 4
+.. code-block:: javascript
+  :emphasize-lines: 4
 
-      mongosync \
-        --cluster0 "mongodb://user:password@cluster0host:27500" \
-        --cluster1 "mongodb://user:password@cluster1host:27500" \
-        --id shard02 --port 27602
+   mongosync \
+     --cluster0 "mongodb://user:password@cluster0host:27500" \
+     --cluster1 "mongodb://user:password@cluster1host:27500" \
+     --id shard02 --port 27602
 
 .. _c2c-sharded-start:
 
@@ -189,8 +189,8 @@ running.
 
 .. _c2c-sharded-commit:
 
-Commit Sync From  Multiple ``mongosync`` Instances
---------------------------------------------------
+Commit Synchronization From  Multiple ``mongosync`` Instances
+-------------------------------------------------------------
 
 When synchronization is complete, issue the :ref:`commit
 <c2c-api-commit>` command to each ``mongosync`` instance.
