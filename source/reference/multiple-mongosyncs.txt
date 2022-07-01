@@ -25,26 +25,25 @@ Configure Multiple ``mongosync`` Instances
 
 To configure multiple ``mongosync`` instances:
 
-- :ref:`c2c-shard-config-verify`
-- :ref:`c2c-shard-config-determine`
-- :ref:`c2c-shard-config-verify`
+#. :ref:`c2c-shard-config-verify`
+#. :ref:`c2c-shard-config-determine`
+#. :ref:`c2c-shard-config-verify`
 
 .. _c2c-shard-config-verify:
 
-Verify cluster configuration
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Step 1. Verify cluster configuration
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The source cluster and destination cluster must have the same number
 of shards.
 
 .. _c2c-shard-config-determine:
 
-Determine the shard IDs
-~~~~~~~~~~~~~~~~~~~~~~~
+Step 2. Determine the shard IDs
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-- Connect to the :binary:`mongos` for the source cluster with
-  :binary:`mongosh`.
-- To get the shard IDs, run the :dbcommand:`listShards` command.
+To get the shard IDs, connect to the source cluster :binary:`mongos`
+and run the :dbcommand:`listShards` command.
 
 .. code-block:: javascript
 
@@ -71,12 +70,13 @@ The information is in the ``shards`` array.
        }
      ]
 
-The :method:`sh.status()` method returns similar information.
+Alternatively, the :method:`sh.status()` method returns similar
+information.
 
 .. _c2c-shard-config-connect:
 
-Connect the ``mongosync`` instances
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Step 3. Connect the ``mongosync`` instances
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 These instructions use a generic connection string. To modify the
 connection string for your cluster architecture, refer to the
