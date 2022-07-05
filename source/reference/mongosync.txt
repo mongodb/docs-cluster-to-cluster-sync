@@ -61,6 +61,50 @@ Global Options
    For more information on connecting ``mongosync``, see
    :ref:`Connections <c2c-connecting>`.
 
+.. option:: --config <filename>
+
+   Sets the path to the configuration file.
+
+   For more information, see :ref:`c2c-mongosync-config`.
+
+.. option:: --help, h
+
+   Prints usage information to stdout.
+
+.. option:: --id <ID>
+
+   Sets an identifier for the ``mongosync`` instance.
+
+   Use this option when running multiple instances of ``mongosync`` on
+   a sharded cluster, to synchronize the shards individually. 
+   
+   The ``--id`` option must correspond to the shard ID of the shard it
+   syncs.  To find the shard ID, use the :dbcommand:`listShards`
+   command.
+
+.. option:: --logPath <DIR>
+
+   Sets the path to the log directory. {+c2c-product-name+} writes logs
+   to files in this directory.
+
+.. option:: --port
+
+   *Default*: ``27182``
+
+   Sets the port used by the HTTP server for the {+c2c-product-name+}
+   HTTP API.
+
+.. option:: --reversible
+
+   *Default*: false
+
+   To :ref:`reverse the direction <c2c-api-reverse>` of synchronization
+   between the source and destination clusters, ``mongosync`` must be
+   started with ``--reversible true``. 
+
+   If ``--reversible`` is set to ``true``, then
+   ``enableUserWriteBlocking`` must also be set to ``true``.
+
 .. option:: --verbosity <level>
 
    *Default*: ``INFO``
@@ -79,42 +123,9 @@ Global Options
    - ``FATAL``
    - ``PANIC``
 
-.. option:: --logPath <DIR>
-
-   Sets the path to the log directory. {+c2c-product-name+} writes logs
-   to files in this directory.
-
-.. option:: --port
-
-   *Default*: ``27182``
-
-   Sets the port used by the HTTP server for the {+c2c-product-name+}
-   HTTP API.
-
-.. option:: --id <ID>
-
-   Sets an identifier for the ``mongosync`` instance.
-
-   Use this option when running multiple instances of ``mongosync`` on
-   a sharded cluster, to synchronize the shards individually. 
-   
-   The ``--id`` option must correspond to the shard ID of the shard it
-   syncs.  To find the shard ID, use the :dbcommand:`listShards`
-   command.
-
-.. option:: --config <filename>
-
-   Sets the path to the configuration file.
-
-   For more information, see :ref:`c2c-mongosync-config`.
-
 .. option:: --version, -v
 
    Prints ``mongosync`` version information to stdout.
-
-.. option:: --help, h
-
-   Prints usage information to stdout.
 
 Behavior
 --------
@@ -181,6 +192,23 @@ If a database with views is dropped on the source, the destination may
 show an empty ``system.views`` collection in that database. The empty
 ``system.views`` collection will not change the accuracy of user
 data on the destination.
+
+Write Blocking
+~~~~~~~~~~~~~~
+
+By default, write-blocking is not enabled during replication. To enable
+write-blocking on the destination cluster while replicating, and on the
+source cluster while committing, start ``mongosync`` with
+``enableUserWriteBlocking`` set to ``true``.
+
+:ref:`Reverse synchronization <c2c-api-reverse>` requires
+write-blocking. To enable reverse synchronization between the source
+and destination clusters, start ``mongosync`` with
+``enableUserWriteBlocking`` set to ``true``.
+
+To set ``enableUserWriteBlocking``, the ``mongosync`` user must have a
+role that includes the ``setUserWriteBlock`` and
+``bypassWriteBlockingMode`` ActionTypes.
 
 Examples
 --------
