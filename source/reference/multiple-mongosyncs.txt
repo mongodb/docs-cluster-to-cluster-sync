@@ -1,8 +1,8 @@
 .. _c2c-sharded-clusters:
 
-================
-Sharded Clusters
-================
+=====================================
+Use ``mongosync`` on Sharded Clusters
+=====================================
 
 .. include:: /includes/preview-warning
 
@@ -25,9 +25,9 @@ Configure Multiple ``mongosync`` Instances
 
 To configure multiple ``mongosync`` instances:
 
-#. :ref:`c2c-shard-config-verify`
-#. :ref:`c2c-shard-config-determine`
-#. :ref:`c2c-shard-config-verify`
+#. :ref:`Verify cluster configuration <c2c-shard-config-verify>`
+#. :ref:`Determine the shard IDs <c2c-shard-config-determine>`
+#. :ref:`Connect the instances <c2c-shard-config-connect>`
 
 .. _c2c-shard-config-verify:
 
@@ -70,9 +70,6 @@ The information is in the ``shards`` array.
        }
      ]
 
-Alternatively, the :method:`sh.status()` method returns similar
-information.
-
 .. _c2c-shard-config-connect:
 
 Step 3. Connect the ``mongosync`` instances
@@ -82,8 +79,10 @@ These instructions use a generic connection string. To modify the
 connection string for your cluster architecture, refer to the
 architecture specific :ref:`connection details <c2c-connecting>`.
 
-A single host server can run multiple ``mongosync`` instances. To
-improve performance, run ``mongosync`` on multiple host servers.
+.. tip::
+ 
+   A single host server can run multiple ``mongosync`` instances. To
+   improve performance, run ``mongosync`` on multiple host servers.
 
 Each ``mongosync`` instance:
 
@@ -134,8 +133,7 @@ Use ``curl`` or another HTTP client to issue the :ref:`start
         '{ "source": "cluster0", "destination": "cluster1", \
            "reversible": false, "enableUserWriteBlocking": false }'
 
-The ``start`` command options, in this example the ``--data`` values in
-the ``curl`` command, must be the same for all of the ``mongosync``
+The ``start`` command options must be the same for all of the ``mongosync``
 instances.
 
 .. _c2c-sharded-progress:
@@ -143,8 +141,10 @@ instances.
 Check Progress on a Single ``mongosync`` Instance
 -------------------------------------------------
 
-Use ``curl`` or another HTTP client to issue the :ref:`progress
-<c2c-api-progress>` command to the ``mongosync`` instance.
+The ``mongosync`` instances do not aggregate progress information. To
+review synchronization progress for a particular shard, use ``curl`` or
+another HTTP client to issue the :ref:`progress <c2c-api-progress>`
+command to the ``mongosync`` instance synchronizing that shard.
 
 .. code-block:: shell
 
@@ -159,33 +159,37 @@ synchronization.
 Pause Progress on a Single ``mongosync`` Instance
 -------------------------------------------------
 
-Use ``curl`` or another HTTP client to issue the :ref:`pause
-<c2c-api-pause>` command to the ``mongosync`` instance.
+The :ref:`pause <c2c-api-pause>` command will temporarily halt the
+synchronization process on a single shard. It does not pause any other
+``mongosync`` instances that may be running. Use ``curl`` or another
+HTTP client to issue the ``pause`` command to a ``mongosync`` instance.
 
 .. code-block:: shell
 
    curl monogsync01Host:27601/api/v1/pause -XPOST --data '{}'
 
 This command pauses the ``mongosync`` instance that is running on
-``monogsync01Host`` and using ``port 27601`` for synchronization. It
-does not pause any other ``mongosync`` instances that may be running.
+``monogsync01Host`` and using ``port 27601`` for synchronization.
 
 .. _c2c-sharded-resume:
 
 Resume Progress on a Single ``mongosync`` Instance
 --------------------------------------------------
 
+If one or more ``mongosync`` instances are paused, you can use the
+:ref:`resume <c2c-api-resume>` command to resume synchronizing. Run a
+separate ``resume`` command against each paused ``mongosync`` instance
+to continue synchronizing.
+
 Use ``curl`` or another HTTP client to issue the :ref:`resume
-<c2c-api-resume>` command to the ``mongosync`` instance.
+<c2c-api-resume>` command to each ``mongosync`` instance.
 
 .. code-block:: shell
 
    curl monogsync01Host:27601/api/v1/resume -XPOST --data '{}'
 
 This command resumes synchronization on the ``mongosync`` instance that
-is running on ``monogsync01Host`` and using ``port 27601``. It does not
-resume synchronization on any other ``mongosync`` instances that may be
-running.
+is running on ``monogsync01Host`` and using ``port 27601``. 
 
 .. _c2c-sharded-commit:
 
