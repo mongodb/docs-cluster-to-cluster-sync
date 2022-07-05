@@ -170,10 +170,9 @@ the destination cluster, however a :ref:`chunk migration
 <sharding-chunk-migration>` or similar source update could move
 documents to a new source shard during replication.
 
-To preserve event order on the destination cluster,
-{+c2c-product-name+} automatically adjusts the :ref:`change events
-<change-events>` if documents move between source shards during
-replication.
+Even if documents move between source shards during replication,
+{+c2c-product-name+} maintains the :term:`eventual consistency`
+guarantee on the destination cluster.
 
 Views
 ~~~~~
