@@ -89,7 +89,7 @@ To configure multiple ``mongosync`` instances:
              }
            ]
 
-   .. step:: 3. Connect the ``mongosync`` instances
+   .. step:: Connect the ``mongosync`` instances
 
       .. _c2c-shard-config-connect:
 
@@ -156,8 +156,8 @@ instances.
 
 .. _c2c-sharded-progress:
 
-Check Progress on a Single ``mongosync`` Instance
--------------------------------------------------
+Check Progress
+--------------
 
 The ``mongosync`` instances do not aggregate progress information
 across shards. To review synchronization progress for a particular
@@ -171,12 +171,13 @@ instance synchronizing that shard.
 
 This command checks the progress of the ``mongosync`` instance that is
 running on ``monogsync02Host`` and using ``port 27602`` for
-synchronization.
+synchronization. To check progress on other shards, update the host and
+port number then repeat the API call to each ``mongosync`` instance.
 
 .. _c2c-sharded-pause:
 
-Pause Progress on a Single ``mongosync`` Instance
--------------------------------------------------
+Pause a ``mongosync`` Instance
+------------------------------
 
 The :ref:`pause <c2c-api-pause>` command will temporarily halt the
 synchronization process on a single shard. It does not pause any other
@@ -188,12 +189,14 @@ HTTP client to issue the ``pause`` command to a ``mongosync`` instance.
    curl monogsync01Host:27601/api/v1/pause -XPOST --data '{}'
 
 This command pauses the ``mongosync`` instance that is running on
-``monogsync01Host`` and using ``port 27601`` for synchronization.
+``monogsync01Host`` and using ``port 27601`` for synchronization. To
+pause synchronization on other shards, update the host and port number
+then repeat the API call to each ``mongosync`` instance.
 
 .. _c2c-sharded-resume:
 
-Resume Progress on a Single ``mongosync`` Instance
---------------------------------------------------
+Resume Synchronization
+----------------------
 
 If one or more ``mongosync`` instances are paused, you can use the
 :ref:`resume <c2c-api-resume>` command to resume synchronizing. Run a
@@ -208,7 +211,9 @@ Use ``curl`` or another HTTP client to issue the :ref:`resume
    curl monogsync01Host:27601/api/v1/resume -XPOST --data '{}'
 
 This command resumes synchronization on the ``mongosync`` instance that
-is running on ``monogsync01Host`` and using ``port 27601``. 
+is running on ``monogsync01Host`` and using ``port 27601``.  To 
+resume synchronization on other shards, update the host and port number
+then repeat the API call to each ``mongosync`` instance.
 
 .. _c2c-sharded-commit:
 
