@@ -16,8 +16,9 @@ Use ``mongosync`` on Sharded Clusters
 
 There are two ways to synchronize :ref:`sharded clusters
 <sharded-cluster>`. You can use either one ``monogosync`` or several
+``monogosync`` instances. For best performance, use multiple
 ``monogosync`` instances, one ``monogosync`` for each shard in the
-cluster. For best performance, use multiple ``monogosync`` instances.
+cluster.
 
 .. _c2c-sharded-config-single:
 
@@ -28,11 +29,12 @@ To configure a single ``mongosync``, follow the :ref:`connection
 instructions <c2c-conn-top-level>` for your cluster architecture to
 connect to the :binary:`mongos` instance in your cluster.
 
-When you connect a single ``mongosync`` to a sharded cluster do use the
- :urioption:`replicaSet` option or the  :option:`id` option.
+When you connect a single ``mongosync`` to a sharded cluster do not use
+the :urioption:`replicaSet` option or the :option:`id <mongosync --id>`
+option.
 
-
-
+The rest of this page addresses cluster to cluster synchronization
+using multiple ``monogosync`` instances.
 
 .. _c2c-sharded-config:
 
@@ -89,47 +91,47 @@ To configure multiple ``mongosync`` instances:
 
    .. step:: 3. Connect the ``mongosync`` instances
 
-   .. _c2c-shard-config-connect:
+      .. _c2c-shard-config-connect:
 
-   These instructions use a generic connection string. To modify the
-   connection string for your cluster architecture, refer to the
-   architecture specific :ref:`connection details <c2c-connecting>`.
+      These instructions use a generic connection string. To modify the
+      connection string for your cluster architecture, refer to the
+      architecture specific :ref:`connection details <c2c-connecting>`.
 
-   .. tip::
-    
-      A single host server can run multiple ``mongosync`` instances. To
-      improve performance, run ``mongosync`` on multiple host servers.
+      .. tip::
+       
+         A single host server can run multiple ``mongosync`` instances. To
+         improve performance, run ``mongosync`` on multiple host servers.
 
-   Each ``mongosync`` instance:
+      Each ``mongosync`` instance:
 
-   - Connects to the same ``mongos`` instance in the source cluster.
-   - Connects to the same ``mongos`` instance in the destination
-     cluster.
-   - Connects to a single shard in the source cluster.
-   - Specifies a unique port to use for during synchronization.
-     Consider designating a range of ports to simplify scripting
-     {+c2c-product-name+} operations.
+      - Connects to the same ``mongos`` instance in the source cluster.
+      - Connects to the same ``mongos`` instance in the destination
+        cluster.
+      - Connects to a single shard in the source cluster.
+      - Specifies a unique port to use for during synchronization.
+        Consider designating a range of ports to simplify scripting
+        {+c2c-product-name+} operations.
 
-   Run the first ``mongosync`` instance:
+      Run the first ``mongosync`` instance:
 
-   .. code-block:: javascript
+      .. code-block:: javascript
 
-      mongosync \
-        --cluster0 "mongodb://user:password@cluster0host:27500" \
-        --cluster1 "mongodb://user:password@cluster1host:27500" \
-        --id shard01 --port 27601
+         mongosync \
+           --cluster0 "mongodb://user:password@cluster0host:27500" \
+           --cluster1 "mongodb://user:password@cluster1host:27500" \
+           --id shard01 --port 27601
 
-   Run a new ``mongosync`` instance for each shard in the source cluster.
-   Edit the ``--id`` and ``--port`` fields for each additional
-   ``mongosync`` instance.
+      Run a new ``mongosync`` instance for each shard in the source cluster.
+      Edit the ``--id`` and ``--port`` fields for each additional
+      ``mongosync`` instance.
 
-   .. code-block:: javascript
-     :emphasize-lines: 4
+      .. code-block:: javascript
+        :emphasize-lines: 4
 
-      mongosync \
-        --cluster0 "mongodb://user:password@cluster0host:27500" \
-        --cluster1 "mongodb://user:password@cluster1host:27500" \
-        --id shard02 --port 27602
+         mongosync \
+           --cluster0 "mongodb://user:password@cluster0host:27500" \
+           --cluster1 "mongodb://user:password@cluster1host:27500" \
+           --id shard02 --port 27602
 
 .. _c2c-sharded-start:
 
