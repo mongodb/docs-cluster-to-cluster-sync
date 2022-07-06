@@ -121,6 +121,14 @@ Behavior
 
 .. _c2c-mongosync-config:
 
+Cluster Independence
+~~~~~~~~~~~~~~~~~~~~
+
+``mongosync`` synchronizes collection data between a source and a
+destination cluster. ``mongosync`` does not synchronize :ref:`users
+<users>` or :ref:`roles <built-in-roles>`. As a result, you can grant
+different levels of access to each cluster.
+
 Configuration File
 ~~~~~~~~~~~~~~~~~~
 
