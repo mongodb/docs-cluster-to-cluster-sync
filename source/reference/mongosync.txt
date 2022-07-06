@@ -200,7 +200,7 @@ By default, write-blocking is not enabled during synchronization. When
 write-blocking is enabled, ``mongosync`` blocks writes:
 
 - On the destination cluster during replication
-- On the source cluster blocks while committing
+- On the source cluster while committing
 
 To enable write-blocking, start ``mongosync`` with
 ``enableUserWriteBlocking`` set to ``true``.
