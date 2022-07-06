@@ -14,9 +14,25 @@ Use ``mongosync`` on Sharded Clusters
    :depth: 1
    :class: twocols
 
-To improve performance on :ref:`sharded clusters <sharded-cluster>`,
-configure a ``monogosync`` instance for each shard in the source
-cluster.
+There are two ways to synchronize :ref:`sharded clusters
+<sharded-cluster>`. You can use either one ``monogosync`` or several
+``monogosync`` instances, one ``monogosync`` for each shard in the
+cluster. For best performance, use multiple ``monogosync`` instances.
+
+.. _c2c-sharded-config-single:
+
+Configure a Single ``mongosync`` Instance
+-----------------------------------------
+
+To configure a single ``mongosync``, follow the :ref:`connection
+instructions <c2c-conn-top-level>` for your cluster architecture to
+connect to the :binary:`mongos` instance in your cluster.
+
+When you connect a single ``mongosync`` to a sharded cluster do use the
+ :urioption:`replicaSet` option or the  :option:`id` option.
+
+
+
 
 .. _c2c-sharded-config:
 
@@ -71,7 +87,7 @@ To configure multiple ``mongosync`` instances:
              }
            ]
 
-.. step:: 3. Connect the ``mongosync`` instances
+   .. step:: 3. Connect the ``mongosync`` instances
 
    .. _c2c-shard-config-connect:
 
@@ -141,10 +157,11 @@ instances.
 Check Progress on a Single ``mongosync`` Instance
 -------------------------------------------------
 
-The ``mongosync`` instances do not aggregate progress information. To
-review synchronization progress for a particular shard, use ``curl`` or
-another HTTP client to issue the :ref:`progress <c2c-api-progress>`
-command to the ``mongosync`` instance synchronizing that shard.
+The ``mongosync`` instances do not aggregate progress information
+across shards. To review synchronization progress for a particular
+shard, use ``curl`` or another HTTP client to issue the
+:ref:`progress <c2c-api-progress>` command to the ``mongosync``
+instance synchronizing that shard.
 
 .. code-block:: shell
 
