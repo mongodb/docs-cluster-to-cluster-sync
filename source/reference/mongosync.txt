@@ -94,17 +94,6 @@ Global Options
    Sets the port used by the HTTP server for the {+c2c-product-name+}
    HTTP API.
 
-.. option:: --reversible
-
-   *Default*: false
-
-   To :ref:`reverse the direction <c2c-api-reverse>` of synchronization
-   between the source and destination clusters, ``mongosync`` must be
-   started with ``--reversible true``. 
-
-   If ``--reversible`` is set to ``true``, then
-   ``enableUserWriteBlocking`` must also be set to ``true``.
-
 .. option:: --verbosity <level>
 
    *Default*: ``INFO``
@@ -207,11 +196,13 @@ To enable write-blocking, start ``mongosync`` with
 
 :ref:`Reverse synchronization <c2c-api-reverse>` requires
 write-blocking. To enable reverse synchronization between the source
-and destination clusters, start ``mongosync`` with ``reversible`` and
-``enableUserWriteBlocking`` set to ``true``.
+and destination clusters, set ``reversible`` and
+``enableUserWriteBlocking`` to ``true`` when you use the
+:ref:`start API <c2c-api-start>` to initiate ``mongosync``. The options
+must be set at startup, they cannot be updated later.
 
 To set ``enableUserWriteBlocking``, the ``mongosync`` user must have a
-role that includes the ``setUserWriteBlock`` and
+role that includes the ``setUserWriteBlockMode`` and
 ``bypassWriteBlockingMode`` ActionTypes.
 
 Examples
