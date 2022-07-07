@@ -16,9 +16,9 @@ Use ``mongosync`` on Sharded Clusters
 
 There are two ways to synchronize :ref:`sharded clusters
 <sharded-cluster>`. You can use either one ``monogosync`` or several
-``monogosync`` instances. For best performance, use multiple
-``monogosync`` instances, one ``monogosync`` for each shard in the
-cluster.
+``monogosync`` instances. For best performance with large or heavily
+loaded clusters, use multiple ``monogosync`` instances, one
+``monogosync`` for each shard in the cluster.
 
 .. _c2c-sharded-config-single:
 
