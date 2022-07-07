@@ -258,3 +258,9 @@ instance that is running on ``monogsync01Host`` and using ``port
 27601``. Make additional calls to ``reverse`` on any other
 ``mongosync`` instances that may be running.
 
+.. note::
+
+   Reverse synchronization is only possible if ``reversible`` and
+   ``enableUserWriteBlocking`` are both set to ``true`` when the
+   :ref:`start API <c2c-api-start>` initiates ``mongosync``.
+
