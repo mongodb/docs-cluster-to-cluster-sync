@@ -103,8 +103,3 @@ Options
    To set the ``verbosity`` setting from the command-line,
    see the :option:`--verbosity` option.
 
-.. toctree::
-   :hidden:
-   :glob:
-
-   Command-line Options </reference/configuration/file-setting-cli-option-mapping>
