@@ -242,8 +242,13 @@ Reverse the Synchronization Direction
 -------------------------------------
 
 To reverse synchronization so that the original destination cluster
-acts as the source cluster, issue the :ref:`reverse <c2c-api-reverse>`
-command to each ``mongosync`` instance.
+acts as the source cluster:
+
+- If you have not already done so, issue the :ref:`commit
+  <c2c-api-commit>` command to each ``mongosync`` instance and wait
+  until all of the commits finish.
+- Issue the :ref:`reverse <c2c-api-reverse>` command to each
+  ``mongosync`` instance.
 
 The ``reverse`` operation is blocking. The ``reverse`` command will not
 return until ``reverse`` has been called on every ``mongosync``
