@@ -124,9 +124,9 @@ For example, on the destination cluster:
   replicating the drop would remove the views, but leave an empty
   :data:`system.views <<database>.system.views>` collection.
 
-In these cases, the destination cluster would still have the dropped database,
-but the database would only contain system collections.
-
+In these cases, the replicating ``dropDatabase`` would remove all user-created
+collections from the database but leave its system collections on the
+destination cluster.
 
 .. contents:: On this page
    :local:
