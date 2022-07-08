@@ -25,6 +25,8 @@ Requirement
 To use the ``start`` endpoint, ``mongosync`` must be in the ``IDLE``
 state.
 
+.. include:: /includes/fact-write-blocking-requirement.rst
+ 
 Request
 -------
 
