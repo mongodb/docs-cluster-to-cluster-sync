@@ -101,6 +101,32 @@ Multiple Clusters
 - Syncing one source cluster to many destination clusters is not
   supported.
 
+System Collections
+------------------
+
+{+c2c-product-name+} does not replicate :ref:`system collections 
+<metadata-system-collections>` to the destination cluster.
+
+If the user issues a :dbcommand:`dropDatabase` command on the source cluster,
+this change is not direclty applied on the destination cluster. Instead,
+{+c2c-product-name+} drops user collections and views in the destination 
+database, but it does not drop system collections on the destination database.
+
+For example, on the destination cluster:
+
+- The drop operation would not affect a user-created  
+  :data:`system.js <<database>.system.js>` collection. 
+
+- If the user enabled profiling, the :data:`system.profile 
+  <<database>.system.profile>` collection would remain.
+
+- If the user created views on the source cluster and then dropped the database,
+  replicating the drop would remove the views, but leave an empty
+  :data:`system.views <<database>.system.views>` collection.
+
+In these cases, the destination cluster would still have the dropped database,
+but the database would only contain system collections.
+
 
 .. contents:: On this page
    :local:
