@@ -246,7 +246,7 @@ acts as the source cluster:
 
 - If you have not already done so, issue the :ref:`commit
   <c2c-api-commit>` command to each ``mongosync`` instance and wait
-  until all of the commits finish.
+  until all of the commits to finish.
 - Issue the :ref:`reverse <c2c-api-reverse>` command to each
   ``mongosync`` instance.
 
