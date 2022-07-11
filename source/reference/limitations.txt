@@ -109,8 +109,9 @@ System Collections
 
 If you issue a :dbcommand:`dropDatabase` command on the source cluster,
 this change is not directly applied on the destination cluster. Instead,
-{+c2c-product-name+} drops user collections and views in the destination 
-database, but it does not drop system collections on the destination database.
+{+c2c-product-name+} drops user collections and views in the database 
+on the destination cluster, but it does not drop system collections 
+on that database.
 
 For example, on the destination cluster:
 
