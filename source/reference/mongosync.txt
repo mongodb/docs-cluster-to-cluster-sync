@@ -126,13 +126,13 @@ Configuration File
 ~~~~~~~~~~~~~~~~~~
 
 Options for ``mongosync`` can be set in a YAML configuration file. Use
-the :option:`--config` option.  For example:
+the :option:`--config` option. For example:
 
  .. code-block:: console
 
     $ mongosync --config /etc/mongosync.conf
 
-For information on available settings, see :ref:`Configuration <c2c-config>`
+For information on available settings, see :ref:`Configuration <c2c-config>`.
 
 
 Consistency
