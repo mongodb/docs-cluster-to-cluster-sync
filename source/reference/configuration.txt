@@ -17,7 +17,6 @@ You can configure :program:`mongosync` instances at startup using a configuratio
 file.  The configuration file contains settings that are the equivalent of
 ``mongosync`` command-line options.
 
-
 Configuration File
 ==================
 
@@ -50,10 +49,6 @@ Options
 
    .. include:: /includes/opts/cluster0.rst
 
-   To set the ``cluster0`` setting from the command-line,
-   see the :option:`--cluster0` option.
-
-
 .. setting:: cluster1
 
    *Type*: string
@@ -62,7 +57,6 @@ Options
 
    To set the ``cluster1`` setting from the command-line,
    see the :option:`--cluster1` option.
-
 
 .. setting:: id
 
@@ -93,7 +87,6 @@ Options
    To set the ``port`` setting from the command-line,
    see the :option:`--port` option.
 
-
 .. setting:: verbosity 
 
    *Type*: string
@@ -103,3 +96,13 @@ Options
    To set the ``verbosity`` setting from the command-line,
    see the :option:`--verbosity` option.
 
+   .. |verbosity-opt-type| replace:: setting
+
+   .. include:: /includes/supported-verbosity-options.rst
+
+
+.. toctree::
+   :hidden:
+   :glob:
+
+   configuration/*
