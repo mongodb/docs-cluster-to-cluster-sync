@@ -79,7 +79,7 @@ Options
    .. include:: /includes/opts/logPath.rst
 
    To set the ``logPath`` setting from the command-line,
-   see the :option:`--logpath` option.
+   see the :option:`--logPath` option.
 
 .. setting:: port
 
