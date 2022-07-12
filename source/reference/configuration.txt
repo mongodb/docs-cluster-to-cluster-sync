@@ -17,6 +17,7 @@ You can configure :program:`mongosync` instances at startup using a configuratio
 file.  The configuration file contains settings that are the equivalent of
 ``mongosync`` command-line options.
 
+
 Configuration File
 ==================
 
@@ -82,14 +83,6 @@ Options
    see the :option:`--logPath` option.
 
 
-.. setting:: port
-
-   *Type*: integer
-
-   .. include:: /includes/opts/port.rst
-
-   To set the ``port`` setting from the command-line,
-   see the :option:`--port` option.
 
 .. setting:: id
 
@@ -114,7 +107,6 @@ Options
 
    To set the ``logPath`` setting from the command-line,
    see the :option:`--logpath` option.
-
 
 .. setting:: port
 

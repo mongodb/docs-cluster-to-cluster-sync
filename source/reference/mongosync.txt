@@ -103,8 +103,6 @@ Global Options
    To set the ``--verbosity`` option from a configuration file,
    see the :setting:`verbosity` setting.
 
-   .. include:: /includes/supported-verbosity-options.rst
-
 .. option:: --version, -v
 
    Prints ``mongosync`` version information to stdout.
