@@ -22,7 +22,7 @@ Configuration File
 ==================
 
 Most :program:`mongosync` command-line options can be written to file.
-The configuration file specifies values for each setting using YaML format.
+The configuration file specifies values for each setting using YAML format.
 For example:
 
 .. code-block:: yaml

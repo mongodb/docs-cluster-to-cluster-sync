@@ -126,14 +126,14 @@ Configuration File
 ~~~~~~~~~~~~~~~~~~
 
 Options for ``mongosync`` can be set in a YAML configuration file. Use
-the :option:`--config` option. To specify the path to the configuration
-file. For example:
+the :option:`--config` option.  For example:
 
-.. code-block:: yaml
+ .. code-block:: console
 
-   # Cluster Configuration
-   cluster0: "mongodb://192.0.2.10:27017,192.0.2.11:27017,192.0.2.12:27017"
-   cluster1: "mongodb://192.0.2.20:27017,192.0.2.21:27017,192.0.2.22:27017"
+    $ mongosync --config /etc/mongosync.conf
+
+For information on available settings, see :ref:`Configuration <c2c-config>`
+
 
 Consistency
 ~~~~~~~~~~~
