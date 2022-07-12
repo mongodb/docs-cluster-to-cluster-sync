@@ -72,33 +72,6 @@ Options
    To set the ``id`` setting from the command-line,
    see the :option:`--id` option.
 
-
-.. setting:: logPath
-
-   *Type*: string
-
-   .. include:: /includes/opts/logPath.rst
-
-   To set the ``logPath`` setting from the command-line,
-   see the :option:`--logPath` option.
-
-
-
-.. setting:: id
-
-   Sets an identifier for the ``mongosync`` instance.
-
-   Use this option when running multiple instances of ``mongosync`` on
-   a sharded cluster, to synchronize the shards individually. 
-   
-   The ``id`` setting must correspond to the shard ID of the shard it
-   syncs.  To find the shard ID, use the :dbcommand:`listShards`
-   command.
-
-   To set the ``id`` setting from the command-line,
-   see the :option:`--id` option.
-
-
 .. setting:: logPath
 
    *Type*: string
@@ -130,8 +103,3 @@ Options
    To set the ``verbosity`` setting from the command-line,
    see the :option:`--verbosity` option.
 
-.. toctree::
-   :hidden:
-   :glob:
-
-   configuration/*
