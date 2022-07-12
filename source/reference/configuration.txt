@@ -49,6 +49,10 @@ Options
 
    .. include:: /includes/opts/cluster0.rst
 
+   To set the ``cluster0`` setting from the command-line,
+   see the :option:`--cluster0` option.
+
+
 .. setting:: cluster1
 
    *Type*: string
@@ -98,21 +102,29 @@ Options
    syncs.  To find the shard ID, use the :dbcommand:`listShards`
    command.
 
+   To set the ``id`` setting from the command-line,
+   see the :option:`--id` option.
+
+
 .. setting:: logPath
 
    *Type*: string
 
-   Sets the path to the log directory. {+c2c-product-name+} writes logs
-   to files in this directory.
+   .. include:: /includes/opts/logPath.rst
+
+   To set the ``logPath`` setting from the command-line,
+   see the :option:`--logpath` option.
+
 
 .. setting:: port
 
    *Type*: integer
 
-   *Default*: ``27182``
+   .. include:: /includes/opts/port.rst
 
-   Sets the port used by the HTTP server for the {+c2c-product-name+}
-   HTTP API.
+   To set the ``port`` setting from the command-line,
+   see the :option:`--port` option.
+
 
 .. setting:: verbosity 
 
@@ -122,12 +134,6 @@ Options
 
    To set the ``verbosity`` setting from the command-line,
    see the :option:`--verbosity` option.
-
-
-The ``verbosity`` setting supports the following values:
-
-   .. include:: /includes/supported-verbosity-options.rst
-
 
 .. toctree::
    :hidden:
