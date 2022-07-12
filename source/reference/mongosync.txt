@@ -98,6 +98,9 @@ Global Options
 
 .. option:: --verbosity <level>
 
+   .. |verbosity-opt-type| replace:: option
+   .. |verbosity-opt| replace:: ``--verbosity``
+
    .. include:: /includes/opts/verbosity.rst
 
    To set the ``--verbosity`` option from a configuration file,

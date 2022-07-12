@@ -122,6 +122,9 @@ Options
 
    *Type*: string
 
+   .. |verbosity-opt-type| replace:: setting
+   .. |verbosity-opt| replace:: ``verbosity``
+
    .. include:: /includes/opts/verbosity.rst
 
    To set the ``verbosity`` setting from the command-line,
