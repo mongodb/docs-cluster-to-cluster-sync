@@ -91,6 +91,7 @@ Global Options
 
    .. include:: /includes/opts/port.rst
 
+
    To set the ``--port`` option from a configuration file,
    see the :setting:`port` setting.
 
@@ -104,7 +105,7 @@ Global Options
 
    To set the ``--verbosity`` option from a configuration file,
    see the :setting:`verbosity` setting.
-
+   
 .. option:: --version, -v
 
    Prints ``mongosync`` version information to stdout.
