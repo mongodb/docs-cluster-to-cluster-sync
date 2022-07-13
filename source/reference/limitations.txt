@@ -55,8 +55,7 @@ General Limitations
   not supported.
 - If you run the :dbcommand:`renameCollection` command or the
   :dbcommand:`drop` command on a :ref:`capped collection
-  <manual-capped-collection>`, synchronization is not supported on the
-  cluster.
+  <manual-capped-collection>`, synchronization behavior is undefined.
 
 MongoDB Community Edition
 -------------------------
