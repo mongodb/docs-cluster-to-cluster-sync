@@ -227,7 +227,9 @@ command. Repeat the process on all of the ``mongosync`` instances.
 
 The ``commit`` operation is blocking. The ``commit`` command will not
 return until ``commit`` has been called on every ``mongosync``
-instance.
+instance. To unsynchronized data, you should only run the ``commit``
+command when the :ref:`lagTimeSeconds <c2c-api-progress>>` is small
+enough for your application.
 
 .. code-block:: shell
 
