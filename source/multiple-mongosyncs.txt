@@ -233,12 +233,18 @@ small enough for your application.
 
 .. code-block:: shell
 
+   // Check progress
+   curl monogsync01Host:27601/api/v1/progress -XGET
+
+   // Commit 
    curl monogsync01Host:27601/api/v1/commit -XPOST --data '{}'
 
-This command only commits synchronization from the ``mongosync``
-instance that is running on ``monogsync01Host`` and using ``port
-27601``. Make additional calls to ``commit`` on any other
-``mongosync`` instances that may be running.
+
+These commands only check progress and commit synchronization for the
+``mongosync`` instance that is running on ``monogsync01Host`` and using
+``port 27601``. To synchronize all of the shards, make additional calls
+to ``progress`` and  ``commit`` on any other ``mongosync`` instances
+that may be running.
 
 .. _c2c-sharded-reverse:
 
