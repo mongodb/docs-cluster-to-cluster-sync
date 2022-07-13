@@ -220,8 +220,10 @@ then repeat the API call to each ``mongosync`` instance.
 Commit Synchronization From  Multiple ``mongosync`` Instances
 -------------------------------------------------------------
 
-When synchronization is complete, issue the :ref:`commit
-<c2c-api-commit>` command to each ``mongosync`` instance.
+When you want to complete synchronization, issue the :ref:`progress
+<c2c-api-progress>` command. If the ``progress`` command returns,
+``{ canCommit: true }``, issue the :ref:`commit <c2c-api-commit>`
+command. Repeat the process on all of the ``mongosync`` instances.
 
 The ``commit`` operation is blocking. The ``commit`` command will not
 return until ``commit`` has been called on every ``mongosync``
