@@ -125,13 +125,14 @@ Commit
 When you are ready to stop synchronizing, use the :ref:`commit
 <c2c-api-commit>` command on the destination cluster to convert indexes
 and finalize the changes. Writes are blocked on the destination cluster
-while ``commit`` is running. Use the :ref:`progress <c2c-api-progress>`
-command to monitor the ``commit`` process. 
+while ``commit`` is running.
 
-The destination cluster is writable when ``canWrite`` is true.
+Use the :ref:`progress <c2c-api-progress>` command to monitor the
+``commit`` process:
 
-Index conversion is complete when ``mongosync`` enters the
-``COMMITTED`` state.
+- The destination cluster is writable when ``canWrite`` is true.
+- Index conversion is complete when ``mongosync`` enters the
+  ``COMMITTED`` state.
 
 .. _c2c-mongosync-config:
 
