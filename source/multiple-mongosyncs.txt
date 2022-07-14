@@ -221,15 +221,21 @@ Commit Synchronization From  Multiple ``mongosync`` Instances
 -------------------------------------------------------------
 
 When you want to complete synchronization, issue the :ref:`progress
-<c2c-api-progress>` command. If the ``progress`` command returns,
-``{ canCommit: true }``, issue the :ref:`commit <c2c-api-commit>`
-command. Repeat the process on all of the ``mongosync`` instances.
+<c2c-api-progress>` command and check the values for ``canCommit``
+and ``lagTimeSeconds``.
+
+To minimize write blocking on the source cluster, you should only run
+the ``commit`` command when the :ref:`lagTimeSeconds
+<c2c-api-progress>` value is small enough for your application.
+
+If the ``lagTimeSeconds`` value is small enough, and ``canCommit`` is
+``true``, issue the :ref:`commit <c2c-api-commit>` command to commit
+synchronization. Repeat the process on all of the ``mongosync``
+instances.
 
 The ``commit`` operation is blocking. The ``commit`` command will not
 return until ``commit`` has been called on every ``mongosync``
-instance. To avoid unsynchronized data, you should only run the
-``commit`` command when the :ref:`lagTimeSeconds <c2c-api-progress>` is
-small enough for your application.
+instance.
 
 .. code-block:: shell
 
@@ -238,7 +244,6 @@ small enough for your application.
 
    // Commit 
    curl monogsync01Host:27601/api/v1/commit -XPOST --data '{}'
-
 
 These commands only check progress and commit synchronization for the
 ``mongosync`` instance that is running on ``monogsync01Host`` and using
