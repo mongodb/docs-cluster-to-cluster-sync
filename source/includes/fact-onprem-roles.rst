@@ -6,9 +6,8 @@ The user specified in the connection string must have, at a minimum, the
 .. note:: 
 
    To use ``mongosync`` in the :ref:`reverse direction <c2c-api-reverse>`,
-   you must `create a custom role
-   </atlas/reference/api/custom-roles-create-a-role/>`__ that grants the
-   following ActionTypes:
+   you must create a custom role (using the :dbcommand:`createRole` command)
+   that grants the following ActionTypes:
    
    - :authaction:`setUserWriteBlockMode`
    - :authaction:`bypassWriteBlockingMode`
