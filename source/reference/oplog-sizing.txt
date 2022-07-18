@@ -8,8 +8,6 @@
 
 .. default-domain:: mongodb
 
-.. program:: mongosync
-
 .. contents:: On this page
    :local:
    :backlinks: none
@@ -43,7 +41,7 @@ Estimate ``oplog`` Size Needed for Initial Sync
 
    .. step Estimate Copy Rate During Synching
 
-      .. _c2c-step-estimate-copy-rate
+      .. _c2c-step-estimate-copy-rate:
 
       To gather performance data while synching, start the sync process
       and monitor how fast data is transferred between clusters.

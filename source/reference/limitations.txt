@@ -143,8 +143,3 @@ In these cases, the replication of ``dropDatabase`` removes all user-created
 collections from the database, but leaves its system collections on the
 destination cluster.
 
-.. contents:: On this page
-   :local:
-   :backlinks: none
-   :depth: 1
-   :class: singlecol
