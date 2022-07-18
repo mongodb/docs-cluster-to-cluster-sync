@@ -41,11 +41,13 @@ To use the ``reverse`` endpoint:
   ``reversible`` and ``enableUserWriteBlocking`` options set to
   ``true``.
 - ``mongosync`` must be in the ``COMMITTED`` state.
-- Any indexes in the cluster must be :ref:`unique indexes
-  <index-type-unique>`. You can convert a non-unique index to a unique
-  index with the :dbcommand:`collMod` command. See `this example
+- :ref:`Unique indexes <index-type-unique>` must be formatted properly.
+  Format indexes with the :dbcommand:`collMod` command. See `this example
   <https://www.mongodb.com/docs/v6.0/reference/command/collMod/#convert-an-existing-index-to-a-unique-index>`__
   for more details.
+- Source and destination clusters must be MongoDB 6.0 or later. If a
+  cluster has been upgraded from MongoDB 4.2 or earlier, an initial sync
+  is required before reversing.
 
 Request
 -------
