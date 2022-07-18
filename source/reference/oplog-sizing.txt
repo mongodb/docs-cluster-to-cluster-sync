@@ -14,8 +14,11 @@
    :depth: 2
    :class: singlecol
 
-The :ref:`mongosync <c2c-mongosync>` program uses the :term:`oplog` to
-synchronize data between source and destination clusters. 
+The :ref:`mongosync <c2c-mongosync>` program uses :ref:`change streams
+<changeStreams>` to synchronize data between source and destination
+clusters. ``mongosync`` does not access the :term:`oplog` directly,
+but when a change stream returns events from the past, the events must
+be within the :term:`oplog` time range. 
 
 .. include:: /includes/fact-oplog-background.txt
 
