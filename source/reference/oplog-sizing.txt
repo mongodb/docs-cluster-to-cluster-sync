@@ -39,7 +39,9 @@ Estimate ``oplog`` Size Needed for Initial Sync
       cluster. If there are multiple shards, the smallest number is the
       minimum ``oplog`` window.
 
-   .. step Estimate Copy Rate During Synching
+   .. step:: Estimate Copy Rate During Synching
+
+      .. _c2c-step-est-size:
 
       To gather performance data while synching, start the sync process
       and monitor how fast data is transferred between clusters.
@@ -60,7 +62,7 @@ Estimate ``oplog`` Size Needed for Initial Sync
 
          copy_rate = ( estimatedCopiedBytes_time02 - estimatedCopiedBytes_01) / time_between_requests
 
-   .. step Estimate Copy Time
+   .. step:: Estimate Copy Time
 
       Estimate the time needed to copy the entire collection. The
       estimated copy time is:
@@ -69,7 +71,7 @@ Estimate ``oplog`` Size Needed for Initial Sync
 
          estimatedCopyTime = estimatedTotalBytes / copy_rate
 
-   .. step Validate ``oplog`` Size
+   .. step:: Validate ``oplog`` Size
 
       If the estimated time is larger than the minimum oplog window you
       must cancel synchronization. Before restarting, make one of the
@@ -84,6 +86,7 @@ Estimate ``oplog`` Size Needed for Initial Sync
 .. note::
 
    The copy rate may vary during synchronization. To monitor progress,
-   repeat the steps to estimate the copy rate and verify that the copy
-   rate stays about the same.
+   repeat the :ref:`steps to estimate the copy rate
+   <c2c-step-est-size>` and verify that the copy rate stays about the
+   same.
 
