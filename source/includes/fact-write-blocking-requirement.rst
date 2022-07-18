@@ -1,3 +1,11 @@
 To set ``enableUserWriteBlocking``, the ``mongosync`` user must have a
 role that includes the :authaction:`setUserWriteBlockMode` and
-:authaction:`bypassWriteBlockingMode` ActionTypes.
+:authaction:`bypassWriteBlockingMode` ActionTypes. 
+
+.. note:: 
+    
+   When using ``enableUserWriteBlocking``, writes are only blocked for users
+   that do not have the :authaction:`bypassWriteBlockingMode` ActionType. Users
+   that do have this ActionType are still able to perform writes.
+
+
