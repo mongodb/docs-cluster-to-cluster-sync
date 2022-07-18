@@ -20,9 +20,9 @@
 
    * - ``canWrite``
      - boolean
-     - If ``true``, indicates that :ref:`commit <c2c-api-commit>` has
-       completed and that it is possible to write to the destination
-       cluster.
+     - If ``true``, indicates that it is possible to write to the
+       destination cluster. Index validation continues until the 
+       :ref:`commit <c2c-api-commit>` is complete.
 
    * - ``info``
      - string
