@@ -41,8 +41,6 @@ Estimate ``oplog`` Size Needed for Initial Sync
 
    .. step Estimate Copy Rate During Synching
 
-      .. _c2c-step-estimate-copy-rate:
-
       To gather performance data while synching, start the sync process
       and monitor how fast data is transferred between clusters.
       
@@ -86,6 +84,6 @@ Estimate ``oplog`` Size Needed for Initial Sync
 .. note::
 
    The copy rate may vary during synchronization. To monitor progress,
-   repeat the steps to :ref:`estimate the copy rate
-   <c2c-step-estimate-copy-rate>` and verify that the copy rate stays
-   about the same.
+   repeat the steps to estimate the copy rate and verify that the copy
+   rate stays about the same.
+
