@@ -45,9 +45,10 @@ To use the ``reverse`` endpoint:
   Format indexes with the :dbcommand:`collMod` command. See `this example
   <https://www.mongodb.com/docs/v6.0/reference/command/collMod/#convert-an-existing-index-to-a-unique-index>`__
   for more details.
-- Source and destination clusters must be MongoDB 6.0 or later. If a
-  cluster has been upgraded from MongoDB 4.2 or earlier, an initial sync
-  is required before reversing.
+- Source and destination clusters must be MongoDB 6.0 or later. If an
+  upgraded cluster has unique indexes that were created in MongoDB 4.2
+  or earlier, you must run an :ref:`initial sync
+  <replica-set-initial-sync>` on all the nodes before reversing.
 
 Request
 -------
