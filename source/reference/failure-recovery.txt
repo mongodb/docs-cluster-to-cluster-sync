@@ -14,10 +14,10 @@ Recovery From Sync Failure
 
 :program:`mongosync` temporarily alters some collection characteristics
 during synchronization. The original values are restored during the
-:ref:`commit process <c2c-api-commit>`. However, a network failure or
-some other problem could disrupt synchronization before the sync is
-committed. If the sync ends prematurely, you must manually update the
-temporary changes on the destination cluster.
+:ref:`commit process <c2c-api-commit>`. However, a system failure could
+disrupt synchronization before the sync is committed. If the sync ends
+prematurely, you must manually reset the collection characteristics on
+the destination cluster.
 
 Manually revert the following temporary changes:
 
@@ -27,6 +27,7 @@ Manually revert the following temporary changes:
 - :ref:`Hidden indexes set as non-hidden <c2c-dr-hidden>`
 - :ref:`Capped collections with size/max set to the maximum possible
   value <c2c-dr-capped>`
+- :ref:`Write blocking <c2c-dr-write-blocking>`
 
 .. _c2c-dr-unique:
 
@@ -94,4 +95,28 @@ Capped Collections
 During synchronization, :ref:`capped collections
 <manual-capped-collection>` are set to the maximum allowable size. Use
 the ``collMod`` command to set the correct maximum size.
+
+.. _c2c-dr-write-blocking:
+
+Write blocking
+--------------
+
+When write blocking is enabled as part of the :ref:`/start
+<c2c-api-start>` command, ``mongosync`` blocks user writes on the
+destination cluster during replication. If replication ends
+prematurely, you must manually unblock writing on the destination.
+
+After writing is enabled, you can redirect writes from your client
+application to the destination cluster.
+
+To enable writes, update :dbcommand:`setUserWriteBlockMode`:
+
+..code-block:: javascript
+
+   db.adminCommand(
+       {
+           setUserWriteBlockMode: 1,
+           global: false
+       }
+   )
 
