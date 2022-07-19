@@ -111,7 +111,7 @@ application to the destination cluster.
 
 To enable writes, update :dbcommand:`setUserWriteBlockMode`:
 
-..code-block:: javascript
+.. code-block:: javascript
 
    db.adminCommand(
        {
