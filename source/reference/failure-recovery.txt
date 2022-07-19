@@ -34,19 +34,20 @@ Unique Indexes
 --------------
 
 :program:`mongosync` replicates writes in parallel which can cause
-transient uniqueness violations on the destination. To avoid these
-errors, unique indexes are replicated as non-unique. If synchronization
-ends early, the user must manually resolve any uniqueness violations
-and convert the non-unique indexes back to unique.
+transient uniqueness violations on the destination cluster. To avoid
+these errors, unique indexes are replicated as non-unique. If
+synchronization ends early, the user must manually resolve any
+uniqueness violations and convert the non-unique indexes back to
+unique indexes.
 
 For each non-unique index on the destination cluster that should be
-unique, run the :dbcommand:`collMod` with the ``prepareUnique`` set to
- ``true``.
- 
-After running ``collMod``, the index will reject new writes that would
-introduce duplicate keys.
+unique, run the :dbcommand:`collMod` with ``prepareUnique`` set to
+``true``.
 
-There may be uniqueness conflicts in the index after running
+After running ``collMod``, the index will reject any new writes that
+would introduce duplicate keys.
+
+There may still be uniqueness conflicts in the index after running
 ``prepareUnique``. To find conflicts and convert the index to a unique
 index, run ``collMod`` with ``unique`` set to ``true`` on each of the
 non-unique indexes that you want to set as unique.
@@ -58,7 +59,7 @@ If the call to ``collMod`` fails with a ``CannotConvertIndexToUnique``
 error, you will need to correct the uniqueness violations.
 
 Rerun ``collMod`` after updating documents which violate the uniqueness
-property. When ``collMod`` succeeds, index will be converted to a
+property. When ``collMod`` succeeds, the index will be converted to a
 unique index.
 
 See: `Convert an Existing Index
@@ -80,7 +81,6 @@ to ``MAX_INT`` for :ref:`TTL indexes
 
 Hidden Indexes
 --------------
-
 During synchronization, :ref:`hidden indexes <index-type-hidden>` are
 not hidden on the destination cluster. Use the ``collMod`` command to
 hide indexes that should be hidden.
