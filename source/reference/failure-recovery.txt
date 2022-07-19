@@ -14,10 +14,10 @@ Recovery From Sync Failure
 
 :program:`mongosync` temporarily alters some collection characteristics
 during synchronization. The original values are restored during the
-:ref:`commit process <c2c-api-commit>`. However, a system failure could
-disrupt synchronization before the sync is committed. If the sync ends
-prematurely, you must manually reset the collection characteristics on
-the destination cluster.
+:ref:`commit process <c2c-api-commit>`. However, a permanent system
+failure could disrupt synchronization before the sync is committed. If
+the sync ends prematurely, you must manually reset the collection
+characteristics on the destination cluster.
 
 Manually revert the following temporary changes:
 
