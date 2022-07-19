@@ -69,15 +69,28 @@ See: `Convert an Existing Index
 TTL Indexes
 -----------
 
+During synchronization, ``expireAfterSeconds`` is set
+to ``MAX_INT`` for :ref:`TTL indexes
+<index-feature-ttl>`. To reset ``expireAfterSeconds`` use the
+``collMod`` command. See: :ref:`Change Expiration Value for Indexes
+<ex-change-exp-value>`.
+
+
 .. _c2c-dr-hidden:
 
 Hidden Indexes
 --------------
+
+During synchronization, :ref:`hidden indexes <index-type-hidden>` are
+not hidden on the destination cluster. Use the ``collMod`` command to
+hide indexes that should be hidden.
 
 .. _c2c-dr-capped:
 
 Capped Collections
 ------------------
 
+During synchronization, the :ref:`capped collections
+<manual-capped-collection>` are set to the maximum allowable size. Use
+the ``collMod`` command to set the correct maximum size.
 
-Mongosync will correct them during the commit process. But if DR happens (i.e. the sync link breaks) without a clean healthy cutover, the above collections/indexes could be left in an undesired state and manual intervention is needed to correct them.
