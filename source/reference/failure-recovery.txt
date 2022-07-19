@@ -1,8 +1,8 @@
 .. _c2c-failure-recovery:
 
-================
-Failure Recovery 
-================
+==========================
+Recovery From Sync Failure
+==========================
 
 .. default-domain:: mongodb
 
@@ -16,51 +16,52 @@ Failure Recovery
 during synchronization. The original values are restored during the
 :ref:`commit process <c2c-api-commit>`. However, a network failure or
 some other problem could disrupt synchronization before the sync is
-committed. If the sync ends prematurely, the temporary changes must be
-manually updated on the destination cluster.
+committed. If the sync ends prematurely, you must manually update the
+temporary changes on the destination cluster.
 
 Manually revert the following temporary changes:
 
-- :ref:`Unique indexes set as non-unique <c2c-dr-unique>`.
+- :ref:`Unique indexes set as non-unique <c2c-dr-unique>`
 - :ref:`TTL indexes with expireAfterSeconds set to MAX_INT
-  <c2c-dr-ttl>`.
-- :ref:`Hidden indexes set as non-hidden <c2c-dr-hidden>`.
+  <c2c-dr-ttl>`
+- :ref:`Hidden indexes set as non-hidden <c2c-dr-hidden>`
 - :ref:`Capped collections with size/max set to the maximum possible
-  value <c2c-dr-capped>`.
+  value <c2c-dr-capped>`
 
 .. _c2c-dr-unique:
 
 Unique Indexes
 --------------
 
-:program:`mongosync` replicates writes in parallel which can cause
+:program:`mongosync` replicates writes in parallel, which can cause
 transient uniqueness violations on the destination cluster. To avoid
 these errors, unique indexes are replicated as non-unique. If
-synchronization ends early, the user must manually resolve any
-uniqueness violations and convert the non-unique indexes back to
-unique indexes.
+synchronization ends early, manually resolve any uniqueness violations
+and convert the non-unique indexes back to unique indexes.
+
+Prepare the Index for Conversion
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 For each non-unique index on the destination cluster that should be
-unique, run the :dbcommand:`collMod` with ``prepareUnique`` set to
+unique, run :dbcommand:`collMod` with ``prepareUnique`` set to
 ``true``.
 
-After running ``collMod``, the index will reject any new writes that
+After running ``collMod``, the index rejects any new writes that
 would introduce duplicate keys.
 
-There may still be uniqueness conflicts in the index after running
+Resolve Uniqueness Violations
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+There may still be uniqueness conflicts in the index after you run
 ``prepareUnique``. To find conflicts and convert the index to a unique
 index, run ``collMod`` with ``unique`` set to ``true`` on each of the
 non-unique indexes that you want to set as unique.
 
 If the call to ``collMod`` succeeds, there are no uniqueness violations
-on that index and the index will be converted to an unique index.
+on that index and the index is converted to an unique index.
 
 If the call to ``collMod`` fails with a ``CannotConvertIndexToUnique``
-error, you will need to correct the uniqueness violations.
-
-Rerun ``collMod`` after updating documents which violate the uniqueness
-property. When ``collMod`` succeeds, the index will be converted to a
-unique index.
+error, correct the uniqueness violations and rerun ``collMod``.
 
 See: `Convert an Existing Index
 <https://www.mongodb.com/docs/v6.0/reference/command/collMod/#convert-an-existing-index-to-a-unique-index>`__
@@ -72,7 +73,7 @@ TTL Indexes
 
 During synchronization, ``expireAfterSeconds`` is set
 to ``MAX_INT`` for :ref:`TTL indexes
-<index-feature-ttl>`. To reset ``expireAfterSeconds`` use the
+<index-feature-ttl>`. To reset ``expireAfterSeconds``, use the
 ``collMod`` command. See: :ref:`Change Expiration Value for Indexes
 <ex-change-exp-value>`.
 
@@ -90,7 +91,7 @@ hide indexes that should be hidden.
 Capped Collections
 ------------------
 
-During synchronization, the :ref:`capped collections
+During synchronization, :ref:`capped collections
 <manual-capped-collection>` are set to the maximum allowable size. Use
 the ``collMod`` command to set the correct maximum size.
 
