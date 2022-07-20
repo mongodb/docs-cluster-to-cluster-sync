@@ -102,17 +102,7 @@ To configure multiple ``mongosync`` instances:
          A single host server can run multiple ``mongosync`` instances. To
          improve performance, run ``mongosync`` on multiple host servers.
 
-      Each ``mongosync`` instance:
-
-      - Connects to the same ``mongos`` instance in the source cluster.
-      - Connects to the same ``mongos`` instance in the destination
-        cluster.
-      - Connects to a single shard in the source cluster.
-      - Specifies a unique port to use for during synchronization.
-        Consider designating a range of ports to simplify scripting
-        {+c2c-product-name+} operations.
-
-      Run the first ``mongosync`` instance:
+      Run the first ``mongosync`` instance, connecting to ``mongos``.  
 
       .. code-block:: javascript
 
@@ -120,6 +110,10 @@ To configure multiple ``mongosync`` instances:
            --cluster0 "mongodb://user:password@cluster0host:27500" \
            --cluster1 "mongodb://user:password@cluster1host:27500" \
            --id shard01 --port 27601
+
+      When running multiple ``mongosync`` instances, you must specify the shard 
+      you want to replicate.  To do so, use the :option:`--id` option or the
+      :setting:`id` setting.
 
       Run a new ``mongosync`` instance for each shard in the source cluster.
       Edit the ``--id`` and ``--port`` fields for each additional
@@ -132,6 +126,20 @@ To configure multiple ``mongosync`` instances:
            --cluster0 "mongodb://user:password@cluster0host:27500" \
            --cluster1 "mongodb://user:password@cluster1host:27500" \
            --id shard02 --port 27602
+
+      The connection strings for the :option:`--cluster0` and 
+      :option`--cluster1` options should point to ``mongos`` instances.
+      In the example, they use the same ``mongos`` instance.
+
+      Each ``mongosync`` instance:
+
+      - Connects to a ``mongos`` instance in the source cluster.
+      - Connects to a ``mongos`` instance in the destination cluster.
+      - Each ``mongosync`` instance replicates a single shard from the
+        source cluster, identified by the :option:`--id` option.
+      - Specifies a unique port to use for during synchronization.
+        Consider designating a range of ports to simplify scripting
+        {+c2c-product-name+} operations.
 
 .. _c2c-sharded-start:
 
