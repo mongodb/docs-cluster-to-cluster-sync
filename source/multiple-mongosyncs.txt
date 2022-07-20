@@ -135,8 +135,8 @@ To configure multiple ``mongosync`` instances:
 
       - Connects to a ``mongos`` instance in the source cluster.
       - Connects to a ``mongos`` instance in the destination cluster.
-      - Each ``mongosync`` instance replicates a single shard from the
-        source cluster, identified by the :option:`--id` option.
+      - Replicates a single shard from the source cluster, 
+        identified by the :option:`--id` option.
       - Specifies a unique port to use for during synchronization.
         Consider designating a range of ports to simplify scripting
         {+c2c-product-name+} operations.
