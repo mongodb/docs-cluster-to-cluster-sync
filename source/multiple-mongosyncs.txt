@@ -116,7 +116,7 @@ To configure multiple ``mongosync`` instances:
       :setting:`id` setting.
 
       Run a new ``mongosync`` instance for each shard in the source cluster.
-      Edit the ``--id`` and ``--port`` fields for each additional
+      Edit the :option:`--id` and :option:`--port` options for each additional
       ``mongosync`` instance.
 
       .. code-block:: javascript
