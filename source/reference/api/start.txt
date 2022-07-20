@@ -57,7 +57,7 @@ To set a custom role for the ``mongosync`` user:
          roles: [ { role: "reverseSync", db: "admin" } ]
       } )
 
-Ensure that you uuse this configured ``mongosync`` user in the connection 
+Ensure that you use this configured ``mongosync`` user in the connection 
 string for :setting:`cluster0` or :setting:`cluster1`. 
 
 Request
