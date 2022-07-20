@@ -128,7 +128,7 @@ To configure multiple ``mongosync`` instances:
            --id shard02 --port 27602
 
       The connection strings for the :option:`--cluster0` and 
-      :option`--cluster1` options should point to ``mongos`` instances.
+      :option:`--cluster1` options should point to ``mongos`` instances.
       In the example, they use the same ``mongos`` instance.
 
       Each ``mongosync`` instance:
@@ -137,7 +137,7 @@ To configure multiple ``mongosync`` instances:
       - Connects to a ``mongos`` instance in the destination cluster.
       - Replicates a single shard from the source cluster, 
         identified by the :option:`--id` option.
-      - Specifies a unique port to use for during synchronization.
+      - Specifies a unique port to use during synchronization.
         Consider designating a range of ports to simplify scripting
         {+c2c-product-name+} operations.
 
