@@ -58,7 +58,7 @@ To set a custom role for the ``mongosync`` user:
       } )
 
 Ensure that you use this configured ``mongosync`` user in the connection 
-string for the :setting:`cluster0` or :setting:`cluster1` settings when
+strings for the :setting:`cluster0` or :setting:`cluster1` settings when
 you start ``mongosync``. 
 
 Request
