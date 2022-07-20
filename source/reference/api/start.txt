@@ -53,9 +53,12 @@ To set a custom role for the ``mongosync`` user:
    .. code-block:: javascript
 
       db.adminCommand( {
-         grantRolesToUser: "mongosync",
+         grantRolesToUser: "mongosync-user",
          roles: [ { role: "reverseSync", db: "admin" } ]
       } )
+
+Ensure that you uuse this configured ``mongosync`` user in the connection 
+string for :setting:`cluster0` or :setting:`cluster1`. 
 
 Request
 -------
