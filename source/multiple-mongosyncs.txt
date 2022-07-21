@@ -111,9 +111,10 @@ To configure multiple ``mongosync`` instances:
            --cluster1 "mongodb://user:password@cluster1host:27500" \
            --id shard01 --port 27601
 
-      When running multiple ``mongosync`` instances, you must specify the shard 
-      you want to replicate.  To do so, use the :option:`--id` option or the
-      :setting:`id` setting.
+      When running multiple ``mongosync`` instances, the number of instances
+      must equal the number of shards.  Each ``mongosync`` instance must be
+      started with the :option:`--id` option or :setting:`id` setting to
+      specify the shard it replicates.
 
       Run a new ``mongosync`` instance for each shard in the source cluster.
       Edit the :option:`--id` and :option:`--port` options for each additional
@@ -133,8 +134,8 @@ To configure multiple ``mongosync`` instances:
 
       Each ``mongosync`` instance:
 
-      - Connects to a ``mongos`` instance in the source cluster.
-      - Connects to a ``mongos`` instance in the destination cluster.
+      - Connects to ``mongos`` instances in the source cluster.
+      - Connects to ``mongos`` instances in the destination cluster.
       - Replicates a single shard from the source cluster, 
         identified by the :option:`--id` option.
       - Specifies a unique port to use during synchronization.
