@@ -37,7 +37,6 @@ General Limitations
 - The source and destination clusters must have the same Feature
   Compatibility Version.
 - The destination cluster must be empty.
-- DDL operations are currently not supported during syncing. 
 - ``mongosync`` does not validate that the clusters or the environment
   are properly configured. 
 - The primary shard cannot be :dbcommand:`reassigned <movePrimary>`
@@ -52,7 +51,7 @@ General Limitations
 - Network compression is not supported.
 - :dbcommand:`applyOps` operations from the source cluster are not
   supported.
-- The :data:`system.js <<database>.system.js>` collection is not
+- :ref:`system.* collections <metadata-system-collections>` are not
   replicated.
 - Documents that have dollar (``$``) prefixed field names are not
   supported. See :ref:`Field Names with Periods and Dollar Signs
@@ -73,7 +72,6 @@ discuss your requirements.
 Unsupported Collection Types
 ----------------------------
 
-- Collections with collation are currently not supported.
 - Capped collections are currently not supported.
 - Time-series collections are not supported.
 
