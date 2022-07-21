@@ -84,8 +84,8 @@ Sharded Clusters
   - Replica set to sharded cluster.
   - Sharded cluster to replica set.
   - Unequal numbers of source and destination shards.
-- The primary shard cannot be :dbcommand:`reassigned <movePrimary>`
-  while syncing.
+- The :dbcommand:`movePrimary` command cannot be used to reassign the primary
+  shard while syncing
 - There is no replication for zone configuration. ``mongosync``
   replicates data, it does not inherit zones.
 - Shards cannot be added or removed while synchronizing.
