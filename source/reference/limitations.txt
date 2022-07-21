@@ -75,6 +75,7 @@ Unsupported Collection Types
 ----------------------------
 
 - Time-series collections are not supported.
+- Capped collections are currently not supported.
 - Clustered collections with :ref:`expireAfterSeconds
   <db.createCollection.expireAfterSeconds>` set are not supported.
 
