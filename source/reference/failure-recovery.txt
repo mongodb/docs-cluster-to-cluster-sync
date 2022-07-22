@@ -1,7 +1,7 @@
 .. _c2c-failure-recovery:
 
 =====================================
-Recovery Steps for Disaster Recovery 
+Use ``mongosync`` for Disaster Recovery 
 =====================================
 
 .. default-domain:: mongodb
@@ -12,24 +12,28 @@ Recovery Steps for Disaster Recovery
    :depth: 2
    :class: singlecol
 
-Disaster Recovery is a use case of {+c2c-product-name+}.  Synchronization can
-keep the destination cluster up to date so that it can replace the source cluster
-in the event that the source cluster fails or is otherwise unavailable.
+Setting up {+c2c-product-name+} to prepare for disaster recovery follows the 
+same procedure as other :ref:`connections <c2c-connecting>` between clusters.
+Synchronization keeps the destination cluster up to date with the source
+cluster and ready as a backup. In the event that the source cluster fails or
+becomes otherwise unavailable, the destination cluster can replace it as the
+primary cluster.
 
 :program:`mongosync` temporarily alters some collection characteristics
 during synchronization. The original values are restored during the
-:ref:`commit process <c2c-api-commit>`.   If synchronization ends prematurely,
+:ref:`commit process <c2c-api-commit>`. If synchronization ends prematurely,
 you must manually reset these collection characteristics on the destination
 cluster before you can use it as the primary cluster.
 
 To prepare the destination cluster to replace the primary, make the following
 changes:
 
-- :ref:`Set Unique indexes as non-unique <c2c-dr-unique>`
-- :ref:`Set TTL indexes with expireAfterSeconds to MAX_INT
-  <c2c-dr-ttl>`
-- :ref:`Set Hidden indexes as non-hidden <c2c-dr-hidden>`
-- :ref:`Disable write blocking <c2c-dr-write-blocking>`
+#. :ref:`Set Unique indexes as non-unique <c2c-dr-unique>`
+#. :ref:`Set TTL indexes with expireAfterSeconds to MAX_INT
+   <c2c-dr-ttl>`
+#. :ref:`Set Hidden indexes as non-hidden <c2c-dr-hidden>`
+#. :ref:`Disable write blocking <c2c-dr-write-blocking>`
+
 
 .. _c2c-dr-unique:
 
