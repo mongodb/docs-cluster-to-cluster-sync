@@ -14,13 +14,13 @@ Release Notes for ``mongosync`` 1.0
 
 .. note::
 
-   {+c2c-product-name+} 1.0 Released July 22, 2022
+   ``mongosync`` 1.0 Released July 22, 2022
 
 
 Multiple Instances
 ------------------
 
-{+c2c-product-name+} 1.0 supports the use of multiple :program:`mongosync` 
+``mongosync`` 1.0 supports the use of multiple :program:`mongosync` 
 instances to synchronize sharded clusters.
 
 Each ``mongosync`` instance must connect to ``mongos`` and start with 
@@ -33,17 +33,17 @@ For more information, see :ref:`Use mongosync on Sharded Clusters
 DDL Operations
 --------------
 
-{+c2c-product-name+} 1.0 supports the synchronization of DDL operations.
+``mongosync`` 1.0 supports the synchronization of DDL operations.
 
 Collation
 ----------
 
-{+c2c-product-name+} 1.0 supports synchronization of collections with collation. 
+``mongosync`` 1.0 supports synchronization of collections with collation. 
 
 API Improvements
 ----------------
 
-{+c2c-product-name+} 1.0 includes improvements to the :ref:`progress
+``mongosync`` 1.0 includes improvements to the :ref:`progress
 <c2c-api-progress>` command.
 
 The response to ``progress`` commands now includes a ``canWrite`` field,
