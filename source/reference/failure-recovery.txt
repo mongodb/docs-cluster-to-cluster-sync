@@ -19,16 +19,17 @@ in the event that the source cluster fails or is otherwise unavailable.
 :program:`mongosync` temporarily alters some collection characteristics
 during synchronization. The original values are restored during the
 :ref:`commit process <c2c-api-commit>`.   If synchronization ends prematurely,
-you must manually reset collection characteristics on the destination
+you must manually reset these collection characteristics on the destination
 cluster before you can use it as the primary cluster.
 
-To use the destination cluster as the primary, make the following changes:
+To prepare the destination cluster to replace the primary, make the following
+changes:
 
-- :ref:`Unique indexes set as non-unique <c2c-dr-unique>`
-- :ref:`TTL indexes with expireAfterSeconds set to MAX_INT
+- :ref:`Set Unique indexes as non-unique <c2c-dr-unique>`
+- :ref:`Set TTL indexes with expireAfterSeconds to MAX_INT
   <c2c-dr-ttl>`
-- :ref:`Hidden indexes set as non-hidden <c2c-dr-hidden>`
-- :ref:`Write blocking <c2c-dr-write-blocking>`
+- :ref:`Set Hidden indexes as non-hidden <c2c-dr-hidden>`
+- :ref:`Disable write blocking <c2c-dr-write-blocking>`
 
 .. _c2c-dr-unique:
 
