@@ -1,0 +1,44 @@
+.. _c2c-release-notes-1.0:
+
+===================================
+Release Notes for ``mongosync`` 1.0
+===================================
+
+.. default-domain:: mongodb
+
+.. contents:: On this page
+   :local:
+   :backlinks: none
+   :depth: 1
+   :class: singlecol
+
+.. note::
+
+   {*c2c-product-name+} 1.0 Released July 22, 2022
+
+
+Multiple Instances
+------------------
+
+{+c2c-product-name+} 1.0 supports the use of multiple :program:`mongosync` 
+instances to synchronize sharded clusters.
+
+
+DDL Operations
+--------------
+
+{+c2c-product-name+} 1.0 supports DDL operations.
+
+Collation
+----------
+
+{+c2c-product-name+} 1.0 supports synchronization of collections with collation. 
+
+API Improvements
+----------------
+
+{+c2c-product-name+} 1.0 includes improvements to the :ref:`progress
+<c2c-api-status>` command.
+
+
+
