@@ -38,22 +38,22 @@ following changes:
        on the destination cluster.
 
        Indexes that should be unique must be manually set to unique. 
-    * - :ref:`TTL Indexes <c2c-dr-ttl>`
-      - Synchronization sets ``expireAfterSeconds`` to the value of ``MAX_INT``
-        on the destination cluster.
+   * - :ref:`TTL Indexes <c2c-dr-ttl>`
+     - Synchronization sets ``expireAfterSeconds`` to the value of ``MAX_INT``
+       on the destination cluster.
 
-        Use the :dbcommand:`collMod` command to set ``expireAfterSeconds`` 
-        to the desired value.
-    * - :ref:`Hidden Indexes <c2c-dr-hidden>`
-      - Synchronization replicates hidden indexes as non-hidden.
+       Use the :dbcommand:`collMod` command to set ``expireAfterSeconds`` 
+       to the desired value.
+   * - :ref:`Hidden Indexes <c2c-dr-hidden>`
+     - Synchronization replicates hidden indexes as non-hidden.
 
-        Use the :dbcommand:`collMod` command to hide any indexes that should
-        be hidden.
-    * - :ref:`Write Blocking <c2c-dr-write-blocking>`
-      - ``mongosync`` can disable writes on the destination cluster. 
+       Use the :dbcommand:`collMod` command to hide any indexes that should
+       be hidden.
+   * - :ref:`Write Blocking <c2c-dr-write-blocking>`
+     - ``mongosync`` can disable writes on the destination cluster. 
 
-        If synchronization was started with write blocking, disable the Write
-        Block Mode.
+       If synchronization was started with write blocking, disable the Write
+       Block Mode.
 
 
 .. _c2c-dr-unique:
