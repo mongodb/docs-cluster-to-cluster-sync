@@ -25,8 +25,6 @@ Manually revert the following temporary changes:
 - :ref:`TTL indexes with expireAfterSeconds set to MAX_INT
   <c2c-dr-ttl>`
 - :ref:`Hidden indexes set as non-hidden <c2c-dr-hidden>`
-- :ref:`Capped collections with size/max set to the maximum possible
-  value <c2c-dr-capped>`
 - :ref:`Write blocking <c2c-dr-write-blocking>`
 
 .. _c2c-dr-unique:
@@ -85,15 +83,6 @@ Hidden Indexes
 During synchronization, :ref:`hidden indexes <index-type-hidden>` are
 not hidden on the destination cluster. Use the ``collMod`` command to
 hide indexes that should be hidden.
-
-.. _c2c-dr-capped:
-
-Capped Collections
-------------------
-
-During synchronization, :ref:`capped collections
-<manual-capped-collection>` are set to the maximum allowable size. Use
-the ``collMod`` command to set the correct maximum size.
 
 .. _c2c-dr-write-blocking:
 
