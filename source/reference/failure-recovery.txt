@@ -12,14 +12,17 @@ Recovery Steps for Disaster Recovery
    :depth: 2
    :class: singlecol
 
+Disaster Recovery is a use case of {+c2c-product-name+}.  Synchronization can
+keep the destination cluster up to date so that it can replace the source cluster
+in the event that the source cluster fails or is otherwise unavailable.
+
 :program:`mongosync` temporarily alters some collection characteristics
 during synchronization. The original values are restored during the
-:ref:`commit process <c2c-api-commit>`. However, a permanent system
-failure could disrupt synchronization before the sync is committed. If
-the sync ends prematurely, you must manually reset the collection
-characteristics on the destination cluster.
+:ref:`commit process <c2c-api-commit>`.   If synchronization ends prematurely,
+you must manually reset collection characteristics on the destination
+cluster before you can use it as the primary cluster.
 
-Manually revert the following temporary changes:
+To use the destination cluster as the primary, make the following changes:
 
 - :ref:`Unique indexes set as non-unique <c2c-dr-unique>`
 - :ref:`TTL indexes with expireAfterSeconds set to MAX_INT
