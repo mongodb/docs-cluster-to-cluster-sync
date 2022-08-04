@@ -15,4 +15,5 @@ Reference
    /reference/configuration
    /reference/disaster-recovery
    /reference/limitations
+   /reference/logging
 
