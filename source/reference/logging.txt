@@ -305,7 +305,7 @@ the log message.
 For example:
 
 .. code-block:: json
-   :emphasize: 5
+   :copyable: false
 
    {
       "level":         "info",
