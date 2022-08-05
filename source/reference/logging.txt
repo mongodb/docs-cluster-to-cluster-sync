@@ -12,7 +12,7 @@ such as the copying of collections and indexes, change stream events, and API ca
 .. contents:: On this page
    :local:
    :backlinks: none
-   :depth: 1
+   :depth: 2
    :class: singlecol
 
 
