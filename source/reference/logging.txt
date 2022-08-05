@@ -19,7 +19,10 @@ such as the copying of collections and indexes, change stream events, and API ca
 Destination
 -----------
 
-:program:`mongosync` can output log messages to stdout or to file.
+:program:`mongosync` can write log messages to stdout or to file.
+
+Standard Output
+^^^^^^^^^^^^^^^
 
 By default, ``mongosync`` outputs log messages to stdout:
 
@@ -36,12 +39,16 @@ Example output:
    {"level":"info","mongosyncID":"shard02","time":"2022-06-21T11:15:33-04:00","message":"Preflight checks completed."}
    {"level":"info","mongosyncID":"shard02","time":"2022-06-21T11:15:33-04:00","message":"Launch replication thread"}
 
-To output log messages to file, use the :setting:`logPath` setting 
-in a configuration file.
+Log to File
+^^^^^^^^^^^
 
-When set, ``mongosync`` creates a directory for the given path.  
-Log files are created in this directory.  If a ``mongosync.log`` file already 
-exists in the directory, ``mongosync`` rotates the files.
+To output log messages to file, start ``mongosync`` with the 
+:setting:`logPath` setting or :option:`--logPath` option.
+
+When logging to file, ``mongosync`` writes logs to a file in the configured
+directory.  The directory is created if it does not exist.  If a ``mongosync.log``
+file already exists in the directory, ``mongosync`` rotates the log files to
+preserve the old logs as it begins a new file.
 
 .. code-block:: console
 
@@ -54,6 +61,7 @@ For example:
 
    mongosync-2022-06-17T16-27-58.187.log  mongosync.log
    mongosync-2022-06-21T13-31-42.668.log
+
 
 Verbosity
 ---------
@@ -71,17 +79,18 @@ Format
 are written as a series of key-value pairs, where each key indicates a log message
 field type, such as the severity level, log component, and timestamp.
 
-For exampe:
+For example:
 
 .. code-block:: json
+   :copyable: false
 
-    {
+   {
         "level": "info",
         "mongosyncID": "shard01",
         "component": "Change Event Application",
         "time": "2022-06-21T09:31:42-04:00",
         "message": "Starting change stream reader."
-    }
+   }
 
 Components
 ----------
@@ -93,6 +102,7 @@ For example:
 
 .. code-block:: json
    :copyable: false
+   :emphasis: 5
 
    {
       "level":         "info",
