@@ -161,7 +161,7 @@ Examples
 --------
 
 To view log messages, check the ``mongosync.log`` file in the log directory.
-You can format the log by piping it to the ``jq`` command:
+You can format the log by piping its contents to ``jq`` or a similar command:
 
 .. code-block:: console
 
