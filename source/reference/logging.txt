@@ -102,7 +102,6 @@ For example:
 
 .. code-block:: json
    :copyable: false
-   :emphasize: 5
 
    {
       "level":         "info",
