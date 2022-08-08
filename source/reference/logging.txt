@@ -6,8 +6,9 @@ Logging
 
 .. default-domain:: mongodb
 
-{+c2c-full-product-name+} maintains a running log of events, including entries
-such as the copying of collections and indexes, change stream events, and API calls. 
+:program:`mongosync` maintains a running log of events, including entries
+such as the copying collections and indexes, change stream events, and API 
+calls. 
 
 .. contents:: On this page
    :local:
@@ -43,7 +44,7 @@ Log to File
 ^^^^^^^^^^^
 
 To output log messages to file, start ``mongosync`` with the 
-:setting:`logPath` setting or :option:`--logPath` option.
+:option:`--logPath` option or use the :setting:`logPath` setting.
 
 When logging to file, ``mongosync`` writes logs to a file in the configured
 directory.  The directory is created if it does not exist.  If a ``mongosync.log``
@@ -62,12 +63,15 @@ For example:
    mongosync-2022-06-17T16-27-58.187.log  mongosync.log
    mongosync-2022-06-21T13-31-42.668.log
 
+The currently active log file is ``mongosync.log``.  The other files are older
+logs that ``mongosync`` has rotated.
+
 
 Verbosity
 ---------
 
-{+c2c-product-name+} supports user-defined verbosity to increase or decrease
-the level of log messages :program:`mongosync` outputs.
+:program:`mongosync` supports user-defined verbosity to increase or decrease
+the level of log messages ``mongosync`` outputs.
 
 The verbosity level can be set using the :option:`--verbosity` option from the
 command-line or the :setting:`verbosity` setting in the configuration file.
