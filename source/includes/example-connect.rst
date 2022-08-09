@@ -43,10 +43,18 @@ following command on one line:
 
 .. code-block:: shell
 
-   mongosync --cluster0 mongodb://clusterAdmin:superSecret@clusterOne01.fancyCorp.com:20020,
-                       clusterOne02.fancyCorp.com:20020,
-                       clusterOne03.fancyCorp.com:20020
-             --cluster1 mongodb://clusterAdmin:superSecret@clusterTwo01.fancyCorp.com:20020,
-                       clusterTwo02.fancyCorp.com:20020,
-                       clusterTwo03.fancyCorp.com:20020
+   mongosync \
+      --cluster0 'mongodb://clusterAdmin:superSecret@clusterOne01.fancyCorp.com:20020,clusterOne02.fancyCorp.com:20020,clusterOne03.fancyCorp.com:20020/?ssl=true' \
+      --cluster1 'mongodb://clusterAdmin:superSecret@clusterTwo01.fancyCorp.com:20020,clusterTwo02.fancyCorp.com:20020,clusterTwo03.fancyCorp.com:20020/?ssl=true'
 
+You can also use ``+srv`` connection strings to connect to the cluster,
+and ``ssl=true`` is not required. For example:
+
+.. code-block:: shell
+
+   mongosync \
+      --cluster0 'mongodb+srv://clusterAdmin:superSecret@clusterOne01.fancyCorp.com:20020/' \
+      --cluster1 'mongodb+srv://clusterAdmin:superSecret@clusterTwo01.fancyCorp.com:20020/'
+
+For more information about connecting to a cluster using ``mongosync``,
+see :ref:`c2c-connecting`.
