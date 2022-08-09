@@ -57,4 +57,4 @@ and ``ssl=true`` is not required. For example:
       --cluster1 'mongodb+srv://clusterAdmin:superSecret@clusterTwo01.fancyCorp.com:20020/'
 
 For more information about connecting to a cluster using ``mongosync``,
-see :ref:`c2c-connecting`.
+see :ref:`c2c-connecting`. 
