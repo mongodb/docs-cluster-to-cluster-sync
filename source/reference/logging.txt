@@ -79,9 +79,9 @@ command-line or the :setting:`verbosity` setting in the configuration file.
 Format
 ------
 
-:program:`mongosync` outputs log messages in structured JSON format. Log messages
-are written as a series of key-value pairs, where each key indicates a log message
-field type, such as the severity level, log component, and timestamp.
+:program:`mongosync` outputs log messages in structured JSON format.
+Each log message is a document that holds the key-value pairs for that entry.
+The keys label the log message elements, the values are the reported events.
 
 For example:
 
@@ -91,16 +91,16 @@ For example:
    {
         "level": "info",
         "mongosyncID": "shard01",
-        "component": "Change Event Application",
+        "componentName": "Change Event Application",
         "time": "2022-06-21T09:31:42-04:00",
         "message": "Starting change stream reader."
    }
 
-Components
-----------
+Log Entry Components
+--------------------
 
-Log entries use the ``componentName`` field to indicate the component that generated
-the log message.
+Some log entries use a ``componentName`` field to indicate the component that
+generated the log message.
 
 For example:
 
@@ -116,7 +116,7 @@ For example:
       "message":       "starting Mongosync from change event application phase."
    }
 
-``mongosync`` uses the following components:
+The ``mongosync`` process logs events for the following components:
 
 .. data:: Change Event Application
 
@@ -145,12 +145,12 @@ For example:
 
 .. data:: CHECKPOINT
 
-   Messages relate to snapshots taken before and after an operation.
+   Messages relate to snapshots that are taken before and after an operation.
 
 
 .. data:: Collection Copy
 
-   Messages relate to the copying of a collection from the source to destination
+   Messages relate to copying collections from the source to destination
    cluster.
 
 
