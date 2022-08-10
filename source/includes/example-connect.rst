@@ -60,7 +60,8 @@ To use ``mongosync`` with Atlas clusters, you add the
       --cluster1 'mongodb://clusterAdmin:superSecret@clusterTwo01.fancyCorp.com:20020,clusterTwo02.fancyCorp.com:20020,clusterTwo03.fancyCorp.com:20020/?ssl=true'
 
 You can also use ``mongodb+srv`` connection strings with ``mongosync``.
-For example:
+You do not need to add the :urioption:ssl=true <ssl> option to a
+``mongodb+srv`` connection string. For example:
 
 .. code-block:: shell
 
