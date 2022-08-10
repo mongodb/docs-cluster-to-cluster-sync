@@ -45,7 +45,8 @@ Log to File
 ^^^^^^^^^^^
 
 To output log messages to file, start ``mongosync`` with the 
-:option:`--logPath` option or use the :setting:`logPath` setting.
+:option:`--logPath` option or set the :setting:`logPath` setting
+in the configuration file.
 
 When logging to file, ``mongosync`` writes logs to a file in the configured
 directory.  The directory is created if it does not exist.  If a ``mongosync.log``
