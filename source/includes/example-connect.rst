@@ -37,12 +37,21 @@ strings for ``cluster0`` and ``cluster1``:
    cluster1:
    mongodb://clusterAdmin:superSecret@clusterTwo01.fancyCorp.com:20020,clusterTwo02.fancyCorp.com:20020,clusterTwo03.fancyCorp.com:20020
 
-<<PUT BACK ORIG EXAMPLE>>
+The ``mongosync`` command layout below is modified for display. To
+connect ``cluster0`` to ``cluster1`` with ``mongosync``, enter the
+following command on one line:
 
-When using Atlas clusters, ...
+.. code-block:: shell
 
-To connect ``cluster0`` to ``cluster1`` with ``mongosync``, enter the
-following command:
+   mongosync --cluster0 mongodb://clusterAdmin:superSecret@clusterOne01.fancyCorp.com:20020,
+                       clusterOne02.fancyCorp.com:20020,
+                       clusterOne03.fancyCorp.com:20020
+             --cluster1 mongodb://clusterAdmin:superSecret@clusterTwo01.fancyCorp.com:20020,
+                       clusterTwo02.fancyCorp.com:20020,
+                       clusterTwo03.fancyCorp.com:20020
+
+To use ``mongosync`` with Atlas clusters, you add the
+:urioption:`ssl=true <ssl>` option to enable SSL. For example:
 
 .. code-block:: shell
 
@@ -50,11 +59,9 @@ following command:
       --cluster0 'mongodb://clusterAdmin:superSecret@clusterOne01.fancyCorp.com:20020,clusterOne02.fancyCorp.com:20020,clusterOne03.fancyCorp.com:20020/?ssl=true' \
       --cluster1 'mongodb://clusterAdmin:superSecret@clusterTwo01.fancyCorp.com:20020,clusterTwo02.fancyCorp.com:20020,clusterTwo03.fancyCorp.com:20020/?ssl=true'
 
-The previous command uses the :urioption:`ssl=true <ssl>` option to use
-SSL.
-
 You can also use ``mongodb+srv`` connection strings with ``mongosync``,
-and the :urioption:`ssl=true <ssl>` option is not required. For example:
+and the :urioption:`ssl=true <ssl>` option is not required for Atlas
+clusters. For example:
 
 .. code-block:: shell
 
