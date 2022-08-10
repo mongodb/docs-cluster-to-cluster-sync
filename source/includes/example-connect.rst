@@ -37,9 +37,12 @@ strings for ``cluster0`` and ``cluster1``:
    cluster1:
    mongodb://clusterAdmin:superSecret@clusterTwo01.fancyCorp.com:20020,clusterTwo02.fancyCorp.com:20020,clusterTwo03.fancyCorp.com:20020
 
-The ``mongosync`` command layout below is modified for display. To
-connect ``cluster0`` to ``cluster1`` with ``mongosync``, enter the
-following command on one line:
+<<PUT BACK ORIG EXAMPLE>>
+
+When using Atlas clusters, ...
+
+To connect ``cluster0`` to ``cluster1`` with ``mongosync``, enter the
+following command:
 
 .. code-block:: shell
 
@@ -47,8 +50,11 @@ following command on one line:
       --cluster0 'mongodb://clusterAdmin:superSecret@clusterOne01.fancyCorp.com:20020,clusterOne02.fancyCorp.com:20020,clusterOne03.fancyCorp.com:20020/?ssl=true' \
       --cluster1 'mongodb://clusterAdmin:superSecret@clusterTwo01.fancyCorp.com:20020,clusterTwo02.fancyCorp.com:20020,clusterTwo03.fancyCorp.com:20020/?ssl=true'
 
-You can also use ``+srv`` connection strings to connect to the cluster,
-and ``ssl=true`` is not required. For example:
+The previous command uses the :urioption:`ssl=true <ssl>` option to use
+SSL.
+
+You can also use ``mongodb+srv`` connection strings with ``mongosync``,
+and the :urioption:`ssl=true <ssl>` option is not required. For example:
 
 .. code-block:: shell
 
@@ -56,5 +62,5 @@ and ``ssl=true`` is not required. For example:
       --cluster0 'mongodb+srv://clusterAdmin:superSecret@clusterOne01.fancyCorp.com:20020/' \
       --cluster1 'mongodb+srv://clusterAdmin:superSecret@clusterTwo01.fancyCorp.com:20020/'
 
-For more information about connecting to a cluster using ``mongosync``,
-see :ref:`c2c-connecting`.
+For more details about ``mongodb+srv`` connection strings, see
+:ref:`connections-dns-seedlist`.
