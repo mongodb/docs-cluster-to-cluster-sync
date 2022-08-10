@@ -85,6 +85,8 @@ Global Options
    To set the ``--logPath`` option from a configuration file,
    see the :setting:`logPath` setting.
 
+   For more information, see :ref:`c2c-logging`.
+
 .. option:: --port
 
    .. include:: /includes/opts/port.rst
