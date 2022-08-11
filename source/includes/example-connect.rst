@@ -50,8 +50,9 @@ following command on one line:
                        clusterTwo02.fancyCorp.com:20020,
                        clusterTwo03.fancyCorp.com:20020
 
-To use ``mongosync`` with Atlas clusters, you add the
-:urioption:`ssl=true <ssl>` option to enable SSL. For example:
+Atlas clusters require TLS/SSL connections. To use ``mongosync`` with
+Atlas clusters, you add the :urioption:`ssl=true <ssl>` option. For
+example:
 
 .. code-block:: shell
 
