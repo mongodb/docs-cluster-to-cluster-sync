@@ -54,6 +54,10 @@ General Limitations
 - `Queryable Encryption
   <https://www.mongodb.com/docs/v6.0/core/queryable-encryption/>`__ is
   not supported.
+- If you change the ``mongosync`` binary during an upgrade or a
+  downgrade, the replacement ``mongosync`` processes will not resume any
+  work that may have been in progress. You must restart any prior
+  synching operations from the beginning.
 
 MongoDB Community Edition
 -------------------------
