@@ -14,9 +14,9 @@
 
 
 {+c2c-product-name+} uses `Semantic Versioning 2.0.0
-<https://semver.org/>`__. Version numbers have the form X.Y.Z, where X
-is the major version, Y is the minor version, and Z is the patch
-version.
+<https://semver.org/>`__. Version numbers have the form ``X.Y.Z``, where
+``X`` is the major version, ``Y`` is the minor version, and ``Z`` is the
+patch version.
 
 MongoDB uses the following guidelines to determine when to increment the
 version number: 
