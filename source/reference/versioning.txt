@@ -1,0 +1,121 @@
+.. _c2c-release-version-numbers:
+
+===============================
+``mongosync`` Version Numbering
+===============================
+
+.. default-domain:: mongodb
+
+.. contents:: On this page
+   :local:
+   :backlinks: none
+   :depth: 2
+   :class: singlecol
+
+
+{+c2c-product-name+} uses `Semantic Versioning 2.0.0
+<https://semver.org/>`__. Version numbers have the form X.Y.Z, where X
+is the major version, Y is the minor version, and Z is the patch
+version.
+
+MongoDB uses the following guidelines to determine when to increment the
+version number: 
+
+- Major number. The release breaks backwards compatibility.
+- Minor number. The release includes significant new features that are
+  backwards compatible.
+- Patch number.: This release only includes small, backwards compatible
+  changes.
+
+
+Currently Supported Versions
+----------------------------
+
+The supported version of ``mongosync`` is {+version+}.
+
+If you are using an unsupported version of ``mongosync``, you may be
+asked to upgrade in order to receive support.
+
+
+MongoDB Server Version Compatibility and Support
+------------------------------------------------
+
+{+c2c-product-name+} supports the following versions of MongoDB Server:
+
+
+.. list-table::
+   :header-rows: 1
+   :stub-columns: 1
+
+   * - ``mongosync`` Version
+     - MongoDB Server Version
+
+   * - 1.0.0
+     - 6.0.x
+
+Considerations
+--------------
+
+{+c2c-product-name+} has the following version related considerations:
+
+Same Server Version
+~~~~~~~~~~~~~~~~~~~
+
+{+c2c-product-name+} only supports syncing between the same version of
+MongoDB Server. All three :ref:`server version numbers
+<release-version-numbers>`, including the patch number, must be the
+same on both servers.
+
+Support Lifecycle 
+~~~~~~~~~~~~~~~~~
+
+- Major releases are supported for at least one year from the first
+  release in that series.
+- If a version of {+c2c-product-name+} only works with an unsupported 
+  version of MongoDB Server, that version of {+c2c-product-name+} is
+  also unsupported.
+
+Patch Releases
+~~~~~~~~~~~~~~
+
+Only the latest version in each major release series receives new patch
+releases. For example, when version 5.1.0 is released, version 5.0.x
+will no longer receive patch releases. At the same time, version 4.3.2
+will continue to receive patches until version 4.4.0 is released. 
+
+Upgrade and Downgrade
+~~~~~~~~~~~~~~~~~~~~~
+
+To upgrade, or downgrade, ``mongosync``:
+
+- Stop all currently running ``mongosync`` processes.
+- Drop all non-system databases in the destination cluster.
+- :ref:`Install <c2c-install>` new ``mongosync`` binaries.
+- :ref:`Start <c2c-api-start>` the ``mongosync`` processes using the new
+  binaries.
+
+.. warning::
+ 
+   The new ``mongosync`` processes do not resume any work that may have
+   been in progress. You must restart any ongoing synching operations
+   from the beginning.
+
+
+Persistent Metadata
+~~~~~~~~~~~~~~~~~~~
+
+During normal operation, ``mongosync`` creates some metadata that is
+persisted to disk. This metadata is not versioned and may change at any
+time.in any version.
+
+Log Messages
+~~~~~~~~~~~~
+
+Log message formats are not versioned and may change at any time. This
+includes changes to the message text, as well as the presence, absence,
+or contents of other fields in the message. 
+
+User scripts and applications should use the :ref:`monitoring API
+<c2c-api-progress>` to determine ``mongosync's`` current state. Scripts
+and applications should not rely on logging output.
+
