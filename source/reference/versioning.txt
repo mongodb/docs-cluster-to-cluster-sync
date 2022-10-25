@@ -19,7 +19,7 @@
 patch version.
 
 MongoDB uses the following guidelines to determine when to increment the
-version number: 
+version number for {+c2c-product-name+}: 
 
 - Major number: The release breaks backwards compatibility.
 - Minor number: The release includes significant new features that are
