@@ -21,17 +21,15 @@ version.
 MongoDB uses the following guidelines to determine when to increment the
 version number: 
 
-- Major number. The release breaks backwards compatibility.
-- Minor number. The release includes significant new features that are
+- Major number: The release breaks backwards compatibility.
+- Minor number: The release includes significant new features that are
   backwards compatible.
-- Patch number.: This release only includes small, backwards compatible
+- Patch number: This release only includes small, backwards compatible
   changes.
 
 
 Currently Supported Versions
 ----------------------------
-
-The supported version of ``mongosync`` is {+version+}.
 
 If you are using an unsupported version of ``mongosync``, you may be
 asked to upgrade in order to receive support.
@@ -79,9 +77,10 @@ Patch Releases
 ~~~~~~~~~~~~~~
 
 Only the latest version in each major release series receives new patch
-releases. For example, when version 5.1.0 is released, version 5.0.x
-will no longer receive patch releases. At the same time, version 4.3.2
-will continue to receive patches until version 4.4.0 is released. 
+releases. For example, when version {+c2c-product-name+} 2.1.0 is
+released, version 2.0.x would no longer receive patch releases. At the
+same time, version 1.3.2 would continue to receive patches until version
+1.4.0 was released.
 
 Upgrade and Downgrade
 ~~~~~~~~~~~~~~~~~~~~~
@@ -104,9 +103,9 @@ To upgrade, or downgrade, ``mongosync``:
 Persistent Metadata
 ~~~~~~~~~~~~~~~~~~~
 
-During normal operation, ``mongosync`` creates some metadata that is
+During normal operation, ``mongosync`` creates metadata that is
 persisted to disk. This metadata is not versioned and may change at any
-time.in any version.
+time.
 
 Log Messages
 ~~~~~~~~~~~~
@@ -115,7 +114,7 @@ Log message formats are not versioned and may change at any time. This
 includes changes to the message text, as well as the presence, absence,
 or contents of other fields in the message. 
 
-User scripts and applications should use the :ref:`monitoring API
-<c2c-api-progress>` to determine ``mongosync's`` current state. Scripts
-and applications should not rely on logging output.
+User scripts and applications should not rely on logging output. Scripts
+and applications should use the :ref:`monitoring API <c2c-api-progress>`
+to determine the current state of ``mongosync``.
 
