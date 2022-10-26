@@ -57,7 +57,7 @@ General Limitations
 - If you change the ``mongosync`` binary during an upgrade or a
   downgrade, the replacement ``mongosync`` processes will not resume any
   work that may have been in progress. You must restart any prior
-  synching operations from the beginning.
+  syncing operations from the beginning.
 
 MongoDB Community Edition
 -------------------------

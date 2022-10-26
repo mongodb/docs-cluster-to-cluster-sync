@@ -96,7 +96,7 @@ To upgrade, or downgrade, ``mongosync``:
 .. warning::
  
    The new ``mongosync`` processes do not resume any work that may have
-   been in progress. You must restart any ongoing synching operations
+   been in progress. You must restart any ongoing syncing operations
    from the beginning.
 
 
