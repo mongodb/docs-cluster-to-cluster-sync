@@ -54,11 +54,10 @@ General Limitations
 - `Queryable Encryption
   <https://www.mongodb.com/docs/v6.0/core/queryable-encryption/>`__ is
   not supported.
-- If you replace the ``mongosync`` binary during an upgrade or a
-  downgrade, when you start the replacement binaries the ``mongosync``
-  processes will not resume any work that may have been in progress.
-  Syncing operations restart from the beginning when you start the new
-  processes.
+- After you replace the ``mongosync`` binary during an upgrade or a
+  downgrade, you should drop all non-system databases in the destination
+  cluster. Syncing operations will restart from the beginning when you
+  start the new processes.
 
 MongoDB Community Edition
 -------------------------
