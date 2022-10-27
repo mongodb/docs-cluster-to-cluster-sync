@@ -130,19 +130,20 @@ Major Releases
   destination cluster for a given set of input and configuration
   details. Except:
 
-  - Bug fixes for cases where ``mongosync`` failed to replicate data.
+  - Bug fixes for cases where ``mongosync`` fails to replicate data.
   - When the earlier behavior is explicitly documented as unsupported.
 
 - Changes to documented CLI parameters or configuration keys such that
   ``mongosync`` rejects formerly valid input. Except:
 
-  - This does not include bug fixes.
-  - CLI parameters or configuration keys may be deprecated. The meaning
-    of documented CLI parameters or configuration keys will never
-    change. If needed, new parameters or keys will replace the older,
-    deprecated entities. 
+  - Bug fixes such as parsing or type errors.
+  - Even though CLI parameters or configuration keys may be deprecated,
+    the meaning of documented CLI parameters or configuration keys will
+    never change. If needed, new parameters or keys will replace the
+    older, deprecated entities. 
 
-- Breaking compatibility with a supported version of MongoDB Server.
+- Changes that break compatibility with a supported version of MongoDB
+  Server.
 - Dropping a version of the REST API. ``mongosync`` may dropping all
   older endpoints in favor of a new version of the API. There will never
   be any other types of backwards incompatible changes in the REST API.
@@ -151,18 +152,19 @@ Major Releases
   the feature.
 - If ``mongosync`` already supports a major version of MongoDB Server,
   changes that require new access privileges in order to continue
-  support.
+  supporting that version of MongoDB Server.
 
 Minor Releases
 ~~~~~~~~~~~~~~
 
-- Support for a previously incompatible MongoDB Server version.
-- New access privileges for previously unsupported major Server release
-- Support for previously unsupported collection types.
-- Support for previously unsupported index types.
-- New endpoints, new fields, or new accepted inputs in the REST API.
-- New documented CLI options.
-- New configuration keys or accepted values.
+- Adding support for a previously incompatible MongoDB Server version.
+- Requiring new access privileges for previously unsupported major
+  release of MongoDB Server.
+- Adding support for previously unsupported collection types.
+- Adding support for previously unsupported index types.
+- Adding new endpoints, new fields, or new accepted inputs in the REST API.
+- Adding new documented CLI options.
+- Adding new configuration keys or accepted values.
 
 Patch Releases
 ~~~~~~~~~~~~~~
@@ -170,10 +172,9 @@ Patch Releases
 - Backwards compatible bug fixes.
 - Performance regression fixes.
 - Performance improvements.
-- Changes to help strings.
+- Changes to help text strings.
 - Changes to log text strings.
 - Changes to informational text in API responses, but not changes to
   enum-style string fields like "state".
 - Typo fixes.
-
 
