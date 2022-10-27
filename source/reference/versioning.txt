@@ -1,8 +1,8 @@
 .. _c2c-release-version-numbers:
 
-===============================
-``mongosync`` Version Numbering
-===============================
+========================
+``mongosync`` Versioning
+========================
 
 .. default-domain:: mongodb
 
@@ -78,9 +78,9 @@ Patch Releases
 
 Only the latest version in each major release series receives new patch
 releases. For example, when version {+c2c-product-name+} 2.1.0 is
-released, version 2.0.x would no longer receive patch releases. At the
-same time, version 1.3.2 would continue to receive patches until version
-1.4.0 was released.
+released, version 2.0 would no longer receive patch releases. At the
+same time, version 1.3 would continue to receive patches until version
+1.4 was released.
 
 Upgrade and Downgrade
 ~~~~~~~~~~~~~~~~~~~~~

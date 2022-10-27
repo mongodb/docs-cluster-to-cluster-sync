@@ -56,8 +56,8 @@ General Limitations
   not supported.
 - After you replace the ``mongosync`` binary during an upgrade or a
   downgrade, you should drop all non-system databases in the destination
-  cluster. Syncing operations will restart from the beginning when you
-  start the new processes.
+  cluster before starting the new binary. Syncing operations will
+  restart from the beginning when you start the new processes.
 
 MongoDB Community Edition
 -------------------------
