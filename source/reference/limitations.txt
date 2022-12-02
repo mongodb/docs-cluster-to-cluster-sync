@@ -25,6 +25,9 @@ General Limitations
 -------------------
 
 - The minimum supported server version is MongoDB 6.0.
+- ``mongosync`` supports major MongoDB releases such as 6.0, 7.0. Rapid
+  releases such as 6.1, 6.2 are not supported. For more information on
+  MongoDB versioning, see :ref:`release-version-numbers`.
 - The source and destination clusters must have the same release
   version.
 - The minimum supported :dbcommand:`Feature Compatibility Version
