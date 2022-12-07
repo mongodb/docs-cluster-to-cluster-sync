@@ -100,6 +100,50 @@ Request Body Parameters
        
        Default value is ``false``.
 
+   * - ``sharding``
+     - document
+     - Optional
+     - Configure synchronization between a replica set and sharded cluster.
+
+   * - | ``sharding``
+       | ``.createSupportedIndexes``
+     - boolean
+     - 
+     -
+
+   * - | ``sharding``
+       | ``.ignoreUnusedShardingEntries``
+     - boolean
+     - 
+     - 
+
+   * - | ``sharding``
+       | ``.shardingEntries``
+     - array
+     -
+     -
+
+   * - | ``sharding``
+       | ``.shardEntries``
+       | ``.collection``
+     - string
+     -
+     -
+
+   * - | ``sharding``
+       | ``.shardEntries``
+       | ``.database``
+     - string
+     - 
+     - 
+ 
+   * - | ``sharding``
+       | ``.shardEntries``
+       | ``.shardCollection``
+     - string
+     -
+     -
+
    * - ``enableUserWriteBlocking``
      - boolean
      - Optional
