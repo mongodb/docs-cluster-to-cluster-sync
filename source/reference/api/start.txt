@@ -136,32 +136,41 @@ The ``sharding`` option has the following parameters:
    :stub-columns: 1
    :widths: 15 15 70
 
+   * - Parameter
+     - Type
+     - Description
+
    * - ``createSupportedIndexes``
      - boolean
-     -
-
-   * - ``ignoreUnusedShardingEntries``
-     - boolean
-     - 
+     - Sets whether synchronization includes the creation of supporting indexes 
+       on the destination cluster.
 
    * - ``shardingEntries``
      - array
-     -
+     - Required.  Specifies the collections to shard on the destiniation
+       cluster.
 
-   * - | ``shardEntries``
+   * - | ``shardingEntries``
        | ``.collection``
      - string
-     -
+     - Specifies the collection to shard on the destination cluster.
 
-   * - | ``shardEntries``
+   * - | ``shardingEntries``
        | ``.database``
      - string
-     - 
+     - Specifies the database of the collection to shard on the
+       destination cluster.
  
-   * - | ``shardEntries``
+   * - | ``shardingEntries``
        | ``.shardCollection``
-     - string
-     -
+     - document 
+     - Specifies the shard key to generate on the destination cluster.
+
+   * - | ``shardingEntries``
+       | ``.shardCollection``
+       | ``.key``
+     - array 
+     - Specifies the indexes to use for the shard key on the destination.
 
 
 
