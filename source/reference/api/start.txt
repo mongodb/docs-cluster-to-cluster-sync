@@ -104,45 +104,10 @@ Request Body Parameters
      - document
      - Optional
      - Configure synchronization between a replica set and sharded cluster.
+       Synchronization from a replica set to a sharded cluster requires this
+       option.
 
-   * - | ``sharding``
-       | ``.createSupportedIndexes``
-     - boolean
-     - 
-     -
-
-   * - | ``sharding``
-       | ``.ignoreUnusedShardingEntries``
-     - boolean
-     - 
-     - 
-
-   * - | ``sharding``
-       | ``.shardingEntries``
-     - array
-     -
-     -
-
-   * - | ``sharding``
-       | ``.shardEntries``
-       | ``.collection``
-     - string
-     -
-     -
-
-   * - | ``sharding``
-       | ``.shardEntries``
-       | ``.database``
-     - string
-     - 
-     - 
- 
-   * - | ``sharding``
-       | ``.shardEntries``
-       | ``.shardCollection``
-     - string
-     -
-     -
+       See :ref:`c2c-api-start-sharding` for more information.
 
    * - ``enableUserWriteBlocking``
      - boolean
@@ -154,6 +119,51 @@ Request Body Parameters
        accepts writes.
 
        Default value is ``false``.
+
+
+.. _c2c-api-start-sharding:
+
+Sharding Parameters
+~~~~~~~~~~~~~~~~~~~
+
+The request body must have the ``sharding`` option when syncing from
+the replica set to a sharded cluster.
+
+The ``sharding`` option has the following parameters:
+
+.. list-table::
+   :header-rows: 1
+   :stub-columns: 1
+   :widths: 15 15 70
+
+   * - ``createSupportedIndexes``
+     - boolean
+     -
+
+   * - ``ignoreUnusedShardingEntries``
+     - boolean
+     - 
+
+   * - ``shardingEntries``
+     - array
+     -
+
+   * - | ``shardEntries``
+       | ``.collection``
+     - string
+     -
+
+   * - | ``shardEntries``
+       | ``.database``
+     - string
+     - 
+ 
+   * - | ``shardEntries``
+       | ``.shardCollection``
+     - string
+     -
+
+
 
 Response
 --------
