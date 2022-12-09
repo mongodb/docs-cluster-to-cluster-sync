@@ -126,8 +126,8 @@ Request Body Parameters
 Sharding Parameters
 ~~~~~~~~~~~~~~~~~~~
 
-The request body must have the ``sharding`` option when syncing from
-the replica set to a sharded cluster.
+Synchronization from a replica set to a sharded cluster requires the 
+``sharding`` option to shard collections on the destination cluster.
 
 The ``sharding`` option has the following parameters:
 
@@ -142,24 +142,26 @@ The ``sharding`` option has the following parameters:
 
    * - ``createSupportedIndexes``
      - boolean
-     - Sets whether synchronization includes the creation of supporting indexes 
-       on the destination cluster.
+     - Optional. Sets whether synchronization creates a supporting index 
+       for the shard key, if none exists.
 
    * - ``shardingEntries``
      - array
-     - Required.  Specifies the collections to shard on the destiniation
-       cluster.
+     - Required.  Specifies the namespace and key of collections to shard 
+       during synchronization.
+
+       Any collections not included in this array synchronize to unsharded 
+       collections on the destination cluster.
 
    * - | ``shardingEntries``
        | ``.collection``
      - string
-     - Specifies the collection to shard on the destination cluster.
+     - Optional. Specifies the collection to shard. 
 
    * - | ``shardingEntries``
        | ``.database``
      - string
-     - Specifies the database of the collection to shard on the
-       destination cluster.
+     - Optional.  Specifies the database of the collection to shard.
  
    * - | ``shardingEntries``
        | ``.shardCollection``
@@ -170,8 +172,7 @@ The ``sharding`` option has the following parameters:
        | ``.shardCollection``
        | ``.key``
      - array 
-     - Specifies the indexes to use for the shard key on the destination.
-
+     - Specifies the indexes to use for the shard key. 
 
 
 Response
@@ -221,5 +222,54 @@ Response
 Behavior
 --------
 
+State
+~~~~~
+
 If the ``start`` request is successful, ``mongosync`` enters the
 ``RUNNING`` state.
+
+Sharding Collections
+~~~~~~~~~~~~~~~~~~~~~
+
+Synchronization from a replica set to a sharded cluster requires the 
+``sharding`` option, to specify how ``mongosync`` should shard collections.
+
+The ``sharding.shardEntries`` array specifies the collections to shard.
+Collections that are not listed in this array replicate as unsharded.
+
+Supporting Indexes
+~~~~~~~~~~~~~~~~~~
+
+Synchronization from a replica set to a sharded cluster can automatically
+create a supporting index for the new shard key on the destination cluster.
+This is done by setting the ``sharding.createSupportingIndexes`` option.
+
+When ``sharding.createSupportingIndexes`` is ``false`` (the default): 
+
+* Each shard key the user provides for the `sharding.shardEntries`` option
+  must have an existing index on the source cluster.
+
+* One of the indexes used for the shard key must have simple collation if the 
+  collection uses any other collation.
+
+* To use a unique index in the shard key, you must specify its uniqueness when
+  you create the index on the source cluster. 
+
+* Unique indexes on the source cluster that are incompatible with the requested
+  shard key on the destination cluster, such as a unique index on the source
+  that does not contain the requested shard key as a prefix on the destination,
+  can cause ``mongosync`` to fail.
+
+When ``sharding.createSupportingIndexes`` is ``true``: 
+
+* ``mongosync`` synchronizes indexes on the source cluster to the destination.
+
+* If the supporting indexes exist on the source cluster, ``mongosync`` 
+  synchronizes the indexes to the destination cluster and uses them 
+  as the shard key.
+
+* If the supporting indexes don't exist, ``mongosync`` creates them on the
+  destination cluster.
+
+``mongosync`` either creates supporting indexes for all collections or none.
+
