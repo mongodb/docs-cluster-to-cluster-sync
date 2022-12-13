@@ -142,12 +142,12 @@ The ``sharding`` option has the following parameters:
 
    * - ``createSupportedIndexes``
      - boolean
-     - Optional. Sets whether synchronization creates a supporting index 
+     - Sets whether synchronization creates a supporting index 
        for the shard key, if none exists.
 
    * - ``shardingEntries``
      - array
-     - Required.  Specifies the namespace and key of collections to shard 
+     - Specifies the namespace and key of collections to shard 
        during synchronization.
 
        Any collections not included in this array synchronize to unsharded 
@@ -156,23 +156,23 @@ The ``sharding`` option has the following parameters:
    * - | ``shardingEntries``
        | ``.collection``
      - string
-     - Optional. Specifies the collection to shard. 
+     - Specifies the collection to shard. 
 
    * - | ``shardingEntries``
        | ``.database``
      - string
-     - Optional.  Specifies the database of the collection to shard.
+     - Specifies the database of the collection to shard.
  
    * - | ``shardingEntries``
        | ``.shardCollection``
      - document 
-     - Specifies the shard key to generate on the destination cluster.
+     - Sets the shard key to generate on the destination cluster.
 
    * - | ``shardingEntries``
        | ``.shardCollection``
        | ``.key``
      - array 
-     - Specifies the indexes to use for the shard key. 
+     - Sets the indexes to use for the shard key. 
 
 
 Response
@@ -228,7 +228,7 @@ State
 If the ``start`` request is successful, ``mongosync`` enters the
 ``RUNNING`` state.
 
-Sharding Collections
+Shard Collections
 ~~~~~~~~~~~~~~~~~~~~~
 
 Synchronization from a replica set to a sharded cluster requires the 
