@@ -105,14 +105,12 @@ Sharded Clusters
   <sharding-shard-key-indexes>` is one lower than normal, 63 instead of
   64.
 
-
 Reversing
 ---------
 
 If the old source has :ref:`unique indexes <index-type-unique>` which
 are partially distributed across shards, reversing may cause failures.
 Ensure that unique indexes exist on all shards before reversing.
-
 
 Multiple Clusters
 -----------------
@@ -121,6 +119,13 @@ Multiple Clusters
   supported.
 - Syncing one source cluster to many destination clusters is not
   supported.
+
+.. _c2c-filtering-limitations:
+
+Collection Level Filtering
+--------------------------
+
+.. include:: /includes/limitations-filtering.rst
 
 System Collections
 ------------------

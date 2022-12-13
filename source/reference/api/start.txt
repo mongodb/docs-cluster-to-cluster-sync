@@ -111,16 +111,44 @@ Request Body Parameters
 
        Default value is ``false``.
 
+   * - ``includeNamespaces``
+     - array
+     - Optional
+     - Filters the databases or collections to sync. The filter document
+       syntax is: 
+
+       .. code-block: javascript
+
+          {
+             "database": "databaseOne",    // required
+             "collections": [              // optional
+                "collectionOne",
+                "collectionTwo"
+             ]
+          }
+
+       If you configure a filter on a source cluster that has multiple
+       databases, ``mongosync`` only syncs the databases specified in
+       the filter definition. ``mongosync`` will not sync the other
+       existing databases.
+       
+       If you want to modify the filter to add a newly created database,
+       you have to :ref:`restart the filtered sync <c2c-change-filter>`
+       from the beginning.
+
+       For more details, see: :ref:`c2c-collection-filtering`.
+       
+       For current limitations, see: :ref:`c2c-filtering-limitations`.
+
 Response
 --------
 
 .. include:: /includes/api/tables/basic-response.rst
 
-Example 1 - Start a Standard Sync Job
--------------------------------------
+Example: Start a Sync Job
+-------------------------
 
-The following example starts a synchronization job where ``cluster0`` is
-the source and ``cluster1`` is the destination.
+.. include:: /includes/intro-start-api-example-intro.rst
 
 Request
 ~~~~~~~
@@ -135,17 +163,48 @@ Response
    :language: json
    :copyable: false
 
-Example 2 - Start a Reversible Sync Job
----------------------------------------
+Example: Start a Reversible Sync Job
+------------------------------------
 
-The following example starts a synchronization job where ``cluster0`` is
-the source and ``cluster1`` is the destination. The ``reversible`` and
-``enableUserWriteBlocking`` fields allow the sync to be reversed.
+.. include:: /includes/intro-start-api-example-intro.rst
+
+The ``reversible`` and ``enableUserWriteBlocking`` fields allow the sync
+to be reversed. To reverse the sync direction, see :ref:`reverse
+<c2c-api-reverse>`.
 
 Request
 ~~~~~~~
 
 .. literalinclude:: /includes/api/requests/start-reversible.sh
+   :language: shell
+
+Response
+~~~~~~~~
+
+.. literalinclude:: /includes/api/responses/success.json
+   :language: json
+   :copyable: false
+
+Example: Start a Filtered Sync Job
+----------------------------------
+
+.. include:: /includes/intro-start-api-example-intro.rst
+
+The ``includeNamespaces`` array defines a filter on two databases,
+``sales`` and ``marketing``. The ``sales`` database filters on the
+``EMEA`` and ``APAC`` collections. 
+
+With this filter in place, ``mongosync``:
+
+- syncs all of the collections in the ``marketing`` database
+- syncs the ``EMEA`` and ``APAC`` collections from the ``sales``
+  database
+- ignores any other databases that are in the cluster
+
+Request
+~~~~~~~
+
+.. literalinclude:: /includes/api/requests/start-filtered.sh
    :language: shell
 
 Response

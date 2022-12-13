@@ -1,0 +1,35 @@
+.. _c2c-collection-filtering:
+
+==========================
+Collection Level Filtering
+==========================
+
+
+.. default-domain:: mongodb
+
+.. contents:: On this page
+   :local:
+   :backlinks: none
+   :depth: 1
+   :class: twocols
+
+
+{+c2c-product-name+} provides continuous data synchronization or a 
+one-time data migration between two MongoDB clusters. You can use
+collection level filtering to control the data that the :ref:`mongosync
+<c2c-mongosync>` utility transfers between the source and destination
+clusters.
+
+Configure a Filter
+------------------
+
+
+.. _c2c-change-filter:
+
+Change the Filter
+-----------------
+
+Limitations
+-----------
+
+.. include:: /includes/limitations-filtering.rst
