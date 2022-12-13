@@ -83,13 +83,6 @@ Unsupported Collection Types
 Sharded Clusters
 ----------------
 
-- The :ref:`shard topologies <sharding-introduction>` must be the same
-  in the source and target clusters. The following configurations are
-  not supported.
-
-  - Replica set to sharded cluster.
-  - Sharded cluster to replica set.
-  - Unequal numbers of source and destination shards.
 - Within a collection, the ``_id`` field must be unique across all of
   the shards in the cluster. See :ref:`sharded-clusters-unique-indexes`
   for more details.
