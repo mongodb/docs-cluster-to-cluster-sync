@@ -273,3 +273,27 @@ When ``sharding.createSupportingIndexes`` is ``true``:
 
 ``mongosync`` either creates supporting indexes for all collections or none.
 
+Rename during Sync
+~~~~~~~~~~~~~~~~~~
+
+Collections synchronized from a replica set to a sharded cluster listed in
+the ``sharding.shardEntries`` array, become sharded collections on the
+destination cluster.
+
+Renaming a collection, such as with the :dbcommand:`renameCollection` command
+on the source cluster after calling ``start`` but before ``mongosync`` begins 
+to copy the collection can block the collection from sharding on the destination.
+
+To check whether a collection is safe to rename, call the :ref:`c2c-api-progress`
+endpoint and check the value of the ``collectionCopy.estimatedCopiedBytes`` field 
+in the return document.  
+
+* A value of 0 indicates that ``mongosync`` has not yet begun to copy the
+  collection.  Renaming the collection at this point results in the collection 
+  being unsharded on the destination cluster.
+
+* A value greater than 0 indicates that ``mongosync`` has begun the copy and
+  read the shard map.  Renaming the collection from this point on does not block
+  its sharding on the destination cluster, even in the event  of a crash.
+
+

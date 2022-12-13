@@ -100,7 +100,6 @@ Sharded Clusters
   <sharding-shard-key-indexes>` is one lower than normal, 63 instead of
   64.
 
-
 Reversing
 ---------
 
