@@ -1,0 +1,218 @@
+.. _c2c-collection-filtering:
+
+==========================
+Collection Level Filtering
+==========================
+
+
+.. default-domain:: mongodb
+
+.. contents:: On this page
+   :local:
+   :backlinks: none
+   :depth: 1
+   :class: twocols
+
+New in version 1.1.
+
+{+c2c-product-name+} provides continuous data synchronization or a 
+one-time data migration between two MongoDB clusters. You can use
+collection level filtering to control the data that the :ref:`mongosync
+<c2c-mongosync>` utility transfers between the source and destination
+clusters.
+
+.. _c2c-configure-filter:
+
+Configure a Filter
+------------------
+
+.. important::
+
+   Once you start ``mongosync`` with a filter in place, the filter
+   cannot be modified directly. If you do need to modify the filter,
+   see: :ref:`c2c-change-filter`.
+
+.. procedure::
+   :style: normal
+
+   .. step:: Identify Databases and Collections.
+
+      Identify the databases and collections that you want to sync to
+      the destination cluster. When you add a set of databases to the
+      filter, you also exclude any other databases in the cluster.
+      
+      If specify a collection to your filter, you also exclude any other
+      collections that are in the same database.
+
+   .. step:: Create a Filter.
+
+      The ``includeNamespaces`` option specifies a filter that you can
+      pass to the :ref:`/start <c2c-api-start>` API. 
+
+      The filter syntax is: 
+
+      .. code-block: javascript
+
+         [
+           {
+              "database": "databaseOne",    // required
+                 "collections": [           // optional
+                 "collectionOne",
+                 "collectionTwo"
+              ]
+            },
+            {
+              "database": "databaseTwo"    // required
+            }
+         ]
+
+      Create an entry for each database that you identified in step 1,
+      in the ``includeNamespaces`` array. The ``"database"`` field
+      specifies the database name.
+      
+      If you want to filter on collections within a database, add those
+      collections to the ``"collections"`` field for that database
+      entry.
+
+   .. step:: Use the Filter.
+
+      To use the filter, attach the filter document to the :ref:`/start
+      <c2c-api-start>` API call. 
+
+      .. literalinclude:: /includes/api/requests/start-filtered.sh
+         :language: shell
+
+For an example configuration, see: :ref:`c2c-example-start-with-filter`.
+
+.. _c2c-change-filter:
+
+Change the Filter
+-----------------
+
+You cannot update an existing filter. Instead, you can must remove the
+old filter and restart ``mongosync`` with a new one. 
+
+When ``mongosync`` ran the old filter, it created user databases and the
+``mongosync_reserved_for_internal_use`` database on the destination
+cluster. However, the ``/start`` API endpoint returns an error if the
+the destination cluster contains either user databases or the
+``mongosync_reserved_for_internal_use`` system database. You must remove
+them before restarting ``mongosync`` with a new filter.
+
+Follow these steps to prepare the destination cluster for a new filter.
+
+.. procedure::
+   :style: normal
+
+   .. step:: Remove ``mongosync_reserved_for_internal_use``.
+
+      a. Stop the ``mongosync`` process. 
+      
+      #. Connect to the :binary:`mongos` instance in the destination
+         cluster with :binary:`mongosh`.
+
+      #. Drop the ``mongosync_reserved_for_internal_use`` system
+         database.
+
+         .. code-block:: javascript
+          
+            use mongosync_reserved_for_internal_use
+            db.dropDatabase()
+
+   .. step:: Remove user databases.
+
+      a. List the databases in the cluster
+
+         .. code-block:: javascript
+          
+            show databases
+
+      #. Remove user databases. The ``admin`` and ``config`` databases
+         are system databases. If the ``show databases`` command lists
+         any other databases on the destination cluster, you must remove
+         them.
+
+         Repeat this step for each user database list:
+
+         .. code-block:: javascript
+          
+            use <user database name>
+            db.dropDatabase()
+            db.dropDatabase()
+
+          Note: After the first :method:`db.dropDatabase()` operation
+          completes, you need to run it a second time to remove the
+          database.
+
+   .. step:: Configure a New Filter.
+
+      a. Create a new filter. Select the databases and collections that
+         you want to filter on and add them to the ``includeNamespaces``
+         array. For configuration details, see
+         :ref:`c2c-configure-filter`.
+
+      #. Run ``mongosync`` to :ref:`reconnect <c2c-conn-top-level>` the
+         source and destination clusters.
+
+      #. Use the ``/start`` API end point to start syncing. Be sure to 
+         attach your new filter when you call ``/start``.
+
+.. _c2c-filter-with-out:
+
+Filtering with $out
+-------------------
+
+The :ref:`agg-out` aggregation stage creates a new collection when it
+runs. You can use the ``$out`` stage with filtering if you are filtering
+on the whole database and not just the collection specified in the
+``$out`` statement.
+
+For example, consider this aggregation pipeline:
+
+.. code-block:: javascript
+
+      db.books.aggregate( [
+                         { $group : { _id : "$author", books: { $push: "$title" } } },
+                         { $out : "authors" }
+                     ] )
+
+The ``$out`` stage creates the ``authors`` collection in the ``books``
+database. If you want to include the ``authors`` collection, you must
+specify the entire ``books`` database in your filter. The filter will
+not work if you only specify the ``authors`` collection.
+
+This filter works:
+
+.. code-block:: javascript
+
+   "includeNamespaces": [
+     {
+       “database": "books"
+     }
+   ]
+
+This filter does not work:
+
+.. code-block:: javascript
+
+   "includeNamespaces": [     
+     {
+       “database": "books",
+       "collections": [ "authors" ]   // DOES NOT WORK
+     }
+   ]
+
+Limitations
+-----------
+
+.. include:: /includes/limitations-filtering.rst
+
+Examples
+--------
+
+.. _c2c-example-start-with-filter: 
+
+Start ``mongosync`` with a Filter
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. include:: /includes/example-filter-collection.rst
