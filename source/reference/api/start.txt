@@ -95,8 +95,15 @@ Request Body Parameters
      - boolean
      - Optional
      - If set to ``true``, enables the synchronization operation to be
-       reversed. For more information, see the :ref:`reverse
-       <c2c-api-reverse>` endpoint.
+       reversed. 
+
+       This option is not supported for the following configurations:
+
+       * Synchronizing from a replica set to a sharded cluster
+
+       * Synchronizing sharded clusters that have different numbers of shards
+       
+       For more information, see the :ref:`reverse <c2c-api-reverse>` endpoint.
        
        Default value is ``false``.
 
@@ -107,7 +114,7 @@ Request Body Parameters
        Synchronization from a replica set to a sharded cluster requires this
        option.
 
-       See :ref:`c2c-api-start-sharding` for more information.
+       For more information, see :ref:`c2c-api-start-sharding`. 
 
    * - ``enableUserWriteBlocking``
      - boolean
@@ -126,7 +133,7 @@ Request Body Parameters
 Sharding Parameters
 ~~~~~~~~~~~~~~~~~~~
 
-Synchronization from a replica set to a sharded cluster requires the 
+To synchronize from a replica set to a sharded cluster, set the 
 ``sharding`` option to shard collections on the destination cluster.
 
 The ``sharding`` option has the following parameters:
@@ -142,12 +149,12 @@ The ``sharding`` option has the following parameters:
 
    * - ``createSupportedIndexes``
      - boolean
-     - Sets whether synchronization creates a supporting index 
+     - Optional. Sets whether synchronization creates a supporting index 
        for the shard key, if none exists.
 
    * - ``shardingEntries``
-     - array
-     - Specifies the namespace and key of collections to shard 
+     - array of documents
+     - Required. Sets the namespace and key of collections to shard 
        during synchronization.
 
        Any collections not included in this array synchronize to unsharded 
@@ -156,12 +163,12 @@ The ``sharding`` option has the following parameters:
    * - | ``shardingEntries``
        | ``.collection``
      - string
-     - Specifies the collection to shard. 
+     - Sets the collection to shard. 
 
    * - | ``shardingEntries``
        | ``.database``
      - string
-     - Specifies the database of the collection to shard.
+     - Sets the database of the collection to shard.
  
    * - | ``shardingEntries``
        | ``.shardCollection``
@@ -174,6 +181,9 @@ The ``sharding`` option has the following parameters:
      - array 
      - Sets the indexes to use for the shard key. 
 
+``mongosync`` throws an error if the ``sharding`` option is not set when
+synchronizing from a replica set to a sharded cluster.  ``mongosync`` also
+throws an error if the ``sharding`` option is set with any other configuration.
 
 Response
 --------

@@ -83,6 +83,8 @@ Unsupported Collection Types
 Sharded Clusters
 ----------------
 
+- ``mongosync`` does not support synchronization from a sharded cluster
+  to a replica set.
 - Within a collection, the ``_id`` field must be unique across all of
   the shards in the cluster. See :ref:`sharded-clusters-unique-indexes`
   for more details.
