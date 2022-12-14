@@ -258,7 +258,8 @@ Shard Collections
 ~~~~~~~~~~~~~~~~~~~~~
 
 Synchronization from a replica set to a sharded cluster requires the 
-``sharding`` option, to specify how ``mongosync`` should shard collections.
+``sharding`` option. This option configures how ``mongosync`` shards
+collections.
 
 The ``sharding.shardEntries`` array specifies the collections to shard.
 Collections that are not listed in this array replicate as unsharded.
@@ -304,9 +305,9 @@ during sync.
 Rename During Sync
 ~~~~~~~~~~~~~~~~~~
 
-Collections synchronized from a replica set to a sharded cluster listed in
-the ``sharding.shardEntries`` array become sharded collections on the
-destination cluster.
+Collections listed in the ``sharding.shardEntries`` array 
+when synchronized from the replica set to a sharded cluster 
+become sharded collections on the destination cluster.
 
 Renaming a collection (such as with the :dbcommand:`renameCollection` command)
 on the source cluster after calling ``start`` but before ``mongosync`` begins 
