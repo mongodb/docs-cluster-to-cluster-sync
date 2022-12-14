@@ -23,13 +23,53 @@ clusters.
 Configure a Filter
 ------------------
 
+.. important::
+
+   Once you start ``mongosync`` with a filter in place, the filter
+   cannot be modified directly. If you do need to modify the filter,
+   see: :ref:`c2c-change-filter`.
+
+Identify the databases and collections that you want to sync to the
+destination cluster. When you add a set of databases to the filter, you
+also exclude any other databases in the cluster. Similarly, if you
+add a collection to the filter, you also exclude any other collections
+in that database.
+
+The filter syntax  is: 
+
+.. include:: /includes/api/facts/includeNamespaces-syntax.rst
+
+To use the filter, attach the filter document to the :ref:`/start
+<c2c-api-start>` API call. 
+
+.. literalinclude:: /includes/api/requests/start-filtered.sh
+   :language: shell
+
+For an example configuration, see: :ref:`c2c-example-start-with-filter`.
 
 .. _c2c-change-filter:
 
 Change the Filter
 -----------------
 
+After using a filter with ``mongosync``, you have to prepare the
+destination server before you can use a different filter.
+
+When you call the ``/start`` API endpoint, the destination cluster
+cannot contain user databases or the
+``mongosync_reserved_for_internal_use`` system database.
+
 Limitations
 -----------
 
 .. include:: /includes/limitations-filtering.rst
+
+Examples
+--------
+
+.. _c2c-example-start-with-filter: 
+
+Start ``mongosync`` with a Filter
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+

@@ -117,15 +117,7 @@ Request Body Parameters
      - Filters the databases or collections to sync. The filter document
        syntax is: 
 
-       .. code-block: javascript
-
-          {
-             "database": "databaseOne",    // required
-             "collections": [              // optional
-                "collectionOne",
-                "collectionTwo"
-             ]
-          }
+       .. include:: /includes/api/facts/includeNamespaces-syntax.rst
 
        If you configure a filter on a source cluster that has multiple
        databases, ``mongosync`` only syncs the databases specified in
@@ -137,7 +129,7 @@ Request Body Parameters
        from the beginning.
 
        For more details, see: :ref:`c2c-collection-filtering`.
-       
+
        For current limitations, see: :ref:`c2c-filtering-limitations`.
 
 Response
@@ -188,18 +180,7 @@ Response
 Example: Start a Filtered Sync Job
 ----------------------------------
 
-.. include:: /includes/intro-start-api-example-intro.rst
-
-The ``includeNamespaces`` array defines a filter on two databases,
-``sales`` and ``marketing``. The ``sales`` database filters on the
-``EMEA`` and ``APAC`` collections. 
-
-With this filter in place, ``mongosync``:
-
-- syncs all of the collections in the ``marketing`` database
-- syncs the ``EMEA`` and ``APAC`` collections from the ``sales``
-  database
-- ignores any other databases that are in the cluster
+.. include:: /includes/example-filter-collection.rst
 
 Request
 ~~~~~~~
