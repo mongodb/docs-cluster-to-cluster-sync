@@ -219,6 +219,22 @@ Response
    :language: json
    :copyable: false
 
+Example 3 - Start Sync from Replica Set to Sharded Cluster
+----------------------------------------------------------
+
+Request
+~~~~~~~
+
+.. literalinclude:: /includes/api/requests/start-shard.sh
+   :language: shell
+
+Response
+~~~~~~~~
+
+.. literalinclude:: /includes/api/responses/success.json
+   :language: json
+   :copyable: false
+
 Behavior
 --------
 
