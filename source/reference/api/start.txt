@@ -262,7 +262,7 @@ This is done by setting the ``sharding.createSupportingIndexes`` option.
 
 When ``sharding.createSupportingIndexes`` is ``false`` (the default): 
 
-* Each shard key the user provides for the `sharding.shardEntries`` option
+* Each shard key the user provides for the ``sharding.shardEntries`` option
   must have an existing index on the source cluster.
 
 * One of the indexes used for the shard key must have simple collation if the 
