@@ -225,7 +225,7 @@ Example 3 - Start Sync from Replica Set to Sharded Cluster
 Request
 ~~~~~~~
 
-.. literalinclude:: /includes/api/requests/start-shard.sh
+.. literalinclude:: /includes/api/requests/start-rs-shard.sh
    :language: shell
 
 Response
