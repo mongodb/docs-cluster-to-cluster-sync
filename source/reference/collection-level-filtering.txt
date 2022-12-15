@@ -53,9 +53,9 @@ Configure a Filter
 
       .. include:: /includes/api/facts/includeNamespaces-syntax.rst
 
-      Create an entry for each database that you identified in step 1,
-      in the ``includeNamespaces`` array. The ``"database"`` field
-      specifies the database name.
+      Create an entry in the ``includeNamespaces`` array for each
+      database that you identified in step 1. Use the ``"database"``
+      field to specify the database name.
       
       If you want to filter on collections within a database, add those
       collections to the ``"collections"`` field for that database
@@ -63,8 +63,8 @@ Configure a Filter
 
    .. step:: Use the Filter.
 
-      To use the filter, attach the filter document to the :ref:`/start
-      <c2c-api-start>` API call. 
+      To use the filter, attach the filter document when you make the
+      :ref:`/start <c2c-api-start>` API call to begin syncing.
 
       .. literalinclude:: /includes/api/requests/start-filtered.sh
          :language: shell
@@ -80,11 +80,11 @@ You cannot update an existing filter. Instead, you can must remove the
 old filter and restart ``mongosync`` with a new one. 
 
 When ``mongosync`` ran the old filter, it created user databases and the
-``mongosync_reserved_for_internal_use`` database on the destination
-cluster. However, the ``/start`` API endpoint returns an error if the
-the destination cluster contains either user databases or the
-``mongosync_reserved_for_internal_use`` system database. You must remove
-them before restarting ``mongosync`` with a new filter.
+``mongosync_reserved_for_internal_use`` system database on the
+destination cluster. However, the ``/start`` API endpoint returns an
+error if the the destination cluster contains either user databases or
+the ``mongosync_reserved_for_internal_use`` system database. You must
+remove those databases before restarting ``mongosync``.
 
 Follow these steps to prepare the destination cluster for a new filter.
 
@@ -127,15 +127,15 @@ Follow these steps to prepare the destination cluster for a new filter.
             db.dropDatabase()
             db.dropDatabase()
 
-          Note: After the first :method:`db.dropDatabase()` operation
-          completes, you need to run it a second time to remove the
-          database.
+         Note: After the first :method:`db.dropDatabase()` operation
+         completes, you need to run it a second time to remove the
+         database.
 
    .. step:: Configure a New Filter.
 
       a. Create a new filter. Select the databases and collections that
-         you want to filter on and add them to the ``includeNamespaces``
-         array. For configuration details, see
+         you want to filter on. Add the databases and collections to the
+         ``includeNamespaces`` array. For configuration details, see
          :ref:`c2c-configure-filter`.
 
       #. Run ``mongosync`` to :ref:`reconnect <c2c-conn-top-level>` the
@@ -149,19 +149,19 @@ Follow these steps to prepare the destination cluster for a new filter.
 Filtering with $out
 -------------------
 
-The :ref:`agg-out` aggregation stage creates a new collection when it
-runs. You can use the ``$out`` stage with filtering if you are filtering
-on the whole database and not just the collection specified in the
-``$out`` statement.
+The :ref:`$out <agg-out>` aggregation stage creates a new collection
+when it runs. You can use the ``$out`` stage with filtering if you are
+filtering on the whole database and not just the collection specified in
+the ``$out`` statement.
 
 For example, consider this aggregation pipeline:
 
 .. code-block:: javascript
 
       db.books.aggregate( [
-                         { $group : { _id : "$author", books: { $push: "$title" } } },
-                         { $out : "authors" }
-                     ] )
+         { $group : { _id : "$author", books: { $push: "$title" } } },
+         { $out : "authors" }
+      ] )
 
 The ``$out`` stage creates the ``authors`` collection in the ``books``
 database. If you want to include the ``authors`` collection, you must

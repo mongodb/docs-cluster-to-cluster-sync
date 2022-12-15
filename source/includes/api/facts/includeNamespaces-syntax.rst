@@ -8,7 +8,7 @@
         ]
       },
       {
-        "database": "databaseTwo"    // required
+        "database": "databaseTwo"
       }
    ]
 
