@@ -179,7 +179,9 @@ The ``sharding`` option has the following parameters:
        | ``.shardCollection``
        | ``.key``
      - array 
-     - Sets the indexes to use for the shard key. 
+     - Sets the fields to use for the shard key.
+
+       For more information, see :ref:`shard-key`.
 
 ``mongosync`` throws an error if the ``sharding`` option is not set when
 synchronizing from a replica set to a sharded cluster.  ``mongosync`` also
