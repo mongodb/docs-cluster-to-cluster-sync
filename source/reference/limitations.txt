@@ -87,6 +87,7 @@ Sharded Clusters
   to a replica set.
 - Synchronization from a replica set to a sharded cluster has the following
   limitations:
+
   - Collections included in ``sharding.shardingEntries`` cannot be renamed to
     use a different database at any point while ``mongosync`` is running.
   - When using the ``sharding.createSupprtingIndexes`` option to create indexes
