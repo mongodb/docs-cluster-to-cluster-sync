@@ -41,7 +41,7 @@ Configure a Filter
       the destination cluster. When you add a set of databases to the
       filter, you also exclude any other databases in the cluster.
       
-      If specify a collection to your filter, you also exclude any other
+      If specify a collection in your filter, you also exclude any other
       collections that are in the same database.
 
    .. step:: Create a Filter.
@@ -176,14 +176,14 @@ This filter works:
      }
    ]
 
-This filter does not work:
+This filter does not work with ``$out``:
 
 .. code-block:: javascript
 
    "includeNamespaces": [     
      {
        “database": "books",
-       "collections": [ "authors" ]   // DOES NOT WORK
+       "collections": [ "authors" ]   // DOES NOT WORK WITH $OUT
      }
    ]
 
