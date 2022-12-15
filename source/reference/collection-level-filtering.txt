@@ -76,15 +76,13 @@ For an example configuration, see: :ref:`c2c-example-start-with-filter`.
 Change the Filter
 -----------------
 
-You cannot update an existing filter. Instead, you can must remove the
-old filter and restart ``mongosync`` with a new one. 
+You cannot update an existing filter. You must remove the old filter and
+restart ``mongosync`` with a new one. 
 
-When ``mongosync`` ran the old filter, it created user databases and the
-``mongosync_reserved_for_internal_use`` system database on the
-destination cluster. However, the ``/start`` API endpoint returns an
-error if the the destination cluster contains either user databases or
-the ``mongosync_reserved_for_internal_use`` system database. You must
-remove those databases before restarting ``mongosync``.
+When ``mongosync`` ran your original filter, it created user databases
+and the ``mongosync_reserved_for_internal_use`` system database on the
+destination cluster. You must remove those databases before restarting
+``mongosync`` with your new filter.
 
 Follow these steps to prepare the destination cluster for a new filter.
 
@@ -133,9 +131,9 @@ Follow these steps to prepare the destination cluster for a new filter.
 
    .. step:: Configure a New Filter.
 
-      a. Create a new filter. Select the databases and collections that
-         you want to filter on. Add the databases and collections to the
-         ``includeNamespaces`` array. For configuration details, see
+      a. Decide which databases and collections you want to filter on.
+         Add the databases and collections to the ``includeNamespaces``
+         array. For configuration details, see
          :ref:`c2c-configure-filter`.
 
       #. Run ``mongosync`` to :ref:`reconnect <c2c-conn-top-level>` the
