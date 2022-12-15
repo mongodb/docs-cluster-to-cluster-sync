@@ -51,20 +51,7 @@ Configure a Filter
 
       The filter syntax is: 
 
-      .. code-block: javascript
-
-         [
-           {
-              "database": "databaseOne",    // required
-                 "collections": [           // optional
-                 "collectionOne",
-                 "collectionTwo"
-              ]
-            },
-            {
-              "database": "databaseTwo"    // required
-            }
-         ]
+      .. include:: /includes/api/facts/includeNamespaces-syntax.rst
 
       Create an entry for each database that you identified in step 1,
       in the ``includeNamespaces`` array. The ``"database"`` field

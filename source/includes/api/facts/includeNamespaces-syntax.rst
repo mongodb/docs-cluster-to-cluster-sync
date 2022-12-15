@@ -1,4 +1,4 @@
-.. code-block: javascript
+.. code-block:: javascript
 
    [ {
         "database": "databaseOne",    // required
