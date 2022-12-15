@@ -88,11 +88,12 @@ Sharded Clusters
 - Synchronization from a replica set to a sharded cluster has the following
   limitations:
 
-  - Collections included in ``sharding.shardingEntries`` cannot be renamed to
-    use a different database at any point while ``mongosync`` is running.
+  - Collections included in the ``sharding.shardingEntries`` option for the
+    :ref:`c2c-start` command, cannot be renamed to use a different database 
+    at any point while ``mongosync`` is running.
   - When using the ``sharding.createSupprtingIndexes`` option to create indexes
-    supporting shard keys on the destination cluster, you cannot create these
-    indexes afterwards on the source cluster.  
+    supporting shard keys on the destination cluster during synchronization, 
+    you cannot create these indexes afterwards on the source cluster.  
     
     The index must either exist before ``mongosync`` starts or be created after
     the migration is complete and ``mongosync`` has stopped.
