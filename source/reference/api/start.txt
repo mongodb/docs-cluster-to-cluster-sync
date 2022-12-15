@@ -318,6 +318,11 @@ Renaming a collection (such as with the :dbcommand:`renameCollection` command)
 on the source cluster after calling ``start`` but before ``mongosync`` begins 
 to copy the collection can block the collection from sharding on the destination.
 
+.. note:: 
+
+   Renaming collections to use a different database while ``mongosync``
+   is running is not supported
+
 To check whether it is safe to rename collections, call the 
 :ref:`c2c-api-progress` endpoint and check the value of the 
 ``collectionCopy.estimatedCopiedBytes`` field in the return document.  
