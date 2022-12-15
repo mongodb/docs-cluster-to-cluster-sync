@@ -89,7 +89,7 @@ Sharded Clusters
   limitations:
 
   - Collections included in the ``sharding.shardingEntries`` option for the
-    :ref:`c2c-start` command, cannot be renamed to use a different database 
+    :ref:`c2c-api-start` command, cannot be renamed to use a different database 
     at any point while ``mongosync`` is running.
   - When using the ``sharding.createSupprtingIndexes`` option to create indexes
     supporting shard keys on the destination cluster during synchronization, 
