@@ -267,7 +267,7 @@ Pre-Split Chunks
 .. versionadded:: 1.1
 
 When ``mongosync`` synchronizes to a sharded cluster, it pre-splits chunks for
-sharded collections on the destination cluster.  This provides support for the
+sharded collections on the destination cluster.  This is supported in the
 following configurations:
 
 * Synchronization from a replica set to a sharded cluster.
