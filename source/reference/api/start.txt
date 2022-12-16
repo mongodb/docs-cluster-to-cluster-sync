@@ -116,6 +116,8 @@ Request Body Parameters
 
        For more information, see :ref:`c2c-api-start-sharding`. 
 
+       .. versionadded:: 1.1
+
    * - ``enableUserWriteBlocking``
      - boolean
      - Optional
@@ -132,6 +134,8 @@ Request Body Parameters
 
 Sharding Parameters
 ~~~~~~~~~~~~~~~~~~~
+
+.. versionadded:: 1.1
 
 To synchronize from a replica set to a sharded cluster, set the 
 ``sharding`` option to shard collections on the destination cluster.
@@ -257,8 +261,24 @@ State
 If the ``start`` request is successful, ``mongosync`` enters the
 ``RUNNING`` state.
 
-Shard Collections
-~~~~~~~~~~~~~~~~~~~~~
+Pre-Split Chunks
+~~~~~~~~~~~~~~~~
+
+.. versionadded:: 1.1
+
+When ``mongosync`` synchronizes to a sharded cluster, it pre-splits chunks for
+sharded collections on the destination cluster.  This provides support for the
+following configurations:
+
+* Synchronization from a replica set to a sharded cluster.
+
+* Synchronization between sharded clusters that differ in the number of shards.
+
+
+Shard Replica Sets 
+~~~~~~~~~~~~~~~~~~
+
+.. versionadded:: 1.1
 
 Synchronization from a replica set to a sharded cluster requires the 
 ``sharding`` option. This option configures how ``mongosync`` shards
@@ -269,6 +289,8 @@ Collections that are not listed in this array replicate as unsharded.
 
 Supporting Indexes
 ~~~~~~~~~~~~~~~~~~
+
+.. versionadded:: 1.1
 
 ``mongosync`` synchronizes indexes from the source cluster to the destination
 cluster.  But, when synchronizing from a replica set to a sharded cluster,
@@ -306,9 +328,10 @@ When ``sharding.createSupportingIndexes`` is ``true``:
 The ``sharding.createSupportingIndexes`` option affects all collections sharded
 during sync.
 
-
 Rename During Sync
 ~~~~~~~~~~~~~~~~~~
+
+.. versionadded:: 1.1
 
 Collections listed in the ``sharding.shardEntries`` array 
 when synchronized from the replica set to a sharded cluster 
