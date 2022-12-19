@@ -13,7 +13,7 @@ Collection Level Filtering
    :depth: 1
    :class: twocols
 
-New in version 1.1.
+.. versionadded:: 1.1
 
 {+c2c-product-name+} provides continuous data synchronization or a 
 one-time data migration between two MongoDB clusters. You can use
