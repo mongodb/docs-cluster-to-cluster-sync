@@ -200,7 +200,7 @@ configuration.
 
        .. include:: /includes/api/facts/includeNamespaces-syntax.rst
 
-       New in version 1.1.
+       .. versionadded:: 1.1.
 
        If you configure a filter on a source cluster that has multiple
        databases, ``mongosync`` only syncs the databases specified in

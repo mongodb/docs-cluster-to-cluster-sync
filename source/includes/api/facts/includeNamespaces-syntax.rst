@@ -2,7 +2,7 @@
 
    [ {
         "database": "databaseOne",    // required
-           "collections": [           // optional
+        "collections": [           // optional
            "collectionOne",
            "collectionTwo"
         ]

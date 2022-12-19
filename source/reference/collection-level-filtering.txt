@@ -168,21 +168,21 @@ not work if you only specify the ``authors`` collection.
 
 This filter works:
 
-.. code-block:: javascript
+.. code-block:: json
 
    "includeNamespaces": [
      {
-       “database": "books"
+       "database": "books"
      }
    ]
 
 This filter does not work with ``$out``:
 
-.. code-block:: javascript
+.. code-block:: json
 
-   "includeNamespaces": [     
+   "includeNamespaces": [
      {
-       “database": "books",
+       "database": "books",
        "collections": [ "authors" ]   // DOES NOT WORK WITH $OUT
      }
    ]
