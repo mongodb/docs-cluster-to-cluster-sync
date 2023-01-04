@@ -85,7 +85,7 @@ Sharded Clusters
 
 - ``mongosync`` does not support sync from a sharded cluster
   to a replica set.
-- Synchronization from a replica set to a sharded cluster has the following
+- Sync from a replica set to a sharded cluster has the following
   limitations:
 
   - Collections included in the ``sharding.shardingEntries`` option for the

@@ -94,14 +94,14 @@ Request Body Parameters
    * - ``reversible``
      - boolean
      - Optional
-     - If set to ``true``, enables the synchronization operation to be
+     - If set to ``true``, enables the sync operation to be
        reversed. 
 
        This option is not supported for the following configurations:
 
-       * Synchronizing from a replica set to a sharded cluster
+       * Sync from a replica set to a sharded cluster
 
-       * Synchronizing sharded clusters that have different numbers of shards
+       * Sync sharded clusters that have different numbers of shards
        
        For more information, see the :ref:`reverse <c2c-api-reverse>` endpoint.
        
@@ -110,7 +110,7 @@ Request Body Parameters
    * - ``sharding``
      - document
      - Optional
-     - Configure synchronization between a replica set and sharded cluster.
+     - Configure sync between a replica set and sharded cluster.
        Sync from a replica set to a sharded cluster requires this
        option.
 
@@ -272,7 +272,7 @@ following configurations:
 
 * Sync from a replica set to a sharded cluster.
 
-* Synchronization between sharded clusters that differ in the number of shards.
+* Sync between sharded clusters that differ in the number of shards.
 
 
 Shard Replica Sets 
@@ -280,7 +280,7 @@ Shard Replica Sets
 
 .. versionadded:: 1.1
 
-Synchronization from a replica set to a sharded cluster requires the 
+Sync from a replica set to a sharded cluster requires the 
 ``sharding`` option. This option configures how ``mongosync`` shards
 collections.
 
