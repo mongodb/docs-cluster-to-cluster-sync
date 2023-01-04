@@ -111,7 +111,7 @@ Request Body Parameters
      - document
      - Optional
      - Configure synchronization between a replica set and sharded cluster.
-       Synchronization from a replica set to a sharded cluster requires this
+       Sync from a replica set to a sharded cluster requires this
        option.
 
        For more information, see :ref:`c2c-api-start-sharding`. 
@@ -137,7 +137,7 @@ Sharding Parameters
 
 .. versionadded:: 1.1
 
-To synchronize from a replica set to a sharded cluster, set the 
+To sync from a replica set to a sharded cluster, set the 
 ``sharding`` option to shard collections on the destination cluster.
 
 The ``sharding`` option has the following parameters:
@@ -153,15 +153,15 @@ The ``sharding`` option has the following parameters:
 
    * - ``createSupportedIndexes``
      - boolean
-     - Optional. Sets whether synchronization creates a supporting index 
+     - Optional. Sets whether sync creates a supporting index 
        for the shard key, if none exists.  Defaults to ``false``.
 
    * - ``shardingEntries``
      - array of documents
      - Required. Sets the namespace and key of collections to shard 
-       during synchronization.
+       during sync.
 
-       Collections not included in this array synchronize to unsharded 
+       Collections not included in this array sync to unsharded 
        collections on the destination cluster.  If set with an empty array, 
        no collections are sharded.
 
@@ -189,7 +189,7 @@ The ``sharding`` option has the following parameters:
        For more information, see :ref:`shard-key`.
 
 ``mongosync`` throws an error if the ``sharding`` option is not set when
-synchronizing from a replica set to a sharded cluster.  ``mongosync`` also
+syncing from a replica set to a sharded cluster.  ``mongosync`` also
 throws an error if the ``sharding`` option is set with any other configuration.
 
 Response
@@ -266,11 +266,11 @@ Pre-Split Chunks
 
 .. versionadded:: 1.1
 
-When ``mongosync`` synchronizes to a sharded cluster, it pre-splits chunks for
+When ``mongosync`` syncs to a sharded cluster, it pre-splits chunks for
 sharded collections on the destination cluster.  This is supported in the
 following configurations:
 
-* Synchronization from a replica set to a sharded cluster.
+* Sync from a replica set to a sharded cluster.
 
 * Synchronization between sharded clusters that differ in the number of shards.
 
@@ -292,8 +292,8 @@ Supporting Indexes
 
 .. versionadded:: 1.1
 
-``mongosync`` synchronizes indexes from the source cluster to the destination
-cluster.  But, when synchronizing from a replica set to a sharded cluster,
+``mongosync`` syncs indexes from the source cluster to the destination
+cluster.  But, when syncing from a replica set to a sharded cluster,
 ``mongosync`` may require the an additional index to support the shard key,
 which may not exist on the source cluster.
 
@@ -319,7 +319,7 @@ When ``sharding.createSupportingIndexes`` is ``false`` (the default):
 When ``sharding.createSupportingIndexes`` is ``true``: 
 
 * If the supporting indexes exist on the source cluster, ``mongosync`` 
-  synchronizes the indexes to the destination cluster and uses them 
+  syncs the indexes to the destination cluster and uses them 
   as the shard key.
 
 * If the supporting indexes don't exist, ``mongosync`` creates them on the
@@ -334,7 +334,7 @@ Rename During Sync
 .. versionadded:: 1.1
 
 Collections listed in the ``sharding.shardEntries`` array 
-when synchronized from the replica set to a sharded cluster 
+when synced from the replica set to a sharded cluster 
 become sharded collections on the destination cluster.
 
 Renaming a collection (such as with the :dbcommand:`renameCollection` command)

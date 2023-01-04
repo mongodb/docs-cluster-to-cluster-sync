@@ -83,7 +83,7 @@ Unsupported Collection Types
 Sharded Clusters
 ----------------
 
-- ``mongosync`` does not support synchronization from a sharded cluster
+- ``mongosync`` does not support sync from a sharded cluster
   to a replica set.
 - Synchronization from a replica set to a sharded cluster has the following
   limitations:
@@ -92,7 +92,7 @@ Sharded Clusters
     :ref:`c2c-api-start` command cannot be renamed to use a different
     database while ``mongosync`` is running.
   - When using the ``sharding.createSupprtingIndexes`` option to create indexes
-    supporting shard keys on the destination cluster during synchronization, 
+    supporting shard keys on the destination cluster during sync, 
     you cannot create these indexes afterwards on the source cluster.  
     
     The index must either exist before ``mongosync`` starts or be created after
