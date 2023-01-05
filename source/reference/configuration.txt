@@ -16,10 +16,6 @@ You can configure :program:`mongosync` instances at startup using a
 configuration file.  The configuration file contains settings that are
 the equivalent of ``mongosync`` command-line options.
 
-The ``start`` command provides additional options for features like
-``reversibility`` and ``user write blocking``. For more details, see the 
-:ref:`start <c2c-api-start>` API documentation.
-
 Configuration File
 ==================
 
@@ -45,6 +41,12 @@ To use a configuration file, start ``mongosync`` with the
 
 Options
 =======
+
+.. note::
+
+   The ``start`` command provides additional options for features like
+   ``reversibility`` and ``user write blocking``. For more details, see
+   the :ref:`start <c2c-api-start>` API documentation.
 
 .. |opt-term| replace:: setting
 
