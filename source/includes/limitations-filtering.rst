@@ -6,15 +6,13 @@
   starting.
 - You cannot modify a filter that is in use. To create a new filter, see
   :ref:`changing the filter <c2c-change-filter>`.
-- If you rename a collection or database that is part of a filter,
-  ``mongosync`` does not continue syncing under the new name.
-- If you rename a collection or database so that the new name matches
-  part of an existing filter, ``mongosync`` cannot sync the renamed
-  entity.
+- You can only rename collections in certain situations. For more
+  details see: :ref:`c2c-filter-renaming-collections`.
 - If a filter includes a :ref:`view <views-landing-page>` but not the
   base collection, only the view is replicated.
-- You cannot specify system collections or system databases.
+- You cannot specify system collections or system databases in a filter.
 - Operations that use the :pipeline:`$out` aggregation stage are only 
   supported if the entire database is specified in the filter. You
   cannot limit the filter to a collection within the database. See:
   :ref:`c2c-filter-with-out`.
+

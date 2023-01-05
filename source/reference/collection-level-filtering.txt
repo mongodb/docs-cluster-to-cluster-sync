@@ -29,7 +29,7 @@ Configure a Filter
 .. important::
 
    Once you start ``mongosync`` with a filter in place, the filter
-   cannot be modified directly. If you do need to modify the filter,
+   cannot be modified. If you do need to create a new filter,
    see: :ref:`c2c-change-filter`.
 
 .. procedure::
@@ -47,7 +47,8 @@ Configure a Filter
    .. step:: Create a Filter.
 
       The ``includeNamespaces`` option specifies a filter that you can
-      pass to the :ref:`/start <c2c-api-start>` API. 
+      pass to the :ref:`/start <c2c-api-start>` API. If you don't
+      specify a filter, ``mongosync`` does a full cluster sync.
 
       The filter syntax is: 
 
@@ -58,8 +59,8 @@ Configure a Filter
       field to specify the database name.
       
       If you want to filter on collections within a database, add those
-      collections to the ``"collections"`` field for that database
-      entry.
+      collections to the list in the ``"collections"`` field for that
+      database entry.
 
    .. step:: Use the Filter.
 
@@ -73,11 +74,12 @@ For an example configuration, see: :ref:`c2c-example-start-with-filter`.
 
 .. _c2c-change-filter:
 
-Change the Filter
------------------
+Replace an Existing Filter
+--------------------------
 
-You cannot update an existing filter. You must remove the old filter and
-restart ``mongosync`` with a new one. 
+You cannot update an existing filter. You must stop the ongoing sync
+process, prepare the destination cluster, and restart ``mongosync`` with
+a new filter. 
 
 When ``mongosync`` ran your original filter, it created user databases
 and the ``mongosync_reserved_for_internal_use`` system database on the
@@ -93,8 +95,10 @@ Follow these steps to prepare the destination cluster for a new filter.
 
       a. Stop the ``mongosync`` process. 
       
-      #. Connect to the :binary:`mongos` instance in the destination
-         cluster with :binary:`mongosh`.
+      #. Connect to the destination cluster with :binary:`mongosh`. If
+         the destination is a sharded cluster, connect to the
+         :binary:`mongos` instance. If the destination is a replica set,
+         connect to the primary :binary:`mongod` instance.
 
       #. Drop the ``mongosync_reserved_for_internal_use`` system
          database.
@@ -112,10 +116,10 @@ Follow these steps to prepare the destination cluster for a new filter.
           
             show databases
 
-      #. Remove user databases. The ``admin`` and ``config`` databases
-         are system databases. If the ``show databases`` command lists
-         any other databases on the destination cluster, you must remove
-         them.
+      #. Remove user databases. The ``admin`, ``local``, and ``config``
+         databases are system databases. If the ``show databases``
+         command lists any user databases on the destination cluster,
+         you must remove them.
 
          Repeat this step for each user database list:
 
@@ -126,7 +130,7 @@ Follow these steps to prepare the destination cluster for a new filter.
             db.dropDatabase()
 
          Note: After the first :method:`db.dropDatabase()` operation
-         completes, you need to run it a second time to remove the
+         completes, you may need to run it a second time to remove the
          database.
 
    .. step:: Configure a New Filter.
@@ -156,14 +160,15 @@ For example, consider this aggregation pipeline:
 
 .. code-block:: javascript
 
+      use library
       db.books.aggregate( [
-         { $group : { _id : "$author", books: { $push: "$title" } } },
+         { $group : { _id : "$author", titles: { $push: "$title" } } },
          { $out : "authors" }
       ] )
 
-The ``$out`` stage creates the ``authors`` collection in the ``books``
-database. If you want to include the ``authors`` collection, you must
-specify the entire ``books`` database in your filter. The filter will
+The ``$out`` stage creates the ``authors`` collection in the ``library``
+database. If you want to sync the ``authors`` collection, you must
+specify the entire ``library`` database in your filter. The filter will
 not work if you only specify the ``authors`` collection.
 
 This filter works:
@@ -172,7 +177,7 @@ This filter works:
 
    "includeNamespaces": [
      {
-       "database": "books"
+       "database": "library"
      }
    ]
 
@@ -182,10 +187,44 @@ This filter does not work with ``$out``:
 
    "includeNamespaces": [
      {
-       "database": "books",
-       "collections": [ "authors" ]   // DOES NOT WORK WITH $OUT
+       "database": "library",
+       "collections": [ "authors", "books" ]  // DOES NOT WORK WITH $OUT
      }
    ]
+
+.. _c2c-filter-renaming-collections:
+
+Renaming Collections
+--------------------
+
+You can, with some restrictions, :method:`rename a collection
+<db.collection.renameCollection>` during a filtered sync.
+
+.. warning::
+
+   If your renaming operation violates the renaming restrictions,
+   ``mongosync`` stops syncing and reports an error.
+
+   To clean up and restart after an error, follow the steps to
+   :ref:`replace an existing filter <c2c-change-filter>`.
+
+Renaming Within a Single Database
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+You can rename a collection if the entire database is part of a filter. 
+
+You can also rename a collection if the old name and the new are
+specified in the filter. 
+
+See the :ref:`renaming examples <c2c-ex-filter-rename>`.
+
+Renaming Across Different Databases
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+You can rename a collection if the source collection is a part of the
+filter and the entire target database is part of a filter. 
+
+
 
 Limitations
 -----------
@@ -201,3 +240,13 @@ Start ``mongosync`` with a Filter
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. include:: /includes/example-filter-collection.rst
+
+.. _c2c-ex-filter-rename:
+
+Renaming Collections While Syncing
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+cant rename included out
+cant rename out in (even if to unused, included name)
+
