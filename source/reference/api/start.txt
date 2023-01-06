@@ -294,7 +294,7 @@ Supporting Indexes
 
 ``mongosync`` syncs indexes from the source cluster to the destination
 cluster.  But, when syncing from a replica set to a sharded cluster,
-``mongosync`` may require the an additional index to support the shard key,
+``mongosync`` may require an additional index to support the shard key,
 which may not exist on the source cluster.
 
 ``mongosync`` can create supporting indexes for sharded collections during sync.
@@ -320,13 +320,12 @@ When ``sharding.createSupportingIndexes`` is ``true``:
 
 * If the supporting indexes exist on the source cluster, ``mongosync`` 
   syncs the indexes to the destination cluster and uses them 
-  as the shard key.
+  as shard keys. 
 
 * If the supporting indexes don't exist, ``mongosync`` creates them on the
   destination cluster.
 
-The ``sharding.createSupportingIndexes`` option affects all collections sharded
-during sync.
+The ``sharding.createSupportingIndexes`` option affects all collections sharded.
 
 Rename During Sync
 ~~~~~~~~~~~~~~~~~~
@@ -334,7 +333,7 @@ Rename During Sync
 .. versionadded:: 1.1
 
 Collections listed in the ``sharding.shardEntries`` array 
-when synced from the replica set to a sharded cluster 
+when synced from a replica set to a sharded cluster 
 become sharded collections on the destination cluster.
 
 Renaming a collection (such as with the :dbcommand:`renameCollection` command)
@@ -343,8 +342,9 @@ to copy the collection can block the collection from sharding on the destination
 
 .. note:: 
 
-   Renaming collections to use a different database while ``mongosync``
-   is running is not supported
+   Renaming collections to use a different database while syncing from a
+   replica set to a sharded cluster is not supported.
+    
 
 To check whether it is safe to rename collections, call the 
 :ref:`c2c-api-progress` endpoint and check the value of the 
