@@ -325,7 +325,7 @@ When ``sharding.createSupportingIndexes`` is ``true``:
 * If the supporting indexes don't exist, ``mongosync`` creates them on the
   destination cluster.
 
-The ``sharding.createSupportingIndexes`` option affects all collections sharded.
+The ``sharding.createSupportingIndexes`` option affects all sharded collections.
 
 Rename During Sync
 ~~~~~~~~~~~~~~~~~~
