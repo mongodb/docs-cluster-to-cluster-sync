@@ -116,7 +116,7 @@ Follow these steps to prepare the destination cluster for a new filter.
           
             show databases
 
-      #. Remove user databases. The ``admin`, ``local``, and ``config``
+      #. Remove user databases. The ``admin``, ``local``, and ``config``
          databases are system databases. If the ``show databases``
          command lists any user databases on the destination cluster,
          you must remove them.
@@ -126,7 +126,6 @@ Follow these steps to prepare the destination cluster for a new filter.
          .. code-block:: javascript
           
             use <user database name>
-            db.dropDatabase()
             db.dropDatabase()
 
          Note: After the first :method:`db.dropDatabase()` operation
@@ -221,8 +220,12 @@ See the :ref:`renaming examples <c2c-example-rename-while-syncing>`.
 Renaming Across Different Databases
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-You can rename a collection if the source collection is a part of the
-filter and the entire target database is part of a filter. 
+You can only rename a collection across databases if entire target
+database is part of a filter. If the filter specifies individual
+collections in the target database, renaming across databases does not
+work.
+
+See the :ref:`renaming examples <c2c-example-rename-while-syncing>`.
 
 Limitations
 -----------
@@ -244,7 +247,5 @@ Start ``mongosync`` with a Filter
 Renaming Collections While Syncing
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-
-cant rename included out
-cant rename out in (even if to unused, included name)
+.. include:: /includes/example-filter-collection-with-renaming.rst
 

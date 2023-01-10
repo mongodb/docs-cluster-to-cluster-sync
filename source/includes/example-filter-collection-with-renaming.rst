@@ -1,49 +1,95 @@
 .. include:: /includes/intro-start-api-example-intro.rst
 
-``cluster0`` contains the ``students``, ``staff``, and
-``classes`` databases.
+``cluster0`` contains the ``students``, ``staff``, and ``classes``
+databases.
 
 The ``students`` database contains the ``undergrad`` and ``graduate``
-collections. The ``staff`` database contains the ``employees`` and
-``contractors`` collections.
+collections.
 
-The ``includeNamespaces`` array in this example defines a filter on both
-databases:
+The ``staff`` database contains the ``employees`` and ``contractors``
+collections.
 
-{ "source": "cluster0",
-  "destination": "cluster1", "includeNamespaces" :
-     [
-         { "database" : "students" },
-         { "database" : "staff", "collections": ["employees"] }
-     ]
-}
+The ``includeNamespaces`` array in this example defines a filter on two
+of the databases:
+
+.. code-block:: shell
+
+   {
+      "source": "cluster0",
+      "destination": "cluster1", "includeNamespaces" :
+         [
+            { "database" : "students", "collections": ["undergrad", "graduate", "adjuncts"] },
+            { "database" : "staff" }
+         ]
+   }
 
 With this filter in place ``mongosync`` syncs:
 
-- The entire ``students`` database
-- The ``employees`` collection in the ``staff`` database
+- The entire ``staff`` database
+- The "undergrad", "graduate", and "adjuncts" collections in the
+  ``students`` database
 
 ``mongosync`` does not sync any information from the ``classes``
 database.
 
-If you add new collections to the ``students`` database, ``mongosync``
-syncs them too. However, ``mongosync`` cannot `` sync new collections
-that are added to the ``staff`` database.
+Adding a Collection
+```````````````````
 
-You can also rename collections in the ``students`` database. You cannot
-rename collections in the ``staff`` database, renaming is only possible
-when the entire target database is included in the filter. If you try to
-rename a collection in the ``staff`` database, ``monogsync`` reports an
-error and exists.
+``mongosync`` syncs the entire ``staff`` database. If you add new
+collections to the ``staff`` database, ``mongosync`` syncs them too.
 
-.. code-block::
+``mongosync`` does not sync new collections that are added to
+the ``students`` database unless the collection is a part of the filter.
+
+For example, ``mongosync`` does not sync the new collection if you add
+the ``postdocs`` collection to the ``students`` database. If you add the
+``adjuncts`` collection, ``mongosync`` syncs it since ``adjuncts`` is
+part of the filter.
+
+
+Renaming a Collection
+`````````````````````
+
+You can rename any collection in the ``staff`` database. 
+
+.. code-block:: shell
+
+   // This code works 
+   use admin
+   db.runCommand( { renameCollection: "staff.employees", to: "staff.salaried" } )
+
+You can only rename a collection within the ``students`` database if the
+new and old names are both in the filter. If both names are not in the
+filter, ``monogsync`` reports an error and exists.
+
+.. code-block:: shell
+
+   // This code works 
+   use admin
+   db.runCommand( { renameCollection: "students.graduate", to: "students.adjuncts" } )
+
+If a collection is specified in the filter, you can drop it, but you
+cannot rename it to remove it from the filter.
+
+.. code-block:: shell
+   :copyable: false 
+
+   // This code produces an error and mongosync stops syncing 
+   use admin
+   db.runCommand( { renameCollection: "students.graduate", to: "students.notAFilteredCollection" } )
+
+You can rename a collection to add it to a filter if the whole target
+database is included in the filter. 
+
+.. code-block:: shell
 
    // This code works
    use admin
-   db.runCommand( { renameCollection: "students.undergrad", to: "students.undergraduate" } )
-
-   // This code produces an error, mongosync stops syncing
-   use admin
    db.runCommand( { renameCollection: "staff.employees", to: "staff.onPayroll" } )
+   db.runCommand( { renameCollection: "students.adjuncts", to: "staff.adjuncts" } )
 
+.. important::
+
+   If you anticipate renaming collections, add the entire database to
+   the filter rather than specifying individual collections.  
 
