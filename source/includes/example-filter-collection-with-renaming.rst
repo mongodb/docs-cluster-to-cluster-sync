@@ -1,13 +1,12 @@
 .. include:: /includes/intro-start-api-example-intro.rst
 
-``cluster0`` contains the ``students``, ``staff``, and ``classes``
+``cluster0`` contains the ``students``, ``staff``, and ``prospects``
 databases.
 
-The ``students`` database contains the ``undergrad`` and ``graduate``
-collections.
-
-The ``staff`` database contains the ``employees`` and ``contractors``
-collections.
+- The ``students`` database contains the ``undergrad`` and ``graduate``
+  collections.
+- The ``staff`` database contains the ``employees`` and ``contractors``
+  collections.
 
 The ``includeNamespaces`` array in this example defines a filter on two
 of the databases:
@@ -26,10 +25,10 @@ of the databases:
 With this filter in place ``mongosync`` syncs:
 
 - The entire ``staff`` database
-- The "undergrad", "graduate", and "adjuncts" collections in the
+- The ``undergrad``, ``graduate``, and ``adjuncts`` collections in the
   ``students`` database
 
-``mongosync`` does not sync any information from the ``classes``
+``mongosync`` does not sync any information from the ``prospects``
 database.
 
 Adding a Collection
@@ -87,6 +86,7 @@ database is included in the filter.
    use admin
    db.runCommand( { renameCollection: "staff.employees", to: "staff.onPayroll" } )
    db.runCommand( { renameCollection: "students.adjuncts", to: "staff.adjuncts" } )
+   db.runCommand( { renameCollection: "prospects.current", to: "staff.newHires" } )
 
 .. important::
 
