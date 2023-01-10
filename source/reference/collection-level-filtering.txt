@@ -213,18 +213,16 @@ Renaming Within a Single Database
 
 You can rename a collection if the entire database is part of a filter. 
 
-You can also rename a collection if the old name and the new are
-specified in the filter. 
+You can also rename a collection if the old name and the new name are
+both specified in the filter. 
 
-See the :ref:`renaming examples <c2c-ex-filter-rename>`.
+See the :ref:`renaming examples <c2c-example-rename-while-syncing>`.
 
 Renaming Across Different Databases
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 You can rename a collection if the source collection is a part of the
 filter and the entire target database is part of a filter. 
-
-
 
 Limitations
 -----------
@@ -241,7 +239,7 @@ Start ``mongosync`` with a Filter
 
 .. include:: /includes/example-filter-collection.rst
 
-.. _c2c-ex-filter-rename:
+.. _c2c-example-rename-while-syncing:
 
 Renaming Collections While Syncing
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
