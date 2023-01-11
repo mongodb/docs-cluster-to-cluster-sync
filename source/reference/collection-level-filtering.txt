@@ -251,8 +251,8 @@ Start ``mongosync`` with a Filter
 
 .. _c2c-example-rename-while-syncing:
 
-Renaming Collections While Syncing
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Adding and Renaming Collections While Syncing
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. include:: /includes/example-filter-collection-with-renaming.rst
 

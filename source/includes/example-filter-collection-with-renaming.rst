@@ -80,32 +80,27 @@ cannot rename it to remove it from the filter.
 When the whole target database is included in the filter you can rename
 collections to add them to the filter: 
 
-- - Source collection is not specified in the filter
-  - Whole target database is in the filter
-  - Renames collections within a database
-
-    .. code-block:: shell
-
-       use admin
-       db.runCommand( { renameCollection: "staff.employees", to: "staff.onPayroll" } )
-
-- - Source collection is specified in the filter
-  - Whole target database is specified in the filter
-  - Renames across databases 
+- Source collection is specified in the filter
 
   .. code-block:: shell
 
      use admin
      db.runCommand( { renameCollection: "students.adjuncts", to: "staff.adjuncts" } )
 
-- - Source collection is not specified in the filter
-  - Whole target database is specified in the filter
-  - Renames a collection across databases
+- Source collection is not specified in the filter
 
-    .. code-block:: shell
+  .. code-block:: shell
 
-       use admin
-       db.runCommand( { renameCollection: "prospects.current", to: "staff.newHires" } )
+     use admin
+     db.runCommand( { renameCollection: "prospects.current", to: "staff.newHires" } )
+
+You can also rename collections in the source database when the whole
+target database is in the filter:
+
+.. code-block:: shell
+
+   use admin
+   db.runCommand( { renameCollection: "staff.employees", to: "staff.onPayroll" } )
 
 .. important::
 
