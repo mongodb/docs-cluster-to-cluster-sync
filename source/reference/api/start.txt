@@ -211,7 +211,7 @@ configuration.
        you have to :ref:`restart the filtered sync <c2c-change-filter>`
        from the beginning.
 
-       For more details, see: :ref:`c2c-collection-filtering`.
+       For more details, see: :ref:`c2c-filtered-sync`.
 
        For current limitations, see: :ref:`c2c-filtering-limitations`.
 
@@ -267,7 +267,7 @@ Example: Start a Filtered Sync Job
 .. include:: /includes/example-filter-collection.rst
 
 The ``includeNamespaces`` option creates a filter. To filter the sync,
-see: :ref:`c2c-collection-filtering`
+see: :ref:`c2c-filtered-sync`
 
 Request
 ~~~~~~~
