@@ -155,7 +155,7 @@ Follow these steps to prepare the destination cluster for a new filter.
 Adding and Renaming Collections
 -------------------------------
 
-You can, with some restrictions, :method:`rename a collection
+You can, with some restrictions, add or :method:`rename a collection
 <db.collection.renameCollection>` during a filtered sync.
 
 .. warning::
@@ -166,10 +166,11 @@ You can, with some restrictions, :method:`rename a collection
    To clean up and restart after an error, follow the steps to
    :ref:`replace an existing filter <c2c-change-filter>`.
 
-Renaming Within a Single Database
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Adding and Renaming Within a Single Database
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-You can rename a collection if the entire database is part of a filter. 
+You can add new collections or rename an existing collection if the
+entire database is part of a filter. 
 
 You can also rename a collection if the old name and the new name are
 both specified in the filter. 
