@@ -46,9 +46,11 @@ Configure a Filter
 
    .. step:: Create a Filter.
 
-      The ``includeNamespaces`` option specifies a filter that you can
-      pass to the :ref:`/start <c2c-api-start>` API. If you don't
-      specify a filter, ``mongosync`` does a full cluster sync.
+      The ``includeNamespaces`` parameter specifies an optional filter
+      that you can pass to the :ref:`/start <c2c-api-start>` API.
+      
+      If you don't specify a filter, ``mongosync`` does a full cluster
+      sync.
 
       The filter syntax is: 
 
@@ -81,8 +83,9 @@ You cannot update an existing filter. You must stop the ongoing sync
 process, prepare the destination cluster, and restart ``mongosync`` with
 a new filter. 
 
-When ``mongosync`` ran your original filter, it created user databases
-and the ``mongosync_reserved_for_internal_use`` system database on the
+When ``mongosync`` ran your original filter, it created databases with
+your data, "user databases", and the
+``mongosync_reserved_for_internal_use`` system database on the
 destination cluster. You must remove those databases before restarting
 ``mongosync`` with your new filter.
 
@@ -117,9 +120,11 @@ Follow these steps to prepare the destination cluster for a new filter.
             show databases
 
       #. Remove user databases. The ``admin``, ``local``, and ``config``
-         databases are system databases. If the ``show databases``
-         command lists any user databases on the destination cluster,
-         you must remove them.
+         databases are system databases. You should not edit these
+         system databases without instructions from MongoDB support. 
+         
+         If the ``show databases`` command lists any user databases on
+         the destination cluster, you must remove them.
 
          Repeat this step for each user database list:
 
@@ -144,6 +149,43 @@ Follow these steps to prepare the destination cluster for a new filter.
 
       #. Use the ``/start`` API end point to start syncing. Be sure to 
          attach your new filter when you call ``/start``.
+
+.. _c2c-filter-renaming-collections:
+
+Adding and Renaming Collections
+-------------------------------
+
+You can, with some restrictions, :method:`rename a collection
+<db.collection.renameCollection>` during a filtered sync.
+
+.. warning::
+
+   If your renaming operation violates the renaming restrictions,
+   ``mongosync`` stops syncing and reports an error.
+
+   To clean up and restart after an error, follow the steps to
+   :ref:`replace an existing filter <c2c-change-filter>`.
+
+Renaming Within a Single Database
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+You can rename a collection if the entire database is part of a filter. 
+
+You can also rename a collection if the old name and the new name are
+both specified in the filter. 
+
+See the :ref:`renaming examples <c2c-example-rename-while-syncing>`.
+
+Renaming Across Different Databases
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+You can only rename a collection across databases if entire target
+database is part of a filter. If the filter specifies individual
+collections in the target database, renaming across databases does not
+work.
+
+See the :ref:`renaming examples <c2c-example-rename-while-syncing>`.
+
 
 .. _c2c-filter-with-out:
 
@@ -190,42 +232,6 @@ This filter does not work with ``$out``:
        "collections": [ "authors", "books" ]  // DOES NOT WORK WITH $OUT
      }
    ]
-
-.. _c2c-filter-renaming-collections:
-
-Renaming Collections
---------------------
-
-You can, with some restrictions, :method:`rename a collection
-<db.collection.renameCollection>` during a filtered sync.
-
-.. warning::
-
-   If your renaming operation violates the renaming restrictions,
-   ``mongosync`` stops syncing and reports an error.
-
-   To clean up and restart after an error, follow the steps to
-   :ref:`replace an existing filter <c2c-change-filter>`.
-
-Renaming Within a Single Database
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-You can rename a collection if the entire database is part of a filter. 
-
-You can also rename a collection if the old name and the new name are
-both specified in the filter. 
-
-See the :ref:`renaming examples <c2c-example-rename-while-syncing>`.
-
-Renaming Across Different Databases
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-You can only rename a collection across databases if entire target
-database is part of a filter. If the filter specifies individual
-collections in the target database, renaming across databases does not
-work.
-
-See the :ref:`renaming examples <c2c-example-rename-while-syncing>`.
 
 Limitations
 -----------

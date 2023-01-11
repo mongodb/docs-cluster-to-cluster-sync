@@ -28,8 +28,8 @@ After you call the ``/start`` API with this filter in place,
 ``mongosync``:
 
 - Syncs all of the collections in the ``marketing`` database
+- Filters out the ``engineering`` database
 - Syncs the ``EMEA`` and ``APAC`` collections from the ``sales``
   database
-- Filters out the ``engineering`` database
 - Filters out the ``AMER`` collection
 

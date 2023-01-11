@@ -58,8 +58,8 @@ You can rename any collection in the ``staff`` database.
    db.runCommand( { renameCollection: "staff.employees", to: "staff.salaried" } )
 
 You can only rename a collection within the ``students`` database if the
-new and old names are both in the filter. If both names are not in the
-filter, ``monogsync`` reports an error and exists.
+new and old names are both in the filter. If either of the names is not
+in the filter, ``monogsync`` reports an error and exists.
 
 .. code-block:: shell
 
@@ -77,29 +77,35 @@ cannot rename it to remove it from the filter.
    use admin
    db.runCommand( { renameCollection: "students.graduate", to: "students.notAFilteredCollection" } )
 
-You can rename a collection to add it to a filter if the whole target
-database is included in the filter. 
+When the whole target database is included in the filter you can rename
+collections to add them to the filter: 
 
-- Within a database, no collections specified in the filter's target database
+- - Source collection is not specified in the filter
+  - Whole target database is in the filter
+  - Renames collections within a database
 
-  .. code-block:: shell
+    .. code-block:: shell
 
-     use admin
-     db.runCommand( { renameCollection: "staff.employees", to: "staff.onPayroll" } )
+       use admin
+       db.runCommand( { renameCollection: "staff.employees", to: "staff.onPayroll" } )
 
-- Across databases, no collections specified in the filter's target database
-
-  .. code-block:: shell
-
-     use admin
-     db.runCommand( { renameCollection: "prospects.current", to: "staff.newHires" } )
-
-- Across databases, both collections specified in the filter
+- - Source collection is specified in the filter
+  - Whole target database is specified in the filter
+  - Renames across databases 
 
   .. code-block:: shell
 
      use admin
      db.runCommand( { renameCollection: "students.adjuncts", to: "staff.adjuncts" } )
+
+- - Source collection is not specified in the filter
+  - Whole target database is specified in the filter
+  - Renames a collection across databases
+
+    .. code-block:: shell
+
+       use admin
+       db.runCommand( { renameCollection: "prospects.current", to: "staff.newHires" } )
 
 .. important::
 
