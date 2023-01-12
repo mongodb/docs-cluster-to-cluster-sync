@@ -129,8 +129,8 @@ Multiple Clusters
 
 .. _c2c-filtering-limitations:
 
-Collection Level Filtering
---------------------------
+Filtered Sync
+-------------
 
 .. include:: /includes/limitations-filtering.rst
 
