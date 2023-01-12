@@ -104,6 +104,6 @@ target database is in the filter:
 
 .. important::
 
-   If you anticipate renaming collections, add the entire database to
-   the filter rather than specifying individual collections.  
+   If you anticipate renaming collections, consider adding the entire
+   database to the filter rather than specifying individual collections.
 

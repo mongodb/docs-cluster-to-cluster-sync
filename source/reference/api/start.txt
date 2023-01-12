@@ -195,8 +195,8 @@ configuration.
    * - ``includeNamespaces``
      - array
      - Optional
-     - Filters the databases or collections to sync. The filter document
-       syntax is: 
+     - Filters the databases or collections to sync. The filter syntax
+       is:
 
        .. include:: /includes/api/facts/includeNamespaces-syntax.rst
 

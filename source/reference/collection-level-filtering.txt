@@ -66,7 +66,7 @@ Configure a Filter
 
    .. step:: Use the Filter.
 
-      To use the filter, attach the filter document when you make the
+      To use the filter, attach the filter json when you make the
       :ref:`/start <c2c-api-start>` API call to begin syncing.
 
       .. literalinclude:: /includes/api/requests/start-filtered.sh
@@ -84,7 +84,7 @@ process, prepare the destination cluster, and restart ``mongosync`` with
 a new filter. 
 
 When ``mongosync`` ran your original filter, it created databases with
-your data, "user databases", and the
+your data ("user databases") and the
 ``mongosync_reserved_for_internal_use`` system database on the
 destination cluster. You must remove those databases before restarting
 ``mongosync`` with your new filter.
