@@ -15,14 +15,15 @@ of the databases:
 
    {
       "source": "cluster0",
-      "destination": "cluster1", "includeNamespaces" :
+      "destination": "cluster1",
+      "includeNamespaces":
          [
             { "database" : "students", "collections": ["undergrad", "graduate", "adjuncts"] },
             { "database" : "staff" }
          ]
    }
 
-With this filter in place ``mongosync`` syncs:
+With this filter in place, ``mongosync`` syncs:
 
 - The entire ``staff`` database
 - The ``undergrad``, ``graduate``, and ``adjuncts`` collections in the
@@ -77,7 +78,7 @@ cannot rename it to remove it from the filter.
    use admin
    db.runCommand( { renameCollection: "students.graduate", to: "students.notAFilteredCollection" } )
 
-When the whole target database is included in the filter you can rename
+When the whole target database is included in the filter, you can rename
 collections to add them to the filter: 
 
 - Source collection is specified in the filter

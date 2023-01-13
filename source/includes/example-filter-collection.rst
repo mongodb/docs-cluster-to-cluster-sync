@@ -17,7 +17,7 @@ collections.
    "includeNamespaces" : [
          {
              "database" : "sales",
-             "collections": ["EMEA", "APAC" ]
+             "collections": [ "EMEA", "APAC" ]
          },
          {
              "database" : "marketing"

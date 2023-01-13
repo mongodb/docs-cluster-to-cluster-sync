@@ -4,8 +4,8 @@
 - The destination cluster must not contain the
   ``mongosync_reserved_for_internal_use`` system database prior to
   starting.
-- You cannot modify a filter that is in use. To create a new filter, see
-  :ref:`changing the filter <c2c-change-filter>`.
+- You cannot modify a filter that is in use. To create a new filter,
+  see: :ref:`c2c-change-filter`.
 - You can only rename collections in certain situations. For more
   details see: :ref:`c2c-filter-renaming-collections`.
 - If a filter includes a :ref:`view <views-landing-page>` but not the

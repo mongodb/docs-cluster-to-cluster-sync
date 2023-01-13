@@ -41,8 +41,8 @@ Configure a Filter
       the destination cluster. When you add a set of databases to the
       filter, you also exclude any other databases in the cluster.
       
-      If specify a collection in your filter, you also exclude any other
-      collections that are in the same database.
+      When you specify a collection in your filter, you also exclude any
+      other collections that are in the same database.
 
    .. step:: Create a Filter.
 
@@ -137,15 +137,15 @@ Follow these steps to prepare the destination cluster for a new filter.
          completes, you may need to run it a second time to remove the
          database.
 
-   .. step:: Configure a New Filter.
+   .. step:: Configure a new filter.
 
       a. Decide which databases and collections you want to filter on.
          Add the databases and collections to the ``includeNamespaces``
          array. For configuration details, see
          :ref:`c2c-configure-filter`.
 
-      #. Run ``mongosync`` to :ref:`reconnect <c2c-conn-top-level>` the
-         source and destination clusters.
+      #. Run ``mongosync`` to :ref:`reconnect <c2c-conn-top-level>` to
+         the source and destination clusters.
 
       #. Use the ``/start`` API end point to start syncing. Be sure to 
          attach your new filter when you call ``/start``.
@@ -170,7 +170,7 @@ Adding and Renaming Within a Single Database
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 You can add new collections or rename an existing collection if the
-entire database is part of a filter. 
+entire database is part of the filter. 
 
 You can also rename a collection if the old name and the new name are
 both specified in the filter. 
@@ -180,7 +180,7 @@ See the :ref:`renaming examples <c2c-example-rename-while-syncing>`.
 Renaming Across Different Databases
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-You can only rename a collection across databases if entire target
+You can only rename a collection across databases if the entire target
 database is part of a filter. If the filter specifies individual
 collections in the target database, renaming across databases does not
 work.
