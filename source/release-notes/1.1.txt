@@ -24,17 +24,18 @@ Filtered Sync
 
 For more information, see: :ref:`c2c-filtered-sync`.
 
-Unlike Sharded Topologies
--------------------------
+Unlike Topologies
+-----------------
 
 {+c2c-product-name+} 1.1 supports sync between clusters with different
 sharding configurations.
 
-You can:
+You can sync:
 
-- Change the number of shards from M to N
-- Sync between two sharded clusters
-- Sync from a replica set to a sharded cluster
+- Between two sharded clusters
+- Between two sharded clusters with a different number of shards in each
+  cluster
+- From a replica set to a sharded cluster
 
 You cannot sync from a sharded cluster to a replica set. 
 
