@@ -20,11 +20,7 @@ Release Notes for ``mongosync`` 1.1
 Filtered Sync
 -------------
 
-{+c2c-product-name+} provides continuous data synchronization or a 
-one-time data migration between two MongoDB clusters. You can use
-filtered sync to control the data that the :ref:`mongosync
-<c2c-mongosync>` utility transfers between the source and destination
-clusters.
+.. include:: /includes/api/facts/filtering-intro.rst
 
 For more information, see: :ref:`c2c-filtered-sync`.
 
@@ -34,9 +30,13 @@ Unlike Sharded Topologies
 {+c2c-product-name+} 1.1 supports sync between clusters with different
 sharding configurations.
 
-You can sync between two sharded clusters or from a replica set to a
-sharded cluster. You cannot sync from a sharded cluster to a replica
-set. 
+You can:
+
+- Change the number of shards from M to N
+- Sync between two sharded clusters
+- Sync from a replica set to a sharded cluster
+
+You cannot sync from a sharded cluster to a replica set. 
 
 For more information, see: :ref:`c2c-api-start-sharding`.
 
