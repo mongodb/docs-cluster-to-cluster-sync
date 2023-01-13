@@ -91,6 +91,40 @@ Request Body Parameters
      - Required
      - Name of the destination cluster.
 
+   * - ``enableUserWriteBlocking``
+     - boolean
+     - Optional
+     - If set to ``true``, blocks writes on the destination cluster
+       while the synchronization is in progress. After the
+       synchronization is committed to the destination cluster, the
+       original source cluster blocks writes and the destination cluster
+       accepts writes.
+
+       Default value is ``false``.
+
+   * - ``includeNamespaces``
+     - array
+     - Optional
+     - Filters the databases or collections to sync. The filter syntax
+       is:
+
+       .. include:: /includes/api/facts/includeNamespaces-syntax.rst
+
+       .. versionadded:: 1.1
+
+       If you configure a filter on a source cluster that has multiple
+       databases, ``mongosync`` only syncs the databases specified in
+       the filter definition. ``mongosync`` will not sync the other
+       existing databases.
+       
+       If you want to modify the filter to add a newly created database,
+       you have to :ref:`restart the filtered sync <c2c-change-filter>`
+       from the beginning.
+
+       For more details, see: :ref:`c2c-filtered-sync`.
+
+       For current limitations, see: :ref:`c2c-filtering-limitations`.
+
    * - ``reversible``
      - boolean
      - Optional
@@ -117,17 +151,6 @@ Request Body Parameters
        For more information, see :ref:`c2c-api-start-sharding`. 
 
        .. versionadded:: 1.1
-
-   * - ``enableUserWriteBlocking``
-     - boolean
-     - Optional
-     - If set to ``true``, blocks writes on the destination cluster
-       while the synchronization is in progress. After the
-       synchronization is committed to the destination cluster, the
-       original source cluster blocks writes and the destination cluster
-       accepts writes.
-
-       Default value is ``false``.
 
 .. _c2c-api-start-sharding:
 
@@ -191,29 +214,6 @@ The ``sharding`` option has the following parameters:
 syncing from a replica set to a sharded cluster.  ``mongosync`` also
 throws an error if the ``sharding`` option is set with any other
 configuration.
-
-   * - ``includeNamespaces``
-     - array
-     - Optional
-     - Filters the databases or collections to sync. The filter syntax
-       is:
-
-       .. include:: /includes/api/facts/includeNamespaces-syntax.rst
-
-       .. versionadded:: 1.1
-
-       If you configure a filter on a source cluster that has multiple
-       databases, ``mongosync`` only syncs the databases specified in
-       the filter definition. ``mongosync`` will not sync the other
-       existing databases.
-       
-       If you want to modify the filter to add a newly created database,
-       you have to :ref:`restart the filtered sync <c2c-change-filter>`
-       from the beginning.
-
-       For more details, see: :ref:`c2c-filtered-sync`.
-
-       For current limitations, see: :ref:`c2c-filtering-limitations`.
 
 Response
 --------
