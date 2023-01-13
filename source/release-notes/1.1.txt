@@ -34,6 +34,10 @@ Unlike Sharded Topologies
 {+c2c-product-name+} 1.1 supports sync between clusters with different
 sharding configurations.
 
+You can sync between two sharded clusters or from a replica set to a
+sharded cluster. You cannot sync from a sharded cluster to a replica
+set. 
+
 For more information, see: :ref:`c2c-api-start-sharding`.
 
 Minimum Supported Server Version
