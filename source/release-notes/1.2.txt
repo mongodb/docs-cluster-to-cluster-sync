@@ -20,24 +20,24 @@ Support for Older Versions of MongoDB
 -------------------------------------
 
 {+c2c-product-name+} 1.2 adds support for sync between clusters running 
-MongoDB 5.0.12, 4.4.17, and 4.2.24. Source and destination clusters must 
-still use the same version.
+older versions of MongoDB.
 
-This feature is still in an early stage.  Users should contact
-Professional Services if they are interested in suing ``mongosync``
-with older Server versions.
+Sync between MongoDB 5.0, 4.4, and 4.2 clusters replicate CRUD operations only.  
 
-.. warning::
+``mongosync`` **cannot** detect DDL operations in pre-6.0 clusters.
+DDL operations, such as creating and dropping databases and collections,
+adding indexes, etc. during replication can cause the destination cluster
+to fall out of sync with the source.
 
-   Sync between MongoDB 5.0, 4.4, and 4.2 clusters replicate CRUD operations
-   only.  ``mongosync`` **cannot** detect DDL operations in these clusters.
-   DDL operations, such as creating and dropping databases and collections,
-   adding indexes, etc. during replication can cause the destination cluster
-   to fall out of sync with the source.
+For more information, contact your account team or 
+`MongoDB <https://www.mongodb.com/contact>`__.
 
 
 Guardrails for Unsupported Versions of MongoDB
 ----------------------------------------------
+
+``mongosync`` now returns an error if the user calls :ref:`c2c-api-start`
+to sync clusters of an unsupported release of MongoDB Server.
 
 Collated Collections Issue
 ---------------------------
