@@ -1,0 +1,46 @@
+.. _c2c-release-notes-1.1:
+
+===================================
+Release Notes for ``mongosync`` 1.2
+===================================
+
+.. default-domain:: mongodb
+
+.. contents:: On this page
+   :local:
+   :backlinks: none
+   :depth: 1
+   :class: singlecol
+
+.. note::
+
+   ``mongosync`` 1.2 Released February 15, 2023
+
+Support for Older Versions of MongoDB
+-------------------------------------
+
+{+c2c-product-name+} 1.2 adds support for sync between clusters running 
+MongoDB 5.0.12, 4.4.17, and 4.2.24. Source and destination clusters must 
+still use the same version.
+
+This feature is still in an early stage.  Users should contact
+Professional Services if they are interested in suing ``mongosync``
+with older Server versions.
+
+.. warning::
+
+   Sync between MongoDB 5.0, 4.4, and 4.2 clusters replicate CRUD operations
+   only.  ``mongosync`` **cannot** detect DDL operations in these clusters.
+   DDL operations, such as creating and dropping databases and collections,
+   adding indexes, etc. during replication can cause the destination cluster
+   to fall out of sync with the source.
+
+
+Guardrails for Unsupported Versions of MongoDB
+----------------------------------------------
+
+Collated Collections Issue
+---------------------------
+
+Fixes bug that could cause ``mongosync`` to crash when replicating
+collated collections.
