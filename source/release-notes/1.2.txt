@@ -19,11 +19,12 @@ Release Notes for ``mongosync`` 1.2
 Support for Older Versions of MongoDB
 -------------------------------------
 
-{+c2c-product-name+} 1.2 adds support for sync between clusters running 
-older (pre-6.0) releases of MongoDB Server.
+{+c2c-product-name+} 1.2 can sync between clusters running 
+older (pre-6.0) releases of MongoDB Server.  Use of this feature
+requires additional preparation and configuration.
 
-If you would like to use ``mongosync`` with an older version of MongoDB,
-contact Professional Services.
+Contact Professional Services if you would like to sync older
+versions of MongoDB.
 
 
 Guardrails for Unsupported Versions of MongoDB
