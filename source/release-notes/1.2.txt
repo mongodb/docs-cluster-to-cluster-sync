@@ -31,7 +31,7 @@ Guardrails for Unsupported Versions of MongoDB
 ----------------------------------------------
 
 ``mongosync`` now returns an error if you call :ref:`c2c-api-start`
-to sync clusters of an unsupported release of MongoDB Server.
+to sync clusters running unsupported releases of MongoDB Server.
 
 Collated Collections Issue
 ---------------------------
