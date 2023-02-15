@@ -14,7 +14,7 @@ Release Notes for ``mongosync`` 1.2
 
 .. note::
 
-   ``mongosync`` 1.2 Released February 15, 2023
+   ``mongosync`` 1.2 Released February 16, 2023
 
 Support for Older Versions of MongoDB
 -------------------------------------
