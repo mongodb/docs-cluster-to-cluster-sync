@@ -47,8 +47,8 @@ Follow the instructions below to setup {+c2c-product-name+}.
 
       This Quickstart works when the destination cluster and the source
       cluster are both replica sets. If you want to sync from a replica
-      set to a sharded cluster, or between sharded clusters with
-      different numbers of shards, see: :ref:`c2c-sharded-clusters`
+      set to a sharded cluster, or between sharded clusters,
+      see: :ref:`c2c-sharded-clusters`
 
       The source and destination clusters must be:
       
@@ -57,8 +57,8 @@ Follow the instructions below to setup {+c2c-product-name+}.
       - at least Feature Compatibility Version 6.0
       - the same Feature Compatibility Version
 
-     The number of nodes in the destination replica set does not have to
-     equal the number of nodes in the source replica set.
+      The number of nodes in the destination replica set does not have
+      to equal the number of nodes in the source replica set.
 
       If your clusters are self-managed, they must be MongoDB
       Enterprise clusters. {+c2c-product-name+} is only supported on
