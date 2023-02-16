@@ -46,9 +46,9 @@ Follow the instructions below to setup {+c2c-product-name+}.
       cluster to work with, you will need to create one.
 
       This Quickstart works when the destination cluster and the source
-      cluster are both replica sets. If you want to sync from a replica
-      set to a sharded cluster, or between sharded clusters,
-      see: :ref:`c2c-sharded-clusters`
+      cluster are both replica sets. To sync from a replica set to a
+      sharded cluster, or between sharded clusters, see:
+      :ref:`c2c-sharded-clusters`.
 
       The source and destination clusters must be:
       
