@@ -16,15 +16,17 @@ Release Notes for ``mongosync`` 1.2
 
    ``mongosync`` 1.2 Released February 16, 2023
 
-Support for Older Versions of MongoDB
+
+Migrating Older Versions of MongoDB
 -------------------------------------
 
-{+c2c-product-name+} 1.2 can sync between clusters running 
+``mongosync`` 1.2 can sync between clusters running 
 older (pre-6.0) releases of MongoDB Server.  Use of this feature
 requires additional preparation and configuration.
 
-Contact Professional Services if you would like to sync older
-versions of MongoDB.
+If you would like to migrate pre-6.0 versions of MongoDB Server
+using ``mongosync``, please `contact <https://mongodb.com/contact>`__
+your account team to inquire about Professional Services.
 
 
 Guardrails for Unsupported Versions of MongoDB
@@ -32,6 +34,7 @@ Guardrails for Unsupported Versions of MongoDB
 
 ``mongosync`` now returns an error if you call :ref:`c2c-api-start`
 to sync clusters running unsupported releases of MongoDB Server.
+
 
 Collated Collections Issue
 ---------------------------
