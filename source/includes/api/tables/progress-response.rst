@@ -68,6 +68,6 @@
      - Destination cluster. Returned in the form
        ``<cluster name>: <host>:<port>``.
 
-   .. include:: /includes/api/tables/response-errorDescription.rst
+   * .. include:: /includes/api/tables/response-errorDescription.rst
     
-   .. include:: /includes/api/tables/response-errorDescription.rst
+   * .. include:: /includes/api/tables/response-errorDescription.rst

@@ -11,6 +11,6 @@
      - boolean
      - When the request is successful, this value is ``true``.
 
-   .. include:: /includes/api/tables/response-errorDescription.rst
-    
-   .. include:: /includes/api/tables/response-errorDescription.rst
+   * .. include:: /includes/api/tables/response-errorDescription.rst
+
+   * .. include:: /includes/api/tables/response-errorDescription.rst
