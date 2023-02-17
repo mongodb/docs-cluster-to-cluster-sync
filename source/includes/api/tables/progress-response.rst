@@ -70,8 +70,11 @@
 
    * - ``error``
      - string
-     - .. include:: /includes/api/tables/text-error.rst
+     - If an error occurred, indicates the name of the error. This field
+       is omitted when the call to the endpoint is successful.
 
    * - ``errorDescription``
      - string
-     - .. include:: /includes/api/tables/text-errorDescription.rst
+     - If an error occurred, gives a detailed description of the error.
+       This field is omitted when the call to the endpoint is successful
+

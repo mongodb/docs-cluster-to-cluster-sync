@@ -13,8 +13,10 @@
 
    * - ``error``
      - string
-     - .. include:: /includes/api/tables/text-error.rst
+     - If an error occurred, indicates the name of the error. This field
+       is omitted from the response when ``success`` is ``true``.
 
    * - ``errorDescription``
      - string
-     - .. include:: /includes/api/tables/text-errorDescription.rst
+     - Detailed description of the error that occurred. This field is
+       omitted from the response when ``success`` is ``true``.
