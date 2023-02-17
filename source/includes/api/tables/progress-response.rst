@@ -68,6 +68,12 @@
      - Destination cluster. Returned in the form
        ``<cluster name>: <host>:<port>``.
 
-   * .. include:: /includes/api/tables/response-errorDescription.rst
-    
-   * .. include:: /includes/api/tables/response-errorDescription.rst
+   * - ``error``
+     - string
+     - If an error occurred, indicates the name of the error. This field
+       is omitted from the response when ``success`` is ``true``.
+
+   * - ``errorDescription``
+     - string
+     - Detailed description of the error that occurred. This field is
+       omitted from the response when ``success`` is ``true``.
