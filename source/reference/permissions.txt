@@ -1,7 +1,5 @@
 .. _c2c-permissions-and-roles:
 
-.. default-domain:: mongodb
-
 ================
 User Permissions
 ================

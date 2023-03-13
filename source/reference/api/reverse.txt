@@ -46,7 +46,7 @@ To use the ``reverse`` endpoint:
   :ref:`resync <resync-replica-member>` all of the nodes in the
   original source cluster before reversing.
 - .. include:: /includes/fact-reverse-limitation.rst
-- .. include:: /includes/fact-sync-permissions.rst
+- .. include:: /includes/fact-permissions-body.rst
 
 Request
 -------

@@ -237,7 +237,7 @@ Synchronization Notes
   - ``enableUserWriteBlocking``
 
   .. literalinclude:: /includes/api/requests/reverse.sh
-   :language: shell
+     :language: shell
 
 - .. include:: /includes/fact-permissions-body.rst
 
