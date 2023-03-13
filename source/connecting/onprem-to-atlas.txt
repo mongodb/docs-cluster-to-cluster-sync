@@ -36,7 +36,7 @@ Authentication
 Roles
 -----
 
-.. include:: /includes/fact-atlas-roles
+.. include:: /includes/fact-sync-permissions.rst
 
 Behavior
 --------

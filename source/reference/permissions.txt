@@ -1,0 +1,105 @@
+.. _c2c-permissions-and-roles:
+
+.. default-domain:: mongodb
+
+==============================
+``mongosync`` User Permissions
+==============================
+
+.. default-domain:: mongodb
+
+.. contents:: On this page
+   :local:
+   :backlinks: none
+   :depth: 2
+   :class: singlecol
+
+The ``mongosync`` user must have the correct permissions in the source
+and destination clusters. The Atlas permissions are different from the
+permissions for self-managed clusters.
+
+Self-Managed Clusters
+---------------------
+
+.. list-table::
+   :header-rows: 1
+
+   * - Sync Type
+     - Target
+     - Required Permissions
+
+   * - default
+     - source cluster
+     -
+         - readAnyDatabase
+         - backup
+         - clusterMonitor (sharded clusters only)
+
+   * - default
+     - destination cluster
+     -
+
+         - readWriteAnyDatabase
+         - restore
+         - clusterManager (sharded clusters only)
+
+
+   * - write-blocking or reversing
+     - source cluster
+     -  
+
+         - readWriteAnyDatabase
+         - backup
+         - restore
+         - clusterManager (sharded clusters only)
+
+   * - write-blocking or reversing
+     - destination cluster
+     -
+
+         - readWriteAnyDatabase
+         - backup
+         - restore
+         - clusterManager (sharded clusters only)
+
+
+Atlas Clusters
+--------------
+
+
+.. list-table::
+   :header-rows: 1
+
+   * - Sync Type
+     - Target
+     - Required Permissions
+
+   * - default
+     - source cluster
+     -
+         - atlasAdmin
+         - backup
+
+
+   * - default
+     - destination cluster
+     -
+         - atlasAdmin
+
+   * - write-blocking or reversing
+     - source cluster
+     -
+
+         - atlasAdmin
+         - backup
+         - bypassWriteBlockMode privilege
+
+
+   * - write-blocking or reversing
+     - destination cluster
+     -
+
+         - atlasAdmin
+         - backup
+         - bypassWriteBlockMode privilege
+
