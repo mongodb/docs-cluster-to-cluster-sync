@@ -32,7 +32,11 @@ Authentication
 Roles
 -----
 
-.. include:: /includes/fact-sync-permissions.rst
+.. include:: /includes/fact-permissions-body.rst
+
+The Atlas permissions are:
+
+.. include:: /includes/table-permissions-atlas.rst
 
 Behavior
 --------

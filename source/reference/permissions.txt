@@ -2,9 +2,9 @@
 
 .. default-domain:: mongodb
 
-==============================
-``mongosync`` User Permissions
-==============================
+================
+User Permissions
+================
 
 .. default-domain:: mongodb
 
@@ -14,92 +14,16 @@
    :depth: 2
    :class: singlecol
 
-The ``mongosync`` user must have the correct permissions in the source
-and destination clusters. The Atlas permissions are different from the
-permissions for self-managed clusters.
+.. include:: /includes/fact-permissions-body.rst
+
 
 Self-Managed Clusters
 ---------------------
 
-.. list-table::
-   :header-rows: 1
-
-   * - Sync Type
-     - Target
-     - Required Permissions
-
-   * - default
-     - source cluster
-     -
-         - readAnyDatabase
-         - backup
-         - clusterMonitor (sharded clusters only)
-
-   * - default
-     - destination cluster
-     -
-
-         - readWriteAnyDatabase
-         - restore
-         - clusterManager (sharded clusters only)
-
-
-   * - write-blocking or reversing
-     - source cluster
-     -  
-
-         - readWriteAnyDatabase
-         - backup
-         - restore
-         - clusterManager (sharded clusters only)
-
-   * - write-blocking or reversing
-     - destination cluster
-     -
-
-         - readWriteAnyDatabase
-         - backup
-         - restore
-         - clusterManager (sharded clusters only)
-
+.. include:: /includes/table-permissions-self-hosted.rst
 
 Atlas Clusters
 --------------
 
-
-.. list-table::
-   :header-rows: 1
-
-   * - Sync Type
-     - Target
-     - Required Permissions
-
-   * - default
-     - source cluster
-     -
-         - atlasAdmin
-         - backup
-
-
-   * - default
-     - destination cluster
-     -
-         - atlasAdmin
-
-   * - write-blocking or reversing
-     - source cluster
-     -
-
-         - atlasAdmin
-         - backup
-         - bypassWriteBlockMode privilege
-
-
-   * - write-blocking or reversing
-     - destination cluster
-     -
-
-         - atlasAdmin
-         - backup
-         - bypassWriteBlockMode privilege
+.. include:: /includes/table-permissions-atlas.rst
 
