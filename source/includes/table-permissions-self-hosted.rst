@@ -44,5 +44,6 @@
          - clusterManager (sharded clusters only)
 
 For details on server roles, see: :ref:`authorization`.
+
 To update user permissions, see: :dbcommand:`grantRolesToUser`.
 
