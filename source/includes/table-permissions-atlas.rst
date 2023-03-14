@@ -39,7 +39,7 @@
          - bypassWriteBlockMode privilege
 
 For details on Atlas roles, see: :atlas:`Atlas User Roles
-<reference/user-roles/>`.
+</reference/user-roles/>`.
 
 To update Atlas user permissions, see:
 :atlas:`Manage Access to a Project </access/manage-project-access/>`.
