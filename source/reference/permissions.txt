@@ -23,19 +23,10 @@ The self-managed permissions are:
 
 .. include:: /includes/table-permissions-self-hosted.rst
 
-For details on server database role, see: :ref:`authorization`.
-
-To update user permissions, see: :ref:`user-management-methods`.
-
 Atlas Clusters
 --------------
 
 The Atlas permissions are:
 
 .. include:: /includes/table-permissions-atlas.rst
-
-For details on Atlas roles, see: :atlas:`<app-services/rules/roles/>`.
-
-To update user permissions, see:
-:atlas:`</access/manage-project-access/>`.
 
