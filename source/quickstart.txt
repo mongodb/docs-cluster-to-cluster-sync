@@ -241,7 +241,7 @@ Synchronization Notes
 
 - .. include:: /includes/fact-permissions-body.rst
 
-  To determine the correct the user permissions for your use case see,
+  To determine the correct the user permissions for your use case, see
   :ref:`c2c-permissions-and-roles`.
 
 - You may need to increase the file descriptor ``ulimits`` on the host
