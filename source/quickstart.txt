@@ -250,6 +250,6 @@ Synchronization Notes
   settings <system-resource-utilization>`.
 
 - To estimate the size of ``oplog`` needed for initial synchronization,
-  see: :ref:`c2c-oplog-sizing`.
+  see :ref:`c2c-oplog-sizing`.
 
 
