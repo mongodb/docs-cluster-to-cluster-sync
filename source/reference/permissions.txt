@@ -14,8 +14,6 @@ User Permissions
 
 .. include:: /includes/fact-permissions-body.rst
 
-atlas/reference/user-roles/
-
 Self-Managed Clusters
 ---------------------
 
