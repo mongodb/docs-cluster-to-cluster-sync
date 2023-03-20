@@ -186,8 +186,8 @@ See the :ref:`renaming examples <c2c-example-rename-while-syncing>`.
 
 .. _c2c-filter-with-out:
 
-Filtering with $out
--------------------
+Filtering with $out and mapReduce
+---------------------------------
 
 The :ref:`$out <agg-out>` aggregation stage creates a new collection
 when it runs. You can use the ``$out`` stage with filtering if you are
