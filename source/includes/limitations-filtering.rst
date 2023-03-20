@@ -16,5 +16,6 @@
   or create a new shareded collection are
   only supported if the entire database is specified in the filter.
   You cannot limit the filter to collections within the database.
+
   For more information, see :ref:`c2c-filter-with-out`.
 
