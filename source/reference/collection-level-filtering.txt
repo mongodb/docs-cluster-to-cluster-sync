@@ -220,7 +220,7 @@ This filter works:
      }
    ]
 
-This filter does not work with ``$out``:
+This filter does not work: 
 
 .. code-block:: json
 

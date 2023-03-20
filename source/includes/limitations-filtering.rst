@@ -11,7 +11,6 @@
 - If a filter includes a :ref:`view <views-landing-page>` but not the
   base collection, only the view is replicated.
 - You cannot specify system collections or system databases in a filter.
-  
 - Operations that use the :pipeline:`$out` aggregation stage or operations
   that use the :dbcommand:`mapReduce` command when set to replace a collection
   or create a new shareded collection are
