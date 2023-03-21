@@ -13,7 +13,7 @@
 - You cannot specify system collections or system databases in a filter.
 - Operations that use the :pipeline:`$out` aggregation stage or operations
   that use the :dbcommand:`mapReduce` command when set to replace a collection
-  or create a new shareded collection are
+  or create a new sharded collection are
   only supported if the entire database is specified in the filter.
   You cannot limit the filter to collections within the database.
 
