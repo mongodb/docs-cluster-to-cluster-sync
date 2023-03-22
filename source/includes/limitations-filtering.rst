@@ -12,7 +12,7 @@
   base collection, only the view is replicated.
 - You cannot specify system collections or system databases in a filter.
 - To use the :pipeline:`$out` aggregation stage or the :dbcommand:`mapReduce`
-  command when set to create or replace a collection with filtering
+  command (when set to create or replace a collection) with filtering
   requires that you configure the filter to use the entire database.
   You cannot limit the filter to collections within the database.
 
