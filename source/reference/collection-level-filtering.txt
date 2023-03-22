@@ -189,11 +189,11 @@ See the :ref:`renaming examples <c2c-example-rename-while-syncing>`.
 Filtering with mapReduce and $out
 ---------------------------------
 
-The :pipeline:`$out` aggregation stage and :dbcommand:`mapReduce`
-database command can create new collections when run.
-These operations can be used with filtering only when you filter
-the whole database and not just the collections specified in
-the ``$out`` or ``mapReduce`` statements.
+To use the :pipeline:`$out` aggregation stage or
+the :dbcommand:`mapReduce` command set to create
+or replace a collection with filtering requires
+that you filter the whole database and not just
+the specified collection.
 
 For example, consider this aggregation pipeline:
 
