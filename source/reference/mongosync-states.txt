@@ -83,7 +83,7 @@ Read Operations
 
 Read operations on the source cluster are always permitted.
 
-``mongosync`` guarantees :term:`eventual consistent <eventual
+``mongosync`` guarantees :term:`eventual consistency <eventual
 consistency>` on the destination cluster. You can read from
 the destination cluster during synching if your application supports 
 eventual consistency.
