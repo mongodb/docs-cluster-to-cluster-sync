@@ -200,29 +200,18 @@ show an empty ``system.views`` collection in that database. The empty
 ``system.views`` collection will not change the accuracy of user
 data on the destination.
 
+.. c2c-write-blocking:
+
 Write Blocking
 ~~~~~~~~~~~~~~
 
 By default, write-blocking is not enabled during synchronization.
 
-You can safely write to the source cluster while ``mongosync`` is
-syncing. You should not write to the destination cluster until the
-latter phase of the :ref:`COMMITTING <c2c-state-committing>` phase.
+.. include:: /includes/fact-write-blocking-when.rst
 
-Check what phase ``mongosync`` is in by calling the
-:ref:`c2c-api-progress` API endpoint. The ``/progress`` end point
-returns a boolean value, ``canWrite``. If you write to the destination
-cluster while ``canWrite`` is false, ``mongosync`` exits.
+.. include:: /includes/fact-write-blocking-check.rst
 
-To avoid accidental writes on the destination cluster, enable
-write-blocking. When write-blocking is enabled, ``mongosync`` blocks
-writes:
-
-- On the destination cluster during replication
-- On the source cluster while committing
-
-To enable write-blocking, use the :ref:`start API <c2c-api-start>`
-to set ``enableUserWriteBlocking`` to ``true``.
+.. include:: /includes/fact-write-blocking-enable.rst
 
 :ref:`Reverse synchronization <c2c-api-reverse>` requires
 write-blocking. To enable reverse synchronization between the source

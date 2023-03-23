@@ -77,3 +77,28 @@ operations in that state.
    * - ``COMMITTED``
      - The cutover for the sync process is complete.
      - - ``GET`` :ref:`/progress <c2c-api-progress>`
+
+Read Operations
+---------------
+
+Read operations on the source cluster are always permitted.
+
+``mongosync`` guarantees :term:`eventual consistent <eventual
+consistency>` on the destination cluster. You can read from
+the destination cluster during synching if your application supports 
+eventual consistency.
+
+When the ``/progress`` endpoint reports ``canWrite`` is ``true``, the
+source and destination clusters are consistent.
+
+Write Operations
+----------------
+
+.. include:: /includes/fact-write-blocking-when.rst
+
+.. include:: /includes/fact-write-blocking-check.rst
+
+.. include:: /includes/fact-write-blocking-enable.rst
+
+.. include:: /includes/fact-write-blocking-requirement.rst
+
