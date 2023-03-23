@@ -42,7 +42,9 @@ operations in that state.
      - Description
      - Possible API Operations
 
-   * - ``IDLE``
+   * - .. _c2c-state-idle:
+
+       ``IDLE``
      - ``mongosync`` is initialized and ready for a sync job to
        begin.
      - - ``POST`` :ref:`/start <c2c-api-start>`
@@ -62,7 +64,9 @@ operations in that state.
      - - ``POST`` :ref:`/resume <c2c-api-resume>`
        - ``GET`` :ref:`/progress <c2c-api-progress>`
 
-   * - ``COMMITTING``
+   * - .. _c2c-state-committing:
+   
+       ``COMMITTING``
      - The cutover for the sync process has started. The time it takes
        to transition to the ``COMMITTED`` phase depends on
        ``lagTimeSeconds``. To monitor ``lagTimeSeconds`` or to see if

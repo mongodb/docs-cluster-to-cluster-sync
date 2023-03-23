@@ -203,8 +203,18 @@ data on the destination.
 Write Blocking
 ~~~~~~~~~~~~~~
 
-By default, write-blocking is not enabled during synchronization. When
-write-blocking is enabled, ``mongosync`` blocks writes:
+By default, write-blocking is not enabled during synchronization. You
+can safely write to the source cluster while ``mongosync`` is syncing.
+
+You should not write to the destination cluster until the latter phase
+of the :ref:`COMMITTING <c2c-state-committing>` stage. The
+:ref:`c2c-api-progress` API endpoint returns a boolean value,
+``canWrite``. If you write to the destination cluster while ``canWrite``
+is false, ``mongosync`` exits.
+
+To avoid accidental writes on the destination cluster, enable
+write-blocking. When write-blocking is enabled, ``mongosync`` blocks
+writes:
 
 - On the destination cluster during replication
 - On the source cluster while committing
