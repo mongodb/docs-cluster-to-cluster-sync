@@ -98,6 +98,9 @@ Write Operations
 
 .. include:: /includes/fact-write-blocking-check.rst
 
+Write-blocking
+~~~~~~~~~~~~~~
+
 .. include:: /includes/fact-write-blocking-enable.rst
 
 .. include:: /includes/fact-write-blocking-requirement.rst
