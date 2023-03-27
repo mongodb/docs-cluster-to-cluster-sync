@@ -190,8 +190,8 @@ Filtering with mapReduce and $out
 ---------------------------------
 
 To use the :pipeline:`$out` aggregation stage or
-the :dbcommand:`mapReduce` command set to create
-or replace a collection with filtering, you must 
+the :dbcommand:`mapReduce` command (when set to create
+or replace a collection) with filtering, you must 
 filter the whole database and not just
 the specified collection.
 
