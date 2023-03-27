@@ -101,9 +101,6 @@ Write Operations
 Write-blocking
 ~~~~~~~~~~~~~~
 
-:ref:`Reverse synchronization <c2c-api-reverse>` requires
-write-blocking.
-
 .. include:: /includes/fact-write-blocking-enable.rst
 
 .. include:: /includes/fact-write-blocking-requirement.rst
