@@ -108,7 +108,7 @@ node. Use the source cluster's connection string to specify a
 :ref:`read preference <mongodb-uri>` for a non-arbiter, data-bearing
 node. 
 
-What If I see a Slow Operation Warning?
+What if I see a Slow Operation Warning?
 ---------------------------------------
 
 Slow operation warnings can occur during the initial sync or the application 
@@ -117,10 +117,10 @@ or a slow write operation on the destination cluster.  The warning may
 indicate network congestion or resource strain on the source or destination
 cluster.
 
-Though the warning itself is harmless, slow operations can cause operation
-timeout errors in ``mongosync`` and migration failures.
+While these warnings do not indicate failures in themselves, slow operations
+can cause operation timeout errors in ``mongosync`` and migration failures.
 
-Check CPU, memory, and network usage on the source and destination clusters, 
-if the servers are underprovisioned for your needs, consider upgrading to 
-better hardware. 
+If you see slow operation warnings, check CPU, memory, and network usage on the
+source and destination clusters.  If the clusters are underprovisioned for your
+needs, consider upgrading the cluster hardware.
 
