@@ -120,7 +120,6 @@ cluster.
 Though the warning itself is harmless, slow operations can cause operation
 timeout errors in ``mongosync`` and migration failures.
 
-Check CPU, memory, and network usage on both the source and destination clusters,
-if they are underprovisioned, consider upgrading the cluster to better hardware
-or increase the available bandwidth.
+Check CPU, memory, and network usage on the source and destination clusters, 
+if the servers are underprovisioned, consider upgrading to better hardware. 
 
