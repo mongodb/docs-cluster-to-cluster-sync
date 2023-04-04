@@ -118,7 +118,7 @@ indicate network congestion or resource strain on the source or destination
 cluster.
 
 Though the warning itself is harmless, slow operations can cause operation
-timeout errors in ``mongosync`` and more importantly, a migration failure.
+timeout errors in ``mongosync`` and migration failures.
 
 Check the source and destination cluster, if they are underprovisioned, consider
 upgrading the cluster to better hardware.
