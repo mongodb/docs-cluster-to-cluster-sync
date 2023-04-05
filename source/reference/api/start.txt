@@ -94,13 +94,13 @@ Request Body Parameters
    * - ``buildIndexes``
      - boolean
      - Optional
-     - Configures how ``mongosync`` handles index replication during sync.
+     - Configures index builds during sync.
 
        Supported Options:
 
-       * If set to ``beforeDataCopy`` (the default), existing indexes and
-         indexes created on the source cluster during migration are built
-         on the destination cluster.
+       * ``beforeDataCopy`` (the default) causes ``mongosync`` to build indexes
+         on the destination cluster.  These include both existing indexes and
+         any indexes created during migration on the source cluster.
 
        * ``never`` causes ``mongosync`` to skip building non-essential indexes
          during sync.
