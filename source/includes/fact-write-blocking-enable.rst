@@ -5,4 +5,4 @@ When write-blocking is enabled, ``mongosync`` blocks writes:
 
 To enable write-blocking, use the :ref:`start API <c2c-api-start>`
 to set ``enableUserWriteBlocking`` to ``true``. You cannot enable
-write-blocking the sync starts.
+write-blocking after the sync starts.
