@@ -20,9 +20,9 @@
 
    * - ``canWrite``
      - boolean
-     - If ``true``, indicates that it writes are permitted on the
-       destination cluster. ``mongosync`` exits if you write to the
-       destination cluster while ``canWrite`` is ``false``.
+     - If ``true``, indicates that writes are permitted on the
+       destination cluster. If you write to the destination cluster
+       while ``canWrite`` is ``false``, ``mongosync`` exits.
        
        Index validation continues until the :ref:`commit
        <c2c-api-commit>` is complete. 

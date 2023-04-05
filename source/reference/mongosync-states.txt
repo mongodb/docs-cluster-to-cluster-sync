@@ -85,7 +85,7 @@ Read operations on the source cluster are always permitted.
 
 ``mongosync`` guarantees :term:`eventual consistency <eventual
 consistency>` on the destination cluster. You can read from
-the destination cluster during synching if your application supports 
+the destination cluster during syncing if your application supports 
 eventual consistency.
 
 When the ``/progress`` endpoint reports ``canWrite`` is ``true``, the

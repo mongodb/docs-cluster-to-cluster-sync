@@ -205,22 +205,18 @@ data on the destination.
 Write Blocking
 ~~~~~~~~~~~~~~
 
-By default, write-blocking is not enabled during synchronization.
+.. include:: /includes/fact-write-blocking-enable.rst
+
+Write-blocking is not enabled by default. You must enable write-blocking
+when you start ``mongosync`` if you want to use :ref:`reverse
+synchronization <c2c-api-reverse>` later.
+
+.. include:: /includes/fact-write-blocking-requirement.rst
 
 .. include:: /includes/fact-write-blocking-when.rst
 
 .. include:: /includes/fact-write-blocking-check.rst
 
-.. include:: /includes/fact-write-blocking-enable.rst
-
-:ref:`Reverse synchronization <c2c-api-reverse>` requires
-write-blocking. To enable reverse synchronization between the source
-and destination clusters, use the ``start API`` to initiate replication
-with ``reversible`` and ``enableUserWriteBlocking`` set to ``true``.
-The options must be set when replication begins, they cannot be updated
-later.
-
-.. include:: /includes/fact-write-blocking-requirement.rst
 
 .. _c2c-capped-collections:
 
