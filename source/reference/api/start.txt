@@ -91,6 +91,25 @@ Request Body Parameters
      - Required
      - Name of the destination cluster.
 
+   * - ``buildIndexes``
+     - boolean
+     - Optional
+     - Configures how ``mongosync`` handles index replication during sync.
+
+       Supported Options:
+
+       * If set to ``beforeDataCopy`` (the default), existing indexes and
+         indexes created on the source cluster during migration are built
+         on the destination cluster.
+
+       * ``never`` causes ``mongosync`` to skip building non-essential indexes
+         during sync.
+
+       ``/start`` returns an error when ``buildIndexes`` is set to ``never``
+       and ``reversible`` is set to ``true``
+
+       .. versionadded:: 1.3.0
+
    * - ``enableUserWriteBlocking``
      - boolean
      - Optional
@@ -136,6 +155,8 @@ Request Body Parameters
        * Sync from a replica set to a sharded cluster
 
        * Sync sharded clusters that have different numbers of shards
+
+       * Reversible sync when ``buildIndexes`` is set to ``never``.
        
        For more information, see the :ref:`reverse <c2c-api-reverse>` endpoint.
        
@@ -144,7 +165,7 @@ Request Body Parameters
    * - ``sharding``
      - document
      - Optional
-     - Configure sync between a replica set and sharded cluster.
+     - Configures sync between a replica set and sharded cluster.
        Sync from a replica set to a sharded cluster requires this
        option.
 
