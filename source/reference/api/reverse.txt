@@ -41,7 +41,7 @@ To use the ``reverse`` endpoint:
   - ``reversible`` to ``true``
   - ``enableUserWriteBlocking`` to ``true``
   
-  The options cannot be updated after the sync starts.
+  You cannot update these options after the sync starts.
 - ``mongosync`` must be in the ``COMMITTED`` state.
 - Source and destination clusters must be MongoDB 6.0 or later.
 - :ref:`Unique indexes <index-type-unique>` on the original source
