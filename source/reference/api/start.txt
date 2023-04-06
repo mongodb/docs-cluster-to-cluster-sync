@@ -98,15 +98,15 @@ Request Body Parameters
 
        Supported Options:
 
-       * ``beforeDataCopy`` (the default) causes ``mongosync`` to build indexes
-         on the destination cluster.  These include both existing indexes and
+       - ``beforeDataCopy`` (the default) causes ``mongosync`` to build indexes
+         on the destination cluster. These include both existing indexes and
          any indexes created during migration on the source cluster.
 
-       * ``never`` causes ``mongosync`` to skip building non-essential indexes
+       - ``never`` causes ``mongosync`` to skip building unnecessary indexes
          during sync.
 
        ``/start`` returns an error when ``buildIndexes`` is set to ``never``
-       and ``reversible`` is set to ``true``
+       and ``reversible`` is set to ``true``.
 
        .. versionadded:: 1.3.0
 
