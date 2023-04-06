@@ -5,11 +5,11 @@ collections <manual-capped-collection>` with some limitations.
 - :dbcommand:`convertToCapped` is not supported. If you run
   ``convertToCapped``, ``mongosync`` exists with an error.
 - :dbcommand:`cloneCollectionAsCapped` is not supported. If you run
-  ``cloneCollectionAsCapped``, ``mongosync`` behavior is undefined.
+  ``cloneCollectionAsCapped``, the ``mongosync`` behavior is undefined.
 
 Capped collections on the source cluster work normally during sync.
 
-On the destination cluster capped collections have temporary changes
+Capped collections on the destination cluster have temporary changes
 during sync:
 
 - There is no maximum number of documents.
