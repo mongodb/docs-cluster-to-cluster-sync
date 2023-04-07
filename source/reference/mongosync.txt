@@ -65,6 +65,12 @@ Global Options
 
    For more information, see :ref:`c2c-mongosync-config`.
 
+.. option:: --disableTelemetry
+
+   .. include:: /includes/opts/disableTelemetry
+
+   To set the ``--disableTelemetry`` option from a configuration file,
+   see the :setting:`disableTelemetry` setting.
 
 .. option:: --help, -h
 
