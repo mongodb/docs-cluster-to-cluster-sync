@@ -21,8 +21,8 @@
    * - ``canWrite``
      - boolean
      - If ``true``, indicates that writes are permitted on the
-       destination cluster. If you write to the destination cluster
-       while ``canWrite`` is ``false``, ``mongosync`` exits.
+       destination cluster. Do not write to the destination cluster
+       while ``canWrite`` is ``false``.
        
        Index validation continues until the :ref:`commit
        <c2c-api-commit>` is complete. 
