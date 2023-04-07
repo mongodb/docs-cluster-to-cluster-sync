@@ -457,6 +457,7 @@ Indexes that are always built include:
   to ``true`` for a sharded cluster, ``mongosync`` builds an additional index
   that serves as the shard key on the destination cluster.
 
+
   If ``createSupportingIndexes`` is set to ``false``, ``mongosync`` returns an
   error.
 
