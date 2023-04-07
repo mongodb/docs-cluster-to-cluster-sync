@@ -3,9 +3,8 @@ collections <manual-capped-collection>` with some limitations.
 
 - The minimum server version is 6.0.
 - :dbcommand:`convertToCapped` is not supported. If you run
-  ``convertToCapped``, ``mongosync`` exists with an error.
-- :dbcommand:`cloneCollectionAsCapped` is not supported. If you run
-  ``cloneCollectionAsCapped``, the ``mongosync`` behavior is undefined.
+  ``convertToCapped``, ``mongosync`` exits with an error.
+- :dbcommand:`cloneCollectionAsCapped` is not supported.
 
 Capped collections on the source cluster work normally during sync.
 
