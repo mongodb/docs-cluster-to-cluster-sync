@@ -83,20 +83,15 @@ Read Operations
 
 Read operations on the source cluster are always permitted.
 
-``mongosync`` guarantees :term:`eventual consistency <eventual
-consistency>` on the destination cluster. You can read from
-the destination cluster during syncing if your application supports 
-eventual consistency.
-
 When the ``/progress`` endpoint reports ``canWrite`` is ``true``, the
-source and destination clusters are consistent.
+data on the source and destination clusters is consistent.
 
 Write Operations
 ----------------
 
-.. include:: /includes/fact-write-blocking-when.rst
-
 .. include:: /includes/fact-write-blocking-check.rst
+
+.. include:: /includes/fact-write-blocking-when.rst
 
 Write-blocking
 ~~~~~~~~~~~~~~

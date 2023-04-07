@@ -219,9 +219,9 @@ User Permissions
 Permissible Writes
 ``````````````````
 
-.. include:: /includes/fact-write-blocking-when.rst
-
 .. include:: /includes/fact-write-blocking-check.rst
+
+.. include:: /includes/fact-write-blocking-when.rst
 
 
 .. _c2c-capped-collections:
