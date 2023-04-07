@@ -448,13 +448,13 @@ Indexes that are always built include:
 * ``mongosync`` automatically builds an index for the ``_id`` field on every
   collection it syncs.
 
-* Starting in MongoDB 6.0, ``mongosync`` builds an index for the ``dummy``
-  shard key kindex on any sharded collection it syncs.  
+* Starting in MongoDB 6.0, ``mongosync`` builds indexes for the ``dummy``
+  shard key kindex on sharded collections.
   
   The index is built with the shard key and the ``_id`` field.
 
 * When syncing unlike topologies with the ``createSupportingIndexes`` option set
-  to ``true`` for a sharded cluster, ``mongosync`` builds an additional index
+  to ``true`` for a sharded cluster, ``mongosync`` builds additional indexes
   that serves as the shard key on the destination cluster.
 
 
