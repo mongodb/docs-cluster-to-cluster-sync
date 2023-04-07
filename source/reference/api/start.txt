@@ -102,11 +102,19 @@ Request Body Parameters
          on the destination cluster. These include both existing indexes and
          any indexes created during migration on the source cluster.
 
-       - ``never`` causes ``mongosync`` to skip building unnecessary indexes
-         during sync.
+       - ``never`` causes ``mongosync`` to skip building unnecessary indexes 
+         during sync.  
+
+         For more information on the indexes it does build, see 
+         :ref:`c2c-required-indexes`.
 
        ``/start`` returns an error when ``buildIndexes`` is set to ``never``
        and ``reversible`` is set to ``true``.
+
+       .. note::
+
+          If you call ``/start`` without specifying the ``buildIndexes`` option,
+          ``mongosync`` builds indexes on the destination cluster.
 
        .. versionadded:: 1.3.0
 
@@ -427,4 +435,33 @@ To check whether it is safe to rename collections, call the
   Renaming the collection from this point on does not block
   its sharding on the destination cluster, even in the event  of a crash.
 
+.. _c2c-required-indexes:
 
+Required Indexes
+~~~~~~~~~~~~~~~~
+
+When you call ``/start`` with the ``buildIndexes`` option set to ``never``,
+``mongosync`` skips building unnecessary indexes.  
+
+Indexes that are always built include:
+
+* ``mongosync`` automatically builds an index for the ``_id`` field on every
+  collection it syncs.
+
+* Starting in MongoDB 6.0, ``mongosync`` builds an index for the ``dummy``
+  shard key kindex on any sharded collection it syncs.  
+  
+  The index is built with the shard key and the ``_id`` field.
+
+* When syncing unlike topologies with the ``createSupportingIndexes`` option set
+  to ``true`` for a sharded cluster, ``mongosync`` builds an additional index
+  that serves as the shard key on the destination cluster.
+
+  If ``createSupportingIndexes`` is set to ``false``, ``mongosync`` returns an
+  error.
+
+  .. note:: 
+
+     For ``mongosync`` to sync a replica set to a sharded cluster with 
+     ``buildIndexes`` set to ``never``, the ``createSupportingIndexes`` option
+     must be set to ``true``.
