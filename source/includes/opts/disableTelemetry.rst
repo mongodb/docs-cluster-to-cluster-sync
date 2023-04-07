@@ -1,4 +1,4 @@
 
-Disables the collection and sharing of ``mongosync`` telemetry with MongoDB. 
+Disables the collection and sharing of ``mongosync`` telemetry data with MongoDB. 
 
 
