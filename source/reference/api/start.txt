@@ -456,7 +456,4 @@ Indexes that are always built include:
   shard key index on sharded collections, which is removed after commit.
   When ``buildIndexes`` is set to ``never``, ``mongosync`` retains this
   index after commit.
-
-  The index is built with the shard key and the ``_id`` field.
-
   
