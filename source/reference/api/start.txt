@@ -452,8 +452,7 @@ Indexes that are always built include:
 * ``mongosync`` automatically builds an index for the ``_id`` field on every
   collection it syncs.
 
-* Starting in MongoDB 6.0, ``mongosync`` builds indexes for a ``dummy``
-  shard key index on sharded collections, which is removed after commit.
+* Starting in MongoDB 6.0, ``mongosync`` builds dummy indexes that support the shard key for each sharded collection, which are removed after commit.
   When ``buildIndexes`` is set to ``never``, ``mongosync`` retains this
   index after commit.
   
