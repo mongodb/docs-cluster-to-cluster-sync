@@ -453,7 +453,7 @@ Indexes that are always built include:
   collection it syncs.
 
 * Starting in MongoDB 6.0, ``mongosync`` builds indexes for the ``dummy``
-  shard key kindex on sharded collections.
+  shard key index on sharded collections.
   
   The index is built with the shard key and the ``_id`` field.
 
