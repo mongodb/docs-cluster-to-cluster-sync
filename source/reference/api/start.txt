@@ -109,7 +109,8 @@ Request Body Parameters
          .. warning::
 
             Do **not** manually build indexes while ``mongosync`` is 
-            performing a migration.  Wait until the migration is complete.
+            performing a migration.  Wait until the migration is fully 
+            committed.
 
          For more information on the indexes it does build, see 
          :ref:`c2c-required-indexes`.
@@ -449,10 +450,12 @@ When you call ``/start`` with the ``buildIndexes`` option set to ``never``,
 
 Indexes that are always built include:
 
-* ``mongosync`` automatically builds an index for the ``_id`` field on every
-  collection it syncs.
+* ``mongosync`` builds an index on the ``_id`` field of every
+  collection it copies.
 
-* Starting in MongoDB 6.0, ``mongosync`` builds dummy indexes that support the shard key for each sharded collection, which are removed after commit.
+* Starting in MongoDB 6.0, ``mongosync`` builds dummy indexes that support 
+  the shard key for each sharded collection, which are removed after commit.
   When ``buildIndexes`` is set to ``never``, ``mongosync`` retains this
   index after commit.
+
   
