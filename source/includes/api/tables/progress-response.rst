@@ -80,4 +80,17 @@
      - string
      - If an error occurred, gives a detailed description of the error.
        This field is omitted when the call to the endpoint is successful
+   * - ``mongosyncID``
+     - string
+     - The identifier string for the ``mongosync`` instance.
+       To configure this value, see the :setting:`id` setting.
+
+   * - ``coordinatorID``
+     - string
+     - The identifier string for the coordinator instance.  To change this value,
+       see the :setting:`id` setting on the coordinator instance of ``mongosync``.
+
+       When the ``mongosync`` instance is the coordinator, this field returns
+       ``null``.
+
 
