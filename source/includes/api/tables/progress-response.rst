@@ -84,14 +84,17 @@
    * - ``mongosyncID``
      - string
      - The identifier string for the ``mongosync`` instance.
-       To configure this value, see the :setting:`id` setting.
 
    * - ``coordinatorID``
      - string
-     - The identifier string for the coordinator instance.  To change this value,
-       see the :setting:`id` setting on the coordinator instance of ``mongosync``.
+     - The identifier string for the coordinator instance.  
 
-       When the ``mongosync`` instance is the coordinator, this field returns
-       ``null``.
+       - When ``mongosync`` is coordinated by another instance, this field shows
+         the identifier string for the coordinator instance.
 
+       - When ``mongosync`` is a coordinator or runs alone, this field returns
+         the same value as its ``mongosyncID`` field.
+
+       - When ``mongosync`` starts up, this field returns ``null`` until
+         ``mongosync`` identifies the coordinator.
 
