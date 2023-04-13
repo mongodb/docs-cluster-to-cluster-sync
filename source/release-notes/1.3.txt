@@ -14,7 +14,7 @@ Release Notes for ``mongosync`` 1.3
 
 .. note::
 
-   ``mongosync`` 1.3 Released April 14, 2023
+   Upcoming.
 
 New Features
 -------------
