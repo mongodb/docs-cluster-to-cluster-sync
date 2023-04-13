@@ -45,5 +45,5 @@ helps determine whether the ``mongosync`` instance is serving as a coordinator.
 Bug Fixes
 ----------
 
-* Sync cluster collections on replica sets fail to copy all documents to the
+* Syncing clustered collections on replica sets fails to copy all documents to the
   destination cluster (:issue:`REP-1479`)
