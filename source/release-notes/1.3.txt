@@ -35,8 +35,8 @@ performance, especially with index heavy workloads.
 
 For more information, see :ref:`c2c-api-start`.
 
-Coordinator and Mongosync ID's
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Progress Output
+~~~~~~~~~~~~~~~
 
 Starting in 1.3.0, {+c2c-product-name+} includes the ``mongosyncID`` and
 ``coordinatorID`` in the :ref:`c2c-api-progress` response documents.  This
