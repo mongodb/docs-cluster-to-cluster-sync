@@ -78,6 +78,15 @@ Options
    To set the ``id`` setting from the command-line,
    see the :option:`--id` option.
 
+.. setting:: loadLevel
+
+   *Type*: integer
+
+   .. include:: /includes/opts/loadLevel.rst
+
+   To set the ``loadLevel`` setting from the command-line,
+   see the :option:`--loadLevel` option.
+
 .. setting:: logPath
 
    *Type*: string
