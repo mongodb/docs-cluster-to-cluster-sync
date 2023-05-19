@@ -81,7 +81,7 @@ Global Options
    .. include:: /includes/opts/loadLevel.rst
 
    To set the ``--loadLevel`` option from a configuration file, see the
-   :setting:`--loadLevel` setting.
+   :setting:`loadLevel` setting.
 
 .. option:: --logPath <DIR>
 
