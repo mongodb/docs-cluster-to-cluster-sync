@@ -19,12 +19,12 @@ Release Notes for ``mongosync`` 1.4
 New Features
 -------------
 
-Set Cluster Load Level
-~~~~~~~~~~~~~~~~~~~~~~
+Set Cluster Workload Level
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Starting in 1.4.0, {+c2c-product-name+} allows you to set the cluster
-workload level for data synchronization between the source and
-destination clusters. For more information, see the
+workload level and control the data synchronization speed between the
+source and destination clusters. For more information, see the
 :option:`--loadLevel` option.
 
 Minimum Supported Version
