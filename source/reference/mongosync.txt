@@ -78,6 +78,15 @@ Global Options
    To set the ``--id`` option from a configuration file,
    see the :setting:`id` setting.
 
+.. option:: loadLevel <level>
+
+   *Type*: integer
+
+   .. include:: /includes/opts/loadLevel.rst
+
+   To set the ``loadLevel`` setting from a configuration file, see the
+   :setting:`--loadLevel` setting.
+
 .. option:: --logPath <DIR>
 
    .. include:: /includes/opts/logPath.rst
