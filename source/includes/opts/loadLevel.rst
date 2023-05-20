@@ -3,9 +3,10 @@
 
 *Default*: ``3``
 
-Sets the cluster workload level and controls the data synchronization
-speed between the source and destination clusters.
+Sets the cluster workload level used for data synchronization between
+the source and destination clusters:
 
-The highest setting of ``4`` causes maximum cluster workload and the
-fastest data synchronization. The lowest setting of ``1`` causes minimum
-cluster workload and the slowest data synchronization.
+- ``4`` (highest setting) maximizes cluster workload and
+  synchronizes data the fastest.
+- ``1`` (lowest setting) minimizes cluster workload and
+  synchronizes data the slowest.
