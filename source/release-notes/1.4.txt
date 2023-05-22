@@ -30,4 +30,4 @@ destination clusters. For more information, see the
 Minimum Supported Version
 -------------------------
 
-Starting in 1.4.0, the minimum supported version of MongoDB is <<TBD>.
+In 1.4.0, the minimum supported version of MongoDB is 6.0.5.
