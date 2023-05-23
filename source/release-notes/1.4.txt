@@ -22,9 +22,10 @@ New Features
 Set Cluster Workload Level
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Starting in 1.4.0, {+c2c-product-name+} allows you to set the cluster
-workload level for syncing data between the source and destination
-clusters. For more information, see the :option:`--loadLevel` option.
+Starting in 1.4.0, you can set the workload level that
+{+c2c-product-name+} uses to sync data between the source and
+destination clusters. For more information, see the
+:option:`--loadLevel` option.
 
 Minimum Supported Version
 -------------------------
