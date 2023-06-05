@@ -1,8 +1,8 @@
 .. _c2c-telemetry:
 
-====================
-User Data Collection
-====================
+=========
+Telemetry
+=========
 
 .. default-domain:: mongodb
 
@@ -43,5 +43,5 @@ To disable telemetry when you start ``mongosync``, set
 
 - :setting:`disableTelemetry` in the :ref:`configuration file
   <c2c-config>`
-- :option:` --disableTelemetry` on the :ref:`command line
+- :option:`--disableTelemetry` on the :ref:`command line
   <c2c-mongosync>`
