@@ -27,7 +27,7 @@ The data ``mongosync`` tracks includes:
 - Initialization arguments.
 - The number of source and destination writes.
 - The estimated number of bytes ``mongosync`` copies.
-- The estimated number of events ``mongosync`` applies
+- The estimated number of events ``mongosync`` applies.
 
 ``mongosync`` does not track:
 
@@ -44,9 +44,11 @@ For more information, see MongoDB's `Privacy Policy
 Toggle Telemetry Collection
 ---------------------------
 
-To disable telemetry when you start ``mongosync``, set
+To disable telemetry when you start ``mongosync``, set one of the
+following:
 
 - :setting:`disableTelemetry` in the :ref:`configuration file
   <c2c-config>`
 - :option:`--disableTelemetry` on the :ref:`command line
   <c2c-mongosync>`
+
