@@ -65,6 +65,8 @@ Global Options
 
 .. option:: --disableTelemetry
 
+   .. versionadded:: 1.4.0
+
    .. include:: /includes/opts/disableTelemetry
 
    To set the ``--disableTelemetry`` option from a configuration file,

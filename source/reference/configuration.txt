@@ -72,6 +72,8 @@ Options
 
    *Type*: boolean
 
+   .. versionadded:: 1.4.0
+
    .. include:: /includes/opts/disableTelemetry
 
    To set the ``disableTelemetry`` setting from the command-line,
