@@ -1,0 +1,47 @@
+.. _c2c-telemetry:
+
+====================
+User Data Collection
+====================
+
+.. default-domain:: mongodb
+
+.. contents:: On this page
+   :local:
+   :backlinks: none
+   :depth: 2
+   :class: singlecol
+
+
+.. include:: /includes/opts/telemetry-statement.rst
+
+Data Collection
+---------------
+
+``mongosync`` tracks:
+
+- Performance statistics
+- Initialization information.
+- If ``mongosync`` is running in an Atlas Cluster.
+
+``mongosync`` does not track:
+
+- IP addresses
+- Hostnames
+- Usernames
+- Login credentials
+- Data stored in MongoDB deployments
+- Personally identifiable information (PII)
+
+For more information, see MongoDB's `Privacy Policy
+<https://www.mongodb.com/legal/privacy-policy?tck=docs_mongosh>`__.
+
+Toggle Telemetry Collection
+---------------------------
+
+To disable telemetry when you start ``mongosync``, set
+
+- :setting:`disableTelemetry` in the :ref:`configuration file
+  <c2c-config>`
+- :option:` --disableTelemetry` on the :ref:`command line
+  <c2c-mongosync>`

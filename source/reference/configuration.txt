@@ -68,6 +68,18 @@ Options
    To set the ``cluster1`` setting from the command-line,
    see the :option:`--cluster1` option.
 
+.. setting:: disableTelemetry
+
+   *Type*: boolean
+
+   .. include:: /includes/opts/disableTelemetry
+
+   To set the ``disableTelemetry`` setting from the command-line,
+   see the :option:`--disableTelemetry` option.
+
+   For more information see, :ref:`User Data Collection
+   <c2c-telemetry>`.
+
 .. setting:: id
 
    *Type*: string
