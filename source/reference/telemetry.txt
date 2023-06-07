@@ -35,6 +35,7 @@ The data ``mongosync`` tracks includes:
 - Hostnames
 - Usernames
 - Login credentials
+- Connection strings
 - Data stored in MongoDB deployments
 - Personally identifiable information (PII)
 
