@@ -72,7 +72,7 @@ Global Options
    To set the ``--disableTelemetry`` option from a configuration file,
    see the :setting:`disableTelemetry` setting.
 
-   For more information see, :ref:`User Data Collection
+   For more information, see :ref:`User Data Collection
    <c2c-telemetry>`.
 
 .. option:: --help, -h

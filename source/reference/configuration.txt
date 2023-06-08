@@ -79,7 +79,7 @@ Options
    To set the ``disableTelemetry`` setting from the command line,
    see the :option:`--disableTelemetry` option.
 
-   For more information see, :ref:`User Data Collection
+   For more information, see :ref:`User Data Collection
    <c2c-telemetry>`.
 
 .. setting:: id
