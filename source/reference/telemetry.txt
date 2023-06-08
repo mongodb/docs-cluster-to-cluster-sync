@@ -20,8 +20,8 @@ Data Collection
 
 The data ``mongosync`` reports includes:
 
-- State information, for example, when when ``mongosync`` starts, starts
-  committing, or passes through intermediate states
+- State information when ``mongosync`` starts, starts committing, or
+  passes through intermediate states
 - Information about the source and destination clusters and the hardware
   that hosts the ``mongosync`` instance
 - Initialization arguments
