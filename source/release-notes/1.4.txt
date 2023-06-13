@@ -64,8 +64,8 @@ Additional Considerations
 The MongoDB server's :dbcommand:`validate` command may report data
 corruption on destination clusters that run MongoDB version 6.0 through
 6.0.6. The data on the destination server is not corrupt. A bug in the
-:ref:`WiredTiger <storage-wiredtiger>` database engine, ``WT-11051``,
-causes the false report.
+:ref:`WiredTiger <storage-wiredtiger>` database engine,
+:issue:`WT-11051`, causes the false report.
 
 Minimum Supported Version
 -------------------------
