@@ -29,8 +29,7 @@ Improved Resiliency
 ~~~~~~~~~~~~~~~~~~~
 
 ``mongosync`` 1.4.0 improves :term:`oplog` handling. The ``oplog``
-handling improvement adds resiliency to migrations and reduces the time
-to complete large migrations.
+handling improvement adds resiliency to long running migrations.
 
 Faster Processing for Sharded Clusters
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -48,19 +47,16 @@ data to improve MongoDB products. You can disable collection of this
 Bug Fixes
 ----------
 
-- ``REP-2148`` Fixes an issue so documents with ``_id`` values that
-  evaluate to the same string replicate correctly.
+- Fixes an issue so documents with ``_id`` values that evaluate to the
+  same string replicate correctly.
 
-- ``REP-2411`` Fixes a collection naming issue. Prior to version 1.4.0,
-  ``mongosync`` crashes when a new collection reuses a dropped
-  collection's name with letter case changes.
+- Fixes a collection naming issue. Prior to version 1.4.0, ``mongosync``
+  crashes when a new collection reuses a dropped collection's name with
+  letter case changes.
   
   For example, previous versions of ``mongosync`` crash if a new
   ``SampleName`` collection replaces the dropped ``samplename``
   collection.
-  
-- ``REP-2378`` Fixes an issue caused by a server update,
-  ``BACKPORT-15099``.
 
 Additional Considerations
 -------------------------
