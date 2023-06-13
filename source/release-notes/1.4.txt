@@ -12,9 +12,7 @@ Release Notes for ``mongosync`` 1.4
    :depth: 2
    :class: singlecol
 
-.. note::
-
-   ``mongosync`` 1.4 Released <<TBD>>, 2023
+**Version 1.4 released June 16, 2023**
 
 New Features
 -------------
@@ -27,7 +25,54 @@ Starting in 1.4.0, you can set the workload level that
 destination clusters. For more information, see the
 :option:`--loadLevel` option.
 
+Improved Resiliency
+~~~~~~~~~~~~~~~~~~~
+
+``mongosync`` 1.4.0 improves :term:`oplog` handling. The ``oplog``
+handling improvement adds resiliency to migrations and reduces the time
+to complete large migrations.
+
+Faster Processing for Sharded Clusters
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Version 1.4.0 improves performance for replica sets and single-shard
+clusters. Multi-shard clusters have even better speed improvements.
+
+Telemetry
+~~~~~~~~~
+
+Starting in 1.4.0, ``mongosync`` collects anonymous, aggregated usage
+data to improve MongoDB products. You can disable collection of this
+:ref:`telemetry <c2c-telemetry>` data when you start ``mongosync``.
+
+Bug Fixes
+----------
+
+- ``REP-2148`` Fixes an issue so documents with ``_id`` values that
+  evaluate to the same string replicate correctly.
+
+- ``REP-2411`` Fixes a collection naming issue. Prior to version 1.4.0,
+  ``mongosync`` crashes when a new collection reuses a dropped
+  collection's name with letter case changes.
+  
+  For example, previous versions of ``mongosync`` crash if a new
+  ``SampleName`` collection replaces the dropped ``samplename``
+  collection.
+  
+- ``REP-2378`` Fixes an issue caused by a server update,
+  ``BACKPORT-15099``.
+
+Additional Considerations
+-------------------------
+
+The MongoDB server's :dbcommand:`validate` command may report data
+corruption on destination clusters that run MongoDB version 6.0 through
+6.0.6. The data on the destination server is not corrupt. A bug in the
+:ref:`WiredTiger <storage-wiredtiger>` database engine, ``WT-11051``,
+causes the false report.
+
 Minimum Supported Version
 -------------------------
 
 In 1.4.0, the minimum supported version of MongoDB is 6.0.5.
+
