@@ -31,11 +31,11 @@ Improved Resiliency
 ``mongosync`` 1.4.0 improves :term:`oplog` handling. The ``oplog``
 handling improvement adds resiliency to long running migrations.
 
-Faster Processing for Sharded Clusters
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Faster Processing
+~~~~~~~~~~~~~~~~~
 
-Version 1.4.0 improves performance for replica sets and single-shard
-clusters. Multi-shard clusters have even better speed improvements.
+Version 1.4.0 improves ``change event application`` speeds for improved
+performance.
 
 Improved Memory Handling
 ~~~~~~~~~~~~~~~~~~~~~~~~
