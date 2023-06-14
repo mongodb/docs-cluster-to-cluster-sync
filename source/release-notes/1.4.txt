@@ -37,6 +37,13 @@ Faster Processing for Sharded Clusters
 Version 1.4.0 improves performance for replica sets and single-shard
 clusters. Multi-shard clusters have even better speed improvements.
 
+Improved Memory Handling
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+In version 1.4.0, ``mongosync`` uses less memory to buffer change
+events. Improved memory handling alleviates some out-of-memory (OOM)
+issues.
+
 Telemetry
 ~~~~~~~~~
 
