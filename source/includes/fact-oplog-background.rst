@@ -1,15 +1,14 @@
 
-
-Removing older operations from the oplog of the source cluster   
-before ``mongosync`` applies them to the destination cluster
-causes the migration to fail and ``mongosync`` to exit.
+``mongosync`` applies operations in the ``oplog`` to the data on the
+destination cluster.  When older operations roll off the ``oplog``
+on the source cluster, the sync fails and ``mongosync`` exits.
 
 During initial sync, ``mongosync`` may apply operations at a slower
-rate. Once ``mongosync`` completes its initial sync, it applies changes to
-faster to catch up with the source cluster.
+rate. After ``mongosync`` completes the initial sync, it applies changes 
+faster and stays more current in the source cluster ``oplog``.
 
-If you expect the ``mongosync`` replication lag to become larger
-than the :term:`oplog window` or if you plan to pause sync for an
-extended period of time, use the :setting:`~replication.oplogSizeMB`
-to increase the size of the oplog on the source cluster.
+If you anticipate syncing a large data set, or if you plan to pause
+synchronization for an extended period of time, you might exceed the
+:term:oplog window. Use the :setting:~replication.oplogSizeMB setting
+to increase the size of the ``oplog`` on the source cluster.
 
