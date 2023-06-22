@@ -12,7 +12,9 @@ Release Notes for ``mongosync`` 1.4
    :depth: 2
    :class: singlecol
 
-**Version 1.4 Released June 21, 2023**
+**Version 1.4.1 Released June 23, 2023**
+
+**Version 1.4.0 Released June 21, 2023**
 
 New Features
 -------------
@@ -58,6 +60,9 @@ Bug Fixes
   For example, previous versions of ``mongosync`` crash if a new
   ``SampleName`` collection replaces the dropped ``samplename``
   collection.
+
+- Version 1.4.1: Fixes a build misconfiguration so that Segment telemetry is
+  sent correctly.
 
 Additional Considerations
 -------------------------
