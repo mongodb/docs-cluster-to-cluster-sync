@@ -27,11 +27,8 @@ Issues fixed:
 
 .. _1.4.0-c2c-release-notes:
 
-**Version 1.4.0 released June 21, 2023**
-
-
-New Features
--------------
+Version 1.4.0 released June 21, 2023
+------------------------------------
 
 Set Cluster Workload Level
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
