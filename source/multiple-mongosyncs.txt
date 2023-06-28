@@ -18,6 +18,8 @@ There are two ways to synchronize :ref:`sharded clusters
 loaded clusters, use multiple ``monogosync`` instances, one
 ``monogosync`` for each shard in the cluster.
 
+.. include:: /includes/sharding-warning
+
 .. _c2c-sharded-config-single:
 
 Configure a Single ``mongosync`` Instance
@@ -56,6 +58,16 @@ To configure multiple ``mongosync`` instances:
       different numbers of shards. However, if you want to reverse the
       sync, the source cluster and destination cluster must have the
       same number of shards.
+
+   .. step:: Stop the Balancer on the Destination
+
+      To stop the balancer on the destinaiton cluster, connect to the
+      destination cluster and call the :method:`sh.stopBalancer` method:
+
+      .. code-block:: javascript
+
+         sh.stopBalancer()
+
 
    .. step:: Determine the shard IDs
 
