@@ -61,7 +61,7 @@ To configure multiple ``mongosync`` instances:
 
    .. step:: Stop the Balancer on the Destination
 
-      To stop the balancer on the destinaiton cluster, connect to the
+      To stop the balancer on the destination cluster, connect to the
       destination cluster and call the :method:`sh.stopBalancer` method:
 
       .. code-block:: javascript
