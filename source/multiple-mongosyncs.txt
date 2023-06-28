@@ -273,6 +273,15 @@ These commands only check progress and commit synchronization for the
 to ``progress`` and  ``commit`` on any other ``mongosync`` instances
 that may be running.
 
+Once this is done, use :method:`sh.startBalancer` to restart the balancer 
+on the destination cluster:
+
+.. code-block:: javascript
+
+   sh.startBalancer()
+
+
+
 .. _c2c-sharded-reverse:
 
 Reverse the Synchronization Direction
