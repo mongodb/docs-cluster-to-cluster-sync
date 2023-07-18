@@ -20,3 +20,8 @@ Release Notes for ``mongosync`` 1.5
 
 **Upcoming**
 
+Oplog Rollover Resilience
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. include:: /includes/fact-oplog-background
+
