@@ -59,7 +59,7 @@ Monitor ``oplog`` Size Needed for Initial Sync
       - Increase the ``oplog`` window. Use :dbcommand:`replSetResizeOplog`
         to set ``minRetentionHours`` greater than the current ``oplog`` 
         window.
-      - Scale up the ``mongosync`` instance. Add cpu or memory to scale
+      - Scale up the ``mongosync`` instance. Add CPU or memory to scale
         up the ``mongosync`` node so that it has a higher copy rate.
 
 .. note::

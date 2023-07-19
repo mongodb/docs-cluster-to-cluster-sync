@@ -42,7 +42,7 @@ Bug Fixes
   as mismatched.
 
 - Fixes issue where the :ref:`/start <api-start>` endpoint would not return
-  an error when passed a ``sharding`` object wtihout the ``shardingEntries``
+  an error when passed a ``sharding`` object without the ``shardingEntries``
   key.
 
 - Changes telemetry to send less metadata to Segment.
