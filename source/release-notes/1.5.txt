@@ -46,3 +46,8 @@ Bug Fixes
   key.
 
 - Changes telemetry to send less metadata to Segment.
+
+Minimum Supported Version
+-------------------------
+
+In 1.5.0, the minimum supported version of MongoDB is 6.0.5.
