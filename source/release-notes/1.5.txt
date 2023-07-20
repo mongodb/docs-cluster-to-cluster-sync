@@ -1,7 +1,7 @@
 .. _c2c-release-notes-1.5:
 
 ===================================
-Release Notes for ``mongosync`` 1.5
+Release Notes for mongosync 1.5
 ===================================
 
 
@@ -35,13 +35,13 @@ the logging level, see the :setting:`verbosity` setting.
 Bug Fixes
 ---------
 
-- Fixes issue where very large collections could timeout during 
+- Fixes an issue where very large collections could timeout during 
   ``mongosync`` initialization. 
 
-- Fixes issue where ``mongosync`` could incorrectly report indexes 
+- Fixes an issue where ``mongosync`` could incorrectly report indexes 
   as mismatched.
 
-- Fixes issue where the :ref:`/start <api-start>` endpoint would not return
+- Fixes an issue where the :ref:`/start <api-start>` endpoint would not return
   an error when passed a ``sharding`` object without the ``shardingEntries``
   key.
 

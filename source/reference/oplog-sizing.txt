@@ -1,7 +1,7 @@
 .. _c2c-oplog-sizing:
 
 ================
-``oplog`` Sizing
+oplog Sizing
 ================
 
 .. default-domain:: mongodb
@@ -21,7 +21,7 @@ be within the ``oplog`` time range.
 
 .. include:: /includes/fact-oplog-background
 
-Monitor ``oplog`` Size Needed for Initial Sync
+Monitor oplog Size Needed for Initial Sync
 -----------------------------------------------
 
 .. procedure::
@@ -49,12 +49,12 @@ Monitor ``oplog`` Size Needed for Initial Sync
       last event applied by ``mongosync`` and time of the current
       latest event on the source cluster.
 
-      It is a measure of how far behind the source cluster mongosync is.
+      It is a measure of how far behind the source cluster ``mongosync`` is.
 
    .. step:: Validate ``oplog`` Size
 
-      If the lag time approaches the minimum ``oplog`` window, you
-      should make one of the following changes:
+      If the lag time approaches the minimum ``oplog`` window, make 
+      one of the following changes:
 
       - Increase the ``oplog`` window. Use :dbcommand:`replSetResizeOplog`
         to set ``minRetentionHours`` greater than the current ``oplog`` 
@@ -64,7 +64,7 @@ Monitor ``oplog`` Size Needed for Initial Sync
 
 .. note::
 
-   The ``oplog`` window and rate of change of replication lag may vary during 
-   synchronization. Repeat these steps during a migration to monitor the 
+   The :term:`oplog` window and rate of change for replication lag may vary 
+   during synchronization. Repeat these steps during a migration to monitor the 
    progress.
 
