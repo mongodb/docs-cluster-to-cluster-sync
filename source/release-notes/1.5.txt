@@ -41,7 +41,7 @@ Bug Fixes
 - Fixes an issue where ``mongosync`` could incorrectly report indexes 
   as mismatched.
 
-- Fixes an issue where the :ref:`/start <api-start>` endpoint would not return
+- Fixes an issue where the :ref:`/start <c2c-api-start>` endpoint would not return
   an error when passed a ``sharding`` object without the ``shardingEntries``
   key.
 
