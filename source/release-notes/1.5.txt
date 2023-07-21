@@ -50,4 +50,4 @@ Bug Fixes
 Minimum Supported Version
 -------------------------
 
-In 1.5, the minimum supported version of MongoDB is 6.0.5.
+In 1.5, the minimum supported version of MongoDB is 6.0.8.

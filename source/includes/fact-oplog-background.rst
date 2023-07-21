@@ -4,7 +4,7 @@ to the data on the destination cluster.  When operations
 that ``mongosync`` has not applied roll off the ``oplog`` 
 on the source cluster, the sync fails and ``mongosync`` exits.
 
-During the initial sync, ``mongosync`` may not apply operations at a slower
+During the initial sync, ``mongosync`` may apply operations at a slower
 rate. After ``mongosync`` completes the initial sync, it applies changes 
 faster and stays more current in the source cluster ``oplog``.
 
