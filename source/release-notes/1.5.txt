@@ -18,7 +18,7 @@ Release Notes for mongosync 1.5
 1.5.0 Release
 -------------
 
-**Upcoming**
+**July 25, 2023**
 
 Oplog Rollover Resiliency
 ~~~~~~~~~~~~~~~~~~~~~~~~~
