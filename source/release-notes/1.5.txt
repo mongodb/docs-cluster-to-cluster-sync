@@ -20,8 +20,15 @@ Release Notes for mongosync 1.5
 
 **Upcoming**
 
-Oplog Rollover Resilience
+Oplog Rollover Resiliency
 ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Starting in 1.5, ``mongosync`` begins to apply changes while the
+initial sync is still in progress. By starting to apply changes earlier,
+``mongosync`` maintains a more recent position in the :term:`oplog`.
+This adds resiliency to long running operation, mitigates the risk
+of ``oplog`` rollover, and significantly lowers the risk of restarting
+the sync.
 
 Logging Level
 ~~~~~~~~~~~~~
