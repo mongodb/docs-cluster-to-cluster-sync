@@ -23,7 +23,7 @@ Release Notes for mongosync 1.5
 Oplog Rollover Resiliency
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Starting in 1.5, ``mongosync`` begins to apply changes while the
+Starting in 1.5.0, ``mongosync`` begins to apply changes while the
 initial sync is still in progress. By starting to apply changes earlier,
 ``mongosync`` maintains a more recent position in the :term:`oplog`.
 This adds resiliency to long running operation, mitigates the risk
@@ -33,7 +33,7 @@ the sync.
 Logging Level
 ~~~~~~~~~~~~~
 
-Starting in 1.5, the default logging level is ``DEBUG``.  To change
+Starting in 1.5.0, the default logging level is ``DEBUG``.  To change
 the logging level, see the :setting:`verbosity` setting.
 
 
