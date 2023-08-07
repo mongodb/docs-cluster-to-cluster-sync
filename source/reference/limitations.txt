@@ -114,7 +114,8 @@ Sharded Clusters
 - The maximum number of :ref:`shard key indexes
   <sharding-shard-key-indexes>` is one lower than normal, 63 instead of
   64.
--  .. include:: /includes/limitations/default-collation.rst
+- ``mongosync`` only supports sharded collections with default
+  :ref:`collation <collation>` settings. 
 
 Reversing
 ---------
