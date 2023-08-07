@@ -1,3 +1,3 @@
-``mongosync`` does not support sharded collections with non-default
-:ref:`collation <collation>`.
+``mongosync`` only supports sharded collections with default
+:ref:`collation <collation>` settings.
 
