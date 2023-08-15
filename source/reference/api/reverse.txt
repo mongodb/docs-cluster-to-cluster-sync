@@ -91,6 +91,9 @@ Response
 Behavior
 --------
 
+Final State
+~~~~~~~~~~~
+
 If the ``reverse`` request is successful, ``mongosync`` enters the
 ``RUNNING`` state. The synchronization continues in the reverse
 direction from the original sync job. You do not need to restart the
@@ -99,3 +102,16 @@ entire sync process to copy the original data.
 To view the mapping direction for the synchronization of the source and
 destination clusters, use the :ref:`progress <c2c-api-progress>`
 endpoint and check the ``directionMapping`` object.
+
+Unique Indexes
+~~~~~~~~~~~~~~
+
+In order to reverse direction, ``mongosync`` requires that all
+:ref:`unique <index-type-unique>` indexes use the formatting. 
+Clusters of servers that began using MongoDB 4.2 or older and were since
+upgraded may include unique indexes that are not properly formatted.
+
+To ensure that ``mongosync`` can reverse sync on databases in these clusters,
+use the :method:`db.collection.validate` method on each collection.
+
+
