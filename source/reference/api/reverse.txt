@@ -111,7 +111,7 @@ Validate Unique Indexes
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 In order to reverse direction, ``mongosync`` requires that all
-:ref:`unique <index-type-unique>` indexes use the formatting. 
+:ref:`unique <index-type-unique>` indexes use the correct formatting. 
 Clusters of servers that began using MongoDB 4.2 or older and were since
 upgraded may include unique indexes that are not properly formatted.
 
