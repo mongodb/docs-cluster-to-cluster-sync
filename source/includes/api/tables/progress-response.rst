@@ -1,7 +1,7 @@
 .. list-table::
    :header-rows: 1
    :stub-columns: 1
-   :widths: 20 20 60
+   :widths: 20 25 55
 
    * - Field
      - Type
