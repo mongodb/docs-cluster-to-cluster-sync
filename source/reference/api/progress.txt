@@ -28,10 +28,17 @@ Request
 Response
 --------
 
-All response fields are wrapped in a top-level ``progress`` object. The
-endpoint returns either an updated status or an error.
+The ``progress`` endpoint returns etiher an updated status or an error.
+
+On a successful return, all response fields are wrapped in a top-level
+``progress`` object with the following fields:
 
 .. include:: /includes/api/tables/progress-response.rst
+
+If ``mongosync`` encounters an error, the ``progress`` endpoint instead
+returns an ``error`` object with the following field:
+
+.. include:: /includes/api/tables/progress-error-response.rst
 
 Behavior
 --------
