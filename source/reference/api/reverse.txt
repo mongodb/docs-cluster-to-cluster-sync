@@ -49,6 +49,8 @@ To use the ``reverse`` endpoint:
   indexes that were created in MongoDB 4.2 or earlier, you must
   :ref:`resync <resync-replica-member>` all of the nodes in the
   original source cluster before reversing.
+
+  For more information, see :ref:`c2c-validate-unique-index`.
 - .. include:: /includes/fact-reverse-limitation.rst
 - .. include:: /includes/fact-permissions-body.rst
 
@@ -103,8 +105,10 @@ To view the mapping direction for the synchronization of the source and
 destination clusters, use the :ref:`progress <c2c-api-progress>`
 endpoint and check the ``directionMapping`` object.
 
-Unique Indexes
-~~~~~~~~~~~~~~
+.. _c2c-validate-unique-index:
+
+Validate Unique Indexes
+~~~~~~~~~~~~~~~~~~~~~~~
 
 In order to reverse direction, ``mongosync`` requires that all
 :ref:`unique <index-type-unique>` indexes use the formatting. 
@@ -114,4 +118,11 @@ upgraded may include unique indexes that are not properly formatted.
 To ensure that ``mongosync`` can reverse sync on databases in these clusters,
 use the :method:`db.collection.validate` method on each collection.
 
+.. code-block:: javascript
+
+   db.names.validate()
+
+If the method returns a warning about the unique index, you must
+:ref:`resync <resync-replica-member>` all of the nodes in the
+original source cluster before reversing.
 
