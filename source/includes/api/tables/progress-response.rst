@@ -1,7 +1,7 @@
 .. list-table::
    :header-rows: 1
    :stub-columns: 1
-   :widths: 20 25 55
+   :widths: 20 20 60
 
    * - Field
      - Type
@@ -47,11 +47,13 @@
      - Describes the total amount of data being copied and the
        amount that has already been copied to the destination cluster.
 
-   * - ``collectionCopy.estimatedTotalBytes``
+   * - ``collectionCopy``
+       ``.estimatedTotalBytes``
      - integer
      - Estimated total number of bytes to be copied.
 
-   * - ``collectionCopy.estimatedCopiedBytes``
+   * - ``collectionCopy``
+       ``.estimatedCopiedBytes``
      - integer
      - Estimated number of bytes which have been copied to the
        destination cluster.
@@ -61,12 +63,14 @@
      - Describes the mapping direction for the synchronization, namely
        the source and destination clusters.
 
-   * - ``directionMapping.Source``
+   * - ``directionMapping``
+       ``.Source``
      - string
      - Source cluster. Returned in the form
        ``<cluster name>: <host>:<port>``.
 
-   * - ``directionMapping.Destination``
+   * - ``directionMapping``
+       ``.Destination``
      - string
      - Destination cluster. Returned in the form
        ``<cluster name>: <host>:<port>``.
