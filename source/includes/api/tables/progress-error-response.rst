@@ -1,5 +1,7 @@
 
 .. list-table::
+   :header-rows: 1
+   :widths: 20 20 60
 
    * - ``errorDescription``
      - string
