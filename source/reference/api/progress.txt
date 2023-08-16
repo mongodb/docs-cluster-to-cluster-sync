@@ -44,6 +44,7 @@ Error Response
 If ``mongosync`` encounters an error, the ``progress`` endpoint instead
 returns an ``error`` object with the following field:
 
+.. include:: /includes/api/tables/progress-error-response.rst
 
 Behavior
 --------
