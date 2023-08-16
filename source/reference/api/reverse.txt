@@ -93,9 +93,6 @@ Response
 Behavior
 --------
 
-Final State
-~~~~~~~~~~~
-
 If the ``reverse`` request is successful, ``mongosync`` enters the
 ``RUNNING`` state. The synchronization continues in the reverse
 direction from the original sync job. You do not need to restart the
@@ -120,7 +117,7 @@ use the :method:`db.collection.validate` method on each collection.
 
 .. code-block:: javascript
 
-   db.names.validate()
+   db.<collection>.validate()
 
 If the method returns a warning about the unique index, you must
 :ref:`resync <resync-replica-member>` all of the nodes in the
