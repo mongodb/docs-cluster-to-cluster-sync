@@ -21,7 +21,6 @@ This page provides instructions to connect self-managed clusters using
 Connection Strings
 ------------------
 
-.. include:: /includes/fact-onprem-connection
 .. include:: /includes/fact-connection-strings
 
 Authentication
