@@ -44,9 +44,9 @@ To use the ``reverse`` endpoint:
   You cannot update these options after the sync starts.
 - ``mongosync`` must be in the ``COMMITTED`` state.
 - Source and destination clusters must be MongoDB 6.0 or later.
-- :ref:`index-type-unique` requires proper formatting.
-
-  For more information, see :ref:`c2c-validate-unique-index`.
+- :ref:`index-type-unique` requires proper formatting.  To validate
+  that collection indexes use the proper formatting, see
+  :ref:`c2c-validate-unique-index`.
 - .. include:: /includes/fact-reverse-limitation.rst
 - .. include:: /includes/fact-permissions-body.rst
 
