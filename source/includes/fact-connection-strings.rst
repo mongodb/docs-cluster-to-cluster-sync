@@ -7,6 +7,8 @@ connection string <mongodb-uri>` to connect clusters:
 
      mongodb+srv://[username:password@][host.domain.TLD][:port][/defaultauthdb][?options]
 
+  |atlas-callout|
+
 - The standard URI connection scheme has the form:
 
   .. code-block:: none
