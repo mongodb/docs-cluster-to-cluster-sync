@@ -4,6 +4,7 @@ connection string <mongodb-uri>` to connect clusters.
 - The SRV conenction scheme has the form:
 
   .. code-block:: none
+
      mongodb+srv://[username:password@][host.domain.TLD][:port][/defaultauthdb][?options]
 
 - The standard URI connection scheme has the form:
