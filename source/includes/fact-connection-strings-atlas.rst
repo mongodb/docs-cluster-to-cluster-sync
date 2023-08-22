@@ -8,7 +8,8 @@ connection string <mongodb-uri>` to connect clusters:
      mongodb+srv://[username:password@][host.domain.TLD][:port][/defaultauthdb][?options]
 
   For information on how to find your SRV connection
-  string in Atlas, see :atlas:`/tutorial/connect-to-your-cluster`.
+  string in Atlas, see :atlas:`Connect to Your Cluster 
+  </tutorial/connect-to-your-cluster>`.
 
 - The standard URI connection scheme has the form:
 
