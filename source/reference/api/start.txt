@@ -18,6 +18,9 @@ Description
 
 Starts the synchronization between a source and destination cluster.
 
+.. |endpoint| replace:: ``/start``
+.. include:: /includes/fact-api-endpoint
+
 Requirements
 ------------
 
