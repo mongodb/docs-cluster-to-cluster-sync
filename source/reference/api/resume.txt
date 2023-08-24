@@ -19,6 +19,9 @@ Description
 Resumes a paused synchronization session based on data stored on the
 destination cluster.
 
+.. |endpoint| replace:: ``resume``
+.. include:: /includes/fact-api-endpoint
+
 Requirement
 -----------
 

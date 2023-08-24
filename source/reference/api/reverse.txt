@@ -30,6 +30,9 @@ For example:
 In this scenario, you can use the ``reverse`` endpoint to sync writes
 from ``cluster1`` to ``cluster0``.
 
+.. |endpoint| replace:: ``reverse``
+.. include:: /includes/fact-api-endpoint
+
 Requirements
 ------------
 

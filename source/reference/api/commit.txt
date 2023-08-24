@@ -49,6 +49,9 @@ characteristics that ``mongosync`` alters during the synchronization process.
        which ``mongosync`` set to the maximum allowable size on the
        destination cluster.
 
+.. |endpoint| replace:: ``commit``
+.. include:: /includes/fact-api-endpoint
+
 Requirements
 ------------
 

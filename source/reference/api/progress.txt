@@ -17,6 +17,9 @@ Description
 
 Returns either an updated status of the synchronization process or an error.
 
+.. |endpoint| replace:: ``start``
+.. include:: /includes/fact-api-endpoint
+
 Request
 -------
 
