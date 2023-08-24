@@ -18,6 +18,9 @@ Description
 
 Pauses the current synchronization operation. 
 
+.. |endpoint| replace:: ``pause``
+.. include:: /includes/fact-api-endpoint
+
 Requirement
 -----------
 
