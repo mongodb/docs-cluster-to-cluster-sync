@@ -137,10 +137,7 @@ Request Body Parameters
    * - ``includeNamespaces``
      - array
      - Optional
-     - Filters the databases or collections to include in sync. The filter 
-       syntax is:
-
-       .. include:: /includes/api/facts/namespaces-syntax.rst
+     - Filters the databases or collections to include in sync. 
 
        .. versionadded:: 1.1
 
@@ -149,10 +146,7 @@ Request Body Parameters
    * - ``excludeNamespaces``
      - array
      - Optional
-     - Filters the databases or collections to exclude from sync.  The filter
-       synctax is:
-
-       .. include:: /includes/api/facts/namespaces-syntax.rst
+     - Filters the databases or collections to exclude from sync.
 
        .. versionadded:: 1.6
 
