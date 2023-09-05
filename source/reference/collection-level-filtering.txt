@@ -50,7 +50,7 @@ Configure a Filter
 
       The filter syntax is: 
 
-      .. include:: /includes/api/facts/includeNamespaces-syntax.rst
+      .. include:: /includes/api/facts/namespaces-syntax.rst
 
       Create an entry in the ``includeNamespaces`` array for each
       database that you identified in step 1. Use the ``"database"``
