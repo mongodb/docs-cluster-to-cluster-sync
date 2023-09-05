@@ -17,6 +17,19 @@ Filtered Sync
 
 .. include:: /includes/api/facts/filtering-intro.rst
 
+.. versionchanged:: 1.6
+
+Starting in 1.6, ``mongosync`` supports both inclusion and exclusion filters. 
+
+* If only inclusion filters are present, ``mongosync`` syncs all matching
+  databases and collections.
+* If only exclusion filters are present, ``mongosync`` syncs all databases
+  and collections, except those matching the filters.
+* If both inclusion and exclusion filters are present, ``mongosync`` only syncs
+  databases and collections that match the inclusion filter and ignores the
+  exclusion filters.
+* If no filters are present, ``mongosync`` syncs all databases and collections.
+
 .. _c2c-filter-syntax:
 
 Filter Syntax
@@ -47,27 +60,10 @@ Filters have the following syntax:
    }
 
 Filters must include either the ``database`` field or the ``databaseRegex`` field.
-For example, 
+If the ``collections`` or ``collectionRegex`` fields are absent, ``mongosync``
+includes or excludes all collections from matching databases. 
 
-.. code-block:: json
 
-   {
-      "source": "cluster0",
-      "destination": "cluster1",
-      "includeNamespaces" : [
-         {
-             "database" : "sales",
-             "collectionsRegex": "^accounts_*"
-         },
-         {
-             "database" : "marketing"
-         }
-      ]
-   } 
-
-Sending this configuration to the :ref:`c2c-api-start` endpoint would configure
-``mongosync`` to sync the ``marketing`` database as well as all collections in
-the ``sales`` database with names that begin with ``accounts_``.
 
 .. _c2c-configure-filter:
 
