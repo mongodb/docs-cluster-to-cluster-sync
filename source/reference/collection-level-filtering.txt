@@ -17,6 +17,58 @@ Filtered Sync
 
 .. include:: /includes/api/facts/filtering-intro.rst
 
+.. _c2c-filter-syntax:
+
+Filter Syntax
+-------------
+
+The :ref:`c2c-api-start` API endpoint accepts two fields that configure 
+filtered sync: ``includeNamespaces`` and ``excludeNamespaces``.
+Each field takes an array of filters that specify the databases and collections 
+to include or exclude from sync.
+
+Filters have the following syntax:
+
+.. code-block:: json
+
+   {
+      "database": "<database-name>",
+      "collections": [
+         "<collection-name>"
+      ]
+      "databaseRegex": {
+         "pattern": "<regex-pattern>",
+         "options": "<options>"
+      },
+      "collectionRegex": {
+         "pattern": "<regex-pattern>",
+         "options": "<options>"
+      }
+   }
+
+Filters must include either the ``database`` field or the ``databaseRegex`` field.
+For example, 
+
+.. code-block:: json
+
+   {
+      "source": "cluster0",
+      "destination": "cluster1",
+      "includeNamespaces" : [
+         {
+             "database" : "sales",
+             "collectionsRegex": "^accounts_*"
+         },
+         {
+             "database" : "marketing"
+         }
+      ]
+   } 
+
+Sending this configuration to the :ref:`c2c-api-start` endpoint would configure
+``mongosync`` to sync the ``marketing`` database as well as all collections in
+the ``sales`` database with names that begin with ``accounts_``.
+
 .. _c2c-configure-filter:
 
 Configure a Filter
