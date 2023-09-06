@@ -19,9 +19,9 @@ Filtered Sync
 
 .. versionchanged:: 1.6
 
-   Starting in 1.6, {+c2c-product-name+} supports both inclusion and exclusion 
-   filters on sync, allowing you to fine tune what databases and collections on
-   the source cluster get synced to the destination.
+   ``mongosync`` supports both inclusion and exclusion filters on sync, 
+   allowing you to fine tune what databases and collections on the source 
+   cluster get synced to the destination.
    
    * If only inclusion filters are present, ``mongosync`` syncs all matching
      databases and collections.
