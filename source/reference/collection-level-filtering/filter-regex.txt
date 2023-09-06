@@ -22,6 +22,22 @@ Syntax
 Regular Expressions can be used to match databases and collections for
 ``mongosync`` to use in :ref:`c2c-filtered-sync`. 
 
+.. code-block:: json
+   :copyable: false
+
+   {
+      "databaseRegex": {
+         "pattern": "<string>",
+         "options": "<string>"
+      },
+      "collectionRegex": {
+         "pattern": "<string>",
+         "options": "<string>"
+      }
+   }
+
+Regular Expression in filter documents use the following fields:
+
 .. list-table::
    :header-rows: 1
 
@@ -48,7 +64,7 @@ Regular Expressions can be used to match databases and collections for
      - Specifies which databases you want the filter 
        to match.
 
-   * - ``databaseregex.options``
+   * - ``databaseRegex.options``
      - string
      - Regular expression options to use in the match.
 
@@ -59,8 +75,14 @@ Regular Expressions can be used to match databases and collections for
 These options are available to use with both the ``includeNamespaces``
 and ``excludeNamespaces`` parameters.
 
+Regular Expression Options
+--------------------------
+
 Use Cases
 =========
 
 Details
 =======
+
+Learn More
+==========
