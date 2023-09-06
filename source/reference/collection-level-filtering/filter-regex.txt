@@ -78,6 +78,11 @@ and ``excludeNamespaces`` parameters.
 Use Cases
 =========
 
+Regular Expressions allow you match multiple databases or collections with a
+single pattern.  In cases where you want to match multiple similarly named 
+databases or collections, a Regular Expression may be easier to match than
+creating a series of filters for individual databases or groups of collections.
+
 Details
 =======
 
