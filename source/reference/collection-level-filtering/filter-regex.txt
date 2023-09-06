@@ -112,7 +112,22 @@ The following options are available:
        This option also causes the match to ignore characters in-between and
        to include unescaped hash (``#``) characters.
 
+For example, this filter would match collections in the ``sales`` database
+that begin start with the ``accounts_`` string:
 
+.. code-block:: json
+
+   includeNamespaces: [
+      {
+         "database": "sales",
+         "collectionRegex": {
+            "pattern": "^accounts_.+?",
+            "options": "ms"
+         }
+      }
+   ]
 
 Learn More
 ==========
+
+* :ref:`c2c-filtered-sync`

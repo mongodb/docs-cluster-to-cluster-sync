@@ -122,7 +122,7 @@ Configure a Filter
                "database": "sales",
                "collectionRegex": {
                   "pattern": "^accounts_.+$",
-                  "options": "i"
+                  "options": "ms"
                }
          ]
 
