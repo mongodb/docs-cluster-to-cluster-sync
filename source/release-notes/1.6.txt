@@ -22,3 +22,8 @@ Release Notes for mongosync 1.6
 ~~~~~~~~~~~
 
 Starting in 1.6.0, ``mongosync`` supports sync with MongoDB 7.0.
+
+Minimum Supported Version
+-------------------------
+
+In 1.6, the minimum supported version of MongoDB is 6.0.8.
