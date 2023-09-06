@@ -134,7 +134,7 @@ Configure a Filter
       :ref:`/start <c2c-api-start>` API call to begin syncing.
 
       .. literalinclude:: /includes/api/requests/start-filtered.sh
-         :language: shell
+         :language: bash
 
 For an example configuration, see: :ref:`c2c-example-start-with-filter`.
 
