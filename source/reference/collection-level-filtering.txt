@@ -27,9 +27,9 @@ Filtered Sync
      databases and collections.
    * With exclusion filters, ``mongosync`` syncs all databases
      and collections, except for those that match the filters.
-   * With both inclusion and exclusion filters, ``mongosync`` syncs
-     databases and collections that match the inclusion filter and ignores the
-     exclusion filters.
+   * With both inclusion and exclusion filters, ``mongosync`` only syncs
+     databases and collections that match the inclusion filter.   It ignores
+     the exclusion filters.
    * With no filters, ``mongosync`` syncs all databases and collections.
 
 .. _c2c-filter-syntax:
