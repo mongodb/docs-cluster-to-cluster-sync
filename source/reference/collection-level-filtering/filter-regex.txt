@@ -14,7 +14,7 @@ Regular Expressions in Filters
 
 .. versionadded:: 1.6
 
-.. include:: /includes/api/facts/filter-regex.rst
+.. include:: /includes/api/facts/filter-regex
 
 Syntax
 ======
