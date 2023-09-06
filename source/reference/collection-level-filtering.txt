@@ -23,14 +23,14 @@ Filtered Sync
    allowing you to fine tune what databases and collections on the source 
    cluster get synced to the destination.
    
-   * If only inclusion filters are present, ``mongosync`` syncs all matching
+   * With inclusion filters, ``mongosync`` syncs all matching
      databases and collections.
-   * If only exclusion filters are present, ``mongosync`` syncs all databases
-     and collections, except those matching the filters.
-   * If both inclusion and exclusion filters are present, ``mongosync`` only syncs
+   * With exclusion filters, ``mongosync`` syncs all databases
+     and collections, except those that match the filters.
+   * With both inclusion and exclusion filters, ``mongosync`` syncs
      databases and collections that match the inclusion filter and ignores the
      exclusion filters.
-   * If no filters are present, ``mongosync`` syncs all databases and collections.
+   * With no filters, ``mongosync`` syncs all databases and collections.
 
 .. _c2c-filter-syntax:
 
