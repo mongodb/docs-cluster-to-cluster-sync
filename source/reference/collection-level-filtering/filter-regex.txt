@@ -75,6 +75,12 @@ Regular Expression in filter documents use the following fields:
 These options are available to use with both the ``includeNamespaces``
 and ``excludeNamespaces`` parameters.
 
+Use Cases
+=========
+
+Details
+=======
+
 Regular Expression Options
 --------------------------
 
@@ -106,11 +112,7 @@ The following options are available:
        This option also causes the match to ignore characters in-between and
        to include unescaped hash (``#``) characters.
 
-Use Cases
-=========
 
-Details
-=======
 
 Learn More
 ==========
