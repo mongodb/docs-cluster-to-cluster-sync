@@ -1,0 +1,18 @@
+.. _c2c-filter-regex:
+
+##############################
+Regular Expressions in Filters
+##############################
+
+.. default-domain:: mongodb
+
+.. contents:: On this page
+   :local:
+   :backlinks: none
+   :depth: 1
+   :class: twocols
+
+.. versionadded:: 1.6
+
+.. include:: /includes/api/fact/filter-regex.rst
+
