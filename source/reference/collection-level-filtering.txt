@@ -89,23 +89,44 @@ Configure a Filter
 
    .. step:: Create a Filter.
 
-      The ``includeNamespaces`` parameter specifies an optional filter
-      that you can pass to the :ref:`/start <c2c-api-start>` API.
+      The :ref:`c2c-api-start` API accepts two parameters that configure
+      optional filters: 
       
+      * The ``includeNamespaces`` parameter takes an array of filters, which
+        are used to determines which databases and collections ``mongosync`` 
+        should include in the sync
+      * The ``excludeNamespaces`` parameter takes an array of filters, which
+        are used to determine which databases and collections ``mongosync``
+        should exclude from the sync.
+     
       If you don't specify a filter, ``mongosync`` does a full cluster
       sync.
 
-      The filter syntax is: 
+      .. note::
 
-      .. include:: /includes/api/facts/namespaces-syntax.rst
+         If the :ref:`c2c-api-start` call uses both ``includeNamespaces`` and 
+         ``excludeNamespaces`` parameters, ``mongosync`` uses the inclusion 
+         filters and ignores the exclusion filters.
 
-      Create an entry in the ``includeNamespaces`` array for each
-      database that you identified in step 1. Use the ``"database"``
-      field to specify the database name.
-      
-      If you want to filter on collections within a database, add those
-      collections to the list in the ``"collections"`` field for that
-      database entry.
+      Create inclusion or exclusion filters to identify the databases and
+      collections you want sync.
+
+      For example, this inclusion filter would configure ``mongosync`` to only
+      sync collections whose names begin with ``accounts_`` from the ``sales`` 
+      database:
+
+      .. code-block:: json
+
+         "includeNamespaces": [
+            {
+               "database": "sales",
+               "collectionRegex": {
+                  "pattern": "^accounts_.+$",
+                  "options": "i"
+               }
+         ]
+
+      For more information on filters, see :ref:`c2c-filter-syntax`. 
 
    .. step:: Use the Filter.
 
