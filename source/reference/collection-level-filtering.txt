@@ -64,7 +64,6 @@ If the ``collections`` or ``collectionRegex`` fields are absent, ``mongosync``
 includes or excludes all collections from matching databases. 
 
 
-
 .. _c2c-configure-filter:
 
 Configure a Filter
