@@ -18,7 +18,7 @@ Release Notes for mongosync 1.6
 1.6.0 Release
 -------------
 
-**September 18, 2023**
+**September 22, 2023**
 
 Exclusion Filters
 ~~~~~~~~~~~~~~~~~
@@ -120,3 +120,4 @@ Minimum Supported Version
 -------------------------
 
 In 1.6, the minimum supported versions of MongoDB are 6.0.8 and 7.0.0.
+
