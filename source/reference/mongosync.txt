@@ -264,6 +264,8 @@ Examples
 
 #. Deploy a source and a destination cluster.
 
+.. _c2c-mongosync-initialize:
+
 #. Initialize Cluster-to-Cluster Sync:
 
    .. code-block:: bash
