@@ -10,5 +10,5 @@ from the beginning.
 
 For more details, see :ref:`c2c-filtered-sync`.
 
-For current limitations, see: :ref:`c2c-filtering-limitations`.
+For current limitations, see :ref:`c2c-filtering-limitations`.
 
