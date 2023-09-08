@@ -90,7 +90,6 @@ The following sections describe how to upgrade and downgrade
 ``mongosync``.
 
 Live Upgrade
-````````````
 
 Starting in ``mongosync`` version 1.6.0, you can upgrade ``mongosync``
 without restarting data synchronization operations from the start. This
@@ -150,7 +149,6 @@ Downgrading ``mongosync`` has not changed from earlier versions. For
 details, see the following section.
 
 Non-Live Upgrade and Downgrade
-``````````````````````````````
 
 To upgrade, or downgrade ``mongosync``:
 
