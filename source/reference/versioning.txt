@@ -83,25 +83,33 @@ released, version 2.0 would no longer receive patch releases. At the
 same time, version 1.3 would continue to receive patches until version
 1.4 was released.
 
+Persistent Metadata
+~~~~~~~~~~~~~~~~~~~
+
+During normal operation, ``mongosync`` creates metadata that is
+persisted to disk in the destination database. This metadata is not
+versioned and may change at any time.
+
+.. _c2c-versioning-live-upgrade:
+
 Live Upgrade
 ~~~~~~~~~~~~
 
 .. versionadded:: 1.6.0
 
-Starting in ``mongosync`` version 1.6.0, you can upgrade ``mongosync``
-without restarting data synchronization operations from the beginning.
-This is known as a *live upgrade*. After the live upgrade, ``mongosync``
+Starting in ``mongosync`` 1.6.0, you can upgrade ``mongosync`` without
+restarting data synchronization operations from the beginning. This is
+known as a *live upgrade*. After the live upgrade, ``mongosync``
 continues operations that were in progress before the upgrade.
 
-You can live upgrade ``mongosync`` 1.5.0 or greater to the latest
-version.
+You can live upgrade ``mongosync`` 1.5.0 or later to the latest version.
 
 To live upgrade ``mongosync``:
 
 .. procedure::
    :style: normal
 
-   .. step:: (Optional) Pause ``mongosync`` processes
+   .. step:: (Optional) Pause the ``mongosync`` processes
    
       To pause ``mongosync``, run :ref:`c2c-api-pause` on each running
       ``mongosync`` process.
@@ -111,37 +119,37 @@ To live upgrade ``mongosync``:
       
       .. tip::
 
-         Consider pausing the ``mongosync`` processes if you don't want
-         to immediately resume data synchronization operations after
-         live upgrade. This can be useful if you're coordinating
-         multiple ``mongosync`` processes.
+         If you don't want to immediately resume data synchronization
+         operations after live upgrade, consider pausing the
+         ``mongosync`` processes. This is useful if you're coordinating
+         operations from multiple ``mongosync`` processes.
 
-   .. step:: Stop ``mongosync`` processes
+   .. step:: Stop the ``mongosync`` processes
    
       Use your operating system to stop each running ``mongosync``
       process. To stop a process, see your operating system
       documentation.
 
-   .. step:: Download and install new ``mongosync`` binaries.
+   .. step:: Download and install the new ``mongosync`` binaries
    
       For details, see :ref:`install mongosync <c2c-install>`.
 
-   .. step:: Initialize ``mongosync``
+   .. step:: Initialize the ``mongosync`` processes
 
       :ref:`Initialize mongosync <c2c-mongosync-initialize>`
       using the new ``mongosync`` binaries. During initialization,
-      ``mongosync`` upgrades the persisted metadata.
+      ``mongosync`` upgrades the persistent metadata.
 
-   .. step:: Resume ``mongosync`` processes
+   .. step:: Resume the ``mongosync`` processes
 
       If you paused the ``mongosync`` processes earlier in the first
       step, run :ref:`c2c-api-resume` on all ``mongosync`` processes to
       continue operations.
 
 If a data synchronization operation was already in progress before the
-live upgrade, new features added in the latest ``mongosync`` version may
-not be supported after the live upgrade. Performance improvements and
-bug fixes are always supported after the live upgrade.
+live upgrade, the new features added in the latest ``mongosync`` version
+may not all be supported after the live upgrade. Performance
+improvements and bug fixes are always supported after the live upgrade.
 
 Downgrading ``mongosync`` hasn't changed from earlier versions. For
 details, see the following section.
@@ -162,13 +170,6 @@ To upgrade, or downgrade ``mongosync``:
    The new ``mongosync`` processes do not resume any work that may have
    been in progress. Syncing operations restart from the beginning when
    you start the new processes.
-
-Persistent Metadata
-~~~~~~~~~~~~~~~~~~~
-
-During normal operation, ``mongosync`` creates metadata that is
-persisted to disk in the destination database. This metadata is not
-versioned and may change at any time.
 
 Log Messages
 ~~~~~~~~~~~~
