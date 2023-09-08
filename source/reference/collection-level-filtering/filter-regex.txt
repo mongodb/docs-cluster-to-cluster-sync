@@ -19,8 +19,8 @@ Regular Expressions in Filters
 Syntax
 ======
 
-Regular expressions can be used to match databases and collections for
-``mongosync`` to use in :ref:`c2c-filtered-sync`. 
+To match databases and collections for ``mongosync`` to use :ref:`c2c-filtered-sync`
+you can use regular expressions:
 
 .. code-block:: json
    :copyable: false
@@ -36,7 +36,7 @@ Regular expressions can be used to match databases and collections for
       }
    }
 
-Regular expression in filter documents use the following fields:
+Regular expressions in filter documents use the following fields:
 
 .. list-table::
    :header-rows: 1

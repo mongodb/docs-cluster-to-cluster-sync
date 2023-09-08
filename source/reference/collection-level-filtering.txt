@@ -49,6 +49,7 @@ to include or exclude from sync.
 Filters have the following syntax:
 
 .. code-block:: json
+   :copyable: false
 
    includeNamespaces: [
        {
