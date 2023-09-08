@@ -259,12 +259,12 @@ System Collections
 
 .. include:: /includes/collections/behavior-system-collections.rst
 
+.. _c2c-mongosync-examples:
+
 Examples
 --------
 
 #. Deploy a source and a destination cluster.
-
-.. _c2c-mongosync-initialize:
 
 #. Initialize Cluster-to-Cluster Sync:
 
