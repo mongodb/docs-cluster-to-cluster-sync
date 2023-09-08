@@ -86,9 +86,11 @@ same time, version 1.3 would continue to receive patches until version
 Live Upgrade
 ~~~~~~~~~~~~
 
+.. versionadded:: 1.6.0
+
 Starting in ``mongosync`` version 1.6.0, you can upgrade ``mongosync``
-without restarting data synchronization operations from the start. This
-is known as a *live upgrade*. After the live upgrade, ``mongosync``
+without restarting data synchronization operations from the beginning.
+This is known as a *live upgrade*. After the live upgrade, ``mongosync``
 continues operations that were in progress before the upgrade.
 
 You can live upgrade ``mongosync`` 1.5.0 or greater to the latest
