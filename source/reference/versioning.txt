@@ -105,7 +105,7 @@ To live upgrade ``mongosync``:
 .. procedure::
    :style: normal
 
-   .. step:: (Optional) Pause ``mongosync``
+   .. step:: (Optional) Pause ``mongosync``.
    
       To pause ``mongosync``, run :ref:`c2c-api-pause` on each running
       ``mongosync`` process.
@@ -116,26 +116,26 @@ To live upgrade ``mongosync``:
       .. tip::
 
          Consider pausing ``mongosync`` if you don't want to immediately
-         resume the migration after live upgrade, which is useful if
+         resume the migration after live upgrade. This can be useful if
          you're coordinating multiple ``mongosync`` processes.
 
-   .. step:: Stop all ``mongosync`` processes
+   .. step:: Stop all ``mongosync`` processes.
    
       Use your operating system to stop each running ``mongosync``
       process. For details, see your operating system documentation.
 
-   .. step:: Download and install new ``mongosync`` binaries
+   .. step:: Download and install new ``mongosync`` binaries.
    
       For details, see :ref:`install mongosync <c2c-install>`.
 
-   .. step:: Initialize ``mongosync``
+   .. step:: Initialize ``mongosync``.
 
       :ref:`Initialize mongosync <c2c-mongosync-initialize>`.
       ``mongosync`` using the new binaries. During initialization, the
       new ``mongosync`` binaries upgrade persisted metadata before
       resuming work.
 
-   .. step:: Resume ``mongosync`` processes
+   .. step:: Resume ``mongosync`` processes.
 
       If you paused the ``mongosync`` processes earlier in the first
       step, run :ref:`c2c-api-resume` on all ``mongosync`` processes to
