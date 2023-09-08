@@ -140,11 +140,11 @@ features added in the latest ``mongosync`` version may not be supported
 after the live upgrade. Performance improvements and bug fixes are
 supported after the live upgrade.
 
-Downgrading ``mongosync`` has not changed from earlier versions. For
+Downgrading ``mongosync`` hasn't changed from earlier versions. For
 details, see the following section.
 
-Non-Live Upgrade and Downgrade
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Upgrade and Downgrade
+~~~~~~~~~~~~~~~~~~~~~
 
 To upgrade, or downgrade ``mongosync``:
 
