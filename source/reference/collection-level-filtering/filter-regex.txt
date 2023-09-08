@@ -19,7 +19,7 @@ Regular Expressions in Filters
 Syntax
 ======
 
-Regular Expressions can be used to match databases and collections for
+Regular expressions can be used to match databases and collections for
 ``mongosync`` to use in :ref:`c2c-filtered-sync`. 
 
 .. code-block:: json
@@ -36,7 +36,7 @@ Regular Expressions can be used to match databases and collections for
       }
    }
 
-Regular Expression in filter documents use the following fields:
+Regular expression in filter documents use the following fields:
 
 .. list-table::
    :header-rows: 1
@@ -78,9 +78,9 @@ and ``excludeNamespaces`` parameters.
 Use Cases
 =========
 
-Regular Expressions allow you match multiple databases or collections with a
+Regular expressions allow you match multiple databases or collections with a
 single pattern.  In cases where you want to match multiple similarly named 
-databases or collections, a Regular Expression may be easier to match than
+databases or collections, a regular expression may be easier to match than
 creating a series of filters for individual databases or groups of collections.
 
 Details
@@ -90,7 +90,7 @@ Regular Expression Options
 --------------------------
 
 ``databaseRegex`` and ``collectionRegex`` each supports an ``options`` field,
-which you can use to configure Regular Expression options.
+which you can use to configure regular expression options.
 
 The following options are available:
 

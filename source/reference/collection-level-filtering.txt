@@ -21,14 +21,14 @@ Starting in 1.6, ``mongosync`` supports both inclusion and exclusion filters
 on sync, allowing you to fine tune what databases and collections on the source 
 cluster get synced to the destination.
 
-* With inclusion filters, ``mongosync`` syncs matching
+- With inclusion filters, ``mongosync`` syncs matching
   databases and collections.
-* With exclusion filters, ``mongosync`` syncs all databases
+- With exclusion filters, ``mongosync`` syncs all databases
   and collections, except for those that match the filters.
-* With both inclusion and exclusion filters, ``mongosync`` only syncs
+- With both inclusion and exclusion filters, ``mongosync`` only syncs
   databases and collections that match the inclusion filter.   It ignores
   the exclusion filters.
-* With no filters, ``mongosync`` syncs all databases and collections.
+- With no filters, ``mongosync`` syncs all databases and collections.
 
 .. _c2c-filter-syntax:
 
@@ -40,24 +40,32 @@ filtered sync: ``includeNamespaces`` and ``excludeNamespaces``.
 Each field takes an array of filters that specify the databases and collections 
 to include or exclude from sync.
 
+.. note::
+
+   If the :ref:`c2c-api-start` call uses both ``includeNamespaces`` and 
+   ``excludeNamespaces`` parameters, ``mongosync`` uses the inclusion 
+   filters and ignores the exclusion filters.
+
 Filters have the following syntax:
 
 .. code-block:: json
 
-   {
-      "database": "<database-name>",
-      "collections": [
-         "<collection-name>"
-      ]
-      "databaseRegex": {
-         "pattern": "<regex-pattern>",
-         "options": "<options>"
-      },
-      "collectionRegex": {
-         "pattern": "<regex-pattern>",
-         "options": "<options>"
-      }
-   }
+   includeNamespaces: [
+       {
+          "database": "<database-name>",
+          "collections": [
+             "<collection-name>"
+          ]
+          "databaseRegex": {
+             "pattern": "<regex-pattern>",
+             "options": "<options>"
+          },
+          "collectionRegex": {
+             "pattern": "<regex-pattern>",
+             "options": "<options>"
+          }
+       }
+    ]
 
 Filters must include either the ``database`` field or the ``databaseRegex`` field.
 If the ``collections`` or ``collectionRegex`` fields are absent, ``mongosync``
@@ -92,21 +100,15 @@ Configure a Filter
       The :ref:`c2c-api-start` API accepts two parameters that configure
       optional filters: 
       
-      * The ``includeNamespaces`` parameter takes an array of filters, which
+      - The ``includeNamespaces`` parameter takes an array of filters, which
         are used to determines which databases and collections ``mongosync`` 
         should include in the sync
-      * The ``excludeNamespaces`` parameter takes an array of filters, which
+      - The ``excludeNamespaces`` parameter takes an array of filters, which
         are used to determine which databases and collections ``mongosync``
         should exclude from the sync.
      
-      If you don't specify a filter, ``mongosync`` does a full cluster
+      If you don't specify a filter, ``mongosync`` performs a full cluster
       sync.
-
-      .. note::
-
-         If the :ref:`c2c-api-start` call uses both ``includeNamespaces`` and 
-         ``excludeNamespaces`` parameters, ``mongosync`` uses the inclusion 
-         filters and ignores the exclusion filters.
 
       Create inclusion or exclusion filters to identify the databases and
       collections you want sync.
