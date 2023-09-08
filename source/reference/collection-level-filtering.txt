@@ -26,7 +26,7 @@ also supports exclusion filters and regular expressions.
 - With exclusion filters, ``mongosync`` syncs all databases
   and collections, except for those that match the filters.
 - With both inclusion and exclusion filters, ``mongosync`` only syncs
-  databases and collections that match the inclusion filter.   It ignores
+  databases and collections that match the inclusion filters.   It ignores
   the exclusion filters.
 - With no filters, ``mongosync`` syncs all databases and collections.
 
