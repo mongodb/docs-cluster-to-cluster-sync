@@ -83,13 +83,6 @@ released, version 2.0 would no longer receive patch releases. At the
 same time, version 1.3 would continue to receive patches until version
 1.4 was released.
 
-Persistent Metadata
-~~~~~~~~~~~~~~~~~~~
-
-During normal operation, ``mongosync`` creates metadata that is
-persisted to disk in the destination database. This metadata is not
-versioned and may change at any time.
-
 .. _c2c-versioning-live-upgrade:
 
 Live Upgrade
@@ -172,6 +165,13 @@ To upgrade, or downgrade ``mongosync``:
    The new ``mongosync`` processes do not resume any work that may have
    been in progress. Syncing operations restart from the beginning when
    you start the new processes.
+
+Persistent Metadata
+~~~~~~~~~~~~~~~~~~~
+
+During normal operation, ``mongosync`` creates metadata that is
+persisted to disk in the destination database. This metadata is not
+versioned and may change at any time.
 
 Log Messages
 ~~~~~~~~~~~~
