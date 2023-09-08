@@ -17,9 +17,9 @@ Filtered Sync
 
 .. include:: /includes/api/facts/filtering-intro.rst
 
-Starting in 1.6, ``mongosync`` supports both inclusion and exclusion filters 
-on sync, allowing you to fine tune what databases and collections on the source 
-cluster get synced to the destination.
+Starting in 1.1, ``mongosync`` supports inclusion filters to specify which
+databases and collections to include in sync.  Starting in 1.6, ``mongosync``
+also supports exclusion filters and regular expressions.
 
 - With inclusion filters, ``mongosync`` syncs matching
   databases and collections.
