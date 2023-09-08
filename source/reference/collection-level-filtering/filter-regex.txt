@@ -79,7 +79,7 @@ Use Cases
 =========
 
 Regular expressions allow you match multiple databases or collections with a
-single pattern.  In cases where you want to match multiple similarly named 
+single pattern.  If you want to match multiple similarly named 
 databases or collections, a regular expression may be easier to match than
 creating a series of filters for individual databases or groups of collections.
 

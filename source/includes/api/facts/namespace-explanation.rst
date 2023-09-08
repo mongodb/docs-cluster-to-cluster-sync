@@ -8,7 +8,7 @@ If you want to modify the filter to add a newly created database,
 you have to :ref:`restart the filtered sync <c2c-change-filter>`
 from the beginning.
 
-For more details, see: :ref:`c2c-filtered-sync`.
+For more details, see :ref:`c2c-filtered-sync`.
 
 For current limitations, see: :ref:`c2c-filtering-limitations`.
 
