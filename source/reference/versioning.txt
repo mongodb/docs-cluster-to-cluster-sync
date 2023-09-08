@@ -110,9 +110,14 @@ To live upgrade ``mongosync``:
       To pause ``mongosync``, run :ref:`c2c-api-pause` on each running
       ``mongosync`` process.
       
-      If you live upgrade ``mongosync`` after you pause and then stop
-      the old ``mongosync`` in the next step, you can later restart
-      ``mongosync`` from the paused state.
+      You can later restart ``mongosync`` from the paused state, as
+      shown in the final step.
+      
+      .. tip::
+
+         Consider pausing ``mongosync`` if you don't want to immediately
+         resume the migration after live upgrade, which is useful if
+         you're coordinating multiple ``mongosync`` processes.
 
    .. step:: Stop all ``mongosync`` processes
    
