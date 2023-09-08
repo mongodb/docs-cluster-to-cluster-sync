@@ -138,8 +138,8 @@ To live upgrade ``mongosync``:
    .. step:: Initialize the ``mongosync`` processes
 
       To initialize the ``mongosync`` processes, see :ref:`initialize
-      mongosync <c2c-mongosync-examples>`. During initialization,
-      ``mongosync`` upgrades the persistent metadata.
+      mongosync examples <c2c-mongosync-examples>`. During
+      initialization, ``mongosync`` upgrades the persistent metadata.
 
    .. step:: Resume the ``mongosync`` processes
 
