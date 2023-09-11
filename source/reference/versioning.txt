@@ -144,7 +144,7 @@ If a data synchronization operation was already in progress before the
 live upgrade, new features added in the latest ``mongosync`` version may
 not all be supported after the live upgrade. Performance improvements
 and bug fixes are always supported after the live upgrade. For more
-information on the new features that might be supported after live
+information on the new features that might be supported after a live
 upgrade, see the :ref:`1.7.0-c2c-release-notes`.
 
 Non-Live Upgrade or Downgrade
