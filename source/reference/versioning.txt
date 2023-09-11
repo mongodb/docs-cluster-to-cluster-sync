@@ -151,7 +151,8 @@ Non-Live Upgrade or Downgrade
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 If you're using an earlier ``mongosync`` version not supported by the
-live upgrade, or you need to downgrade ``mongosync``:
+live upgrade procedure, or you need to downgrade ``mongosync``, perform
+these steps:
 
 - Stop all currently running ``mongosync`` processes.
 - Drop all non-system databases in the destination cluster.
