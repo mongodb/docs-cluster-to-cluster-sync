@@ -18,7 +18,7 @@ Release Notes for mongosync 1.7
 1.7.0 Release
 -------------
 
-** Upcoming **
+**Upcoming**
 
 Live Upgrade
 ~~~~~~~~~~~~
@@ -30,4 +30,4 @@ For details, see :ref:`c2c-versioning-live-upgrade`.
 Minimum Supported Version
 -------------------------
 
-In 1.7.0, the minimum supported versions of MongoDB are ** TDB **.
+In 1.7.0, the minimum supported versions of MongoDB are **TDB**.
