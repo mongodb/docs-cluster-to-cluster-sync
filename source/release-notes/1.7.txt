@@ -30,4 +30,5 @@ For details, see :ref:`c2c-versioning-live-upgrade`.
 Minimum Supported Version
 -------------------------
 
-In 1.7.0, the minimum supported versions of MongoDB are **TDB**.
+In 1.7.0, the minimum supported versions of MongoDB are 4.2.24, 4.4.23,
+5.0.19, 6.0.8, and 7.0.0.
