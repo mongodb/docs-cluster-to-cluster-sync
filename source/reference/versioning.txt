@@ -150,8 +150,8 @@ upgrade, see the :ref:`1.7.0-c2c-release-notes`.
 Non-Live Upgrade or Downgrade
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-If you're using an earlier ``mongosync`` version not supported by live
-upgrade, or you need to downgrade ``mongosync``:
+If you're using an earlier ``mongosync`` version not supported by the
+live upgrade, or you need to downgrade ``mongosync``:
 
 - Stop all currently running ``mongosync`` processes.
 - Drop all non-system databases in the destination cluster.
