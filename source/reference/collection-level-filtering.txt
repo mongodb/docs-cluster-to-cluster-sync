@@ -86,9 +86,10 @@ Filters have the following syntax:
     ]
 
 Filters must include either the ``database`` field or the ``databaseRegex`` field.
-If the ``collections`` or ``collectionRegex`` fields are absent, ``mongosync``
-includes or excludes all collections from matching databases. 
 
+If you need the filter to match specific collections, you can use either 
+the ``collections`` array to specify collections individually or define 
+a regular expression using the ``collectionRegex`` field.
 
 .. _c2c-configure-filter:
 
@@ -128,7 +129,7 @@ Configure a Filter
       If you don't specify a filter, ``mongosync`` performs a full cluster
       sync.
 
-      Create inclusion or exclusion filters to identify the databases and
+      Create inclusion and/or exclusion filters to identify the databases and
       collections you want sync.
 
       For example, this inclusion filter would configure ``mongosync`` to only
