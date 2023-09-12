@@ -15,7 +15,7 @@
 
          - readAnyDatabase
          - backup
-         - clusterMonitor (sharded clusters only)
+         - clusterMonitor
 
    * - default
      - destination cluster
@@ -23,7 +23,23 @@
 
          - readWriteAnyDatabase
          - restore
-         - clusterManager (sharded clusters only)
+         - clusterManager
+
+   * - destination data handling
+     - source cluster
+     -
+
+         - readAnyDatabase
+         - backup
+         - clusterMonitor
+
+   * - destination data handling
+     - destination cluster
+     -
+
+         - readWriteAnyDatabase
+         - restore
+         - clusterAdmin
 
    * - write-blocking or reversing
      - source cluster
@@ -32,7 +48,8 @@
          - readWriteAnyDatabase
          - backup
          - restore
-         - clusterManager (sharded clusters only)
+         - clusterMonitor
+         - clusterManager
 
    * - write-blocking or reversing
      - destination cluster
@@ -41,7 +58,8 @@
          - readWriteAnyDatabase
          - backup
          - restore
-         - clusterManager (sharded clusters only)
+         - clusterMonitor
+         - clusterManager
 
 For details on server roles, see: :ref:`authorization`.
 
