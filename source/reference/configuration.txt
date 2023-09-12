@@ -102,7 +102,7 @@ Options
 
    .. warning::
 
-      Setting the ``--loadLevel`` to ``4`` may negatively impact the performance 
+      Setting the ``loadLevel`` to ``4`` may negatively impact the performance 
       of the destination cluster. 
 
 .. setting:: logPath
