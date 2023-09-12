@@ -97,8 +97,8 @@ Global Options
 
    .. warning::
 
-      Setting the ``loadLevel`` to ``4`` may negatively impact the performance 
-      of the destination cluster. 
+      Setting the ``loadLevel`` higher than the default may negatively impact 
+      the performance of the destination cluster. 
 
 .. option:: --logPath <DIR>
 
