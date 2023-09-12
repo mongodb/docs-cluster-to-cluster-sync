@@ -23,6 +23,7 @@
 
          - readWriteAnyDatabase
          - restore
+         - clusterMonitor
          - clusterManager
 
    * - destination data handling
