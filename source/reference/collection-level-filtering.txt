@@ -52,7 +52,23 @@ Filters have the following syntax:
 .. code-block:: json
    :copyable: false
 
-   includeNamespaces: [
+   "includeNamespaces": [
+       {
+          "database": "<database-name>",
+          "collections": [
+             "<collection-name>"
+          ]
+          "databaseRegex": {
+             "pattern": "<regex-pattern>",
+             "options": "<options>"
+          },
+          "collectionRegex": {
+             "pattern": "<regex-pattern>",
+             "options": "<options>"
+          }
+       }
+    ],
+    "excludeNamespaces": [
        {
           "database": "<database-name>",
           "collections": [
@@ -117,7 +133,7 @@ Configure a Filter
 
       For example, this inclusion filter would configure ``mongosync`` to only
       sync collections whose names begin with ``accounts_`` from the ``sales`` 
-      database:
+      database, except for the ``accounts_old`` collection:
 
       .. code-block:: json
 
@@ -128,6 +144,14 @@ Configure a Filter
                   "pattern": "^accounts_.+$",
                   "options": "ms"
                }
+         ],
+         "excludeNameses": [
+             {
+                 "database": "sales"
+                 "collections": [
+                     "accounts_old"
+                 ]
+             }
          ]
 
       For more information on filters, see :ref:`c2c-filter-syntax`. 

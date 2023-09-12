@@ -100,7 +100,7 @@ that begin start with the ``accounts_`` string:
 
 .. code-block:: json
 
-   includeNamespaces: [
+   "includeNamespaces": [
       {
          "database": "sales",
          "collectionRegex": {
