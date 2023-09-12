@@ -26,22 +26,6 @@
          - clusterMonitor
          - clusterManager
 
-   * - destination data handling
-     - source cluster
-     -
-
-         - readAnyDatabase
-         - backup
-         - clusterMonitor
-
-   * - destination data handling
-     - destination cluster
-     -
-
-         - readWriteAnyDatabase
-         - restore
-         - clusterAdmin
-
    * - write-blocking or reversing
      - source cluster
      -  
