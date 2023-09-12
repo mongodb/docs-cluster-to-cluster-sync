@@ -26,8 +26,8 @@ also supports exclusion filters and regular expressions.
 - With exclusion filters, ``mongosync`` syncs all databases
   and collections, except for those that match the filters.
 - With both inclusion and exclusion filters, ``mongosync`` only syncs
-  databases and collections that match the inclusion filters.   It ignores
-  the exclusion filters.
+  databases and collections that match the inclusion filters then excludes
+  any that also match the exclusion filters.
 - With no filters, ``mongosync`` syncs all databases and collections.
 
 .. _c2c-filter-syntax:
@@ -43,8 +43,9 @@ to include or exclude from sync.
 .. note::
 
    If the :ref:`c2c-api-start` call uses both ``includeNamespaces`` and 
-   ``excludeNamespaces`` parameters, ``mongosync`` uses the inclusion 
-   filters and ignores the exclusion filters.
+   ``excludeNamespaces`` parameters, ``mongosync`` first matches databases
+   and collections from the inclusion filters, then excludes those that
+   also match an exclusion filter.
 
 Filters have the following syntax:
 

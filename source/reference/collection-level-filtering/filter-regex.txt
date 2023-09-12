@@ -91,31 +91,9 @@ Regular Expression Options
 
 ``databaseRegex`` and ``collectionRegex`` each supports an ``options`` field,
 which you can use to configure regular expression options.
-
-The following options are available:
-
-.. list-table::
-   :header-rows: 1
-   :widths: 10 60
-
-   * - Option
-     - Description
-
-   * - ``i``
-     - Enables case-insensitivity.
-
-   * - ``m``
-     - Enables use the ``^`` and ``$`` anchors.
-
-   * - ``s``
-     - Enables use of dot (``.``) characters to represent all characters.
-
-   * - ``x``
-     - Ignores whitespace characters in the pattern, unless escaped or included 
-       in the character class.
-
-       This option also causes the match to ignore characters in-between and
-       to include unescaped hash (``#``) characters.
+Internally, ``mongosync`` passes the filter and options to the
+:query:`$regex` operator. Options available to that operator can be used
+with Filtred Sync.
 
 For example, this filter would match collections in the ``sales`` database
 that begin start with the ``accounts_`` string:
