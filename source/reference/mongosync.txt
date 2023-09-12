@@ -95,6 +95,11 @@ Global Options
    To set the ``--loadLevel`` option from a configuration file, see the
    :setting:`loadLevel` setting.
 
+   .. warning::
+
+      Setting the ``--loadLevel`` to ``4`` may negatively impact the performance 
+      of the destination cluster. 
+
 .. option:: --logPath <DIR>
 
    .. include:: /includes/opts/logPath.rst
