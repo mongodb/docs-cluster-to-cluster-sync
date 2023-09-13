@@ -39,7 +39,6 @@ New Features:
 - ``mongosync`` now truncates logged fields that contain more than 1,024
   characters.
 
-<<<<<<< HEAD
 Issues Fixed:
 
 - Fixed bug introduced in ``mongosync`` 1.5.0 that may cause ORR to insert
@@ -53,8 +52,6 @@ Issues Fixed:
   initialization if the user specified only an exclusion filter and there were
   no fully excluded databases.
 
-=======
->>>>>>> 9df7dac... DOCSP-29501-time-series
 Minimum Supported Version
 -------------------------
 

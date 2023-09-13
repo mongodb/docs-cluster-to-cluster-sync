@@ -86,7 +86,13 @@ discuss your requirements.
 Unsupported Collection Types
 ----------------------------
 
+<<<<<<< HEAD
 - Time-series collections aren't supported.
+=======
+- In MongoDB 6.0 or later: time series collections are not transferred
+  in ``mongosync`` 1.6. (Time series collections are always transferred
+  in ``mongosync` 1.7 and later.)
+>>>>>>> db71614... DOCSP-29501-time-series
 - Clustered collections with :ref:`expireAfterSeconds
   <db.createCollection.expireAfterSeconds>` set aren't supported.
 
