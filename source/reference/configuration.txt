@@ -105,6 +105,8 @@ Options
       Setting the ``loadLevel`` higher than the default may negatively impact 
       the performance of the destination cluster. 
 
+   .. include:: /includes/opts/loadLevel-warning.rst
+
 .. setting:: logPath
 
    *Type*: string
