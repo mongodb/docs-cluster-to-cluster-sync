@@ -95,11 +95,8 @@ Global Options
    To set the ``--loadLevel`` option from a configuration file, see the
    :setting:`loadLevel` setting.
 
-   .. warning::
-
-      Setting the ``loadLevel`` higher than the default may negatively impact 
-      the performance of the destination cluster. 
-
+   .. include:: /includes/opts/loadlevel-warning.rst
+   
 .. option:: --logPath <DIR>
 
    .. include:: /includes/opts/logPath.rst

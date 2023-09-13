@@ -1,4 +1,4 @@
 .. warning::
 
-   Setting the ``loadLevel`` higher than the default may negatively impact 
-   the destination cluster performance.
+   Setting ``loadLevel`` higher than the default of ``3`` may negatively
+   impact the destination cluster performance.

@@ -100,11 +100,6 @@ Options
    To set the ``loadLevel`` setting from the command line, see the
    :option:`--loadLevel` option.
 
-   .. warning::
-
-      Setting the ``loadLevel`` higher than the default may negatively impact 
-      the performance of the destination cluster. 
-
    .. include:: /includes/opts/loadlevel-warning.rst
 
 .. setting:: logPath
