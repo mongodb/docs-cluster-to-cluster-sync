@@ -119,9 +119,6 @@ Global Options
 
    .. include:: /includes/opts/skipTimeseriesHandling.rst
 
-   To set the ``--skipTimeseriesHandling`` option from a configuration
-   file, see the :setting:`skipTimeseriesHandling` setting.
-
 .. option:: --verbosity <level>
 
    .. |verbosity-opt-type| replace:: option

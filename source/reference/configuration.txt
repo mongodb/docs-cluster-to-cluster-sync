@@ -120,15 +120,6 @@ Options
    To set the ``port`` setting from the command line, see the
    :option:`--port` option.
 
-.. setting:: skipTimeseriesHandling
-
-   *Type*: string
-
-   .. include:: /includes/opts/skipTimeseriesHandling
-
-   To set the ``skipTimeseriesHandling`` setting from the command line,
-   see the :option:`--skipTimeseriesHandling` option.
-
 .. setting:: verbosity 
 
    *Type*: string
