@@ -115,10 +115,6 @@ Global Options
    To set the ``--port`` option from a configuration file,
    see the :setting:`port` setting.
 
-.. option:: --skipTimeseriesHandling
-
-   .. include:: /includes/opts/skipTimeseriesHandling.rst
-
 .. option:: --verbosity <level>
 
    .. |verbosity-opt-type| replace:: option
