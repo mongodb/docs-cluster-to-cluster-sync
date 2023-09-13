@@ -19,7 +19,7 @@ Regular Expressions in Filters
 Syntax
 ======
 
-To match databases and collections for ``mongosync`` to use :ref:`c2c-filtered-sync`
+To match databases and collections for ``mongosync`` to use :ref:`c2c-filtered-sync`,
 you can use regular expressions:
 
 .. code-block:: json

@@ -121,7 +121,7 @@ Configure a Filter
       
       - The ``includeNamespaces`` parameter takes an array of filters, which
         are used to determines which databases and collections ``mongosync`` 
-        should include in the sync
+        should include in the sync.
       - The ``excludeNamespaces`` parameter takes an array of filters, which
         are used to determine which databases and collections ``mongosync``
         should exclude from the sync.
@@ -130,7 +130,7 @@ Configure a Filter
       sync.
 
       Create inclusion and/or exclusion filters to identify the databases and
-      collections you want sync.
+      collections you want to sync.
 
       For example, this inclusion filter would configure ``mongosync`` to only
       sync collections whose names begin with ``accounts_`` from the ``sales`` 
@@ -146,9 +146,9 @@ Configure a Filter
                   "options": "ms"
                }
          ],
-         "excludeNameses": [
+         "excludeNamespaces": [
              {
-                 "database": "sales"
+                 "database": "sales",
                  "collections": [
                      "accounts_old"
                  ]
