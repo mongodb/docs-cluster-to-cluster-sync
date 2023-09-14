@@ -42,13 +42,30 @@ For more information, see :ref:`c2c-filter-regex`.
 
 Starting in 1.6.0, ``mongosync`` supports sync with MongoDB 7.0.
 
-Bug Fixes
----------
+Other Notes
+~~~~~~~~~~~
 
-- Fixes bug introduced in 1.5, where ``mongosync`` could fail to apply change
+New Features:
+
+- Sped up the commit process by parallelizing metadata cleanup. 
+  (:issue:`REP-2568`)
+
+Issues Fixed:
+
+- Fixed bug introduced in 1.5, where ``mongosync`` could fail to apply change
   events for a document if they occur shortly after the document is copied during
   the Collection Copy phases. (:issue:`REP-3253`)
 
+- Fixed bug where ``mongosync`` could crash due to source cluster containing
+  legacy indexes with unknown index options. (:issue:`REP-2885`)
+
+- Fixed a bug where mongosync could crash with an error during change event 
+  application from failing to read 500 documents within 5 minutes or reaching 
+  the end of the oplog when reading from the source cluster’s change stream. 
+  (:issue:`REP-3012`)
+
+- Fixed bug where ``mongosync`` could crase with error when an index applied
+  constraints to a collection's documents. (:issue:`REP-2886`)
 
 Minimum Supported Version
 -------------------------
