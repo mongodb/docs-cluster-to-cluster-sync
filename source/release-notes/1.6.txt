@@ -50,6 +50,17 @@ New Features:
 - Sped up the commit process by parallelizing metadata cleanup. 
   (:issue:`REP-2568`)
 
+- Reduced memory allocation during change event application by ~30% for 
+  pre-6.0 releases of MongoDB Server versions. (:issue:`REP-3015`)
+
+- Changed telemetry to also send error messages to Segment when ``mongosync``
+  exits with a fatal error. (:issue:`REP-3138`) 
+
+- Added support for ``mongosync`` to sync between source and destination 
+  clusters that have the same major and minor versions, but different 
+  patch versions. (:issue:`REP-3161`)
+
+
 Issues Fixed:
 
 - Fixed bug introduced in 1.5, where ``mongosync`` could fail to apply change
@@ -66,6 +77,7 @@ Issues Fixed:
 
 - Fixed bug where ``mongosync`` could crase with error when an index applied
   constraints to a collection's documents. (:issue:`REP-2886`)
+
 
 Minimum Supported Version
 -------------------------
