@@ -19,12 +19,10 @@ Release Notes for mongosync 1.7
 
 **Upcoming**
 
-Live Upgrade
-~~~~~~~~~~~~
+Cross Version Synchronization
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. include:: /includes/live-upgrade.rst
 
-For details, see :ref:`c2c-versioning-live-upgrade`.
 
 Minimum Supported Version
 -------------------------
