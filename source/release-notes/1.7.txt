@@ -22,7 +22,7 @@ Release Notes for mongosync 1.7
 Cross Version Synchronization
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-
+.. include:: /includes/cross-version-sync.rst
 
 Minimum Supported Version
 -------------------------
