@@ -42,6 +42,14 @@ For more information, see :ref:`c2c-filter-regex`.
 
 Starting in 1.6.0, ``mongosync`` supports sync with MongoDB 7.0.
 
+Bug Fixes
+---------
+
+- Fixes bug introduced in 1.5, where ``mongosync`` could fail to apply change
+  events for a document if they occur shortly after the document is copied during
+  the Collection Copy phases. (:issue:`REP-3253`)
+
+
 Minimum Supported Version
 -------------------------
 
