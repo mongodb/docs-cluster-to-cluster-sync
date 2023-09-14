@@ -33,7 +33,7 @@ General Limitations
   For more information on MongoDB versioning, see
   :ref:`release-version-numbers`.
 - The source and destination clusters must have the same major and minor
-  release version, but can differ in patch release.
+  release version, but can have different patch releases.
 - The minimum supported :dbcommand:`Feature Compatibility Version
   <setFeatureCompatibilityVersion>` is 6.0.
 - The source and destination clusters must have the same Feature

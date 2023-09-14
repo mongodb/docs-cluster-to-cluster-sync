@@ -60,7 +60,7 @@ New Features:
   clusters that have the same major and minor versions, but different 
   patch versions. (:issue:`REP-3161`)
 
-- Upgrade build to Go 1.20. (:issue:`REP-3044`)
+- Upgraded build to use Go 1.20. (:issue:`REP-3044`)
 
 - ``mongosync`` now periodically logs when server operations take a longer 
   than expected time. (:issue:`REP-3176`)
@@ -75,12 +75,12 @@ Issues Fixed:
   legacy indexes with unknown index options. (:issue:`REP-2885`)
 
 - Fixed a bug where mongosync could crash with an error during change event 
-  application from failing to read 500 documents within 5 minutes or reaching 
-  the end of the oplog when reading from the source cluster’s change stream. 
-  (:issue:`REP-3012`)
+  application due to its failing to read 500 documents within 5 minutes or 
+  reaching the end of the oplog when reading from change streams on the source
+  cluster. (:issue:`REP-3012`)
 
-- Fixed bug where ``mongosync`` could crase with error when an index applied
-  constraints to a collection's documents. (:issue:`REP-2886`)
+- Fixed bug where ``mongosync`` could crash with error when indexes apply
+  constraints to collection documents. (:issue:`REP-2886`)
 
 - Fixed a bug where ``mongosync`` can fail to copy certain documents if 
   the insertion of documents causes duplicate key errors at the same time 
