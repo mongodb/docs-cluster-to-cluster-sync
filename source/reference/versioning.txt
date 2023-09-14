@@ -63,7 +63,8 @@ Same Server Version
 MongoDB Server. The :major and minor ref:`server version numbers
 <release-version-numbers>` must be the same on both clusters.  
 
-.. versionchanged:: 1.6 the patch release numbers can differ.
+.. versionchanged:: 1.6 The patch release numbers can differ on the source and
+   destination cluster.
 
 Support Lifecycle 
 ~~~~~~~~~~~~~~~~~

@@ -60,6 +60,10 @@ New Features:
   clusters that have the same major and minor versions, but different 
   patch versions. (:issue:`REP-3161`)
 
+- Upgrade build to Go 1.20. (:issue:`REP-3044`)
+
+- ``mongosync`` now periodically logs when server operations take a longer 
+  than expected time. (:issue:`REP-3176`)
 
 Issues Fixed:
 
@@ -78,6 +82,9 @@ Issues Fixed:
 - Fixed bug where ``mongosync`` could crase with error when an index applied
   constraints to a collection's documents. (:issue:`REP-2886`)
 
+- Fixed a bug where ``mongosync`` can fail to copy certain documents if 
+  the insertion of documents causes duplicate key errors at the same time 
+  as a write concern error. (:issue:`REP-3258`)
 
 Minimum Supported Version
 -------------------------
