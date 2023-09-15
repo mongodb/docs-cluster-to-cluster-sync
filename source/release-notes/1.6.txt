@@ -48,43 +48,42 @@ Other Notes
 New Features:
 
 - Sped up the commit process by parallelizing metadata cleanup. 
-  (:issue:`REP-2568`)
 
-- Reduced memory allocation during change event application by ~30% for 
-  pre-6.0 releases of MongoDB Server versions. (:issue:`REP-3015`)
+- Reduced memory allocation during change event application by approximately 
+  30% for pre-6.0 releases of MongoDB Server versions.
 
 - Changed telemetry to also send error messages to Segment when ``mongosync``
-  exits with a fatal error. (:issue:`REP-3138`) 
+  exits with a fatal error.
 
 - Added support for ``mongosync`` to sync between source and destination 
   clusters that have the same major and minor versions, but different 
-  patch versions. (:issue:`REP-3161`)
+  patch versions.
 
-- Upgraded build to use Go 1.20. (:issue:`REP-3044`)
+- Upgraded build to use Go 1.20.
 
 - ``mongosync`` now periodically logs when server operations take a longer 
-  than expected time. (:issue:`REP-3176`)
+  than expected time.
 
 Issues Fixed:
 
-- Fixed bug introduced in 1.5, where ``mongosync`` could fail to apply change
+- Fixed a bug introduced in 1.5, where ``mongosync`` could fail to apply change
   events for a document if they occur shortly after the document is copied during
-  the Collection Copy phase. (:issue:`REP-3253`)
+  the Collection Copy phase.
 
-- Fixed bug where ``mongosync`` could crash due to the source cluster containing
-  legacy indexes with unknown index options. (:issue:`REP-2885`)
+- Fixed a bug where ``mongosync`` could crash due to the source cluster containing
+  legacy indexes with unknown index options.
 
-- Fixed bug where ``mongosync`` could crash with an error during change event 
+- Fixed a bug where ``mongosync`` could crash with an error during change event 
   application, if the application fails to read 500 documents within 5 minutes
   or reaches the end of the oplog when reading from change streams on the source
-  cluster. (:issue:`REP-3012`)
+  cluster.
 
-- Fixed bug where ``mongosync`` could crash when indexes apply constraints 
-  to collection documents. (:issue:`REP-2886`)
+- Fixed a bug where ``mongosync`` could crash when indexes apply constraints 
+  to collection documents.
 
-- Fixed bug where ``mongosync`` can fail to copy certain documents if 
+- Fixed a bug where ``mongosync`` can fail to copy certain documents if 
   the insertion of documents causes duplicate key errors at the same time 
-  as a write concern error. (:issue:`REP-3258`)
+  as a write concern error.
 
 Minimum Supported Version
 -------------------------
