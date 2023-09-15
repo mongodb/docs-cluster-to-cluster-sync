@@ -108,7 +108,7 @@ Global Options
    To set the ``--logPath`` option from a configuration file,
    see the :setting:`logPath` setting.
 
-.. option:: --migrationName <URI>
+.. option:: --migrationName <name>
 
    .. include:: /includes/opts/migrationName.rst
 

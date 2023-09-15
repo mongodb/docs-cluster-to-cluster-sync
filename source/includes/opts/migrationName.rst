@@ -5,3 +5,5 @@
 
 Sets the cluster migration name for synchronizing data between source
 and destination clusters that run different MongoDB server versions.
+
+For more information, see :ref:`c2c-logging`.
