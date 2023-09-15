@@ -77,6 +77,17 @@ Issues Fixed:
   application, if the application fails to read 500 documents within 5 minutes
   or reaches the end of the oplog when reading from change streams on the source
   cluster.
+  This crash occured when such an index was added or dropped at nearly the same
+  time as an index that violated these constrains was deleted or inserted.  It 
+  would manifest with an error like
+
+  .. code-block:: text
+     :copyable: false
+
+     Ambiguous field name found in array (do not use numeric field names in embedded elements in an array)
+
+  or a similar error. This fix makes this crash less likely, but it does not
+  elimiate the possibility that it will occur.
 
 - Fixed a bug where ``mongosync`` could crash when indexes apply constraints 
   to collection documents.
@@ -88,4 +99,4 @@ Issues Fixed:
 Minimum Supported Version
 -------------------------
 
-In 1.6, the minimum supported version of MongoDB is 6.0.8.
+In 1.6, the minimum supported versions of MongoDB are 6.0.8 and 7.0.0.
