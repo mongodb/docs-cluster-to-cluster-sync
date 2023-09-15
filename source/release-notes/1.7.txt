@@ -24,6 +24,8 @@ Cross Version Synchronization
 
 .. include:: /includes/cross-version-sync.rst
 
+To set a migration name, see :setting:`migrationName`.
+
 Minimum Supported Version
 -------------------------
 
