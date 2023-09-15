@@ -69,20 +69,20 @@ Issues Fixed:
 
 - Fixed bug introduced in 1.5, where ``mongosync`` could fail to apply change
   events for a document if they occur shortly after the document is copied during
-  the Collection Copy phases. (:issue:`REP-3253`)
+  the Collection Copy phase. (:issue:`REP-3253`)
 
-- Fixed bug where ``mongosync`` could crash due to source cluster containing
+- Fixed bug where ``mongosync`` could crash due to the source cluster containing
   legacy indexes with unknown index options. (:issue:`REP-2885`)
 
-- Fixed a bug where mongosync could crash with an error during change event 
-  application due to its failing to read 500 documents within 5 minutes or 
-  reaching the end of the oplog when reading from change streams on the source
+- Fixed bug where ``mongosync`` could crash with an error during change event 
+  application, if the application fails to read 500 documents within 5 minutes
+  or reaches the end of the oplog when reading from change streams on the source
   cluster. (:issue:`REP-3012`)
 
-- Fixed bug where ``mongosync`` could crash with error when indexes apply
-  constraints to collection documents. (:issue:`REP-2886`)
+- Fixed bug where ``mongosync`` could crash when indexes apply constraints 
+  to collection documents. (:issue:`REP-2886`)
 
-- Fixed a bug where ``mongosync`` can fail to copy certain documents if 
+- Fixed bug where ``mongosync`` can fail to copy certain documents if 
   the insertion of documents causes duplicate key errors at the same time 
   as a write concern error. (:issue:`REP-3258`)
 
