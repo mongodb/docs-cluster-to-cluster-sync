@@ -53,9 +53,15 @@ Follow the instructions below to setup {+c2c-product-name+}.
       The source and destination clusters must be:
       
       - at least MongoDB 6.0.
-      - the same server version
       - at least Feature Compatibility Version 6.0
-      - the same Feature Compatibility Version
+
+      In ``mongosync`` versions earlier than 1.7.0, the clusters must
+      have the same:
+
+      - server version
+      - Feature Compatibility Version
+
+      .. include:: /includes/cross-version-sync.rst
 
       The number of nodes in the destination replica set does not have
       to equal the number of nodes in the source replica set.

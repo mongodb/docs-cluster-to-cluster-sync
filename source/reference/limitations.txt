@@ -43,10 +43,15 @@ General Limitations
   - ``mongosync`` does not support sync from a MongoDB 6.0.9 source cluster to 
     a MongoDB 7.0.0 destination cluster, since they have different major
     versions.
+- In ``mongosync`` versions earlier than 1.7.0, the source and
+  destination clusters must run the same MongoDB server release version
+  and have the same :dbcommand:`Feature Compatibility Version
+  <setFeatureCompatibilityVersion>`.
+
+  .. include:: /includes/cross-version-sync.rst
+
 - The minimum supported :dbcommand:`Feature Compatibility Version
   <setFeatureCompatibilityVersion>` is 6.0.
-- The source and destination clusters must have the same Feature
-  Compatibility Version.
 - The destination cluster must be empty.
 - ``mongosync`` does not validate that the clusters or the environment
   are properly configured. 
