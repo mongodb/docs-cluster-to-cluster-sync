@@ -47,6 +47,7 @@ General Limitations
   destination clusters must run the same MongoDB server release version
   and have the same :dbcommand:`Feature Compatibility Version
   <setFeatureCompatibilityVersion>`.
+- .. include:: /includes/version-sync-limitation.rst
 
   .. include:: /includes/cross-version-sync.rst
 

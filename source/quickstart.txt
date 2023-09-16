@@ -55,11 +55,7 @@ Follow the instructions below to setup {+c2c-product-name+}.
       - at least MongoDB 6.0.
       - at least Feature Compatibility Version 6.0
 
-      In ``mongosync`` versions earlier than 1.7.0, the clusters must
-      have the same:
-
-      - server version
-      - Feature Compatibility Version
+      .. include:: /includes/version-sync-limitation.rst
 
       .. include:: /includes/cross-version-sync.rst
 
