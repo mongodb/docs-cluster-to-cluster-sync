@@ -19,8 +19,8 @@ Release Notes for mongosync 1.7
 
 **Upcoming**
 
-Synchronize Data Between Clusters with Different MongoDB Server Versions
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Synchronize Data Between Clusters with Different MongoDB Server Major Versions
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. include:: /includes/cross-version-sync.rst
 
