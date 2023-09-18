@@ -101,7 +101,6 @@ Issues Fixed:
 1.7.0 Release
 -------------
 
-<<<<<<< HEAD
 **October 18, 2023**
 
 Live Upgrade
