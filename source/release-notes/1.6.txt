@@ -94,7 +94,7 @@ Issues Fixed:
 
 - Fixed a bug where ``mongosync`` can fail to copy certain documents if 
   the insertion of documents causes duplicate key errors at the same time 
-  as a write concern error.
+  as a write concern error. This bug has been present in mongosync since its first release and may have arisen if the destination cluster logs reported a write concern error alongside a duplicate key error.
 
 Minimum Supported Version
 -------------------------
