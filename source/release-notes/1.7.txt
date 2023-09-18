@@ -136,6 +136,11 @@ Issues Fixed:
   initialization if the user specified only an exclusion filter and there were
   no fully excluded databases.
 
+Set a Migration Name
+~~~~~~~~~~~~~~~~~~~~
+
+.. include:: /includes/migrationName-description.rst
+
 Minimum Supported Version
 -------------------------
 
