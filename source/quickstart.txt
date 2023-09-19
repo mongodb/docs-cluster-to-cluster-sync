@@ -25,7 +25,7 @@ the rest of the {+c2c-product-name+} documentation.
 Setup
 -----
 
-{+c2c-product-name+} syncs data between two clusters. To run
+{+c2c-product-name+} syncs data between clusters. To run
 ``mongosync``, you will need to: 
 
 #. Define a source and a destination cluster.
@@ -254,4 +254,8 @@ Synchronization Notes
 - To estimate the size of ``oplog`` needed for initial synchronization,
   see :ref:`c2c-oplog-sizing`.
 
+Synchronize Data from Many Clusters to One Cluster
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. include:: /includes/many-to-one-cluster-sync.rst
 
