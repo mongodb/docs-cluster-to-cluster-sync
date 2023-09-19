@@ -33,9 +33,6 @@ the rest of the {+c2c-product-name+} documentation.
 
 - Sharded clusters are not required to have the same number of shards.
 
-{+c2c-product-name+} syncs data between clusters. To run
-``mongosync``, you will need to: 
-
 - The destination cluster must be the same version or up to two versions ahead
   of the source cluster. The patch version is not important, so long as they 
   meets the minimum patch :ref:`version requirements
@@ -198,8 +195,6 @@ Initialization Notes
   <c2c-api-start>` command. "cluster0" and "cluster1" are just labels,
   either cluster can be ``cluster0`` or ``cluster1``.
 
-.. _c2c-quickstart-synchronize:
-
 Synchronize Data Between Clusters
 ---------------------------------
 
@@ -310,45 +305,8 @@ Synchronization Notes
 
 - To estimate the size of ``oplog`` needed for initial synchronization,
   see :ref:`c2c-oplog-sizing`.
-<<<<<<< HEAD
-=======
 
-.. _c2c-quickstart-many-with-one:
+Synchronize Data from Many Clusters to One Cluster
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Sync Many Source Clusters with One Destination Cluster
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-.. include:: /includes/many-with-one-cluster.rst
-
-The following examples show two commands that connect the source
-clusters running on port 27000 and 27001 with the destination cluster
-running on port 35000. The commands also set the optional
-:option:`migrationName` command line option to differentiate the
-operations.
-
-.. code-block:: shell
-
-   ./bin/mongosync \
-         --cluster0 "mongodb://localhost:27000" \
-         --cluster1 "mongodb://localhost:35000" --migrationName "Cluster 27000 to cluster 35000"
-
-   ./bin/mongosync \
-         --cluster0 "mongodb://localhost:27001" \
-         --cluster1 "mongodb://localhost:35000" --migrationName "Cluster 27001 to cluster 35000"
-
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> b2a0473... DOCSP-29504-many-to-one-clusters
-=======
-You can then start the data sync from the two clusters to the one
-cluster. For details, see :ref:`c2c-quickstart-synchronize`.
->>>>>>> 9323628... DOCSP-29504-many-to-one-clusters
-=======
-You can then start the sync between the two source clusters and the
-destination cluster. For details, see the earlier section
-:ref:`c2c-quickstart-synchronize`.
-
-.. note::
-
-   All the clusters must have unique database and collection namespaces.
->>>>>>> e847913... DOCSP-29504-many-to-one-clusters
+.. include:: /includes/many-to-one-cluster-sync.rst
