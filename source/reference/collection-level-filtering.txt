@@ -47,7 +47,7 @@ Filters have the following syntax:
        }
     ]
 
-Filters must include either the ``database`` field or the ``databaseRegex`` field.
+Filters must include the ``database`` field. 
 
 .. _c2c-configure-filter:
 
