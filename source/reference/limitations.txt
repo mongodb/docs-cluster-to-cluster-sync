@@ -55,7 +55,6 @@ General Limitations
 - ``mongosync`` must read from the source cluster using the 
   :readmode:`primary` read preference.
 
-
 MongoDB Community Edition
 -------------------------
 

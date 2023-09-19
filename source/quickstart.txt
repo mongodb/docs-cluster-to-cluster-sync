@@ -313,17 +313,18 @@ Synchronization Notes
 <<<<<<< HEAD
 =======
 
-.. _c2c-quickstart-many-to-one:
+.. _c2c-quickstart-many-with-one:
 
-Sync Data from Many Clusters to One Cluster
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Sync Many Source Clusters with One Destination Cluster
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. include:: /includes/many-to-one-cluster.rst
+.. include:: /includes/many-with-one-cluster.rst
 
-The following examples show two commands that connect to the
-clusters running on port 27000 and 27001 to the cluster running on port
-35000. The commands also set the optional :option:`migrationName`
-command line option to differentiate the operations.
+The following examples show two commands that connect the source
+clusters running on port 27000 and 27001 with the destination cluster
+running on port 35000. The commands also set the optional
+:option:`migrationName` command line option to differentiate the
+operations.
 
 .. code-block:: shell
 
@@ -336,8 +337,18 @@ command line option to differentiate the operations.
          --cluster1 "mongodb://localhost:35000" --migrationName "Cluster 27001 to cluster 35000"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> b2a0473... DOCSP-29504-many-to-one-clusters
 =======
 You can then start the data sync from the two clusters to the one
 cluster. For details, see :ref:`c2c-quickstart-synchronize`.
 >>>>>>> 9323628... DOCSP-29504-many-to-one-clusters
+=======
+You can then start the sync between the two source clusters and the
+destination cluster. For details, see the earlier section
+:ref:`c2c-quickstart-synchronize`.
+
+.. note::
+
+   All the clusters must have unique database and collection namespaces.
+>>>>>>> e847913... DOCSP-29504-many-to-one-clusters

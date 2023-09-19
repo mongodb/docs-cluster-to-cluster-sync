@@ -13,4 +13,4 @@ For example, if you set ``migrationName`` to ``"Cluster 27000 to
 cluster 35000"``, the string added to the database is
 ``"mongosync_internal_Cluster 27000 to cluster 35000"``.
 
-For a full example, see :ref:`c2c-quickstart-many-to-one`.
+For a full example, see :ref:`c2c-quickstart-many-with-one`.
