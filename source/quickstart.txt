@@ -33,6 +33,9 @@ the rest of the {+c2c-product-name+} documentation.
 
 - Sharded clusters are not required to have the same number of shards.
 
+{+c2c-product-name+} syncs data between clusters. To run
+``mongosync``, you will need to: 
+
 - The destination cluster must be the same version or up to two versions ahead
   of the source cluster. The patch version is not important, so long as they 
   meets the minimum patch :ref:`version requirements
@@ -305,3 +308,12 @@ Synchronization Notes
 
 - To estimate the size of ``oplog`` needed for initial synchronization,
   see :ref:`c2c-oplog-sizing`.
+<<<<<<< HEAD
+=======
+
+Synchronize Data from Many Clusters to One Cluster
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. include:: /includes/many-to-one-cluster-sync.rst
+
+>>>>>>> b2a0473... DOCSP-29504-many-to-one-clusters
