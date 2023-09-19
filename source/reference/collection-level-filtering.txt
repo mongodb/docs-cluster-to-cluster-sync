@@ -350,8 +350,3 @@ Adding and Renaming Collections While Syncing
 
 .. include:: /includes/example-filter-collection-with-renaming.rst
 
-.. toctree::
-   :hidden:
-
-   /reference/collection-level-filtering/filter-regex
-
