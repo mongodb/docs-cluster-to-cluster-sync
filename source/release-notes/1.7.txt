@@ -141,6 +141,11 @@ Set a Migration Name
 
 .. include:: /includes/migrationName-description.rst
 
+To set a data migration name, see:
+
+- :setting:`migrationName` configuration file setting
+- :option:`migrationName` command line option
+
 Minimum Supported Version
 -------------------------
 
