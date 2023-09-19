@@ -75,6 +75,9 @@ General Limitations
   isn't supported.
 - You cannot sync a collection that has a unique index and a non-unique
   index defined on the same field(s).
+- Starting in ``mongosh`` 1.7.0, you can sync many source clusters with
+  one destination cluster. All the clusters must have unique
+  database and collection namespaces.
 
 MongoDB Community Edition
 -------------------------
