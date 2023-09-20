@@ -57,8 +57,8 @@ General Limitations
 
 .. _c2c-limitations_multiple_sync:
 
-Mutiple Simultaneous Sync Limitations
--------------------------------------
+Multiple Source Sync Limitations
+--------------------------------
 
 .. include:: /includes/many-with-one-cluster.rst
 

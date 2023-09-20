@@ -308,8 +308,8 @@ Synchronization Notes
 
 .. _c2c-quickstart-many-with-one:
 
-Sync Many Source Clusters with One Destination Cluster
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Sync Multiple Source Clusters Simultaneously with a Destination Cluster
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. include:: /includes/many-with-one-cluster.rst
 
