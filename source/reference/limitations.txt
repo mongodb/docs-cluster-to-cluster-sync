@@ -55,6 +55,36 @@ General Limitations
 - ``mongosync`` must read from the source cluster using the 
   :readmode:`primary` read preference.
 
+.. _c2c-limitations_multiple_sync:
+
+Mutiple Simultaneous Sync Limitations
+-------------------------------------
+
+Starting in ``mongosync`` 1.7.0, you can perform multiple simultaneous
+syncs into a single destination cluster. You can only sync namespaces
+that don't conflict. A namespace is the
+``database_name.collection_name`` combination.
+
+For example:
+
+- Two source clusters, S1 and S2, and a destination cluster D.
+- Databases X and Y on both S1 and S2.
+- Collections A, B, C, and D on both S1 and S2.
+- You can sync:
+
+  - ``X.A`` and ``Y.C`` on S1 with D.
+  - ``X.B`` and ``Y.D`` on S2 with D.
+
+- You cannot sync:
+
+  - X.A and X.B on S1 with D.
+  - X.A and X.B on S2 with D.
+    
+  D is initially empty. You can start a non-filtered sync from S1 to
+  D. ``X.A`` and ``X.B`` are copied. You cannot perform another sync
+  from S2 to D because ``X.A`` and ``X.B`` conflict with collections
+  that already exist on D. 
+
 MongoDB Community Edition
 -------------------------
 

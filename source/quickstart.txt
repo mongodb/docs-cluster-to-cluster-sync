@@ -306,7 +306,30 @@ Synchronization Notes
 - To estimate the size of ``oplog`` needed for initial synchronization,
   see :ref:`c2c-oplog-sizing`.
 
-Synchronize Data from Many Clusters to One Cluster
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.. _c2c-quickstart-many-with-one:
+
+Sync Many Source Clusters with One Destination Cluster
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. include:: /includes/many-with-one-cluster.rst
+
+For limitations, see :ref:`c2c-limitations_multiple_sync`.
+
+The following examples connect source clusters running on port 27000 and
+27001 with a destination cluster running on port 35000. The commands
+also set the optional :option:`migrationName` command line option to
+identify the operations.
+
+.. code-block:: shell
+
+   ./bin/mongosync \
+         --cluster0 "mongodb://localhost:27000" \
+         --cluster1 "mongodb://localhost:35000" \
+         --migrationName "Cluster 27000 to cluster 35000"
+
+   ./bin/mongosync \
+         --cluster0 "mongodb://localhost:27001" \
+         --cluster1 "mongodb://localhost:35000" \
+         --migrationName "Cluster 27001 to cluster 35000"
 
 .. include:: /includes/many-to-one-cluster-sync.rst
