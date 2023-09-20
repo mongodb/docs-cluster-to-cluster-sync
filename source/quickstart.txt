@@ -317,7 +317,7 @@ For limitations, see :ref:`c2c-limitations_multiple_sync`.
 
 The following examples connect source clusters running on port 27000 and
 27001 with a destination cluster running on port 35000. The commands
-also set the optional :option:`migrationName` command line option to
+also set the optional :option:`--migrationName` command line option to
 identify the operations.
 
 .. code-block:: shell

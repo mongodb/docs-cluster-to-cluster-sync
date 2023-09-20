@@ -144,7 +144,7 @@ Set a Migration Name
 To set a migration name, see:
 
 - :setting:`migrationName` configuration file setting
-- :option:`migrationName` command line option
+- :option:`--migrationName` command line option
 
 Minimum Supported Version
 -------------------------
