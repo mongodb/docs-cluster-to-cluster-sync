@@ -76,8 +76,22 @@ General Limitations
 - You cannot sync a collection that has a unique index and a non-unique
   index defined on the same field(s).
 - Starting in ``mongosh`` 1.7.0, you can sync many source clusters with
-  one destination cluster. All the clusters must have unique
-  database and collection namespaces.
+  one destination cluster. You can only sync unique namespaces, which
+  means the ``database.collection`` combinations you sync must be
+  unique. An example scenario:
+
+  - Two source clusters, S1 and S2, and a destination cluster D.
+  - Databases X and Y on both S1 and S2.
+  - Collections A, B, C, and D on both S1 and S2.
+  - You can sync:
+
+    - ``X.A`` and ``Y.C`` on S1 with D.
+    - ``X.B`` and ``Y.D`` on S2 with D.
+
+  - You cannot sync:
+
+    - ``X.B`` or ``Y.D`` on S1 with D.
+    - ``X.A`` or ``Y.C`` on S2 with D.
 
 MongoDB Community Edition
 -------------------------
