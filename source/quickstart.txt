@@ -333,3 +333,7 @@ identify the operations.
          --migrationName "Cluster 27001 to cluster 35000"
 
 .. include:: /includes/many-to-one-cluster-sync.rst
+
+To start the sync operation between the source clusters and the
+destination cluster, see the earlier section
+:ref:`c2c-quickstart-synchronize`.

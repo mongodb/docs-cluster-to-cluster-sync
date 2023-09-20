@@ -81,8 +81,8 @@ For example, consider this scenario:
   - ``X.A`` and ``X.B`` on S1 with D.
   - ``X.A`` and ``X.B`` on S2 with D.
     
-  If D is initially empty, you can sync from S1 to D. ``X.A`` and
-  ``X.B`` are copied from S1 to D. You cannot sync from S2 to D because
+  If D is initially empty, you can sync S1 with D. ``X.A`` and
+  ``X.B`` are copied from S1 to D. You cannot sync S2 with D because
   ``X.A`` and ``X.B`` conflict with the collections already on D. 
 
 MongoDB Community Edition
