@@ -75,28 +75,36 @@ General Limitations
   isn't supported.
 - You cannot sync a collection that has a unique index and a non-unique
   index defined on the same field(s).
-- Starting in ``mongosync`` 1.7.0, you can perform multiple simultaneous
-  syncs into a single destination cluster. You can only sync unique
-  namespaces, which means the ``database.collection`` combinations you
-  sync must be unique. Example scenario:
 
-  - Two source clusters, S1 and S2, and a destination cluster D.
-  - Databases X and Y on both S1 and S2.
-  - Collections A, B, C, and D on both S1 and S2.
-  - You can sync:
+.. _c2c-limitations_multiple_sync:
 
-    - ``X.A`` and ``Y.C`` on S1 with D.
-    - ``X.B`` and ``Y.D`` on S2 with D.
+Mutiple Simultaneous Sync Limitations
+-------------------------------------
 
-  - You cannot sync:
+Starting in ``mongosync`` 1.7.0, you can perform multiple simultaneous
+syncs into a single destination cluster. You can only sync namespaces
+that don't conflict. A namespace is the
+``database_name.collection_name`` combination.
 
-    - X.A and X.B on S1 with D.
-    - X.A and X.B on S2 with D.
+For example:
+
+- Two source clusters, S1 and S2, and a destination cluster D.
+- Databases X and Y on both S1 and S2.
+- Collections A, B, C, and D on both S1 and S2.
+- You can sync:
+
+  - ``X.A`` and ``Y.C`` on S1 with D.
+  - ``X.B`` and ``Y.D`` on S2 with D.
+
+- You cannot sync:
+
+  - X.A and X.B on S1 with D.
+  - X.A and X.B on S2 with D.
     
-    D is initially empty. You can start a non-filtered sync from S1 to
-    D. ``X.A`` and ``X.B`` are copied. You cannot perform another sync
-    from S2 to D because ``X.A`` and ``X.B`` conflict with collections
-    that already exist on D. 
+  D is initially empty. You can start a non-filtered sync from S1 to
+  D. ``X.A`` and ``X.B`` are copied. You cannot perform another sync
+  from S2 to D because ``X.A`` and ``X.B`` conflict with collections
+  that already exist on D. 
 
 MongoDB Community Edition
 -------------------------
