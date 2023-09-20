@@ -3,7 +3,9 @@
 
 .. versionadded:: 1.7.0
 
-.. include:: /includes/migrationName-description.rst
+Sets a migration name for a sync operation. For example, you can set a
+migration name to identify the sync operations from multiple source
+clusters into one destination cluster.
 
 The ``migrationName`` string can contain up to 44 alphanumeric and
 underscore characters. ``migrationName`` is appended to the string
