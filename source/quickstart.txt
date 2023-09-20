@@ -282,5 +282,6 @@ identify the operations.
          --cluster1 "mongodb://localhost:35000" \
          --migrationName "Cluster 27001 to cluster 35000"
 
-To start the sync between the two source clusters and the destination
-cluster, see the earlier section :ref:`c2c-quickstart-synchronize`.
+To start the sync operation between the source clusters and the
+destination cluster, see the earlier section
+:ref:`c2c-quickstart-synchronize`.
