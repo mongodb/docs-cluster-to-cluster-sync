@@ -75,10 +75,10 @@ General Limitations
   isn't supported.
 - You cannot sync a collection that has a unique index and a non-unique
   index defined on the same field(s).
-- Starting in ``mongosh`` 1.7.0, you can sync many source clusters with
-  one destination cluster. You can only sync unique namespaces, which
-  means the ``database.collection`` combinations you sync must be
-  unique. An example scenario:
+- Starting in ``mongosync`` 1.7.0, you can perform multiple simultaneous
+  syncs into a single destination cluster. You can only sync unique
+  namespaces, which means the ``database.collection`` combinations you
+  sync must be unique. Example scenario:
 
   - Two source clusters, S1 and S2, and a destination cluster D.
   - Databases X and Y on both S1 and S2.
@@ -90,8 +90,13 @@ General Limitations
 
   - You cannot sync:
 
-    - ``X.B`` or ``Y.D`` on S1 with D.
-    - ``X.A`` or ``Y.C`` on S2 with D.
+    - X.A and X.B on S1 with D.
+    - X.A and X.B on S2 with D.
+    
+    D is initially empty. You can start a non-filtered sync from S1 to
+    D. ``X.A`` and ``X.B`` are copied. You cannot perform another sync
+    from S2 to D because ``X.A`` and ``X.B`` conflict with collections
+    that already exist on D. 
 
 MongoDB Community Edition
 -------------------------
