@@ -84,22 +84,22 @@ New Features:
 Issues Fixed:
 
 - Fixed a bug introduced in 1.5, where ``mongosync`` could fail to apply change
-  events for a document if they occur shortly after the document is copied during
-  the Collection Copy phase.
+  events for a document if they occur shortly after the document is copied
+  during the Collection Copy phase.
 
-- Fixed a bug where ``mongosync`` could crash due to the source cluster containing
-  legacy indexes with unknown index options.
+- Fixed a bug where ``mongosync`` could crash due to the source cluster
+  containing legacy indexes with unknown index options.
 
-- Fixed a bug where ``mongosync`` could crash with an error during change event 
+- Fixed a bug where ``mongosync`` could crash with an error during change event
   application, if the application fails to read 500 documents within 5 minutes
-  or reaches the end of the oplog when reading from change streams on the source
-  cluster.
+  or reaches the end of the oplog when reading from change streams on the
+  source cluster.
 
-- Fixed a bug where ``mongosync`` could crash when indexes apply constraints 
-  to collection documents.
+- Fixed a bug where ``mongosync`` could crash when indexes apply constraints to
+  collection documents.
 
   This crash occured when such an index was added or dropped at nearly the same
-  time as an index that violated these constrains was deleted or inserted.  It 
+  time as an index that violated these constrains was deleted or inserted.  It
   would manifest with an error like:
 
   .. code-block:: text
@@ -110,11 +110,11 @@ Issues Fixed:
   or a similar error. This fix makes this crash less likely, but it does not
   elimiate the possibility that it will occur.
 
-
-
-- Fixed a bug where ``mongosync`` can fail to copy certain documents if 
-  the insertion of documents causes duplicate key errors at the same time 
-  as a write concern error. This bug has been present in mongosync since its first release and may have arisen if the destination cluster logs reported a write concern error alongside a duplicate key error.
+- Fixed a bug where ``mongosync`` can fail to copy certain documents if the
+  insertion of documents causes duplicate key errors at the same time as a
+  write concern error. This bug has been present in mongosync since its first
+  release and may have arisen if the destination cluster logs reported a write
+  concern error alongside a duplicate key error.
 
 Minimum Supported Version
 -------------------------
