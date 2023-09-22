@@ -116,6 +116,28 @@ Issues Fixed:
   release and may have arisen if the destination cluster logs reported a write
   concern error alongside a duplicate key error.
 
+- Fixed a bug introduced in ``mongosync`` 1.5 where change events may be
+  skipped during the Collection Copy phase when there is little write activity
+  on the source cluster.
+
+- Fixed a bug introduced in 1.5 where ``mongosync`` could cause data
+  consistency errors in collections with non-default collation. 
+
+  This issue only affects collections with non-simple collation that are present
+  during ``mongosync`` initialization. Collections with non-simple collation
+  created after ``mongosync`` initialization are not affected.
+
+  .. note::
+
+     Users who used Oplog Rollover Resilience with at least one collection with
+     non-simple collation and string _id fields may have been affected by this
+     issue. 
+     
+     In order to mitigate this issue, ``monogsync`` 1.6.0 automatically
+     disables Oplog Rollover Resilience if it finds at least one collection with
+     non-simple collation during initialization. We will investigate a
+     more permanent solution for future releases.
+
 Minimum Supported Version
 -------------------------
 
