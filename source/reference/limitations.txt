@@ -69,8 +69,8 @@ For example, consider this scenario:
 
 - Two source clusters S1 and S2.
 - A destination cluster D.
-- Databases ``inventory`` and ``sales`` on both S1 and S2.
-- Collections ``products``, ``orderLines``, ``orderStatus``, and
+- Databases named ``inventory`` and ``sales`` on both S1 and S2.
+- Collections named ``products``, ``orderLines``, ``orderStatus``, and
   ``orders`` on both S1 and S2.
 - You can sync both of these combinations:
 
@@ -84,7 +84,8 @@ For example, consider this scenario:
     and ``inventory.orderLines`` are copied from S1 to D.
   - ``inventory.products`` and ``inventory.orderLines`` on S2 with D.
     You cannot sync S2 with D because ``inventory.products`` and
-    ``inventory.orderLines`` conflict with the namespaces already on D.
+    ``inventory.orderLines`` conflict with the namespaces already on D
+    from the previous point.
 
 MongoDB Community Edition
 -------------------------
