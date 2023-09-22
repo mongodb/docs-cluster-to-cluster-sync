@@ -77,7 +77,7 @@ For example, consider this scenario:
   - ``inventory.products`` and ``sales.orderStatus`` on S1 with D.
   - ``inventory.orderLines`` and ``sales.orders`` on S2 with D.
 
-- You cannot sync both of these combinations:
+- You cannot sync both of these combinations because they conflict:
 
   - ``inventory.products`` and ``inventory.orderLines`` on S1 with D. If
     D is initially empty, you can sync S1 with D. ``inventory.products``
