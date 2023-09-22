@@ -69,21 +69,22 @@ For example, consider this scenario:
 
 - Two source clusters S1 and S2.
 - A destination cluster D.
-- Databases ``X`` and ``Y`` on both S1 and S2.
-- Collections ``A``, ``B``, ``C``, and ``D`` on both S1 and S2.
+- Databases ``inventory`` and ``sales`` on both S1 and S2.
+- Collections ``products``, ``orderLines``, ``orderStatus``, and
+  ``orders`` on both S1 and S2.
 - You can sync both of these combinations:
 
-  - ``X.A`` and ``Y.C`` on S1 with D.
-  - ``X.B`` and ``Y.D`` on S2 with D.
+  - ``inventory.products`` and ``sales.orderStatus`` on S1 with D.
+  - ``inventory.orderLines`` and ``sales.orders`` on S2 with D.
 
 - You cannot sync both of these combinations:
 
-  - ``X.A`` and ``X.B`` on S1 with D.
-  - ``X.A`` and ``X.B`` on S2 with D.
-    
-  If D is initially empty, you can sync S1 with D. ``X.A`` and
-  ``X.B`` are copied from S1 to D. You cannot sync S2 with D because
-  ``X.A`` and ``X.B`` conflict with the collections already on D. 
+  - ``inventory.products`` and ``inventory.orderLines`` on S1 with D. If
+    D is initially empty, you can sync S1 with D. ``inventory.products``
+    and ``inventory.orderLines`` are copied from S1 to D.
+  - ``inventory.products`` and ``inventory.orderLines`` on S2 with D.
+    You cannot sync S2 with D because ``inventory.products`` and
+    ``inventory.orderLines`` conflict with the namespaces already on D.
 
 MongoDB Community Edition
 -------------------------
