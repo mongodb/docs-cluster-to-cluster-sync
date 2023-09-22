@@ -12,7 +12,7 @@ and underscore characters. ``migrationName`` is appended to the string
 ``"mongosync_internal_"``.
 
 If you set ``migrationName`` to
-``"cluster_27000_to_cluster_35000_sync"``, the final string is
+``"cluster_27000_to_cluster_35000_sync"``, the resulting final string is
 ``"mongosync_internal_cluster_27000_to_cluster_35000_sync"``.
 
 For a complete example, see :ref:`c2c-quickstart-many-with-one`.
