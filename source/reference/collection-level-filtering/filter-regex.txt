@@ -104,7 +104,7 @@ that begin start with the ``accounts_`` string:
       {
          "database": "sales",
          "collectionRegex": {
-            "pattern": "^accounts_.+?",
+            "pattern": "^accounts_.+?$",
             "options": "ms"
          }
       }

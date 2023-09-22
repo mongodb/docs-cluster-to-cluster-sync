@@ -108,11 +108,13 @@ Configure a Filter
    .. step:: Identify Databases and Collections.
 
       Identify the databases and collections that you want to sync to
-      the destination cluster. When you add a set of databases to the
-      filter, you also exclude any other databases in the cluster.
+      the destination cluster. 
+
+      - When you add a set of databases to the filter, you also exclude any
+        other databases in the cluster.
       
-      When you specify a collection in your filter, you also exclude any
-      other collections that are in the same database.
+      - When you specify a collection in your filter, you also exclude any
+        other collections that are in the same database.
 
    .. step:: Create a Filter.
 
@@ -142,7 +144,7 @@ Configure a Filter
             {
                "database": "sales",
                "collectionRegex": {
-                  "pattern": "^accounts_.+$",
+                  "pattern": "^accounts_.+?$",
                   "options": "ms"
                }
          ],
