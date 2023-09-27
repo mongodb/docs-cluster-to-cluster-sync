@@ -32,7 +32,7 @@ line options.
    - Standalone MongoDB instances are not supported. :ref:`Convert the
      standalone instance <server-replica-set-deploy-convert>` to a
      replica set before using {+c2c-product-name+}. 
-   - ``mongosync`` does not support {+atlas+} shared clusters or serverless 
+   - ``mongosync`` does not support atlas shared clusters or serverless 
      instances. For more information, see :ref:`c2c-limitations`.
 
 .. _c2c-cli-options:
