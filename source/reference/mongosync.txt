@@ -28,12 +28,14 @@ line options.
 
    - Both the source cluster and destination cluster must use MongoDB
      6.0 or later.
-   - ``mongosync`` supports replica sets and sharded clusters.
-   - Standalone MongoDB instances are not supported. :ref:`Convert the
+   - ``mongosync`` supports replica sets and sharded clusters. -
+     Standalone MongoDB instances are not supported. :ref:`Convert the
      standalone instance <server-replica-set-deploy-convert>` to a
      replica set before using {+c2c-product-name+}. 
    - ``mongosync`` does not support Atlas shared clusters or serverless 
-     instances. For more information, see :ref:`c2c-limitations`.
+     instances. 
+   - For a full list of limitations, see :ref:`Cluster to Cluster Sync
+     Limitations<c2c-limitations>`. 
 
 .. _c2c-cli-options:
 
