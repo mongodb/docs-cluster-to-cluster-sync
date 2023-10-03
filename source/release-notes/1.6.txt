@@ -21,6 +21,8 @@ Patch Releases
 1.6.1 Release
 ~~~~~~~~~~~~~
 
+**October 3, 2023**
+
 Issues Fixed:
 
 - Fixed a bug that can cause long running ``mongosync`` operations to
