@@ -23,8 +23,8 @@ Patch Releases
 
 Issues Fixed:
 
-- Fixed a bug that may cause long running ``mongosync`` operations to
-  prematurely timeout. In consequence of this change, ``mongosync`` produces
+- Fixed a bug that can cause long running ``mongosync`` operations to
+  prematurely timeout. Now, ``mongosync`` produces
   fewer ``MaxTimeMSExpired`` errors during the collection copy phase.
 
 
