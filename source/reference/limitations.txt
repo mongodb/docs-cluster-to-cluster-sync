@@ -119,7 +119,7 @@ Sharded Clusters
 - ``mongosync`` only syncs indexes that have consistent index
   specifications on all shards. 
 
-.. note:
+.. note::
 
   To check for index inconsistencies, see :ref:`Find Inconsistent
   Indexes Across Shards <manage-indexes-find-inconsistent-indexes>`.
