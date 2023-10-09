@@ -95,8 +95,6 @@ Live Upgrade
 After the live upgrade, ``mongosync`` continues operations that were in
 progress before the upgrade.
 
-You can live upgrade ``mongosync`` to the latest version.
-
 To live upgrade ``mongosync``, perform these steps:
 
 .. procedure::
