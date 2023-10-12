@@ -32,8 +32,9 @@ General Limitations
   6.2. The minimum supported server version is MongoDB 6.0.5.
   For more information on MongoDB versioning, see
   :ref:`release-version-numbers`.
-- The source and destination clusters must have the same major and minor
-  release version, but can have different patch releases.
+- In ``mongosync`` versions earlier than 1.7.0, the source and
+  destination clusters must have the same major and minor release
+  version, but can have different patch releases.
 
   For example,
 
