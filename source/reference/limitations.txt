@@ -35,7 +35,7 @@ General Limitations
 - In ``mongosync`` versions earlier than 1.7.0, the source and
   destination clusters must have the same major and minor release
   version, but can have different patch releases.
- 
+
   For example:
 
   - ``mongosync`` can sync from a MongoDB 6.0.8 source cluster to a
