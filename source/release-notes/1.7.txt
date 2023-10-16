@@ -24,7 +24,6 @@ Synchronize Data Between Clusters with Different MongoDB Server Major Versions
 
 .. include:: /includes/cross-version-sync.rst
 
-
 Minimum Supported Version
 -------------------------
 
