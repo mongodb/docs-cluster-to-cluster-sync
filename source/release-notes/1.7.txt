@@ -24,17 +24,6 @@ Synchronize Data Between Clusters with Different MongoDB Server Major Versions
 
 .. include:: /includes/cross-version-sync.rst
 
-Cross Version Migration
-~~~~~~~~~~~~~~~~~~~~~~~
-
-Starting in 1.7.0, ``mongosync`` can perform a cross version migration
-from a lower major version source cluster to a higher major version
-destination cluster, up to two major versions ahead. For example,
-migrate from 6.0 to 7.0. This requires additional preparation and
-configuration when the source cluster is a pre-6.0 release. If you would
-like to perform a cross version migration from a pre-6.0 source
-cluster, please `contact <https://mongodb.com/contact>`__ your account
-team to inquire about Professional Services.
 
 Minimum Supported Version
 -------------------------
