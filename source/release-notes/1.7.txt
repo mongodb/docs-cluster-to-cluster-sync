@@ -26,6 +26,11 @@ Live Upgrade
 
 For details, see :ref:`c2c-versioning-live-upgrade`.
 
+Synchronize Data Between Clusters with Different MongoDB Server Major Versions
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. include:: /includes/cross-version-sync.rst
+
 Minimum Supported Version
 -------------------------
 
