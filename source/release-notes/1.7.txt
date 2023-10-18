@@ -17,7 +17,7 @@ Release Notes for mongosync 1.7
 1.7.0 Release
 -------------
 
-**Upcoming**
+**October 18, 2023**
 
 Live Upgrade
 ~~~~~~~~~~~~
