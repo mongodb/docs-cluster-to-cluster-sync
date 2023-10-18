@@ -31,6 +31,23 @@ Synchronize Data Between Clusters with Different MongoDB Server Major Versions
 
 .. include:: /includes/cross-version-sync.rst
 
+Other Notes
+~~~~~~~~~~~
+
+New Features:
+
+- ``mongosync`` now truncates logged fields that contain more than 1,024
+  characters.
+
+Issues Fixed:
+
+- Fixed a bug that may cause capped collection documents to be inserted out of
+  order.
+
+- Fixed bug introduced in 1.6, which caused ``mongosync`` to fail during 
+  initialization if the user specified only an exclusion filter and there were
+  no fully excluded databases.
+
 Minimum Supported Version
 -------------------------
 
