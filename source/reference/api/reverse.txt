@@ -30,9 +30,6 @@ For example:
 In this scenario, you can use the ``reverse`` endpoint to sync writes
 from ``cluster1`` to ``cluster0``.
 
-.. |endpoint| replace:: ``reverse``
-.. include:: /includes/fact-api-endpoint
-
 Requirements
 ------------
 
@@ -143,4 +140,11 @@ entire sync process to copy the original data.
 To view the mapping direction for the synchronization of the source and
 destination clusters, use the :ref:`progress <c2c-api-progress>`
 endpoint and check the ``directionMapping`` object.
+
+Endpoint Protection
+~~~~~~~~~~~~~~~~~~~
+
+.. |endpoint| replace:: ``reverse``
+.. include:: /includes/fact-api-endpoint
+
 

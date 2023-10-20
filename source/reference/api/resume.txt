@@ -19,9 +19,6 @@ Description
 Resumes a paused synchronization session based on data stored on the
 destination cluster.
 
-.. |endpoint| replace:: ``resume``
-.. include:: /includes/fact-api-endpoint
-
 Requirement
 -----------
 
@@ -76,3 +73,11 @@ Behavior
 
 If the ``resume`` request is successful, ``mongosync`` enters the
 ``RUNNING`` state.
+
+Endpoint Protection
+~~~~~~~~~~~~~~~~~~~
+
+.. |endpoint| replace:: ``resume``
+.. include:: /includes/fact-api-endpoint
+
+
