@@ -62,16 +62,17 @@ In order to reverse direction, ``mongosync`` requires that all
 Clusters that began with MongoDB 4.2 or older and were since
 upgraded may include unique indexes that are not properly formatted.
 
-To ensure that ``mongosync`` can reverse sync on databases in these clusters,
-use the :method:`db.collection.validate` method on each collection.
+To correct indexes, you can :ref:`rsync <resync-replica-member>` all nodes
+in the original source cluster.  If you don't want to resync the cluster, you
+can use the :method:`db.collection.validate` method on each collection to 
+determine whether it contains improperly formatted unique indexes.
 
 .. code-block:: javascript
 
    db.<collection>.validate()
 
 If the method returns a warning about the unique index, you must
-:ref:`resync <resync-replica-member>` all of the nodes in the
-original source cluster before reversing.
+resync all of the nodes in the original source cluster before reversing sync.
 
 Request
 -------
