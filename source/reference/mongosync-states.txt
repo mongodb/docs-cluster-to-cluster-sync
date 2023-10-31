@@ -50,7 +50,8 @@ operations in that state.
      - - ``POST`` :ref:`/start <c2c-api-start>`
        - ``GET`` :ref:`/progress <c2c-api-progress>`
 
-   * - ``RUNNING``
+   * - .. _c2c-state-running:
+       ``RUNNING``
      - The sync process is currently running. In this state, data is
        initially synced to the destination cluster. Subsequent writes to
        the source cluster are applied to the destination cluster.
@@ -58,7 +59,8 @@ operations in that state.
        - ``POST`` :ref:`/commit <c2c-api-commit>`
        - ``GET`` :ref:`/progress <c2c-api-progress>`
 
-   * - ``PAUSED``
+   * - .. _c2c-state-paused:
+       ``PAUSED``
      - The sync process is paused. To resume the sync process, send a
        request to the :ref:`/resume <c2c-api-resume>` endpoint.
      - - ``POST`` :ref:`/resume <c2c-api-resume>`
