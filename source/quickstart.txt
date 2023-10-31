@@ -73,6 +73,12 @@ Follow the instructions below to setup {+c2c-product-name+}.
       <create-new-cluster>` or to create a :ref:`self-managed cluster
       <server-replica-set-deploy>`.
 
+      .. note:: 
+
+         To minimize latency after sync completes, set 
+         :parameter:`minSnapshotHistoryWindowInSeconds` to ``0`` when creating 
+         your destination cluster. 
+
    .. step:: Define administrative users
 
       If either cluster is hosted in Atlas, or if either of them
