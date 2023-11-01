@@ -41,7 +41,7 @@
    * - ``lagTimeSeconds``
      - integer
      - Time in seconds between the last applied event and time of the
-       current latest event.
+       current latest event for this instance of ``mongosync``
 
    * - ``collectionCopy``
      - object
@@ -51,13 +51,17 @@
    * - ``collectionCopy``
        ``.estimatedTotalBytes``
      - integer
-     - Estimated total number of bytes to be copied.
+     - Estimated total number of bytes globally to be copied.
 
    * - ``collectionCopy``
        ``.estimatedCopiedBytes``
      - integer
      - Estimated number of bytes which have been copied to the
-       destination cluster.
+       destination cluster by this instance of ``mongosync``.  
+       
+       To calculate the total estimated progress, add the value of  the
+       ``estimatedCopiedBytes`` field for each instance of ``mongosync`` and
+       divide the result by the value of the ``estimatedTotalBytes`` field.
 
    * - ``directionMapping``
      - object
