@@ -75,9 +75,7 @@ Follow the instructions below to setup {+c2c-product-name+}.
 
       .. note:: 
 
-         To minimize latency after sync completes, set 
-         :parameter:`minSnapshotHistoryWindowInSeconds` to ``0`` when creating 
-         your destination cluster. 
+         .. include:: /includes/fact-destination-cluster-latency-parameter.rst
 
    .. step:: Define administrative users
 
