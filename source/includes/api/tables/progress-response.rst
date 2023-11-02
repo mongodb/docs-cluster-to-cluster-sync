@@ -51,16 +51,17 @@
    * - ``collectionCopy``
        ``.estimatedTotalBytes``
      - integer
-     - Estimated total number of bytes globally to be copied.
+     - Estimated total number of bytes to be copied globally by all ``mongosync``
+       instances.
 
    * - ``collectionCopy``
        ``.estimatedCopiedBytes``
      - integer
      - Estimated number of bytes which have been copied to the
-       destination cluster by this instance of ``mongosync``.  
+       destination cluster by this ``mongosync`` instance. 
        
        To calculate the total estimated progress, add the value of  the
-       ``estimatedCopiedBytes`` field for each instance of ``mongosync`` and
+       ``estimatedCopiedBytes`` field for each ``mongosync`` instance and
        divide the result by the value of the ``estimatedTotalBytes`` field.
 
    * - ``directionMapping``
