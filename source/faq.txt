@@ -139,5 +139,6 @@ fatal log entry.
 Does ``mongosync`` Support TTL Indexes?
 ----------------------------------------
 
-{+c2c-product-name+} supports syncing :ref:`index-feature-ttl`.
+{+c2c-product-name+} supports syncing :ref:`index-feature-ttl` from the source
+to the destination cluster.
 
