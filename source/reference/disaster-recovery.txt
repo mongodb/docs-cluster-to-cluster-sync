@@ -57,7 +57,7 @@ following changes:
 
    * - :ref:`Capped Collections <manual-capped-collection>`
      - During synchronization, capped collections are set to the maximum
-       allowable size. Use the ``collMod`` command to set the correct
+       allowable size. Use the ``collMod`` command to set your required
        maximum size.
 
 .. _c2c-dr-unique:
