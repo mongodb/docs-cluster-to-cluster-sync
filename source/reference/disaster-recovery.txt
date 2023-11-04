@@ -55,11 +55,11 @@ following changes:
        If synchronization was started with write blocking, disable the Write
        Block Mode.
 
-   * - Capped Collections
-     - During synchronization, :ref:`capped collections
-       <manual-capped-collection>` are set to the maximum allowable
-       size. Use the ``collMod`` command to set the correct maximum
-       size.
+   * - :ref:`Capped Collections
+       <manual-capped-collection>`
+     - During synchronization, capped collections are set to the maximum
+       allowable size. Use the ``collMod`` command to set the correct
+       maximum size.
 
 .. _c2c-dr-unique:
 
