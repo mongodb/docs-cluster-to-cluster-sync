@@ -55,6 +55,11 @@ following changes:
        If synchronization was started with write blocking, disable the Write
        Block Mode.
 
+   * - Capped Collections
+     - During synchronization, :ref:`capped collections
+       <manual-capped-collection>` are set to the maximum allowable
+       size. Use the ``collMod`` command to set the correct maximum
+       size.
 
 .. _c2c-dr-unique:
 
@@ -103,7 +108,6 @@ During synchronization, ``expireAfterSeconds`` is set
 to ``MAX_INT`` for :ref:`TTL indexes
 <index-feature-ttl>`. To reset ``expireAfterSeconds``, use the
 :dbcommand:`collMod` command to change the expiration value. 
-
 
 .. _c2c-dr-hidden:
 
