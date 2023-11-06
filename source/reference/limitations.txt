@@ -134,7 +134,7 @@ Sharded Clusters
 - The shard key cannot be modified using :dbcommand:`reshardCollection`
   during syncing.
 - The maximum number of indexes per sharded collection is 63, which is
-  one less than the :ref:`normal limit <limit-index-size>` of 64. 
+  one less than the :ref:`default limit <limit-index-size>` of 64. 
 - ``mongosync`` only supports syncing sharded collections that have 
   default :ref:`collation <collation>` settings. 
 
