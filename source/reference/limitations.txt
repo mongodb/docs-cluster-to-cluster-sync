@@ -73,10 +73,6 @@ General Limitations
 - `Queryable Encryption
   <https://www.mongodb.com/docs/v6.0/core/queryable-encryption/>`__
   isn't supported.
-- After you replace the ``mongosync`` binary during an upgrade or a
-  downgrade, you should drop all non-system databases in the destination
-  cluster before starting the new binary. Syncing operations will
-  restart from the beginning when you start the new processes.
 - You cannot sync a collection that has a unique index and a non-unique
   index defined on the same field(s).
 
@@ -103,16 +99,16 @@ Sharded Clusters
   limitations:
 
   - Collections included in the ``sharding.shardingEntries`` option for
-    the :ref:`c2c-api-start` command cannot be renamed to use a
+    the :ref:`c2c-api-start` command can be renamed to use a
     different database while ``mongosync`` is running.
   - When using the ``sharding.createSupportingIndexes`` option to create
     indexes supporting shard keys on the destination cluster during
-    sync, you cannot create these indexes afterwards on the source
-    cluster.  
+    sync. To see renaming limitations, see :ref:'Renaming During Sync
+    <rename-during-sync>'. 
     
     The index must either exist before ``mongosync`` starts or be
     created after the migration is complete and ``mongosync`` has
-    stopped.
+    stopped.ƒt
 
 - Within a collection, the ``_id`` field must be unique across all of
   the shards in the cluster. See :ref:`sharded-clusters-unique-indexes`
@@ -135,9 +131,8 @@ Sharded Clusters
   syncing.
 - The shard key cannot be modified using :dbcommand:`reshardCollection`
   during syncing.
-- The maximum number of :ref:`shard key indexes
-  <sharding-shard-key-indexes>` is one lower than normal, 63 instead of
-  64.
+- The maximum number of index per sharded collection is one lower than
+  normal; 63 instead of 64.
 - ``mongosync`` only supports syncing sharded collections that have 
   default :ref:`collation <collation>` settings. 
 
