@@ -98,11 +98,11 @@ Sharded Clusters
 - Sync from a replica set to a sharded cluster has the following
   limitations:
 
-  - MongoDB allows users to rename collections included in the
-  ``sharding.shardingEntries`` option for
-    the :ref:`c2c-api-start` command during sync. To see limitations on
-    renaming collections while ``mongosync`` is running, see
-    :ref:`Renaming During Sync <rename-during-sync>`. 
+  - MongoDB allows users to rename collections that the
+    ``sharding.shardingEntries`` option for the :ref:`c2c-api-start`
+    command includes during sync. To see limitations on renaming
+    collections while ``mongosync`` is running, see :ref:`Renaming
+    During Sync <rename-during-sync>`. 
   - When using the ``sharding.createSupportingIndexes`` option to create
     indexes supporting shard keys on the destination cluster during
     sync. 
