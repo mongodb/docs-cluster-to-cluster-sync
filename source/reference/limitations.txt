@@ -98,7 +98,7 @@ Sharded Clusters
 - Sync from a replica set to a sharded cluster has the following
   limitations:
 
-  - MongoDB allows users to rename collections that the
+  - ``mongosync`` allows users to rename collections that the
     ``sharding.shardingEntries`` option for the :ref:`c2c-api-start`
     command includes during sync. To see limitations on renaming
     collections while ``mongosync`` is running, see :ref:`Renaming
@@ -134,7 +134,8 @@ Sharded Clusters
 - The shard key cannot be modified using :dbcommand:`reshardCollection`
   during syncing.
 - The maximum number of indexes per sharded collection is 63, which is
-  one less than the :ref:`default limit <limit-index-size>` of 64. 
+  one less than the :ref:`default limit
+  <limit-number-of-indexes-per-collection>` of 64. 
 - ``mongosync`` only supports syncing sharded collections that have 
   default :ref:`collation <collation>` settings. 
 
