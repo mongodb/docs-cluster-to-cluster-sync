@@ -86,9 +86,9 @@ discuss your requirements.
 Unsupported Collection Types
 ----------------------------
 
-- In ``mongosync`` 1.6 and earlier, time series collections do not
+- In ``mongosync`` 1.7 and earlier, time series collections do not
   synchronize between clusters: MongoDB :ref:`logs <c2c-logging>` the
-  collection details and skips those collections. In ``mongosync`` 1.7
+  collection details and skips those collections. In ``mongosync`` 1.8
   and later, time series collections are synchronized between clusters.
 - Clustered collections with :ref:`expireAfterSeconds
   <db.createCollection.expireAfterSeconds>` set aren't supported.
