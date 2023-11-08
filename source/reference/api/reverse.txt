@@ -63,7 +63,7 @@ Clusters that began with MongoDB 4.2 or older and were since
 upgraded may include unique indexes that are not properly formatted.
 
 To correct indexes, you can :ref:`resync <resync-replica-member>` all nodes
-in the original source cluster.  Follow these steps to resync all nodes. 
+in the original source cluster.  To resync all nodes: 
 
 .. procedure::
    :style: normal
@@ -73,15 +73,14 @@ in the original source cluster.  Follow these steps to resync all nodes.
       For a tutorial on resyncing nodes, see  to :ref:`Resync a Member of a
       Replica Set <resync-replica-member>`. 
 
-   .. step:: Step down the primary node and step up one of the secondary
-             nodes.
+   .. step:: Step down the primary node and step up one of the secondary nodes.
    
-   .. step:: Resync the old primary node from the new primary node. 
+   .. step:: Resync the old primary node to the new primary node. 
 
 Alternatively, to avoid resyncing, you can use the
 :method:`db.collection.validate` method with ``full = false`` on each
-collection with unique indexes to determine whether it contains
-improperly formatted unique indexes. 
+collection with unique indexes to determine whether each collection
+contains improperly formatted unique indexes. 
 
 .. code-block:: javascript
 
