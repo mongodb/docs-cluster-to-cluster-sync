@@ -23,6 +23,10 @@ Release Notes for mongosync 1.8
 
 New Features:
 
+Synchronize Data Between Multiple Source Clusters Simultaneously
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. include:: /includes/many-with-one-cluster.rst
 
 Minimum Supported Version
 -------------------------
