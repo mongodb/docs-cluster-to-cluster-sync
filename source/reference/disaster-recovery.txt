@@ -56,7 +56,6 @@ following changes:
        Block Mode.
 
    * - :ref:`Capped Collections <c2c-dr-capped-collections>`
-     - .. include:: /includes/capped-collection-size.rst
      - Synchronization sets capped collections to the maximum allowable
        size. To set your required maximum size, use the ``collMod``
        command.
