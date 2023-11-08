@@ -86,8 +86,8 @@ contains improperly formatted unique indexes.
 
    db.<collection>.validate()
 
-If the method returns a warning about the unique index, you must
-resync all of the nodes in the original source cluster before reversing sync.
+If the method does not returns a warning about a unique index, you can skip
+resyncing. 
 
 Request
 -------
