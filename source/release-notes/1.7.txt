@@ -136,16 +136,6 @@ Issues Fixed:
   initialization if the user specified only an exclusion filter and there were
   no fully excluded databases.
 
-Set a Migration Name
-~~~~~~~~~~~~~~~~~~~~
-
-.. include:: /includes/migrationName-description.rst
-
-To set a migration name, see:
-
-- :setting:`migrationName` configuration file setting
-- :option:`--migrationName` command line option
-
 Minimum Supported Version
 -------------------------
 
