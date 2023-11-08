@@ -161,3 +161,4 @@ Minimum Supported Version
 -------------------------
 
 In 1.6, the minimum supported versions of MongoDB are 6.0.8 and 7.0.0.
+
