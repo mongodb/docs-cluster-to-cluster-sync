@@ -1,7 +1,7 @@
 .. reference/configuration.txt
 .. reference/mongosync.txt
 
-.. versionadded:: 1.7.0
+.. versionadded:: 1.8.0
 
 Sets a migration name for a sync operation. For example, you can set a
 migration name to identify the sync operations from multiple source
