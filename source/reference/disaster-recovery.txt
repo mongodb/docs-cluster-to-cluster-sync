@@ -57,8 +57,8 @@ following changes:
 
    * - :ref:`Capped Collections <c2c-dr-capped-collections>`
      - Synchronization sets capped collections to the maximum allowable
-       size. To set your required maximum size, use the ``collMod``
-       command.
+       size. To set your required maximum size, use the
+       :dbcommand:`collMod` command.
 
 .. _c2c-dr-unique:
 
