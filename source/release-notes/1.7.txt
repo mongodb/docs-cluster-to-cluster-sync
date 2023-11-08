@@ -12,7 +12,6 @@ Release Notes for mongosync 1.7
    :depth: 2
    :class: singlecol
 
-
 Patch Releases
 --------------
 
