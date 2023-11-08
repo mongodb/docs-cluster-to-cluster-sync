@@ -70,7 +70,7 @@ in the original source cluster.  To resync all nodes:
 
    .. step:: Resync all secondaries, one by one. 
 
-      For a tutorial on resyncing nodes, see  to :ref:`Resync a Member of a
+      For a tutorial on resyncing nodes, see :ref:`Resync a Member of a
       Replica Set <resync-replica-member>`. 
 
    .. step:: Step down the primary node and step up one of the secondary nodes.
