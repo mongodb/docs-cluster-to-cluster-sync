@@ -65,7 +65,7 @@ upgraded may include unique indexes that are not properly formatted.
 To correct indexes, you can :ref:`resync <resync-replica-member>` all nodes
 in the original source cluster.  Follow these steps to resync all nodes. 
 
- .. procedure::
+.. procedure::
    :style: normal
 
    .. step:: Resync all secondaries, one by one. 
@@ -74,7 +74,7 @@ in the original source cluster.  Follow these steps to resync all nodes.
       Replica Set <resync-replica-member>`. 
 
    .. step:: Step down the primary node and step up one of the secondary
-   notes.
+             nodes.
    
    .. step:: Resync the old primary node from the new primary node. 
 
