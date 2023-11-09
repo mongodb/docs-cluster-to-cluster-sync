@@ -20,7 +20,7 @@ Patch Releases
 1.7.1 Release
 ~~~~~~~~~~~~~
 
-**November 8, 2023**
+**November 9, 2023**
 
 Issues Fixed:
 
