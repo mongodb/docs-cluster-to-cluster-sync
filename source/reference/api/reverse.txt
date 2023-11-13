@@ -80,13 +80,8 @@ in the original source cluster.  To resync all nodes:
 Alternatively, to avoid resyncing, you can use the
 :method:`db.collection.validate` method with ``full = false`` on each
 collection with unique indexes to determine whether each collection
-contains improperly formatted unique indexes. 
-
-.. code-block:: javascript
-
-   db.<collection>.validate()
-
-If :method:`db.collection.validate` does not return a warning about a
+contains improperly formatted unique indexes. If
+:method:`db.collection.validate` does not return a warning about a
 unique index, you can skip resyncing. 
 
 Request
