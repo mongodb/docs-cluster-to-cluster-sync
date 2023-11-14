@@ -203,7 +203,7 @@ show an empty ``system.views`` collection in that database. The empty
 ``system.views`` collection will not change the accuracy of user
 data on the destination.
 
-.. c2c-write-blocking:
+.. _c2c-write-blocking:
 
 Write Blocking
 ~~~~~~~~~~~~~~
