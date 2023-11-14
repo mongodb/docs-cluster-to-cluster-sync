@@ -80,9 +80,9 @@ MongoDB Community Edition
 -------------------------
 
 To use {+c2c-product-name+} with MongoDB Community Edition, contact a
-sales representative to discuss your requirements. In general, MongoDB
-does not recommend {+c2c-product-name+} for Community deployments and
-does not test with Community builds. 
+sales representative to discuss your requirements. MongoDB does not
+offer support for {+c2c-product-name+} with Community deployments and
+does not test {+c2c-product-name+} with Community builds. 
 
 Unsupported Collection Types
 ----------------------------
