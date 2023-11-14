@@ -1,5 +1,5 @@
-Write-blocking is not enabled by default. If you enable write-blocking,
-``mongosync`` blocks writes:
+MongoDB does not enable write-blocking by default. If you enable
+write-blocking, ``mongosync`` blocks writes:
 
 - On the destination cluster during sync.
 - On the source cluster while ``commit`` is running.
