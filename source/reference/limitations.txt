@@ -79,10 +79,11 @@ General Limitations
 MongoDB Community Edition
 -------------------------
 
-To use {+c2c-product-name+} with MongoDB Community Edition, contact a
-sales representative to discuss your requirements. MongoDB does not
-offer support for {+c2c-product-name+} with Community deployments and
-does not test {+c2c-product-name+} with Community builds. 
+MongoDB does not test {+c2c-product-name+} with Community builds and in
+most cases, MongoDB does not offer support for {+c2c-product-name+} with
+Community deployments. If you would like to use {+c2c-product-name+}
+with MongoDB Community Edition, contact a MongoDB sales representative
+to discuss requirements and individualized options. 
 
 Unsupported Collection Types
 ----------------------------
