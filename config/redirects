@@ -14,7 +14,6 @@ raw: ${prefix}/reference -> ${base}/current/reference/
 raw: ${prefix}/release-notes -> ${base}/current/release-notes/
 raw: ${prefix}/index -> ${base}/current/index/
 raw: ${prefix}/installation/install-on-linux -> ${base}/current/installation/install-on-linux/
-raw: ${prefix}/installation/install-on-windows -> ${base}/current/installation/install-on-windows/
 raw: ${prefix}/installation/install-on-macos -> ${base}/current/installation/install-on-macos/
 raw: ${prefix}/release-notes/1.2 -> ${base}/current/release-notes/1.2/
 raw: ${prefix}/release-notes/1.0 -> ${base}/current/release-notes/1.0/
