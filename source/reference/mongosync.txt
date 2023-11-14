@@ -218,7 +218,7 @@ Commit
 
 To stop syncing, use the :ref:`commit <c2c-api-commit>` command on the
 destination cluster to convert indexes and finalize the changes. If you
-enable ref:`write-blocking <c2c-write-blocking>`:
+enable :ref:`write-blocking <c2c-write-blocking>`:
 
 
 - ``commit`` blocks writes on the source cluster. 
