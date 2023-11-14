@@ -75,12 +75,12 @@ in the original source cluster.  To resync all nodes:
 
    .. step:: Step down the primary node and step up one of the secondary nodes.
    
-   .. step:: Resync the old primary node to the new primary node. 
+   .. step:: Resync the old primary node from the new primary node. 
 
 Alternatively, to avoid resyncing, you can use the
 :method:`db.collection.validate` method with ``full = false`` on each
-collection with unique indexes to determine whether each collection
-contains improperly formatted unique indexes. If
+collection with unique indexes on all nodes to determine whether each
+collection contains improperly formatted unique indexes. If
 :method:`db.collection.validate` does not return a warning about a
 unique index, you can skip resyncing. 
 
