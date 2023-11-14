@@ -14,6 +14,7 @@ raw: ${prefix}/reference -> ${base}/current/reference/
 raw: ${prefix}/release-notes -> ${base}/current/release-notes/
 raw: ${prefix}/index -> ${base}/current/index/
 raw: ${prefix}/installation/install-on-linux -> ${base}/current/installation/install-on-linux/
+raw: ${prefix}/installation/install-on-windows -> ${base}/current/installation/install-on-windows/
 raw: ${prefix}/installation/install-on-macos -> ${base}/current/installation/install-on-macos/
 raw: ${prefix}/release-notes/1.2 -> ${base}/current/release-notes/1.2/
 raw: ${prefix}/release-notes/1.0 -> ${base}/current/release-notes/1.0/
@@ -43,6 +44,7 @@ raw: ${prefix}/reference/api/reverse -> ${base}/current/reference/api/reverse/
 raw: ${prefix}/reference/disaster-recovery -> ${base}/current/reference/disaster-recovery/
 raw: ${prefix}/reference/mongosync -> ${base}/current/reference/mongosync/
 raw: ${prefix}/quickstart -> ${base}/current/quickstart/
+raw: ${prefix}/current/installation/install-on-windows/ -> ${base}/current/
 
 # Handle flipping version from 1.x to "Legacy" for pages not present in "Legacy"
 
