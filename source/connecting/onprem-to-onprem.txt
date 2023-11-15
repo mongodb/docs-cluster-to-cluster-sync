@@ -44,6 +44,12 @@ Behavior
 
 .. include:: /includes/fact-behavior-initial-state
 
+Performance Considerations
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. include:: /includes/fact-destination-cluster-latency-parameter.rst
+
+
 Example
 -------
 

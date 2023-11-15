@@ -4,7 +4,6 @@
 Connect a Self-Managed Cluster to Atlas
 =======================================
 
-
 .. default-domain:: mongodb
 
 .. contents:: On this page
@@ -52,6 +51,12 @@ Behavior
 .. include:: /includes/fact-behavior-hosting
 
 .. include:: /includes/fact-behavior-initial-state
+
+Performance Considerations
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. include:: /includes/fact-destination-cluster-latency-parameter.rst
+
 
 Example
 -------

@@ -73,6 +73,10 @@ Follow the instructions below to setup {+c2c-product-name+}.
       <create-new-cluster>` or to create a :ref:`self-managed cluster
       <server-replica-set-deploy>`.
 
+      .. note:: 
+
+         .. include:: /includes/fact-destination-cluster-latency-parameter.rst
+
    .. step:: Define administrative users
 
       If either cluster is hosted in Atlas, or if either of them

@@ -57,6 +57,10 @@ To configure multiple ``mongosync`` instances:
       sync, the source cluster and destination cluster must have the
       same number of shards.
 
+      .. note:: 
+
+         .. include:: /includes/fact-destination-cluster-latency-parameter.rst
+
    .. step:: Stop the Balancer on the Destination
 
       To stop the balancer on the destination cluster, connect to the
@@ -277,8 +281,6 @@ on the destination cluster:
 .. code-block:: javascript
 
    sh.startBalancer()
-
-
 
 .. _c2c-sharded-reverse:
 
