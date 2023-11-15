@@ -137,7 +137,7 @@ Commit
 
 To stop syncing, use the :ref:`commit <c2c-api-commit>` command on the
 destination cluster to convert indexes and finalize the changes. By default, 
-``commit`` operations have no effect on write operations unless you enable
+``commit`` operations have no effect on writes unless you enable
 :ref:`write blocking <c2c-dr-write-blocking>`. If write blocking is enabled 
 while ``commit`` is running:
 
