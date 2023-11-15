@@ -260,12 +260,6 @@ These commands only check progress and commit synchronization for the
 to ``progress`` and  ``commit`` on any other ``mongosync`` instances
 that may be running.
 
-.. code-block:: javascript
-
-   sh.startBalancer()
-
-
-
 .. _c2c-sharded-reverse:
 
 Reverse the Synchronization Direction
@@ -276,10 +270,10 @@ acts as the source cluster:
 
 - If you have not already done so, issue the :ref:`commit
   <c2c-api-commit>` command to each ``mongosync`` instance and wait
-  until all of the commits to finish.
-  - To check if the sync process has been committed, issue the :ref:`progress 
-    <c2c-api-progress>` command to any ``mongosync`` instance and see if the 
-    ``state`` field has the value ``COMMITTED``.
+  until all of the commits to finish. To check if the sync process has been 
+  committed, issue the :ref:`progress <c2c-api-progress>` command to any 
+  ``mongosync`` instance and see if the ``state`` field has the value 
+  ``COMMITTED``.
 - Issue the :ref:`reverse <c2c-api-reverse>` command to each
   ``mongosync`` instance.
 
