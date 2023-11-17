@@ -41,8 +41,7 @@ MongoDB Server Version Compatibility and Support
 
 .. include:: /includes/fact-minimum-server-version-support.rst
 
-``mongosync`` doesn't support MongoDB rapid releases such as 6.1 or
-  6.2.
+``mongosync`` doesn't support MongoDB rapid releases such as 6.1 or 6.2.
 
 .. include:: /includes/fact-minimum-versions.rst
 
