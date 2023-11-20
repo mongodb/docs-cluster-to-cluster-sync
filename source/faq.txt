@@ -21,7 +21,7 @@ Can I perform reads or writes to my destination cluster while ``mongosync`` is s
 ---------------------------------------------------------------------------------------
 
 As long as you are not concerned with :term:`eventual consistency`, you can 
-perform reads once ``canCommit`` is set to ``true``.
+perform reads once ``canCommit: true``.
 
 You can write to any non-synced namespaces while sync is in progress. If you 
 write to  a namespace before issuing ``commit`` and waiting for 
