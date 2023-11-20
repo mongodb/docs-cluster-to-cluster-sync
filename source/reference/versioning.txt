@@ -39,9 +39,14 @@ asked to upgrade in order to receive support.
 MongoDB Server Version Compatibility and Support
 ------------------------------------------------
 
-.. include:: /includes/fact-minimum-server-version-support.rst
+Before you run {+c2c-product-name+}, consider the following MongoDB server 
+version limitations and requirements: 
 
-``mongosync`` doesn't support MongoDB rapid releases, such as 6.1 or 6.2.
+- .. include:: /includes/fact-minimum-server-version-support.rst
+
+- ``mongosync`` doesn't support MongoDB rapid releases, such as 6.1 or 6.2.
+
+- .. include:: /includes/fact-minimum-fcv.rst 
 
 .. include:: /includes/fact-minimum-versions.rst
 
@@ -52,13 +57,6 @@ Version-Related Considerations
 ------------------------------
 
 {+c2c-product-name+} has the following version related considerations:
-
-Same Server Version
-~~~~~~~~~~~~~~~~~~~
-
-.. versionchanged:: 1.7
-
-.. include:: /includes/cross-version-sync.rst
 
 Support Lifecycle 
 ~~~~~~~~~~~~~~~~~

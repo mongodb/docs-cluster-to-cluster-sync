@@ -24,6 +24,11 @@ Limitations
 General Limitations
 -------------------
 
+.. note:: 
+
+  For information on MongoDB server compatility, see 
+  :ref:`c2c-server-version-compatibility`.
+
 - The destination cluster must be empty.
 - ``mongosync`` doesn't validate that the clusters or the environment
   are properly configured. 
