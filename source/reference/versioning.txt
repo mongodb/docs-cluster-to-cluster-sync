@@ -48,10 +48,16 @@ version limitations and requirements:
 
 - .. include:: /includes/fact-minimum-fcv.rst 
 
+Synchronize Data Between Clusters Running Older MongoDB Server Versions
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 .. include:: /includes/fact-minimum-versions.rst
 
-.. include:: /includes/cross-version-sync.rst
 
+Synchronize Data Between Clusters with Different MongoDB Server Major Versions
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. include:: /includes/cross-version-sync.rst
 
 Version-Related Considerations
 ------------------------------
