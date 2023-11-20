@@ -17,17 +17,16 @@ This page provides answers to some frequently asked questions we have
 encountered. If you have additional questions please contact MongoDB
 Support.
 
-Can I perform read or write with my destination cluster while sync is in progress?
-----------------------------------------------------------------------------------
+Can I perform reads or writes to my destination cluster while ``mongosync`` is syncing?
+---------------------------------------------------------------------------------------
 
 As long as you are not concerned with :term:`eventual consistency`, you can 
 perform reads once ``canCommit`` is set to ``true``.
 
-You can write to any non-synced namespaces as much as you want. If you write to 
-a namespace before issuing ``commit`` and waiting for ``canWrite:true``, the 
-behavior is undefined. You can safeguard against this undefined behavior by 
-enabling :ref:`write blocking <c2c-dr-write-blocking>`.
-
+You can write to any non-synced namespaces while sync is in progress. If you 
+write to  a namespace before issuing ``commit`` and waiting for 
+``canWrite: true``, the behavior is undefined. You can avoid this undefined 
+behavior by enabling :ref:`write blocking <c2c-dr-write-blocking>`.
 
 Can ``mongosync`` run on its own hardware? 
 ------------------------------------------
