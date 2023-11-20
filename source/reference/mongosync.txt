@@ -264,8 +264,8 @@ System Collections
 Resilience
 ~~~~~~~~~~
 
-``mongosync`` is resilient to network issues and errors.``error`` and
-``failure log entries do not indicate data corruption or an incomplete
+``mongosync`` is resilient to network issues and errors. ``error`` and
+``failure`` log entries do not indicate data corruption or an incomplete
 sync. If sync does not complete, ``mongosync `` writes a ``fatal`` log
 entry. 
 
