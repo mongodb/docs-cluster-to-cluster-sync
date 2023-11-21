@@ -20,13 +20,17 @@ Support.
 Can I perform reads or writes to my destination cluster while ``mongosync`` is syncing?
 ---------------------------------------------------------------------------------------
 
-As long as you are not concerned with :term:`eventual consistency`, you can 
-perform reads once ``canCommit: true``.
+You can perform reads when ``canCommit`` is ``true``. However, the data that you 
+read is :term:`eventually consistent <eventual consistency>`, meaning that you 
+may not always read the latest writes.
 
 You can write to any non-synced namespaces while sync is in progress. If you 
-write to  a namespace before issuing ``commit`` and waiting for 
-``canWrite: true``, the behavior is undefined. You can avoid this undefined 
-behavior by enabling :ref:`write blocking <c2c-dr-write-blocking>`.
+write to  a namespace before issuing a :ref:`commit <c2c-api-commit>` and 
+waiting for ``canWrite: true``, the behavior is undefined. You can avoid this 
+undefined behavior by enabling :ref:`write blocking <c2c-dr-write-blocking>`.
+
+To check the value of ``canCommit`` or ``canWrite``, call the :ref:`/progress 
+<c2c-api-progress>` API endpoint.
 
 Can ``mongosync`` run on its own hardware? 
 ------------------------------------------
