@@ -118,7 +118,7 @@ needs, consider upgrading the cluster hardware.
 Should I stop a migration that encounters error or failure logs?
 ----------------------------------------------------------------
 
-No, error and failure logs are non-fatal errors and do not
-signal that you need to terminate ``mongosync`` early. These logs do not
-indicate that ``mongosync`` will fail or corrupt data. If a fatal error
+No, error and failure logs are non-fatal errors and do not signal that
+you need to terminate ``mongosync`` early. These logs do not indicate
+that ``mongosync`` is failing or corrupting data. If a fatal error
 occurs, ``mongosync`` stops the sync and writes a fatal log entry. 
