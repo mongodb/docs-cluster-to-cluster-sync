@@ -121,4 +121,4 @@ Do I need to terminate migration early if I see ``error`` or ``failure`` logs?
 No, ``failure`` and ``error`` logs are non fatal errors and do not
 signal that you need to terminate ``mongosync`` early. These logs do not
 indicate that ``mongosync`` will fail or corrupt data. If a fatal error
-occurs, ``mongogync`` stops sync and writes a ``fatal`` log entry. 
+occurs, ``mongosync`` stops sync and writes a ``fatal`` log entry. 
