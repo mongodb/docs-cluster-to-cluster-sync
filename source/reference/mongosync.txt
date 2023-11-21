@@ -259,8 +259,6 @@ System Collections
 
 .. include:: /includes/collections/behavior-system-collections.rst
 
-.. _c2c-mongosync-examples:
-
 Resilience
 ~~~~~~~~~~
 
@@ -270,6 +268,8 @@ will fail or corrupt data. For example, if a network error occurs,
 ``mongosync`` writes an ``error`` log but still completes sync. In the
 case that sync does not complete, ``mongosync`` writes a ``fatal`` log
 entry. 
+
+.. _c2c-mongosync-examples:
 
 Examples
 --------
