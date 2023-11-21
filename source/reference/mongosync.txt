@@ -264,7 +264,7 @@ Resilience
 
 ``mongosync`` is resilient and able to handle non-fatal errors.
 ``error`` and ``failure`` log entries do not indicate that ``mongosync``
-will fail or corrupt data. For example, if a network error occurs,
+is failing or corrupting data. For example, if a network error occurs,
 ``mongosync`` writes an ``error`` log but still completes sync. In the
 case that sync does not complete, ``mongosync`` writes a ``fatal`` log
 entry. 
