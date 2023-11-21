@@ -115,10 +115,10 @@ If you see slow operation warnings, check CPU, memory, and network usage on the
 source and destination clusters.  If the clusters are underprovisioned for your
 needs, consider upgrading the cluster hardware.
 
-Do I need to terminate migration early if I see ``error`` or ``failure`` logs?
-------------------------------------------------------------------------------
+Should I stop a migrating that encounters error or failure logs?
+----------------------------------------------------------------
 
-No, ``failure`` and ``error`` logs are non fatal errors and do not
+No, error and failure logs are non-fatal errors and do not
 signal that you need to terminate ``mongosync`` early. These logs do not
 indicate that ``mongosync`` will fail or corrupt data. If a fatal error
-occurs, ``mongosync`` stops sync and writes a ``fatal`` log entry. 
+occurs, ``mongosync`` stops the sync and writes a fatal log entry. 
