@@ -210,10 +210,10 @@ Write Blocking
 
 .. include:: /includes/fact-write-blocking-enable.rst
 
-.. include:: /includes/fact-write-blocking-requirement.rst
-
 You must enable write-blocking when you start ``mongosync`` if you want
 to use :ref:`reverse synchronization <c2c-api-reverse>` later.
+
+.. include:: /includes/fact-write-blocking-requirement.rst
 
 Commit
 ~~~~~~
