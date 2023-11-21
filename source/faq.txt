@@ -115,7 +115,7 @@ If you see slow operation warnings, check CPU, memory, and network usage on the
 source and destination clusters.  If the clusters are underprovisioned for your
 needs, consider upgrading the cluster hardware.
 
-Should I stop a migrating that encounters error or failure logs?
+Should I stop a migration that encounters error or failure logs?
 ----------------------------------------------------------------
 
 No, error and failure logs are non-fatal errors and do not
