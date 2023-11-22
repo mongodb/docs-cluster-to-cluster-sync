@@ -262,11 +262,12 @@ System Collections
 Resilience
 ~~~~~~~~~~
 
-``mongosync`` is resilient and able to handle non-fatal errors. Error
-and failure log entries do not indicate that ``mongosync`` is failing or
-corrupting data. For example, if a network error occurs, ``mongosync``
-writes an error log but still completes the sync. In the case that a
-sync does not complete, ``mongosync`` writes a fatal log entry. 
+``mongosync`` is resilient and able to handle non-fatal errors. Logs
+that contain the word "error" or "failure" do not indicate that
+``mongosync`` is failing or corrupting data. For example, if a network
+error occurs, ``mongosync`` writes an error log but still completes the
+sync. In the case that a sync does not complete, ``mongosync`` writes a
+fatal log entry. 
 
 .. _c2c-mongosync-examples:
 
