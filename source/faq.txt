@@ -115,8 +115,8 @@ If you see slow operation warnings, check CPU, memory, and network usage on the
 source and destination clusters.  If the clusters are underprovisioned for your
 needs, consider upgrading the cluster hardware.
 
-Should I stop a migration that logs the word "error" or "failure"?
-------------------------------------------------------------------
+Should I stop a migration if I logs contain the word "error" or "failure"?
+--------------------------------------------------------------------------
 
 No, logs that contain the word "error" or "failure" show non-fatal
 errors and do not signal that you need to stop ``mongosync`` early.
