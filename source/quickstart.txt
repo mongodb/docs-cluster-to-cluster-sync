@@ -195,6 +195,12 @@ source cluster with the destination cluster. After the initial sync has
 completed, new writes to the source cluster will be synced with the
 destination cluster.
 
+If the :ref:`start <c2c-api-start>` request is successful, ``mongosync``
+returns ``TRUE`` and starts to synchronize existing data on the source
+cluster with the destination cluster. At this point, ``mongosync`` is in
+the ``RUNNING`` state and subsequent writes to the source cluster are
+applied to the destination cluster. 
+
 The API documentation provides details on using the following endpoints:
 
 .. list-table::
@@ -218,6 +224,23 @@ The API documentation provides details on using the following endpoints:
        cluster.
    * - :ref:`c2c-api-reverse`
      - Reverses the direction of a committed sync operation.
+
+One-time Sync
+-------------
+
+For a one-time sync, use the ``commit`` endpoint to commit the
+synchronization operation to the destination cluster and stop continuous
+replication. Before running a ``commit`` request, use the ``progress``
+endpoint to verify that the following requirements are met:
+
+  - ``state: "RUNNING"``
+  - ``canCommit: true``
+  - ``lagTimeSeconds`` is near ``0`` (*Recommended, but not required*)
+
+Once  the ``commit`` endpoint is run and the ``commit`` request is
+successful, ``mongosync`` returns ``true`` and enters the ``COMMITTING``
+state. Once the sync is complete, ``mongosync`` enters the ``COMMITTED``
+state and the clusters are no longer in continuous sync. 
 
 Synchronization Notes
 ~~~~~~~~~~~~~~~~~~~~~
