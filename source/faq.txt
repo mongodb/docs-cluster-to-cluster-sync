@@ -25,10 +25,11 @@ However, the data that you read is
 :term:`eventually consistent <eventual consistency>`, meaning that you might not 
 always read the latest writes.
 
-You can write to any non-synced namespaces while sync is in progress. If you 
-write to a namespace before issuing a :ref:`commit <c2c-api-commit>` and 
-waiting for ``canWrite: true``, the behavior is undefined. You can avoid this 
-undefined behavior by enabling :ref:`write blocking <c2c-dr-write-blocking>`.
+During an ongoing sync, you can write to any non-synced namespaces if 
+``canWrite`` is ``true``. If you write to a namespace before issuing a 
+:ref:`commit <c2c-api-commit>` and while ``canWrite`` is ``false``, the behavior 
+is undefined. To avoid this undefined behavior, you can enable 
+:ref:`write blocking <c2c-dr-write-blocking>`.
 
 To check the value of ``canCommit`` or ``canWrite``, call the :ref:`/progress 
 <c2c-api-progress>` API endpoint.
