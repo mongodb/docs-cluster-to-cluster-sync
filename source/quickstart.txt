@@ -180,9 +180,6 @@ Initialization Notes
 Synchronize Data Between Clusters
 ---------------------------------
 
-The command interface for ``mongosync`` is an HTTP server that
-publishes an HTTP API. To control ``mongosync``, use the API endpoints.
-
 The :ref:`start <c2c-api-start>` command initiates data synchronization.
 To start syncing, use ``curl`` or a similar program to issue the
 :ref:`start <c2c-api-start>` command:
@@ -197,7 +194,9 @@ the source cluster with the destination cluster. At this point,
 source cluster are applied to the destination cluster. The destination
 cluster is in continuous replication with the source cluster. 
 
-The API documentation provides details on using the following endpoints:
+The command interface for ``mongosync`` is an HTTP server that publishes
+an HTTP API. To control ``mongosync``, use the API endpoints.The API
+documentation provides details on using the following endpoints:
 
 .. list-table::
    :header-rows: 1
@@ -221,7 +220,7 @@ The API documentation provides details on using the following endpoints:
    * - :ref:`c2c-api-reverse`
      - Reverses the direction of a committed sync operation.
 
-One-time Sync
+One-Time Sync
 -------------
 
 For a one-time sync, use the ``progress`` endpoint to verify that the
