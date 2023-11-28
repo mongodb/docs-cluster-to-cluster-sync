@@ -190,9 +190,9 @@ To start syncing, use ``curl`` or a similar program to issue the
 If the :ref:`start <c2c-api-start>` request is successful, ``mongosync``
 returns ``{"success":true}`` and starts to synchronize existing data on
 the source cluster with the destination cluster. At this point,
-``mongosync`` is in the ``RUNNING`` state and subsequent writes to the
-source cluster are applied to the destination cluster. The destination
-cluster is in continuous replication with the source cluster. 
+``mongosync`` is in the ``RUNNING`` state and applies subsequent source
+cluster writes to the destination cluster. The destination cluster is in
+continuous replication with the source cluster. 
 
 The command interface for ``mongosync`` is an HTTP server that publishes
 an HTTP API. To control ``mongosync``, use the API endpoints. The API
@@ -230,7 +230,7 @@ following requirements are met:
   - ``canCommit: true``
   - ``lagTimeSeconds`` is near ``0`` (*Recommended, but not required*)
 
-Then, run the :ref:`commit <c2c-api-commit>` to commit the
+Then, run the :ref:`commit <c2c-api-commit>` command to commit the
 synchronization operation to the destination cluster and stop continuous
 replication.
 
