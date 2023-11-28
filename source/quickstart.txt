@@ -191,11 +191,11 @@ To start syncing, use ``curl`` or a similar program to issue the
    :language: shell
 
 If the :ref:`start <c2c-api-start>` request is successful, ``mongosync``
-returns ``TRUE`` and starts to synchronize existing data on the source
-cluster with the destination cluster. At this point, ``mongosync`` is in
-the ``RUNNING`` state and subsequent writes to the source cluster are
-applied to the destination cluster. The desintation cluster is in
-continuous replication with the source cluster. 
+returns ``{"success":true}`` and starts to synchronize existing data on
+the source cluster with the destination cluster. At this point,
+``mongosync`` is in the ``RUNNING`` state and subsequent writes to the
+source cluster are applied to the destination cluster. The destination
+cluster is in continuous replication with the source cluster. 
 
 The API documentation provides details on using the following endpoints:
 
@@ -224,7 +224,7 @@ The API documentation provides details on using the following endpoints:
 One-time Sync
 -------------
 
-For a one-time sync, use the ``progress``endpoint to verify that the
+For a one-time sync, use the ``progress`` endpoint to verify that the
 following requirements are met:
 
   - ``state: "RUNNING"``
@@ -236,9 +236,10 @@ synchronization operation to the destination cluster and stop continuous
 replication.
 
 Once you run the ``commit`` endpoint and the ``commit`` request is
-successful, ``mongosync`` returns ``true`` and enters the ``COMMITTING``
-state. After the sync is complete, ``mongosync`` enters the ``COMMITTED``
-state and the clusters are no longer in continuous sync. 
+successful, ``mongosync`` returns ``{"success":true}`` and enters the
+``COMMITTING`` state. After the sync is complete, ``mongosync`` enters
+the ``COMMITTED`` state and the clusters are no longer in continuous
+sync. 
 
 Synchronization Notes
 ~~~~~~~~~~~~~~~~~~~~~
