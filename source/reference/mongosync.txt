@@ -255,6 +255,12 @@ the destination cluster, ``mongosync`` sets the write concern level to
 For more information on read and write concern configuration and
 behavior, see :ref:`read-concern` and :ref:`write-concern`. 
 
+Read Preference
+~~~~~~~~~~~~~~~
+By default, ``mongosync`` sets the source cluster read preference to
+:readmode:`nearest` to distribute reads evenly across nodes. To change
+the read preference of clusters, specify the read preference mode 
+
 .. _c2c-capped-collections:
 
 Capped Collections
