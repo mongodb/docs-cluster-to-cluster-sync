@@ -223,7 +223,7 @@ documentation provides details on using the following endpoints:
 One-Time Sync
 -------------
 
-For a one-time sync, run the :ref:`progredss <c2c-api-progress>` command
+For a one-time sync, use the :ref:`progress <c2c-api-progress>` command
 to see the status of the synchronization process: 
 
 .. literalinclude:: /includes/api/requests/progress.sh
@@ -235,7 +235,7 @@ The following requirements must be met for a one-time sync:
   - ``canCommit: true``
   - ``lagTimeSeconds`` is near ``0`` (*Recommended, but not required*)
 
-Then, run the :ref:`commit <c2c-api-commit>` command to commit the
+Then, use the :ref:`commit <c2c-api-commit>` command to commit the
 synchronization operation to the destination cluster and stop continuous
 replication:
 
