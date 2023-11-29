@@ -16,7 +16,7 @@ There are two ways to synchronize :ref:`sharded clusters
 <sharded-cluster>`. You can use either one ``mongosync`` or several
 ``mongosync`` instances. For best performance with large or heavily
 loaded clusters, use one ``mongosync`` instance for each shard on the
-source cluster. 
+source cluster.
 
 .. _c2c-sharded-config-single:
 
