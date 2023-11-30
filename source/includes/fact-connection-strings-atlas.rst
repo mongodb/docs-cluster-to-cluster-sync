@@ -28,3 +28,8 @@ hostnames of the :binary:`mongos` instances instead of the
 
    ``mongosync`` does not require the :urioption:`replicaSet` option.
 
+You can specify read preference on a per-connection basis in the
+connection string. By default, ``mongosync`` sets the source cluster read
+preference to :readmode:`nearest` to distribute reads evenly across
+nodes. For more information on specifying read preference options in the
+connection string, see :ref:`connections-read-preference:``
