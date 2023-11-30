@@ -40,7 +40,10 @@ Configure Multiple ``mongosync`` Instances
 ------------------------------------------
 
 The number of ``mongosync`` instances must match the number of shards on
-the source cluster. To configure multiple ``mongosync`` instances:
+the source cluster. For a replica set source, you can only use one
+``mongosync`` instance. 
+
+To configure multiple ``mongosync`` instances:
 
 #. :ref:`Verify cluster configuration <c2c-shard-config-verify>`
 #. :ref:`Determine the shard IDs <c2c-shard-config-determine>`
