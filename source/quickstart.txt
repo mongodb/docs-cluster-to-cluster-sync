@@ -223,9 +223,9 @@ documentation provides details on using the following endpoints:
 One-Time Sync
 -------------
 
-For a one-time sync, after initializing data synchronization, call the
-:ref:`progress <c2c-api-progress>` endpoint to see the status of the
-synchronization process: 
+After initializing data synchronization, call the :ref:`progress
+<c2c-api-progress>` endpoint to see the status of the synchronization
+process: 
 
 .. literalinclude:: /includes/api/requests/progress.sh
    :language: shell
