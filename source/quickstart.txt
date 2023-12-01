@@ -191,8 +191,12 @@ If the :ref:`start <c2c-api-start>` request is successful, ``mongosync``
 returns ``{ "success": true }`` and starts to synchronize existing data on
 the source cluster with the destination cluster. At this point,
 ``mongosync`` enters the ``RUNNING`` state and applies subsequent source
-cluster writes to the destination cluster. The destination cluster
-continuously replicates data from the source cluster.
+cluster writes to the destination cluster. 
+
+To check the status of the sync, call the :ref:`progress
+<c2c-api-progress>` endpoint. If the ``progress`` response includes the
+field ``canCommit: true``, the clusters are in sync and the destination
+cluster continuously replicates data from the source cluster.
 
 The command interface for ``mongosync`` is an HTTP server that publishes
 an HTTP API. To control ``mongosync``, use the API endpoints. The API
