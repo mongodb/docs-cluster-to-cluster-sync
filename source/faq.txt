@@ -27,12 +27,12 @@ always read the latest writes.
 
 During an ongoing sync, you can write to any non-synced namespaces in the 
 destination cluster as long as the source cluster doesn’t include a namespace 
-with the same name. If you write to a namespace before issuing a 
+with the same name. If you write to a synced namespace before issuing a 
 :ref:`commit <c2c-api-commit>` and while ``canWrite`` is ``false``, the behavior 
 is undefined. To avoid this undefined behavior, you can enable 
 :ref:`write blocking <c2c-dr-write-blocking>`.
 
-To check the value of ``canCommit`` or ``canWrite``, call the :ref:`rogress 
+To check the value of ``canCommit`` or ``canWrite``, call the :ref:`progress 
 <c2c-api-progress>` API endpoint.
 
 Can ``mongosync`` run on its own hardware? 
