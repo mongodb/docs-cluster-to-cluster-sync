@@ -180,9 +180,9 @@ Initialization Notes
 Synchronize Data Between Clusters
 ---------------------------------
 
-The :ref:`start <c2c-api-start>` command initiates data synchronization.
+The :ref:`start <c2c-api-start>` endpoint initiates data synchronization.
 To start syncing, use ``curl`` or a similar program to issue the
-:ref:`start <c2c-api-start>` command:
+:ref:`start <c2c-api-start>` request:
 
 .. literalinclude:: /includes/api/requests/start.sh
    :language: shell
