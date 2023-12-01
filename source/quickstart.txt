@@ -194,7 +194,7 @@ the source cluster with the destination cluster. At this point,
 cluster writes to the destination cluster. 
 
 To check the status of the sync, call the :ref:`progress
-<c2c-api-progress>` endpoint.
+<c2c-api-progress>` endpoint:
 
 .. literalinclude:: /includes/api/requests/progress.sh
    :language: shell
