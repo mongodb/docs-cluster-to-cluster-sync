@@ -49,11 +49,11 @@ clusters.
 Should I increase the size of the ``oplog`` in the source cluster?
 ------------------------------------------------------------------
 
-If you anticipate that you will sync from a soource cluster with a high
+If you anticipate that you will sync from a source cluster with a high
 write rate for an extended period or that you will pause sync for an
-extended period, you might exceed the oplog window. To
-increase the size of the ``oplog`` on the source cluster, use the
-:setting:`~replication.oplogSizeMB` setting. 
+extended period, you might exceed the oplog window. To increase the size
+of the ``oplog`` on the source cluster and prevent oplog rollover, use
+the :setting:`~replication.oplogSizeMB` setting. 
 
 For more information on increasing the size of the oplog, see
 :ref:`Change Oplog Size <tutorial-change-oplog-size>`. 
