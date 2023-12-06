@@ -9,7 +9,7 @@ Resilience (ORR) which allows ``mongosync`` to apply changes on the
 source cluster to the destination cluster during the initial sync. ORR
 increases the resilience of ``mongosync`` to oplog rollover but does not
 prevent rollover entirely. For more information on ORR, see the :ref:`Oplog
-Rollover Resilience release note <1.5.0-c2c-release-notes>`
+Rollover Resilience release note <1.5.0-c2c-release-notes>`.
 
 If you anticipate that you will sync from a source cluster with a high
 write rate for an extended period or that you will pause sync for an
