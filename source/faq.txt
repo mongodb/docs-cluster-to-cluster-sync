@@ -49,13 +49,14 @@ clusters.
 Should I increase the size of the ``oplog`` in the source cluster?
 ------------------------------------------------------------------
 
-The :term:`oplog` is a capped collection that keeps a rolling 
-record of all operations that modify the data stored in your databases. 
+If you anticipate that you will sync from a soource cluster with a high
+write rate for an extended period or that you will pause sync for an
+extended period, you might exceed the oplog window. To
+increase the size of the ``oplog`` on the source cluster, use the
+:setting:`~replication.oplogSizeMB` setting. 
 
-.. include:: /includes/fact-oplog-background
-
-To learn more about how to increase the size of the ``oplog``, see:
-:ref:`tutorial-change-oplog-size`. 
+For more information on increasing the size of the oplog, see
+:ref:`Change Oplog Size <tutorial-change-oplog-size>`. 
 
 Which connection string options does ``mongosync`` allow?
 ---------------------------------------------------------
