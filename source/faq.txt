@@ -52,13 +52,15 @@ Should I increase the size of the ``oplog`` in the source cluster?
 You might exceed the oplog window and need to increase the size of the
 ``oplog`` in the source cluster if you: 
 
-- sync from a source cluster with a higher write rate for an extended
-  period of time
-- pause sync for an extended period
+- sync from a high write rate source cluster for an extended
+  period of time.
+- pause sync for an extended period.
 
 To increase the size of the ``oplog`` on the source cluster, use
-:setting:`~replication.oplogSizeMB`. For more information, see :ref:`Change Oplog Size
-<tutorial-change-oplog-size>`.
+:setting:`~replication.oplogSizeMB`. For more information, see
+:ref:`Change Oplog Size <tutorial-change-oplog-size>` and
+:ref:`Workloads that Might Requre a Large Oplog Size
+<replica-set-large-oplog-required>`.
 
 Which connection string options does ``mongosync`` allow?
 ---------------------------------------------------------
