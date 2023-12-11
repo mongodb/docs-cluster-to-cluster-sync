@@ -17,7 +17,7 @@ You might exceed the oplog window if you:
 - pause sync for an extended period
 
 To increase the size of the ``oplog`` on the source cluster, use
-:setting:`~replication.oplogSizeMB`. For more information, see :ref:`Change Oplog Size
-<tutorial-change-oplog-size>`.
+:setting:`~replication.oplogSizeMB`. For more information, see
+:ref:`Change Oplog Size <tutorial-change-oplog-size>`.
 
 
