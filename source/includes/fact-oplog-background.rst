@@ -12,9 +12,9 @@ prevent rollover entirely.
 
 You might exceed the oplog window if you: 
 
-- sync from a source cluster with a higher write rate for an extended
-  period of time
-- pause sync for an extended period
+- Sync from a high write rate source cluster for an extended
+  period.
+- Pause sync for an extended period
 
 To increase the size of the ``oplog`` on the source cluster, use
 :setting:`~replication.oplogSizeMB`. For more information, see
