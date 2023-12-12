@@ -56,7 +56,7 @@ the ZIP file.
 .. procedure::
    :style: normal
 
-   .. step:: Download the ZIP file;
+   .. step:: Download the ZIP file.
 
       Download the {+c2c-product-name+} ZIP file from the following
       link:
