@@ -17,7 +17,7 @@ Description
 
 Commits the synchronization operation to the destination cluster.
 ``commit`` finalizes the sync between the source cluster and destination
-cluster and ends the continuous sync between the clusters. 
+cluster and stops the continuous sync between the clusters. 
 
 Requirements
 ------------
@@ -116,5 +116,5 @@ Behavior
 
 If the ``commit`` request is successful, ``mongosync`` enters the
 ``COMMITTING`` state, then automatically transitions to the
-``COMMITTED`` state. Once ``mongosync`` enters the ``COMMITTED`` stte,
-the clusters are no lonegr in continuous sync. 
+``COMMITTED`` state. Once ``mongosync`` enters the ``COMMITTED`` state,
+continuous sync between the clusters stops. 
