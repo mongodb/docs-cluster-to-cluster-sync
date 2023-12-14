@@ -4,7 +4,7 @@ to the data on the destination cluster.  When operations
 that ``mongosync`` has not applied roll off the ``oplog`` 
 on the source cluster, the sync fails and ``mongosync`` exits.
 
-Starting in version 1.5.0, {+c2c-product-name+} enables Oplog Rollover
+Starting in version 1.5.0, ``mongosync`` enables Oplog Rollover
 Resilience (ORR).  With ORR,  ``mongosync`` applies changes on the
 source cluster to the destination cluster during the initial sync. ORR
 increases the resilience of ``mongosync`` to oplog rollover but does not
