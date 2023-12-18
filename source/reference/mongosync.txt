@@ -302,7 +302,7 @@ UUIDs
 ``mongosync`` creates new universally unique identifiers (UUIDs) for
 collections on the destination cluster. There is no relationship between
 UUIDs on the source cluster and the destination cluster. If applications
-have hard-coded collection UUIDs (which MongoDB does not reccomend),
+contain hard-coded collection UUIDs (which MongoDB does not recommend),
 ``mongosync`` requires additional updating to work with a migrated
 cluster. 
 
@@ -310,8 +310,8 @@ Sorting
 ~~~~~~~
 
 ``mongosync`` creates a new natural (without any sort method specified)
-order on the desination cluster. If applications depend on document
-order without a defined sort method, they may require additional updateing to
+order on the destination cluster. If applications depend on document
+order without a defined sort method, they may require additional updating to
 work with a migrated cluster. 
 
 .. _c2c-mongosync-examples:
