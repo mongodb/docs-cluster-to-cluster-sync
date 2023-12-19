@@ -15,8 +15,8 @@
 Description
 -----------
 
-Finalizes the sync between the source cluster and the
-destination cluster and stops continuous sync between clusters. 
+Finalizes the sync between the source cluster and the destination
+cluster and stops continuous sync between clusters. 
 
 Requirements
 ------------
