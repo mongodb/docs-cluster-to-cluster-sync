@@ -15,8 +15,7 @@
 Description
 -----------
 
-Commits the synchronization operation to the destination cluster.
-``commit`` finalizes the sync between the source cluster and the
+Finalizes the sync between the source cluster and the
 destination cluster and stops continuous sync between clusters. 
 
 Requirements
