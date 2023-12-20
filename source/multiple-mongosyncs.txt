@@ -42,7 +42,7 @@ Configure Multiple ``mongosync`` Instances
 The number of ``mongosync`` instances must match the number of shards on
 the source cluster. For a replica set source, you can only use one
 ``mongosync`` instance. You must use the same version of ``mongosync``
-between instances. 
+between all instances. 
 
 To configure multiple ``mongosync`` instances:
 
