@@ -25,7 +25,7 @@ Configure a Single ``mongosync`` Instance
 
 To configure a single ``mongosync``, follow the :ref:`connection
 instructions <c2c-conn-top-level>` for your cluster architecture to
-connect to the :binary:`mongos` instance in your cluster.
+connect to the :binary:`mongos` instance in your cluster. 
 
 When you connect a single ``mongosync`` to a sharded cluster do not use
 the :urioption:`replicaSet` option or the :option:`id <mongosync --id>`
@@ -41,7 +41,8 @@ Configure Multiple ``mongosync`` Instances
 
 The number of ``mongosync`` instances must match the number of shards on
 the source cluster. For a replica set source, you can only use one
-``mongosync`` instance. 
+``mongosync`` instance. You must use the same version of ``mongosync``
+between instances. 
 
 To configure multiple ``mongosync`` instances:
 
