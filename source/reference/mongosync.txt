@@ -303,8 +303,8 @@ UUIDs
 for collections on the destination cluster. There is no relationship
 between UUIDs on the source cluster and the destination cluster. If
 applications contain hard-coded UUIDs (which MongoDB does not
-recommend), you may need to update the application's UUIDs before the
-application works properly with a migrated cluster. 
+recommend), you may need to update the application before it works
+properly with a migrated cluster. 
 
 Sorting
 ~~~~~~~
