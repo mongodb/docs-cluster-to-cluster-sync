@@ -299,21 +299,22 @@ sync does not complete, ``mongosync`` writes a fatal log entry.
 UUIDs
 ~~~~~
 
-``mongosync`` creates new :abbr:`UUIDs (universally unique identifiers)`
-for collections on the destination cluster. There is no relationship
-between UUIDs on the source cluster and the destination cluster. If
-applications contain hard-coded UUIDs (which MongoDB does not
-recommend), you may need to update the application before it works
-properly with a migrated cluster. 
+``mongosync`` creates collections with new :abbr:`UUIDs (universally
+unique identifiers)` for collections on the destination cluster. There
+is no relationship between UUIDs on the source cluster and the
+destination cluster. If applications contain hard-coded UUIDs (which
+MongoDB does not recommend), you may need to update the application
+before it works properly with a migrated cluster. 
 
 Sorting
 ~~~~~~~
 
-``mongosync`` creates a new natural order (without any sort method
-specified) on the destination cluster. If applications depend on
-document order but don't have a defined sort method, you may need to
-update the application to specify the expected sort order before the
-application works properly with the migrated cluster. 
+``mongosync`` inserts documents on the destination cluster in an
+undefined order. Natural sort order from the source cluster is not
+preserved on the destination cluster. If applications depend on document
+order but don't have a defined sort method, you may need to update those
+application to specify the expected sort order before the application
+work properly with the migrated cluster. 
 
 .. _c2c-mongosync-examples:
 
