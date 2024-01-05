@@ -29,9 +29,8 @@ characteristics that ``mongosync`` alters during the synchronization process.
    * - Collection Characteristic
      - Impact of ``commit`` 
    * - :ref:`Unique Indexes <c2c-dr-unique>`
-     - ``commit`` resets unique indexes that
-       ``mongosync`` replicated as non-unique on the destination
-       cluster.
+     - ``commit`` resets unique indexes that``mongosync`` replicated as
+       non-unique on the destination cluster.
 
    * - :ref:`TTL Indexes <c2c-dr-ttl>`
      - ``commit`` resets ``expireAfterSeconds`` that ``mongosync`` set
@@ -42,13 +41,13 @@ characteristics that ``mongosync`` alters during the synchronization process.
        replicated as non-hidden on the destination cluster.
 
    * - :ref:`Write Blocking <c2c-dr-write-blocking>`
-     - if ``mongosync`` disabled writes on the destination cluster,
-     ``commit`` disables the Write Block Mode. 
+     - If ``mongosync`` disabled writes on the destination cluster,
+       ``commit`` disables the Write Block Mode. 
 
    * - :ref:`Capped Collections <c2c-dr-capped-collections>`
      - ``commit`` resets the required maximum size of capped collections
-        that ``mongosync`` set to the maximum allowable size on the
-        destination cluster.
+       that ``mongosync`` set to the maximum allowable size on the
+       destination cluster.
 
 Requirements
 ------------
