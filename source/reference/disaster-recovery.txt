@@ -26,7 +26,7 @@ you must manually reset these collection characteristics on the destination
 cluster before you can use it as the primary cluster.
 
 To prepare the destination cluster to replace the source cluster, make the 
-following changes:
+following changes that mimic the behavior of calling the ``commit`` endpoint:
 
 .. list-table::
    :header-rows: 1

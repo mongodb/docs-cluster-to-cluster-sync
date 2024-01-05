@@ -16,7 +16,38 @@ Description
 -----------
 
 Finalizes the sync between the source cluster and the destination
-cluster and stops continuous sync between clusters. 
+cluster and stops continuous sync between clusters. ``commit`` also
+restores collection characteristics that ``mongosync`` temporarily
+alters during synchronization. 
+
+The following table illustrates the impact of ``commit`` on collection
+characteristics that were altered during the synchronization process.
+
+.. list-table::
+   :header-rows: 1
+
+   * - Collection Characteristic
+     - Impact of ``commit`` 
+   * - :ref:`Unique Indexes <c2c-dr-unique>`
+     - ``commit`` resets formerly unique indexes that
+       ``mongosync`` set as non-unique indexes on the destination
+       cluster.
+
+   * - :ref:`TTL Indexes <c2c-dr-ttl>`
+     - ``commit`` resets the ``expireAfterSeconds`` field that
+     ``mongosync`` set to the value of ``MAX_INT`` on the destination cluster.
+
+   * - :ref:`Hidden Indexes <c2c-dr-hidden>`
+     - ``commit`` hides formerly hidden indexes that ``mongosync``
+       replicated as non-hidden.
+
+   * - :ref:`Write Blocking <c2c-dr-write-blocking>`
+     - if ``mongosync`` disabled writes on the destination cluster,
+     ``commit`` disables the Write Block Mode. 
+
+   * - :ref:`Capped Collections <c2c-dr-capped-collections>`
+     - ``commit`` resets the required maximum size of capped collections
+        that ``mongosync`` set to the maximum allowable size.
 
 Requirements
 ------------
@@ -117,3 +148,5 @@ If the ``commit`` request is successful, ``mongosync`` enters the
 ``COMMITTING`` state, then automatically transitions to the
 ``COMMITTED`` state. Once ``mongosync`` enters the ``COMMITTED`` state,
 continuous sync between the clusters stops. 
+
+
