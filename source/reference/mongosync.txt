@@ -310,11 +310,11 @@ Sorting
 ~~~~~~~
 
 ``mongosync`` inserts documents on the destination cluster in an
-undefined order. Natural sort order from the source cluster is not
-preserved on the destination cluster. If applications depend on document
-order but don't have a defined sort method, you may need to update those
-applications to specify the expected sort order before the applications
-work properly with the migrated cluster. 
+undefined order. ``mongosync`` does not preserve natural sort order from
+the source cluster on the destination cluster. If applications depend on
+document order but don't have a defined sort method, you may need to
+update those applications to specify the expected sort order before the
+applications work properly with the migrated cluster. 
 
 .. _c2c-mongosync-examples:
 
