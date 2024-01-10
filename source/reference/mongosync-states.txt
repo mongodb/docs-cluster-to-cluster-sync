@@ -51,6 +51,7 @@ operations in that state.
        - ``GET`` :ref:`/progress <c2c-api-progress>`
 
    * - .. _c2c-state-running:
+
        ``RUNNING``
      - The sync process is currently running. In this state, data is
        initially synced to the destination cluster. Subsequent writes to
