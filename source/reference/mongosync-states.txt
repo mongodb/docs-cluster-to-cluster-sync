@@ -78,9 +78,10 @@ operations in that state.
        <c2c-api-progress>` endpoint.
      - - ``GET`` :ref:`/progress <c2c-api-progress>`
 
-   * - .. _c2c-state-committed::
+   * - .. _c2c-state-committed:
 
      ``COMMITTED``
      - The cutover for the sync process is complete.
      - - ``GET`` :ref:`/progress <c2c-api-progress>`
        - ``GET`` :ref:`/reverse <c2c-api-reverse>`
+
