@@ -60,9 +60,10 @@
      - Estimated number of bytes which have been copied to the
        destination cluster by this ``mongosync`` instance. 
        
-       To calculate the total estimated progress, add the value of  the
-       ``estimatedCopiedBytes`` field for each ``mongosync`` instance and
-       divide the result by the value of the ``estimatedTotalBytes`` field.
+       To calculate the total estimated progress as a percentage, add the value
+       of the ``estimatedCopiedBytes`` field for each ``mongosync`` instance
+       and divide the result by the value of the ``estimatedTotalBytes`` field
+       and then multiply the result by 100.
 
    * - ``directionMapping``
      - object
