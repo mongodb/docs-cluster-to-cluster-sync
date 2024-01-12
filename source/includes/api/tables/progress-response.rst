@@ -41,7 +41,7 @@
    * - ``lagTimeSeconds``
      - integer
      - Time in seconds between the last applied event and time of the
-       current latest event for this instance of ``mongosync``
+       current latest event for this instance of ``mongosync``.
 
    * - ``collectionCopy``
      - object
@@ -63,7 +63,7 @@
        To calculate the total estimated progress as a percentage, add the value
        of the ``estimatedCopiedBytes`` field for each ``mongosync`` instance
        and divide the result by the value of the ``estimatedTotalBytes`` field
-       and then multiply the result by 100.
+       . Then, multiply the result by 100.
 
    * - ``directionMapping``
      - object
