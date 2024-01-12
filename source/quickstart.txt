@@ -28,11 +28,11 @@ Setup
 
 - Each cluster can be either a replica set or a sharded cluster.
 
-- Sharded clusters do not require the same number of shards.
+- Sharded clusters are not required to have the same number of shards.
 
 - The destination cluster can be up to two versions ahead of the source
-  cluster.  The patch version is not important, so long as it meets the
-  minimum patch version requirements.
+  cluster.  The patch version is not important, so long as it meets the minimum
+  patch :ref:`version requirements <c2c-server-version-compatibility`.
 
 To run ``mongosync``, you need to: 
 
