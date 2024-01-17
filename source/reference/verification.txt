@@ -59,6 +59,8 @@ documents.
       db.us_accounts.countDocuments()
 
    .. output::
+      :language: javascript
+
       345
 
 .. _c2c-verify-hash-comp:
@@ -82,7 +84,7 @@ To verify that the source and destination cluster have the same hashes, execute
 the :dbcommand:`dbHash` command for the synced collections on each and compare
 the hash value in the ``md5`` field of the return documents.
 
-.. io-code-block:: 
+.. io-code-block::
 
    .. input::
       :language: javascript
@@ -96,6 +98,7 @@ the hash value in the ``md5`` field of the return documents.
          ]}).md5
 
    .. output::
+      :language: text
 
       d41d8cd98f00b204e9800998ecf8427e
 
@@ -154,7 +157,7 @@ To use the Migration Verifier,
 #. To view the results, use curl to send the ``progress`` command to Migration
    Verifier:
 
-   .. io-code-block:: bash
+   .. io-code-block::
 
       .. input::
          :language: bash
