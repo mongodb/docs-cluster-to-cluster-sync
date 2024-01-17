@@ -2,12 +2,19 @@
 ####################
 Verify Data Transfer
 ####################
+ 
+.. default-domain:: mongodb
+
+.. contents:: On this page
+   :local:
+   :backlinks: none
+   :depth: 2
+   :class: singlecol
 
 Following a sync, verify the successful transfer of your data before you switch
 your application from using the source cluster to the destination cluster. You
 can verify your data transfer using document counts, hash comparison, document
 comparison, or the Migration Verifier.
-
 
 Use Cases
 =========
@@ -23,7 +30,6 @@ scripting :ref:`document comparisons <c2c-verify-doc-comp>`,
 and the :ref:`Migration Verifier <c2c-verify-migration-verifier>`. 
 The specific method you use to verify your data depends on your application
 workload and the complexity of the data.
-
 
 Details
 =======
@@ -189,7 +195,6 @@ complete.
 
 For more information on Migration Verifier, see 
 `GitHub <https://github.com/mongodb-labs/migration-verifier>`__.
-
 
 Learn More
 ==========
