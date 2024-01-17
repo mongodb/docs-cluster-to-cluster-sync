@@ -1,0 +1,190 @@
+
+####################
+Verify Data Transfer
+####################
+
+Following a sync, verify the successful transfer of your data before you switch
+your application from using the source cluster to the destination cluster. You
+can verify your data transfer using document counts, hash comparison, document
+comparison, or the Migration Verifier.
+
+
+Use Cases
+=========
+
+You should verify your data after every sync.  This is especially important in
+cases where you plan to move your application load from the source to the
+destination cluster.
+
+Verification methods include the comparison of 
+:ref:`document counts <c2c-verify-doc-counts>`, 
+comparison of :ref:`database hashes <c2c-verify-hash-comp>`, 
+scripting :ref:`document comparisons <c2c-verify-doc-comp>`, 
+and the :ref:`Migration Verifier <c2c-verify-migration-verifier>`. 
+The specific method you use to verify your data depends on your application
+workload and the complexity of the data.
+
+
+Details
+=======
+
+.. _c2c-verify-doc-counts:
+
+Document Counts
+---------------
+
+The most basic method of verifying sync is by comparing the number of documents
+in each synced collection on the source cluster to the number on the
+destination cluster.
+
+Compare the results on each cluster:
+
+- If the document count is different,  not all changes synced to the
+  destination cluster.
+
+- If the document count is the same, the destination cluster has the same
+  number of documents. This doesn’t guarantee a successful sync of all changes
+  to those documents, except in cases where you have an insert-only workload.
+
+To verify that the source and destination cluster have the same number of
+documents, the :method:`~db.collection.countDocuments` method for each synced
+collection on each cluster and ensure that they have the same number of
+documents.
+
+.. code-block:: javascript
+
+   db.us_accounts.countDocuments()
+   345
+
+.. _c2c-verify-hash-comp:
+
+Hash Comparison
+---------------
+
+You can verify sync by comparing MD5 hashes of collections synced from the
+source cluster to the destination cluster.  While hash comparison does ensure
+that the destination cluster has received all changes from the source, the
+:dbcommand:`dbHash` command locks the cluster, preventing writes until its
+operations complete.
+
+.. note::
+
+   Hash comparison is not possible with sharded clusters.  It also does not
+   work for standalone servers and replica sets that use MongoDB 4.4 or older,
+   since the field order can vary.
+
+To verify that the source and destination cluster have the same hashes, execute
+the :dbcommand:`dbHash` command for the synced collections on each and compare
+the hash value in the ``md5`` field of the return documents.
+
+.. code-block:: javascript
+
+   db.runCommand({
+      dbhash: 1,
+      collections: [
+         "accounts.us_accounts",
+         "accounts.eu_accounts",
+         ...
+      ]}).md5
+   d41d8cd98f00b204e9800998ecf8427e
+
+.. _c2c-verify-doc-comp:
+
+Document Comparison
+-------------------
+
+You can verify sync by comparing documents on the source and destination
+clusters. Write a script that queries collections on the source cluster and
+then checks that the document exists with the same values on the destination
+cluster.
+
+.. _c2c-verify-migration-verifier:
+
+Migration Verifier
+------------------
+
+Migration Verifier connects to the source and destination clusters and performs
+a series of verification checks, comparing documents, views, and indexes to
+confirm the sync was successful.
+
+.. important::
+
+   Migration Verifier is an experimental and unsupported tool.
+
+To use the Migration Verifier,
+
+#. Start Migration Verifier:
+
+   .. code-block:: bash
+
+      migration-verifier --verifyAll \
+         --srcURI example.net:27020 \
+         --destURI example.net:27021 \
+         --metaURI example.net:27017
+
+
+#. To start the verification checks, use curl to send the ``check`` command to
+   Migration Verifier:
+
+   .. code-block:: bash
+
+      curl -H "Content-Type: application/json" \
+          -X POST -d '{}' http://127.0.0.1:27020/api/v1/check
+
+#. When ``mongosync`` is complete, use curl to send the ``writeOff`` command to
+   Migration Verifier:
+
+   .. code-block:: bash
+
+      curl -H "Content-Type: application/json" \
+          -X POST -d '{}' http://127.0.0.1:27020/api/v1/writesOff
+
+
+#. To view the results, use curl to send the ``progress`` command to Migration
+   Verifier:
+
+   .. code-block:: bash
+
+      curl -H "Content-Type: application/json" \
+         -X GET http://127.0.0.1:27020/api/v1/progress
+
+
+   Example output:
+
+   .. code-block:: json
+
+      {
+         "progress": {
+            "phase": "idle",
+            "error": null,
+            "verificationStatus": {
+               "totalTasks": 1,
+               "addedTasks": 0,
+               "processingTasks": 0,
+               "failedTasks": 1,
+               "completedTasks": 0,
+               "metadataMismatchTasks": 0,
+               "recheckTasks": 0
+            }
+         }
+      }
+
+
+When the ``phase`` field returns ``idle``, the verification checks are
+complete.
+
+For more information on Migration Verifier, see 
+`GitHub <https://github.com/mongodb-labs/migration-verifier>`__.
+
+
+Learn More
+==========
+
+For more information, see:
+
+- :mehod:`db.collection.countDocuments`
+
+- :dbcommand:`dbHash`
+
+
+

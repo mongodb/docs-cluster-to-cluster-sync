@@ -18,6 +18,7 @@ Reference
    /reference/logging
    /reference/permissions
    /reference/telemetry
+   /reference/verification
    /reference/versioning
    /reference/supported-server-version
 
