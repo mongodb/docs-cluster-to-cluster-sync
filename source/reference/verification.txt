@@ -51,10 +51,15 @@ documents, the :method:`~db.collection.countDocuments` method for each synced
 collection on each cluster and ensure that they have the same number of
 documents.
 
-.. code-block:: javascript
+.. io-code-block:: 
 
-   db.us_accounts.countDocuments()
-   345
+   .. input::
+      :language: javascript
+
+      db.us_accounts.countDocuments()
+
+   .. output::
+      345
 
 .. _c2c-verify-hash-comp:
 
@@ -77,16 +82,22 @@ To verify that the source and destination cluster have the same hashes, execute
 the :dbcommand:`dbHash` command for the synced collections on each and compare
 the hash value in the ``md5`` field of the return documents.
 
-.. code-block:: javascript
+.. io-code-block:: 
 
-   db.runCommand({
-      dbhash: 1,
-      collections: [
-         "accounts.us_accounts",
-         "accounts.eu_accounts",
-         ...
-      ]}).md5
-   d41d8cd98f00b204e9800998ecf8427e
+   .. input::
+      :language: javascript
+
+      db.runCommand({
+         dbhash: 1,
+         collections: [
+            "accounts.us_accounts",
+            "accounts.eu_accounts",
+            ...
+         ]}).md5
+
+   .. output::
+
+      d41d8cd98f00b204e9800998ecf8427e
 
 .. _c2c-verify-doc-comp:
 
@@ -143,31 +154,31 @@ To use the Migration Verifier,
 #. To view the results, use curl to send the ``progress`` command to Migration
    Verifier:
 
-   .. code-block:: bash
+   .. io-code-block:: bash
 
-      curl -H "Content-Type: application/json" \
-         -X GET http://127.0.0.1:27020/api/v1/progress
+      .. input::
+         :language: bash
 
+         curl -H "Content-Type: application/json" \
+            -X GET http://127.0.0.1:27020/api/v1/progress
+      .. output::
+         :language: json
 
-   Example output:
-
-   .. code-block:: json
-
-      {
-         "progress": {
-            "phase": "idle",
-            "error": null,
-            "verificationStatus": {
-               "totalTasks": 1,
-               "addedTasks": 0,
-               "processingTasks": 0,
-               "failedTasks": 1,
-               "completedTasks": 0,
-               "metadataMismatchTasks": 0,
-               "recheckTasks": 0
+         {
+            "progress": {
+               "phase": "idle",
+               "error": null,
+               "verificationStatus": {
+                  "totalTasks": 1,
+                  "addedTasks": 0,
+                  "processingTasks": 0,
+                  "failedTasks": 1,
+                  "completedTasks": 0,
+                  "metadataMismatchTasks": 0,
+                  "recheckTasks": 0
+               }
             }
          }
-      }
 
 
 When the ``phase`` field returns ``idle``, the verification checks are
