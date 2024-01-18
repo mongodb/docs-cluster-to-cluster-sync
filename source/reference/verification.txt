@@ -195,7 +195,7 @@ To use the Migration Verifier,
 When the ``phase`` field returns ``idle``, the verification checks are
 complete.
 
-For more information on Migration Verifier, see
+For more information on Migration Verifier, see 
 `GitHub <https://github.com/mongodb-labs/migration-verifier>`__.
 
 Learn More
@@ -203,7 +203,7 @@ Learn More
 
 For more information, see:
 
-- :mehod:`db.collection.countDocuments`
+- :method:`db.collection.countDocuments`
 
 - :dbcommand:`dbHash`
 
