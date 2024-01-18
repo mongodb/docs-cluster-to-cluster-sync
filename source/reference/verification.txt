@@ -2,7 +2,7 @@
 ####################
 Verify Data Transfer
 ####################
- 
+
 .. default-domain:: mongodb
 
 .. contents:: On this page
@@ -23,11 +23,11 @@ You should verify your data after every sync. This is important in
 cases where you plan to move your application load from the source to the
 destination cluster.
 
-Verification methods include the comparison of 
-:ref:`document counts <c2c-verify-doc-counts>`, 
-comparison of :ref:`database hashes <c2c-verify-hash-comp>`, 
-scripting :ref:`document comparisons <c2c-verify-doc-comp>`, 
-and the :ref:`Migration Verifier <c2c-verify-migration-verifier>`. 
+Verification methods include the comparison of
+:ref:`document counts <c2c-verify-doc-counts>`,
+comparison of :ref:`database hashes <c2c-verify-hash-comp>`,
+scripting :ref:`document comparisons <c2c-verify-doc-comp>`,
+and the :ref:`Migration Verifier <c2c-verify-migration-verifier>`.
 The specific method you use to verify your data depends on your application
 workload and the complexity of the data.
 
@@ -53,11 +53,11 @@ Compare the results on each cluster:
   to those documents, except in cases where you have an insert-only workload.
 
 To verify that the source and destination cluster have the same number of
-documents, the :method:`~db.collection.countDocuments` method for each synced
+documents, run the :method:`~db.collection.countDocuments` method for each synced
 collection on each cluster and ensure that they have the same number of
 documents.
 
-.. io-code-block:: 
+.. io-code-block::
 
    .. input::
       :language: javascript
@@ -78,18 +78,18 @@ Hash Comparison
 You can verify sync by comparing MD5 hashes of collections synced from the
 source cluster to the destination cluster. While hash comparison does ensure
 that the destination cluster has received all changes from the source, the
-:dbcommand:`dbHash` command locks the cluster, preventing writes until its
-operations complete.
+:dbcommand:`dbHash` command locks the cluster, preventing additional writes
+until its operations complete.
 
 .. note::
 
-   Hash comparison is not possible with sharded clusters.  It also does not
-   work for standalone servers and replica sets that use MongoDB 4.4 or older,
-   since the field order can vary.
+   Hash comparison is not possible with sharded clusters. It also does not
+   work for standalone servers and replica sets that use MongoDB 4.4 or earlier
+   releases, since the field order can vary.
 
 To verify that the source and destination cluster have the same hashes, execute
-the :dbcommand:`dbHash` command for the synced collections on each and compare
-the hash value in the ``md5`` field of the return documents.
+the :dbcommand:`dbHash` command for the synced collections on each cluster and
+compare the hash value in the ``md5`` field of the return documents.
 
 .. io-code-block::
 
@@ -144,7 +144,7 @@ To use the Migration Verifier,
          --metaURI example.net:27017
 
 
-#. To start the verification checks, use curl to send the ``check`` command to
+#. To start the verification checks, use cURL to send the ``check`` command to
    Migration Verifier:
 
    .. code-block:: bash
@@ -152,7 +152,7 @@ To use the Migration Verifier,
       curl -H "Content-Type: application/json" \
           -X POST -d '{}' http://127.0.0.1:27020/api/v1/check
 
-#. When ``mongosync`` is complete, use curl to send the ``writeOff`` command to
+#. When ``mongosync`` is complete, use cURL to send the ``writeOff`` command to
    Migration Verifier:
 
    .. code-block:: bash
@@ -161,7 +161,7 @@ To use the Migration Verifier,
           -X POST -d '{}' http://127.0.0.1:27020/api/v1/writesOff
 
 
-#. To view the results, use curl to send the ``progress`` command to Migration
+#. To view the results, use cURL to send the ``progress`` command to Migration
    Verifier:
 
    .. io-code-block::
@@ -171,6 +171,7 @@ To use the Migration Verifier,
 
          curl -H "Content-Type: application/json" \
             -X GET http://127.0.0.1:27020/api/v1/progress
+
       .. output::
          :language: json
 
@@ -194,7 +195,7 @@ To use the Migration Verifier,
 When the ``phase`` field returns ``idle``, the verification checks are
 complete.
 
-For more information on Migration Verifier, see 
+For more information on Migration Verifier, see
 `GitHub <https://github.com/mongodb-labs/migration-verifier>`__.
 
 Learn More
