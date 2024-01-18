@@ -19,7 +19,7 @@ comparison, or the Migration Verifier.
 Use Cases
 =========
 
-You should verify your data after every sync.  This is especially important in
+You should verify your data after every sync. This is important in
 cases where you plan to move your application load from the source to the
 destination cluster.
 
@@ -76,7 +76,7 @@ Hash Comparison
 ---------------
 
 You can verify sync by comparing MD5 hashes of collections synced from the
-source cluster to the destination cluster.  While hash comparison does ensure
+source cluster to the destination cluster. While hash comparison does ensure
 that the destination cluster has received all changes from the source, the
 :dbcommand:`dbHash` command locks the cluster, preventing writes until its
 operations complete.
