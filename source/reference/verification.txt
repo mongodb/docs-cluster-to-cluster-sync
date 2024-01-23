@@ -85,7 +85,7 @@ until it completes.
 
    Hash comparison is not possible with sharded clusters. It also does not
    work for standalone servers and replica sets that use MongoDB 4.4 or earlier
-   releases, since the field order can vary.
+   releases, since the document field order can vary.
 
 To verify that the source and destination cluster have the same hashes, run
 the :dbcommand:`dbHash` command for the synced collections on each cluster and
