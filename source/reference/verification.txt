@@ -1,7 +1,7 @@
 
-####################
+====================
 Verify Data Transfer
-####################
+====================
 
 .. default-domain:: mongodb
 
@@ -17,7 +17,7 @@ can verify your data transfer using document counts, hash comparison, document
 comparison, or the Migration Verifier.
 
 Use Cases
-=========
+---------
 
 You should verify your data after every sync. This is important in
 cases where you plan to move your application load from the source to the
@@ -32,20 +32,20 @@ The specific method you use to verify your data depends on your application
 workload and the complexity of the data.
 
 Details
-=======
+-------
 
 .. _c2c-verify-doc-counts:
 
 Document Counts
----------------
+~~~~~~~~~~~~~~~
 
-The most basic method of verifying sync is by comparing the number of documents
+The most basic method of verifying sync is to compare the number of documents
 in each synced collection on the source cluster to the number on the
 destination cluster.
 
 Compare the results on each cluster:
 
-- If the document count is different,  not all changes synced to the
+- If the document count is different, not all changes synced to the
   destination cluster.
 
 - If the document count is the same, the destination cluster has the same
@@ -53,8 +53,8 @@ Compare the results on each cluster:
   to those documents, except in cases where you have an insert-only workload.
 
 To verify that the source and destination cluster have the same number of
-documents, run the :method:`~db.collection.countDocuments` method for each synced
-collection on each cluster and ensure that they have the same number of
+documents, run the :method:`~db.collection.countDocuments` method on each synced
+collection in each cluster and ensure that they have the same number of
 documents.
 
 .. io-code-block::
@@ -73,13 +73,13 @@ documents.
 .. _c2c-verify-hash-comp:
 
 Hash Comparison
----------------
+~~~~~~~~~~~~~~~
 
 You can verify sync by comparing MD5 hashes of collections synced from the
-source cluster to the destination cluster. While hash comparison does ensure
+source cluster to the destination cluster. While hash comparison ensures
 that the destination cluster has received all changes from the source, the
 :dbcommand:`dbHash` command locks the cluster, preventing additional writes
-until its operations complete.
+until it completes.
 
 .. note::
 
@@ -87,7 +87,7 @@ until its operations complete.
    work for standalone servers and replica sets that use MongoDB 4.4 or earlier
    releases, since the field order can vary.
 
-To verify that the source and destination cluster have the same hashes, execute
+To verify that the source and destination cluster have the same hashes, run
 the :dbcommand:`dbHash` command for the synced collections on each cluster and
 compare the hash value in the ``md5`` field of the return documents.
 
@@ -112,7 +112,7 @@ compare the hash value in the ``md5`` field of the return documents.
 .. _c2c-verify-doc-comp:
 
 Document Comparison
--------------------
+~~~~~~~~~~~~~~~~~~~
 
 You can verify sync by comparing documents on the source and destination
 clusters. Write a script that queries collections on the source cluster and
@@ -122,7 +122,7 @@ cluster.
 .. _c2c-verify-migration-verifier:
 
 Migration Verifier
-------------------
+~~~~~~~~~~~~~~~~~~
 
 Migration Verifier connects to the source and destination clusters and performs
 a series of verification checks, comparing documents, views, and indexes to
@@ -152,7 +152,7 @@ To use the Migration Verifier,
       curl -H "Content-Type: application/json" \
           -X POST -d '{}' http://127.0.0.1:27020/api/v1/check
 
-#. When ``mongosync`` is complete, use cURL to send the ``writeOff`` command to
+#. When ``mongosync`` is complete, use cURL to send the ``writesOff`` command to
    Migration Verifier:
 
    .. code-block:: bash
@@ -199,7 +199,7 @@ For more information on Migration Verifier, see
 `GitHub <https://github.com/mongodb-labs/migration-verifier>`__.
 
 Learn More
-==========
+----------
 
 For more information, see:
 
