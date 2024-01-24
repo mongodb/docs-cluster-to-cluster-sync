@@ -75,13 +75,13 @@ Steps
       
             d41d8cd98f00b204e9800998ecf8427e
 
-       Note the hash.
+      Note the hash.
 
-    .. step:: Compare the Hashes
+   .. step:: Compare the Hashes
 
-       If the ``md5`` field of the :dbcommand:`dbHash` command returns the
-       same value on the source cluster as it does on the destination cluster,
-       the sync was successful.
+      If the ``md5`` field of the :dbcommand:`dbHash` command returns the
+      same value on the source cluster as it does on the destination cluster,
+      the sync was successful.
 
 Learn More
 ----------
