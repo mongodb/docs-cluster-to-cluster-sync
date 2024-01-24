@@ -41,7 +41,7 @@ The most basic method of verifying sync is to compare the number of documents
 in each synced collection on the source cluster to the number on the
 destination cluster.
 
-While this method is fast and non-block, it only verifies a successful sync when
+While this method is fast and non-blocking, it only verifies a successful sync when
 run against clusters with insert-only workloads.
 
 For more information, see :ref:`c2c-verify-doc-counts`.
@@ -50,10 +50,11 @@ Hash Comparison
 ~~~~~~~~~~~~~~~
 
 You can verify sync by comparing MD5 hashes of collections synced from the
-source cluster to the destination cluster. While hash comparison ensures
-that the destination cluster has received all changes from the source, the
-:dbcommand:`dbHash` command locks the cluster, preventing additional writes
-until it completes.
+source cluster to the destination cluster. 
+
+While hash comparison ensures that the destination cluster has received all
+changes from the source, the :dbcommand:`dbHash` command locks the cluster,
+preventing additional writes until it completes.
 
 .. note::
 
