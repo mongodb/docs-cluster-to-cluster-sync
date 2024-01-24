@@ -188,7 +188,7 @@ To use the Migration Verifier,
                   "totalTasks": 1,
                   "addedTasks": 0,
                   "processingTasks": 0,
-                  "failedTasks": 1,
+                  "failedTasks": 0,
                   "completedTasks": 0,
                   "metadataMismatchTasks": 0,
                   "recheckTasks": 0
@@ -198,7 +198,7 @@ To use the Migration Verifier,
 
 
 When the ``phase`` field returns ``idle``, the verification checks are
-complete.
+complete.  If the ``failedTasks`` field returns 0, the sync was successful.
 
 For more information on Migration Verifier, see 
 `GitHub <https://github.com/mongodb-labs/migration-verifier>`__.
