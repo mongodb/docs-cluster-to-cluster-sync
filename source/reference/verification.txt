@@ -24,9 +24,9 @@ cases where you plan to move your application load from the source to the
 destination cluster.
 
 Verification methods include the comparison of
-:ref:`document counts <c2c-verify-doc-counts>`,
-comparison of :ref:`database hashes <c2c-verify-hash-comp>`,
-scripting :ref:`document comparisons <c2c-verify-doc-comp>`,
+:ref:`Document Counts <c2c-verify-doc-counts>`,
+comparison of :ref:`Hash Comparison <c2c-verify-hash-comp>`,
+scripting :ref:`Document Comparisons <c2c-verify-doc-comp>`,
 and the :ref:`Migration Verifier <c2c-verify-migration-verifier>`.
 The specific method you use to verify your data depends on your application
 workload and the complexity of the data.
