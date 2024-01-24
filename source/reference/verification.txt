@@ -203,6 +203,11 @@ complete.  If the ``failedTasks`` field returns 0, the sync was successful.
 For more information on Migration Verifier, see 
 `GitHub <https://github.com/mongodb-labs/migration-verifier>`__.
 
+.. toctree::
+   :hidden:
+
+   /reference/verification/count
+
 Learn More
 ----------
 
