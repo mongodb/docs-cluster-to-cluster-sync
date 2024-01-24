@@ -16,6 +16,9 @@ until it completes.
    work for standalone servers and replica sets that use MongoDB 4.4 or earlier
    releases, since the document field order can vary.
 
+If you need to sync a sharded cluster or an older release of MongoDB, or
+if the locks are unacceptable for your application workload, use a different
+:ref:`verification method <c2c-verify-method>`.
 
 Steps
 -----

@@ -31,6 +31,8 @@ and the :ref:`Migration Verifier <c2c-verify-migration-verifier>`.
 The specific method you use to verify your data depends on your application
 workload and the complexity of the data.
 
+.. _c2c-verify-method:
+
 Tasks
 -------
 
