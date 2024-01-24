@@ -1,0 +1,87 @@
+.. _c2c-verify-hash-comp:
+
+===========================
+Verify with Hash Comparison
+===========================
+
+You can verify sync by comparing MD5 hashes of collections synced from the
+source cluster to the destination cluster. While hash comparison ensures
+that the destination cluster has received all changes from the source, the
+:dbcommand:`dbHash` command locks the cluster, preventing additional writes
+until it completes.
+
+.. note::
+
+   Hash comparison is not possible with sharded clusters. It also does not
+   work for standalone servers and replica sets that use MongoDB 4.4 or earlier
+   releases, since the document field order can vary.
+
+
+Steps
+-----
+
+.. procedure::
+
+   .. step:: Retrieve the Source Hash
+
+      Run the :dbcommand:`dbHash` command on the source cluster.
+      In the ``collections`` field, list each collection included
+      in the sync.  Then, return the ``md5`` output field:
+      
+      .. io-code-block::
+      
+         .. input::
+            :language: javascript
+      
+            db.runCommand({
+               dbHash: 1,
+               collections: [
+                  "accounts.us_accounts",
+                  "accounts.eu_accounts",
+                  ...
+               ]}).md5
+      
+         .. output::
+            :language: text
+      
+            d41d8cd98f00b204e9800998ecf8427e
+
+       Note the hash.
+
+   .. step:: Retrieve the Destination Hash
+
+      Run the :dbcommand:`dbHash` command on the destination cluster.
+      In the ``collections`` field, list each collection included
+      in the sync.  Then, return the ``md5`` output field:
+      
+      .. io-code-block::
+      
+         .. input::
+            :language: javascript
+      
+            db.runCommand({
+               dbHash: 1,
+               collections: [
+                  "accounts.us_accounts",
+                  "accounts.eu_accounts",
+                  ...
+               ]}).md5
+      
+         .. output::
+            :language: text
+      
+            d41d8cd98f00b204e9800998ecf8427e
+
+       Note the hash.
+
+    .. step:: Compare the Hashes
+
+       If the ``md5`` field of the :dbcommand:`dbHash` command returns the
+       same value on the source cluster as it does on the destination cluster,
+       the sync was successful.
+
+Learn More
+----------
+
+- :ref:`c2c-verify-doc-counts`
+- :ref:`c2c-migration-verifier`

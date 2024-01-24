@@ -64,4 +64,8 @@ Steps
       - If the document count is the same for a cluster that doesn't have an
         insert-only workload, use another test to confirm a successful sync.
 
+Learn More
+----------
 
+- :ref:`c2c-verify-hash-comp`
+- :ref:`c2c-migration-verifier`

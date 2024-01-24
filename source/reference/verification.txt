@@ -31,10 +31,8 @@ and the :ref:`Migration Verifier <c2c-verify-migration-verifier>`.
 The specific method you use to verify your data depends on your application
 workload and the complexity of the data.
 
-Details
+Tasks
 -------
-
-.. _c2c-verify-doc-counts:
 
 Document Counts
 ~~~~~~~~~~~~~~~
@@ -43,36 +41,10 @@ The most basic method of verifying sync is to compare the number of documents
 in each synced collection on the source cluster to the number on the
 destination cluster.
 
-Compare the results on each cluster:
+While this method is fast and non-block, it only verifies a successful sync when
+run against clusters with insert-only workloads.
 
-- If the document count is different, not all changes synced to the
-  destination cluster.
-
-- If the document count is the same for a cluster that has an insert-only workload,
-  the sync was successful.
-
-- If the document count is the same for a cluster that doesn't have an insert-only
-  workload, use another test to confirm a successful sync.
-
-To verify that the source and destination cluster have the same number of
-documents, run the :method:`~db.collection.countDocuments` method on each synced
-collection in each cluster and ensure that they have the same number of
-documents.
-
-.. io-code-block::
-
-   .. input::
-      :language: javascript
-
-      db.us_accounts.countDocuments()
-
-   .. output::
-      :language: javascript
-
-      345
-
-
-.. _c2c-verify-hash-comp:
+For more information, see :ref:`c2c-verify-doc-counts`.
 
 Hash Comparison
 ~~~~~~~~~~~~~~~
@@ -89,27 +61,7 @@ until it completes.
    work for standalone servers and replica sets that use MongoDB 4.4 or earlier
    releases, since the document field order can vary.
 
-To verify that the source and destination cluster have the same hashes, run
-the :dbcommand:`dbHash` command for the synced collections on each cluster and
-compare the hash value in the ``md5`` field of the return documents.
-
-.. io-code-block::
-
-   .. input::
-      :language: javascript
-
-      db.runCommand({
-         dbhash: 1,
-         collections: [
-            "accounts.us_accounts",
-            "accounts.eu_accounts",
-            ...
-         ]}).md5
-
-   .. output::
-      :language: text
-
-      d41d8cd98f00b204e9800998ecf8427e
+For more information, see :ref:`c2c-verify-hash-comp`.
 
 .. _c2c-verify-doc-comp:
 
@@ -137,76 +89,14 @@ confirm the sync was successful.
    For installation instructions, see 
    `GitHub <https://github.com/mongodb-labs/migration-verifier>`__.
 
-To use the Migration Verifier,
-
-#. Start Migration Verifier:
-
-   .. code-block:: bash
-
-      migration-verifier --verifyAll \
-         --srcURI example.net:27020 \
-         --destURI example.net:27021 \
-         --metaURI example.net:27017
-
-
-#. To start the verification checks, use cURL to send the ``check`` command to
-   Migration Verifier:
-
-   .. code-block:: bash
-
-      curl -H "Content-Type: application/json" \
-          -X POST -d '{}' http://127.0.0.1:27020/api/v1/check
-
-#. When ``mongosync`` is complete, use cURL to send the ``writesOff`` command to
-   Migration Verifier:
-
-   .. code-block:: bash
-
-      curl -H "Content-Type: application/json" \
-          -X POST -d '{}' http://127.0.0.1:27020/api/v1/writesOff
-
-
-#. To view the results, use cURL to send the ``progress`` command to Migration
-   Verifier:
-
-   .. io-code-block::
-
-      .. input::
-         :language: bash
-
-         curl -H "Content-Type: application/json" \
-            -X GET http://127.0.0.1:27020/api/v1/progress
-
-      .. output::
-         :language: json
-
-         {
-            "progress": {
-               "phase": "idle",
-               "error": null,
-               "verificationStatus": {
-                  "totalTasks": 1,
-                  "addedTasks": 0,
-                  "processingTasks": 0,
-                  "failedTasks": 0,
-                  "completedTasks": 0,
-                  "metadataMismatchTasks": 0,
-                  "recheckTasks": 0
-               }
-            }
-         }
-
-
-When the ``phase`` field returns ``idle``, the verification checks are
-complete.  If the ``failedTasks`` field returns 0, the sync was successful.
-
-For more information on Migration Verifier, see 
-`GitHub <https://github.com/mongodb-labs/migration-verifier>`__.
+For more information, see :ref:`c2c-migration-verifier`.
 
 .. toctree::
    :hidden:
 
    /reference/verification/count
+   /reference/verification/hash
+   /reference/verification/verifier
 
 Learn More
 ----------
