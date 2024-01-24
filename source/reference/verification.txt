@@ -48,9 +48,11 @@ Compare the results on each cluster:
 - If the document count is different, not all changes synced to the
   destination cluster.
 
-- If the document count is the same, the destination cluster has the same
-  number of documents. This doesn’t guarantee a successful sync of all changes
-  to those documents, except in cases where you have an insert-only workload.
+- If the document count is the same for a cluster that has an insert-only workload,
+  the sync was successful.
+
+- If the document count is the same for a cluster that doesn't have an insert-only
+  workload, use another test to confirm a successful sync.
 
 To verify that the source and destination cluster have the same number of
 documents, run the :method:`~db.collection.countDocuments` method on each synced
@@ -131,6 +133,9 @@ confirm the sync was successful.
 .. important::
 
    Migration Verifier is an experimental and unsupported tool.
+
+   For installation instructions, see 
+   `GitHub <https://github.com/mongodb-labs/migration-verifier>`__.
 
 To use the Migration Verifier,
 
