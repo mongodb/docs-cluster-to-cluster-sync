@@ -4,6 +4,13 @@
 Verify with Migration Verifier
 ==============================
 
+.. default-domain:: mongodb
+
+.. contents:: On this page
+   :local:
+   :backlinks: none
+   :depth: 2
+   :class: singlecol
 
 Migration Verifier connects to the source and destination clusters and performs
 a series of verification checks, comparing documents, views, and indexes to

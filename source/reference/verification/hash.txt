@@ -4,6 +4,14 @@
 Verify with Hash Comparison
 ===========================
 
+.. default-domain:: mongodb
+
+.. contents:: On this page
+   :local:
+   :backlinks: none
+   :depth: 2
+   :class: singlecol
+
 You can verify sync by comparing MD5 hashes of collections synced from the
 source cluster to the destination cluster. While hash comparison ensures
 that the destination cluster has received all changes from the source, the
