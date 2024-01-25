@@ -74,6 +74,9 @@ Steps
       - If the document count is the same and you have an insert-only workload
         for the cluster, the sync was successful.
 
+      - If you do not have an insert-only workload for the cluster, use a 
+        different method to verify sync.
+
 Learn More
 ----------
 
