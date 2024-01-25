@@ -87,12 +87,12 @@ Steps
 
    .. step:: Compare the Hashes
 
-      If the ``md5`` field of the :dbcommand:`dbHash` command returns the
-      same value on the source cluster as it does on the destination cluster,
-      the sync was successful.
+      Compare the ``md5`` values from each cluster.  If both clusters return
+      the same MD5 value, the sync was successful.
 
 Learn More
 ----------
 
 - :ref:`c2c-verify-doc-counts`
 - :ref:`c2c-migration-verifier`
+
