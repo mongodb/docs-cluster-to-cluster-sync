@@ -71,10 +71,10 @@ Steps
       - If the document count is different, not all changes synced to the
         destination cluster.
       
-      - If the document count is the same and you have an insert-only workload
-        for the cluster, the sync was successful.
+      - If the document count is the same *and* your cluster has an insert-only
+        workload, the sync was successful.
 
-      - If you do not have an insert-only workload for the cluster, use a 
+      - If your source cluster does *not* have an insert-only workload, use a 
         different method to verify sync.
 
 Learn More
