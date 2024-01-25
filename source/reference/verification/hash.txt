@@ -9,7 +9,7 @@ Verify with Hash Comparison
 .. contents:: On this page
    :local:
    :backlinks: none
-   :depth: 2
+   :depth: 1
    :class: singlecol
 
 You can verify sync by comparing MD5 hashes of collections synced from the

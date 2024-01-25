@@ -9,7 +9,7 @@ Verify with Document Counts
 .. contents:: On this page
    :local:
    :backlinks: none
-   :depth: 2
+   :depth: 1
    :class: singlecol
 
 The most basic method of verifying sync is to compare the number of documents
