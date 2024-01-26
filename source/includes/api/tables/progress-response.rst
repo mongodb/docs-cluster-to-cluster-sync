@@ -43,10 +43,10 @@
      - Time in seconds between the last applied event and time of the
        current latest event for this instance of ``mongosync``.
 
-       ..note::
+       .. note::
 
-         ``mongosync`` performs periodic no-op writes on the source cluster,
-         which may prevent the value from reaching zero.
+          ``mongosync`` performs periodic no-op writes on the source cluster,
+          which may prevent the value from reaching zero.
 
    * - ``collectionCopy``
      - object
