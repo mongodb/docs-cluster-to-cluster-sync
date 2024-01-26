@@ -4,70 +4,71 @@
 
 .. list-table::
    :header-rows: 1
-   :widths: 25 25 50
+   :widths: 15 15 70
 
    * - Sync Type
-     - Target
+     - Cluster
      - Required Permissions
 
    * - default
-     - source cluster
+     - source
      -
 
          - :authrole:`readAnyDatabase`
          - :authrole:`backup`
-         - clusterMonitor
+         - :authrole:`clusterMonitor`
 
    * - default
-     - destination cluster
+     - destination
      -
 
-         - readWriteAnyDatabase
-         - restore
-         - clusterMonitor
-         - clusterManager
+         - :authrole:`readWriteAnyDatabase`
+         - :authrole:`restore`
+         - :authrole:`clusterMonitor`
+         - :authrole:`clusterManager`
 
    * - write-blocking
-     - source cluster
+     - source
      -  
 
-         - readWriteAnyDatabase
-         - backup
-         - restore
-         - clusterMonitor
-         - clusterManager
+         - :authrole:`readWriteAnyDatabase`
+         - :authrole:`backup`
+         - :authrole:`restore`
+         - :authrole:`clusterMonitor`
+         - :authrole:`clusterManager`
 
    * - write-blocking
-     - destination cluster
+     - destination
      -
 
-         - readWriteAnyDatabase
-         - backup
-         - restore
-         - clusterMonitor
-         - clusterManager
+         - :authrole:`readWriteAnyDatabase`
+         - :authrole:`backup`
+         - :authrole:`restore`
+         - :authrole:`clusterMonitor`
+         - :authrole:`clusterManager`
 
 
    * - reversing
-     - source cluster
+     - source
      -  
 
-         - readWriteAnyDatabase
-         - backup
-         - restore
-         - clusterMonitor
-         - clusterManager
+         - :authrole:`readWriteAnyDatabase`
+         - :authrole:`backup`
+         - :authrole:`restore`
+         - :authrole:`clusterMonitor`
+         - :authrole:`clusterManager`
+         - :authrole:`dbAdmin`
 
 
    * -  reversing
-     - destination cluster
+     - destination
      -
 
-         - readWriteAnyDatabase
-         - backup
-         - restore
-         - clusterMonitor
-         - clusterManager
+         - :authrole:`readWriteAnyDatabase`
+         - :authrole:`backup`
+         - :authrole:`restore`
+         - :authrole:`clusterMonitor`
+         - :authrole:`clusterManager`
 
 
 For details on server roles, see: :ref:`authorization`.
