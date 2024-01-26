@@ -7,6 +7,6 @@ initialization. If ``getBalancerState()`` returns ``true``, ``mongosync``
 logs a warning. 
 
 If write performance during migration is impacted, consider disabling the 
-balancer on the destination cluster . You stop the balancer with the 
+balancer on the destination cluster. You stop the balancer with the 
 :dbcommand:`balancerStop` command, and restart it with the 
 :dbcommand:`balancerStart` command.
