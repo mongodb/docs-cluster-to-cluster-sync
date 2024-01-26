@@ -4,6 +4,7 @@
 
 .. list-table::
    :header-rows: 1
+   :widths: 25 25 50
 
    * - Sync Type
      - Target
@@ -14,7 +15,7 @@
      -
 
          - :authrole:`readAnyDatabase`
-         - backup
+         - :authrole:`backup`
          - clusterMonitor
 
    * - default
@@ -26,7 +27,7 @@
          - clusterMonitor
          - clusterManager
 
-   * - write-blocking or reversing
+   * - write-blocking
      - source cluster
      -  
 
@@ -36,7 +37,7 @@
          - clusterMonitor
          - clusterManager
 
-   * - write-blocking or reversing
+   * - write-blocking
      - destination cluster
      -
 
@@ -45,6 +46,29 @@
          - restore
          - clusterMonitor
          - clusterManager
+
+
+   * - reversing
+     - source cluster
+     -  
+
+         - readWriteAnyDatabase
+         - backup
+         - restore
+         - clusterMonitor
+         - clusterManager
+
+
+   * -  reversing
+     - destination cluster
+     -
+
+         - readWriteAnyDatabase
+         - backup
+         - restore
+         - clusterMonitor
+         - clusterManager
+
 
 For details on server roles, see: :ref:`authorization`.
 
