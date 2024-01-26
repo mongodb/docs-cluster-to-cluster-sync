@@ -16,9 +16,9 @@ The most basic method of verifying sync is to compare the number of documents
 in each synced collection on the source cluster to the number on the
 destination cluster.
 
-While this method is fast and non-blocking, it only verifies a successful sync
-when run against clusters with insert-only workloads.  If you do not have an
-insert-only workload for the cluster, use a different 
+While this method is fast and nonblocking, it only verifies a successful sync
+when run against clusters with insert-only workloads. If you do not have an
+insert-only workload for the cluster, use a different
 :ref:`verification method <c2c-verify-method>`.
 
 Steps
@@ -30,17 +30,17 @@ Steps
 
       Run the :method:`~db.collection.countDocuments` method on each synced
       collection on the source cluster:
-      
+
       .. io-code-block::
-      
+
          .. input::
             :language: javascript
-      
+
             db.us_accounts.countDocuments()
-      
+
          .. output::
             :language: javascript
-      
+
             345
 
       Note the number of documents.
@@ -49,32 +49,32 @@ Steps
 
       Run the :method:`~db.collection.countDocuments` method on each synced
       collection on the destination cluster:
-      
+
       .. io-code-block::
-      
+
          .. input::
             :language: javascript
-      
+
             db.us_accounts.countDocuments()
-      
+
          .. output::
             :language: javascript
-      
+
             345
 
       Note the number of documents.
 
    .. step:: Compare Counts
 
-      Compare the results of each document count: 
-      
+      Compare the results of each document count:
+
       - If the document count is different, not all changes synced to the
         destination cluster.
-      
+
       - If the document count is the same *and* your cluster has an insert-only
         workload, the sync was successful.
 
-      - If your source cluster does *not* have an insert-only workload, use a 
+      - If your source cluster does *not* have an insert-only workload, use a
         different method to verify sync.
 
 Learn More

@@ -5,7 +5,7 @@ Reference
 =========
 
 .. toctree::
-   :titlesonly: 
+   :titlesonly:
 
    /reference/mongosync
    /reference/configuration

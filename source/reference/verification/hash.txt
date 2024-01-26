@@ -37,13 +37,13 @@ Steps
 
       Run the :dbcommand:`dbHash` command on the source cluster.
       In the ``collections`` field, list each collection included
-      in the sync.  Then, return the ``md5`` output field:
-      
+      in the sync. Then, return the ``md5`` output field:
+
       .. io-code-block::
-      
+
          .. input::
             :language: javascript
-      
+
             db.runCommand({
                dbHash: 1,
                collections: [
@@ -51,10 +51,10 @@ Steps
                   "accounts.eu_accounts",
                   ...
                ]}).md5
-      
+
          .. output::
             :language: text
-      
+
             d41d8cd98f00b204e9800998ecf8427e
 
       Note the hash.
@@ -63,13 +63,13 @@ Steps
 
       Run the :dbcommand:`dbHash` command on the destination cluster.
       In the ``collections`` field, list each collection included
-      in the sync.  Then, return the ``md5`` output field:
-      
+      in the sync. Then, return the ``md5`` output field:
+
       .. io-code-block::
-      
+
          .. input::
             :language: javascript
-      
+
             db.runCommand({
                dbHash: 1,
                collections: [
@@ -77,17 +77,17 @@ Steps
                   "accounts.eu_accounts",
                   ...
                ]}).md5
-      
+
          .. output::
             :language: text
-      
+
             d41d8cd98f00b204e9800998ecf8427e
 
       Note the hash.
 
    .. step:: Compare the Hashes
 
-      Compare the ``md5`` values from each cluster.  If both clusters return
+      Compare the ``md5`` values from each cluster. If both clusters return
       the same MD5 value, the sync was successful.
 
 Learn More
