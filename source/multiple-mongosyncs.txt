@@ -18,8 +18,6 @@ There are two ways to synchronize :ref:`sharded clusters
 loaded clusters, use one ``mongosync`` instance for each shard on the
 source cluster.
 
-.. include:: /includes/sharding-warning
-
 .. _c2c-sharded-config-single:
 
 Configure a Single ``mongosync`` Instance
@@ -170,6 +168,13 @@ Use ``curl`` or another HTTP client to issue the :ref:`start
 
 The ``start`` command options must be the same for all of the ``mongosync``
 instances.
+
+.. _c2c-sharded-performance:
+
+Performance
+-----------
+
+.. include:: /includes/sharding-perf
 
 .. _c2c-sharded-progress:
 
