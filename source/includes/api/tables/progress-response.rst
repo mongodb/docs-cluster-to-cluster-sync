@@ -46,7 +46,8 @@
        .. note::
 
           ``mongosync`` performs periodic no-op writes on the source cluster,
-          which may prevent the value from reaching zero.
+          which may prevent the value of the ``lagTimeSeconds`` field from
+          reaching zero.
 
    * - ``collectionCopy``
      - object
