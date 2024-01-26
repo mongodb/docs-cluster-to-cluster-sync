@@ -13,7 +13,7 @@
      - source cluster
      -
 
-         - readAnyDatabase
+         - :authrole:`readAnyDatabase`
          - backup
          - clusterMonitor
 
