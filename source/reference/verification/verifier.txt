@@ -16,12 +16,14 @@ Migration Verifier connects to the source and destination clusters and performs
 a series of verification checks, comparing documents, views, and indexes to
 confirm the sync was successful.
 
-.. important::
 
-   Migration Verifier is an experimental and unsupported tool.
+About This Task
+---------------
 
-   For installation instructions, see
-   `GitHub <https://github.com/mongodb-labs/migration-verifier>`__.
+Migration Verifier is an experimental and unsupported tool.
+
+For installation instructions, see
+`GitHub <https://github.com/mongodb-labs/migration-verifier>`__.
 
 Steps
 -----
@@ -97,7 +99,7 @@ Steps
             }
 
 
-      When the ``phase`` field returns ``idle``, the verification checks are
+      When the ``phase`` field is ``idle``, the verification checks are
       complete. If the ``failedTasks`` field returns 0, the sync was successful.
 
 Learn More

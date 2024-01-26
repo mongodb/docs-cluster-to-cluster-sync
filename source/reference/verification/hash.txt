@@ -18,11 +18,12 @@ that the destination cluster has received all changes from the source, the
 :dbcommand:`dbHash` command locks the cluster, preventing additional writes
 until it completes.
 
-.. note::
+About This Task
+---------------
 
-   Hash comparison is not possible with sharded clusters. It also does not
-   work for standalone servers and replica sets that use MongoDB 4.4 or earlier
-   releases, since the document field order can vary.
+Hash comparison is not possible with sharded clusters. It also does not
+work for standalone servers and replica sets that use MongoDB 4.4 or earlier
+releases, since the document field order can vary.
 
 If you need to sync a sharded cluster or an older release of MongoDB, or
 if the locks are unacceptable for your application workload, use a different
