@@ -4,7 +4,8 @@
 
 .. list-table::
    :header-rows: 1
-   :widths: 15 15 70
+   :stub-columns: 2
+   :widths: 15 20 65
 
    * - Sync Type
      - Cluster
