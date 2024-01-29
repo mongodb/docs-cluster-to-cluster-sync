@@ -4,7 +4,7 @@
 
 .. list-table::
    :header-rows: 1
-   :stub-columns: 2
+   :stub-columns: 1
    :widths: 15 20 65
 
    * - Sync Type
