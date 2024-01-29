@@ -11,20 +11,20 @@
      - Required Permissions
 
    * - default
-     - source
+     - source cluster
      - - :authrole:`readAnyDatabase`
        - :authrole:`backup`
        - :authrole:`clusterMonitor`
 
    * - default
-     - destination
+     - destination cluster
      - - :authrole:`readWriteAnyDatabase`
        - :authrole:`restore`
        - :authrole:`clusterMonitor`
        - :authrole:`clusterManager`
 
    * - write-blocking
-     - source
+     - source cluster
      -  - :authrole:`readWriteAnyDatabase`
         - :authrole:`backup`
         - :authrole:`restore`
@@ -32,7 +32,7 @@
         - :authrole:`clusterManager`
 
    * - write-blocking
-     - destination
+     - destination cluster
      - - :authrole:`readWriteAnyDatabase`
        - :authrole:`backup`
        - :authrole:`restore`
@@ -40,7 +40,7 @@
        - :authrole:`clusterManager`
 
    * - reversing
-     - source
+     - source cluster
      - - :authrole:`readWriteAnyDatabase`
        - :authrole:`backup`
        - :authrole:`restore`
@@ -49,7 +49,7 @@
        - :authrole:`dbAdmin`
 
    * -  reversing
-     - destination
+     - destination cluster
      - - :authrole:`readWriteAnyDatabase`
        - :authrole:`backup`
        - :authrole:`restore`
