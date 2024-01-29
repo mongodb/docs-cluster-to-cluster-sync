@@ -12,11 +12,12 @@
 
    * - default
      - source
-     -
+     - .. hlist::
+          :columns: 2
 
-         - :authrole:`readAnyDatabase`
-         - :authrole:`backup`
-         - :authrole:`clusterMonitor`
+          - :authrole:`readAnyDatabase`
+          - :authrole:`backup`
+          - :authrole:`clusterMonitor`
 
    * - default
      - destination
