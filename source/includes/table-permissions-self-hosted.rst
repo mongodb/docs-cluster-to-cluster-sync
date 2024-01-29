@@ -18,56 +18,43 @@
 
    * - default
      - destination
-     -
-
-         - :authrole:`readWriteAnyDatabase`
-         - :authrole:`restore`
-         - :authrole:`clusterMonitor`
-         - :authrole:`clusterManager`
+     - - :authrole:`readWriteAnyDatabase`
+       - :authrole:`restore`
+       - :authrole:`clusterMonitor`
+       - :authrole:`clusterManager`
 
    * - write-blocking
      - source
-     -  
-
-         - :authrole:`readWriteAnyDatabase`
-         - :authrole:`backup`
-         - :authrole:`restore`
-         - :authrole:`clusterMonitor`
-         - :authrole:`clusterManager`
+     -  - :authrole:`readWriteAnyDatabase`
+        - :authrole:`backup`
+        - :authrole:`restore`
+        - :authrole:`clusterMonitor`
+        - :authrole:`clusterManager`
 
    * - write-blocking
      - destination
-     -
-
-         - :authrole:`readWriteAnyDatabase`
-         - :authrole:`backup`
-         - :authrole:`restore`
-         - :authrole:`clusterMonitor`
-         - :authrole:`clusterManager`
-
+     - - :authrole:`readWriteAnyDatabase`
+       - :authrole:`backup`
+       - :authrole:`restore`
+       - :authrole:`clusterMonitor`
+       - :authrole:`clusterManager`
 
    * - reversing
      - source
-     -  
-
-         - :authrole:`readWriteAnyDatabase`
-         - :authrole:`backup`
-         - :authrole:`restore`
-         - :authrole:`clusterMonitor`
-         - :authrole:`clusterManager`
-         - :authrole:`dbAdmin`
-
+     - - :authrole:`readWriteAnyDatabase`
+       - :authrole:`backup`
+       - :authrole:`restore`
+       - :authrole:`clusterMonitor`
+       - :authrole:`clusterManager`
+       - :authrole:`dbAdmin`
 
    * -  reversing
      - destination
-     -
-
-         - :authrole:`readWriteAnyDatabase`
-         - :authrole:`backup`
-         - :authrole:`restore`
-         - :authrole:`clusterMonitor`
-         - :authrole:`clusterManager`
-
+     - - :authrole:`readWriteAnyDatabase`
+       - :authrole:`backup`
+       - :authrole:`restore`
+       - :authrole:`clusterMonitor`
+       - :authrole:`clusterManager`
 
 For details on server roles, see: :ref:`authorization`.
 
