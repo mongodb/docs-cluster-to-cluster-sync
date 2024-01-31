@@ -8,8 +8,8 @@
    :widths: 20 40 40
 
    * - Sync Type
-     - Source Permissions
-     - Destination Permissions
+     - Required Source Permissions
+     - Required Destination Permissions
 
    * - default
      - - :authrole:`backup`
