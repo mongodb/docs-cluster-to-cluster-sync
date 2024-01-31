@@ -24,7 +24,7 @@
        - :authrole:`clusterMonitor`
        - :authrole:`clusterManager`
 
-   * - write-blocking
+   * - write-blocking and reversing
      - source cluster
      -  - :authrole:`readWriteAnyDatabase`
         - :authrole:`backup`
@@ -32,7 +32,12 @@
         - :authrole:`clusterMonitor`
         - :authrole:`clusterManager`
 
-   * - write-blocking
+        .. note::
+
+           Additionally, to reverse sync, the original destination cluster
+           requires the :authrole:`dbRole` role.
+
+   * - write-blocking and reversing
      - destination cluster
      - - :authrole:`readWriteAnyDatabase`
        - :authrole:`backup`
@@ -40,22 +45,6 @@
        - :authrole:`clusterMonitor`
        - :authrole:`clusterManager`
 
-   * - reversing
-     - source cluster
-     - - :authrole:`readWriteAnyDatabase`
-       - :authrole:`backup`
-       - :authrole:`restore`
-       - :authrole:`clusterMonitor`
-       - :authrole:`clusterManager`
-       - :authrole:`dbAdmin`
-
-   * -  reversing
-     - destination cluster
-     - - :authrole:`readWriteAnyDatabase`
-       - :authrole:`backup`
-       - :authrole:`restore`
-       - :authrole:`clusterMonitor`
-       - :authrole:`clusterManager`
 
 For details on server roles, see: :ref:`authorization`.
 
