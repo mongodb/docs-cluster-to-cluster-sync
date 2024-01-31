@@ -5,27 +5,23 @@
 .. list-table::
    :header-rows: 1
    :stub-columns: 1
-   :widths: 15 20 65
+   :widths: 20 40 40
 
    * - Sync Type
-     - Cluster
-     - Required Permissions
+     - Source Permissions
+     - Destination Permissions
 
    * - default
-     - source cluster
      - - :authrole:`backup`
        - :authrole:`clusterMonitor`
        - :authrole:`readAnyDatabase`
 
-   * - default
-     - destination cluster
      - - :authrole:`clusterManager`
        - :authrole:`clusterMonitor`
        - :authrole:`readWriteAnyDatabase`
        - :authrole:`restore`
 
    * - write-blocking and reversing
-     - source cluster
      - - :authrole:`backup`
         - :authrole:`clusterManager`
         - :authrole:`clusterMonitor`
@@ -37,8 +33,6 @@
            Additionally, to reverse sync, the original destination cluster
            requires the :authrole:`dbRole` role.
 
-   * - write-blocking and reversing
-     - destination cluster
      - - :authrole:`backup`
        - :authrole:`clusterManager`
        - :authrole:`clusterMonitor`
