@@ -1,6 +1,6 @@
 ..
-   Comment: The nested lists need blank lines before and after each list
-            plus extra indents 
+   Comment: The nested lists need extra indents.  Keep roles in alphabetic
+            order.
 
 .. list-table::
    :header-rows: 1
@@ -13,24 +13,24 @@
 
    * - default
      - source cluster
-     - - :authrole:`readAnyDatabase`
-       - :authrole:`backup`
+     - - :authrole:`backup`
        - :authrole:`clusterMonitor`
+       - :authrole:`readAnyDatabase`
 
    * - default
      - destination cluster
-     - - :authrole:`readWriteAnyDatabase`
-       - :authrole:`restore`
+     - - :authrole:`clusterManager`
        - :authrole:`clusterMonitor`
-       - :authrole:`clusterManager`
+       - :authrole:`readWriteAnyDatabase`
+       - :authrole:`restore`
 
    * - write-blocking and reversing
      - source cluster
-     -  - :authrole:`readWriteAnyDatabase`
-        - :authrole:`backup`
-        - :authrole:`restore`
-        - :authrole:`clusterMonitor`
+     - - :authrole:`backup`
         - :authrole:`clusterManager`
+        - :authrole:`clusterMonitor`
+        - :authrole:`readWriteAnyDatabase`
+        - :authrole:`restore`
 
         .. note::
 
@@ -39,12 +39,11 @@
 
    * - write-blocking and reversing
      - destination cluster
-     - - :authrole:`readWriteAnyDatabase`
-       - :authrole:`backup`
-       - :authrole:`restore`
-       - :authrole:`clusterMonitor`
+     - - :authrole:`backup`
        - :authrole:`clusterManager`
-
+       - :authrole:`clusterMonitor`
+       - :authrole:`readWriteAnyDatabase`
+       - :authrole:`restore`
 
 For details on server roles, see: :ref:`authorization`.
 
