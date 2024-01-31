@@ -11,7 +11,7 @@
      - Required Source Permissions
      - Required Destination Permissions
 
-   * - default
+   * - Default
      - - :authrole:`backup`
        - :authrole:`clusterMonitor`
        - :authrole:`readAnyDatabase`
@@ -21,7 +21,7 @@
        - :authrole:`readWriteAnyDatabase`
        - :authrole:`restore`
 
-   * - write-blocking
+   * - Write-blocking
      - - :authrole:`backup`
         - :authrole:`clusterManager`
         - :authrole:`clusterMonitor`
@@ -34,7 +34,7 @@
        - :authrole:`readWriteAnyDatabase`
        - :authrole:`restore`
 
-   * - reversing
+   * - Reversing
      - - :authrole:`backup`
         - :authrole:`clusterManager`
         - :authrole:`clusterMonitor`
