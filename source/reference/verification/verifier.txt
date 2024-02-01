@@ -30,6 +30,10 @@ Steps
 
 .. procedure::
 
+   .. step:: Sync Clusters
+
+      Run :program:`mongosync` to sync the source and destination clusters.
+
    .. step:: Start Migration Verifier
 
       Start the ``migration-verifier`` process:
@@ -50,10 +54,6 @@ Steps
 
          curl -H "Content-Type: application/json" \
              -X POST -d '{}' http://127.0.0.1:27020/api/v1/check
-
-   .. step:: Sync Clusters
-
-      Run :program:`mongosync` to sync the source and destination clusters.
 
    .. step:: Signal Sync Completion
 
