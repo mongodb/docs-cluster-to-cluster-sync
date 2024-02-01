@@ -58,7 +58,10 @@ Steps
 
             d41d8cd98f00b204e9800998ecf8427e
 
-      Note the hash.
+      While this is running, :ref:`retrieve the destination hash
+      <c2c-retrieve-dest-hash>`.
+
+   .. _c2c-retrieve-dest-hash:
 
    .. step:: Retrieve the Destination Hash
 
