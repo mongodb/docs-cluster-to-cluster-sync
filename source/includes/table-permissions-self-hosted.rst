@@ -40,11 +40,11 @@
         - :authrole:`clusterMonitor`
         - :authrole:`readWriteAnyDatabase`
         - :authrole:`restore`
-        - :authrole:`dbRole`
 
      - - :authrole:`backup`
        - :authrole:`clusterManager`
        - :authrole:`clusterMonitor`
+       - :authrole:`dbAdmin`
        - :authrole:`readWriteAnyDatabase`
        - :authrole:`restore`
 
