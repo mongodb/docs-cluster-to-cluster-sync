@@ -23,6 +23,11 @@ Release Notes for mongosync 1.8
 
 New Features:
 
+Time Series Collections
+~~~~~~~~~~~~~~~~~~~~~~~
+
+Starting in ``mongosync`` 1.8.0, time series collections are
+synchronized between clusters.
 
 Minimum Supported Version
 -------------------------
