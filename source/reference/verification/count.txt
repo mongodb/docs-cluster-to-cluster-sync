@@ -16,10 +16,9 @@ The most basic method of verifying sync is to compare the number of documents
 in each synced collection on the source cluster to the number on the
 destination cluster.
 
-While this method is fast and nonblocking, it only verifies a successful sync
-when run against clusters with insert-only workloads. If you do not have an
-insert-only workload for the cluster, use a different
-:ref:`verification method <c2c-verify-method>`.
+This method only verifies a successful sync when run against clusters with
+insert-only workloads. If you do not have an insert-only workload for the
+cluster, use a different :ref:`verification method <c2c-verify-method>`.
 
 Steps
 -----
