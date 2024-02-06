@@ -1,9 +1,14 @@
+.. _c2c-verification:
 
 ====================
 Verify Data Transfer
 ====================
 
 .. default-domain:: mongodb
+
+.. facet::
+   :name: genre
+   :values: reference
 
 .. contents:: On this page
    :local:
