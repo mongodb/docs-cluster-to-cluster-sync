@@ -1,8 +1,8 @@
 .. _c2c-server-version-compatibility:
 
-================================================
-MongoDB Server Version Compatibility and Support
-================================================
+====================================
+MongoDB Server Version Compatibility 
+====================================
 
 .. default-domain:: mongodb
 
@@ -38,34 +38,16 @@ server versions in the left column and destination MongoDB server
 versions in the first row. 
 
 .. list-table:: 
-   :widths: 20 20 20 20 20
+   :widths: 40 30 30 
 
    * - 
-     - **4.4** Destination
-     - **5.0** Destination
      - **6.0** Destination
      - **7.0** Destination
 
-   * - **4.4** Source
-     - √
-     -  
-     - √
-     - 
-
-   * - **5.0** Source
-     -  
-     - √
-     - √
-     - √
-
    * - **6.0** Source
-     -  
-     -  
      - √
      - √
 
    * - **7.0** Source
-     -  
-     -  
      -  
      - √
