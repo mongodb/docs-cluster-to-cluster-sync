@@ -24,15 +24,18 @@ the rest of the {+c2c-product-name+} documentation.
 Setup
 -----
 
-{+c2c-product-name+} syncs data between two clusters. 
+``mongosync`` syncs data between two clusters. 
 
-- Each cluster can be either a replica set or a sharded cluster.
+- Each cluster can be a replica set or a sharded cluster.  If either
+  is a sharded cluster, consult the :ref:`sharded cluster limitations
+  <c2c-sharded-limitations>` for ``mongosync``.
 
 - Sharded clusters are not required to have the same number of shards.
 
-- The destination cluster can be up to two versions ahead of the source
-  cluster.  The patch version is not important, so long as it meets the minimum
-  patch :ref:`version requirements <c2c-server-version-compatibility>`.
+- The destination cluster must be the same version or up to two versions ahead
+  of the source cluster. The patch version is not important, so long as they 
+  meets the minimum patch :ref:`version requirements
+  <c2c-server-version-compatibility>`.
 
 To run ``mongosync``, you need to: 
 
