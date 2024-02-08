@@ -51,8 +51,8 @@
 
    * - ``collectionCopy``
      - object
-     - Describes the total amount of data being copied and the
-       amount that has already been copied to the destination cluster.
+     - Estimates the total amount of data being copied from collections and the
+       amount that has already been copied to the destination cluster
 
    * - ``collectionCopy``
        ``.estimatedTotalBytes``
