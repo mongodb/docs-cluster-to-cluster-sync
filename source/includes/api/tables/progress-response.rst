@@ -51,7 +51,7 @@
           reaching zero until ``mongosync`` commits the migration.
 
        Due to constant no-ops on the source cluster, the time difference
-       is often a few seconds above zero even if there are no real
+       is often a few seconds above zero, even if there are no real
        writes on the source cluster. The time difference becomes zero
        when ``mongosync`` commits the migration.
 
