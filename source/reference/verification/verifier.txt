@@ -49,7 +49,7 @@ Steps
       (CEA) phase.
 
       To check that ``mongosync`` has reached the CEA phase, send the
-      :ref:`/progress <c2c-api-progress>` command, and check that the
+      :ref:`/progress <c2c-api-progress>` command and check that the
       ``progress.info`` field returns ``change stream application``.
 
       .. io-code-block::
