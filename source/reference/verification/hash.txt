@@ -20,8 +20,8 @@ You can verify sync by comparing MD5 hashes of collections synced from the
 source cluster to the destination cluster. While hash comparison ensures
 that the destination cluster has received all changes from the source, the
 :dbcommand:`dbHash` command locks the cluster, preventing additional writes
-until it completes.  This process can also be much slower than verifying sync 
-with :ref:`document counts <c2c-verify-doc-counts>`.
+until it completes.  This process can also be much slower than verification 
+using :ref:`document counts <c2c-verify-doc-counts>`.
 
 About This Task
 ---------------

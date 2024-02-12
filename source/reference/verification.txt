@@ -51,7 +51,7 @@ Tasks
 Document Counts
 ~~~~~~~~~~~~~~~
 
-The most basic method of verifying sync is to compare the number of documents
+The most basic method of verification is to compare the number of documents
 in each synced collection on the source cluster to the number on the
 destination cluster.
 
