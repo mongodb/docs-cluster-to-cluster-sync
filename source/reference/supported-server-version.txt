@@ -33,9 +33,7 @@ Synchronize Data Between Clusters with Different MongoDB Server Major Versions
 .. include:: /includes/cross-version-sync.rst
 
 ``mongosync`` supports syncs between the following source and
-destination MongoDB server versions. The table shows the source MongoDB
-server versions in the left column and destination MongoDB server
-versions in the top row. 
+destination MongoDB server versions. 
 
 .. list-table:: 
    :widths: 40 30 30 
