@@ -35,7 +35,7 @@ Synchronize Data Between Clusters with Different MongoDB Server Major Versions
 ``mongosync`` supports syncs between the following source and
 destination MongoDB server versions. The table shows the source MongoDB
 server versions in the left column and destination MongoDB server
-versions in the first row. 
+versions in the top row. 
 
 .. list-table:: 
    :widths: 40 30 30 
