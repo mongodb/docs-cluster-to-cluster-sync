@@ -42,9 +42,50 @@ Steps
 
       Run :program:`mongosync` to sync the source and destination clusters.
 
+   .. step:: Wait for ``mongosync`` to reach CEA 
+
+      Before you can start verification checks with Migration Verifier,
+      you must wait until ``mongosync`` reaches the Change Event Application
+      (CEA) phase.
+
+      To check that ``mongosync`` has reached the CEA phase, send the
+      :ref:`/progress <c2c-api-progress>` command, and check that the
+      ``progress.info`` field returns ``change stream application``.
+
+      .. io-code-block::
+
+         .. input:: 
+            :language: bash
+
+            curl localhost:27182/api/v1/progress -XGET
+
+         .. output:
+            :language: json
+            :emphasize-lines: 6
+
+            {
+               "progress":
+                  {
+                     "state":"RUNNING",
+                     "canCommit":true,
+                     "canWrite":false,
+                     "info":"change event application",
+                     "lagTimeSeconds":0,
+                     "collectionCopy":
+                        {
+                           "estimatedTotalBytes":694,
+                           "estimatedCopiedBytes":694
+                        },
+                     "directionMapping":
+                        {
+                           "Source":"cluster0: localhost:27017",
+                           "Destination":"cluster1: localhost:27018"
+                        }
+                  }
+            }
    .. step:: Start Migration Verifier
 
-      After you start ``mongosync``, start the ``migration-verifier`` process:
+      Start the ``migration-verifier`` process:
 
       .. code-block:: bash
 
