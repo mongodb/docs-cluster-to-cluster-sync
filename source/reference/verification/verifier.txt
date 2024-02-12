@@ -20,7 +20,7 @@ Migration Verifier connects to the source and destination clusters and performs
 a series of verification checks, comparing documents, views, and indexes to
 confirm the sync was successful.
 
-Unlike other verification methods, Migration Verifier can run concurrent with
+Unlike other verification methods, Migration Verifier can run concurrently with
 ``mongosync``, checking documents on the destination cluster as they sync. This
 can reduce the amount of time needed to verify the success of the sync before
 transferring your application load from the source to the destination cluster.
