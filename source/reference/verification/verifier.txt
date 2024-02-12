@@ -61,7 +61,6 @@ Steps
 
          .. output:
             :language: json
-            :emphasize-lines: 6
 
             {
                "progress":
