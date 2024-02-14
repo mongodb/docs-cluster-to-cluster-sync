@@ -24,6 +24,10 @@ Requirement
 To use the ``pause`` endpoint, ``mongosync`` must be in the ``RUNNING``
 state.
 
+.. note::
+
+   .. include:: /includes/api/facts/multiple-mongosync-endpoints
+
 Request
 -------
 

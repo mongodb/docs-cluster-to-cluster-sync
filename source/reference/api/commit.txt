@@ -75,6 +75,10 @@ Before using the ``commit`` endpoint:
        When ``lagTimeSeconds`` is ``0``, the source and destination
        clusters are in a consistent state.
 
+.. note::
+
+   .. include:: /includes/api/facts/multiple-mongosync-endpoints
+
 Request
 -------
 

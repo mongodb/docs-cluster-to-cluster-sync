@@ -52,6 +52,10 @@ To use the ``reverse`` endpoint:
 - .. include:: /includes/fact-reverse-limitation.rst
 - .. include:: /includes/fact-permissions-body.rst
 
+.. note::
+
+   .. include:: /includes/api/facts/multiple-mongosync-endpoints
+
 .. _c2c-validate-unique-index:
 
 Validate Unique Indexes
