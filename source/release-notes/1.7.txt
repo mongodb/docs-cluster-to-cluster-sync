@@ -15,6 +15,18 @@ Release Notes for mongosync 1.7
 Patch Releases
 --------------
 
+.. _1.7.2-c2c-release-notes:
+
+1.7.2 Release
+~~~~~~~~~~~~~
+
+**February 21, 2024**
+
+Issues Fixed:
+
+* Fixed a bug causing mongosync to error out due to index
+  inconsistencies in background keys, which the server ignores.
+
 .. _1.7.1-c2c-release-notes:
 
 1.7.1 Release
