@@ -80,6 +80,8 @@ Before using the ``commit`` endpoint:
 
    .. include:: /includes/api/facts/multiple-mongosync-endpoints
 
+   For more information, see :ref:`c2c-sharded-commit`. 
+
 Request
 -------
 

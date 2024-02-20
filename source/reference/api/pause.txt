@@ -28,6 +28,9 @@ state.
 
    .. include:: /includes/api/facts/multiple-mongosync-endpoints
 
+   For more information, see :ref:`Pause Multiple Mongosyncs
+   <c2c-sharded-pause>`. 
+
 Request
 -------
 

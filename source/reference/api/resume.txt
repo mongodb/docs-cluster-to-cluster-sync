@@ -29,6 +29,9 @@ state.
 
    .. include:: /includes/api/facts/multiple-mongosync-endpoints
 
+   For more information, see :ref:`Resume Multiple Mongosyncs
+   <c2c-sharded-resume>`. 
+
 Request
 -------
 

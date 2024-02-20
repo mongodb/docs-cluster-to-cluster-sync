@@ -56,6 +56,9 @@ To use the ``reverse`` endpoint:
 
    .. include:: /includes/api/facts/multiple-mongosync-endpoints
 
+   For more information, see :ref:`Reverse Multiple Mongosyncs
+   <c2c-sharded-reverse>`. 
+
 .. _c2c-validate-unique-index:
 
 Validate Unique Indexes
