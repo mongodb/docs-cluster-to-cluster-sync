@@ -72,8 +72,8 @@
          ``mongosync`` approximates the estimated total number of bytes
          prior to migration and does not update this value during
          migration. This value does not reflect changes to the source
-         cluster during migration and should not be used as an indicator
-         of migration progress. 
+         cluster during migration and is not an accurate indicator of
+         migration progress. 
 
    * - ``collectionCopy``
        ``.estimatedCopiedBytes``
@@ -92,8 +92,8 @@
          ``mongosync`` approximates the estimated number of copied bytes
          prior to migration and does not update this value during
          migration. This value does not reflect changes to the source
-         cluster during migration and should not be used as an indicator
-         of migration progress. 
+         cluster during migration and is not an accurate indicator of
+         migration progress. 
 
 
    * - ``directionMapping``
