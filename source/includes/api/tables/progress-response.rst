@@ -87,6 +87,9 @@
        and divide the result by the value of the ``estimatedTotalBytes`` field
        . Then, multiply the result by 100.
 
+       The estimated copied bytes may be larger than the estimated total
+       bytes due to retried operations. 
+
        .. note::
 
          ``mongosync`` approximates the estimated number of copied bytes
