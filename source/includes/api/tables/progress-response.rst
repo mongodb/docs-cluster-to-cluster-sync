@@ -90,10 +90,10 @@
        .. note::
 
          ``mongosync`` approximates the estimated number of copied bytes
-         prior to migration and does not update this value during
-         migration. This value does not reflect changes made to the
-         source cluster during sync and is not an accurate indicator of
-         migration progress. 
+         prior to migration and does not update this value during the
+         synchronization process. This value does not reflect changes
+         made to the source cluster during sync and is not an accurate
+         indicator of migration progress. 
 
 
    * - ``directionMapping``
