@@ -87,8 +87,8 @@
        and divide the result by the value of the ``estimatedTotalBytes`` field
        . Then, multiply the result by 100.
 
-       The estimated copied bytes may be larger than the estimated total
-       bytes due to retried operations. 
+       The value of ``estimatedCopiedBytes`` may be larger than the
+       value of the ``estimatedTotalBytes`` due to retried operations. 
 
        .. note::
 
