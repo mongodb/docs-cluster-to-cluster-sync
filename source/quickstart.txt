@@ -175,7 +175,7 @@ Initialize ``mongosync``
 :program:`mongosync` must create an initial connection to the source and
 destination clusters before it can start to sync data. To create the initial
 connection, issue the following command on a single line (the command is
-reformated here for clarity):
+reformatted here for clarity):
 
 .. code-block:: shell
 
