@@ -25,7 +25,8 @@ Patch Releases
 Issues Fixed:
 
 * Fixed a bug causing mongosync to error out due to index
-  inconsistencies in background keys, which the server ignores.
+  inconsistencies between shards in background keys, which the
+  server ignores.
 
 .. _1.7.1-c2c-release-notes:
 
