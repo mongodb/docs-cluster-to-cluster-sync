@@ -134,8 +134,11 @@ Multiple Clusters
 
 - Syncing multiple source clusters to one destination cluster isn't
   supported.
-- Syncing one source cluster to many destination clusters isn't
-  supported.
+- One ``mongosync`` instance cannot sync one source cluster to many
+  destination clusters.
+- A source cluster in one ``mongosync`` instance
+  cannot simultaneously be a destination cluster in another
+  ``mongosync`` instance. 
 
 .. _c2c-filtering-limitations:
 
