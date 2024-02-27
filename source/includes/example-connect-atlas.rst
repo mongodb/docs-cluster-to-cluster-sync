@@ -27,7 +27,7 @@ strings for ``cluster0`` and ``cluster1``:
 .. code-block:: shell
 
    cluster0:
-   mongodb+srv://clusterAdmin:superSecret@clusterOne01.abc12.mongodb.net
+   mongodb+srv://clusterAdmin:superSecret@clusterOne.abc12.mongodb.net
    cluster1:
    mongodb+srv://clusterAdmin:superSecret@clusterTwo.abc12.mongodb.net
 
@@ -46,5 +46,5 @@ following command on one line:
 .. code-block:: shell
 
    mongosync \
-         --cluster0 "mongodb+srv://clusterAdmin:superSecret@clusterOne01.abc12.mongodb.net" \
+         --cluster0 "mongodb+srv://clusterAdmin:superSecret@clusterOne.abc12.mongodb.net" \
          --cluster1 "mongodb+srv://clusterAdmin:superSecret@clusterTwo.abc12.mongodb.net"
