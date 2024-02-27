@@ -4,9 +4,10 @@ Gather Connection Information
 The source cluster, ``cluster0``, is hosted on the following servers
 and ports:
 
-- clusterOne01.fancyCorp.com:20020
-- clusterOne02.fancyCorp.com:20020
-- clusterOne03.fancyCorp.com:20020
+- clusterOne-shard-00-00.abc12.mongodb.net:27017
+- clusterOne-shard-00-01.abc12.mongodb.net:27017
+- clusterOne-shard-00-02.abc12.mongodb.net:27017
+
 
 The destination cluster, ``cluster1``, is hosted on the following
 servers and ports:
@@ -27,7 +28,7 @@ strings for ``cluster0`` and ``cluster1``:
 .. code-block:: shell
 
    cluster0:
-   mongodb://clusterAdmin:superSecret@clusterOne01.fancyCorp.com:20020,clusterOne02.fancyCorp.com:20020,clusterOne03.fancyCorp.com:20020
+   mongodb+srv://clusterAdmin:superSecret@clusterOne01.abc12.mongodb.net
    cluster1:
    mongodb+srv://clusterAdmin:superSecret@clusterTwo.abc12.mongodb.net
 
@@ -46,5 +47,5 @@ following command on one line:
 .. code-block:: shell
 
    mongosync \
-         --cluster0 "mongodb://clusterAdmin:superSecret@clusterOne01.fancyCorp.com:20020,clusterOne02.fancyCorp.com:20020,clusterOne03.fancyCorp.com:20020" \
+         --cluster0 "mongodb+srv://clusterAdmin:superSecret@clusterOne01.abc12.mongodb.net" \
          --cluster1 "mongodb+srv://clusterAdmin:superSecret@clusterTwo.abc12.mongodb.net"
