@@ -27,7 +27,6 @@ version number for {+c2c-product-name+}:
 - Patch number: This release only includes small, backwards compatible
   changes.
 
-
 Currently Supported Versions
 ----------------------------
 
