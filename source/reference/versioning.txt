@@ -31,6 +31,9 @@ version number for {+c2c-product-name+}:
 Currently Supported Versions
 ----------------------------
 
+MongoDB only supports the latest patch release of each major
+version.  For example, ``mongosync`` {+latest-version+}.
+
 If you are using an unsupported version of ``mongosync``, you may be
 asked to upgrade in order to receive support.
 
