@@ -8,7 +8,6 @@ and ports:
 - clusterOne-shard-00-01.abc12.mongodb.net:27017
 - clusterOne-shard-00-02.abc12.mongodb.net:27017
 
-
 The destination cluster, ``cluster1``, is hosted on the following
 servers and ports:
 

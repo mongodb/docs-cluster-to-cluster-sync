@@ -54,4 +54,3 @@ Example
 -------
 
 .. include:: /includes/example-connect-atlas.rst
-
