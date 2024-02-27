@@ -31,6 +31,14 @@ strings for ``cluster0`` and ``cluster1``:
    cluster1:
    mongodb+srv://clusterAdmin:superSecret@clusterTwo01.mongodb.net:27017,clusterTwo02.mongodb.net:27017,clusterTwo03.mongodb.net:27017
 
+.. note:: 
+    
+   Atlas clusters require TLS connections. To use ``mongosync`` with Atlas 
+   clusters, add the :urioption:`tls=true <tls>` option or use the 
+   ``mongodb+srv`` connection string format. For more details about 
+   ``mongodb+srv`` connection strings, see :ref:`connections-dns-seedlist`.
+
+
 The ``mongosync`` command layout below is modified for display. To
 connect ``cluster0`` to ``cluster1`` with ``mongosync``, enter the
 following command on one line:
@@ -40,10 +48,3 @@ following command on one line:
    mongosync \
          --cluster0 "mongodb://clusterAdmin:superSecret@clusterOne01.fancyCorp.com:20020,clusterOne02.fancyCorp.com:20020,clusterOne03.fancyCorp.com:20020" \
          --cluster1 "mongodb+srv://clusterAdmin:superSecret@clusterTwo01.mongodb.net:27017,clusterTwo02.mongodb.net:27017,clusterTwo03.mongodb.net:27017"
-
-.. note:: 
-    
-   Atlas clusters require TLS connections. To use ``mongosync`` with Atlas 
-   clusters, add the :urioption:`tls=true <tls>` option or use the 
-   ``mongodb+srv`` connection string format. For more details about 
-   ``mongodb+srv`` connection strings, see :ref:`connections-dns-seedlist`.
