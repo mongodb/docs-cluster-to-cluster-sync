@@ -136,6 +136,12 @@ Multiple Clusters
   destination cluster. 
 - One ``mongosync`` instance cannot sync a source cluster to many
   destination clusters.
+
+.. note::
+
+   To sync a source cluster to multiple destination clusters, use
+   one ``mongosync`` instance for each destination cluster. 
+
 - One cluster cannot simultaneously be a source cluster in one
   ``mongosync`` instance and a destination cluster in another
   ``mongosync`` instance. 
