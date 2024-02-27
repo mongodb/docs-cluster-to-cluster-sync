@@ -21,12 +21,6 @@ cluster with password, ``superSecret``.
 Connect the Source and Destination Clusters with ``mongosync``
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The generic connection string format is: 
-
-.. code-block:: shell
-
-   mongodb://<user>:<password>@<ip-address>:<port>,<ip-address>:<port>,<ip-address>:<port>
-
 Use the connection information you gathered to create the connection
 strings for ``cluster0`` and ``cluster1``:
 
