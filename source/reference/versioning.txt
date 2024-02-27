@@ -32,10 +32,9 @@ Currently Supported Versions
 
 MongoDB only supports the latest patch release of each major
 version.  For example, ``mongosync`` {+latest-version+} is the
-latest patch release.
-
-If you are using an unsupported version of ``mongosync``, you may be
-asked to upgrade in order to receive support.
+latest patch release. If you are using an unsupported version of
+``mongosync``, you may be asked to upgrade in order to receive
+support.
 
 Version-Related Considerations
 ------------------------------
