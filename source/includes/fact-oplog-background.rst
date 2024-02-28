@@ -6,7 +6,7 @@ on the source cluster, the sync fails and ``mongosync`` exits.
 
 .. note::
 
-   include:: /includes/fact-applyOps.rst
+   .. include:: /includes/fact-applyOps.rst
 
 
 Starting in version 1.5.0, ``mongosync`` enables Oplog Rollover
