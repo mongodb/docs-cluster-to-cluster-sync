@@ -1,3 +1,2 @@
-``mongosync`` may not replicate :dbcommand:`applyOps` operations on the
-source cluster to the destination cluster while the sync is in
-the ``RUNNING`` state. 
+``mongosync`` may not replicate :dbcommand:`applyOps` operations made on
+the source cluster during sync to the destination cluster. 
