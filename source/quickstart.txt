@@ -142,8 +142,8 @@ Follow the instructions below to set up {+c2c-product-name+}.
       For operating system specific installation instructions, see
       :ref:`c2c-install`.
 
-Connect your Clusters
----------------------
+Connect the Clusters
+--------------------
 
 .. procedure::
    :style: normal
