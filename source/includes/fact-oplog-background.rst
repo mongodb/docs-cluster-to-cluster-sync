@@ -8,7 +8,6 @@ on the source cluster, the sync fails and ``mongosync`` exits.
 
    .. include:: /includes/fact-applyOps.rst
 
-
 Starting in version 1.5.0, ``mongosync`` enables Oplog Rollover
 Resilience (ORR).  With ORR,  ``mongosync`` applies changes on the
 source cluster to the destination cluster during the initial sync. ORR
