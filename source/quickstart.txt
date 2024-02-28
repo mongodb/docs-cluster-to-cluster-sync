@@ -142,7 +142,13 @@ Follow the instructions below to set up {+c2c-product-name+}.
       For operating system specific installation instructions, see
       :ref:`c2c-install`.
 
-   .. step:: Connect the Clusters
+Connect Your Clusters
+---------------------
+
+.. procedure::
+   :style: normal
+
+   .. step:: Format Your Connection String
 
       A connection string contains the network and authentication
       details that ``mongosync`` needs to connect to the source and
@@ -169,20 +175,20 @@ Follow the instructions below to set up {+c2c-product-name+}.
 
       For more details, see :ref:`c2c-connecting`.
 
-Initialize ``mongosync``
-------------------------
+   .. step:: Initialize mongosync
 
-:program:`mongosync` must create an initial connection to the source and
-destination clusters before it can start to sync data. To create the initial
-connection, issue the following command on a single line (the command is
-reformatted here for clarity):
+      :program:`mongosync` must create an initial connection to the source and
+      destination clusters before it can start to sync data. To create the initial
+      connection, issue the following command with your connection
+      strings on a single line (the command is
+      reformatted here for clarity):
 
-.. code-block:: shell
+      .. code-block:: shell
 
-   ./bin/mongosync \
-         --logPath /var/log/mongosync \
-         --cluster0 "mongodb://clusterAdmin:superSecret@clusterOne01.fancyCorp.com:20020,clusterOne02.fancyCorp.com:20020,clusterOne03.fancyCorp.com:20020" \
-         --cluster1 "mongodb://clusterAdmin:superSecret@clusterTwo01.fancyCorp.com:20020,clusterTwo02.fancyCorp.com:20020,clusterTwo03.fancyCorp.com:20020"
+         ./bin/mongosync \
+               --logPath /var/log/mongosync \
+               --cluster0 "mongodb://clusterAdmin:superSecret@clusterOne01.fancyCorp.com:20020,clusterOne02.fancyCorp.com:20020,clusterOne03.fancyCorp.com:20020" \
+               --cluster1 "mongodb://clusterAdmin:superSecret@clusterTwo01.fancyCorp.com:20020,clusterTwo02.fancyCorp.com:20020,clusterTwo03.fancyCorp.com:20020"
 
 Initialization Notes
 ~~~~~~~~~~~~~~~~~~~~
