@@ -53,6 +53,7 @@ General Limitations
   index defined on the same field(s).
 - .. include:: /includes/fact-atlas-require-indexes-limitation.rst
 - ``mongosync`` doesn't sync users or roles.
+- .. include:: /includes/fact-applyOps.rst
 
 MongoDB Community Edition
 -------------------------
