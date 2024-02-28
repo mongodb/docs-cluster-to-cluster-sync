@@ -38,7 +38,6 @@ strings for ``cluster0`` and ``cluster1``:
    ``mongodb+srv`` connection string format. For more details about 
    ``mongodb+srv`` connection strings, see :ref:`connections-dns-seedlist`.
 
-
 The ``mongosync`` command layout below is modified for display. To
 connect ``cluster0`` to ``cluster1`` with ``mongosync``, enter the
 following command on one line:
