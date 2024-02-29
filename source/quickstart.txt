@@ -25,12 +25,6 @@ to synchronize data between them. The tool that makes the connection is
 you get started with {+c2c-product-name+}. For more details, please see
 the rest of the {+c2c-product-name+} documentation.
 
-Follow the instructions below to set up {+c2c-product-name+}, connect
-your clusters, and synchronize your data.
-
-Setup
------
-
 ``mongosync`` syncs data between two clusters. 
 
 - Each cluster can be a replica set or a sharded cluster.  If either
@@ -43,6 +37,12 @@ Setup
   of the source cluster. The patch version is not important, so long as they 
   meets the minimum patch :ref:`version requirements
   <c2c-server-version-compatibility>`.
+
+Follow the instructions below to set up {+c2c-product-name+}, connect
+your clusters, and synchronize your data.
+
+Setup
+-----
 
 .. procedure::
    :style: normal
