@@ -41,14 +41,8 @@ Setup
   meets the minimum patch :ref:`version requirements
   <c2c-server-version-compatibility>`.
 
-To run ``mongosync``, you need to: 
-
-#. Define a source and a destination cluster.
-#. Define administrative users.
-#. Download and install ``mongosync``.
-#. Connect the clusters.
-
-Follow the instructions below to set up {+c2c-product-name+}.
+Follow the instructions below to set up {+c2c-product-name+}, connect
+your clusters, and synchronize your data.
 
 .. procedure::
    :style: normal
