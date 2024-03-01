@@ -140,7 +140,12 @@ Request Body Parameters
        accepts writes.
 
        To reverse sync, the ``enableUserWriteBlocking`` field must be set
-       to ``true``.
+       to ``true``. To allow source cluster to accept writes again, run
+       the following command: 
+
+       .. code-block:: shell 
+          
+          db.adminCommand({setUserWriteBlockMode: 1,global: false})
 
        Default value is ``false``.
 
