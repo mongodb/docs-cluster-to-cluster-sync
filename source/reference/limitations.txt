@@ -138,7 +138,7 @@ Multiple Clusters
   ``mongosync`` instance and a destination cluster in another
   ``mongosync`` instance. 
 -  To sync a source cluster to multiple destination clusters, use one
-  ``mongosync`` instance for each destination cluster. 
+   ``mongosync`` instance for each destination cluster. 
 
 .. _c2c-filtering-limitations:
 
