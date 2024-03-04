@@ -97,10 +97,3 @@ operations in that state.
      - - ``POST`` :ref:`/reverse <c2c-api-reverse>`
        - ``GET`` :ref:`/progress <c2c-api-progress>`
 
-   * - .. _c2c-state-waitingforreversecomplete:
-       ``WAITINGFORREVERSECOMPLETE``
-     - The sync process is waiting for the reverse operation to
-       finish on all ``mongosync`` instances.
-     - - ``POST`` :ref:`/revese <c2c-api-revese>`
-       - ``GET`` :ref:`/progress <c2c-api-progress>`
-
