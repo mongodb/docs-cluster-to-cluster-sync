@@ -25,7 +25,7 @@ Considerations
 - Both the source and destination Atlas clusters must use MongoDB 6.0 or 
   later. 
 - ``mongosync`` supports replica sets and sharded clusters.
-- ``mongosync`` does not support Atlas shared clusters or serverless
+- ``mongosync`` **doesn't** support Atlas shared clusters or serverless 
   instances. You can use ``mongosync`` only with M10 or higher Atlas
   clusters.  
 

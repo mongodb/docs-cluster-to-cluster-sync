@@ -1,19 +1,19 @@
 Gather Connection Information
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The source cluster, ``cluster0``, is hosted on the following servers
-and ports:
-
-- clusterOne01.fancyCorp.com:20020
-- clusterOne02.fancyCorp.com:20020
-- clusterOne03.fancyCorp.com:20020
-
-The destination Atlas cluster, ``cluster1``, is hosted on the following
+The source cluster, :setting:`cluster0`, is hosted on the following
 servers and ports:
 
-- cluster2Name-01.abc123.com:27017
-- cluster2Name-02.abc123.com:27017
-- cluster2Name-03.abc123.com:27017
+- ``clusterOne01.fancyCorp.com:20020``
+- ``clusterOne02.fancyCorp.com:20020``
+- ``clusterOne03.fancyCorp.com:20020``
+
+The destination Atlas cluster, :setting:`cluster1`, is hosted on the
+following servers and ports:
+
+- ``cluster2Name-01.abc123.com:27017``
+- ``cluster2Name-02.abc123.com:27017``
+- ``cluster2Name-03.abc123.com:27017``
 
 There is an administrative user, ``clusterAdmin`` configured on each
 cluster with password, ``superSecret``.
@@ -36,7 +36,7 @@ The generic connection string format for the Atlas cluster is:
 Use the connection information you gathered for the self-managed cluster
 to create the connection strings for ``cluster0``:
 
-.. code-block:: shell
+.. code-block:: text
 
    cluster0:
    mongodb://clusterAdmin:superSecret@clusterOne01.fancyCorp.com:20020,clusterOne02.fancyCorp.com:20020,clusterOne03.fancyCorp.com:20020
@@ -49,7 +49,7 @@ The ``mongosync`` command layout below is modified for display. To
 connect ``cluster0`` to ``cluster1`` with ``mongosync``, enter the
 following command on one line:
 
-.. code-block:: shell
+.. code-block:: yaml
 
    mongosync \
          --cluster0 "mongodb://clusterAdmin:superSecret@clusterOne01.fancyCorp.com:20020,clusterOne02.fancyCorp.com:20020,clusterOne03.fancyCorp.com:20020" \

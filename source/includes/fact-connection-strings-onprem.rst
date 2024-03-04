@@ -13,12 +13,12 @@ connection string <mongodb-uri>` to connect clusters:
   
      mongodb://[username:password@]host1[:port1][,...hostN[:portN]][/[defaultauthdb][?options]]
 
-Specify the hostnames of the :binary:`mongod` instances the same way
+Specify the hostnames of the :program:`mongod` instances the same way
 that they are listed in your replica set configuration.
 
 For :ref:`sharded clusters <sharding-sharded-cluster>`, specify the
-hostnames of the :binary:`mongos` instances instead of the
-:binary:`mongod` instances.
+hostnames of the :program:`mongos` instances instead of the
+:program:`mongod` instances.
 
 .. note::
 
