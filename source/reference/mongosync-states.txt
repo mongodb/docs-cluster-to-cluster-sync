@@ -90,10 +90,9 @@ operations in that state.
        ``REVERSING``
 
      - The sync process copies metadata from the destination
-       cluster to the source cluster. When complete, the phase
-       reverts to applying change events and the original source
-       cluster becomes the new destination cluster while the old
-       destination becomes the new source.
+       cluster to the source cluster. Then, MongoDB swaps the
+       source and destination clusters and resumes applying
+       change events.
      - - ``POST`` :ref:`/reverse <c2c-api-reverse>`
        - ``GET`` :ref:`/progress <c2c-api-progress>`
 
