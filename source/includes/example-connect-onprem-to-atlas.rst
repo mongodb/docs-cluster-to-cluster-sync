@@ -49,7 +49,7 @@ The ``mongosync`` command layout below is modified for display. To
 connect ``cluster0`` to ``cluster1`` with ``mongosync``, enter the
 following command on one line:
 
-.. code-block:: yaml
+.. code-block:: shell
 
    mongosync \
          --cluster0 "mongodb://clusterAdmin:superSecret@clusterOne01.fancyCorp.com:20020,clusterOne02.fancyCorp.com:20020,clusterOne03.fancyCorp.com:20020" \
