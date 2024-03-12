@@ -83,7 +83,7 @@ operations in that state.
        ``COMMITTED``
      - The cutover for the sync process is complete.
      - - ``GET`` :ref:`/progress <c2c-api-progress>`
-       - ``GET`` :ref:`/reverse <c2c-api-reverse>`
+       - ``POST`` :ref:`/reverse <c2c-api-reverse>`
 
    * - .. _c2c-state-reversing:
 
@@ -93,6 +93,5 @@ operations in that state.
        cluster to the source cluster. Then, MongoDB swaps the
        source and destination clusters and resumes applying
        change events.
-     - - ``POST`` :ref:`/reverse <c2c-api-reverse>`
        - ``GET`` :ref:`/progress <c2c-api-progress>`
 
