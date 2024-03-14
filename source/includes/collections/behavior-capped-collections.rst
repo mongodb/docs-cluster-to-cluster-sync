@@ -1,9 +1,11 @@
 Starting in 1.3.0, {+c2c-product-name+} supports :ref:`capped
 collections <manual-capped-collection>` with some limitations.
 
-- :dbcommand:`convertToCapped` is not supported. If you run
+- ``mongosync`` does not support :dbcommand:`convertToCapped`. If you run
   ``convertToCapped``, ``mongosync`` exits with an error.
-- :dbcommand:`cloneCollectionAsCapped` is not supported.
+- ``mongosync`` does not support :dbcommand:`cloneCollectionAsCapped`.
+- ``mongosync`` does not support dropping a collection and then
+  recreating the collection with the same name as a capped collection. 
 
 Capped collections on the source cluster work normally during sync.
 
