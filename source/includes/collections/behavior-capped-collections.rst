@@ -5,7 +5,7 @@ collections <manual-capped-collection>` with some limitations.
   ``convertToCapped``, ``mongosync`` exits with an error.
 - ``mongosync`` does not support :dbcommand:`cloneCollectionAsCapped`.
 - ``mongosync`` does not support dropping a collection and then
-  recreating the collection with the same name as a capped collection. 
+  recreating the collection as a capped collection under the same name. 
 
 Capped collections on the source cluster work normally during sync.
 
