@@ -140,8 +140,9 @@ Request Body Parameters
        accepts writes.
 
        To reverse sync, the ``enableUserWriteBlocking`` field must be set
-       to ``true``. To allow the source cluster to accept writes again, run
-       the following command: 
+       to ``true``. To allow the source cluster to accept writes again,
+       for example after running migration tests, run the following
+       command: 
 
        .. code-block:: shell 
           
