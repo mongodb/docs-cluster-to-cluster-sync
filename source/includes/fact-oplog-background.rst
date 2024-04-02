@@ -9,7 +9,7 @@ on the source cluster, the sync fails and ``mongosync`` exits.
    .. include:: /includes/fact-applyOps.rst
 
 During the initial sync, ``mongosync`` may apply operations at a slower
-rate due to the load imposed by copying documents concurrently.
+rate due to copying documents concurrently.
 After the initial sync, ``mongosync`` applies changes 
 faster and is more likely to maintain a position in the ``oplog``
 that is close to the real-time writes occurring on the source cluster.
