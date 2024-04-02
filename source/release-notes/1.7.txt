@@ -46,6 +46,8 @@ Other Changes:
 
 - Disables the Oplog Rollover Resilience machanism. 
 
+- Live upgrade to mongosync 1.7.2 is not allowed.
+
 - Reduces latency of the mongosync API.
 
 Limitations:
