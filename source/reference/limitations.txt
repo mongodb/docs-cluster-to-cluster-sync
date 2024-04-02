@@ -52,7 +52,7 @@ General Limitations
 - .. include:: /includes/fact-atlas-require-indexes-limitation.rst
 - ``mongosync`` doesn't sync users or roles.
 - .. include:: /includes/fact-applyOps.rst
-- mongosync must read from the source cluster using the 
+- ``mongosync`` must read from the source cluster using the 
   :readmode:`primary` read preference.
 
 
@@ -107,10 +107,9 @@ Sharded Clusters
 - ``mongosync`` only syncs indexes that exist on all shards.
 - ``mongosync`` only syncs indexes that have consistent index
   specifications on all shards.
-- The balancer must be stopped on a sharded source cluster until
-  until mongosync finishes the collection copy phase.
-- The :dbcommand:`moveChunk` and :dbcommand:`moveRange` commands
-  must not be run on the source cluster.
+- You must stop the balancer on a sharded source cluster until mongosync finishes the collection copy phase.
+- You can not run the  :dbcommand:`moveChunk` and :dbcommand:`moveRange` commands
+   on the source cluster.
 
 
 .. note::
