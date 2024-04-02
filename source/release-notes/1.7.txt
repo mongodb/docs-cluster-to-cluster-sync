@@ -50,12 +50,14 @@ Other Changes:
 
 Limitations:
 
-* ``mongosync`` must read from the source cluster using the 
+* mongosync must read from the source cluster using the 
   :readmode:`primary` read preference.
 
-Mongosync must read from the source cluster using read preference "primary". 
-The source cluster's balancer must be off from the time that mongosync starts until it finishes the Collection Copy phase.
-The source cluster must not undergo any moveChunk or moveRange commands.
+* The balancer must be stopped on a sharded source cluster until
+  until mongosync finishes the collection copy phase.
+
+* The :dbcommand:`moveChunk` and :dbcommand:`moveRange` commands
+  must not be run on the source cluster.
 
 .. _1.7.1-c2c-release-notes:
 
