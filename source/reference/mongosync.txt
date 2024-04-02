@@ -274,11 +274,9 @@ behavior, see :ref:`read-concern` and :ref:`write-concern`.
 Read Preference
 ~~~~~~~~~~~~~~~
 
-By default, ``mongosync`` sets the source cluster read preference to
-:readmode:`nearest` to distribute reads evenly across nodes. To change
-the read preference of the source cluster, specify the read preference
-mode in the URI of the connection string. For details, see
-:ref:`connections-read-preference`. 
+``mongosync`` requires the :readmode:`primary` read preference
+when connecting to the source cluster. For more information on
+read preferences, see :ref:`connections-read-preference`. 
 
 .. _c2c-capped-collections:
 
