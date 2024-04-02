@@ -24,10 +24,10 @@ Patch Releases
 
 Issues Fixed:
 
-* Fixed a bug causing mongosync to error out due to index
+- Fixed a bug causing mongosync to error out due to index
   inconsistencies in background keys between shards, which the
   server ignores.
-* Fixed a bug where mongosync could miss change events if stopped
+- Fixed a bug where mongosync could miss change events if stopped
   or paused then resumed during the collection copy phase.  
 
   This can happen when the destination cluster runs MongoDB 4.x
@@ -35,28 +35,28 @@ Issues Fixed:
   types or when the destination is MongoDB 6.0+ and the
   migration includes capped collections.
 
-* Fixed a bug where indexes could be created on the destination
+- Fixed a bug where indexes could be created on the destination
   cluster during migration even when dropped on the source
   cluster.
 
-* Fixed a bug where change events could be applied to the wrong
+- Fixed a bug where change events could be applied to the wrong
   collection during concurrent collection renames.
 
 Other Changes:
 
-* Disables the Oplog Rollover Resilience machanism. 
+- Disables the Oplog Rollover Resilience machanism. 
 
-* Reduces latency of the mongosync API.
+- Reduces latency of the mongosync API.
 
 Limitations:
 
-* mongosync must read from the source cluster using the 
+- mongosync must read from the source cluster using the 
   :readmode:`primary` read preference.
 
-* The balancer must be stopped on a sharded source cluster until
+- The balancer must be stopped on a sharded source cluster until
   until mongosync finishes the collection copy phase.
 
-* The :dbcommand:`moveChunk` and :dbcommand:`moveRange` commands
+- The :dbcommand:`moveChunk` and :dbcommand:`moveRange` commands
   must not be run on the source cluster.
 
 .. _1.7.1-c2c-release-notes:
