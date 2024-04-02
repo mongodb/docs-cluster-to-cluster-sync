@@ -275,8 +275,8 @@ Read Preference
 ~~~~~~~~~~~~~~~
 
 ``mongosync`` requires the :readmode:`primary` read preference
-when connecting to the source cluster. For more information on
-read preferences, see :ref:`connections-read-preference`. 
+when connecting to the source cluster. For more information, see
+:ref:`connections-read-preference`. 
 
 .. _c2c-capped-collections:
 
