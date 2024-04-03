@@ -56,6 +56,8 @@ Procedure
       until :ref:`progress <c2c-api-progress>` shows ``canWrite`` is
       ``true``. 
 
+   .. step:: Enable application writes on the destination cluster.
+
    .. step:: Send a :ref:`commit <c2c-api-commit>` request to ``mongosync``.
 
       If you started multiple ``mongosync`` instances for your
@@ -66,13 +68,11 @@ Procedure
 
          Ensure that the ``mongosync`` process response for the
          ``commit`` request indicates that the ``mongosync`` state is
-         ``COMMITTING`` or ``COMMITTED``. 
-
-   .. step:: Enable application writes on the destination cluster.
+         ``COMMITTING`` or ``COMMITTED``, which is the correct
+         ``mongosync`` state when you send a ``commit`` request.
 
    .. step:: Call the :ref:`progress <c2c-api-progress>` endpoint to determine the status of the ``mongosync`` process.
 
       When the ``mongosync`` progress response indicates that the 
       ``mongosync`` state is ``COMMITTED``, the cutover process is
-      complete. You can now :ref:`reverse <c2c-api-reverse>` the sync
-      direction and use the source cluster.
+      complete. 
