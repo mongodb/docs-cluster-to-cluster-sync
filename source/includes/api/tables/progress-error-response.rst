@@ -8,8 +8,16 @@
      - Type
      - Description
 
+   * - ``success``
+     - string
+     - Status of the ``mongosync`` process. Value is ``false`` if the
+       ``mongosync`` process failed and ``true`` if ``mongosync``
+       process is successful.
+
    * - ``error``
      - string
-     - If an error occurred, gives a detailed description of the error.
-       This field is omitted when the call to the endpoint is successful
+     - Type of error.
 
+   * - ``errorDescription``
+     - string
+     - Detailed description of the error.
