@@ -31,11 +31,11 @@ Issues Fixed:
   This can only affect migrations if the destination cluster
   runs:
 
-  - MongoDB 4.4 and earlier where the migration includes mixed _id
-    types.
+  - The migration includes mixed _id types and the destination
+    cluster runs MongoDB 4.4 or earlier.
 
-  - MongoDB 6.0 and later where the migration includes capped
-    collections.
+  - The migration includes capped collections and the
+    destination cluster runs MongoDB 6.0 or later.
 
 - Fixed bug introduced in v1.0.0 where indexes could be created
   on the destination cluster that were dropped on the source
