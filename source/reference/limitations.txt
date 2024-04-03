@@ -107,9 +107,17 @@ Sharded Clusters
 - ``mongosync`` only syncs indexes that exist on all shards.
 - ``mongosync`` only syncs indexes that have consistent index
   specifications on all shards.
-- You must stop the balancer on a sharded source cluster until mongosync finishes the collection copy phase.
-- You can not run the  :dbcommand:`moveChunk` and :dbcommand:`moveRange` commands
-   on the source cluster.
+- You must stop the balancer on a sharded source cluster until
+  mongosync finishes the collection copy phase.
+
+  .. note::
+
+     After stopping the balancer, wait fifteen minutes before
+     starting ``mongosync``. This gives the cluster time to
+     finish any in process chunk migrations.
+
+- You can not run the  :dbcommand:`moveChunk` and
+  :dbcommand:`moveRange` commands on the source cluster.
 
 
 .. note::
