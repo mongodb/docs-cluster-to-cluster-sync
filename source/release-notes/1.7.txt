@@ -28,8 +28,7 @@ Issues Fixed:
   inconsistencies when mongosync is killed or paused during
   the initial collection copy phase and then resumed.
 
-  This can only affect migrations if the destination cluster
-  runs:
+  This can only affect migrations if: 
 
   - The migration includes mixed _id types and the destination
     cluster runs MongoDB 4.4 or earlier.
