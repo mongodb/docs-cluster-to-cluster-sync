@@ -114,7 +114,7 @@ Sharded Clusters
 
      After stopping the balancer, wait fifteen minutes before
      starting ``mongosync``. This gives the cluster time to
-     finish any in process chunk migrations.
+     finish any in progress chunk migrations.
 
 - You can not run the  :dbcommand:`moveChunk` and
   :dbcommand:`moveRange` commands on the source cluster.
