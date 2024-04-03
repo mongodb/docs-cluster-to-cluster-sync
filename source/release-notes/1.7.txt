@@ -28,7 +28,7 @@ Issues Fixed:
   inconsistencies when mongosync is killed or paused during
   the initial collection copy phase and then resumed.
 
-  This can only affect migrations if: 
+  This can only affect migrations if:
 
   - The migration includes mixed _id types and the destination
     cluster runs MongoDB 4.4 or earlier.
@@ -62,7 +62,7 @@ Issues Fixed:
 
 Other Changes:
 
-- Disables the Oplog Rollover Resilience mechanism. 
+- Disables the Oplog Rollover Resilience mechanism.
 
 - Live upgrade to mongosync 1.7.2 is not allowed.
 
@@ -70,7 +70,7 @@ Other Changes:
 
 Limitations:
 
-- mongosync must read from the source cluster using the 
+- mongosync must read from the source cluster using the
   :readmode:`primary` read preference. If you try to start mongosync
   with a different read preference, it throws an error.
 
@@ -79,7 +79,7 @@ Limitations:
   start mongosync while the balancer is still running, it throws
   an error.
 
-- You must not run the :dbcommand:`moveChunk` or :dbcommand:`moveRange` 
+- You must not run the :dbcommand:`moveChunk` or :dbcommand:`moveRange`
   commands on the source cluster. If these are run on the
   source cluster, mongosync throws an error.
 
@@ -132,7 +132,7 @@ Issues Fixed:
   capped collection during migration, before or while the Collection Copy phase
   is working on the same capped collection.
 
-- Fixed bug introduced in 1.6 that caused ``mongosync`` to fail during 
+- Fixed bug introduced in 1.6 that caused ``mongosync`` to fail during
   initialization if the user specified only an exclusion filter and there were
   no fully excluded databases.
 

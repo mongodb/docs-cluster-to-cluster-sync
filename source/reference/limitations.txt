@@ -122,7 +122,7 @@ Sharded Clusters
      starting ``mongosync``. This gives the cluster time to
      finish any in progress chunk migrations.
 
-- You must not run the  :dbcommand:`moveChunk` and
+- You must not run the :dbcommand:`moveChunk` and
   :dbcommand:`moveRange` commands on the source cluster.
 - The shard key cannot be :ref:`refined <shard-key-refine>` while
   syncing.
