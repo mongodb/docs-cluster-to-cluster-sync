@@ -107,6 +107,12 @@ Sharded Clusters
 - ``mongosync`` only syncs indexes that exist on all shards.
 - ``mongosync`` only syncs indexes that have consistent index
   specifications on all shards.
+
+  .. note::
+
+     To check for index inconsistencies, see :ref:`Find Inconsistent
+     Indexes Across Shards <manage-indexes-find-inconsistent-indexes>`.
+
 - You must stop the balancer on a sharded source cluster until
   mongosync finishes the collection copy phase.
 
@@ -118,13 +124,6 @@ Sharded Clusters
 
 - You can not run the  :dbcommand:`moveChunk` and
   :dbcommand:`moveRange` commands on the source cluster.
-
-
-.. note::
-
-  To check for index inconsistencies, see :ref:`Find Inconsistent
-  Indexes Across Shards <manage-indexes-find-inconsistent-indexes>`.
-
 - The shard key cannot be :ref:`refined <shard-key-refine>` while
   syncing.
 - The :dbcommand:`reshardCollection` operations from the source cluster

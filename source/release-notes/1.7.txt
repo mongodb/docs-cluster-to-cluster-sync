@@ -62,7 +62,7 @@ Issues Fixed:
 
 Other Changes:
 
-- Disables the Oplog Rollover Resilience machanism. 
+- Disables the Oplog Rollover Resilience mechanism. 
 
 - Live upgrade to mongosync 1.7.2 is not allowed.
 
