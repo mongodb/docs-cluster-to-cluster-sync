@@ -49,15 +49,6 @@ Procedure
         that write operations are stopped for the collections included
         by the filter. 
 
-   .. step:: Call the :ref:`progress <c2c-api-progress>` endpoint.
-
-      Call the :ref:`progress <c2c-api-progress>` endpoint to determine
-      if ``canWrite`` is ``true``. If ``canWrite`` is ``false``, wait
-      until :ref:`progress <c2c-api-progress>` shows ``canWrite`` is
-      ``true``. 
-
-   .. step:: Enable application writes on the destination cluster.
-
    .. step:: Send a :ref:`commit <c2c-api-commit>` request to ``mongosync``.
 
       If you started multiple ``mongosync`` instances for your
@@ -70,6 +61,15 @@ Procedure
          ``commit`` request indicates that the ``mongosync`` state is
          ``COMMITTING`` or ``COMMITTED``, which is the correct
          ``mongosync`` state when you send a ``commit`` request.
+
+   .. step:: Wait until you can perform writes on the destination cluster.
+
+      Call the :ref:`progress <c2c-api-progress>` endpoint to determine
+      if ``canWrite`` is ``true``. If ``canWrite`` is ``false``, wait
+      until :ref:`progress <c2c-api-progress>` shows ``canWrite`` is
+      ``true``. 
+
+   .. step:: Enable application writes on the destination cluster.
 
    .. step:: Call the :ref:`progress <c2c-api-progress>` endpoint to determine the status of the ``mongosync`` process.
 
