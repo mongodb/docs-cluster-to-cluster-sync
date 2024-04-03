@@ -76,6 +76,8 @@ Sharded Clusters
 
 - ``mongosync`` doesn't support sync from a sharded cluster
   to a replica set.
+- ``mongosync`` doesn't support syncing into a sharded cluster 
+  topology with one or more arbiters.
 - Sync from a replica set to a sharded cluster has the following
   limitations:
 
@@ -104,8 +106,6 @@ Sharded Clusters
 - ``mongosync`` only syncs indexes that exist on all shards.
 - ``mongosync`` only syncs indexes that have consistent index
   specifications on all shards.
-- ``mongosync`` doesn't support syncing into a sharded cluster 
-  topology with one or more arbiters.
 
 .. note::
 
