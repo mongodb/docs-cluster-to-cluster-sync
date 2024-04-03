@@ -24,23 +24,42 @@ Patch Releases
 
 Issues Fixed:
 
-- Fixed a bug causing mongosync to error out due to index
-  inconsistencies in background keys between shards, which the
-  server ignores.
-- Fixed a bug where mongosync could miss change events if stopped
-  or paused then resumed during the collection copy phase.  
+- Fixed bug introduced in v1.5.0 that could result in data
+  inconsistencies when mongosync is killed or paused during
+  the initial collection copy phase and then resumed.
 
-  This can happen when the destination cluster runs MongoDB 4.x
-  and the migration includes collections with mixed ``_id``
-  types or when the destination is MongoDB 6.0+ and the
-  migration includes capped collections.
+  This can only affect migrations where the destination server
+  runs:
 
-- Fixed a bug where indexes could be created on the destination
-  cluster during migration even when dropped on the source
-  cluster.
+  - MongoDB 4.4 and earlier and the migration includes mixed _id
+    types.
 
-- Fixed a bug where change events could be applied to the wrong
-  collection during concurrent collection renames.
+  - MongoDB 6.0 and later and the migration includes capped
+    collections.
+
+- Fixed bug introduced in v1.0.0 where indexes could be created
+  on the destination cluster that were dropped on the source
+  cluster during migration.
+
+  This can only affect migrations where the given index is both
+  created and dropped while mongosync is running.
+
+- Fixed bug introduced in v1.0.0 that could result in
+  collections being created on the destination cluster with
+  incorrect types, options, or indexes.
+
+  This can only affect migrations where collections are dropped
+  or renamed while mongosync is running and the source or
+  destintion cluster runs MongoDB 6.0.0 to 6.0.12 or MongoDB
+  7.0.0 or 7.0.3.
+
+- Fixed bug introduced in v1.1.0 that could result in a
+  mongosync crash if shard key indexes on the source cluster
+  have inconsistent values across shards for the "background"
+  index build option.
+
+  This can only affect migrations that involve sharded
+  collections and source clusters older than MongoDB 6.0.
 
 Other Changes:
 
