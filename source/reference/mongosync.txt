@@ -30,7 +30,7 @@ line options.
      6.0 or later. 
      
      You can migrate data on clusters (source) with versions of MongoDB
-     lower than 6.0 to an Atlas cluster. Migration from clusters with
+     lower than 6.0 to an Atlas cluster (destination). Migration from clusters with
      lower version requires additional preparation and configuration in
      the clusters with the lower version. `Contact
      <https://mongodb.com/contact>`__ your account team to inquire about 
