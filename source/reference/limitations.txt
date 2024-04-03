@@ -104,6 +104,8 @@ Sharded Clusters
 - ``mongosync`` only syncs indexes that exist on all shards.
 - ``mongosync`` only syncs indexes that have consistent index
   specifications on all shards.
+- ``mongosync`` doesn't support syncing into a sharded cluster 
+  topology with one or more arbiters.
 
 .. note::
 
