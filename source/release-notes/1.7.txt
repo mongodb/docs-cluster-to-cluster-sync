@@ -77,8 +77,8 @@ Limitations:
 - You must stop the balancer on a sharded source cluster until
   mongosync finishes the collection copy phase.
 
-- The :dbcommand:`moveChunk` and :dbcommand:`moveRange` commands
-  must not run on the source cluster.
+- You must not run the :dbcommand:`moveChunk` or :dbcommand:`moveRange` 
+  commands on the source cluster.
 
 .. _1.7.1-c2c-release-notes:
 
