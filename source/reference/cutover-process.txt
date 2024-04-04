@@ -64,14 +64,24 @@ Procedure
 
    .. step:: Wait until you can perform writes on the destination cluster.
 
-      Call the :ref:`progress <c2c-api-progress>` endpoint to determine
-      if ``canWrite`` is ``true``. If ``canWrite`` is ``false``, wait
-      until :ref:`progress <c2c-api-progress>` shows ``canWrite`` is
-      ``true``. 
+      Call the ``progress`` endpoint to determine if ``canWrite`` is
+      ``true``. If ``canWrite`` is ``false``, wait until ``progress``
+      shows ``canWrite`` is ``true``.  
 
    .. step:: Enable application writes on the destination cluster.
 
-   .. step:: Call the :ref:`progress <c2c-api-progress>` endpoint to determine the status of the ``mongosync`` process.
+      To enable writes, update :dbcommand:`setUserWriteBlockMode`:
+
+      .. code-block:: javascript
+
+         db.adminCommand(
+           {
+             setUserWriteBlockMode: 1,
+             global: false
+           }
+         )
+
+   .. step:: Call the ``progress`` endpoint to determine the status of the ``mongosync`` process.
 
       When the ``mongosync`` progress response indicates that the 
       ``mongosync`` state is ``COMMITTED``, the cutover process is
