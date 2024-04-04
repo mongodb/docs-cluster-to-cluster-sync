@@ -9,10 +9,9 @@
      - Description
 
    * - ``success``
-     - string
-     - Status of the ``mongosync`` process. Value is ``false`` if the
-       ``mongosync`` process failed and ``true`` if ``mongosync``
-       process is successful.
+     - boolean
+     - Status of the ``progress`` command. Value is ``true`` if the
+       command succeeds and ``false`` if the command fails.
 
    * - ``error``
      - string
