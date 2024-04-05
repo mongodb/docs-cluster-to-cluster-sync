@@ -69,9 +69,10 @@ For example:
 The currently active log file is ``mongosync.log``.  The other files are older
 logs that ``mongosync`` has rotated.
 
-.. note:: 
+Rotate Log File
+```````````````
 
-   .. include:: /includes/fact-log-rotation-usr1-signal 
+.. include:: /includes/fact-log-rotation-usr1-signal 
 
 Verbosity
 ---------
