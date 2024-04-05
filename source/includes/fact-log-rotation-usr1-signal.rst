@@ -5,4 +5,4 @@ If you start ``mongosync`` with the ``--logPath`` option, you can send a
 
    kill -s USR1 $mongosync_pid
 
-Here, ``$mongosync_pid`` is the process ID of the ``mongosync`` process.
+``$mongosync_pid`` is the ``mongosync`` process ID.
