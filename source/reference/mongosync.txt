@@ -278,6 +278,15 @@ behavior, see :ref:`read-concern` and :ref:`write-concern`.
 Read Preference
 ~~~~~~~~~~~~~~~
 
+If you specify a read preference for your source cluster, ``mongosync``
+uses your specified read preference on the source cluster. If you do not
+specify a read preference, ``mongosync`` uses the read preference
+:readmode:`primaryPreferred`.
+
+``mongosync`` uses the read preference :readmode:`primary` on the
+destination cluster, even if you specify a destination cluster read
+preference.
+
 ``mongosync`` requires the :readmode:`primary` read preference
 when connecting to the source cluster. For more information, see
 :ref:`connections-read-preference`. 
