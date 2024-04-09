@@ -281,15 +281,13 @@ Read Preference
 If you specify a read preference for your source cluster, ``mongosync``
 uses your specified read preference on the source cluster. If you do not
 specify a read preference, ``mongosync`` uses the read preference
-:readmode:`primaryPreferred`.
+:readmode:`primaryPreferred` on the source cluster.
 
-``mongosync`` uses the read preference :readmode:`primary` on the
-destination cluster, even if you specify a destination cluster read
-preference.
+By default, ``mongosync`` uses the read preference :readmode:`primary`
+on the destination cluster, even if you specify a destination cluster
+read preference.
 
-``mongosync`` requires the :readmode:`primary` read preference
-when connecting to the source cluster. For more information, see
-:ref:`connections-read-preference`. 
+For more information, see :ref:`connections-read-preference`.
 
 .. _c2c-capped-collections:
 
