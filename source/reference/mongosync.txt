@@ -283,9 +283,9 @@ uses your specified read preference on the source cluster. If you do not
 specify a read preference, ``mongosync`` uses the read preference
 :readmode:`primaryPreferred` on the source cluster.
 
-By default, ``mongosync`` uses the read preference :readmode:`primary`
-on the destination cluster, even if you specify a destination cluster
-read preference.
+``mongosync`` always uses the :readmode:`primary` read preference on the
+destination cluster, even if you manually specify a read preference for
+the destination cluster.
 
 For more information, see :ref:`connections-read-preference`.
 
