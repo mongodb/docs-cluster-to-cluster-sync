@@ -108,8 +108,8 @@ Learn More
 ----------
 
 * :ref:`c2c-verifcation`
-* :ref:`c2c-start`
-* :ref:`c2c-commit`
-* :ref:`c2c-progress`
+* :ref:`c2c-api-start`
+* :ref:`c2c-api-commit`
+* :ref:`c2c-api-progress`
 * :ref:`c2c-states`
 
