@@ -99,7 +99,7 @@ Steps
    .. step:: Call the ``progress`` endpoint to determine the status of the ``mongosync`` process.
 
       When the ``mongosync`` progress response indicates that the 
-      ``mongosync`` state is ``COMMITTED``, the migration process is
+      ``mongosync`` state is ``COMMITTED``, the cutover process is
       complete. 
 
 Learn More
