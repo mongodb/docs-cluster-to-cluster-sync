@@ -12,10 +12,9 @@ Cutover Process
    :class: singlecol
    :depth: 1
 
-After ``mongosync`` completes sync from the source
-cluster to the destination, you can finalize the
-migration by transferring your application load to the
-destination cluster. 
+You can finalize a migration and transfer your application's writes from
+the source to the destination cluster using the ``mongosync`` cutover
+process. 
 
 .. note::
 
