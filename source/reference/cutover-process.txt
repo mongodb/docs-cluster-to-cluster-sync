@@ -76,14 +76,6 @@ Steps
       ``true``. If ``canWrite`` is ``false``, wait until ``progress``
       shows ``canWrite`` is ``true``.  
 
-   .. step:: Verify data transfer.
-
-      When the migration process is complete, verify the
-      successful sync of data from the source to the destination
-      cluster.
-
-      For more information, see :ref:`c2c-verification`.
-
    .. step:: Enable application writes on the destination cluster.
 
       To enable writes, update :dbcommand:`setUserWriteBlockMode`:
@@ -100,8 +92,17 @@ Steps
    .. step:: Call the ``progress`` endpoint to determine the status of the ``mongosync`` process.
 
       When the ``mongosync`` progress response indicates that the 
-      ``mongosync`` state is ``COMMITTED``, the cutover process is
+      ``mongosync`` state is ``COMMITTED``, the migration process is
       complete. 
+
+   .. step:: Verify data transfer.
+
+      Before transferring your application load to the
+      destination cluster, verify the successful sync of data
+      from the source to the destination cluster.
+
+      For more information, see :ref:`c2c-verification`.
+
 
 Learn More
 ----------
