@@ -82,8 +82,7 @@ Steps
       successful sync of data from the source to the destination
       cluster.
 
-      For information of verification methods, see
-      :ref:`c2c-verification`.
+      For more information, see :ref:`c2c-verification`.
 
    .. step:: Enable application writes on the destination cluster.
 
