@@ -107,7 +107,7 @@ Steps
 Learn More
 ----------
 
-* :ref:`c2c-verifcation`
+* :ref:`c2c-verification`
 * :ref:`c2c-api-start`
 * :ref:`c2c-api-commit`
 * :ref:`c2c-api-progress`
