@@ -12,15 +12,16 @@ Cutover Process
    :class: singlecol
    :depth: 1
 
-You can finalize a migration and transfer your application's writes from
+You can finalize a migration and transfer your application load from
 the source to the destination cluster using the ``mongosync`` cutover
 process. 
 
 .. note::
 
-   Before you cut application over to the destination cluster, you
-   should always verify that the sync was successful.  For more
-   information, see :ref:`c2c-verification`.
+   Before you cut your application over to the destination
+   cluster, you should always verify that the sync was
+   successful.  For more information, see
+   :ref:`c2c-verification`.
 
 Steps
 -----
