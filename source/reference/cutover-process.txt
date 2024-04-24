@@ -11,12 +11,20 @@ Cutover Process
    :backlinks: none
    :class: singlecol
 
-You can finalize a migration and transfer your application's writes from
-the source to the destination cluster using the ``mongosync`` cutover
-process. 
+You can finalize a migration and transfer your application reads
+and writes from the source cluster to the destination using the
+``mongosync`` cutover process. 
 
-Procedure 
----------
+About This Task
+---------------
+
+Before you cut application over to the destination cluster, you
+should always verify that the sync was successful.  For more
+information on the verification process, see
+:ref:`c2c-verification`.
+
+Steps
+-----
 
 .. procedure:: 
    :style: normal 
@@ -67,6 +75,15 @@ Procedure
       Call the ``progress`` endpoint to determine if ``canWrite`` is
       ``true``. If ``canWrite`` is ``false``, wait until ``progress``
       shows ``canWrite`` is ``true``.  
+
+   .. step:: Verify data transfer.
+
+      When the migration process is complete, verify the
+      successful sync of data from the source to the destination
+      cluster.
+
+      For information of verification methods, see
+      :ref:`c2c-verification`.
 
    .. step:: Enable application writes on the destination cluster.
 
