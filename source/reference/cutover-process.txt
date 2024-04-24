@@ -15,7 +15,7 @@ Cutover Process
 After ``mongosync`` completes sync from the source
 cluster to the destination, you can finalize the
 migration by transferring your application load to the
-destination cluster and deprecate the source.
+destination cluster. 
 
 .. note::
 
