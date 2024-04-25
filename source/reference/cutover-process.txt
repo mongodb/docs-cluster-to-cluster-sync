@@ -12,15 +12,15 @@ Cutover Process
    :class: singlecol
    :depth: 1
 
-You can finalize a migration and transfer your application load from
-the source to the destination cluster using the ``mongosync`` cutover
-process. 
+You can finalize a migration and transfer your application
+workload from the source to the destination cluster using the
+``mongosync`` cutover process. 
 
 .. note::
 
-   Before you cut your application over to the destination
-   cluster, you should always verify that the sync was
-   successful.  For more information, see
+   Before you switch your application workload to the
+   destination cluster, you should always verify that the sync
+   was successful. For more information, see
    :ref:`c2c-verification`.
 
 Steps
@@ -51,7 +51,7 @@ Steps
       - If you didn't start ``mongosync`` with
         ``enableUserWriteBlocking``, ensure that writes are disabled.
         For example, run the ``setUserWriteBlockMode`` command on the
-        source cluster.  
+        source cluster.
       - If ``mongosync`` uses filtered sync, it's not necessary to
         disable writes to the entire source cluster. But you must ensure
         that write operations are stopped for the collections included
@@ -74,7 +74,7 @@ Steps
 
       Call the ``progress`` endpoint to determine if ``canWrite`` is
       ``true``. If ``canWrite`` is ``false``, wait until ``progress``
-      shows ``canWrite`` is ``true``.  
+      shows ``canWrite`` is ``true``.
 
    .. step:: Verify data transfer.
 
@@ -105,9 +105,9 @@ Steps
 Learn More
 ----------
 
-* :ref:`c2c-verification`
-* :ref:`c2c-api-start`
-* :ref:`c2c-api-commit`
-* :ref:`c2c-api-progress`
-* :ref:`c2c-states`
+- :ref:`c2c-verification`
+- :ref:`c2c-api-start`
+- :ref:`c2c-api-commit`
+- :ref:`c2c-api-progress`
+- :ref:`c2c-states`
 
