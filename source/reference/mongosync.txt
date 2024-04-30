@@ -334,6 +334,12 @@ To sync a source cluster to multiple destination clusters, use one
 information, see :ref:`Multiple Clusters Limitations
 <multiple-clusters-limitations>`. 
 
+Data Definition Language (DDL) Operations
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+DDL operations (operations that act on collections or databases)
+increase ``mongosync`` complecity 
+
 .. _c2c-mongosync-examples:
 
 Examples
