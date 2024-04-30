@@ -21,6 +21,10 @@ Atlas cluster using {+c2c-full-product-name+}.
 For additional details on connecting to an Atlas cluster, see
 :ref:`Connect to a Database Deployment <atlas-connect-to-deployment>`
 
+.. note::
+
+   .. include:: /includes/migration-upgrade-recommendation.rst
+
 Connection Strings
 ------------------
 
