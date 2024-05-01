@@ -338,7 +338,9 @@ Data Definition Language (DDL) Operations
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 DDL operations (operations that act on collections or databases)
-increase ``mongosync`` complecity 
+increase the complexity of sync and may negatively impact performance.
+To optimize sync, refrain from performing DDL operations on the source
+cluster while the sync is in progress. 
 
 .. _c2c-mongosync-examples:
 
