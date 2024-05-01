@@ -23,7 +23,9 @@ For additional details on connecting to an Atlas cluster, see
 
 .. note::
 
-   .. include:: /includes/migration-upgrade-recommendation.rst
+   For best performance, upgrade your source cluster to the most recent
+   server patch release prior to migration. For more information, see
+   :ref:`upgrade-to-latest-revision`.
 
 Connection Strings
 ------------------
