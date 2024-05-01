@@ -1,0 +1,28 @@
+.. _c2c-beta-program:
+
+====================================
+{+c2c-product-name+} Beta Program
+====================================
+
+.. default-domain:: mongodb
+
+.. contents:: On this page
+   :local:
+   :backlinks: none
+   :depth: 2
+   :class: singlecol
+
+Description 
+-----------
+
+Terms of Use 
+------------
+
+Get Started 
+-----------
+
+Beta Features
+-------------
+
+Learn More 
+----------
