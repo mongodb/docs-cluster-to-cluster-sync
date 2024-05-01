@@ -337,10 +337,11 @@ information, see :ref:`Multiple Clusters Limitations
 Data Definition Language (DDL) Operations
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-DDL operations (operations that act on collections or databases) during
-sync increase the risk of migration failure and may negatively impact
-``mongosync`` performance. For best performance, refrain from performing
-DDL operations on the source cluster while the sync is in progress.
+Using DDL operations (operations that act on collections or databases)
+during sync increase the risk of migration failure and may negatively
+impact ``mongosync`` performance. For best performance, refrain from
+performing DDL operations on the source cluster while the sync is in
+progress.
 
 .. _c2c-mongosync-examples:
 
