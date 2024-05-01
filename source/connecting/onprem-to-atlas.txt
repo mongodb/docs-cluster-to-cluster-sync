@@ -24,7 +24,7 @@ For additional details on connecting to an Atlas cluster, see
 .. note::
 
    For best performance, upgrade your on self-managed cluster to the
-   most recent server patch release prior to migration. For more
+   most recent MongoDB Server patch release prior to migration. For more
    information, see :ref:`upgrade-to-latest-revision`.
 
 Connection Strings
