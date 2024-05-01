@@ -54,6 +54,7 @@ General Limitations
 - .. include:: /includes/fact-applyOps.rst
 - ``mongosync`` must read from the source cluster using the 
   :readmode:`primary` read preference.
+- ``mongosync`` does not support syncing Atlas Search Indexes.
 
 
 MongoDB Community Edition
