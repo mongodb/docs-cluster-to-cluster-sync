@@ -54,7 +54,7 @@ General Limitations
 - .. include:: /includes/fact-applyOps.rst
 - ``mongosync`` must read from the source cluster using the 
   :readmode:`primary` read preference.
-- ``mongosync`` does not work on source or destination clusters that 
+- ``mongosync`` does not support source or destination clusters that 
   are currently upgrading MongoDB versions.
 
 MongoDB Community Edition
