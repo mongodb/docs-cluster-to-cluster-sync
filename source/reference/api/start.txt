@@ -179,6 +179,10 @@ Request Body Parameters
        To reverse sync, the ``enableUserWriteBlocking`` field must be set 
        to ``true``.      
 
+       The ``/start`` command returns an error when
+       the reverse sync is enabled and ``verificationMode`` is
+       set to ``full``.
+
        This option is not supported for the following configurations:
 
        * Sync from a replica set to a sharded cluster
@@ -206,6 +210,10 @@ Request Body Parameters
      - string
      - Optional
      - Configures the embedded verifier.
+
+       The ``/start`` command returns an error when
+       the verification mode is set to ``full`` and the
+       ``reversible`` parameter is set to ``true``.
 
        .. versionadded:: 1.8
 
@@ -493,10 +501,20 @@ Endpoint Protection
 .. |endpoint| replace:: ``start``
 .. include:: /includes/fact-api-endpoint
 
+.. _c2c-start-verifier:
+
 Embedded Verifier
 ~~~~~~~~~~~~~~~~~
 
-``mongosync`` supports the following verifier modes:
+Starting in v1.8, ``mongosync`` provides an embedded verifier to
+determine whether data transfer from the source cluster to the
+destination was successful.
+
+The specific verification checks performed by the embedded
+verifier are set using the ``verificationMode`` parameter.
+
+The ``verificationMode`` parameter supports the following
+verifier modes:
 
 .. list-table::
    :header-rows: 1
@@ -505,6 +523,8 @@ Embedded Verifier
      - Description
    * - ``full``
      - Peforms all available verification checks.
+
+       This is the default mode.
    * - ``none``
      - Disables the Embedded Verifier.
 
