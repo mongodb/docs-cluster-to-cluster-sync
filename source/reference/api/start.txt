@@ -202,6 +202,14 @@ Request Body Parameters
 
        .. versionadded:: 1.1
 
+   * - ``verificationMode``
+     - string
+     - Optional
+     - Configures the embedded verifier.
+
+       .. versionadded:: 1.8
+
+
 .. _c2c-api-start-sharding:
 
 Sharding Parameters
@@ -484,3 +492,19 @@ Endpoint Protection
 
 .. |endpoint| replace:: ``start``
 .. include:: /includes/fact-api-endpoint
+
+Embedded Verifier
+~~~~~~~~~~~~~~~~~
+
+``mongosync`` supports the following verifier modes:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Mode
+     - Description
+   * - ``full``
+     - Peforms all available verification checks.
+   * - ``none``
+     - Disables the Embedded Verifier.
+
