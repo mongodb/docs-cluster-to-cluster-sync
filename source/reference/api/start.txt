@@ -211,9 +211,13 @@ Request Body Parameters
      - Optional
      - Configures the embedded verifier.
 
+       The default verification mode is ``full``.
+
        The ``/start`` command returns an error when
        the verification mode is set to ``full`` and the
        ``reversible`` parameter is set to ``true``.
+
+       For more information, see :ref:`c2c-start-verifier`.
 
        .. versionadded:: 1.8
 
