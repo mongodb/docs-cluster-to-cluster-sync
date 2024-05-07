@@ -56,6 +56,8 @@ General Limitations
   :readmode:`primary` read preference.
 - ``mongosync`` does not support source or destination clusters that 
   are currently upgrading MongoDB versions.
+- ``mongosync`` does not support syncing 
+  `Atlas Search Indexes <https://www.mongodb.com/docs/atlas/atlas-search/create-index/>`__.
 
 MongoDB Community Edition
 -------------------------
