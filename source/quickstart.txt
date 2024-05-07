@@ -195,6 +195,8 @@ Initialization Notes
   <c2c-api-start>` command. "cluster0" and "cluster1" are just labels,
   either cluster can be ``cluster0`` or ``cluster1``.
 
+.. _c2c-quickstart-synchronize:
+
 Synchronize Data Between Clusters
 ---------------------------------
 
@@ -332,7 +334,7 @@ describe the operations.
          --cluster1 "mongodb://localhost:35000" \
          --migrationName "cluster_27001_to_cluster_35000_sync"
 
-.. include:: /includes/many-to-one-cluster-sync.rst
+.. include:: /includes/many-with-one-cluster.rst
 
 To start the sync operation between the source clusters and the
 destination cluster, see the earlier section
