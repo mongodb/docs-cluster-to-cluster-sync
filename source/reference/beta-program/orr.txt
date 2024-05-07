@@ -1,0 +1,14 @@
+.. _c2c-beta-orr:
+
+==========
+Enable ORR
+===========
+
+.. default-domain:: mongodb
+
+.. contents:: On this page
+   :local:
+   :backlinks: none
+   :depth: 2
+   :class: singlecol
+

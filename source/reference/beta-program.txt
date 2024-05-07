@@ -12,17 +12,48 @@
    :depth: 2
    :class: singlecol
 
-Description 
------------
+Starting in 1.8.0, {+c2c-product-name+}
 
 Terms of Use 
 ------------
 
-Get Started 
------------
+MongoDB restricts access to beta features via the beta build. 
+
+Features available through the beta build and flags are not generally available. 
+All use of beta builds is at your own risk, even with MongoDB's help, guidance, 
+and support. Beta builds provide no stability guarantees; API, UI, options, and 
+behaviors may change or be removed at any time. Beta builds may contain bugs, 
+both major and minor, including bugs that result in data inconsistency. MongoDB 
+will never issue a Critical Advisory or any other form of notification about 
+defects in beta builds
+
+MongoDB may pursue any of the following options for future development of beta 
+features:
+
+- Productionize a beta feature as generally available 
+- Continue offering the feature in the beta 
+- Remove or change a beta feature at any time
+
+You agree to abide by all of the following requirements and restrictions on the 
+use of beta builds:
+
+- You agree to follow feature usage guidance provided by Field and R&D without 
+  deviation
+- You agree to use beta builds for one-time, human-supervised migrations only 
+  (e.g., not for continuous sync or automated migrations)
+- You agree to use beta capabilities to migrate production workloads only in 
+  situations where data loss is acceptable.
+- You agree to provide usage and product feedback on beta features through 
+  recurring calls to MongoDB professional services and product management.
 
 Beta Features
 -------------
 
-Learn More 
-----------
+.. toctree::
+   :titlesonly:
+
+   /reference/beta-program/orr 
+   /reference/beta-program/destinationDataHandling 
+   /reference/beta-program/document-filtering
+   /reference/beta-program/many-to-one
+   /reference/beta/program/namespace-remapping
