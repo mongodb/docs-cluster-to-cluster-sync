@@ -12,7 +12,7 @@
    :depth: 2
    :class: singlecol
 
-Starting in 1.8.0, {+c2c-product-name+}
+Starting in 1.8.0, {+c2c-product-name+}...
 
 Terms of Use 
 ------------

@@ -21,6 +21,8 @@ Release Notes for mongosync 1.8
 
 **Upcoming**
 
+Beta Features: 
+
 New Features:
 
 
