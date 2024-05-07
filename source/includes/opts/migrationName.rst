@@ -1,11 +1,10 @@
 .. reference/configuration.txt
 .. reference/mongosync.txt
 
-.. versionadded:: 1.8.0
-
-Sets a migration name for a sync operation. For example, you can set a
-migration name to identify each sync operation from multiple source
-clusters into one destination cluster.
+Starting in ``mongosync-beta`` 1.8, sets a migration name for a sync
+operation. For example, you can set a migration name to identify each
+sync operation from multiple source clusters into one destination
+cluster.
 
 The ``migrationName`` string can contain up to 44 alphanumeric
 and underscore characters. ``migrationName`` is appended to the string

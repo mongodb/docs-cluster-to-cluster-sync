@@ -85,7 +85,7 @@ For example, consider this scenario:
   - ``inventory.products`` and ``inventory.orderLines`` on S2 with D.
     You cannot sync S2 with D because ``inventory.products`` and
     ``inventory.orderLines`` conflict with the namespaces already on D
-    from the previous point.
+    from the scenario in the previous point.
 
 MongoDB Community Edition
 -------------------------
