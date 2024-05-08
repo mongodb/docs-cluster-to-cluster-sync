@@ -13,28 +13,50 @@ destinationDataHandling = ignorePreExistingNamespaces
    :class: singlecol
 
 Starting in ``mongosync-beta`` 1.8, you can set an optional
-``destinationDataHandling`` feature flag. The flag allows you to control
-what happens if the destination cluster is empty. Previous ``mongosync``
-versions return an error if the destination cluster is empty.
+``destinationDataHandling`` parameter. The parameter allows you to
+control what happens if the destination cluster is empty. Previous
+``mongosync`` versions return an error if the destination cluster is
+empty.
 
 Definition
 ----------
 
 
-You can use ``destinationDataHandling`` with the
-``supportOlderVersions`` feature flag.
 
 Syntax
 ------
 
-.. code-block:: javascript
+Syntax to use the default ``destinationDataHandling`` behavior:
 
-   mongosync --port 27182 ... --enableFeatures destinationDataHandling
+.. code-block:: shell
+
+   mongosync <other parameters> --enableFeatures destinationDataHandling
+
+If the destination cluster is not empty, ``mongosync`` returns an error.
+Otherwise, ``mongosync`` continues with the operation.
+
+For the full list of ``mongosync`` parameters, see :ref:`c2c-mongosync`.
+
+Syntax to set an optional value for ``destinationDataHandling``:
+
+.. code-block:: shell
+
+   curl localhost:27182/api/v1/start -XPOST \
+   --data '
+      {
+         "source": "cluster0",
+         "destination": "cluster1",
+         ...,
+         "destinationDataHandling": <string>
+      } '
 
 These are the possible values:
 
-Command Fields
---------------
+Command Parameter
+-----------------
+
+The following table shows the values you can set
+``destinationDataHandling`` to:
 
 | Value                     | Behavior                                                                                                                                                                                                                                                                                                                                                                         |
 | ------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
