@@ -12,22 +12,32 @@ destinationDataHandling = ignorePreExistingNamespaces
    :depth: 2
    :class: singlecol
 
-#### `destinationDataHandling`
-
 By default, mongosync's behavior upon starting is to check if the
 destination cluster is empty and return an error if it is not. This
 parameter is compatible with `supportOlderVersions` since we test this
 on all MongoDB versions in our integration tests.
 
+Definition
+----------
+
+Syntax
+------
+
 This feature flag allows mongosync to deviate from that behavior by
 accepting an optional `destinationDataHandling` parameter in its start
 request. These are the possible values:
+
+Command Fields
+--------------
 
 | Value                     | Behavior                                                                                                                                                                                                                                                                                                                                                                         |
 | ------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | _(omitted)_               | If the parameter is omitted, mongosync does its default check to ensure that the destination cluster is empty. If it is not empty, mongosync will error. Otherwise, mongosync will proceed with replication.                                                                                                                                                                     |
 | `"dropAllData"`           | Mongosync will drop all destination databases except for the `admin`, `config`, `local` and `mongosync_reserved_for_internal_use` databases.                                                                                                                                                                                                                                     |
 | `"ignorePreExistingData"` | Mongosync will ignore any pre-existing user databases and collections on the destination. Mongosync will correctly detect any namespace conflicts upon initializing, but it is generally up to the user to ensure that their destination namespaces remain disjoint from the ones mongosync is replicating during the later Collection Copy and Change Event Application phases. |
+
+Examples
+--------
 
 For example, if mongosync is started like this:
 
@@ -66,3 +76,6 @@ elevated roles. We need the `clusterAdmin` (or `dbAdmin`) role on the
 destination when using this flag, because the `dropDatabase` action is
 required to clean up preexisting data. This is not provided by the
 `restore` role.
+
+Learn More
+----------
