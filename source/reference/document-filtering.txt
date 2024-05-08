@@ -1,0 +1,61 @@
+.. _c2c-document-filtering:
+
+==================
+Document Filtering
+==================
+
+.. default-domain:: mongodb
+
+.. contents:: On this page
+   :local:
+   :backlinks: none
+   :depth: 1
+   :class: twocols
+
+.. include:: /includes/document-filtering-intro.rst
+
+Syntax 
+------
+
+The :ref:`c2c-api-start` API endpoint accepts a ``documentFilter`` parameter 
+with the following syntax:
+
+.. code-block:: json
+   :copyable: false
+
+   {
+      field: <field-name>,
+      matchValues: [<field-values>] 
+   }
+
+Parameter Fields 
+----------------
+
+.. list-table::
+   :header-rows: 1
+
+   * - Field 
+     - Type 
+     - Necessity 
+     - Description 
+
+   * - ``field`` 
+     - String
+     - Required 
+     - Field name  
+
+   * - ``matchValues`` 
+     - Array 
+     - Required 
+     - Field value(s) that a document must have in order to migrate.
+
+Limitations
+-----------
+
+.. include:: /includes/document-filtering-limitations.rst
+
+Learn More 
+----------
+
+- :ref:`c2c-api-start`
+- 

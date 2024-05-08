@@ -171,3 +171,8 @@ System Collections
 ------------------
 
 .. include:: /includes/collections/behavior-system-collections.rst
+
+Document Filtering 
+------------------
+
+.. include:: /includes/document-filtering-limitations.rst

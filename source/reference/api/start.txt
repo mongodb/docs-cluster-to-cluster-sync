@@ -112,6 +112,14 @@ Request Body Parameters
 
        .. versionadded:: 1.3.0
 
+   * - ``documentFilter``
+     - document
+     - Optional
+     - Filters documents to include in sync. 
+       
+       To learn more, see :ref:`c2c-document-filtering`.
+
+
    * - ``enableUserWriteBlocking``
      - boolean
      - Optional

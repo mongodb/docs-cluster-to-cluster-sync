@@ -21,8 +21,24 @@ Release Notes for mongosync 1.8
 
 **Upcoming**
 
+{+c2c-product-name+} Beta Program 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+Document Filtering in mongosync
+```````````````````````````````
+
+.. include:: /includes/document-filtering-intro.rst
+
+To learn more, see :ref:`c2c-document-filtering`.
+
+Other Notes
+~~~~~~~~~~~
+
 New Features:
 
+Issues Fixed:
 
 Minimum Supported Version
 -------------------------
