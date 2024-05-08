@@ -20,12 +20,14 @@ on all MongoDB versions in our integration tests.
 Definition
 ----------
 
+This feature flag allows mongosync to deviate from that behavior by
+accepting an optional ``destinationDataHandling`` parameter in its start
+request.
+
 Syntax
 ------
 
-This feature flag allows mongosync to deviate from that behavior by
-accepting an optional `destinationDataHandling` parameter in its start
-request. These are the possible values:
+These are the possible values:
 
 Command Fields
 --------------
