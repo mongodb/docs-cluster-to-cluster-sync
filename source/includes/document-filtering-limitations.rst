@@ -6,20 +6,21 @@
   - Embedded documents 
   - Regular expressions
 
-- Documents must not move in or out of the filter during migration. 
-
-- Ensure that there isn't pre-existing data on the destination cluster that 
-  matches the filter.
-
-- If you specify a document filter and set the ``reversible`` flag to ``true``, 
-  ``mongosync`` fails immediately.
+- Documents must not move in or out of the filter during migration. If a source 
+  document from a prior sync no longer matches the query filter, 
+  ``mongosync`` deletes the document from the destination cluster.
 
 - If the document filter contains a string constant and at least one 
   migrated collection that is specially collated, ``mongosync`` fails 
   immediately.
 
-- ``mongosync`` fails during initialization if a document filter is specified 
-  for: 
+- The destination cluster must not contain pre-existing data that matches the 
+  filter.
+
+- You can't specify a document filter and set the ``reversible`` flag to 
+  ``true``.
+
+- You can't use document filtering for:
 
   - Time-series collections. 
   - Queryable-encryption collections.

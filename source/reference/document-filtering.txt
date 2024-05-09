@@ -54,6 +54,29 @@ Limitations
 
 .. include:: /includes/document-filtering-limitations.rst
 
+Examples 
+--------
+
+Start ``mongosync`` with a Document Filter
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. include:: /includes/intro-start-api-example-intro.rst
+
+``cluster0`` contains the ``travel`` database, which includes the 
+``restaurants``, ``attractions``, and ``lodging`` collections. Documents in the 
+``restaurants``, ``attractions``, and ``lodging`` collections all contain a 
+``city`` field. 
+
+The ``documentFilter`` document in this example filters for documents where the 
+``city`` field is either ``Los Angeles``, ``New York``, or ``San Francisco``. 
+
+.. code-block:: json
+
+   "documentFilter" : {
+             field : "country",
+             matchValues: [ "Canada", "USA", "Mexico" ]
+         }
+
 Learn More 
 ----------
 

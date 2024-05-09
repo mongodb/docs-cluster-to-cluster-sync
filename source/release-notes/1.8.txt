@@ -24,8 +24,6 @@ Release Notes for mongosync 1.8
 {+c2c-product-name+} Beta Program 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-
-
 Document Filtering in mongosync
 ```````````````````````````````
 
