@@ -44,26 +44,23 @@ To set a string for ``destinationDataHandling``, use ``curl``:
 Option
 ------
 
+*Type*: string
 
-.. option:: --destinationDataHandling <string>
+Sets the cluster workload level for syncing data between clusters:
 
-   *Type*: string
-
-   Sets the cluster workload level for syncing data between clusters:
-
-   - ``"dropAllData"``, Mongosync will drop all destination databases
-     except for the `admin`, `config`, `local` and
-     `mongosync_reserved_for_internal_use` databases.
-   - ``"ignorePreExistingData"``, Mongosync will ignore any pre-existing
-     user databases and collections on the destination. Mongosync will
-     correctly detect any namespace conflicts upon initializing, but it
-     is generally up to the user to ensure that their destination
-     namespaces remain disjoint from the ones mongosync is replicating
-     during the later Collection Copy and Change Event Application
-     phases.
-   - Empty, mongosync does its default check to ensure that the
-     destination cluster is empty. If it is not empty, mongosync will
-     error. Otherwise, mongosync will proceed with replication.
+- ``"dropAllData"``, Mongosync will drop all destination databases
+   except for the `admin`, `config`, `local` and
+   `mongosync_reserved_for_internal_use` databases.
+- ``"ignorePreExistingData"``, Mongosync will ignore any pre-existing
+   user databases and collections on the destination. Mongosync will
+   correctly detect any namespace conflicts upon initializing, but it
+   is generally up to the user to ensure that their destination
+   namespaces remain disjoint from the ones mongosync is replicating
+   during the later Collection Copy and Change Event Application
+   phases.
+- Empty, mongosync does its default check to ensure that the
+   destination cluster is empty. If it is not empty, mongosync will
+   error. Otherwise, mongosync will proceed with replication.
 
 Examples
 --------
