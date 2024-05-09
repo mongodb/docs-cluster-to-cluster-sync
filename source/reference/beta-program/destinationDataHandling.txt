@@ -69,7 +69,8 @@ For example, if mongosync is started like this:
 
    mongosync --port 27182 ... --enableFeatures destinationDataHandling
 
-It can optionally accept the `"destinationDataHandling"` parameter like this:
+It can optionally accept the ``"destinationDataHandling"`` parameter
+like this:
 
 .. code-block:: shell
 
@@ -97,14 +98,15 @@ No conflicts detected between source namespaces and pre-existing destination nam
 
 Or will return an error like this if there was a conflict:
 
-Found 3 conflicting namespaces between the source and the destination: { sales : { records, teams }, engineering : { teams } }"
+Found 3 conflicting namespaces between the source and the destination: {
+sales : { records, teams }, engineering : { teams } }
 
-When using the ``destinationDataHandling`` feature and starting mongosync
-with ``"dropAllData"``, the users provided to mongosync will require
-elevated roles. We need the ``clusterAdmin`` (or ``dbAdmin``) role on the
-destination when using this flag, because the `dropDatabase` action is
-required to clean up preexisting data. This is not provided by the
-``restore`` role.
+When using the ``destinationDataHandling`` feature and starting
+mongosync with ``"dropAllData"``, the users provided to mongosync will
+require elevated roles. We need the ``clusterAdmin`` (or ``dbAdmin``)
+role on the destination when using this flag, because the
+``dropDatabase`` action is required to clean up preexisting data. This
+is not provided by the ``restore`` role.
 
 Learn More
 ----------
