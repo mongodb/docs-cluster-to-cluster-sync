@@ -81,4 +81,4 @@ Learn More
 ----------
 
 - :ref:`c2c-api-start`
-- 
+- :ref:`c2c-limitations`
