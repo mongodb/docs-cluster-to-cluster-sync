@@ -115,10 +115,9 @@ Request Body Parameters
    * - ``documentFilter``
      - document
      - Optional
-     - Filters documents to include in sync. 
+     - .. include:: /includes/document-filtering-intro.rst
        
        To learn more, see :ref:`c2c-document-filtering`.
-
 
    * - ``enableUserWriteBlocking``
      - boolean
