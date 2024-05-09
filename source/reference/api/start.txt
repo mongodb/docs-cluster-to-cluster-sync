@@ -119,6 +119,8 @@ Request Body Parameters
        
        To learn more, see :ref:`c2c-document-filtering`.
 
+       .. versionadded:: 1.8 Beta
+
    * - ``enableUserWriteBlocking``
      - boolean
      - Optional
