@@ -12,8 +12,6 @@ Use destinationDataHandling Parameter to Control Behavior
    :depth: 2
    :class: singlecol
 
-.. program:: mongosync
-
 Starting in ``mongosync-beta`` 1.8, you can use the
 ``destinationDataHandling`` option to define the behavior if the
 destination cluster is empty. Previous ``mongosync`` versions return an
