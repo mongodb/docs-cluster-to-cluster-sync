@@ -1,8 +1,8 @@
-.. _c2c-beta-desination-data-handling:
+.. _c2c-beta-destination-data-handling:
 
-=========================================================
-Use destinationDataHandling Parameter to Control Behavior
-=========================================================
+======================================================
+Use destinationDataHandling Option to Control Behavior
+======================================================
 
 .. default-domain:: mongodb
 
@@ -39,12 +39,7 @@ To set a string for ``destinationDataHandling``, use ``curl``:
          "destinationDataHandling": <string>
       } '
 
-Option
-------
-
-*Type*: string
-
-Sets the cluster workload level for syncing data between clusters:
+You can set the destinationDataHandling string to one of these:
 
 - ``"dropAllData"``, Mongosync will drop all destination databases
    except for the ``admin``, ``config``, ``local`` and
