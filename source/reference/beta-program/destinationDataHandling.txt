@@ -28,9 +28,9 @@ To enable ``destinationDataHandling``:
 
    mongosync <options> --enableFeatures destinationDataHandling
 
-For the list of ``mongosync`` options, see :ref:`c2c-mongosync`.
+For the ``mongosync`` options list, see :ref:`c2c-mongosync`.
 
-To set a string for ``destinationDataHandling``:
+To set a string for ``destinationDataHandling``, use ``curl``:
 
 .. code-block:: shell
 
@@ -44,8 +44,6 @@ To set a string for ``destinationDataHandling``:
 Option
 ------
 
-The following table shows the strings you can set the
-``destinationDataHandling`` option to:
 
 .. option:: --destinationDataHandling <string>
 
