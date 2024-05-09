@@ -21,7 +21,7 @@ Release Notes for mongosync 1.8
 
 **Upcoming**
 
-New Features:
+Beta Features:
 
 Synchronize Data Between Multiple Source Clusters Simultaneously
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
