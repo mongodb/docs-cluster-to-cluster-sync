@@ -15,9 +15,9 @@ Use destinationDataHandling Parameter to Control Behavior
 .. program:: mongosync
 
 Starting in ``mongosync-beta`` 1.8, you can use the
-``destinationDataHandling`` option. The option allows you to control
-what happens if the destination cluster is empty. Previous ``mongosync``
-versions return an error if the destination cluster is empty.
+``destinationDataHandling`` option to define the behavior if the
+destination cluster is empty. Previous ``mongosync`` versions return an
+error if the destination cluster is empty.
 
 Syntax
 ------
@@ -28,8 +28,7 @@ To enable ``destinationDataHandling``:
 
    mongosync <options> --enableFeatures destinationDataHandling
 
-To see how to set the source and destination cluster options, and the
-list of the other ``mongosync`` options, see :ref:`c2c-mongosync`.
+For the list of ``mongosync`` options, see :ref:`c2c-mongosync`.
 
 To set a string for ``destinationDataHandling``:
 
@@ -38,12 +37,12 @@ To set a string for ``destinationDataHandling``:
    curl <host>:<port>/api/v1/start -XPOST \
    --data '
       {
-         <... parameters ...>,
+         <options>,
          "destinationDataHandling": <string>
       } '
 
-Command Option
---------------
+Option
+------
 
 The following table shows the strings you can set the
 ``destinationDataHandling`` option to:
@@ -52,8 +51,7 @@ The following table shows the strings you can set the
 
    *Type*: string
 
-   Sets the cluster workload level for syncing data between the source and
-   destination clusters:
+   Sets the cluster workload level for syncing data between clusters:
 
    - ``"dropAllData"``, Mongosync will drop all destination databases
      except for the `admin`, `config`, `local` and
