@@ -1,8 +1,8 @@
 .. _c2c-beta-desination-data-handling:
 
-=====================================================
-destinationDataHandling = ignorePreExistingNamespaces
-=====================================================
+=========================================================
+Use destinationDataHandling Parameter to Control Behavior
+=========================================================
 
 .. default-domain:: mongodb
 
@@ -12,69 +12,62 @@ destinationDataHandling = ignorePreExistingNamespaces
    :depth: 2
    :class: singlecol
 
-Starting in ``mongosync-beta`` 1.8, you can set an optional
-``destinationDataHandling`` parameter. The parameter allows you to
-control what happens if the destination cluster is empty. Previous
-``mongosync`` versions return an error if the destination cluster is
-empty.
+.. program:: mongosync
 
-Definition
-----------
-
-
+Starting in ``mongosync-beta`` 1.8, you can use the
+``destinationDataHandling`` option. The option allows you to control
+what happens if the destination cluster is empty. Previous ``mongosync``
+versions return an error if the destination cluster is empty.
 
 Syntax
 ------
 
-Syntax to use the default ``destinationDataHandling`` behavior:
+To enable ``destinationDataHandling``:
 
 .. code-block:: shell
 
-   mongosync <other parameters> --enableFeatures destinationDataHandling
+   mongosync <options> --enableFeatures destinationDataHandling
 
-If the destination cluster is not empty, ``mongosync`` returns an error.
-Otherwise, ``mongosync`` continues with the operation.
+To see how to set the source and destination cluster options, and the
+list of the other ``mongosync`` options, see :ref:`c2c-mongosync`.
 
-For the full list of ``mongosync`` parameters, see :ref:`c2c-mongosync`.
-
-Syntax to set an optional value for ``destinationDataHandling``:
+To set a string for ``destinationDataHandling``:
 
 .. code-block:: shell
 
-   curl localhost:27182/api/v1/start -XPOST \
+   curl <host>:<port>/api/v1/start -XPOST \
    --data '
       {
-         "source": "cluster0",
-         "destination": "cluster1",
-         ...,
+         <... parameters ...>,
          "destinationDataHandling": <string>
       } '
 
-These are the possible values:
+Command Option
+--------------
 
-Command Parameter
------------------
+The following table shows the strings you can set the
+``destinationDataHandling`` option to:
 
-The following table shows the values you can set
-``destinationDataHandling`` to:
+.. option:: --destinationDataHandling <string>
 
-| Value                     | Behavior                                                                                                                                                                                                                                                                                                                                                                         |
-| ------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| _(omitted)_               | If the parameter is omitted, mongosync
-  does its default check to ensure that the destination cluster is
-  empty. If it is not empty, mongosync will error. Otherwise, mongosync
-  will proceed with replication.
-  |
-| `"dropAllData"`           | Mongosync will drop all destination
-  databases except for the `admin`, `config`, `local` and
-  `mongosync_reserved_for_internal_use` databases.
-  |
-| `"ignorePreExistingData"` | Mongosync will ignore any pre-existing
-  user databases and collections on the destination. Mongosync will
-  correctly detect any namespace conflicts upon initializing, but it is
-  generally up to the user to ensure that their destination namespaces
-  remain disjoint from the ones mongosync is replicating during the
-  later Collection Copy and Change Event Application phases. |
+   *Type*: string
+
+   Sets the cluster workload level for syncing data between the source and
+   destination clusters:
+
+   - ``"dropAllData"``, Mongosync will drop all destination databases
+     except for the `admin`, `config`, `local` and
+     `mongosync_reserved_for_internal_use` databases.
+   - ``"ignorePreExistingData"``, Mongosync will ignore any pre-existing
+     user databases and collections on the destination. Mongosync will
+     correctly detect any namespace conflicts upon initializing, but it
+     is generally up to the user to ensure that their destination
+     namespaces remain disjoint from the ones mongosync is replicating
+     during the later Collection Copy and Change Event Application
+     phases.
+   - Empty, mongosync does its default check to ensure that the
+     destination cluster is empty. If it is not empty, mongosync will
+     error. Otherwise, mongosync will proceed with replication.
 
 Examples
 --------
