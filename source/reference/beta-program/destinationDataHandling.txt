@@ -96,7 +96,7 @@ Steps
       string to ``"dropAllData"`` from ``localhost:27182``:
 
       .. code-block:: shell
-         :emphasize-lines: 7
+         :emphasize-lines: 6
 
          curl localhost:27182/api/v1/start -XPOST \
          --data '
