@@ -39,7 +39,11 @@ To set a string for ``destinationDataHandling``, use ``curl``:
          "destinationDataHandling": <string>
       } '
 
-The following table shows the string settings:
+Command Field
+-------------
+
+The following table shows the strings you can set for
+``"destinationDataHandling"`:
 
 .. list-table::
    :header-rows: 1
