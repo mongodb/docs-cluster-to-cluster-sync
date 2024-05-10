@@ -43,7 +43,7 @@ Command Field
 -------------
 
 The following table shows the strings you can set for
-``"destinationDataHandling"`:
+``"destinationDataHandling"``:
 
 .. list-table::
    :header-rows: 1
@@ -53,12 +53,14 @@ The following table shows the strings you can set for
      - Description
  
    * - ``"dropAllData"``
-     - Mongosync will drop all destination databases
-       except for the ``admin``, ``config``, ``local`` and
+     - ``mongosync`` drops existing databases on the destination cluster
+       except the ``admin``, ``config``, ``local``, and
        ``mongosync_reserved_for_internal_use`` databases.
+       ``"dropAllData"`` also requires you have the
+       :authrole:`clusterAdmin` or :authrole:`dbAdmin` role.
  
    * - ``"ignorePreExistingData"``
-     - Mongosync will ignore any pre-existing
+     - ``mongosync`` ignores pre-existing
        user databases and collections on the destination. Mongosync will
        correctly detect any namespace conflicts upon initializing, but it
        is generally up to the user to ensure that their destination
@@ -66,9 +68,9 @@ The following table shows the strings you can set for
        during the later Collection Copy and Change Event Application
        phases.
 
-If you omit the string, and the destination cluster is not empty,
-``mongosync`` returns an error. Otherwise, ``mongosync`` continues the
-sync.
+If you omit the ``"destinationDataHandling"`` string, and the
+destination cluster is not empty, ``mongosync`` returns an error.
+Otherwise, ``mongosync`` continues the sync operation.
 
 Examples
 --------
@@ -97,9 +99,6 @@ To drop any existing databases on the destination cluster, set the
          ...,
          "destinationDataHandling": "dropAllData"
       } '
-
-If you use ``"dropAllData"``, you need the :authrole:`clusterAdmin` or
-:authrole:`dbAdmin` role.
 
 Learn More
 ----------
