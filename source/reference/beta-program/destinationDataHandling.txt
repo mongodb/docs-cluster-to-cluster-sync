@@ -73,50 +73,33 @@ sync.
 Examples
 --------
 
-For example, if mongosync is started like this:
+The following example connects a source cluster running locally on port
+``27000`` with a destination cluster running on port ``35000``, and
+enables ``destinationDataHandling``:
 
 .. code-block:: shell
 
-   mongosync --port 27182 ... --enableFeatures destinationDataHandling
+   mongosync \
+      --cluster0 "mongodb://localhost:27000" \
+      --cluster1 "mongodb://localhost:35000" \
+      --enableFeatures destinationDataHandling
 
-It can optionally accept the ``"destinationDataHandling"`` parameter
-like this:
+To drop any existing databases on the destination cluster, set the
+``"destinationDataHandling"`` string to ``"dropAllData"``:
 
 .. code-block:: shell
 
-   curl localhost:27182/api/v1/start -XPOST \
+   curl localhost:27000/api/v1/start -XPOST \
    --data '
       {
          "source": "cluster0",
          "destination": "cluster1",
          ...,
-         "destinationDataHandling": "dropAllData"  // or "ignorePreExistingData"
+         "destinationDataHandling": "dropAllData"
       } '
 
-Mongosync will log messages like this if it was started with
-``"dropAllData"``:
-
-Dropping 3 pre-existing databases on the destination: [ sales, marketing, engineering ]
-Dropped 3 pre-existing databases on the destination: [ sales, marketing, engineering ]
-
-And will log messages like this if it was started with
-``"ignorePreExistingData"``, given no conflicts:
-
-Found 5 destination collections. Resolving them against source collections.
-Checking for conflicts between source namespaces and pre-existing destination namespaces.
-No conflicts detected between source namespaces and pre-existing destination namespaces.
-
-Or will return an error like this if there was a conflict:
-
-Found 3 conflicting namespaces between the source and the destination: {
-sales : { records, teams }, engineering : { teams } }
-
-When using the ``destinationDataHandling`` feature and starting
-mongosync with ``"dropAllData"``, the users provided to mongosync will
-require elevated roles. We need the ``clusterAdmin`` (or ``dbAdmin``)
-role on the destination when using this flag, because the
-``dropDatabase`` action is required to clean up preexisting data. This
-is not provided by the ``restore`` role.
+If you use ``"dropAllData"``, you need the :authrole:`clusterAdmin` or
+:authrole:`dbAdmin` role.
 
 Learn More
 ----------
