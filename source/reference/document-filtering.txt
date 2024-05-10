@@ -73,8 +73,8 @@ The ``documentFilter`` document in this example filters for documents where the
 .. code-block:: json
 
    "documentFilter" : {
-             field : "country",
-             matchValues: [ "Canada", "USA", "Mexico" ]
+             field : "city",
+             matchValues: [ "Los Angeles", "New York", "San Francisco" ]
          }
 
 Learn More 
