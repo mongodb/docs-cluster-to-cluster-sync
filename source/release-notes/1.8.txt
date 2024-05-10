@@ -23,6 +23,11 @@ Release Notes for mongosync 1.8
 
 Beta Features:
 
+Control Sync Behavior with destinationDataHandling Option
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. include:: /includes/destinationDataHandling-introduction.rst
+
 Synchronize Data Between Multiple Source Clusters Simultaneously
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
