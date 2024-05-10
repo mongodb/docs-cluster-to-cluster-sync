@@ -22,6 +22,6 @@
 
 - You can't use document filtering for:
 
-  - Time-series collections. 
-  - Queryable-encryption collections.
-  - Field-level encryption collections. 
+  - :ref:`Time-series collections <manual-timeseries-landing>`. 
+  - :ref:`Queryable-encryption collections <qe-manual-feature-qe>`.
+  - :ref:`Field-level encryption collections <manual-csfle-feature>`. 
