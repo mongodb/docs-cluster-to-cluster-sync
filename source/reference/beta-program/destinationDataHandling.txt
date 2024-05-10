@@ -20,7 +20,7 @@ cluster is empty.
 Syntax
 ------
 
-To enable the ``destinationDataHandling`` option, run:
+To enable the ``destinationDataHandling`` option in ``mongosync``:
 
 .. code-block:: shell
 
