@@ -39,20 +39,30 @@ To set a string for ``destinationDataHandling``, use ``curl``:
          "destinationDataHandling": <string>
       } '
 
-You can set the string to one of these:
+The following table shows the string settings:
 
-- ``"dropAllData"``, Mongosync will drop all destination databases
-   except for the ``admin``, ``config``, ``local`` and
-   ``mongosync_reserved_for_internal_use`` databases.
-- ``"ignorePreExistingData"``, Mongosync will ignore any pre-existing
-   user databases and collections on the destination. Mongosync will
-   correctly detect any namespace conflicts upon initializing, but it
-   is generally up to the user to ensure that their destination
-   namespaces remain disjoint from the ones mongosync is replicating
-   during the later Collection Copy and Change Event Application
-   phases.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 80
+ 
+   * - String
+     - Description
+ 
+   * - ``"dropAllData"``
+     - Mongosync will drop all destination databases
+       except for the ``admin``, ``config``, ``local`` and
+       ``mongosync_reserved_for_internal_use`` databases.
+ 
+   * - ``"ignorePreExistingData"``
+     - Mongosync will ignore any pre-existing
+       user databases and collections on the destination. Mongosync will
+       correctly detect any namespace conflicts upon initializing, but it
+       is generally up to the user to ensure that their destination
+       namespaces remain disjoint from the ones mongosync is replicating
+       during the later Collection Copy and Change Event Application
+       phases.
 
-If you omit the string and the destination cluster is not empty,
+If you omit the string, and the destination cluster is not empty,
 ``mongosync`` returns an error. Otherwise, ``mongosync`` continues the
 sync.
 
