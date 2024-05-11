@@ -60,8 +60,7 @@ The following table shows the strings you can set for
    * - ``"ignorePreExistingData"``
      - ``mongosync`` ignores existing databases on the destination
        cluster. Ensure your destination namespaces are different from
-       those ``mongosync`` replicates from the
-       source cluster.
+       those ``mongosync`` replicates from the source cluster.
 
 If you omit the ``"destinationDataHandling"`` string, and the
 destination cluster has user data, ``mongosync`` returns an error.
@@ -75,9 +74,9 @@ Steps
 
    .. step:: Connect source and destination clusters
 
-      The following example connects a source cluster running locally on
-      port ``27000`` with a destination cluster running on port
-      ``35000``, and enables ``destinationDataHandling``:
+      The following example connects a source cluster (``cluster0``)
+      with a destination cluster (``cluster1``), and enables
+      ``destinationDataHandling``:
 
       .. code-block:: shell
          :emphasize-lines: 4
