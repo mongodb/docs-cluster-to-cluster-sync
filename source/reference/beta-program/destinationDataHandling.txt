@@ -37,8 +37,8 @@ To set a string for ``destinationDataHandling``:
          "destinationDataHandling": <string>
       } '
 
-Command Field
--------------
+Command Option
+--------------
 
 The following table shows the strings you can set for
 ``"destinationDataHandling"``:
