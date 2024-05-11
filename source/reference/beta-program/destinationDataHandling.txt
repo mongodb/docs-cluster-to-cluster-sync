@@ -25,7 +25,7 @@ To enable the ``destinationDataHandling`` option in ``mongosync``:
 
 For the other ``mongosync`` options, see :ref:`c2c-mongosync`.
 
-To set a string for ``destinationDataHandling``:
+To set a ``"destinationDataHandling"`` string:
 
 .. code-block:: shell
    :emphasize-lines: 5
@@ -62,9 +62,9 @@ The following table shows the strings you can set for
        cluster. Ensure your destination namespaces are different from
        those ``mongosync`` replicates from the source cluster.
 
-If you omit the ``"destinationDataHandling"`` string, and the
-destination cluster has user data, ``mongosync`` returns an error.
-Otherwise, ``mongosync`` continues the sync operation.
+If you omit a ``"destinationDataHandling"`` string, and the destination
+cluster has user data, ``mongosync`` returns an error. Otherwise,
+``mongosync`` continues the sync operation.
 
 Steps
 -----
@@ -86,10 +86,10 @@ Steps
             --cluster1 "mongodb://localhost:35000" \
             --enableFeatures destinationDataHandling
 
-   .. step:: Set the destinationDataHandling string
+   .. step:: Set destinationDataHandling string
 
-      The following example sets the ``"destinationDataHandling"``
-      string to ``"dropAllData"`` from ``localhost:27182``:
+      The following example sets ``"destinationDataHandling"`` to
+      ``"dropAllData"``:
 
       .. code-block:: shell
          :emphasize-lines: 6
