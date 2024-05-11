@@ -59,12 +59,12 @@ The following table shows the strings you can set for
  
    * - ``"ignorePreExistingData"``
      - ``mongosync`` ignores existing databases on the destination
-       cluster. Ensure your destination
-       namespaces are different from those ``mongosync`` syncs from the
+       cluster. Ensure your destination namespaces are different from
+       those ``mongosync`` replicates from the
        source cluster.
 
 If you omit the ``"destinationDataHandling"`` string, and the
-destination cluster isn't empty, ``mongosync`` returns an error.
+destination cluster has user data, ``mongosync`` returns an error.
 Otherwise, ``mongosync`` continues the sync operation.
 
 Steps
