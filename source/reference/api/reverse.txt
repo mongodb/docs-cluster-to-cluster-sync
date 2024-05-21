@@ -28,7 +28,8 @@ For example:
   writes.
 
 In this scenario, you can use the ``reverse`` endpoint to sync writes
-from ``cluster1`` to ``cluster0``.
+from ``cluster1`` to ``cluster0``, including any writes that
+occurred after ``mongosync`` reached ``canWrite=true``. 
 
 Requirements
 ------------
@@ -44,7 +45,7 @@ To use the ``reverse`` endpoint:
   You cannot update these options after the sync starts.
 - ``mongosync`` must be in the ``COMMITTED`` state.
 - The destination cluster oplog must not roll over between 
-  ``mongosync`` reaching the ``COMMITTED`` state and receiving
+  ``mongosync`` reaching ``canWrite=true`` and receiving
   the ``/reverse`` request.
 - :ref:`index-type-unique` require proper formatting.  Collections with indexes
   initially created on MongoDB 4.2 may not have the proper formatting. 
