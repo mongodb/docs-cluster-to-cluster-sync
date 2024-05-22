@@ -12,13 +12,18 @@ Document Filtering
    :depth: 1
    :class: twocols
 
+.. important:: Cluster-to-Cluster Sync Beta Program
+
+   This feature is only available in ``mongosync-beta``. To learn more, see 
+   Cluster-to-Cluster Sync Beta Program.
+
 .. include:: /includes/document-filtering-intro.rst
 
 Syntax 
 ------
 
-The :ref:`c2c-api-start` API endpoint accepts a ``documentFilter`` parameter 
-with the following syntax:
+The :ref:`c2c-api-start` API endpoint accepts an optional ``documentFilter`` 
+parameter with the following syntax:
 
 .. code-block:: json
    :copyable: false

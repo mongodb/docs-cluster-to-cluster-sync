@@ -65,9 +65,6 @@ Behavior
 - The endpoint does not auto-refresh. To get updated status, call the
   ``progress`` endpoint again.
 
-- If you use a :ref:`document filter <c2c-document-filtering>`, the
-  ``estimatedTotalBytes`` is ``null``.
-
 Endpoint Protection
 ~~~~~~~~~~~~~~~~~~~
 

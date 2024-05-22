@@ -115,7 +115,12 @@ Request Body Parameters
    * - ``documentFilter``
      - document
      - Optional
-     - .. include:: /includes/document-filtering-intro.rst
+     - .. important::
+          
+          This feature is only available in the Cluster-to-Cluster Sync Beta 
+          Program.
+
+       .. include:: /includes/document-filtering-intro.rst
        
        To learn more, see :ref:`c2c-document-filtering`.
 
