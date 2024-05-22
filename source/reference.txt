@@ -16,7 +16,6 @@ Reference
    /reference/oplog-sizing
    /reference/cutover-process
    /reference/disaster-recovery
-   /reference/document-filtering
    /reference/limitations
    /reference/logging
    /reference/permissions
