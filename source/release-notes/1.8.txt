@@ -24,6 +24,10 @@ Release Notes for mongosync 1.8
 {+c2c-product-name+} Beta Program 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+.. include:: /includes/beta-program-intro.rst
+
+To learn more, see :ref:`c2c-beta-program`.
+
 New Features:
 
 

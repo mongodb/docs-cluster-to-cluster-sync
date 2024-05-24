@@ -12,9 +12,7 @@
    :depth: 2
    :class: singlecol
 
-Starting in version 1.8.0, introduces the {+c2c-product-name+} Beta Program. 
-With the beta program, you can use experimental features that aren't fully 
-ready for production with direct support and assistance from MongoDB.
+.. include:: /includes/beta-program-intro.rst
 
 To request access to the ``mongosync-beta`` binaries, please file a 
 `HELP ticket <https://jira.mongodb.org/browse/HELP>`_.
@@ -50,16 +48,16 @@ Beta Features
    * - Feature
      - Description
 
-   * - Change Collection Namespaces
+   * - :ref:`Change Collection Namespaces <c2c-beta-namespace-remapping>`
+     - # DESCRIPTION TBD 
+
+   * - :ref:`c2c-beta-document-filtering`
      - # DESCRIPTION TBD 
 
    * - :ref:`c2c-beta-orr`
      - # DESCRIPTION TBD 
-  
-   * - :ref:`c2c-beta-document-filtering`
-     - # DESCRIPTION TBD 
 
-   * - :ref:`c2c-beta-destination-data-handling`
+   * - :ref:`Handle Destination Data <c2c-beta-destination-data-handling>`
      - # DESCRIPTION TBD 
 
    * - :ref:`Sync Multiple Source Clusters <c2c-beta-many-to-one>`

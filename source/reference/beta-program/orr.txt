@@ -1,8 +1,8 @@
 .. _c2c-beta-orr:
 
-==========
-Enable ORR
-==========
+================================
+Enable Oplog Rollover Resilience
+================================
 
 .. default-domain:: mongodb
 
