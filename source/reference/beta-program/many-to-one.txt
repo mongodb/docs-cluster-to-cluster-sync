@@ -12,3 +12,4 @@ Many To One
    :depth: 2
    :class: singlecol
 
+.. include:: /includes/beta-feature.rst

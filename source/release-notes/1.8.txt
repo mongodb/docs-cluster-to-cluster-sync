@@ -21,7 +21,8 @@ Release Notes for mongosync 1.8
 
 **Upcoming**
 
-Beta Features: 
+{+c2c-product-name+} Beta Program 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 New Features:
 
