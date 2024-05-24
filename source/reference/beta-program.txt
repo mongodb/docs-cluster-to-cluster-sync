@@ -14,46 +14,60 @@
 
 Starting in 1.8.0, {+c2c-product-name+}...
 
-Terms of Use 
-------------
+To request access to the ``mongosync-beta`` binaries, please file a 
+`HELP ticket <https://jira.mongodb.org/browse/HELP>`_.
 
-MongoDB restricts access to beta features via the beta build. 
+Disclaimer
+----------
 
-Features available through the beta build and flags are not generally available. 
-All use of beta builds is at your own risk, even with MongoDB's help, guidance, 
-and support. Beta builds provide no stability guarantees; API, UI, options, and 
-behaviors may change or be removed at any time. Beta builds may contain bugs, 
-both major and minor, including bugs that result in data inconsistency. MongoDB 
-will never issue a Critical Advisory or any other form of notification about 
-defects in beta builds
+MongoDB restricts access to beta features via the beta build. Your use of the 
+beta is governed by the language specified in the 
+`Cloud Subscription Agreement <https://www.mongodb.com/cloud-subscription-agreement/november-2023>`__, 
+`Cloud Terms of Service <https://www.mongodb.com/legal/terms-and-conditions/cloud>`__, 
+or other applicable agreement between you and MongoDB with respect to your use 
+of ``mongosync``.
 
-MongoDB may pursue any of the following options for future development of beta 
-features:
+You understand that features are available through the beta build, and flags are 
+not generally available. All use of beta builds is at your own risk. Beta builds 
+provide no stability guarantees; API, UI, options, and behaviors may change or 
+be removed any time. MongoDB will never issue a Critical Advisory or notify 
+about defects in beta builds. 
 
-- Productionize a beta feature as generally available 
-- Continue offering the feature in the beta 
-- Remove or change a beta feature at any time
+You should follow feature usage guidance provided by Field and R&D without 
+deviation and should only use beta builds for one-time, human-supervised 
+migrations (e.g., not for continuous sync or automated migrations). Beta 
+capabilities are not intended for use to migrate production workloads.
 
-You agree to abide by all of the following requirements and restrictions on the 
-use of beta builds:
-
-- You agree to follow feature usage guidance provided by Field and R&D without 
-  deviation
-- You agree to use beta builds for one-time, human-supervised migrations only 
-  (e.g., not for continuous sync or automated migrations)
-- You agree to use beta capabilities to migrate production workloads only in 
-  situations where data loss is acceptable.
-- You agree to provide usage and product feedback on beta features through 
-  recurring calls to MongoDB professional services and product management.
 
 Beta Features
 -------------
+
+.. list-table::
+   :header-rows: 1
+
+   * - Feature
+     - Description
+
+   * - Change Collection Namespaces
+     - # DESCRIPTION TBD 
+
+   * - :ref:`c2c-beta-orr`
+     - # DESCRIPTION TBD 
+  
+   * - :ref:`c2c-beta-document-filtering`
+     - # DESCRIPTION TBD 
+
+   * - :ref:`c2c-beta-destination-data-handling`
+     - # DESCRIPTION TBD 
+
+   * - :ref:`Sync Multiple Source Clusters <c2c-beta-many-to-one>`
+     - # DESCRIPTION TBD
 
 .. toctree::
    :titlesonly:
 
    /reference/beta-program/orr 
-   /reference/beta-program/destinationDataHandling 
    /reference/beta-program/document-filtering
+   /reference/beta-program/destinationDataHandling 
    /reference/beta-program/many-to-one
-   /reference/beta/program/namespace-remapping
+   /reference/beta-program/namespace-remapping

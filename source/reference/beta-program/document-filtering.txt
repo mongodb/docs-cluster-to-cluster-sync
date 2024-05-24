@@ -1,8 +1,8 @@
 .. _c2c-beta-document-filtering:
 
-==================
-Document Filtering
-==================
+================
+Filter Documents
+================
 
 .. default-domain:: mongodb
 

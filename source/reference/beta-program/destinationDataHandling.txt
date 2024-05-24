@@ -1,4 +1,4 @@
-.. _c2c-beta-desination-data-handling:
+.. _c2c-beta-destination-data-handling:
 
 =====================================================
 destinationDataHandling = ignorePreExistingNamespaces
