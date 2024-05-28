@@ -85,5 +85,6 @@ The ``documentFilter`` document in this example filters for documents where the
 Learn More 
 ----------
 
+- :ref:`c2c-beta-program`
 - :ref:`c2c-api-start`
-- :ref:`c2c-limitations`
+
