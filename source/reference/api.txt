@@ -6,6 +6,26 @@
 ``mongosync`` API Endpoints
 ===========================
 
+:ref:`c2c-api-start`
+   Starts the synchronization between a source and destination cluster.
+
+:ref:`c2c-api-progress`
+   Returns either an updated status of the synchronization process or an error.
+
+:ref:`c2c-api-pause`
+   Pauses the current synchronization operation. 
+
+:ref:`c2c-api-resume`
+   Resumes a paused synchronization session based on data stored on the
+   destination cluster.
+
+:ref:`c2c-api-commit`
+   Finalizes the sync between the source cluster and the destination
+   cluster and stops continuous sync between clusters.
+
+:ref:`c2c-api-reverse`
+   Reverses the direction of a committed sync operation.
+
 .. toctree::
    :titlesonly: 
 
