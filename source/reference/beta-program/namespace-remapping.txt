@@ -11,3 +11,5 @@ Namespace Remapping
    :backlinks: none
    :depth: 2
    :class: singlecol
+
+.. include:: /includes/beta-feature.rst
