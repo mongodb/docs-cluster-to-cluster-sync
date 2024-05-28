@@ -43,10 +43,10 @@ To request access to the {+c2c-beta-program-short+} binaries, please file a
    migrations (e.g., not for continuous sync or automated migrations). Beta 
    capabilities are not intended for use to migrate production workloads.
 
-{+c2c-beta-program-short} {+version-dev+} Features
---------------------------------------------------
+{+c2c-beta-program-short+} {+version-dev+} Features
+---------------------------------------------------
 
-{+c2c-beta-program-short} {+version-dev+} includes the following features:
+{+c2c-beta-program-short+} {+version-dev+} includes the following features:
 
 .. list-table::
    :header-rows: 1
