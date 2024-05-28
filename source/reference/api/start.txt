@@ -117,8 +117,7 @@ Request Body Parameters
      - Optional
      - .. important::
           
-          This feature is only available in the Cluster-to-Cluster Sync Beta 
-          Program.
+          This feature is only available in the :ref:`c2c-beta-program`.
 
        .. include:: /includes/document-filtering-intro.rst
        
