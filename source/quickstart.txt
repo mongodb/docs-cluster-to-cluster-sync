@@ -195,6 +195,8 @@ Initialization Notes
   <c2c-api-start>` command. "cluster0" and "cluster1" are just labels,
   either cluster can be ``cluster0`` or ``cluster1``.
 
+.. _c2c-quickstart-synchronize:
+
 Synchronize Data Between Clusters
 ---------------------------------
 
@@ -305,3 +307,35 @@ Synchronization Notes
 
 - To estimate the size of ``oplog`` needed for initial synchronization,
   see :ref:`c2c-oplog-sizing`.
+
+.. _c2c-quickstart-many-with-one:
+
+Sync Multiple Source Clusters Simultaneously with a Destination Cluster
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. include:: /includes/many-with-one-cluster.rst
+
+For limitations, see :ref:`c2c-limitations_multiple_sync`.
+
+The following examples connect source clusters running on port ``27000``
+and ``27001`` with a destination cluster running on port ``35000``. The
+commands also set the optional :option:`--migrationName` string to
+describe the operations.
+
+.. code-block:: shell
+
+   ./bin/mongosync \
+         --cluster0 "mongodb://localhost:27000" \
+         --cluster1 "mongodb://localhost:35000" \
+         --migrationName "cluster_27000_to_cluster_35000_sync"
+
+   ./bin/mongosync \
+         --cluster0 "mongodb://localhost:27001" \
+         --cluster1 "mongodb://localhost:35000" \
+         --migrationName "cluster_27001_to_cluster_35000_sync"
+
+.. include:: /includes/many-with-one-cluster.rst
+
+To start the sync operation between the source clusters and the
+destination cluster, see the earlier section
+:ref:`c2c-quickstart-synchronize`.
