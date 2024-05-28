@@ -28,9 +28,9 @@ parameter with the following syntax:
 .. code-block:: json
    :copyable: false
 
-   {
-      field: <field-name>,
-      matchValues: [<field-values>] 
+   "documentFilter" : {
+      field : <field-name>,
+      matchValues : [<field-values>] 
    }
 
 Parameter Fields 
