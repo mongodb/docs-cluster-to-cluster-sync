@@ -1,8 +1,8 @@
 .. _c2c-beta-namespace-remapping:
 
-===================
-Namespace Remapping
-===================
+============================
+Change Collection Namespaces
+============================
 
 .. default-domain:: mongodb
 

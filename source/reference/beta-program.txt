@@ -56,26 +56,26 @@ To request access to the {+c2c-beta-program-short+} binaries, please file a
    * - Feature
      - Description
 
-   * - :ref:`Change Collection Namespaces <c2c-beta-namespace-remapping>`
+   * - :ref:`c2c-beta-namespace-remapping`
      - # DESCRIPTION TBD 
 
    * - :ref:`c2c-beta-document-filtering`
-     - # DESCRIPTION TBD 
+     - .. include:: /includes/document-filtering-intro.rst
 
    * - :ref:`c2c-beta-orr`
      - # DESCRIPTION TBD 
 
-   * - :ref:`Handle Destination Data <c2c-beta-destination-data-handling>`
+   * - :ref:`c2c-beta-destination-data-handling`
      - # DESCRIPTION TBD 
 
    * - :ref:`Sync Multiple Source Clusters <c2c-beta-many-to-one>`
-     - # DESCRIPTION TBD
+     - .. include:: /includes/many-with-one-cluster.rst
 
 .. toctree::
    :titlesonly:
 
-   /reference/beta-program/orr 
+   /reference/beta-program/namespace-remapping
    /reference/beta-program/document-filtering
    /reference/beta-program/destinationDataHandling 
+   /reference/beta-program/orr 
    /reference/beta-program/many-to-one
-   /reference/beta-program/namespace-remapping

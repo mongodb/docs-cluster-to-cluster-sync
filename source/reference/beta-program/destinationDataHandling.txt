@@ -1,8 +1,8 @@
 .. _c2c-beta-destination-data-handling:
 
-=====================================================
-destinationDataHandling = ignorePreExistingNamespaces
-=====================================================
+=======================
+Handle Destination Data
+=======================
 
 .. default-domain:: mongodb
 

@@ -28,7 +28,35 @@ Release Notes for mongosync 1.8
 
 To learn more, see :ref:`c2c-beta-program`.
 
+Document Filtering in mongosync
+```````````````````````````````
+
+.. include:: /includes/document-filtering-intro.rst
+
+To learn more, see :ref:`c2c-document-filtering`.
+
+Synchronize Data Between Multiple Source Clusters Simultaneously
+````````````````````````````````````````````````````````````````
+
+.. include:: /includes/many-with-one-cluster.rst
+
+Set a Migration Name
+````````````````````
+
+.. include:: /includes/migrationName-description.rst
+
+To set a migration name, see:
+
+- :setting:`migrationName` configuration file setting
+- :option:`--migrationName` command line option
+
+Other Notes
+~~~~~~~~~~~
+
 New Features:
+
+
+Issues Fixed:
 
 
 Minimum Supported Version

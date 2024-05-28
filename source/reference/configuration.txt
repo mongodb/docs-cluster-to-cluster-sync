@@ -111,6 +111,15 @@ Options
    To set the ``logPath`` setting from the command line, see the
    :option:`--logPath` option.
 
+.. setting:: migrationName
+
+   *Type*: string
+
+   .. include:: /includes/opts/migrationName.rst
+
+   To set the ``migrationName`` setting from the command line, see the
+   :option:`--migrationName` option.
+
 .. setting:: port
 
    *Type*: integer
