@@ -29,8 +29,8 @@ parameter with the following syntax:
    :copyable: false
 
    "documentFilter" : {
-      field : <field-name>,
-      matchValues : [<field-values>] 
+      "field" : <field-name>,
+      "matchValues" : [<field-values>] 
    }
 
 Parameter Fields 
