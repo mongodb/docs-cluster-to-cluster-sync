@@ -14,6 +14,9 @@
 
 .. include:: /includes/beta-program-intro.rst
 
+Get Started 
+-----------
+
 To request access to the ``mongosync-beta`` binaries, please file a 
 `HELP ticket <https://jira.mongodb.org/browse/HELP>`_.
 
