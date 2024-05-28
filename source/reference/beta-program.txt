@@ -1,0 +1,24 @@
+.. _c2c-beta-program:
+
+====================================
+{+c2c-product-name+} Beta Program
+====================================
+
+.. default-domain:: mongodb
+
+.. contents:: On this page
+   :local:
+   :backlinks: none
+   :depth: 2
+   :class: singlecol
+
+Content for this page will be created in DOCSP-38285.
+
+Beta Features
+-------------
+
+.. toctree::
+   :titlesonly:
+
+   /reference/beta-program/document-filtering
+   
