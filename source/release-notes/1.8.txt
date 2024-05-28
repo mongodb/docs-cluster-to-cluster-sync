@@ -33,7 +33,7 @@ Document Filtering in mongosync
 
 .. include:: /includes/document-filtering-intro.rst
 
-To learn more, see :ref:`c2c-document-filtering`.
+To learn more, see :ref:`c2c-beta-document-filtering`.
 
 Synchronize Data Between Multiple Source Clusters Simultaneously
 ````````````````````````````````````````````````````````````````

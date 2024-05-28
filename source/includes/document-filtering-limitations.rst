@@ -15,8 +15,8 @@
   with non-default collation, ``mongosync`` fails immediately.
 
 - If you call the :ref:`progress <c2c-api-progress>` API endpoint and use a 
-  :ref:`document filter <c2c-document-filtering>`, the ``estimatedTotalBytes`` 
-  response field returns ``null``.
+  :ref:`document filter <c2c-beta-document-filtering>`, the 
+  ``estimatedTotalBytes`` response field returns ``null``.
 
 - The destination cluster must not contain pre-existing data that matches the 
   filter.
