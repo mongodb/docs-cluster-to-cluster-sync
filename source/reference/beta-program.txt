@@ -1,8 +1,8 @@
 .. _c2c-beta-program:
 
-====================================
-{+c2c-product-name+} Beta Program
-====================================
+=========================
+{+c2c-full-beta-program+}
+=========================
 
 .. default-domain:: mongodb
 
@@ -14,10 +14,13 @@
 
 .. include:: /includes/beta-program-intro.rst
 
+Each ``mongosync`` release will have a corresponding {+c2c-beta-program-short+} 
+build that includes its own set of experimental features.
+
 Get Started 
 -----------
 
-To request access to the ``mongosync-beta`` binaries, please file a 
+To request access to the {+c2c-beta-program-short+} binaries, please file a 
 `HELP ticket <https://jira.mongodb.org/browse/HELP>`_.
 
 .. warning:: Disclaimer
@@ -40,8 +43,10 @@ To request access to the ``mongosync-beta`` binaries, please file a
    migrations (e.g., not for continuous sync or automated migrations). Beta 
    capabilities are not intended for use to migrate production workloads.
 
-Beta Features
--------------
+{+c2c-beta-program-short} {+version-dev+} Features
+--------------------------------------------------
+
+{+c2c-beta-program-short} {+version-dev+} includes the following features:
 
 .. list-table::
    :header-rows: 1

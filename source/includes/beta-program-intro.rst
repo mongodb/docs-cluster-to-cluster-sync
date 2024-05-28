@@ -1,3 +1,3 @@
-Starting in version 1.8.0, introduces the {+c2c-product-name+} Beta Program. 
-With the beta program, you can use experimental features that aren't fully 
-ready for production with direct support and assistance from MongoDB.
+Starting in version 1.8.0, {+c2c-product-name+} introduces the 
+{+c2c-full-beta-program+}. With {+c2c-beta-program-short+}, you can use 
+experimental features with direct support and assistance from MongoDB.
