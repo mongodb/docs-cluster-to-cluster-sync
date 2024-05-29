@@ -8,7 +8,7 @@ Reference
    The primary process used in {+c2c-product-name+}.
 
 :ref:`c2c-config`
-   configure :program:`mongosync` instances at startup using a
+   Configure :program:`mongosync` instances at startup using a
    configuration file.
 
 :ref:`c2c-api`
@@ -30,7 +30,7 @@ Reference
    <c2c-connecting>` between clusters.
    
 :ref:`c2c-limitations`
-`  Limitations of ``mongosync``. 
+   Limitations of ``mongosync``. 
 
 :ref:`c2c-logging`
    A running log of events, including entries such as the copying
@@ -38,14 +38,14 @@ Reference
 
 :ref:`c2c-permissions-and-roles`
    Required permissions on the source and destination clusters for the
-   user specified in the ``mongosync connection`` string. 
+   user specified in the ``mongosync`` connection string. 
 
 :ref:`c2c-telemetry`
    `Anonymous, aggregated usage data to improve MongoDB products. 
 
 :ref:`c2c-verification`
    Verify the successful transfer of your data before you switch your
-   application to using the destination cluster.
+   application to the destination cluster.
 
 :ref:`c2c-release-version-numbers`
    Understand the semantic versioning of {+c2c-product-name+}.
