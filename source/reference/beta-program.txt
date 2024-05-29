@@ -14,7 +14,7 @@
 
 .. include:: /includes/beta-program-intro.rst
 
-Each ``mongosync`` release will have a corresponding {+c2c-beta-program-short+} 
+Each ``mongosync`` release has a corresponding {+c2c-beta-program-short+} 
 build that includes its own set of experimental features.
 
 Get Started 
@@ -68,7 +68,7 @@ Beta Features
    * - :ref:`c2c-beta-destination-data-handling`
      - # DESCRIPTION TBD 
 
-   * - :ref:`Sync Multiple Source Clusters <c2c-beta-many-to-one>`
+   * - :ref:`c2c-beta-many-to-one`
      - .. include:: /includes/many-with-one-cluster.rst
 
 .. toctree::

@@ -1,8 +1,8 @@
 .. _c2c-beta-many-to-one:
 
-===========
-Many To One
-===========
+================================================================
+Synchronize Data Between Multiple Source Clusters Simultaneously
+================================================================
 
 .. default-domain:: mongodb
 
