@@ -1,5 +1,3 @@
-.. place holder for the reference section TOC
-
 =========
 Reference
 =========
@@ -41,7 +39,7 @@ Reference
    user specified in the ``mongosync`` connection string. 
 
 :ref:`c2c-telemetry`
-   `Anonymous, aggregated usage data to improve MongoDB products. 
+   Anonymous, aggregated usage data to improve MongoDB products. 
 
 :ref:`c2c-verification`
    Verify the successful transfer of your data before you switch your
