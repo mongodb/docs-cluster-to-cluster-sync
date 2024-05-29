@@ -1,10 +1,10 @@
 .. _c2c-api:
 
-.. default-domain:: mongodb
-
 ===========================
 ``mongosync`` API Endpoints
 ===========================
+
+.. default-domain:: mongodb
 
 :ref:`c2c-api-start`
    Starts the synchronization between a source and destination cluster.
