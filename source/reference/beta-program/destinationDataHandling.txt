@@ -1,8 +1,8 @@
 .. _c2c-beta-destination-data-handling:
 
-=======================
-Handle Destination Data
-=======================
+====================================
+Handle Pre-Existing Destination Data
+====================================
 
 .. default-domain:: mongodb
 
