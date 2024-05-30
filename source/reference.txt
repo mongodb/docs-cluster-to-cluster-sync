@@ -10,7 +10,7 @@ Reference
    configuration file.
 
 :ref:`c2c-api`
-   The API endpoints to interact with ``mongosync``. 
+   API endpoints to interact with ``mongosync``. 
 
 :ref:`c2c-states`
    States that ``mongosync`` enters depending on requests received. 
@@ -20,8 +20,8 @@ Reference
    include in sync. 
 
 :ref:`c2c-oplog-sizing`
-    Use :ref:`change streams <changeStreams>` to synchronize data
-    between source and destination clusters.
+   Increase the size of the oplog on the source cluster for large data
+   sets. 
 
 :ref:`c2c-failure-recovery`
    Prepare for disaster recovery using :ref:`connections
@@ -32,7 +32,7 @@ Reference
 
 :ref:`c2c-logging`
    A running log of events, including entries such as the copying
-   collections and indexes, change stream events, and API  calls. 
+   collections and indexes, change stream events, and API calls. 
 
 :ref:`c2c-permissions-and-roles`
    Required permissions on the source and destination clusters for the
