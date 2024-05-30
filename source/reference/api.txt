@@ -1,8 +1,8 @@
 .. _c2c-api:
 
-===========================
-``mongosync`` API Endpoints
-===========================
+=======================
+mongosync API Endpoints
+=======================
 
 .. default-domain:: mongodb
 
