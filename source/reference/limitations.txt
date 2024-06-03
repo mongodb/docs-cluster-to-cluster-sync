@@ -121,7 +121,8 @@ Sharded Clusters
 
 - You must stop the balancer on sharded source and destination clusters
   for the entire lifetime of a migration. To stop the balancer, run the
-  ``balancerStop`` command and wait for the command to complete.
+  :dbcommand:`balancerStop` command and wait for the command to
+  complete.
 
   .. note::
 
@@ -140,8 +141,6 @@ Sharded Clusters
   <limit-number-of-indexes-per-collection>` of 64.
 - ``mongosync`` only supports syncing sharded collections that have
   default :ref:`collation <collation>` settings.
-- The source cluster's balancer must be off from the time that mongosync
-  starts until it finishes the initial copying phase.
 
 Reversing
 ---------
