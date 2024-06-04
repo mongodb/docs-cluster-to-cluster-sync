@@ -24,7 +24,7 @@ mongosync API Endpoints
    the destination cluster and stops continuous sync between clusters.
 
 :ref:`c2c-api-reverse`
-   Reverses the direction of a committed sync operation.
+   Reverses the direction of a committed synchronization session.
 
 .. toctree::
    :titlesonly: 
