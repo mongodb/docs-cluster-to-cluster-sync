@@ -1,21 +1,18 @@
-.. _c2c-document-filtering:
+.. _c2c-beta-document-filtering:
 
-==================
-Document Filtering
-==================
+================
+Filter Documents
+================
 
 .. default-domain:: mongodb
 
 .. contents:: On this page
    :local:
    :backlinks: none
-   :depth: 1
-   :class: twocols
+   :depth: 2
+   :class: singlecol
 
-.. important:: Cluster-to-Cluster Sync Beta Program
-
-   This feature is only available in ``mongosync-beta``. To learn more, see 
-   :ref:`c2c-beta-program`.
+.. include:: /includes/beta-feature.rst
 
 .. include:: /includes/document-filtering-intro.rst
 
@@ -87,4 +84,3 @@ Learn More
 
 - :ref:`c2c-beta-program`
 - :ref:`c2c-api-start`
-
