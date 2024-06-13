@@ -26,8 +26,8 @@ To request access to the {+c2c-beta-program-short+} binaries, please file a
 When you first run the {+c2c-beta-program-short+} binary, you must accept the 
 following disclaimer:
 
-.. warning:: Disclaimer
-
+.. code-block:: shell
+  
    MongoDB restricts access to beta features via the beta build. Your use of the 
    beta is governed by the language specified in the 
    `Cloud Subscription Agreement <https://www.mongodb.com/cloud-subscription-agreement/november-2023>`_, 
@@ -45,6 +45,8 @@ following disclaimer:
    deviation and should only use beta builds for one-time, human-supervised 
    migrations (e.g., not for continuous sync or automated migrations). Beta 
    capabilities are not intended for use to migrate production workloads.
+
+   Do you want to continue? (y/n):
 
 Beta Features
 -------------
