@@ -27,6 +27,7 @@ When you first run the {+c2c-beta-program-short+} binary, you must accept the
 following disclaimer:
 
 .. code-block:: shell
+   :copyable: false
   
    MongoDB restricts access to beta features via the beta build. 
    Your use of the beta is governed by the language specified in 
