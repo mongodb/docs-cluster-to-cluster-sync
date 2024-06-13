@@ -23,6 +23,9 @@ Get Started
 To request access to the {+c2c-beta-program-short+} binaries, please file a 
 `HELP ticket <https://jira.mongodb.org/browse/HELP>`_.
 
+When you first run the {+c2c-beta-program-short+} binary, you must accept the 
+following disclaimer:
+
 .. warning:: Disclaimer
 
    MongoDB restricts access to beta features via the beta build. Your use of the 
