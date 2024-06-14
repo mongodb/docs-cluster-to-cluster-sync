@@ -33,7 +33,7 @@ following disclaimer:
    of the beta is governed by the language specified in the Cloud 
    Subscription Agreement, Cloud Terms of Service, or other applicable 
    agreement between you and MongoDB with respect to your use of 
-   ``mongosync``.
+   mongosync.
    
    You understand that features are available through the beta build, and 
    flags are not generally available. All use of beta builds is at your own 
