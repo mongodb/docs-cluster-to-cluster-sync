@@ -70,8 +70,10 @@ Beta Features
    * - :ref:`c2c-beta-namespace-remapping`
      - # DESCRIPTION TBD 
 
-   * - :ref:`c2c-beta-document-filtering`
+   * - Document Filtering
      - .. include:: /includes/document-filtering-intro.rst
+
+       To learn more, see :ref:`c2c-beta-document-filtering`
 
    * - :ref:`c2c-beta-orr`
      - # DESCRIPTION TBD 
@@ -79,8 +81,8 @@ Beta Features
    * - :ref:`c2c-beta-destination-data-handling`
      - .. include:: /includes/destinationDataHandling-introduction.rst
 
-   * - :ref:`c2c-beta-many-to-one`
-     - .. include:: /includes/many-with-one-cluster.rst
+   * - :ref:`c2c-beta-migration-name`
+     - .. include:: /includes/migrationName.rst
 
 .. toctree::
    :titlesonly:
@@ -89,4 +91,4 @@ Beta Features
    /reference/beta-program/document-filtering
    /reference/beta-program/orr 
    /reference/beta-program/destinationDataHandling 
-   /reference/beta-program/many-to-one
+   /reference/beta-program/migrationName

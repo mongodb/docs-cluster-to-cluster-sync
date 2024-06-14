@@ -122,6 +122,8 @@ Global Options
       
 .. option:: --migrationName <name>
 
+   .. include:: /includes/beta-feature.rst
+
    .. include:: /includes/opts/migrationName.rst
 
    To set the ``--migrationName`` option from a configuration file,
