@@ -17,14 +17,6 @@ Handle Destination Data with destinationDataHandling Option
 Syntax
 ------
 
-To enable the ``destinationDataHandling`` feature in ``mongosync``:
-
-.. code-block:: shell
-
-   mongosync <options> --enableFeatures destinationDataHandling
-
-For the other ``mongosync`` options, see :ref:`c2c-mongosync`.
-
 To set a ``"destinationDataHandling"`` option string:
 
 .. code-block:: shell
