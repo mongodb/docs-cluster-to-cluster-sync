@@ -42,13 +42,9 @@ The following table shows the strings you can set for
    * - String
      - Description
  
-   * - ``"dropAllData"``
-     - ``mongosync`` drops existing databases on the destination cluster
-       except the ``admin``, ``config``, ``local``, and
-       ``mongosync_reserved_for_internal_use`` databases.
-       ``"dropAllData"`` requires you have the
-       :authrole:`clusterAdmin` or :authrole:`dbAdmin` role.
- 
+   * - ``"requireEmptyDestination"``
+     - ``mongosync`` requires that any databases on the destination
+       cluster to be replicated are empty. This is the default behavior.
    * - ``"ignorePreExistingData"``
      - ``mongosync`` ignores existing databases on the destination
        cluster. Ensure your destination namespaces are different from
@@ -67,21 +63,18 @@ Steps
    .. step:: Connect source and destination clusters
 
       The following example connects a source cluster (``cluster0``)
-      with a destination cluster (``cluster1``), and enables
-      ``destinationDataHandling``:
+      with a destination cluster (``cluster1``):
 
       .. code-block:: shell
-         :emphasize-lines: 4
 
          mongosync \
             --cluster0 "mongodb://localhost:27000" \
-            --cluster1 "mongodb://localhost:35000" \
-            --enableFeatures destinationDataHandling
+            --cluster1 "mongodb://localhost:35000"
 
    .. step:: Set destinationDataHandling string
 
       The following example sets ``"destinationDataHandling"`` to
-      ``"dropAllData"``:
+      ``"ignorePreExistingData"``:
 
       .. code-block:: shell
          :emphasize-lines: 6
@@ -91,7 +84,7 @@ Steps
             {
                "source": "cluster0",
                "destination": "cluster1",
-               "destinationDataHandling": "dropAllData"
+               "destinationDataHandling": "ignorePreExistingData"
             } '
 
       The sync operation continues.
