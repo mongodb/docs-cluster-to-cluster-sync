@@ -43,7 +43,7 @@ The following table shows the strings you can set for
      - Description
  
    * - ``"requireEmptyDestination"``
-     - ``mongosync`` requires that any databases on the destination
+     - ``mongosync`` requires databases on the destination
        cluster that you want to replicate from the source
        cluster are empty. ``"requireEmptyDestination"`` is the default.
    * - ``"ignorePreExistingData"``
