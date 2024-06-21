@@ -55,38 +55,6 @@ General Limitations
 - ``mongosync`` must read from the source cluster using the 
   :readmode:`primary` read preference.
 
-.. _c2c-limitations_multiple_sync:
-
-Multiple Source Sync Limitations
---------------------------------
-
-.. include:: /includes/many-with-one-cluster.rst
-
-A namespace is a ``database_name.collection_name`` combination. You can
-only sync namespaces that don't conflict.
-
-For example, consider this scenario:
-
-- Two source clusters S1 and S2.
-- A destination cluster D.
-- Databases named ``inventory`` and ``sales`` on both S1 and S2.
-- Collections named ``products``, ``orderLines``, ``orderStatus``, and
-  ``orders`` on both S1 and S2.
-- You can sync both of these combinations:
-
-  - ``inventory.products`` and ``sales.orderStatus`` on S1 with D.
-  - ``inventory.orderLines`` and ``sales.orders`` on S2 with D.
-
-- You cannot sync both of these combinations because they conflict:
-
-  - ``inventory.products`` and ``inventory.orderLines`` on S1 with D. If
-    D is initially empty, you can sync S1 with D. ``inventory.products``
-    and ``inventory.orderLines`` are copied from S1 to D.
-  - ``inventory.products`` and ``inventory.orderLines`` on S2 with D.
-    You cannot sync S2 with D because ``inventory.products`` and
-    ``inventory.orderLines`` conflict with the namespaces already on D
-    from the scenario in the previous point.
-
 MongoDB Community Edition
 -------------------------
 
