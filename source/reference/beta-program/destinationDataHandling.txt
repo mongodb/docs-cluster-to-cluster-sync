@@ -95,3 +95,5 @@ Learn More
 
 - :ref:`c2c-quickstart`
 - :ref:`c2c-sharded-clusters`
+
+.. include:: /includes/beta-feature.rst

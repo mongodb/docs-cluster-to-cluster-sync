@@ -7,6 +7,7 @@ Reference
 .. toctree::
    :titlesonly:
 
+   /reference/beta-program
    /reference/mongosync
    /reference/configuration
    /reference/api
@@ -22,4 +23,3 @@ Reference
    /reference/verification
    /reference/versioning
    /reference/supported-server-version
-

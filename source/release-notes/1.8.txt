@@ -21,7 +21,19 @@ Release Notes for mongosync 1.8
 
 **Upcoming**
 
-Beta Features:
+{+c2c-product-name+} Beta Program 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. include:: /includes/beta-program-intro.rst
+
+To learn more, see :ref:`c2c-beta-program`.
+
+Document Filtering in mongosync
+```````````````````````````````
+
+.. include:: /includes/document-filtering-intro.rst
+
+To learn more, see :ref:`c2c-beta-document-filtering`.
 
 Handle Destination Data with destinationDataHandling Option
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -31,12 +43,12 @@ Handle Destination Data with destinationDataHandling Option
 For details, see :ref:`c2c-beta-destination-data-handling`.
 
 Synchronize Data Between Multiple Source Clusters Simultaneously
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+````````````````````````````````````````````````````````````````
 
 .. include:: /includes/many-with-one-cluster.rst
 
 Set a Migration Name
-~~~~~~~~~~~~~~~~~~~~
+````````````````````
 
 .. include:: /includes/migrationName-description.rst
 
@@ -44,6 +56,15 @@ To set a migration name, see:
 
 - :setting:`migrationName` configuration file setting
 - :option:`--migrationName` command line option
+
+Other Notes
+~~~~~~~~~~~
+
+New Features:
+
+
+Issues Fixed:
+
 
 Minimum Supported Version
 -------------------------
