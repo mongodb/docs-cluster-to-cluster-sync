@@ -77,7 +77,7 @@ Beta Features
      - # DESCRIPTION TBD 
 
    * - :ref:`c2c-beta-destination-data-handling`
-     - # DESCRIPTION TBD 
+     - .. include:: /includes/destinationDataHandling-introduction.rst
 
    * - :ref:`c2c-beta-many-to-one`
      - .. include:: /includes/many-with-one-cluster.rst
