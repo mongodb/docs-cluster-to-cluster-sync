@@ -87,6 +87,9 @@ For example, consider this scenario:
     ``inventory.orderLines`` conflict with the namespaces already on D
     from the scenario in the previous point.
 
+For views, you must ensure source view names don't conflict with
+existing destination view names.
+
 MongoDB Community Edition
 -------------------------
 
