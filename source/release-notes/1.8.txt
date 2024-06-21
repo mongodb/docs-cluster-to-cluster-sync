@@ -35,6 +35,13 @@ Document Filtering in mongosync
 
 To learn more, see :ref:`c2c-beta-document-filtering`.
 
+Handle Destination Data with destinationDataHandling Option
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. include:: /includes/destinationDataHandling-introduction.rst
+
+For details, see :ref:`c2c-beta-destination-data-handling`.
+
 Synchronize Data Between Multiple Source Clusters Simultaneously
 ````````````````````````````````````````````````````````````````
 
