@@ -42,20 +42,27 @@ Handle Destination Data with destinationDataHandling Option
 
 For details, see :ref:`c2c-beta-destination-data-handling`.
 
-Synchronize Data Between Multiple Source Clusters Simultaneously
-````````````````````````````````````````````````````````````````
-
-.. include:: /includes/many-with-one-cluster.rst
-
 Set a Migration Name
 ````````````````````
 
 .. include:: /includes/migrationName-description.rst
 
-To set a migration name, see:
+To learn more, see :ref:`c2c-beta-migration-name`.
 
-- :setting:`migrationName` configuration file setting
-- :option:`--migrationName` command line option
+Synchronize Data Between Multiple Source Clusters Simultaneously
+````````````````````````````````````````````````````````````````
+
+.. include:: /includes/many-with-one-cluster.rst
+
+To view an example, see :ref:`c2c-beta-many-with-one`.
+
+Use a Destination Cluster as a Source Cluster
+`````````````````````````````````````````````
+
+.. include:: /includes/abc-migration-intro.rst
+
+To view an example, see :ref:`c2c-beta-abc-migration`.
+
 
 Other Notes
 ~~~~~~~~~~~
