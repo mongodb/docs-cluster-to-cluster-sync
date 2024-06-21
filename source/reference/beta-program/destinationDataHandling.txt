@@ -12,6 +12,8 @@ Handle Destination Data with destinationDataHandling Option
    :depth: 2
    :class: singlecol
 
+.. include:: /includes/beta-feature.rst
+
 .. include:: /includes/destinationDataHandling-introduction.rst
 
 Syntax
