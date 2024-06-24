@@ -18,7 +18,7 @@ Oplog Rollover Resilience
 
 By applying changes earlier in the sync process, ``mongosync`` maintains a more 
 recent position in the :term:`oplog`. This adds resilience to long-running 
-operations, mitigates the risk of ``oplog`` rollover, and significantly lowers 
+operations, mitigates the risk of oplog rollover, and significantly lowers 
 the risk of restarting the sync.
 
 Syntax 
