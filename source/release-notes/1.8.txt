@@ -28,6 +28,13 @@ Release Notes for mongosync 1.8
 
 To learn more, see :ref:`c2c-beta-program`.
 
+A->B->C Migrations
+``````````````````
+
+.. include:: /includes/abc-migration-intro.rst
+
+To learn more, see :ref:`c2c-beta-abc-migration`.
+
 Document Filtering in mongosync
 ```````````````````````````````
 
@@ -55,13 +62,6 @@ Synchronize Data Between Multiple Source Clusters Simultaneously
 .. include:: /includes/many-to-one-cluster.rst
 
 To learn more, see :ref:`c2c-beta-many-to-one`.
-
-Use a Destination Cluster as a Source Cluster
-`````````````````````````````````````````````
-
-.. include:: /includes/abc-migration-intro.rst
-
-To learn more, see :ref:`c2c-beta-abc-migration`.
 
 
 Other Notes
