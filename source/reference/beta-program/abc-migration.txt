@@ -49,7 +49,7 @@ Example
 The following example performs two consecutive migrations that:
 
 #. Connects a source cluster running on port ``27000`` with a destination 
-cluster running on port ``27001``.
+   cluster running on port ``27001``.
 
 #. Uses the destination cluster running on port ``27001`` as a source cluster 
    for the second migration. 
