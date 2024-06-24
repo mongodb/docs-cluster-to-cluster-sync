@@ -70,13 +70,8 @@ Beta Features
    * - :ref:`c2c-beta-abc-migration`
      - .. include:: /includes/abc-migration-intro.rst
 
-   * - :ref:`c2c-beta-namespace-remapping`
-     - # DESCRIPTION TBD 
-
-   * - Document Filtering
+   * - :ref:`c2c-beta-document-filtering`
      - .. include:: /includes/document-filtering-intro.rst
-
-       To learn more, see :ref:`c2c-beta-document-filtering`
 
    * - :ref:`c2c-beta-orr`
      - # DESCRIPTION TBD 
@@ -86,6 +81,9 @@ Beta Features
 
    * - :ref:`c2c-beta-migration-name`
      - .. include:: /includes/migrationName.rst
+
+   * - :ref:`c2c-beta-namespace-remapping`
+     - # DESCRIPTION TBD 
 
    * - :ref:`c2c-beta-many-with-one`
      - .. include:: /includes/many-with-one-cluster.rst
