@@ -19,7 +19,7 @@ migrationName
 Syntax 
 ------
 
-To set the ``migrationName`` from the command line, use the ``--migrationName`` 
+To set ``migrationName`` from the command line, use the ``--migrationName`` 
 setting:
 
 .. code-block:: shell
@@ -29,7 +29,7 @@ setting:
          --cluster1 <connection-string>  \
          --migrationName <string>
 
-To set the ``migrationName`` in a :ref:`configuration file <c2c-config>`, 
+To set ``migrationName`` in a :ref:`configuration file <c2c-config>`, 
 include the ``migrationName`` option:
 
 .. code-block:: yaml

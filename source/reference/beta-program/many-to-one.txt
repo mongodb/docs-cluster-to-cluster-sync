@@ -1,8 +1,8 @@
 .. _c2c-beta-many-to-one:
 
-=========================================================================
-Sync Multiple Source Clusters Simultaneously with One Destination Cluster
-=========================================================================
+======================
+Many-to-One Migrations
+======================
 
 .. default-domain:: mongodb
 
@@ -69,7 +69,7 @@ Example
 -------
 
 The following example connects source clusters running on port ``27000``
-and ``27001`` with a destination cluster running on port ``35000``. The commands 
+and ``27001`` with a destination cluster running on port ``35000``. The command 
 also sets the :ref:`--migrationName <c2c-beta-migration-name>` option to 
 describe the operations and store migration metadata for each sync.
 

@@ -40,25 +40,26 @@ To start the sync operation between the source and destination clusters, see
 Behavior 
 --------
 
-If the first migration fails to finish committing before the second migration 
-starts, you might experience data loss.
+If the first migration (A->B) fails to finish :ref:`committing <c2c-api-commit>` 
+before the second migration (B->C) starts committing, you might experience data 
+loss.
 
 Example 
 -------
 
 The following example performs two consecutive migrations that:
 
-#. Connects a source cluster running on port ``27000`` with a destination 
+#. Connect a source cluster running on port ``27000`` with a destination 
    cluster running on port ``27001``.
 
-#. Uses the destination cluster running on port ``27001`` as a source cluster 
+#. Use the destination cluster running on port ``27001`` as a source cluster 
    for the second migration. 
 
-#. Connects the source cluster on port ``27001`` with a destination cluster 
+#. Connect the source cluster on port ``27001`` with a destination cluster 
    running on port ``27002``.
 
-The commands also sets the :ref:`--migrationName <c2c-beta-migration-name>` 
-option to describe the operations and store migration metadata for each 
+The command also sets :ref:`--migrationName <c2c-beta-migration-name>` 
+to describe the operations and store migration metadata for each 
 sync.
 
 .. code-block:: shell
