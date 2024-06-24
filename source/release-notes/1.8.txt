@@ -49,19 +49,19 @@ Handle Destination Data with destinationDataHandling Option
 
 For details, see :ref:`c2c-beta-destination-data-handling`.
 
-Set a Migration Name
-````````````````````
-
-.. include:: /includes/migrationName.rst
-
-To learn more, see :ref:`c2c-beta-migration-name`.
-
 Many-to-One Migrations
 ``````````````````````
 
 .. include:: /includes/many-to-one-cluster.rst
 
 To learn more, see :ref:`c2c-beta-many-to-one`.
+
+Set a Migration Name
+````````````````````
+
+.. include:: /includes/migrationName.rst
+
+To learn more, see :ref:`c2c-beta-migration-name`.
 
 Other Notes
 ~~~~~~~~~~~
