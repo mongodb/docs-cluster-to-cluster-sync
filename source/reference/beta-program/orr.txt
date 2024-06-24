@@ -1,8 +1,8 @@
 .. _c2c-beta-orr:
 
-================================
-Enable Oplog Rollover Resilience
-================================
+=========================
+Oplog Rollover Resilience
+=========================
 
 .. default-domain:: mongodb
 
@@ -13,3 +13,52 @@ Enable Oplog Rollover Resilience
    :class: singlecol
 
 .. include:: /includes/beta-feature.rst
+
+.. include:: /includes/orr-intro.rst
+
+By applying changes earlier in the sync process, ``mongosync`` maintains a more 
+recent position in the :term:`oplog`. This adds resilience to long-running 
+operations, mitigates the risk of ``oplog`` rollover, and significantly lowers 
+the risk of restarting the sync.
+
+Syntax 
+------
+
+To enable ORR, use the ``--oplogRolloverResilienceIntervalSeconds`` command line 
+option and specify the interval, in seconds, in which ``mongosync`` checks for 
+eligible change events. The default value is ``-1``, which disables the option.
+
+For example, to start ``mongosync`` with the 
+``oplogRolloverResilienceIntervalSeconds`` set to ``60``, run the following 
+command: 
+
+.. code-block:: json 
+   :copyable: false
+
+   ./bin/mongosync \
+         --cluster0 "mongodb://localhost:27000" \
+         --cluster1 "mongodb://localhost:27001" \
+         --oplogRolloverResilienceIntervalSeconds 60
+
+Behavior 
+--------
+
+ORR increases the resilience of ``mongosync`` to oplog rollover but does not 
+prevent rollover entirely.
+
+You might exceed the oplog window if you: 
+
+- Sync from a high write rate source cluster for an extended
+  period.
+- Pause sync for an extended period.
+
+To increase the size of the ``oplog`` on the source cluster, use
+:setting:`~replication.oplogSizeMB`. For more information, see
+:ref:`Change Oplog Size <tutorial-change-oplog-size>` and
+:ref:`Workloads that Might Requre a Large Oplog Size
+<replica-set-large-oplog-required>`.
+
+Learn More 
+----------
+
+- :ref:`c2c-beta-program`
