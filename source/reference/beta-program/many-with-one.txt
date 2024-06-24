@@ -51,10 +51,12 @@ For example, consider this scenario:
 - Collections named ``products``, ``orderLines``, ``orderStatus``, and 
   ``orders`` on both S1 and S2.
 - You can sync both of these combinations:
+  
   - ``inventory.products`` and ``sales.orderStatus`` on S1 with D.
   - ``inventory.orderLines`` and ``sales.orders`` on S2 with D.
-     
+
 - You cannot sync both of these combinations because they conflict:
+
   - ``inventory.products`` and ``inventory.orderLines`` on S1 with D. If D is 
     initially empty, you can sync S1 with D. ``inventory.products`` and 
     ``inventory.orderLines`` are copied from S1 to D.

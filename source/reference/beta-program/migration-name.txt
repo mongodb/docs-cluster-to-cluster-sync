@@ -63,4 +63,4 @@ Learn More
 ----------
 
 - :ref:`c2c-beta-program`
-- :ref:`c2c-beta-many-to-one`
+- :ref:`c2c-beta-many-with-one`
