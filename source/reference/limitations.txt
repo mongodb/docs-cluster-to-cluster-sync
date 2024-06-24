@@ -62,8 +62,8 @@ Multiple Source Sync Limitations
 
 .. include:: /includes/many-with-one-cluster.rst
 
-A namespace is a ``database_name.collection_name`` combination. You can
-only sync namespaces that don't conflict.
+A namespace is a ``database_name.collection_name`` combination.
+You can only sync namespaces that don't conflict.
 
 For example, consider this scenario:
 
@@ -86,6 +86,9 @@ For example, consider this scenario:
     You cannot sync S2 with D because ``inventory.products`` and
     ``inventory.orderLines`` conflict with the namespaces already on D
     from the scenario in the previous point.
+
+Additionally, for views, you must ensure source view names don't
+conflict with existing destination view names.
 
 MongoDB Community Edition
 -------------------------
