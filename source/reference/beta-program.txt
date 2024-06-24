@@ -85,8 +85,8 @@ Beta Features
    * - :ref:`c2c-beta-namespace-remapping`
      - # DESCRIPTION TBD 
 
-   * - :ref:`c2c-beta-many-with-one`
-     - .. include:: /includes/many-with-one-cluster.rst
+   * - :ref:`c2c-beta-many-to-one`
+     - .. include:: /includes/many-to-one-cluster.rst
 
 .. toctree::
    :titlesonly:
@@ -97,4 +97,4 @@ Beta Features
    /reference/beta-program/orr 
    /reference/beta-program/destinationDataHandling 
    /reference/beta-program/migration-name
-   /reference/beta-program/many-with-one
+   /reference/beta-program/many-to-one

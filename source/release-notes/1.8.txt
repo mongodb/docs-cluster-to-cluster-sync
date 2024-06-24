@@ -52,9 +52,9 @@ To learn more, see :ref:`c2c-beta-migration-name`.
 Synchronize Data Between Multiple Source Clusters Simultaneously
 ````````````````````````````````````````````````````````````````
 
-.. include:: /includes/many-with-one-cluster.rst
+.. include:: /includes/many-to-one-cluster.rst
 
-To learn more, see :ref:`c2c-beta-many-with-one`.
+To learn more, see :ref:`c2c-beta-many-to-one`.
 
 Use a Destination Cluster as a Source Cluster
 `````````````````````````````````````````````

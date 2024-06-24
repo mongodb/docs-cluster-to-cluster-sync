@@ -57,10 +57,9 @@ Examples
 To view examples that use ``migrationName``, see: 
 
 - :ref:`c2c-beta-abc-migration`
-- :ref:`c2c-beta-many-with-one`
+- :ref:`c2c-beta-many-to-one`
 
 Learn More 
 ----------
 
 - :ref:`c2c-beta-program`
-- :ref:`c2c-beta-many-with-one`

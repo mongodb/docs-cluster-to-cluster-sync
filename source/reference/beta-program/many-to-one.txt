@@ -1,4 +1,4 @@
-.. _c2c-beta-many-with-one:
+.. _c2c-beta-many-to-one:
 
 =========================================================================
 Sync Multiple Source Clusters Simultaneously with One Destination Cluster
@@ -14,7 +14,7 @@ Sync Multiple Source Clusters Simultaneously with One Destination Cluster
 
 .. include:: /includes/beta-feature.rst
 
-.. include:: /includes/many-with-one-cluster.rst
+.. include:: /includes/many-to-one-cluster.rst
 
 Syntax 
 ------
