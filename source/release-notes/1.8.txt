@@ -43,7 +43,7 @@ Document Filtering in mongosync
 To learn more, see :ref:`c2c-beta-document-filtering`.
 
 Handle Destination Data with destinationDataHandling Option
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+```````````````````````````````````````````````````````````
 
 .. include:: /includes/destinationDataHandling-introduction.rst
 
@@ -56,13 +56,12 @@ Set a Migration Name
 
 To learn more, see :ref:`c2c-beta-migration-name`.
 
-Synchronize Data Between Multiple Source Clusters Simultaneously
+Sync Multiple Source Clusters Simultaneously with One Destination Cluster
 ````````````````````````````````````````````````````````````````
 
 .. include:: /includes/many-to-one-cluster.rst
 
 To learn more, see :ref:`c2c-beta-many-to-one`.
-
 
 Other Notes
 ~~~~~~~~~~~
