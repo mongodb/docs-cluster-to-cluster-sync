@@ -54,17 +54,6 @@ following disclaimer:
    - `Cloud Subscription Agreement <https://www.mongodb.com/cloud-subscription-agreement/november-2023>`_
    - `Cloud Terms of Service <https://www.mongodb.com/legal/terms-and-conditions/cloud>`_
 
-Use Cases 
----------
-
-For example, you can use beta features to: 
-
-- :ref:`Sync multiple source clusters simultaneously with one destination 
-  cluster <c2c-beta-many-with-one>`.
-
-- :ref:`Use the Destination Cluster as the Source Cluster for a Second Sync 
-  Operation <c2c-beta-abc-migration>`.
-
 Beta Features
 -------------
 
@@ -77,6 +66,9 @@ Beta Features
 
    * - Feature
      - Description
+
+   * - :ref:`c2c-beta-abc-migration`
+     - .. include:: /includes/abc-migration-intro.rst
 
    * - :ref:`c2c-beta-namespace-remapping`
      - # DESCRIPTION TBD 
@@ -95,11 +87,16 @@ Beta Features
    * - :ref:`c2c-beta-migration-name`
      - .. include:: /includes/migrationName.rst
 
+   * - :ref:`c2c-beta-many-with-one`
+     - .. include:: /includes/many-with-one-cluster.rst
+
 .. toctree::
    :titlesonly:
 
+   /reference/beta-program/abc-migration
    /reference/beta-program/namespace-remapping
    /reference/beta-program/document-filtering
    /reference/beta-program/orr 
    /reference/beta-program/destinationDataHandling 
    /reference/beta-program/migration-name
+   /reference/beta-program/many-with-one

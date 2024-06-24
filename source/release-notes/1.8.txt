@@ -45,7 +45,7 @@ For details, see :ref:`c2c-beta-destination-data-handling`.
 Set a Migration Name
 ````````````````````
 
-.. include:: /includes/migrationName-description.rst
+.. include:: /includes/migrationName.rst
 
 To learn more, see :ref:`c2c-beta-migration-name`.
 
@@ -54,14 +54,14 @@ Synchronize Data Between Multiple Source Clusters Simultaneously
 
 .. include:: /includes/many-with-one-cluster.rst
 
-To view an example, see :ref:`c2c-beta-many-with-one`.
+To learn more, see :ref:`c2c-beta-many-with-one`.
 
 Use a Destination Cluster as a Source Cluster
 `````````````````````````````````````````````
 
 .. include:: /includes/abc-migration-intro.rst
 
-To view an example, see :ref:`c2c-beta-abc-migration`.
+To learn more, see :ref:`c2c-beta-abc-migration`.
 
 
 Other Notes

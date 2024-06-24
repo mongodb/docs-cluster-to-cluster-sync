@@ -54,86 +54,10 @@ database name is ``"mongosync_internal_cluster_27000_to_cluster_35000_sync"``.
 Examples
 --------
 
-.. _c2c-beta-abc-migration:
+To view examples that use ``migrationName``, see: 
 
-Use the Destination Cluster as the Source Cluster for a Second Sync Operation
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-.. include:: /includes/abc-migration-intro.rst
-
-To perform an A->B->C migration, run the following commands when starting 
-``mongosync``: 
-
-.. code-block:: shell
-
-   ./bin/mongosync \
-         --cluster0 <cluster-A-connection-string> \
-         --cluster1 <cluster-B-connection-string> \
-         --migrationName <string>
-
-   ./bin/mongosync \
-         --cluster0 <cluster-B-connection-string> \
-         --cluster1 <cluster-C-connection-string> \
-         --migrationName <string>
-
-.. warning:: 
-   
-   If the first migration fails to finish committing before the second migration 
-   starts, you might experience data loss.
-
-.. _c2c-beta-many-with-one:
-
-Sync Multiple Source Clusters Simultaneously with One Destination Cluster
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-.. include:: /includes/many-with-one-cluster.rst
-
-The following examples connect source clusters running on port ``27000``
-and ``27001`` with a destination cluster running on port ``35000``. The
-commands also set the optional ``--migrationName`` string to
-describe the operations.
-
-.. code-block:: shell
-
-   ./bin/mongosync \
-         --cluster0 "mongodb://localhost:27000" \
-         --cluster1 "mongodb://localhost:35000" \
-         --migrationName "cluster_27000_to_cluster_35000_sync"
-
-   ./bin/mongosync \
-         --cluster0 "mongodb://localhost:27001" \
-         --cluster1 "mongodb://localhost:35000" \
-         --migrationName "cluster_27001_to_cluster_35000_sync"
-
-To start the sync operation between the source clusters and the
-destination cluster, see :ref:`c2c-quickstart-synchronize`.
-
-.. warning:: 
-
-   A namespace is a ``database_name.collection_name`` combination. You can only 
-   sync namespaces that don't conflict. 
-   
-   For example, consider this scenario:
-   
-   - Two source clusters S1 and S2.
-   - A destination cluster D.
-   - Databases named ``inventory`` and ``sales`` on both S1 and S2.
-   - Collections named ``products``, ``orderLines``, ``orderStatus``, and
-     ``orders`` on both S1 and S2.
-   - You can sync both of these combinations:
-     
-     - ``inventory.products`` and ``sales.orderStatus`` on S1 with D.
-     - ``inventory.orderLines`` and ``sales.orders`` on S2 with D.
-     
-   - You cannot sync both of these combinations because they conflict:
-   
-     - ``inventory.products`` and ``inventory.orderLines`` on S1 with D. If D 
-       is initially empty, you can sync S1 with D. ``inventory.products`` and 
-       ``inventory.orderLines`` are copied from S1 to D.
-     - ``inventory.products`` and ``inventory.orderLines`` on S2 with D.
-       You cannot sync S2 with D because ``inventory.products`` and
-       ``inventory.orderLines`` conflict with the namespaces already on D
-       from the scenario in the previous point.
+- :ref:`c2c-beta-abc-migration`
+- :ref:`c2c-beta-many-with-one`
 
 Learn More 
 ----------
