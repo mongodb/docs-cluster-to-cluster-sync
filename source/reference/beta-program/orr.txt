@@ -26,13 +26,14 @@ Syntax
 
 To enable ORR, use the ``--oplogRolloverResilienceIntervalSeconds`` command line 
 option and specify the interval, in seconds, in which ``mongosync`` checks for 
-eligible change events. The default value is ``-1``, which disables the option.
+eligible change events in the oplog. The default value is ``-1``, which disables 
+the option.
 
 For example, to start ``mongosync`` with the 
-``oplogRolloverResilienceIntervalSeconds`` set to ``60``, run the following 
-command: 
+``oplogRolloverResilienceIntervalSeconds`` set to ``60`` seconds, run the 
+following command: 
 
-.. code-block:: json 
+.. code-block:: shell 
    :copyable: false
 
    ./bin/mongosync \
@@ -46,19 +47,19 @@ Behavior
 ORR increases the resilience of ``mongosync`` to oplog rollover but does not 
 prevent rollover entirely.
 
-You might exceed the oplog window if you: 
+You might exceed the :term:`oplog window` if you: 
 
 - Sync from a high write rate source cluster for an extended
   period.
 - Pause sync for an extended period.
 
-To increase the size of the ``oplog`` on the source cluster, use
-:setting:`~replication.oplogSizeMB`. For more information, see
-:ref:`Change Oplog Size <tutorial-change-oplog-size>` and
-:ref:`Workloads that Might Requre a Large Oplog Size
-<replica-set-large-oplog-required>`.
+To increase the size of the oplog on the source cluster, use
+:setting:`~replication.oplogSizeMB`. 
 
 Learn More 
 ----------
 
 - :ref:`c2c-beta-program`
+- :ref:`Change Oplog Size <tutorial-change-oplog-size>`
+- :ref:`Workloads that Might Requre a Large Oplog Size 
+  <replica-set-large-oplog-required>`
