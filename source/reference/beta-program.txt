@@ -73,14 +73,14 @@ Beta Features
    * - :ref:`c2c-beta-document-filtering`
      - .. include:: /includes/document-filtering-intro.rst
 
-   * - :ref:`c2c-beta-orr`
-     - # DESCRIPTION TBD 
-
    * - :ref:`c2c-beta-destination-data-handling`
      - .. include:: /includes/destinationDataHandling-introduction.rst
 
    * - :ref:`c2c-beta-many-to-one`
      - .. include:: /includes/many-with-one-cluster.rst
+
+   * - :ref:`c2c-beta-orr`
+     - .. include:: /includes/orr-intro.rst
 
 .. toctree::
    :titlesonly:
