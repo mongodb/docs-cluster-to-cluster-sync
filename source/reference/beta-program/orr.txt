@@ -14,7 +14,9 @@ Oplog Rollover Resilience
 
 .. include:: /includes/beta-feature.rst
 
-.. include:: /includes/orr-intro.rst
+Starting in {+c2c-beta-program-short+} 1.8, you can enable Oplog Rollover 
+Resilience (ORR). With ORR,  ``mongosync`` applies changes made on the source 
+cluster to the destination cluster during the initial sync.
 
 By applying changes earlier in the sync process, ``mongosync`` maintains a more 
 recent position in the :term:`oplog`. This adds resilience to long-running 
@@ -24,10 +26,9 @@ the risk of restarting the sync.
 Syntax 
 ------
 
-To enable ORR, use the ``--oplogRolloverResilienceIntervalSeconds`` command line 
-option and specify the interval, in seconds, in which ``mongosync`` checks for 
-eligible change events in the oplog. The default value is ``-1``, which disables 
-the option.
+To enable ORR, use ``--oplogRolloverResilienceIntervalSeconds``and specify the 
+interval, in seconds, in which ``mongosync`` checks for eligible change events 
+in the oplog. The default value is ``-1``, which disables the option.
 
 For example, to start ``mongosync`` with the 
 ``oplogRolloverResilienceIntervalSeconds`` set to ``60`` seconds, run the 
