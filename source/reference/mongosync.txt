@@ -119,13 +119,6 @@ Global Options
    .. note:: 
 
       .. include:: /includes/fact-log-rotation-usr1-signal
-      
-.. option:: --migrationName <name>
-
-   .. include:: /includes/opts/migrationName.rst
-
-   To set the ``--migrationName`` option from a configuration file,
-   see the :setting:`migrationName` setting.
 
 .. option:: --port
 

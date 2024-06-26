@@ -28,6 +28,13 @@ Release Notes for mongosync 1.8
 
 To learn more, see :ref:`c2c-beta-program`.
 
+A->B->C Migrations
+``````````````````
+
+.. include:: /includes/abc-migration-intro.rst
+
+To learn more, see :ref:`c2c-beta-abc-migration`.
+
 Document Filtering in mongosync
 ```````````````````````````````
 
@@ -36,26 +43,25 @@ Document Filtering in mongosync
 To learn more, see :ref:`c2c-beta-document-filtering`.
 
 Handle Destination Data with destinationDataHandling Option
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+```````````````````````````````````````````````````````````
 
 .. include:: /includes/destinationDataHandling-introduction.rst
 
 For details, see :ref:`c2c-beta-destination-data-handling`.
 
-Synchronize Data Between Multiple Source Clusters Simultaneously
-````````````````````````````````````````````````````````````````
-
-.. include:: /includes/many-with-one-cluster.rst
-
 Set a Migration Name
 ````````````````````
 
-.. include:: /includes/migrationName-description.rst
+.. include:: /includes/migrationName.rst
 
-To set a migration name, see:
+To learn more, see :ref:`c2c-beta-migration-name`.
 
-- :setting:`migrationName` configuration file setting
-- :option:`--migrationName` command line option
+Many-to-One Migrations
+``````````````````````
+
+.. include:: /includes/many-to-one-cluster.rst
+
+To learn more, see :ref:`c2c-beta-many-to-one`.
 
 Other Notes
 ~~~~~~~~~~~
