@@ -40,9 +40,17 @@ To start the sync operation between the source and destination clusters, see
 Behavior 
 --------
 
-If the first migration (A->B) fails to finish :ref:`committing <c2c-api-commit>` 
-before the second migration (B->C) starts committing, you might experience data 
-loss.
+The first migration (A->B) must finish :ref:`committing <c2c-api-commit>` 
+before the second migration (B->C) starts committing. 
+
+.. warning:: 
+
+   If the second migration starts committing before the first migration 
+   finishes, you may experience data loss.
+
+   Before you use any experimental {+c2c-beta-program-short} features, 
+   review the :ref:`{+c2c-full-beta-program+} Disclaimer 
+   <c2c-beta-program-disclaimer>`.
 
 Example 
 -------
