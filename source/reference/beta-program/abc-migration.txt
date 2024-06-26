@@ -48,7 +48,7 @@ before the second migration (B->C) starts committing.
    If the second migration starts committing before the first migration 
    finishes, you may experience data loss.
 
-   Before you use any experimental {+c2c-beta-program-short} features, 
+   Before you use any experimental {+c2c-beta-program-short+} features, 
    review the :ref:`{+c2c-full-beta-program+} Disclaimer 
    <c2c-beta-program-disclaimer>`.
 
