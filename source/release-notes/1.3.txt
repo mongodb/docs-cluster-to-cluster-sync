@@ -12,6 +12,20 @@ Release Notes for mongosync 1.3
    :depth: 2
    :class: singlecol
 
+.. warning:: Past Release Limitations
+
+   .. include:: /includes/critical-warning-text
+
+   .. list-table::
+
+      * - Issue
+        - Affected Versions
+      * - ``mongosync`` could miss copying documents during long running reads
+          in the initial copying phase if the source cluster is sharded and the
+          source balancer is enabled
+        - 1.1.0 - 1.7.1
+
+
 **Version 1.3 Released April 13, 2023**
 
 New Features
