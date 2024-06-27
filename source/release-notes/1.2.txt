@@ -22,10 +22,10 @@ Release Notes for mongosync 1.2
 
       * - Issue
         - Affected Versions
-      * - ``mongosync`` could miss copying documents during long running reads
-          in the initial copying phase if the source cluster is sharded and the
-          source balancer is enabled
+
+      * - .. include:: /includes/release-notes/REP-4274
         - 1.1.0 - 1.7.1
+
 
 
 **Version 1.2 Released February 16, 2023**
