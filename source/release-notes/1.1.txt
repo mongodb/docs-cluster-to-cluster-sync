@@ -17,6 +17,7 @@ Release Notes for mongosync 1.1
    .. include:: /includes/critical-warning-text
 
    .. list-table::
+      :header-rows: 1
 
       * - Issue
         - Affected Versions
