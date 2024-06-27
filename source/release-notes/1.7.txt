@@ -18,6 +18,7 @@ Release Notes for mongosync 1.7
 
    .. list-table::
       :header-rows: 1
+      :widths: 75 25
 
       * - Issue
         - Affected Versions
