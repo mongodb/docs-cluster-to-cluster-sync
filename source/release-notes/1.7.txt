@@ -29,6 +29,7 @@ Release Notes for mongosync 1.7
       * - .. include:: /includes/release-notes/REP-4274
         - 1.1.0 - 1.7.1
 
+
 Patch Releases
 --------------
 
