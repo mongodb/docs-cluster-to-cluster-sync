@@ -20,8 +20,8 @@ the source cluster to the destination cluster concurrently with initial sync.
 
 By applying changes earlier in the sync process, ``mongosync`` maintains a more 
 recent position in the :term:`oplog`. For source clusters with a high write 
-rate, ORR significantly lowers the risk of oplog rollover and reduces 
-the need to restart the sync.
+rate, ORR significantly lowers the risk of oplog rollover during initial sync 
+and reduces the need to restart the sync.
 
 Syntax 
 ------
@@ -45,8 +45,8 @@ following command:
 Behavior 
 --------
 
-ORR increases the resilience of ``mongosync`` to oplog rollover but does not 
-prevent rollover entirely.
+ORR increases the resilience of ``mongosync`` to oplog rollover during initial 
+sync but does not prevent rollover entirely.
 
 You might exceed the :term:`oplog window` if you: 
 
