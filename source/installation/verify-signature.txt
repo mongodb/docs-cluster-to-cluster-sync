@@ -1,0 +1,29 @@
+.. _c2c-verify-signature:
+
+======================================
+Verify Integrity of mongosync Packages
+======================================
+
+.. contents:: On this page
+   :local:
+   :backlinks: none
+   :depth: 1
+   :class: singlecol
+
+.. facet::
+   :name: genre
+   :values: tutorial
+
+The MongoDB release team digitally signs ``mongosync`` packages to
+certify that the plugin is a valid and unaltered MongoDB release. You
+can use the digital signature to validate the package and ensure that it
+is a trusted installation.
+
+Before you Begin
+----------------
+
+If you don't have ``mongosync`` installed, download the ``mongosync``
+binary from the {+mdb-download-center+}.
+
+Steps
+-----
