@@ -532,3 +532,6 @@ verifier modes:
    * - ``none``
      - Disables the Embedded Verifier.
 
+The ``/start`` endpoint returns an error if you enable verification checks that
+are not supported by the source or destination cluster.
+
