@@ -248,7 +248,7 @@ documentation provides details on using the following endpoints:
      - Reverses the direction of a committed sync operation.
 
 Finalize Cutover Process
--------------
+------------------------
 
 You can finalize a migration and transfer your application
 workload from the source to the destination cluster using the

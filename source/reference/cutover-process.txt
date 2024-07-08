@@ -36,13 +36,13 @@ Steps
       Ensure that the ``mongosync`` process  status indicates the 
       following values:  
 
+      - ``canCommit`` is ``true``. 
+
       - ``lagTimeSeconds`` is small (near ``0``). 
    
         If ``lagTimeSeconds`` isn't close to ``0`` when the cutover
         starts, cutover might take a long time. 
   
-      - ``canCommit`` is ``true``. 
-
       The following example returns the status of the synchronization process.
 
       Request
@@ -103,10 +103,9 @@ Steps
 
       .. note:: 
 
-         Ensure that the ``mongosync`` process response for the
-         ``commit`` request indicates that the ``mongosync`` state is
-         ``COMMITTING`` or ``COMMITTED``, which is the correct
-         ``mongosync`` state when you send a ``commit`` request.
+         After you submit a ``commit`` request, call the ``progress`` endpoint
+         to ensure that the ``mongosync`` state is ``COMMITTING`` or 
+         ``COMMITTED``.
 
    .. step:: Wait until you can perform writes on the destination cluster.
 
@@ -123,10 +122,31 @@ Steps
       Response
       ~~~~~~~~
 
-      .. literalinclude:: /includes/api/responses/progress.json
-         :language: json
-         :emphasize-lines: 5
+      .. code-block:: json
+         :emphasize-lines: 6
          :copyable: false
+
+         {
+            "progress":
+               {
+                  "state":"COMMITTED",
+                  "canCommit":true,
+                  "canWrite":true,
+                  "info":"change event application",
+                  "lagTimeSeconds":0,
+                  "collectionCopy":
+                     {
+                        "estimatedTotalBytes":694,
+                        "estimatedCopiedBytes":694
+                     },
+                  "directionMapping":
+                     {
+                        "Source":"cluster0: localhost:27017",
+                        "Destination":"cluster1: localhost:27018"
+                     }
+               },
+            "success": true
+         }
 
 
    .. step:: Verify data transfer.
