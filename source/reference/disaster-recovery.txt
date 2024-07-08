@@ -153,3 +153,22 @@ To enable writes, update :dbcommand:`setUserWriteBlockMode`:
        }
    )
 
+.. _c2c-dr-capped-collections:
+
+Capped Collections
+------------------
+
+During synchronization, capped collections are set to the maximum
+allowable size. To set your required maximum size, use the ``collMod``
+command. For details, see :ref:`resize-capped-collection`.
+
+.. example:: 
+
+   .. code-block:: javascript
+      :emphasize-lines: 3
+
+      db.runCommand( {
+        collMod: "<collection_name>",
+        cappedSize: <max_size_in_bytes>,
+        cappedMax: <max_number_of_documents_in_collection>
+      } )
