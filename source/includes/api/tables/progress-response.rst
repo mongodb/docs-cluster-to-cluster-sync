@@ -142,11 +142,30 @@
      - document
      - Describes the verification process on the source and destination clusters.
 
+       .. versionadded:: 1.9
+
    * - ``verification.source``
      - document
      - Describes the verification process on the source cluster.
+
+       .. versionadded:: 1.9
+
+   * - ``verification.source`` ``.lagTimeSeconds``
+     - integer
+     - Time difference in seconds since the last verification check performed
+       on the source cluster.
+
+       .. versionadded:: 1.9
 
    * - ``verification.destination``
      - document
      - Describes the verification process on the destination cluster.
 
+       .. versionadded:: 1.9
+
+   * - ``verification.destination`` ``.lagTimeSeconds``
+     - integer
+     - Time difference in seconds since the last verification check performed
+       on the source cluster.
+
+       .. versionadded:: 1.9
