@@ -147,10 +147,27 @@
 
    * - ``verification.source`` ``.lagTimeSeconds``
      - integer
-     - Time difference in seconds since the last verification check performed
+     - Time in seconds since the last verification check performed
        on the source cluster.
 
        .. versionadded:: 1.8
+
+   * - ``verification.source`` ``.phase``
+     - string
+     - Current phase on verification checks run against the source cluster.
+
+       .. versionadded:: 1.8
+
+  * - ``verification.source`` ``.scannedCollectionCount``
+    - integer
+    - Number of collections scanned for verification on the source cluster.
+
+      .. versionadded:: 1.8
+
+  * - ``verification.source`` ``.totalCollectionCount``
+    - integer
+    - Number of collections to perform verification checks against on the
+      source cluster.
 
    * - ``verification.destination``
      - document
@@ -160,7 +177,25 @@
 
    * - ``verification.destination`` ``.lagTimeSeconds``
      - integer
-     - Time difference in seconds since the last verification check performed
+     - Time in seconds since the last verification check performed
        on the source cluster.
 
        .. versionadded:: 1.8
+
+   * - ``verification.destination`` ``.phase``
+     - string
+     - Current phase of verification checks being run against the destination
+       cluster.
+
+       .. versionadded:: 1.8
+
+  * - ``verification.destination`` ``.scannedCollectionCount``
+    - integer
+    - Number of collections scanned for verification on the destination cluster.
+
+      .. versionadded:: 1.8
+
+  * - ``verification.destination`` ``.totalCollectionCount``
+    - integer
+    - Number of collections to perform verification checks against on the
+      destination cluster.
