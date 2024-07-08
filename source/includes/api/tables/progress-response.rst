@@ -138,3 +138,15 @@
 
        .. versionadded:: 1.3
 
+   * - ``verification``
+     - document
+     - Describes the verification process on the source and destination clusters.
+
+   * - ``verification.source``
+     - document
+     - Describes the verification process on the source cluster.
+
+   * - ``verification.destination``
+     - document
+     - Describes the verification process on the destination cluster.
+
