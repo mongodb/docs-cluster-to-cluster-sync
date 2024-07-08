@@ -169,3 +169,16 @@ System Collections
 ------------------
 
 .. include:: /includes/collections/behavior-system-collections.rst
+
+Embedded Verifier
+-----------------
+
+Starting in 1.8, ``mongosync`` uses an embedded verifier to confirm the
+successful sync of collections from the source cluster to the destination
+cluster.
+
+The Embedded Verifier has the following limitations:
+
+- The Embedded Verifier stores its state in memory, which results in a significant
+  memory overhead.  The Embedded Verifier process requires an additional 1GB for
+  every 20 million documents in the sync.
