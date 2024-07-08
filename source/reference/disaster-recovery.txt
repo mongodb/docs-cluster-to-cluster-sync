@@ -15,10 +15,11 @@ Use ``mongosync`` for Disaster Recovery
 Setting up {+c2c-product-name+} to prepare for disaster recovery follows the 
 same procedure as other :ref:`connections <c2c-connecting>` between clusters.
 Synchronization keeps the destination cluster up to date with the source
-cluster using :term:`eventual consistency`. If the source cluster 
-fails or becomes otherwise unavailable, the destination cluster can replace it 
-as the primary cluster if your application can tolerate potentially stale and 
-inconsistent data.
+cluster using :term:`eventual consistency`. This means that until the migration 
+commits, the destination cluster might represent a stale and inconsistent 
+version of the source cluster. If the source cluster fails or becomes otherwise 
+unavailable, the destination cluster can replace it as the primary cluster if 
+your application can tolerate potentially stale data.
 
 :program:`mongosync` temporarily alters some collection characteristics
 during synchronization. The original values are restored during the
