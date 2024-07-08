@@ -177,9 +177,9 @@ Starting in 1.8, ``mongosync`` uses an embedded verifier to confirm the
 successful sync of collections from the source cluster to the destination
 cluster.
 
-The Embedded Verifier has the following limitations:
+The verifier has the following limitations:
 
-- ``mongosync`` stores the Embedded Verifier state in memory, which can result
+- ``mongosync`` stores the verifier state in memory, which can result
   in a significant memory overhead.  In order to run verification checks,
   ``mongosync`` must have an additional 1GB for every 20 million documents included
   in the sync.
@@ -189,3 +189,14 @@ The Embedded Verifier has the following limitations:
   the ``mongosync`` process and restarting it), the verification process
   starts over from the beginning.
 
+- The verifier is not compatible with namespace filtering or reverse sync.  The
+  :ref:`/start <c2c-api-start>` endpoint returns an error if these features and
+  the verifier are both enables.
+
+- The verifier does not verify indexes or collection metadata.
+
+- The verifier deos not perform verification checks on the following collections:
+  - Capped collections
+  - Collections with TTL indexes
+  - Collections with non-default collation
+  - Views
