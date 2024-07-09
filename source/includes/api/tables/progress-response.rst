@@ -93,7 +93,6 @@
        and divide the result by the value of the ``estimatedTotalBytes`` field
        . Then, multiply the result by 100.
 
-
        The value of ``estimatedCopiedBytes`` may be larger than the
        value of the ``estimatedTotalBytes`` due to retried operations.
        A comparison of ``estimatedTotalBytes`` and

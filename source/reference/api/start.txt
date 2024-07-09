@@ -92,7 +92,7 @@ Request Body Parameters
          any indexes created during migration on the source cluster.
 
        - ``never`` causes ``mongosync`` to skip building unnecessary indexes 
-         during sync.  This can improve migration performance, especially with 
+         during sync. This can improve migration performance, especially with 
          index heavy workloads.
 
          :red:`WARNING:` Do **not** manually build indexes while ``mongosync`` is 
@@ -177,7 +177,7 @@ Request Body Parameters
        reversed. 
 
        To reverse sync, the ``enableUserWriteBlocking`` field must be set 
-       to ``true``.      
+       to ``true``.     
 
        The ``/start`` command returns an error when
        the reverse sync is enabled and ``verificationMode`` is
@@ -246,7 +246,7 @@ The ``sharding`` option has the following parameters:
    * - ``createSupportingIndexes``
      - boolean
      - Optional. Sets whether sync creates a supporting index 
-       for the shard key, if none exists.  Defaults to ``false``.
+       for the shard key, if none exists. Defaults to ``false``.
 
    * - ``shardingEntries``
      - array of documents
@@ -254,7 +254,7 @@ The ``sharding`` option has the following parameters:
        during sync.
 
        Collections not included in this array sync to unsharded 
-       collections on the destination cluster.  If set with an empty
+       collections on the destination cluster. If set with an empty
        array, no collections are sharded.
 
    * - | ``shardingEntries``
@@ -281,7 +281,7 @@ The ``sharding`` option has the following parameters:
        For more information, see :ref:`shard-key`.
 
 ``mongosync`` throws an error if the ``sharding`` option is not set when
-syncing from a replica set to a sharded cluster.  ``mongosync`` also
+syncing from a replica set to a sharded cluster. ``mongosync`` also
 throws an error if the ``sharding`` option is set with any other
 configuration.
 
@@ -382,7 +382,7 @@ Pre-Split Chunks
 .. versionadded:: 1.1
 
 When ``mongosync`` syncs to a sharded cluster, it pre-splits chunks for
-sharded collections on the destination cluster.  This is supported in the
+sharded collections on the destination cluster. This is supported in the
 following configurations:
 
 * Sync from a replica set to a sharded cluster.
@@ -409,7 +409,7 @@ Supporting Indexes
 .. versionadded:: 1.1
 
 ``mongosync`` syncs indexes from the source cluster to the destination
-cluster.  But, when syncing from a replica set to a sharded cluster,
+cluster. But, when syncing from a replica set to a sharded cluster,
 ``mongosync`` may require an additional index to support the shard key,
 which may not exist on the source cluster.
 
@@ -467,7 +467,7 @@ to copy the collection can block the collection from sharding on the destination
 
 To check whether it is safe to rename collections, call the 
 :ref:`c2c-api-progress` endpoint and check the value of the 
-``collectionCopy.estimatedCopiedBytes`` field in the return document.  
+``collectionCopy.estimatedCopiedBytes`` field in the return document. 
 
 * A value of 0 indicates that ``mongosync`` has not started to copy the
   collection.
@@ -486,7 +486,7 @@ Required Indexes
 ~~~~~~~~~~~~~~~~
 
 When you call ``/start`` with the ``buildIndexes`` option set to ``never``,
-``mongosync`` skips building unnecessary indexes.  
+``mongosync`` skips building unnecessary indexes.
 
 Indexes that are always built include:
 
