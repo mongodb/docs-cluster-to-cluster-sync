@@ -62,11 +62,11 @@ Steps
       To check the status of the sync, use the :ref:`/progress <c2c-api-progress>`
       endpoint:
 
-     .. code-block:: sh
+      .. code-block:: sh
 
-        curl localhost:27182/api/v1/progress -XGET
+         curl localhost:27182/api/v1/progress -XGET
 
-     Check the ``verification`` response field for information on the status of 
-     the embedded verifier.
+      Check the ``verification`` response field for information on the status of 
+      the embedded verifier.
 
 
