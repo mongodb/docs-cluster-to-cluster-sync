@@ -1,5 +1,5 @@
 
-The verifier has the following limitations:
+The embedded verifier has the following limitations:
 
 - ``mongosync`` stores the verifier state in memory, which can result
   in a significant memory overhead.
@@ -31,6 +31,6 @@ The verifier has the following limitations:
   - Many-to-one and A→B→C migrations
   - Document filtering
   - Namespace remapping
-  - destinationDataHandling = ignorePrexistingNamespaces
+  - Ignore preexisting namespaces
   - Source clusters that run MongoDB 4.4 and earlier
   - Destination clusters that run MongoDB 5.0 and earlier
