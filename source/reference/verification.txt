@@ -58,6 +58,8 @@ Starting in 1.8, ``mongosync`` includes an embedded verifier, which runs a serie
 of verification checks on the source and destination clusters to ensure a successful
 sync.
 
+For more information, see :ref:`c2c-embedded-verifier`.
+
 .. _c2c-verify-with-doc-counts:
 
 Document Counts
