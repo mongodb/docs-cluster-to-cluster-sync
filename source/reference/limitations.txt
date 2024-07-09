@@ -26,7 +26,7 @@ General Limitations
 
 .. note::
 
-  For information on MongoDB server compatility, see
+  For information on MongoDB server compatibility, see
   :ref:`c2c-server-version-compatibility`.
 
 - The destination cluster must be empty.
@@ -173,7 +173,7 @@ System Collections
 Embedded Verifier
 -----------------
 
-Starting in 1.8, ``mongosync`` uses an embedded verifier to confirm the
+Starting in 1.8, ``mongosync`` can use an embedded verifier to confirm the
 successful sync of collections from the source cluster to the destination
 cluster.
 

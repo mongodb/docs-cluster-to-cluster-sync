@@ -132,6 +132,7 @@
 
        - When ``mongosync`` starts up, this field returns ``null`` until
          ``mongosync`` identifies the coordinator.
+
    * - ``verification``
      - document
      - Describes the verification process on the source and destination clusters.

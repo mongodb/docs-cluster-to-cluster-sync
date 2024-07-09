@@ -526,7 +526,7 @@ verifier modes:
    * - Mode
      - Description
    * - ``full``
-     - Peforms all available verification checks.
+     - Performs all available verification checks.
 
        This is the default mode.
    * - ``none``
