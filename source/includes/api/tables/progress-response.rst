@@ -93,7 +93,7 @@
          value of the ``estimatedTotalBytes`` due to retried operations.
          A comparison of ``estimatedTotalBytes`` and
          ``estimatedCopiedBytes`` is not an accurate indicator of
-         migration progress.  
+         migration progress.
 
    * - ``directionMapping``
      - object
