@@ -158,16 +158,16 @@
 
        .. versionadded:: 1.8
 
-  * - ``verification.source`` ``.scannedCollectionCount``
-    - integer
-    - Number of collections scanned for verification on the source cluster.
+   * - ``verification.source`` ``.scannedCollectionCount``
+     - integer
+     - Number of collections scanned for verification on the source cluster.
 
-      .. versionadded:: 1.8
+       .. versionadded:: 1.8
 
-  * - ``verification.source`` ``.totalCollectionCount``
-    - integer
-    - Number of collections to perform verification checks against on the
-      source cluster.
+   * - ``verification.source`` ``.totalCollectionCount``
+     - integer
+     - Number of collections to perform verification checks against on the
+       source cluster.
 
    * - ``verification.destination``
      - document
@@ -189,13 +189,14 @@
 
        .. versionadded:: 1.8
 
-  * - ``verification.destination`` ``.scannedCollectionCount``
-    - integer
-    - Number of collections scanned for verification on the destination cluster.
+   * - ``verification.destination`` ``.scannedCollectionCount``
+     - integer
+     - Number of collections scanned for verification on the destination cluster.
 
-      .. versionadded:: 1.8
+       .. versionadded:: 1.8
 
-  * - ``verification.destination`` ``.totalCollectionCount``
-    - integer
-    - Number of collections to perform verification checks against on the
-      destination cluster.
+   * - ``verification.destination`` ``.totalCollectionCount``
+     - integer
+     - Number of collections to perform verification checks against on the
+       destination cluster.
+
