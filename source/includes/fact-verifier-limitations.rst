@@ -12,8 +12,7 @@ The embedded verifier has the following limitations:
 
 - The verifier is not compatible with :ref:`namespace filtering <c2c-filtered-sync>`
   or :ref:`reverse sync <c2c-api-reverse>`. The :ref:`/start <c2c-api-start>`
-  endpoint returns an error if these features and
-  the verifier are both enables.
+  endpoint returns an error if you enable these features and the the verifier.
 
 - The verifier does not verify sync on indexes or collection metadata.
 
