@@ -19,6 +19,19 @@ Release Notes for mongosync 1.9
 This page describes changes and new features introduced in  
 {+c2c-full-product-name+} 1.9 and the {+c2c-full-beta-program+}.
 
+Embedded Verifier
+~~~~~~~~~~~~~~~~~
+
+Starting in 1.8, ``mongosync`` includes an embedded verifier to confirm the
+successful sync of collections from the source cluster to the destination.
+
+- To enable the embedded verifier, use the ``verificationMode`` field in the
+  :ref:`/start <c2c-api-start>` request.
+
+- To check verification status, see the ``verification`` field in the
+  :ref:`/progress <c2c-api-progress>` response.
+
+
 Minimum Supported Version
 -------------------------
 
