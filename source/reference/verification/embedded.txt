@@ -45,7 +45,7 @@ Steps
    .. step:: Start the Sync
 
       To start syncing data from the source cluster to the destination, use the
-      :ref:`/start <c2c-api-start>` endpoint.  To use the embedded verifier, set
+      :ref:`/start <c2c-api-start>` endpoint. To use the embedded verifier, set
       the ``verificationMode`` field to ``full``.
 
       .. code-block:: sh
