@@ -2,9 +2,8 @@
 The embedded verifier has the following limitations:
 
 - ``mongosync`` stores the verifier state in memory, which can result
-  in a significant memory overhead.
-  To run verification checks, ``mongosync`` must have an additional 1GB of memory
-  for every 20 million documents included in the sync.
+  in a significant memory overhead. To run verification checks, ``mongosync``
+  must have an additional 1GB of memory for every 20 million documents.
 
 - Verification is not resumable. If a user stops and then starts ``mongosync``
   for any reason (whether they do so by pausing and resuming the sync or by killing
