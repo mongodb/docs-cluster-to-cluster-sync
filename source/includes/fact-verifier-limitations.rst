@@ -25,3 +25,12 @@ The verifier has the following limitations:
   - Collections with TTL indexes
   - Collections with non-default collation
   - Views
+
+- The verifier is not compatible with most beta features:
+
+  - Many-to-one and A→B→C migrations
+  - Document filtering
+  - Namespace remapping
+  - destinationDataHandling = ignorePrexistingNamespaces
+  - Source clusters that run MongoDB 4.4 and earlier
+  - Destination clusters that run MongoDB 5.0 and earlier
