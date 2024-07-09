@@ -2,7 +2,9 @@
 The verifier has the following limitations:
 
 - ``mongosync`` stores the verifier state in memory, which can result
-  in a significant memory overhead.  In order to run verification checks,
+  in a significant memory overhead.  
+
+  To run verification checks,
   ``mongosync`` must have an additional 1GB for every 20 million documents included
   in the sync.
 
