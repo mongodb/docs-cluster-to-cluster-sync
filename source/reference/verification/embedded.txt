@@ -25,3 +25,15 @@ Limitations
 .. include:: /includes/fact-verifier-limitations
 
 For alternative verification methods, see :ref:`c2c-verification`.
+
+Steps
+-----
+
+.. procedure::
+
+   .. step:: Initialize ``mongosync``
+
+  
+  .. step:: Start the Sync
+
+ .. step:: Check Progress
