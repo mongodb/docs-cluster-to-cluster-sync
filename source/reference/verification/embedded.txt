@@ -3,3 +3,25 @@
 
 Verify with Embedded Verifier
 =============================
+
+.. versionadded:: 1.8
+
+   ``mongosync`` embeds a verifier to run a series of checks against the source
+   and destination clusters to verify that the sync was successful.
+
+About this Task
+---------------
+
+Compatibility
+~~~~~~~~~~~~~
+
+The embedded verifier is not available in ``mongosync`` 1.7 and earlier.
+
+For alternative verification methods, see :ref:`c2c-verification`.
+
+Limitations
+~~~~~~~~~~~
+
+.. include:: /includes/fact-verifier-limitations
+
+For alternative verification methods, see :ref:`c2c-verification`.
