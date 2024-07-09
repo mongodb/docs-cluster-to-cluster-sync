@@ -195,7 +195,8 @@ The verifier has the following limitations:
 
 - The verifier does not verify indexes or collection metadata.
 
-- The verifier deos not perform verification checks on the following collections:
+- The verifier does not perform verification checks on the following collections:
+
   - Capped collections
   - Collections with TTL indexes
   - Collections with non-default collation
