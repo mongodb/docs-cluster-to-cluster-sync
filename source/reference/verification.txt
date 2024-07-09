@@ -16,10 +16,15 @@ Verify Data Transfer
    :depth: 2
    :class: singlecol
 
-When :ref:`mongosync <c2c-mongosync>` has fully committed, verify the 
-successful transfer of your data before you switch your application to using 
-the destination cluster. You can verify your data transfer using document 
-counts, hash comparison, document comparison, or the Migration Verifier.
+When :program:`mongosync` has fully committed, verify the successful transfer
+of your data before you switch your application to using the destination
+cluster.
+
+.. versionadded:: 1.8
+
+   ``mongosync`` provides an embedded verifier that can perform a series of
+   verification checks on the source and destination cluster to ensure a
+   successful sync.
 
 Use Cases
 ---------
@@ -30,12 +35,10 @@ destination cluster.
 
 Verification methods:
 
+- :ref:`c2c-verify-with-embedded-verifier`
 - :ref:`c2c-verify-with-doc-counts`
-
 - :ref:`c2c-verify-with-hash-comp`
-
 - :ref:`c2c-verify-with-doc-comp`
-
 - :ref:`c2c-verify-with-verifier`
 
 The specific method you use to verify your data depends on your application
@@ -45,6 +48,15 @@ workload and the complexity of the data.
 
 Tasks
 -------
+
+.. _c2c-verify-with-embedded-verifier:
+
+Embedded Verifier
+~~~~~~~~~~~~~~~~~
+
+Starting in 1.8, ``mongosync`` includes an embedded verifier, which runs a series
+of verification checks on the source and destination clusters to ensure a successful
+sync.
 
 .. _c2c-verify-with-doc-counts:
 
@@ -115,6 +127,7 @@ For more information, see :ref:`c2c-migration-verifier`.
 .. toctree::
    :hidden:
 
+   Use Embedded Verifier </reference/verification/embedded>
    Use Document Counts </reference/verification/count>
    Use Hash Comparison </reference/verification/hash>
    Use Migration Verifier </reference/verification/verifier>
