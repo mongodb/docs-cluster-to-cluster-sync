@@ -148,6 +148,10 @@ Request Body Parameters
 
        .. include:: /includes/api/facts/namespace-explanation.rst
 
+       The ``/start`` command returns an error when
+       the namespace filtering is enabled and ``verificationMode`` is
+       not ``none``.
+
        .. versionadded:: 1.1
 
    * - ``excludeNamespaces``
@@ -156,6 +160,10 @@ Request Body Parameters
      - Filters the databases or collections to exclude from sync.
 
        .. include:: /includes/api/facts/namespace-explanation.rst
+
+       The ``/start`` command returns an error when
+       namespace filtering is enabled and ``verificationMode`` is
+       not ``none``.
 
        .. versionadded:: 1.6
 
@@ -174,14 +182,14 @@ Request Body Parameters
      - boolean
      - Optional
      - If set to ``true``, enables the sync operation to be
-       reversed. 
+       reversed.
 
-       To reverse sync, the ``enableUserWriteBlocking`` field must be set 
-       to ``true``.     
+       To reverse sync, the ``enableUserWriteBlocking`` field must be set
+       to ``true``.
 
        The ``/start`` command returns an error when
        the reverse sync is enabled and ``verificationMode`` is
-       set to ``full``.
+       not ``none``.
 
        This option is not supported for the following configurations:
 
