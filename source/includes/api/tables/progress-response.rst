@@ -154,7 +154,7 @@
 
    * - ``verification.source`` ``.phase``
      - string
-     - Current phase on verification checks run against the source cluster.
+     - Current phase of verification checks run against the source cluster.
 
        .. versionadded:: 1.8
 
