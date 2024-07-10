@@ -222,8 +222,8 @@ Request Body Parameters
        The default verification mode is ``full``.
 
        The ``/start`` command returns an error when
-       the verification mode is set to ``full`` and the
-       ``reversible`` parameter is set to ``true``.
+       namespace filtering or reversible sync is started
+       with the verifier.
 
        For more information, see :ref:`c2c-start-verifier`.
 
