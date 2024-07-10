@@ -165,7 +165,7 @@ Request Body Parameters
    * - ``namespaceRemap``
      - array
      - Optional
-     - Array of namespace changes to make during sync.
+     - Array of documents that specify namespace changes to make during sync.
 
        .. versionadded:: 1.8 Beta
 
@@ -330,6 +330,27 @@ Response
 .. literalinclude:: /includes/api/responses/success.json
    :language: json
    :copyable: false
+
+Example: Start Sync to Remap Namespaces
+---------------------------------------
+
+The ``namespaceRemap`` option allows you to migrate collection data from one
+namespace on the source cluster to a different namespace on the destination
+cluster.
+
+Request
+~~~~~~~
+
+.. literalinclude:: /includes/api/requests/start-namespace-remap.sh
+   :language: shell
+
+Response
+~~~~~~~~
+
+.. literalinclude:: /includes/api/responses/success.json
+   :language: json
+   :copyable: false
+
 
 Example: Start Sync from Replica Set to Sharded Cluster
 -------------------------------------------------------
