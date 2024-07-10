@@ -162,6 +162,12 @@ Request Body Parameters
        .. include:: /includes/api/facts/namespace-explanation.rst
 
        .. versionadded:: 1.6
+   * - ``namespaceRemap``
+     - array
+     - Optional
+     - Array of namespace changes to make during sync.
+
+       .. versionadded:: 1.8 Beta
 
    * - ``reversible``
      - boolean
