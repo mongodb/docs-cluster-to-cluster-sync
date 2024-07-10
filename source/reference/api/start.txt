@@ -538,7 +538,7 @@ verifier modes:
 
        This is the default mode.
    * - ``none``
-     - Disables the Embedded Verifier.
+     - Disables the embedded verifier.
 
 The ``/start`` endpoint returns an error if you enable verification checks that
 are not supported by the source or destination cluster.
