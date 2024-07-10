@@ -55,7 +55,7 @@ Embedded Verifier
 ~~~~~~~~~~~~~~~~~
 
 Starting in 1.8, ``mongosync`` includes an embedded verifier, which runs a series
-of verificationa checks on the source and destination clusters to ensure a successful
+of verification checks on the source and destination clusters to ensure a successful
 sync.
 
 For more information, see :ref:`c2c-embedded-verifier`.
