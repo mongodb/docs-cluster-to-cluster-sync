@@ -8,7 +8,7 @@ The embedded verifier has the following limitations:
 - Verification is not resumable. If a user stops and then starts ``mongosync``
   for any reason (whether they do so by pausing and resuming the sync or by killing
   the ``mongosync`` process and restarting it), the verification process
-  starts over from the beginning.
+  must start over from the beginning.
 
 - The verifier is not compatible with :ref:`namespace filtering <c2c-filtered-sync>`
   or :ref:`reverse sync <c2c-api-reverse>`. The :ref:`/start <c2c-api-start>`
