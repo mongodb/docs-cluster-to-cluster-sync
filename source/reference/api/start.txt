@@ -518,7 +518,7 @@ Endpoint Protection
 Embedded Verifier
 ~~~~~~~~~~~~~~~~~
 
-Starting in v1.8, ``mongosync`` provides an embedded verifier to
+Starting in 1.8, ``mongosync`` provides an embedded verifier to
 determine whether data transfer from the source cluster to the
 destination was successful.
 
