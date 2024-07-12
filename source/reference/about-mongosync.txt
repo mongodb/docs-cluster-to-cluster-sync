@@ -1,0 +1,131 @@
+.. _about-mongosync:
+
+========================
+About ``mongosync``
+========================
+
+The ``mongosync`` binary is the primary process used in {+c2c-product-name+}. 
+``mongosync`` migrates data from one cluster to another and can keep the 
+clusters in continuous sync. You can use ``mongosync`` to create dedicated 
+analytics, development, or testing clusters that mirror your production 
+environment. 
+
+``mongosync`` enters different states depending on the requests it receives. 
+The current ``mongosync`` state determines which API operations you can run. 
+For more information on ``mongosync`` states, see 
+:ref:`mongosync States <c2c-states>`.
+
+.. note:: 
+
+   Most state transitions happen as the result of an API call. The exceptions 
+   are:
+
+   - The transition from ``COMMITTING`` to ``COMMITTED``
+   - The transition from ``REVERSING`` to ``RUNNING``
+
+:ref:`IDLE <c2c-state-idle>` State
+----------------------------------
+
+When ``mongosync`` connects to the source and destination clusters, it is in the 
+``IDLE`` state.  
+
+:ref:`RUNNING <c2c-state-running>` State 
+-------------------------------------
+
+Call the :ref:`start <c2c-api-start>` endpoint 
+to begin syncing, which starts the ``RUNNING`` state. 
+
+During the ``RUNNING`` state, the sync process is currently running. If you 
+start a new sync, ``mongosync`` syncs data to the destination cluster. When you 
+make subsequent writes to the source cluster, ``mongosync`` applies them to the 
+destination cluster.  
+
+For every collection on the source, ``mongosync`` creates a corresponding 
+collection on the destination. 
+
+``mongosync`` builds special indexes by making modifications on the destination 
+cluster. For example, ``mongosync`` relaxes uniqueness constraints when syncing 
+unique indexes. It also sets the expireAfterSeconds value to MAX_INT when 
+syncing TTL indexes to avoid premature expirations. ``mongosync`` changes these 
+index values back to their source cluster values during the ``COMMIT`` state. 
+
+Collection Copy
+~~~~~~~~~~~~~~~
+
+Collection Copy is the initial full data transfer during the ``RUNNING`` state 
+and copies each collection from the source cluster to the destination cluster. 
+``mongosync`` performs collection copy by splitting each source collection into 
+partitions, gathering all partitions from all collections into one list, and 
+copying all partitions to their corresponding destination collections.
+
+Change Event Application
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+Change Event Application (CEA) is an ongoing process that continuously updates 
+the destination cluster when there are changes to the source cluster. If there 
+are multiple ``mongosync`` instances, all the ``mongosync`` instances finish 
+Collection Copy before entering CEA.
+
+During CEA, ``mongosync`` receives change stream events from the source cluster, 
+converts these events into writes, and applies these writes on the destination 
+cluster. CEA ensures both CRUD (Create, Read, Update, Delete) and DDL 
+(Data Definition Language) operations are handled accurately.
+
+:ref:`PAUSED <c2c-state-paused>` State
+---------------------------------------
+
+During the ``PAUSED`` state, the sync process is paused. To pause your sync 
+process, call the :ref:`pause <c2c-api-pause>` endpoint. To use the ``pause`` 
+endpoint, ``mongosync`` must be in the ``RUNNING`` state.
+
+If you plan to pause synchronization for an extended period of time, increase 
+the size of the replica set oplog in the source cluster. To learn more, see 
+Frequently Asked Questions.
+
+To resume a paused synchronization session, call the 
+:ref:`resume <c2c-api-resume>` endpoint. To use the ``resume`` endpoint, 
+``mongosync`` must be in the ``PAUSED`` state.
+
+:ref:`COMMITTING <c2c-state-committing>` State
+-----------------------------------------------
+
+During the ``COMMITTING`` state, ``mongosync`` finalizes the sync between the 
+source cluster and the destination cluster. To start the ``COMMITTING`` state, 
+call the :ref:`commit <c2c-api-commit>` endpoint, which stops continuous sync 
+between clusters and restores collection characteristics that ``mongosync`` 
+temporarily alters during synchronization. To use the ``commit`` endpoint, 
+``mongosync`` must be in the ``RUNNING`` state. 
+
+Once you call the ``commit`` endpoint, ``mongosync`` halts any writes on the 
+source cluster and retrieves the timestamp of the most recent operation in the 
+source cluster. 
+
+If there are no errors, you see a success message and ``mongosync`` exits CEA by 
+processing events up until the commit timestamp. 
+
+Once CEA is over, ``mongosync`` corrects indexes and resolves document conflicts. 
+If write blocking is enabled, ``mongosync`` turns write operations back on. 
+
+:ref:`COMMITTED <c2c-state-committed>` State
+---------------------------------------------
+
+``mongosync`` updates its state to ``COMMITTED`` once the ``COMMITTING`` state 
+is over. The ``COMMITTED`` state indicates the cutover process is finished, and 
+you can direct writes to the destination cluster.
+
+:ref:`REVERSING <c2c-state-reversing>` State
+---------------------------------------------
+
+During the ``REVERSING`` state, ``mongosync`` copies metadata from the 
+destination cluster to the source cluster. Then, ``mongosync`` swaps the source 
+and destination clusters and resumes applying change events. 
+
+To start the ``REVERSING`` state, call the :ref:`reverse <c2c-api-reverse>` 
+endpoint, which syncs writes from the destination cluster to the source cluster, 
+including any writes that occur on the destination cluster after ``mongosync`` 
+turns write operations back on. To use the ``reverse`` endpoint, ``mongosync`` 
+must be in the ``COMMITTED`` state. 
+
+If ``REVERSING`` is successful, ``mongosync`` enters the ``RUNNING`` state. The 
+synchronization continues in the reverse direction from the original sync job. 
+
