@@ -17,6 +17,14 @@ receives. ``mongosync`` can only be in a single state at a given time.
 The current ``mongosync`` states determines which API operations you can
 run.
 
+.. note:: 
+
+   Most state transitions happen as the result of an API call. The exceptions 
+   are:
+
+   - The transition from ``COMMITTING`` to ``COMMITTED``
+   - The transition from ``REVERSING`` to ``RUNNING``
+
 This page describes ``mongosync`` states.
 
 View the Current State
