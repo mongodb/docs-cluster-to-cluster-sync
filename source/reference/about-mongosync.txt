@@ -71,7 +71,7 @@ writes on the destination cluster. CEA ensures both :ref:`CRUD <crud>` and
 :ref:`PAUSED <c2c-state-paused>` State
 ---------------------------------------
 
-Call the :ref:`pause <c2c-api-pause>` endpoint to begin the ``PAUSED``state.
+Call the :ref:`pause <c2c-api-pause>` endpoint to begin the ``PAUSED`` state.
 To use the ``pause`` endpoint, ``mongosync`` must be in the ``RUNNING`` state.
 
 During the ``PAUSED`` state, the sync process is paused.
