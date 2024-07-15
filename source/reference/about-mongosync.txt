@@ -93,7 +93,7 @@ Committing Sync
 ~~~~~~~~~~~~~~~~
 
 The :ref:`commit <c2c-api-commit>` endpoint begins the 
-:ref:`COMMITTING <c2c-state-committing>`state. To use the ``commit`` endpoint, 
+:ref:`COMMITTING <c2c-state-committing>` state. To use the ``commit`` endpoint, 
 ``mongosync`` must be in the ``RUNNING`` state. 
 
 During the ``COMMITTING`` state, ``mongosync`` finalizes the sync between the 
