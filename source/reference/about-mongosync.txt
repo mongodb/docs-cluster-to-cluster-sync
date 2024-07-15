@@ -77,7 +77,7 @@ To use the ``pause`` endpoint, ``mongosync`` must be in the ``RUNNING`` state.
 During the ``PAUSED`` state, the sync process is paused.
 
 If you plan to pause synchronization for an extended period of time, increase 
-the size of the replica set :ref:`<c2c-faq-increase-oplog>` in the source 
+the size of the replica set :ref:`oplog <c2c-faq-increase-oplog>` in the source 
 cluster. 
 
 To resume a paused synchronization session and return to the ``RUNNING`` state, 
