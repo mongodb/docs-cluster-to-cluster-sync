@@ -43,11 +43,10 @@ destination cluster.
 For every collection on the source, ``mongosync`` creates a corresponding 
 collection on the destination. 
 
-``mongosync`` builds special indexes by making modifications on the destination 
-cluster. For example, ``mongosync`` relaxes uniqueness constraints when syncing 
-unique indexes. It also sets the expireAfterSeconds value to MAX_INT when 
-syncing TTL indexes to avoid premature expirations. ``mongosync`` changes these 
-index values back to their source cluster values during the ``COMMIT`` state. 
+``mongosync`` temporarily alters some collection characteristics during 
+the ``RUNNING`` state and changes these back to their source 
+cluster characteristics during the ``COMMIT`` state. For more information, see
+:ref:`commit alters <c2c-commit-alters>`.
 
 Collection Copy
 ~~~~~~~~~~~~~~~
@@ -68,8 +67,8 @@ Collection Copy before entering CEA.
 
 During CEA, ``mongosync`` receives change stream events from the source cluster, 
 converts these events into writes, and applies these writes on the destination 
-cluster. CEA ensures both CRUD (Create, Read, Update, Delete) and DDL 
-(Data Definition Language) operations are handled accurately.
+cluster. CEA ensures both :ref:`CRUD <crud>` and 
+:ref:`DDL <c2c-mongosync-ddl>` operations are handled accurately.
 
 :ref:`PAUSED <c2c-state-paused>` State
 ---------------------------------------
@@ -92,9 +91,10 @@ To resume a paused synchronization session, call the
 During the ``COMMITTING`` state, ``mongosync`` finalizes the sync between the 
 source cluster and the destination cluster. To start the ``COMMITTING`` state, 
 call the :ref:`commit <c2c-api-commit>` endpoint, which stops continuous sync 
-between clusters and restores collection characteristics that ``mongosync`` 
-temporarily alters during synchronization. To use the ``commit`` endpoint, 
-``mongosync`` must be in the ``RUNNING`` state. 
+between clusters and 
+:ref:`restores collection characteristics <c2c-commit-alters>` 
+that ``mongosync`` temporarily alters during synchronization. To use the 
+``commit`` endpoint, ``mongosync`` must be in the ``RUNNING`` state. 
 
 Once you call the ``commit`` endpoint, ``mongosync`` halts any writes on the 
 source cluster and retrieves the timestamp of the most recent operation in the 
@@ -103,8 +103,9 @@ source cluster.
 If there are no errors, you see a success message and ``mongosync`` exits CEA by 
 processing events up until the commit timestamp. 
 
-Once CEA is over, ``mongosync`` corrects indexes and resolves document conflicts. 
-If write blocking is enabled, ``mongosync`` turns write operations back on. 
+Once CEA is over, ``mongosync`` corrects indexes and resolves document 
+conflicts. If write blocking is enabled, ``mongosync`` turns write operations 
+back on. 
 
 :ref:`COMMITTED <c2c-state-committed>` State
 ---------------------------------------------
