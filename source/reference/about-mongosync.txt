@@ -110,8 +110,8 @@ processing events up until the commit timestamp. Then, ``mongosync`` corrects
 indexes and resolves document conflicts. If write blocking is enabled, 
 ``mongosync`` turns write operations back on. 
 
-``mongosync`` updates its state to ``COMMITTED`` once the ``COMMITTING`` state 
-is over. The ``COMMITTED`` state indicates the 
+``mongosync`` updates its state to :ref:`COMMITTED <c2c-state-committed>` once 
+the ``COMMITTING`` state is over. The ``COMMITTED`` state indicates the 
 :ref:`cutover process <c2c-cutover-process>` is finished, and you can direct 
 writes to the destination cluster.
 
