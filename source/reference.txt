@@ -2,8 +2,11 @@
 Reference
 =========
 
+:ref:`about-mongosync`
+   The primary process used in ``mongosync``.
+
 :ref:`c2c-mongosync`
-   The primary process used in {+c2c-product-name+}.
+    The options and behavior {+c2c-product-name+}.
 
 :ref:`c2c-config`
    Configure :program:`mongosync` instances at startup using a
@@ -51,6 +54,7 @@ Reference
 .. toctree::
    :titlesonly:
 
+   /reference/about-mongosync
    /reference/mongosync
    /reference/configuration
    /reference/api
