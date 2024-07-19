@@ -28,46 +28,46 @@ Starting in 1.8, ``mongosync`` includes an optional embedded
 verifier that performs a series of checks against the source and 
 destination clusters to verify a successful sync.
 
-For more information, see :ref:`c2c-embedded-verifier`.
+For more information, see the Embedded Verifier documentation.
 
-Other Notes
-~~~~~~~~~~~
+Updates to ``mongosync`` ``/progress`` API endpoint
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Updates to ``mongosync`` ``/progress`` API endpoint:
+- Returns a top-level boolean ``success`` field.
 
-- The ``/progress`` endpoint now returns a top-level boolean 
-  ``success`` field.
+- Returns the integer ``totalEventsApplied`` field, which approximates 
+  the number of change events applied to a destination cluster by an 
+  instance of ``mongosync``.
 
-- The ``/progress`` endpoint now returns the integer 
-  ``totalEventsApplied`` field, which approximates the number of 
-  change events applied to a destination cluster by an instance of 
-  ``mongosync``.
+- Reports per-partition progress tracking with the following changes:
 
-- The ``/progress`` endpoint now reports per-partition progress 
-  tracking with the following changes:
-
-  - Calling ``/progress`` before ``mongosync`` reaches the collection 
-    copy phase will return 0 for ``estimatedCopiedBytes`` and 1 for 
+  - Calls to ``/progress`` before ``mongosync`` reaches the collection 
+    copy phase return 0 for ``estimatedCopiedBytes`` and 1 for 
     ``estimatedTotalBytes``.
 
   - ``estimatedTotalBytes`` may change throughout the collection copy 
     phase if documents are inserted or deleted on the source cluster.
 
-  - ``estimatedCopiedBytes`` will never be greater than 
-    ``estimatedTotalBytes``. Progress will reach 100% at the end of 
+  - ``estimatedCopiedBytes`` is never be greater than 
+    ``estimatedTotalBytes``. Progress reaches 100% at the end of 
     the collection copy phase 
     (``estimatedCopiedBytes`` = ``estimatedTotalBytes``).
 
-  - When performing a live upgrade from an earlier version to 1.8.0 or 
-    higher, the collection copy data will start over from 
+  - Performing a live upgrade from an earlier version to 1.8.0 or 
+    higher, the collection copy data starts over from 
     ``[0 bytes copied / 1 bytes total]``. After a live upgrade, 
     ``/progress`` only reports the progress of data copied after the 
     upgrade completed.
 
+See the :ref:`c2c-api-progress` documentation for more details.
+
+Other Notes
+~~~~~~~~~~~
+
 Optimizations:
 
-- Significantly reduced the time needed to create partitions and added logging 
-  that tracks the partition creation process.
+- Fixes and enhancements to significantly reduce the time needed to create 
+  partitions and adds logging that tracks the partition creation process.
 
 Other Changes:
 
@@ -99,8 +99,8 @@ Issues Fixed:
 
 - Fixed a bug that could decrease the ``size`` of capped collections 
   by up to 256 bytes. This bug affected capped collection resizing 
-  when migrating from a source with a version <7.0 to a destination 
-  with 7.0+.
+  when migrating from a source with a version less than 7.0 to a 
+  destination with 7.0 or greater.
 
 
 Minimum Supported Version
