@@ -34,8 +34,20 @@ operations you can run.
 To view the current state of ``mongosync``, use the :ref:`/progress
 <c2c-api-progress>` endpoint.
 
+Diagram
+-----------------------
+
+The following diagram illustrates the relationship between ``mongosync`` states 
+and API operations:
+
+.. figure:: /images/mongosync.drawio.bakedsvg.svg
+   :alt: Diagram of relationship between ``mongosync`` states and API operations
+   :figwidth: 600px
+
 How ``mongosync`` Works
 -----------------------
+
+The following sections discuss the process illustrated in the preceding diagram.
 
 Connect Source and Destination Clusters
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -61,10 +73,10 @@ operations to the destination cluster.
 For every source collection that is to be synced, ``mongosync`` creates a 
 corresponding collection on the destination. 
 
-``mongosync`` temporarily alters some collection characteristics during 
-the ``RUNNING`` state and changes these back to their source 
-cluster characteristics during the ``COMMIT`` state. For more information, see
-:ref:`Commit Alters <c2c-commit-alters>`.
+``mongosync`` temporarily alters some of the replicated collection
+characteristics in the destination cluster. It changes these destination cluster
+characteristics to the source cluster characteristics during the COMMIT state.
+For more information, see :ref:`Commit Alters <c2c-commit-alters>`.
 
 The ``RUNNING`` state includes two phases:
 
@@ -88,17 +100,20 @@ corresponding destination collections.
 Change Event Application
 ''''''''''''''''''''''''
 
-During the change event application (CEA) phase, ``mongosync`` continuously 
+The change event application (CEA) phase starts after the collection copy phase
+ends. 
+
+During the CEA phase, ``mongosync`` continuously 
 updates the destination cluster when you make changes to the source cluster. 
 
-``mongosync`` finishes the collection copy phase before starting the CEA phase.
+To make continuous updates to the destination cluster, ``mongosync`` opens a 
+:ref:`change stream <changeStreams>` on the source cluster and applies
+:ref:`change events <change-events>` to the destination cluster. 
 
-During the CEA phase, ``mongosync`` receives 
-:ref:`change stream <changeStreams>` events from the source cluster, converts 
-these events into writes, and applies these writes on the destination cluster. 
-When the CEA phase begins, ``mongosync`` first applies the change stream events 
+When the CEA phase begins, ``mongosync`` first applies the change events 
 that are recieved during the collection copy phase before moving on to the 
 events that are recieved during the CEA phase. 
+
 
 Pausing Sync
 ~~~~~~~~~~~~

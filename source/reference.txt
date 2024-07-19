@@ -6,7 +6,7 @@ Reference
    The primary process used in ``mongosync``.
 
 :ref:`c2c-mongosync`
-    The options and behavior {+c2c-product-name+}.
+   The options and behavior {+c2c-product-name+}.
 
 :ref:`c2c-config`
    Configure :program:`mongosync` instances at startup using a
