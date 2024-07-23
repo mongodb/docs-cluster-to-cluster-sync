@@ -16,7 +16,11 @@ Description
 -----------
 
 Finalizes the sync between the source cluster and the destination
-cluster and stops continuous sync between clusters. ``commit`` also
+cluster and stops continuous sync between clusters. 
+
+.. _c2c-commit-alters:
+
+``commit`` also
 restores collection characteristics that ``mongosync`` temporarily
 alters during synchronization. 
 
