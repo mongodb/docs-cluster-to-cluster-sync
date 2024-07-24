@@ -64,7 +64,9 @@ Steps
 
    .. step:: Sync the clusters with namespace remapping
 
-      .. TODO: Intro to sync
+      The following :ref:`/start <c2c-api-start>` call starts sync and remaps the
+      ``accounts.new_england`` collection on the source cluster to
+      ``accounts.us_northeast`` on the destination cluster:
 
       .. literalinclude:: /includes/api/requests/start-namespace-remap.sh
          :language: shell
