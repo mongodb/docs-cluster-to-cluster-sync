@@ -168,7 +168,8 @@ Request Body Parameters
      - Array of documents that specify namespace changes to make during sync.
 
        .. versionadded:: 1.8 Beta
-   * - ``namespaceRemap[n].from``
+
+   * - ``namespaceRemap[n].`` ``from``
      - document
      - Required
      - Document that specifies the database and collection on the source cluster
@@ -176,7 +177,7 @@ Request Body Parameters
 
        .. versionadded:: 1.8 Beta
 
-  * - ``namespaceRemap[n].to``
+  * - ``namespaceRemap[n].`` ``to``
     - document
     - Required
     - Document that specifies the database and collection on the destination cluster
