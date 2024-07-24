@@ -177,13 +177,13 @@ Request Body Parameters
 
        .. versionadded:: 1.8 Beta
 
-  * - ``namespaceRemap[n].`` ``to``
-    - document
-    - Required
-    - Document that specifies the database and collection on the destination cluster
-      to write to in the remapping operation.
+   * - ``namespaceRemap[n].`` ``to``
+     - document
+     - Required
+     - Document that specifies the database and collection on the destination cluster
+       to write to in the remapping operation.
 
-      .. versionadded:: 1.8 Beta
+       .. versionadded:: 1.8 Beta
 
    * - ``reversible``
      - boolean
