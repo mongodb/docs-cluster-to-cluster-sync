@@ -21,10 +21,6 @@ Release Notes for mongosync 1.8
 
 **Upcoming**
 
-Embedded Verifier
-~~~~~~~~~~~~~~~~~
-
-
 Updates to ``mongosync`` ``/progress`` API endpoint
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
