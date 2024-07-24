@@ -13,3 +13,37 @@ Change Collection Namespaces
    :class: singlecol
 
 .. include:: /includes/beta-feature.rst
+
+.. TODO: Introductory Text
+
+Syntax
+------
+
+.. TODO: Syntax
+
+Command Options
+---------------
+
+.. TODO: Move /start options into includes for double presentation in this table.
+
+Steps
+-----
+
+.. procedure::
+   :style: normal
+
+   .. step:: Connect the source and destination clusters
+
+      .. TODO: mongosync connection intro
+
+      .. TODO: mongosync connection example
+
+   .. step:: Sync the clusters with namespace remapping
+
+      .. TODO: Intro to sync
+      .. TODO: Example code
+
+Learn More
+----------
+
+.. TODO: Links to /start and /progress
