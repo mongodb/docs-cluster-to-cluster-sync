@@ -177,6 +177,23 @@ Request Body Parameters
 
        .. versionadded:: 1.8 Beta
 
+   * - ``namespaceRemap[n].`` ``from.database``
+     - string
+     - Required
+     - Database to read from the source cluster.
+
+       .. versionadded:: 1.8 Beta
+
+   * - ``namespaceRemap[n].`` ``from.collection``
+     - string
+     - Conditional
+     - Collection to read from the source cluster. If the ``collection`` field
+       is present in the ``from`` document, it must also occur in the ``to``
+       document. If absent from both documents, ``mongosync`` remaps all
+       collections in database.
+
+       .. versionadded:: 1.8 Beta
+
    * - ``namespaceRemap[n].`` ``to``
      - document
      - Required
