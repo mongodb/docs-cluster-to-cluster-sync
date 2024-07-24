@@ -45,11 +45,6 @@ the :ref:`/start <c2c-api-start>` command:
          ]
       } '
 
-Command Options
----------------
-
-.. TODO: Move /start options into includes for double presentation in this table.
-
 Steps
 -----
 
@@ -58,14 +53,21 @@ Steps
 
    .. step:: Connect the source and destination clusters
 
-      .. TODO: mongosync connection intro
+      The following example connects a source cluster (``cluster0``)
+      with a destination cluster (``cluster1``):
 
-      .. TODO: mongosync connection example
+      .. code-block:: shell
+
+         mongosync \
+            --cluster0 "mongodb://localhost:27000" \
+            --cluster1 "mongodb://localhost:35000"
 
    .. step:: Sync the clusters with namespace remapping
 
       .. TODO: Intro to sync
-      .. TODO: Example code
+
+      .. literalinclude:: /includes/api/requests/start-namespace-remap.sh
+         :language: shell
 
 Learn More
 ----------
