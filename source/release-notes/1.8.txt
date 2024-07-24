@@ -67,7 +67,7 @@ Namespace Remapping
 ~~~~~~~~~~~~~~~~~~~
 
 Starting in 1.8 Beta, ``mongosync`` can sync collection data from one namespace
-on the source cluster into a new namespace on the destination.  This allows you
+on the source cluster into a new namespace on the destination. This allows you
 to change namespaces during migration rather than as a separate step afterwards.
 
 For more information, see :ref:`c2c-beta-namespace-remapping`.

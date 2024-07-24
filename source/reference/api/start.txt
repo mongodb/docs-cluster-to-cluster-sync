@@ -92,7 +92,7 @@ Request Body Parameters
          any indexes created during migration on the source cluster.
 
        - ``never`` causes ``mongosync`` to skip building unnecessary indexes 
-         during sync.  This can improve migration performance, especially with 
+         during sync. This can improve migration performance, especially with 
          index heavy workloads.
 
          .. warning::
