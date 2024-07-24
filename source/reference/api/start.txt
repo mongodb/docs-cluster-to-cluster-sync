@@ -168,6 +168,21 @@ Request Body Parameters
      - Array of documents that specify namespace changes to make during sync.
 
        .. versionadded:: 1.8 Beta
+   * - ``namespaceRemap[n].from``
+     - document
+     - Required
+     - Document that specifies the database and collection on the source cluster
+       to read from in the remapping operation.
+
+       .. versionadded:: 1.8 Beta
+
+  * - ``namespaceRemap[n].to``
+    - document
+    - Required
+    - Document that specifies the database and collection on the destination cluster
+      to write to in the remapping operation.
+
+      .. versionadded:: 1.8 Beta
 
    * - ``reversible``
      - boolean
