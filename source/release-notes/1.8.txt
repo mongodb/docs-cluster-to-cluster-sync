@@ -24,11 +24,14 @@ Release Notes for mongosync 1.8
 Embedded Verifier
 ~~~~~~~~~~~~~~~~~
 
-Starting in 1.8, ``mongosync`` includes an optional embedded
-verifier that performs a series of checks against the source and 
-destination clusters to verify a successful sync.
+Starting in 1.8, ``mongosync`` includes an embedded verifier to confirm the
+successful sync of collections from the source cluster to the destination.
 
-For more information, see the Embedded Verifier documentation.
+- To enable the embedded verifier, use the ``verificationMode`` field in the
+  :ref:`/start <c2c-api-start>` request.
+
+- To check verification status, see the ``verification`` field in the
+  :ref:`/progress <c2c-api-progress>` response.
 
 Updates to ``mongosync`` ``/progress`` API endpoint
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -53,7 +56,7 @@ Updates to ``mongosync`` ``/progress`` API endpoint
     the collection copy phase 
     (``estimatedCopiedBytes`` = ``estimatedTotalBytes``).
 
-  - Performing a live upgrade from an earlier version to 1.8.0 or 
+  - When performing a live upgrade from an earlier version to 1.8.0 or 
     higher, the collection copy data starts over from 
     ``[0 bytes copied / 1 bytes total]``. After a live upgrade, 
     ``/progress`` only reports the progress of data copied after the 
@@ -87,20 +90,21 @@ Other Changes:
 
 Issues Fixed:
 
-- Fixed a bug that caused ``mongosync`` to fall off the source 
-  cluster's oplog if no real writes occurred on the source 
+- Fixed a bug introduced in v1.0.0 that caused ``mongosync`` to fall 
+  off the source cluster's oplog if no writes occurred on the source 
   cluster for an extended period of time.
 
-- Fixed a bug that caused ``mongosync`` to write certain logs to a 
-  location outside of the specified log directory.
+- Fixed a bug introduced in v1.0.0 that caused ``mongosync`` to write 
+  certain logs to a location outside of the specified log directory.
 
-- Fixed a bug that caused the ``mongosync`` ``/progress`` endpoint to 
-  potentially return incorrect ``totalBytes`` for sharded clusters.
+- Fixed a bug introduced in v1.0.0 that caused the ``mongosync`` 
+  ``/progress`` endpoint to potentially return incorrect 
+  ``totalBytes`` for sharded clusters.
 
-- Fixed a bug that could decrease the ``size`` of capped collections 
-  by up to 256 bytes. This bug affected capped collection resizing 
-  when migrating from a source with a version less than 7.0 to a 
-  destination with 7.0 or greater.
+- Fixed a bug introduced in v1.7.0 that could decrease the ``size`` of 
+  capped collections by up to 256 bytes. This bug affected capped 
+  collection resizing when migrating from a source with a version less 
+  than 7.0 to a destination with 7.0 or greater.
 
 
 Minimum Supported Version
