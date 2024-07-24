@@ -12,14 +12,38 @@ Change Collection Namespaces
    :depth: 2
    :class: singlecol
 
-.. include:: /includes/beta-feature.rst
+.. include:: /includes/beta-feature
 
-.. TODO: Introductory Text
+Starting in ``mongosync`` beta 1.8, you can remap namespaces during sync.
+This allows you to take data in one collection on the source cluster and sync
+it into a collection with a different name or database on the destination cluster.
 
 Syntax
 ------
 
-.. TODO: Syntax
+To remap a namespace during sync, use the ``namespaceRemap`` field when you call
+the :ref:`/start <c2c-api-start>` command:
+
+.. code-block:: sh
+
+   curl <host>:<port>/api/v1/start -XPOST \
+   --data '
+      {
+         "source": "cluster0",
+         "destination": "cluster1"
+         "namespaceRemap": [
+            {
+               "from": {
+                  "database": "<source-database>",
+                  "collection": "<source-collection>"
+               },
+               "to": {
+                  "database": "<destination-database>",
+                  "collection": "<destination-collection>"
+               }
+            }
+         ]
+      } '
 
 Command Options
 ---------------
