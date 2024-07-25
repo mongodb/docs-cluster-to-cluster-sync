@@ -140,14 +140,14 @@
    * - ``verification``
      - document
      - Provides information on the phase and progress of sync verification checks
-       performed by the embedded verifier on the source and destination clusters.
+       performed by the embedded verifier.
 
        .. versionadded:: 1.9
 
    * - ``verification.source``
      - document
      - Provides information on the phase and progress of sync verification checks
-       performed by the embedded verifier on the source cluster.
+       running on the source cluster.
 
        .. versionadded:: 1.9
 
@@ -177,7 +177,7 @@
    * - ``verification.destination``
      - document
      - Provides information on the phase and progress of sync verification checks
-       performed by the embedded verifier on the destination cluster.
+       running on the destination cluster.
 
        .. versionadded:: 1.8
 
