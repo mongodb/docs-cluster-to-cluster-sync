@@ -1,6 +1,7 @@
 
 .. _c2c-embedded-verifier:
 
+=============================
 Verify with Embedded Verifier
 =============================
 
