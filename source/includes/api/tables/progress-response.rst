@@ -135,9 +135,10 @@
 
    * - ``verification``
      - document
-     - Describes the embedded verifier on the source and destination clusters,
-       including the current phase, the number of collections scanned, and the
-       amount of time since the last check.
+     - Provides information on the progress of checks performed by the embedded
+       verifier on the source and destination cluster.
+
+       .. versionadded:: 1.8
 
        .. versionadded:: 1.8
 
