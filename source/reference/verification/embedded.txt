@@ -19,7 +19,8 @@ Verify with Embedded Verifier
 
 .. versionadded:: 1.8
 
-   ``mongosync`` embeds a verifier to run a series of checks against the source
+   ``mongosync`` 
+   ``mongosync`` a verifier to run a series of checks against the source
    and destination clusters to verify a successful sync.
 
 About this Task
@@ -43,6 +44,7 @@ Steps
 -----
 
 .. procedure::
+   :style: normal
 
    .. step:: Initialize ``mongosync``
 
