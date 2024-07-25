@@ -82,10 +82,6 @@ Steps
       To check the status of the sync, use the :ref:`/progress <c2c-api-progress>`
       endpoint:
 
-      .. code-block:: sh
-
-         curl localhost:27182/api/v1/progress -XGET
-
       .. literalinclude:: /includes/api/requests/progress.sh
          :language: shell
 
