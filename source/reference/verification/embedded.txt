@@ -86,6 +86,9 @@ Steps
 
          curl localhost:27182/api/v1/progress -XGET
 
+      .. literalinclude:: /includes/api/requests/progress.sh
+         :language: shell
+
       Example output:
 
       .. literalinclude:: /includes/api/responses/progress.json
