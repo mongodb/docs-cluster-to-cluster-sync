@@ -19,9 +19,8 @@ Verify with Embedded Verifier
 
 .. versionadded:: 1.8
 
-   ``mongosync`` 
-   ``mongosync`` a verifier to run a series of checks against the source
-   and destination clusters to verify a successful sync.
+   ``mongosync`` includes an embedded verifier to confirm the correct and
+   successful sync of data from the source cluster to the destination cluster.
 
 About this Task
 ---------------
