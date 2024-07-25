@@ -143,8 +143,8 @@
 
    * - ``verification.source``
      - document
-     - Provides information on the phase and progress of verification checks
-       performed on the source cluster.
+     - Provides information on the phase and progress of sync verification checks
+       performed by the embedded verifier on the source cluster.
 
        .. versionadded:: 1.8
 
@@ -157,13 +157,13 @@
 
    * - ``verification.source`` ``.phase``
      - string
-     - Current phase of verification checks on the source cluster.
+     - Current phase of the verification process on the source cluster.
 
        .. versionadded:: 1.8
 
    * - ``verification.source`` ``.scannedCollectionCount``
      - integer
-     - Number of collections scanned for verification on the source cluster.
+     - Number of collections scanned by the embedded verifier on the source cluster.
 
        .. versionadded:: 1.8
 
@@ -173,8 +173,8 @@
 
    * - ``verification.destination``
      - document
-     - Provides information on the phase and progress of verification checks
-       performed on the destination cluster.
+     - Provides information on the phase and progress of sync verification checks
+       performed by the embedded verifier on the destination cluster.
 
        .. versionadded:: 1.8
 
@@ -187,18 +187,18 @@
 
    * - ``verification.destination`` ``.phase``
      - string
-     - Current phase of verification checks on the destination cluster.
+     - Current phase of the verification process on the destination cluster.
 
        .. versionadded:: 1.8
 
    * - ``verification.destination`` ``.scannedCollectionCount``
      - integer
-     - Number of collections scanned for verification on the destination cluster.
+     - Number of collections scanned by the embedded verifier on the destination cluster.
 
        .. versionadded:: 1.8
 
    * - ``verification.destination`` ``.totalCollectionCount``
      - integer
-     - Number of collections to perform verification checks against on the
-       destination cluster.
+     - Number of collections on the destination cluster to include in verification
+       checks.
 
