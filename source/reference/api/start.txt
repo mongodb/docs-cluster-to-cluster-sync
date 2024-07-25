@@ -254,7 +254,7 @@ The ``sharding`` option has the following parameters:
    * - ``createSupportingIndexes``
      - boolean
      - Optional. Sets whether sync creates a supporting index 
-       for the shard key, if none exists. Defaults to ``false``.
+       for the shard key, if none exists. Default is ``false``.
 
    * - ``shardingEntries``
      - array of documents

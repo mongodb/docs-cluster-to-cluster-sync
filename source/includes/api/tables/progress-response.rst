@@ -154,7 +154,7 @@
 
    * - ``verification.source`` ``.phase``
      - string
-     - Current phase of verification checks run against the source cluster.
+     - Current phase of verification checks running on the source cluster.
 
        .. versionadded:: 1.8
 
@@ -184,8 +184,7 @@
 
    * - ``verification.destination`` ``.phase``
      - string
-     - Current phase of verification checks being run against the destination
-       cluster.
+     - Current phase of verification checks running on the destination cluster.
 
        .. versionadded:: 1.8
 
@@ -197,6 +196,5 @@
 
    * - ``verification.destination`` ``.totalCollectionCount``
      - integer
-     - Number of collections to perform verification checks against on the
-       destination cluster.
+     - Number of collections to verify on the destination cluster.
 
