@@ -86,7 +86,13 @@ Steps
 
          curl localhost:27182/api/v1/progress -XGET
 
-      Check the ``verification`` response field for information on the status of 
+      Example output:
+
+      .. literalinclude:: /includes/api/responses/progress.json
+         :language: json
+         :copyable: false
+
+      Check the ``verification`` response field for information on the status of
       the embedded verifier.
 
 
