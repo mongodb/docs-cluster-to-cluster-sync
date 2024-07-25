@@ -148,26 +148,26 @@
 
        .. versionadded:: 1.8
 
-   * - ``verification.source`` ``.lagTimeSeconds``
+   * - ``verification.source.`` ``lagTimeSeconds``
      - integer
-     - Time in seconds since the last verification check performed
+     - Time in seconds since the last verification check was performed
        on the source cluster.
 
        .. versionadded:: 1.8
 
-   * - ``verification.source`` ``.phase``
+   * - ``verification.source.`` ``phase``
      - string
      - Current phase of the verification process on the source cluster.
 
        .. versionadded:: 1.8
 
-   * - ``verification.source`` ``.scannedCollectionCount``
+   * - ``verification.source.`` ``scannedCollectionCount``
      - integer
      - Number of collections scanned by the embedded verifier on the source cluster.
 
        .. versionadded:: 1.8
 
-   * - ``verification.source`` ``.totalCollectionCount``
+   * - ``verification.source.`` ``totalCollectionCount``
      - integer
      - Number of collections on the source cluster to include in verification checks.
 
@@ -178,26 +178,26 @@
 
        .. versionadded:: 1.8
 
-   * - ``verification.destination`` ``.lagTimeSeconds``
+   * - ``verification.destination.`` ``lagTimeSeconds``
      - integer
      - Time in seconds since the last verification check performed
        on the source cluster.
 
        .. versionadded:: 1.8
 
-   * - ``verification.destination`` ``.phase``
+   * - ``verification.destination.`` ``phase``
      - string
      - Current phase of the verification process on the destination cluster.
 
        .. versionadded:: 1.8
 
-   * - ``verification.destination`` ``.scannedCollectionCount``
+   * - ``verification.destination.`` ``scannedCollectionCount``
      - integer
      - Number of collections scanned by the embedded verifier on the destination cluster.
 
        .. versionadded:: 1.8
 
-   * - ``verification.destination`` ``.totalCollectionCount``
+   * - ``verification.destination.`` ``totalCollectionCount``
      - integer
      - Number of collections on the destination cluster to include in verification
        checks.
