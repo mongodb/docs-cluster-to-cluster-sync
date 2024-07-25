@@ -5,6 +5,18 @@
 Verify with Embedded Verifier
 =============================
 
+.. default-domain:: mongodb
+
+.. facet::
+   :name: genre
+   :values: tutorial
+
+.. contents:: On this page
+   :local:
+   :backlinks: none
+   :depth: 1
+   :class: singlecol
+
 .. versionadded:: 1.8
 
    ``mongosync`` embeds a verifier to run a series of checks against the source
