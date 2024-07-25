@@ -74,4 +74,4 @@ Steps
 Learn More
 ----------
 
-.. TODO: Links to /start and /progress
+- :ref:`/start <c2c-api-start>`
