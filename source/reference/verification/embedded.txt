@@ -94,4 +94,8 @@ Steps
       Check the ``verification`` response field for information on the status of
       the embedded verifier.
 
+Learn More
+----------
 
+- :ref:`/start <c2c-api-start>`
+- :ref:`/progress <c2c-api-progress>`
