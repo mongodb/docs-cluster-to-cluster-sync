@@ -135,13 +135,16 @@
 
    * - ``verification``
      - document
-     - Describes the verification process on the source and destination clusters.
+     - Describes the embedded verifier on the source and destination clusters,
+       including the current phase, the number of collections scanned, and the
+       amount of time since the last check.
 
        .. versionadded:: 1.8
 
    * - ``verification.source``
      - document
-     - Describes the verification process on the source cluster.
+     - Provides information on the phase and progress of verification checks
+       performed on the source cluster.
 
        .. versionadded:: 1.8
 
@@ -154,7 +157,7 @@
 
    * - ``verification.source`` ``.phase``
      - string
-     - Current phase of verification checks running on the source cluster.
+     - Current phase of verification checks on the source cluster.
 
        .. versionadded:: 1.8
 
@@ -166,12 +169,12 @@
 
    * - ``verification.source`` ``.totalCollectionCount``
      - integer
-     - Number of collections to perform verification checks against on the
-       source cluster.
+     - Number of collections on the source cluster to include in verification checks.
 
    * - ``verification.destination``
      - document
-     - Describes the verification process on the destination cluster.
+     - Provides information on the phase and progress of verification checks
+       performed on the destinationcluster.
 
        .. versionadded:: 1.8
 
@@ -184,7 +187,7 @@
 
    * - ``verification.destination`` ``.phase``
      - string
-     - Current phase of verification checks running on the destination cluster.
+     - Current phase of verification checks on the destination cluster.
 
        .. versionadded:: 1.8
 
@@ -196,5 +199,6 @@
 
    * - ``verification.destination`` ``.totalCollectionCount``
      - integer
-     - Number of collections to verify on the destination cluster.
+     - Number of collections to perform verification checks against on the
+       destination cluster.
 
