@@ -178,7 +178,7 @@
    * - ``verification.destination``
      - document
      - Provides information on the phase and progress of verification checks
-       performed on the destinationcluster.
+       performed on the destination cluster.
 
        .. versionadded:: 1.8
 
