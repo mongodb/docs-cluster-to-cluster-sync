@@ -71,6 +71,12 @@ Steps
                 "verificationMode": "full"
             } '
 
+      Example output:
+
+      .. literalinclude:: /includes/api/responses/success.json
+         :language: json
+         :copyable: false
+
    .. step:: Check Progress
 
       To check the status of the sync, use the :ref:`/progress <c2c-api-progress>`
