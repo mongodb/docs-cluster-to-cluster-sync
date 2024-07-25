@@ -408,7 +408,7 @@ Supporting Indexes
 ~~~~~~~~~~~~~~~~~~
 
 ``mongosync`` syncs indexes from the source cluster to the destination
-cluster. But, when syncing from a replica set to a sharded cluster,
+cluster. When syncing from a replica set to a sharded cluster,
 ``mongosync`` may require an additional index to support the shard key,
 which may not exist on the source cluster.
 
