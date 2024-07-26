@@ -1,8 +1,8 @@
 .. _c2c-beta-namespace-remapping:
 
-============================
-Change Collection Namespaces
-============================
+==========================
+Change Database Namespaces
+==========================
 
 .. default-domain:: mongodb
 
@@ -15,8 +15,8 @@ Change Collection Namespaces
 .. include:: /includes/beta-feature
 
 Starting in ``mongosync`` beta 1.8, you can remap namespaces during sync.
-This allows you to take data in one collection on the source cluster and sync
-it into a collection with a different name or database on the destination cluster.
+This allows you to take data in one database on the source cluster and sync
+it into a database with a different name on the destination cluster.
 
 Syntax
 ------
@@ -34,12 +34,10 @@ the :ref:`/start <c2c-api-start>` command:
          "namespaceRemap": [
             {
                "from": {
-                  "database": "<source-database>",
-                  "collection": "<source-collection>"
+                  "database": "<source-database>"
                },
                "to": {
-                  "database": "<destination-database>",
-                  "collection": "<destination-collection>"
+                  "database": "<destination-database>"
                }
             }
          ]
@@ -65,8 +63,8 @@ Steps
    .. step:: Sync the clusters with namespace remapping
 
       The following :ref:`/start <c2c-api-start>` call starts sync and remaps the
-      ``accounts.new_england`` collection on the source cluster to
-      ``accounts.us_northeast`` on the destination cluster:
+      ``accounts`` database on the source cluster to
+      ``sales`` database on the destination cluster:
 
       .. literalinclude:: /includes/api/requests/start-namespace-remap.sh
          :language: shell
