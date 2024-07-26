@@ -180,17 +180,17 @@ Request Body Parameters
    * - ``namespaceRemap[n].`` ``from.database``
      - string
      - Required
-     - Database to read from the source cluster.
+     - Database to read from on the source cluster.
 
        .. versionadded:: 1.8 Beta
 
    * - ``namespaceRemap[n].`` ``from.collection``
      - string
      - Conditional
-     - Collection to read from the source cluster. If the ``collection`` field
+     - Collection to read from on the source cluster. If the ``collection`` field
        is present in the ``from`` document, it must also occur in the ``to``
        document. If it's absent from both documents, ``mongosync`` remaps all
-       collections in database.
+       collections in the database.
 
        .. versionadded:: 1.8 Beta
 
@@ -205,14 +205,14 @@ Request Body Parameters
    * - ``namespaceRemap[n].`` ``to.database``
      - string
      - Required
-     - Database to write to the destination cluster.
+     - Database to write to on the destination cluster.
 
        .. versionadded:: 1.8 Beta
 
    * - ``namespaceRemap[n].`` ``to.collection``
      - string
      - Conditional
-     - Collection to write to in the destination cluster. If the ``collection``
+     - Collection to write to on the destination cluster. If the ``collection``
        field is present in the ``to`` document, it must also occur in the ``from``
        document. If it's absent from both documents, ``mongosync`` remaps all
        collections in database.
