@@ -17,6 +17,7 @@ The following restrictions apply to namespace remapping:
   in the migration.
 
   For example:
+
   .. code-block:: javascript
 
      {
