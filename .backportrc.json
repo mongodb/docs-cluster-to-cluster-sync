@@ -1,0 +1,17 @@
+// .backportrc.json
+{
+    // example repo info
+    "repoOwner": "mongodb",
+    "repoName": "docs-cluster-to-cluster-sync",
+  
+    // `targetBranch` option allows to automatically backport every PR to a specific branch without the need for labels
+    "targetBranches": ["backport-gha-test"],
+  
+    // the branches available to backport to
+    "targetBranchChoices": ["backport-gha-test-2"], // will be "beta"
+  
+    // In this case, adding the label "backport-to-production" will backport the PR to the "production" branch
+    "branchLabelMapping": {
+      "^backport-to-(.+)$": "$1"
+    }
+  }
