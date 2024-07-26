@@ -11,7 +11,7 @@ The following restrictions apply to namespace remapping:
 
   For more information, see :limit:`Restrictions on Database Names for Windows`.
 
-- Use namespace remapping to change the case of the database name is not supported.
+- Use of namespace remapping to change the case of the database name is not supported.
 
 - The database on the destination cluster cannot contain a collection with
   the same name as any preexisting collections.
@@ -19,15 +19,8 @@ The following restrictions apply to namespace remapping:
 - Collections created by a namespace remap cannot conflict with other collections
   in the migration.
 
-  For example:
-
-  .. code-block:: javascript
-
-     {
-         from: { database: "us" },
-         to: { database: "unitedstates" }
-     }
-
-  If ``unitedstates`` is another database on the source cluster and both ``us``
-  and ``unitedstates`` contain a ``ny`` collection, the migration fails since it's
-  attempting to merge the collections on the destination cluster.
+  For example, consider a source cluster with two databases, ``us`` and ``unitedstates``
+  and a namespace remapping that changes ``us`` to ``unitedstates``, effectively
+  merging the two databases into one.  If both databases contain a ``ny`` collection,
+  the migration fails since it attempts to merge the two collections on the destination
+  cluster.
