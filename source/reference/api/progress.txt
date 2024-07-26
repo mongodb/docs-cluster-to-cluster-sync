@@ -72,7 +72,7 @@ Behavior
 - ``estimatedTotalBytes`` may change throughout the collection copy 
   phase if documents are inserted or deleted on the source cluster.
 
-- ``estimatedCopiedBytes`` is never be greater than 
+- ``estimatedCopiedBytes`` is never greater than 
   ``estimatedTotalBytes``. Progress reaches 100% at the end of the 
   collection copy phase (``estimatedCopiedBytes`` = 
   ``estimatedTotalBytes``).
