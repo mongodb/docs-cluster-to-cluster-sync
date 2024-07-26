@@ -533,4 +533,7 @@ Endpoint Protection
 .. |endpoint| replace:: ``start``
 .. include:: /includes/fact-api-endpoint
 
+Valid Namespace Remapping
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
+.. include:: /includes/fact-valid-namespace-remap
