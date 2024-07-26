@@ -1,8 +1,8 @@
 // .backportrc.json
 {
     // example repo info
-    "repoOwner": "Ian-Fogelman",
-    "repoName": "BackportGHActionTest",
+    "repoOwner": "mongodb",
+    "repoName": "docs-cluster-to-cluster-sync",
   
     // `targetBranch` option allows to automatically backport every PR to a specific branch without the need for labels
     "targetBranches": ["backport-gha-test"],
