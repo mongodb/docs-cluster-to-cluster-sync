@@ -26,29 +26,9 @@ Updates to ``mongosync`` ``/progress`` API endpoint
 
 - Returns a top-level boolean ``success`` field.
 
-- Returns the integer ``totalEventsApplied`` field, which approximates 
-  the number of change events applied to a destination cluster by an 
-  instance of ``mongosync``.
+- Returns a new ``totalEventsApplied`` field.
 
-- Reports per-partition progress tracking with the following changes:
-
-  - Calls to ``/progress`` before ``mongosync`` reaches the collection 
-    copy phase return 0 for ``estimatedCopiedBytes`` and 1 for 
-    ``estimatedTotalBytes``.
-
-  - ``estimatedTotalBytes`` may change throughout the collection copy 
-    phase if documents are inserted or deleted on the source cluster.
-
-  - ``estimatedCopiedBytes`` is never be greater than 
-    ``estimatedTotalBytes``. Progress reaches 100% at the end of 
-    the collection copy phase 
-    (``estimatedCopiedBytes`` = ``estimatedTotalBytes``).
-
-  - When performing a live upgrade from an earlier version to 1.8.0 or 
-    higher, the collection copy data starts over from 
-    ``[0 bytes copied / 1 bytes total]``. After a live upgrade, 
-    ``/progress`` only reports the progress of data copied after the 
-    upgrade completed.
+- Reports per-partition progress tracking
 
 See the :ref:`c2c-api-progress` documentation for more details.
 
@@ -88,11 +68,6 @@ Issues Fixed:
 - Fixed a bug introduced in v1.0.0 that caused the ``mongosync`` 
   ``/progress`` endpoint to potentially return incorrect 
   ``totalBytes`` for sharded clusters.
-
-- Fixed a bug introduced in v1.7.0 that could decrease the ``size`` of 
-  capped collections by up to 256 bytes. This bug affected capped 
-  collection resizing when migrating from a source with a version less 
-  than 7.0 to a destination with 7.0 or greater.
 
 
 Minimum Supported Version
