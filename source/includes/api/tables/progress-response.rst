@@ -93,7 +93,7 @@
          value of the ``estimatedTotalBytes`` due to retried operations.
          A comparison of ``estimatedTotalBytes`` and
          ``estimatedCopiedBytes`` is not an accurate indicator of
-         migration progress.  
+         migration progress.
 
    * - ``directionMapping``
      - object
@@ -128,3 +128,72 @@
 
        - When ``mongosync`` starts up, this field returns ``null`` until
          ``mongosync`` identifies the coordinator.
+
+   * - ``verification``
+     - document
+     - Provides information on the phase and progress of verification checks
+       performed by the embedded verifier.
+
+       .. versionadded:: 1.8
+
+   * - ``verification.source``
+     - document
+     - Provides information on the phase and progress of verification checks
+       running on the source cluster.
+
+       .. versionadded:: 1.8
+
+   * - ``verification.source.`` ``lagTimeSeconds``
+     - integer
+     - Time in seconds since the last verification check was performed
+       on the source cluster.
+
+       .. versionadded:: 1.8
+
+   * - ``verification.source.`` ``phase``
+     - string
+     - Current phase of the verification process on the source cluster.
+
+       .. versionadded:: 1.8
+
+   * - ``verification.source.`` ``scannedCollectionCount``
+     - integer
+     - Number of collections scanned by the embedded verifier on the source cluster.
+
+       .. versionadded:: 1.8
+
+   * - ``verification.source.`` ``totalCollectionCount``
+     - integer
+     - Number of collections on the source cluster to include in verification checks.
+
+   * - ``verification.destination``
+     - document
+     - Provides information on the phase and progress of verification checks
+       running on the destination cluster.
+
+       .. versionadded:: 1.8
+
+   * - ``verification.destination.`` ``lagTimeSeconds``
+     - integer
+     - Time in seconds since the last verification check performed
+       on the source cluster.
+
+       .. versionadded:: 1.8
+
+   * - ``verification.destination.`` ``phase``
+     - string
+     - Current phase of the verification process on the destination cluster.
+
+       .. versionadded:: 1.8
+
+   * - ``verification.destination.`` ``scannedCollectionCount``
+     - integer
+     - Number of collections scanned by the embedded verifier on the destination cluster.
+
+       .. versionadded:: 1.8
+
+   * - ``verification.destination.`` ``totalCollectionCount``
+     - integer
+     - Number of collections on the destination cluster to include in verification
+       checks.
+

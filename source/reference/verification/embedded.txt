@@ -1,0 +1,101 @@
+
+.. _c2c-embedded-verifier:
+
+=============================
+Verify with Embedded Verifier
+=============================
+
+.. default-domain:: mongodb
+
+.. facet::
+   :name: genre
+   :values: tutorial
+
+.. contents:: On this page
+   :local:
+   :backlinks: none
+   :depth: 1
+   :class: singlecol
+
+.. versionadded:: 1.8
+
+   ``mongosync`` includes an embedded verifier to confirm the correct and
+   successful sync of data from the source cluster to the destination cluster.
+
+About this Task
+---------------
+
+Compatibility
+~~~~~~~~~~~~~
+
+The embedded verifier is not available in ``mongosync`` 1.7 and earlier.
+
+For alternative verification methods, see :ref:`c2c-verification`.
+
+Limitations
+~~~~~~~~~~~
+
+.. include:: /includes/fact-verifier-limitations
+
+For alternative verification methods, see :ref:`c2c-verification`.
+
+Steps
+-----
+
+.. procedure::
+   :style: normal
+
+   .. step:: Initialize ``mongosync``
+
+     Initialize the ``mongosync`` process:
+
+     .. code-block:: sh
+
+        ./bin/mongosync \
+            --logPath /var/log/mongosync \
+            --cluster0 "mongodb://clusterAdmin:superSecret@clusterOne01.fancyCorp.com:20020,clusterOne02.fancyCorp.com:20020,clusterOne03.fancyCorp.com:20020" \
+            --cluster1 "mongodb://clusterAdmin:superSecret@clusterTwo01.fancyCorp.com:20020,clusterTwo02.fancyCorp.com:20020,clusterTwo03.fancyCorp.com:20020"
+
+   .. step:: Start the Sync
+
+      To start syncing data from the source cluster to the destination, use the
+      :ref:`/start <c2c-api-start>` endpoint. To use the embedded verifier, set
+      the ``verificationMode`` field to ``full``.
+
+      .. code-block:: sh
+
+        curl localhost:27182/api/v1/start -XPOST \
+            --data ' {
+                "source": "cluster0",
+                "destination": "cluster1",
+                "verificationMode": "full"
+            } '
+
+      Example output:
+
+      .. literalinclude:: /includes/api/responses/success.json
+         :language: json
+         :copyable: false
+
+   .. step:: Check Progress
+
+      To check the status of the sync, use the :ref:`/progress <c2c-api-progress>`
+      endpoint:
+
+      .. literalinclude:: /includes/api/requests/progress.sh
+         :language: shell
+
+      Example output:
+
+      .. literalinclude:: /includes/api/responses/progress.json
+         :language: json
+         :copyable: false
+
+      Check the ``verification`` response field for information on the status of
+      the embedded verifier.
+
+Learn More
+----------
+
+- :ref:`/start <c2c-api-start>`
+- :ref:`/progress <c2c-api-progress>`

@@ -92,13 +92,13 @@ Request Body Parameters
          any indexes created during migration on the source cluster.
 
        - ``never`` causes ``mongosync`` to skip building unnecessary indexes 
-         during sync.  This can improve migration performance, especially with 
+         during sync. This can improve migration performance, especially with 
          index heavy workloads.
 
          .. warning::
 
             Do **not** manually build indexes while ``mongosync`` is 
-            performing a migration.  Wait until the migration is fully 
+            performing a migration. Wait until the migration is fully 
             committed.
 
          For more information on the indexes it does build, see 
@@ -139,6 +139,10 @@ Request Body Parameters
 
        .. include:: /includes/api/facts/namespace-explanation.rst
 
+       The ``/start`` command returns an error when
+       the namespace filtering is enabled and ``verificationMode`` is
+       not ``none``.
+
        .. versionadded:: 1.1
 
    * - ``excludeNamespaces``
@@ -148,16 +152,24 @@ Request Body Parameters
 
        .. include:: /includes/api/facts/namespace-explanation.rst
 
+       The ``/start`` command returns an error when
+       namespace filtering is enabled and ``verificationMode`` is
+       not ``none``.
+
        .. versionadded:: 1.6
 
    * - ``reversible``
      - boolean
      - Optional
      - If set to ``true``, enables the sync operation to be
-       reversed. 
+       reversed.
 
-       To reverse sync, the ``enableUserWriteBlocking`` field must be set 
-       to ``true``.      
+       To reverse sync, the ``enableUserWriteBlocking`` field must be set
+       to ``true``.
+
+       The ``/start`` command returns an error when
+       the reverse sync is enabled and ``verificationMode`` is
+       not ``none``.
 
        This option is not supported for the following configurations:
 
@@ -182,6 +194,22 @@ Request Body Parameters
 
        .. versionadded:: 1.1
 
+   * - ``verificationMode``
+     - string
+     - Optional
+     - Configures the embedded verifier.
+
+       The default verification mode is ``full``.
+
+       The ``/start`` command returns an error when
+       namespace filtering or reversible sync is started
+       with the verifier.
+
+       For more information, see :ref:`c2c-start-verifier`.
+
+       .. versionadded:: 1.8
+
+
 .. _c2c-api-start-sharding:
 
 Sharding Parameters
@@ -205,16 +233,16 @@ The ``sharding`` option has the following parameters:
 
    * - ``createSupportingIndexes``
      - boolean
-     - Optional. Sets whether sync creates a supporting index 
-       for the shard key, if none exists.  Defaults to ``false``.
+     - Optional. Sets whether sync creates a supporting index
+       for the shard key, if none exists. The default is ``false``.
 
    * - ``shardingEntries``
      - array of documents
-     - Required. Sets the namespace and key of collections to shard 
+     - Required. Sets the namespace and key of collections to shard
        during sync.
 
        Collections not included in this array sync to unsharded 
-       collections on the destination cluster.  If set with an empty
+       collections on the destination cluster. If set with an empty
        array, no collections are sharded.
 
    * - | ``shardingEntries``
@@ -241,7 +269,7 @@ The ``sharding`` option has the following parameters:
        For more information, see :ref:`shard-key`.
 
 ``mongosync`` throws an error if the ``sharding`` option is not set when
-syncing from a replica set to a sharded cluster.  ``mongosync`` also
+syncing from a replica set to a sharded cluster. ``mongosync`` also
 throws an error if the ``sharding`` option is set with any other
 configuration.
 
@@ -342,7 +370,7 @@ Pre-Split Chunks
 .. versionadded:: 1.1
 
 When ``mongosync`` syncs to a sharded cluster, it pre-splits chunks for
-sharded collections on the destination cluster.  This is supported in the
+sharded collections on the destination cluster. This is supported in the
 following configurations:
 
 * Sync from a replica set to a sharded cluster.
@@ -368,7 +396,7 @@ Supporting Indexes
 .. versionadded:: 1.1
 
 ``mongosync`` syncs indexes from the source cluster to the destination
-cluster.  But, when syncing from a replica set to a sharded cluster,
+cluster. When syncing from a replica set to a sharded cluster,
 ``mongosync`` may require an additional index to support the shard key,
 which may not exist on the source cluster.
 
@@ -426,7 +454,7 @@ to copy the collection can block the collection from sharding on the destination
 
 To check whether it is safe to rename collections, call the 
 :ref:`c2c-api-progress` endpoint and check the value of the 
-``collectionCopy.estimatedCopiedBytes`` field in the return document.  
+``collectionCopy.estimatedCopiedBytes`` field in the return document. 
 
 * A value of 0 indicates that ``mongosync`` has not started to copy the
   collection.
@@ -445,7 +473,7 @@ Required Indexes
 ~~~~~~~~~~~~~~~~
 
 When you call ``/start`` with the ``buildIndexes`` option set to ``never``,
-``mongosync`` skips building unnecessary indexes.  
+``mongosync`` skips building unnecessary indexes.
 
 Indexes that are always built include:
 
@@ -463,4 +491,33 @@ Endpoint Protection
 .. |endpoint| replace:: ``start``
 .. include:: /includes/fact-api-endpoint
 
+.. _c2c-start-verifier:
+
+Embedded Verifier
+~~~~~~~~~~~~~~~~~
+
+Starting in 1.8, ``mongosync`` provides an embedded verifier to
+determine whether data transfer from the source cluster to the
+destination was successful.
+
+The specific verification checks performed by the embedded
+verifier are set using the ``verificationMode`` parameter.
+
+The ``verificationMode`` parameter supports the following
+verifier modes:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Mode
+     - Description
+   * - ``full``
+     - Performs all available verification checks.
+
+       This is the default mode.
+   * - ``none``
+     - Disables the embedded verifier.
+
+The ``/start`` endpoint returns an error if you enable verification checks that
+are not supported by the source or destination cluster.
 
