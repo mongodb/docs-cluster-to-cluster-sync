@@ -21,6 +21,6 @@ The following restrictions apply to namespace remapping:
 
   For example, consider a source cluster with two databases, ``us`` and ``unitedstates``
   and a namespace remapping that changes ``us`` to ``unitedstates``, effectively
-  merging the two databases into one.  If both databases contain a ``ny`` collection,
+  merging the two databases into one. If both databases contain a ``ny`` collection,
   the migration fails since it attempts to merge the two collections on the destination
   cluster.
