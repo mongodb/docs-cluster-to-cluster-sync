@@ -43,6 +43,14 @@ the :ref:`/start <c2c-api-start>` command:
          ]
       } '
 
+Behavior
+--------
+
+Valid Namespace Remapping
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. include:: /includes/fact-valid-namespace-remap
+
 Steps
 -----
 
