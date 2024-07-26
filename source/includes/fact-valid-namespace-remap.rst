@@ -1,17 +1,20 @@
 
 The following restrictions apply to namespace remapping:
 
-- Remap entries cannot contain the ``system``, ``config``, ``admin``, ``local``,
-  or the internal ``mongosync`` databases.
+- Namespace remapping doesn't support changes to collection names.
 
-- The database name on the destination cluster must be valid under
-  :limit:`Restrictions on Database Names for Windows`.
+- Namespace remapping doesn't permit writing to the ``system``, ``config``, ``admin``,
+  or ``local`` databases, or writing to internal databases used by ``mongosync``.
 
-- The destination database must not differ in only letter cases. That is, from
-  ``Accounts`` to ``accounts``.
+- The database name on the destination cluster must be valid under Windows
+  restrictions.
+
+  For more information, see :limit:`Restrictions on Database Names for Windows`.
+
+- Use namespace remapping to change the case of the database name is not supported.
 
 - The database on the destination cluster cannot contain a collection with
-  the same name as any pre-existing collections.
+  the same name as any preexisting collections.
 
 - Collections created by a namespace remap cannot conflict with other collections
   in the migration.
@@ -26,5 +29,5 @@ The following restrictions apply to namespace remapping:
      }
 
   If ``unitedstates`` is another database on the source cluster and both ``us``
-  and ``unitedstates`` have a ``ny`` collection, the migration fails since it is
+  and ``unitedstates`` contain a ``ny`` collection, the migration fails since it's
   attempting to merge the collections on the destination cluster.
