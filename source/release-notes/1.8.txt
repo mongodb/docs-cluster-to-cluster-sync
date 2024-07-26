@@ -66,9 +66,9 @@ To learn more, see :ref:`c2c-beta-migration-name`.
 Namespace Remapping
 ~~~~~~~~~~~~~~~~~~~
 
-Starting in 1.8 Beta, ``mongosync`` can sync collection data from one namespace
+Starting in 1.8 Beta, ``mongosync`` can sync data from one namespace
 on the source cluster into a new namespace on the destination. This allows you
-to change database and collection names during migration.
+to change database names during migration.
 
 For more information, see :ref:`c2c-beta-namespace-remapping`.
 
