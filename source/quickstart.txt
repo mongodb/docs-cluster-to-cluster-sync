@@ -40,6 +40,8 @@ the rest of the {+c2c-product-name+} documentation.
 Follow the instructions below to set up {+c2c-product-name+}, connect
 your clusters, and synchronize your data.
 
+.. _c2c-quickstart-setup:
+
 Setup
 -----
 
@@ -170,6 +172,8 @@ Connect the Clusters
 
    .. step:: Initialize mongosync
 
+      .. _c2c-initialize:
+      
       ``mongosync`` must create an initial connection to the source and
       destination clusters before it can start to sync data. To create the initial
       connection, issue the following command with your connection

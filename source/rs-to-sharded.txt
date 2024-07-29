@@ -1,0 +1,98 @@
+.. _c2c-rs-to-sharded:
+
+========================================
+Sync a Replica Set to a Sharded Cluster
+========================================
+
+.. default-domain:: mongodb
+
+.. contents:: On this page
+   :local:
+   :backlinks: none
+   :depth: 1
+   :class: twocols
+
+This page outlines the procedure to sync data between a replica set and a 
+sharded cluster using :program:`mongosync`. To perform a sync between two
+replica sets, see :ref:`c2c-quickstart`.
+
+Before you Begin
+----------------
+
+Before you begin your sync, you must define your source replica set, your 
+destination sharded cluster, and a administrative user that has permissions in 
+both clusters. You must also download ``mongosync``. To learn more, see 
+the :ref:`setup <c2c-quickstart-setup>` instructions.
+
+Steps 
+-----
+
+.. procedure::
+   :style: normal
+
+   .. step:: Connect the replica set and sharded cluster. 
+
+      ``mongosync`` must create an initial connection to the source and 
+      destination clusters before it can start to sync data.
+      Follow the :ref:`connection instructions <c2c-conn-top-level>` for your 
+      cluster architecture to connect to the :binary:`mongos` instance in your 
+      cluster.
+
+      To format the connection string for your replica set, use
+      the :urioption:`replicaSet` option. 
+
+      For more information, see :ref:`Initialize mongosync <c2c-initialize>`.
+
+   .. step:: Start synchronization.
+
+       The :ref:`start <c2c-api-start>` endpoint initiates data 
+       synchronization. 
+       
+       To sync from a replica set to a sharded cluster, set the 
+       ``sharding`` option for the ``start`` command to shard collections on 
+       the destination cluster. For more information, see 
+       :ref:`Sharding Parameters <c2c-api-start-sharding>`.
+
+       The ``sharding.shardingEntries`` array specifies the collections to shard.
+       Collections that are not listed in this array replicate as unsharded. For
+       more information, see :ref:`Shard Replica Sets <c2c-shard-replica-sets>`.
+
+       The following example starts a sync from a replica set to a sharded
+       cluster: 
+
+       Request
+       ~~~~~~~
+
+       .. literalinclude:: /includes/api/requests/start-rs-shard.sh
+
+       Response
+       ~~~~~~~~
+
+       .. literalinclude:: /includes/api/responses/success.json
+          :language: json
+          :copyable: false
+
+Limitations
+-----------
+
+Sync from a replica set to a sharded cluster has the following limitations:
+
+- You cannot use the :ref:`reverse <c2c-api-reverse>` endpoint when clusters 
+  have different topologies. 
+
+- .. include:: /includes/limitations-rs-to-sharded.rst
+
+- If the source replica set has :ref:`arbiters <c2c-faq-arbiters>`, the source 
+  replica set must have more than 2 non-arbiter nodes and you must sync from a 
+  non-arbiter node. 
+
+Learn More
+---------
+
+To learn more about ``mongosync``, see:
+
+- :ref:`Use mongosync on Sharded Clusters <c2c-sharded-clusters>`
+- :ref:`About mongosync <about-mongosync>`
+- :ref:`mongosync <c2c-mongosync>`
+- :ref:`mongosync States <c2c-states>`
+
