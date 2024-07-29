@@ -90,8 +90,8 @@ Sharded Clusters
 - Sync from a replica set to a sharded cluster has the following
   limitations:
 
-     .. include:: /includes/limitations-rs-to-sharded.rst
-
+  .. include:: /includes/limitations-rs-to-sharded.rst
+    
 - Within a collection, the ``_id`` field must be unique across all of
   the shards in the cluster. See :ref:`sharded-clusters-unique-indexes`
   for more details.
