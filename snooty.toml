@@ -22,7 +22,8 @@ toc_landing_pages = ["/quickstart",
                      "/faq",
                      "/reference/beta-program",
                      "/reference/collection-level-filtering",
-                     "/reference/verification"
+                     "/reference/verification",
+                     "/reference/mongosync"
                     ]
 
 [constants]
