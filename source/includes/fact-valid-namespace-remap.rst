@@ -11,7 +11,7 @@ The following restrictions apply to namespace remapping:
 
   For more information, see :limit:`Restrictions on Database Names for Windows`.
 
-- Remapped database names on the destination cluster cannot differ in case.
+- Remapped database names on the destination cluster cannot differ only in case.
 
 - The database on the destination cluster cannot contain a collection with
   the same name as any preexisting collections.
