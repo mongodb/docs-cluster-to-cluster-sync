@@ -165,37 +165,13 @@ Request Body Parameters
    * - ``namespaceRemap``
      - array
      - Optional
-     - Array of documents that specify namespace changes to make during sync.
+     - .. important::
+          
+          This feature is only available in the :ref:`c2c-beta-program`.
 
-       .. versionadded:: 1.8 Beta
+       Array of documents that specify namespace changes to make during sync.
 
-   * - ``namespaceRemap[n].`` ``from``
-     - document
-     - Required
-     - Document that specifies the database on the source cluster
-       to read from in the remapping operation.
-
-       .. versionadded:: 1.8 Beta
-
-   * - ``namespaceRemap[n].`` ``from.database``
-     - string
-     - Required
-     - Database to read from on the source cluster.
-
-       .. versionadded:: 1.8 Beta
-
-   * - ``namespaceRemap[n].`` ``to``
-     - document
-     - Required
-     - Document that specifies the database on the destination cluster
-       to write to in the remapping operation.
-
-       .. versionadded:: 1.8 Beta
-
-   * - ``namespaceRemap[n].`` ``to.database``
-     - string
-     - Required
-     - Database to write to on the destination cluster.
+       For more information see, :ref:`c2c-beta-namespace-remapping`.
 
        .. versionadded:: 1.8 Beta
 
