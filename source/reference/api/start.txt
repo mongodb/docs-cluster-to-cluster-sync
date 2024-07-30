@@ -172,7 +172,7 @@ Request Body Parameters
 
        Array of documents that specify namespace changes to make during sync.
 
-       For more information, see :ref:`_c2c-beta-namespace-remapping`.
+       For more information, see :ref:`c2c-beta-namespace-remapping`.
 
        .. versionadded:: 1.8 Beta
 
