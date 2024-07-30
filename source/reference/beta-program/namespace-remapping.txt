@@ -49,6 +49,7 @@ Parameter Fields
 .. list-table::
    :header-rows: 1
    :stub-columns: 1
+   :widths: 20 13 13 54
 
    * - Field
      - Type
