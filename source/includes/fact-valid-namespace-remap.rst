@@ -13,14 +13,23 @@ The following restrictions apply to namespace remapping:
 
 - Remapped database names on the destination cluster cannot differ only in case.
 
-- The database on the destination cluster cannot contain a collection with
-  the same name as any preexisting collections.
+- The remap cannot produce namespace conflicts on the destination cluster.
 
-- Collections created by a namespace remap cannot conflict with other collections
-  in the migration.
+  For example:
 
-  For example, consider a source cluster with two databases, ``us`` and ``unitedstates``
-  and a namespace remapping that changes ``us`` to ``unitedstates``, effectively
-  merging the two databases into one. If both databases contain a ``ny`` collection,
-  the migration fails since it attempts to merge the two collections on the destination
-  cluster.
+  .. code-block:: javascript
+     :copyable: false
+
+     "namespaceRemap": [
+       {
+          "from": { "database": "us-west" },
+          "to": {"database": "us-accounts" }
+       },
+       {
+          "from": { "database": "us-south" },
+          "to": { "database": "us-accounts" }
+       }
+     ]
+
+  This remap would generate an namespace error if each database on the source cluster 
+  contains a ``texas`` collection.
