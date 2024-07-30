@@ -94,9 +94,8 @@ Beta Features
    :titlesonly:
 
    /reference/beta-program/abc-migration
-   /reference/beta-program/namespace-remapping
-   /reference/beta-program/document-filtering
-   /reference/beta-program/orr 
-   /reference/beta-program/destinationDataHandling 
-   /reference/beta-program/migration-name
    /reference/beta-program/many-to-one
+   /reference/beta-program/document-filtering
+   /reference/beta-program/destinationDataHandling 
+   /reference/beta-program/namespace-remapping
+   /reference/beta-program/orr 

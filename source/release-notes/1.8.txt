@@ -21,7 +21,7 @@ Release Notes for mongosync 1.8
 
 **Upcoming**
 
-{+c2c-product-name+} Beta Program 
+{+c2c-full-beta-program+}
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. include:: /includes/beta-program-intro.rst
@@ -55,13 +55,6 @@ Many-to-One Migrations
 .. include:: /includes/many-to-one-cluster.rst
 
 To learn more, see :ref:`c2c-beta-many-to-one`.
-
-Set a Migration Name
-````````````````````
-
-.. include:: /includes/migrationName.rst
-
-To learn more, see :ref:`c2c-beta-migration-name`.
 
 Namespace Remapping
 ~~~~~~~~~~~~~~~~~~~

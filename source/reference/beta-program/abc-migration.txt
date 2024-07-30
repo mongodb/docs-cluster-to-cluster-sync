@@ -52,6 +52,11 @@ before the second migration (B->C) starts committing.
    review the :ref:`{+c2c-full-beta-program+} Disclaimer 
    <c2c-beta-program-disclaimer>`.
 
+Migration Name 
+~~~~~~~~~~~~~~
+
+.. include:: /includes/migration-name-limitation.rst
+
 Example 
 -------
 
