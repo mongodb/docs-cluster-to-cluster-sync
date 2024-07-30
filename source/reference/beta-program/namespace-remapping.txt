@@ -1,8 +1,8 @@
 .. _c2c-beta-namespace-remapping:
 
-==========================
-Change Database Namespaces
-==========================
+=====================
+Change Database Names
+=====================
 
 .. default-domain:: mongodb
 
@@ -14,15 +14,15 @@ Change Database Namespaces
 
 .. include:: /includes/beta-feature
 
-Starting in ``mongosync`` beta 1.8, you can remap namespaces during sync.
-This allows you to take data in one database on the source cluster and sync
-it into a database with a different name on the destination cluster.
+Starting in ``mongosync`` beta 1.8, you can remap database names during sync.
+This allows you to take data in one database on the source cluster and migrate
+it into a different database on the destination cluster.
 
 Syntax
 ------
 
-To remap a namespace during sync, use the ``namespaceRemap`` field when you call
-the :ref:`/start <c2c-api-start>` command:
+The :ref:`/start <c2c-api-start>` API endpoint accepts an optional ``namespaceRemap``
+parameter with the following syntax:
 
 .. code-block:: sh
 

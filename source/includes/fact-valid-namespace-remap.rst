@@ -13,6 +13,23 @@ The following restrictions apply to namespace remapping:
 
 - Use of namespace remapping to change the case of the database name is not supported.
 
+  For example, this remap would generate an error since the two databases it attempts
+  to create different only in case:
+
+  .. code-block:: javascript
+     :copyable: false
+
+     "namespaceRemap": [
+        {
+           "from": { "database": "accounts" },
+           "to": { "database": "sales" }
+        },
+        {
+           "from": { "database": "logistics" },
+           "to": { "database": "Sales" }
+        }
+     ]
+
 - The database on the destination cluster cannot contain a collection with
   the same name as any preexisting collections.
 
