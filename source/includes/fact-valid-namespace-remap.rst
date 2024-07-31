@@ -1,8 +1,6 @@
 
 The following restrictions apply to namespace remapping:
 
-- Namespace remapping doesn't support changes to collection names.
-
 - Namespace remapping doesn't permit writing to the ``system``, ``config``, ``admin``,
   or ``local`` databases, or writing to internal databases used by ``mongosync``.
 
@@ -31,5 +29,5 @@ The following restrictions apply to namespace remapping:
        }
      ]
 
-  This remap would generate an namespace error if each database on the source cluster 
-  contains a ``texas`` collection.
+  If each database on the source cluster contains a ``texas`` collection,
+  ``mongosync`` may fail, corrupt data, or exhibit unexpected behavior.
