@@ -73,7 +73,7 @@ Parameter Fields
    * - ``namespaceRemap[n].`` ``from.database``
      - string
      - Required
-     - Database to read from on the source cluster.
+     - Database to migrate from on the source cluster.
 
        .. versionadded:: 1.8 Beta
 
@@ -81,14 +81,14 @@ Parameter Fields
      - document
      - Required
      - Document that specifies the database on the destination cluster
-       to write to in the remapping operation.
+       to migrate to in the remapping operation.
 
        .. versionadded:: 1.8 Beta
 
    * - ``namespaceRemap[n].`` ``to.database``
      - string
      - Required
-     - Database to write to on the destination cluster.
+     - Database to migrate to on the destination cluster.
 
        .. versionadded:: 1.8 Beta
 
