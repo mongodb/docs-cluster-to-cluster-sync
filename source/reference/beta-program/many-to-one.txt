@@ -70,7 +70,7 @@ Migration Name
 
 .. include:: /includes/migration-name-limitation.rst
 
-.. _c2c-many-to-one-example: 
+.. _c2c-beta-many-to-one-example: 
 
 Example 
 -------
