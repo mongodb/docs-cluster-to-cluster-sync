@@ -9,5 +9,5 @@ cluster.
 .. include:: /includes/migration-name-limitation.rst
 
 For complete examples, see :ref:`Many-to-One Migrations 
-<c2c-many-to-one-example>` or :ref:`A->B->C Migrations 
+<c2c-beta-many-to-one-example>` or :ref:`A->B->C Migrations 
 <c2c-beta-abc-migration-example>`.

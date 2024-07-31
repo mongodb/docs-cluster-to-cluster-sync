@@ -77,7 +77,7 @@ Example
 
 The following example connects source clusters running on port ``27000``
 and ``27001`` with a destination cluster running on port ``35000``. The command 
-also sets the :ref:`--migrationName <c2c-beta-migration-name>` option to 
+also sets the :option:`--migrationName` option to 
 describe the operations and store migration metadata for each sync.
 
 .. code-block:: shell
@@ -96,4 +96,5 @@ Learn More
 ----------
 
 - :ref:`c2c-beta-program`
-- :ref:`c2c-beta-migration-name`
+- :ref:`c2c-config`
+- :ref:`c2c-mongosync`

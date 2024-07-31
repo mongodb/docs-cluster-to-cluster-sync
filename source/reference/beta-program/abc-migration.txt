@@ -57,7 +57,7 @@ Migration Name
 
 .. include:: /includes/migration-name-limitation.rst
 
-.. _c2c-beta-abc-migration-examle:
+.. _c2c-beta-abc-migration-example:
 
 Example 
 -------
@@ -73,7 +73,7 @@ The following example performs two consecutive migrations that:
 #. Connect the source cluster on port ``27001`` with a destination cluster 
    running on port ``27002``.
 
-The command also sets :ref:`--migrationName <c2c-beta-migration-name>` 
+The command also sets :option:`--migrationName`
 to describe the operations and store migration metadata for each 
 sync.
 
@@ -93,4 +93,5 @@ Learn More
 ----------
 
 - :ref:`c2c-beta-program`
-- :ref:`c2c-beta-migration-name`
+- :ref:`c2c-config`
+- :ref:`c2c-mongosync`
