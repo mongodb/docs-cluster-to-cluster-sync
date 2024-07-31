@@ -163,6 +163,19 @@ Request Body Parameters
 
        .. versionadded:: 1.6
 
+   * - ``namespaceRemap``
+     - array
+     - Optional
+     - .. important::
+          
+          This feature is only available in the :ref:`c2c-beta-program`.
+
+       Array of documents that specify namespace changes to make during sync.
+
+       For more information, see :ref:`c2c-beta-namespace-remapping`.
+
+       .. versionadded:: 1.8 Beta
+
    * - ``reversible``
      - boolean
      - Optional
@@ -475,5 +488,3 @@ Endpoint Protection
 
 .. |endpoint| replace:: ``start``
 .. include:: /includes/fact-api-endpoint
-
-
