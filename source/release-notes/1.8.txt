@@ -35,8 +35,8 @@ A->B->C Migrations
 
 To learn more, see :ref:`c2c-beta-abc-migration`.
 
-Document Filtering in mongosync
-```````````````````````````````
+Document Filtering
+``````````````````
 
 .. include:: /includes/document-filtering-intro.rst
 
@@ -57,13 +57,26 @@ Many-to-One Migrations
 To learn more, see :ref:`c2c-beta-many-to-one`.
 
 Namespace Remapping
-~~~~~~~~~~~~~~~~~~~
+```````````````````
 
-Starting in 1.8 Beta, ``mongosync`` can migrate data from one database
-on the source cluster into a new database on the destination. This allows you
-to change database names during migration.
+Starting in {+c2c-beta-program-short+}, ``mongosync`` can migrate data from one 
+database on the source cluster into a new database on the destination. This 
+allows you to change database names during migration.
 
 For more information, see :ref:`c2c-beta-namespace-remapping`.
+
+Set a Migration Name
+````````````````````
+
+Starting in {+c2c-beta-program-short+}, you can set a migration name for a
+sync operation. For example, you can set a migration name to identify
+each sync operation from multiple source clusters into a destination
+cluster.
+
+To set a migration name, see:
+
+- :setting:`migrationName` configuration file setting
+- :option:`--migrationName` command line option
 
 Updates to ``mongosync`` ``/progress`` API endpoint
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

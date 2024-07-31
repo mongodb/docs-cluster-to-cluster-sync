@@ -12,11 +12,9 @@ Change Database Names
    :depth: 2
    :class: singlecol
 
-.. include:: /includes/beta-feature
+.. include:: /includes/beta-feature.rst
 
-Starting in ``mongosync`` beta 1.8, you can remap database names during sync.
-This allows you to take data in one database on the source cluster and migrate
-it into a different database on the destination cluster.
+.. include:: /includes/namespace-remapping-intro.rst
 
 Syntax
 ------

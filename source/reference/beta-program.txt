@@ -78,11 +78,8 @@ Beta Features
    * - :ref:`c2c-beta-destination-data-handling`
      - .. include:: /includes/destinationDataHandling-introduction.rst
 
-   * - :ref:`c2c-beta-migration-name`
-     - .. include:: /includes/migrationName.rst
-
    * - :ref:`c2c-beta-namespace-remapping`
-     - # DESCRIPTION TBD 
+     - .. include:: /includes/namespace-remapping-intro.rst
 
    * - :ref:`c2c-beta-many-to-one`
      - .. include:: /includes/many-to-one-cluster.rst

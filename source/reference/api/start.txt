@@ -115,9 +115,7 @@ Request Body Parameters
    * - ``documentFilter``
      - document
      - Optional
-     - .. important::
-          
-          This feature is only available in the :ref:`c2c-beta-program`.
+     - .. include:: /includes/beta-feature.rst
 
        .. include:: /includes/document-filtering-intro.rst
        
@@ -166,9 +164,7 @@ Request Body Parameters
    * - ``namespaceRemap``
      - array
      - Optional
-     - .. important::
-          
-          This feature is only available in the :ref:`c2c-beta-program`.
+     - .. include:: /includes/beta-feature.rst
 
        Array of documents that specify namespace changes to make during sync.
 
