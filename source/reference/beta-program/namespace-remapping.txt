@@ -127,6 +127,12 @@ Steps
       .. literalinclude:: /includes/api/requests/start-namespace-remap.sh
          :language: shell
 
+      Example response:
+
+      .. literalinclude:: /includes/api/responses/success.json
+         :language: json
+         :copyable: false
+
 Learn More
 ----------
 
