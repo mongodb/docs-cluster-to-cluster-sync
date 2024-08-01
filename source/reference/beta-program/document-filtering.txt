@@ -16,6 +16,9 @@ Document Filtering
 
 .. include:: /includes/document-filtering-intro.rst
 
+To use document filtering, both the source cluster and destination cluster must 
+use MongoDB 6.0 or later. 
+
 Syntax 
 ------
 

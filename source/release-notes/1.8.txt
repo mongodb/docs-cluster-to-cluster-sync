@@ -59,9 +59,7 @@ To learn more, see :ref:`c2c-beta-many-to-one`.
 Namespace Remapping
 ```````````````````
 
-Starting in {+c2c-beta-program-short+}, ``mongosync`` can migrate data from one 
-database on the source cluster into a new database on the destination. This 
-allows you to change database names during migration.
+.. include:: /includes/namespace-remapping-intro.rst
 
 For more information, see :ref:`c2c-beta-namespace-remapping`.
 

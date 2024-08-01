@@ -9,7 +9,7 @@ Many-to-One Migrations
 .. contents:: On this page
    :local:
    :backlinks: none
-   :depth: 2
+   :depth: 1
    :class: singlecol
 
 .. include:: /includes/beta-feature.rst
