@@ -2,7 +2,7 @@
    :header-rows: 1
    :stub-columns: 1
    :class: compatibility
-   :width: 14 16 14 14 14 14
+   :width: 14 14 16 14 14 14 14
 
    * - 
      - Many-to-One
