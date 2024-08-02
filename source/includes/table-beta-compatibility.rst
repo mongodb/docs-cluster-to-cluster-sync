@@ -5,7 +5,7 @@
 
    * - 
      - Many-to-One
-     - A->B->C
+     - A->B->C Migration
      - Document Filtering
      - Namespace Remapping 
      - Oplog Rollover Resilience
@@ -19,7 +19,7 @@
      - |checkmark|
      - |checkmark|
 
-   * - A->B->C
+   * - A->B->C Migration
      - 
      - 
      - 
