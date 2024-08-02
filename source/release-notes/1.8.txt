@@ -24,11 +24,8 @@ This page describes changes and new features introduced in
 
 **August 2, 2024**
 
-General
-~~~~~~~~
-
 Updates to ``mongosync`` ``/progress`` API endpoint
-```````````````````````````````````````````````````
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 - Returns a top-level boolean ``success`` field.
 
@@ -39,7 +36,7 @@ Updates to ``mongosync`` ``/progress`` API endpoint
 See the :ref:`c2c-api-progress` documentation for more details.
 
 Other Notes
-```````````
+~~~~~~~~~~~
 
 Optimizations:
 
