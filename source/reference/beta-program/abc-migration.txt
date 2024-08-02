@@ -52,6 +52,12 @@ before the second migration (B->C) starts committing.
    review the :ref:`{+c2c-full-beta-program+} Disclaimer 
    <c2c-beta-program-disclaimer>`.
 
+
+For better performance, ensure that the first migration (A->B) reaches 
+``change event application`` before the second migration (B->C) starts. To 
+see if a migration reached ``change event application``, check the ``info`` 
+field in the :ref:`c2c-api-progress` response document.
+
 Migration Name 
 ~~~~~~~~~~~~~~
 

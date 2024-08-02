@@ -87,6 +87,18 @@ Beta Features
    * - :ref:`c2c-beta-orr`
      - .. include:: /includes/orr-intro.rst
 
+Feature Compatibility Matrix
+----------------------------
+
+The following table shows which beta features can be used together:
+
+.. warning:: 
+
+   Unsupported feature combinations do not have guardrails and can result in 
+   undefined behavior.  
+
+.. include:: /includes/table-beta-compatibility.rst
+
 .. toctree::
    :titlesonly:
 

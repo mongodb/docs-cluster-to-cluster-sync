@@ -1,0 +1,52 @@
+.. list-table::
+   :header-rows: 1
+   :stub-columns: 1
+   :class: compatibility
+
+   * - 
+     - Many-to-One
+     - A->B->C
+     - Document Filtering
+     - Namespace Remapping 
+     - Oplog Rollover Resilience
+     - Destination Data Handling 
+
+   * - Many-to-One
+     -
+     - 
+     - 
+     - |checkmark|
+     - |checkmark|
+     - |checkmark|
+
+   * - A->B->C
+     - 
+     - 
+     - 
+     - |checkmark|
+     - |checkmark|
+     - |checkmark|
+
+   * - Document filtering 
+     - 
+     - 
+     - 
+     - |checkmark|
+     - |checkmark|
+     - |checkmark|
+
+   * - Oplog Rollover Resilience
+     - |checkmark|
+     - |checkmark|
+     - |checkmark|
+     - |checkmark|
+     - 
+     - |checkmark|
+
+   * - Destination Data Handling 
+     - |checkmark|
+     - |checkmark|
+     - |checkmark|
+     - |checkmark|
+     - |checkmark|
+     - 
