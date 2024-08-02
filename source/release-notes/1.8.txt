@@ -21,6 +21,17 @@ Release Notes for mongosync 1.8
 
 **Upcoming**
 
+Updates to ``mongosync`` ``/progress`` API endpoint
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+- Returns a top-level boolean ``success`` field.
+
+- Returns a new ``totalEventsApplied`` field.
+
+- Reports per-partition progress tracking
+
+See the :ref:`c2c-api-progress` documentation for more details.
+
 {+c2c-full-beta-program+}
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -34,6 +45,26 @@ A->B->C Migrations
 .. include:: /includes/abc-migration-intro.rst
 
 To learn more, see :ref:`c2c-beta-abc-migration`.
+
+Many-to-One Migrations
+``````````````````````
+
+.. include:: /includes/many-to-one-cluster.rst
+
+To learn more, see :ref:`c2c-beta-many-to-one`.
+
+Set a Migration Name
+````````````````````
+
+Starting in {+c2c-beta-program-short+}, you can set a migration name for a
+sync operation. For example, you can set a migration name to identify
+each sync operation from multiple source clusters into a destination
+cluster.
+
+To set a migration name, see:
+
+- :setting:`migrationName` configuration file setting
+- :option:`--migrationName` command line option
 
 Document Filtering
 ``````````````````
@@ -49,43 +80,12 @@ Handle Destination Data with destinationDataHandling Option
 
 For details, see :ref:`c2c-beta-destination-data-handling`.
 
-Many-to-One Migrations
-``````````````````````
-
-.. include:: /includes/many-to-one-cluster.rst
-
-To learn more, see :ref:`c2c-beta-many-to-one`.
-
 Namespace Remapping
 ```````````````````
 
 .. include:: /includes/namespace-remapping-intro.rst
 
 For more information, see :ref:`c2c-beta-namespace-remapping`.
-
-Set a Migration Name
-````````````````````
-
-Starting in {+c2c-beta-program-short+}, you can set a migration name for a
-sync operation. For example, you can set a migration name to identify
-each sync operation from multiple source clusters into a destination
-cluster.
-
-To set a migration name, see:
-
-- :setting:`migrationName` configuration file setting
-- :option:`--migrationName` command line option
-
-Updates to ``mongosync`` ``/progress`` API endpoint
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-- Returns a top-level boolean ``success`` field.
-
-- Returns a new ``totalEventsApplied`` field.
-
-- Reports per-partition progress tracking
-
-See the :ref:`c2c-api-progress` documentation for more details.
 
 Other Notes
 ~~~~~~~~~~~
