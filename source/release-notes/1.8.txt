@@ -78,8 +78,8 @@ Issues Fixed:
 
 .. include:: /includes/beta-program-intro.rst
 
-In addition to the experimental features, {+c2c-beta-program-short+} includes 
-all changes and new features from ``mongosync`` {+version-dev+}.
+In addition to the beta features, {+c2c-beta-program-short+} includes all 
+changes and new features from ``mongosync`` {+version-dev+}.
 
 To learn more, see :ref:`c2c-beta-program`.
 
