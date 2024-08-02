@@ -26,7 +26,7 @@ and reduces the need to restart the sync.
 Syntax 
 ------
 
-To enable ORR, use ``--oplogRolloverResilienceIntervalSeconds``and specify the 
+To enable ORR, use ``--oplogRolloverResilienceIntervalSeconds`` and specify the 
 interval, in seconds, in which ``mongosync`` checks for eligible change events 
 in the oplog. The default value is ``-1``, which disables ORR.
 
