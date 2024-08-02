@@ -75,6 +75,7 @@ Issues Fixed:
   ``/progress`` endpoint to potentially return incorrect 
   ``totalBytes`` for sharded clusters.
 
+
 {+c2c-full-beta-program+}
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -123,6 +124,7 @@ Oplog Rollover Resilience
 .. include:: /includes/orr-intro.rst
 
 To learn more, see :ref:`c2c-beta-orr`.
+
 
 Minimum Supported Version
 -------------------------

@@ -2,6 +2,7 @@
    :header-rows: 1
    :stub-columns: 1
    :class: compatibility
+   :width: 14 16 14 14 14 14
 
    * - 
      - Many-to-One
@@ -27,11 +28,19 @@
      - |checkmark|
      - |checkmark|
 
-   * - Document filtering 
+   * - Document Filtering 
      - 
      - 
      - 
      - |checkmark|
+     - |checkmark|
+     - |checkmark|
+
+   * - Namespace Remapping 
+     - |checkmark|
+     - |checkmark|
+     - |checkmark|
+     - 
      - |checkmark|
      - |checkmark|
 
