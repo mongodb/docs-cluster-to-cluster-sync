@@ -90,6 +90,8 @@ Beta Features
 Feature Compatibility Matrix
 ----------------------------
 
+.. |checkmark| unicode:: U+2713
+
 The following table shows which beta features can be used together:
 
 .. warning:: 
