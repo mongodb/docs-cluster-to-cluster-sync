@@ -12,7 +12,7 @@ jobs:
       - name: Backport Action
         uses: sorenlouv/backport-github-action@v9.5.1
         with:
-          app-id: ${{ vars.APP_ID }}
+          app-id: ${{ secrets.APP_ID }}
           github_token: ${{ secrets.BACKPORT_TOKEN }}
           auto_backport_label_prefix: backport-to-
 
