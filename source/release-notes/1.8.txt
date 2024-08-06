@@ -22,7 +22,7 @@ This page describes changes and new features introduced in
 1.8.0 Release
 -------------
 
-**August 2, 2024**
+**August 6, 2024**
 
 Updates to ``mongosync`` ``/progress`` API endpoint
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
