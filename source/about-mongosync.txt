@@ -158,7 +158,5 @@ sync job.
 Learn More
 ----------
 
-To learn more about ``mongosync``, see:
-
 - :ref:`mongosync <c2c-mongosync>`
 - :ref:`mongosync States <c2c-states>`
