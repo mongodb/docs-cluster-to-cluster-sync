@@ -22,10 +22,6 @@ Reference
 :ref:`c2c-oplog-sizing`
    Increase the size of the oplog on the source cluster for large data
    sets. 
-
-:ref:`c2c-failure-recovery`
-   Prepare for disaster recovery using :ref:`connections
-   <c2c-connecting>` between clusters.
    
 :ref:`c2c-limitations`
    Limitations of ``mongosync``. 
