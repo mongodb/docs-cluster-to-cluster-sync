@@ -165,7 +165,7 @@ Considerations for Continuous Sync
 Avoid using ``mongosync`` for disaster recovery for the following reasons:
 
 - For the destination cluster to have an up to date, consistent view of the 
-  source cluster’s datam, ``mongosync`` must :ref:`commit <c2c-api-commit>` . 
+  source cluster’s data, ``mongosync`` must :ref:`commit <c2c-api-commit>` . 
   If a disaster occurs and shuts down the source cluster before ``mongosync`` 
   commits, the destination cluster won't have a consistent snapshot of the 
   source data and transactions may be torn. 
