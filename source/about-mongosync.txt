@@ -59,7 +59,7 @@ Avoid using ``mongosync`` for disaster recovery for the following reasons:
   <sharding-balancing>` on both the source and the destination for the lifetime 
   of the sync.
   
-  - If ``mongosync`` is used for continuous synchronization, the balancers 
+  - If you use ``mongosync`` for continuous synchronization, the balancers will
     remain disabled on both clusters.
 
 Details
