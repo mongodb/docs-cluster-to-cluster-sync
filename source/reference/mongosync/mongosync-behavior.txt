@@ -148,8 +148,7 @@ source and destination clusters will eventually hold the same data.
 .. warning:: 
    
      We do not recommend using ``mongosync`` for disaster recovery. To learn 
-     more, see :ref:`considerations for continuous sync 
-     <mongosync-considerations>`.
+     more, see :ref:`mongosync-considerations`.
 
 Individual writes may be reordered or combined as they are relayed from
 source to destination. For a given document, the total number of writes
