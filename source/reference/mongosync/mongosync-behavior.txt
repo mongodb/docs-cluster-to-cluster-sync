@@ -140,10 +140,10 @@ Consistency
 ~~~~~~~~~~~
 
 ``mongosync`` supports :term:`eventual consistency` on the destination
-cluster. Read consistency is not guaranteed on the destination cluster.
-The source and destination clusters may differ at a given point in
-time. However, if new writes are halted on the source cluster, the
-source and destination clusters will eventually hold the same data.
+cluster. Read consistency is not guaranteed on the destination cluster until 
+commit. Before committing, the source and destination clusters may differ at a 
+given point in time. However, if new writes are halted on the source cluster, 
+the source and destination clusters will eventually hold the same data.
 
 .. warning:: 
    
@@ -154,7 +154,7 @@ Individual writes may be reordered or combined as they are relayed from
 source to destination. For a given document, the total number of writes
 may differ between source and destination.
 
-Transactions may appear non-atomically on the destination cluster.
+Transactions might not appear atomically on the destination cluster.
 Retryable writes may not be retryable on the destination cluster.
 
 Profiling

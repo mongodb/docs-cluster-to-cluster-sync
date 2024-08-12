@@ -159,18 +159,17 @@ sync job.
 
 .. _mongosync-considerations:
 
-Considerations for Continuous Sync
-----------------------------------
+Considerations
+--------------
 
-You can periodically run ``mongosync`` against source and destination clusters 
-in continuous synchronization. Using ``mongosync`` for continuous sync has the 
-following considerations:
+Consider the following when using ``mongosync`` for continuous synchronization:
 
 - For the destination cluster to have an up to date, consistent view of the 
   source cluster’s data, ``mongosync`` must :ref:`commit <c2c-api-commit>` . 
   If the source cluster shuts down before ``mongosync`` can commit, such as in 
-  a disaster scenario, the destination cluster won't have a consistent snapshot 
-  of the source data and transactions may be torn.
+  a disaster scenario, the destination cluster might not have a consistent 
+  snapshot of the source data, and transactions might not appear atomically on 
+  the destination cluster.
   
   - For any continuous synchronization use cases with ``mongosync``, ensure that 
     ``mongosync`` commits before cutting over from the source to the 
