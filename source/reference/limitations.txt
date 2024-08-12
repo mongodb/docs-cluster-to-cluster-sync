@@ -62,7 +62,7 @@ General Limitations
 - ``mongosync`` only supports clusters that use the :ref:`WiredTiger 
   <storage-wiredtiger>` storage engine.
 - ``mongosync`` does not support migrating documents that have an empty 
-  top-level timestamp, ``Timestamp(0,0)``.
+  top-level timestamp, such as ``Timestamp(0,0)``.
 
 MongoDB Community Edition
 -------------------------
