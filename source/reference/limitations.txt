@@ -61,8 +61,8 @@ General Limitations
   <https://www.mongodb.com/docs/atlas/atlas-search/create-index/>`__.
 - ``mongosync`` only supports clusters that use the :ref:`WiredTiger 
   <storage-wiredtiger>` storage engine.
-- ``mongosync`` does not support migrating documents that have an empty 
-  top-level timestamp, such as ``Timestamp(0,0)``.
+- You can't sync a collection with any documents that have an empty timestamp,
+  such as ``Timestamp(0,0)``. 
 
 MongoDB Community Edition
 -------------------------
