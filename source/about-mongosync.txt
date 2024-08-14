@@ -159,8 +159,8 @@ sync job.
 
 .. _mongosync-considerations:
 
-Considerations
---------------
+Considerations for Continuous Sync
+----------------------------------
 
 Consider the following when using ``mongosync`` for continuous synchronization:
 
