@@ -22,8 +22,8 @@ build that includes its own set of experimental features.
 Get Started 
 -----------
 
-To request access to the {+c2c-beta-program-short+} binaries, please file a 
-ticket through the `MongoDB Support Portal <https://support.mongodb.com/>`_.
+To request access to the {+c2c-beta-program-short+} binaries, `contact 
+<https://www.mongodb.com/company/contact>`_ Support.
 
 When you first run the {+c2c-beta-program-short+} binary, you must accept the 
 following disclaimer:
