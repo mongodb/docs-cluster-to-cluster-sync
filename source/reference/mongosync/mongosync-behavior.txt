@@ -145,11 +145,6 @@ commit. Before committing, the source and destination clusters may differ at a
 given point in time. However, if new writes are halted on the source cluster, 
 the source and destination clusters will eventually hold the same data.
 
-.. warning:: 
-   
-     We do not recommend using ``mongosync`` for disaster recovery. To learn 
-     more, see :ref:`mongosync-considerations`.
-
 Individual writes may be reordered or combined as they are relayed from
 source to destination. For a given document, the total number of writes
 may differ between source and destination.
