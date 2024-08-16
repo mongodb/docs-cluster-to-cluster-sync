@@ -5,4 +5,4 @@
 
    If read bottlenecks exist on the source cluster or if write
    bottlenecks exist on the destination cluster, decreasing
-   ``loadLevel`` may improve performance. 
+   ``loadLevel`` might improve performance. 
