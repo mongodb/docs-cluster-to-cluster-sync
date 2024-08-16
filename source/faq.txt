@@ -149,8 +149,8 @@ occur if:
 - You insert a document on the source cluster after ``mongosync`` starts. 
   ``mongosync`` may directly copy the document and redundantly apply the insert 
   change event for the document later.
-- You stop and resume ``mongosync``. This can lead to duplicate insertions upon 
-  ``mongosync`` resuming.
+- You stop and resume ``mongosync``. This can lead to duplicate insertions when 
+  ``mongosync`` restarts.
 - ``mongosync`` encounters a transient error and reattempts an insertion that 
   may have already succeeded.
 
