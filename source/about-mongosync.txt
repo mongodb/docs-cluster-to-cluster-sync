@@ -175,12 +175,9 @@ Consider the following when using ``mongosync`` for continuous synchronization:
     ``mongosync`` commits before cutting over from the source to the 
     destination.
 
-- When used with sharded clusters, you must pause :ref:`balancers 
+- When used with sharded clusters, you must stop :ref:`balancers 
   <sharding-balancing>` on both the source and the destination for the lifetime 
-  of the sync.
-  
-  - If you use ``mongosync`` for continuous synchronization, the balancers will
-    remain disabled on both clusters.
+  of the sync until commit.
 
 Learn More
 ----------
