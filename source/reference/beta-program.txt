@@ -25,6 +25,11 @@ Get Started
 To request access to the {+c2c-beta-program-short+} binaries, please file a 
 ticket with `support <https://support.mongodb.com/>`_.
 
+.. note:: 
+
+   Filing a support ticket does  *not* guarantee access to the 
+   {+c2c-beta-program-short+} binaries. 
+
 When you first run the {+c2c-beta-program-short+} binary, you must accept the 
 following disclaimer:
 
