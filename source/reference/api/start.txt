@@ -518,7 +518,7 @@ Endpoint Protection
 Embedded Verifier
 ~~~~~~~~~~~~~~~~~
 
-Starting in 1.8, ``mongosync`` provides an embedded verifier to
+Starting in 1.9, ``mongosync`` provides an embedded verifier to
 determine whether data transfer from the source cluster to the
 destination was successful.
 
@@ -537,8 +537,13 @@ verifier modes:
      - Performs all available verification checks.
 
        This is the default mode.
+
+       .. versionadded:: 1.9
+
    * - ``none``
      - Disables the embedded verifier.
+
+       .. versionadded:: 1.9
 
 The ``/start`` endpoint returns an error if you enable verification checks that
 are not supported by the source or destination cluster.
