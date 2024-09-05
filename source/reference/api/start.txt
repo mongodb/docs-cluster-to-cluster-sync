@@ -227,7 +227,7 @@ Request Body Parameters
 
        For more information, see :ref:`c2c-start-verifier`.
 
-       .. versionadded:: 1.8
+       .. versionadded:: 1.9
 
 
 .. _c2c-api-start-sharding:
