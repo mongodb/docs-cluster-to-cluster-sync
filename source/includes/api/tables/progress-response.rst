@@ -135,71 +135,76 @@
 
    * - ``verification``
      - document
-     - Provides information on the phase and progress of verification checks
-       performed by the embedded verifier.
+     - Provides information on the phase and progress of
+       verification checks performed by the embedded verifier.
 
        .. versionadded:: 1.9
 
    * - ``verification.source``
      - document
-     - Provides information on the phase and progress of verification checks
-       running on the source cluster.
+     - Provides information on the phase and progress of
+       verification checks running on the source cluster.
 
        .. versionadded:: 1.9
 
    * - ``verification.source.`` ``lagTimeSeconds``
      - integer
-     - Time in seconds since the last verification check was performed
-       on the source cluster.
+     - Time in seconds after the last verification check was
+       performed on the source cluster.
 
        .. versionadded:: 1.9
 
    * - ``verification.source.`` ``phase``
      - string
-     - Current phase of the verification process on the source cluster.
+     - Current phase of the verification process on the source
+       cluster.
 
        .. versionadded:: 1.9
 
    * - ``verification.source.`` ``scannedCollectionCount``
      - integer
-     - Number of collections scanned by the embedded verifier on the source cluster.
+     - Number of collections scanned by the embedded verifier on
+       the source cluster.
 
        .. versionadded:: 1.9
 
    * - ``verification.source.`` ``totalCollectionCount``
      - integer
-     - Number of collections on the source cluster to include in verification checks.
+     - Number of collections on the source cluster to include in
+       verification checks.
 
    * - ``verification.destination``
      - document
-     - Provides information on the phase and progress of verification checks
-       running on the destination cluster.
+     - Provides information on the phase and progress of
+       verification checks running on the destination cluster.
 
        .. versionadded:: 1.9
 
    * - ``verification.destination.`` ``lagTimeSeconds``
      - integer
-     - Time in seconds since the last verification check performed
-       on the source cluster.
+     - Time in seconds since the last verification check
+       performed on the source cluster.
 
        .. versionadded:: 1.9
 
    * - ``verification.destination.`` ``phase``
      - string
-     - Current phase of the verification process on the destination cluster.
+     - Current phase of the verification process on the
+       destination cluster.
 
        .. versionadded:: 1.9
 
    * - ``verification.destination.`` ``scannedCollectionCount``
      - integer
-     - Number of collections scanned by the embedded verifier on the destination cluster.
+     - Number of collections scanned by the embedded verifier on
+       the destination cluster.
 
        .. versionadded:: 1.9
 
    * - ``verification.destination.`` ``totalCollectionCount``
      - integer
-     - Number of collections on the destination cluster to include in verification
-       checks.
+     - Number of collections on the destination cluster to
+       include in verification checks.
 
        .. versionadded:: 1.9
 
