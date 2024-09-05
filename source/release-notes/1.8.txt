@@ -158,6 +158,7 @@ Oplog Rollover Resilience
 
 To learn more, see :ref:`c2c-beta-orr`.
 
+
 Minimum Supported Version
 -------------------------
 
