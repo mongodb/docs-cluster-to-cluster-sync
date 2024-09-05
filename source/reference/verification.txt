@@ -20,7 +20,7 @@ When :program:`mongosync` has fully committed, verify the successful transfer
 of your data before you switch your application to using the destination
 cluster.
 
-.. versionadded:: 1.8
+.. versionadded:: 1.9
 
    ``mongosync`` provides an embedded verifier that can perform a series of
    verification checks on the source and destination cluster to ensure a
