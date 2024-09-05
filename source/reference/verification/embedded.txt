@@ -77,7 +77,7 @@ Steps
          :language: json
          :copyable: false
 
-   .. step:: Examen Progress
+   .. step:: Examine Progress
 
       To examine the status of the sync, use the :ref:`/progress <c2c-api-progress>`
       endpoint:
