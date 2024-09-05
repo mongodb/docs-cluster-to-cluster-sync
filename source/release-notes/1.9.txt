@@ -49,7 +49,7 @@ Optimizations:
 Embedded Verifier
 ~~~~~~~~~~~~~~~~~
 
-Starting in 1.8, ``mongosync`` includes an embedded verifier to confirm the
+Starting in 1.9, ``mongosync`` includes an embedded verifier to confirm the
 successful sync of collections from the source cluster to the destination.
 
 - To enable the embedded verifier, use the ``verificationMode`` field in the

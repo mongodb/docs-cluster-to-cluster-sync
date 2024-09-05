@@ -54,7 +54,7 @@ Tasks
 Embedded Verifier
 ~~~~~~~~~~~~~~~~~
 
-Starting in 1.8, ``mongosync`` includes an embedded verifier, which runs a series
+Starting in 1.9, ``mongosync`` includes an embedded verifier, which runs a series
 of verification checks on the source and destination clusters to ensure a successful
 sync.
 
