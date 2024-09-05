@@ -173,8 +173,9 @@ System Collections
 Embedded Verifier
 -----------------
 
-Starting in 1.8, ``mongosync`` can use an embedded verifier to confirm the
+Starting in 1.9, ``mongosync`` can use an embedded verifier to confirm the
 successful sync of collections from the source cluster to the destination
 cluster.
 
 .. include:: /includes/fact-verifier-limitations
+
