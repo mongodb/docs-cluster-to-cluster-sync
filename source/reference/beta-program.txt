@@ -64,10 +64,7 @@ disclaimer again.
 Beta Features
 -------------
 
-1.8 Beta
-~~~~~~~~
-
-{+c2c-beta-program-short+} 1.8 includes the following features:
+{+c2c-beta-program-short+} {+version+} includes the following features:
 
 .. list-table::
    :header-rows: 1
