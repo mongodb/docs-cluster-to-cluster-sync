@@ -16,22 +16,22 @@ Verify Data Transfer
    :depth: 2
    :class: singlecol
 
-When :program:`mongosync` has fully committed, verify the successful transfer
-of your data before you switch your application to using the destination
-cluster.
+When :program:`mongosync` has fully committed, verify the
+successful transfer of your data before you switch your
+application to using the destination cluster.
 
 .. versionadded:: 1.9
 
-   ``mongosync`` provides an embedded verifier that can perform a series of
-   verification checks on the source and destination cluster to ensure a
-   successful sync.
+   ``mongosync`` provides an embedded verifier that can perform
+   a series of verification checks on the source and destination
+   cluster to ensure a successful sync.
 
 Use Cases
 ---------
 
-You should verify your data after every sync. This is important in
-cases where you plan to move your application load from the source to the
-destination cluster.
+You should verify your data after every sync. This is important
+in cases where you plan to move your application load from the
+source to the destination cluster.
 
 Verification methods:
 
@@ -41,8 +41,8 @@ Verification methods:
 - :ref:`c2c-verify-with-doc-comp`
 - :ref:`c2c-verify-with-verifier`
 
-The specific method you use to verify your data depends on your application
-workload and the complexity of the data.
+The specific method you use to verify your data depends on your
+application workload and the complexity of the data.
 
 .. _c2c-verify-method:
 
@@ -54,9 +54,9 @@ Tasks
 Embedded Verifier
 ~~~~~~~~~~~~~~~~~
 
-Starting in 1.9, ``mongosync`` includes an embedded verifier, which runs a series
-of verification checks on the source and destination clusters to ensure a successful
-sync.
+Starting in 1.9, ``mongosync`` includes an embedded verifier,
+which runs a series of verification checks on the source and
+destination clusters to ensure a successful sync.
 
 For more information, see :ref:`c2c-embedded-verifier`.
 
