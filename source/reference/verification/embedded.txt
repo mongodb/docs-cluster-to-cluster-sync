@@ -41,9 +41,11 @@ About this Task
 Compatibility
 ~~~~~~~~~~~~~
 
-The embedded verifier is not available in ``mongosync`` 1.8 and earlier.
+The embedded verifier is not available in ``mongosync`` 1.8 and
+earlier.
 
-For alternative verification methods, see :ref:`c2c-verification`.
+For alternative verification methods, see
+:ref:`c2c-verification`.
 
 .. _c2c-verify-embedded-limitations:
 
@@ -73,9 +75,10 @@ Steps
 
    .. step:: Start the Sync
 
-      To start syncing data from the source cluster to the destination, use the
-      :ref:`/start <c2c-api-start>` endpoint. To use the embedded verifier, set
-      the ``verificationMode`` field to ``full``.
+      To start syncing data from the source cluster to the
+      destination, use the :ref:`/start <c2c-api-start>`
+      endpoint. To use the embedded verifier, set the
+      ``verification.enabled`` field to ``true``.
 
       .. code-block:: sh
 
@@ -83,7 +86,7 @@ Steps
             --data ' {
                 "source": "cluster0",
                 "destination": "cluster1",
-                "verificationMode": {
+                "verification": {
                    "enabled": true
                 }
             } '
@@ -96,8 +99,8 @@ Steps
 
    .. step:: Examine Progress
 
-      To examine the status of the sync, use the :ref:`/progress <c2c-api-progress>`
-      endpoint:
+      To examine the status of the sync, use the :ref:`/progress
+      <c2c-api-progress>` endpoint:
 
       .. literalinclude:: /includes/api/requests/progress.sh
          :language: shell
@@ -108,8 +111,8 @@ Steps
          :language: json
          :copyable: false
 
-      Examine the ``verification`` response field for information on the status of
-      the embedded verifier.
+      Examine the ``verification`` response field for
+      information on the status of the embedded verifier.
 
 Learn More
 ----------
