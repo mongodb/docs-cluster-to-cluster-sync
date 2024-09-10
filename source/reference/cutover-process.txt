@@ -46,6 +46,17 @@ Steps
         If ``lagTimeSeconds`` isn't close to ``0`` when the cutover
         starts, cutover might take a long time.
 
+      - When using the :ref:`c2c-start-verifier`:
+
+        - If ``verification.source.lagTimeSeconds`` and
+          ``verification.destination.lagTimeSeconds`` aren't
+          close to ``0`` when the cutover starts the cutover
+          might take a long time.
+
+        - If ``verification.source.phase`` and 
+          ``verification.destination.phase`` should both return 
+          ``"stream hasing"``.
+
       The following example returns the status of the synchronization process.
 
       Request
