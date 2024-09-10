@@ -52,8 +52,8 @@ following disclaimer and file a ticket with
    migrations). Beta capabilities are not intended for use to migrate 
    production workloads.
 
-When you first run the {+c2c-beta-program-short+} binary, you must accept the 
-disclaimer again.
+When you first run the {+c2c-beta-program-short+} binary, it will prompt you 
+to accept the disclaimer.
 
 .. seealso:: 
 
