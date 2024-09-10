@@ -25,17 +25,9 @@ Verify with Embedded Verifier
 
 .. important::
 
-   The verifier doesn't perform checks on the following
-   data: 
+   .. include:: /includes/fact-verifier-unsupported
 
-   - Capped collections
-   - Collections with TTL indexes
-   - Collections that don't use the default collation
-   - Collection metadata
-   - Indexes
-   - Views
-
-About this Task
+ About this Task
 ---------------
 
 Compatibility
