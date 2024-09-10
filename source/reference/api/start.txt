@@ -233,6 +233,9 @@ Request Body Parameters
        namespace filtering or reversible sync is started
        with the verifier.
 
+       The verifier does not check all collections or data.
+       For details, see :ref:`c2c-verify-embedded-limitations`.
+
        .. versionadded:: 1.9
 
 

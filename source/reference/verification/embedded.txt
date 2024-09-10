@@ -25,7 +25,7 @@ Verify with Embedded Verifier
 
 .. important::
 
-   The verifier doesn't perform any checks on the following
+   The verifier doesn't perform checks on the following
    data: 
 
    - Capped collections
