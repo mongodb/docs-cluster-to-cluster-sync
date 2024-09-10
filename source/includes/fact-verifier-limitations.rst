@@ -1,6 +1,3 @@
-Starting in 1.9, ``mongosync`` can use an embedded verifier to
-confirm the successful sync of collections from the source
-cluster to the destination cluster.
 
 Compatibility
 ~~~~~~~~~~~~~
