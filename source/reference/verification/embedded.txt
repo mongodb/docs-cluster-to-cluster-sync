@@ -32,6 +32,8 @@ The embedded verifier is not available in ``mongosync`` 1.8 and earlier.
 
 For alternative verification methods, see :ref:`c2c-verification`.
 
+.. _c2c-verify-embedded-limitations:
+
 Limitations
 ~~~~~~~~~~~
 
