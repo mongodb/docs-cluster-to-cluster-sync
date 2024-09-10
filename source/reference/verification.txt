@@ -46,7 +46,10 @@ source to the destination cluster.
      - Starting in 1.9, ``mongosync`` includes an embedded
        verifier, which runs a series of verification checks on
        the source and destination clusters to ensure a
-       successful sync.
+       successful sync. This is the preferred verification
+       method for deployments that meet the :ref:`requirements
+       <c2c-verify-embedded-limitations>`
+       
 
    * - :ref:`Document Counts <c2c-verify-doc-counts>`
      - The most basic method of verification is to compare the
@@ -67,16 +70,17 @@ source to the destination cluster.
        additional writes until it completes.
 
        Hash comparison is **not** possible with sharded
-       clusters. It also does not work for standalone servers
+       clusters. It also does not work with standalone servers
        and replica sets that use MongoDB 4.4 or earlier
        releases, since the document field order can vary.
 
    * - Document Comparison
      - You can verify sync by comparing documents on the source
-       and destination clusters. Write a script that queries
-       collections on the source cluster and then checks that
-       the document exists with the same values on the
-       destination cluster.
+       and destination clusters. 
+
+       Write a script that queries collections on the source
+       cluster and then checks that the document exists with the
+       same values on the destination cluster.
 
    * - :ref:`Migration Verifier <c2c-migration-verifier>`
      - Migration Verifier connects to the source and destination
@@ -101,8 +105,6 @@ application workload and the complexity of the data.
 
 Learn More
 ----------
-
-For more information, see:
 
 - :method:`db.collection.countDocuments`
 
