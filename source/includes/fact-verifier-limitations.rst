@@ -1,3 +1,17 @@
+Starting in 1.9, ``mongosync`` can use an embedded verifier to
+confirm the successful sync of collections from the source
+cluster to the destination cluster.
+
+Compatibility
+~~~~~~~~~~~~~
+
+The embedded verifier is not available in mongosync 1.8 and
+earlier.
+
+For alternative verification methods, see :ref:`c2c-verification`.
+
+Limitations
+~~~~~~~~~~~
 
 The embedded verifier has the following limitations:
 
@@ -16,21 +30,19 @@ The embedded verifier has the following limitations:
   returns an error if you enable this feature and the
   verifier.
 
-- The verifier doesn't perform any verification checks on
-  indexes or collection metadata.
+Unsupported Verification Checks
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-- The verifier doesn't perform checks on the following
-  collections:
+.. include:: /includes/fact-verifier-unsupported
 
-  - Capped collections
-  - Collections with TTL indexes
-  - Collections that don't use the default collation
-  - Views
+Unsupported Beta Features
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
-- The verifier isn't compatible with these beta features:
+The verifier isn't compatible with these beta features:
 
-  - :ref:`c2c-beta-many-to-one`
-  - :ref:`c2c-beta-abc-migration`
-  - :ref:`c2c-beta-document-filtering`
-  - :ref:`c2c-beta-namespace-remapping`
-  - :ref:`c2c-beta-destination-data-handling`
+- :ref:`c2c-beta-many-to-one`
+- :ref:`c2c-beta-abc-migration`
+- :ref:`c2c-beta-document-filtering`
+- :ref:`c2c-beta-namespace-remapping`
+- :ref:`c2c-beta-destination-data-handling`
+
