@@ -170,6 +170,9 @@ System Collections
 
 .. include:: /includes/collections/behavior-system-collections.rst
 
+.. _c2c-embedded-verifier-limitations:
+.. _c2c-verify-embedded-limitations:
+
 Embedded Verifier
 -----------------
 
