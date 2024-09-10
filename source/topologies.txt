@@ -43,4 +43,4 @@ Get Started
    :titlesonly:
 
    Replica Set to Sharded Cluster <topologies/rs-to-sharded>
-   Sharded Cluster to Sharded Cluster <topologies/multiple-mongosyncs>
+   Two Sharded Clusters <topologies/multiple-mongosyncs>
