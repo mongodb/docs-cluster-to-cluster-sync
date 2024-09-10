@@ -10,10 +10,10 @@ The embedded verifier has the following limitations:
   ``mongosync`` for any reason, the verification process must start
   over from the beginning.
 
-- The verifier isn't compatible with :ref:`namespace filtering
-  <c2c-filtered-sync>` or :ref:`reverse sync <c2c-api-reverse>`.
-  The :ref:`/start <c2c-api-start>` endpoint returns an error if
-  you enable these features and the verifier.
+- The verifier isn't compatible with :ref:`reverse sync
+  <c2c-api-reverse>`. The :ref:`/start <c2c-api-start>` endpoint
+  returns an error if you enable these features and the
+  verifier.
 
 - The verifier doesn't perform any verification checks on
   indexes or collection metadata.
