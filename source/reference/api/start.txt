@@ -215,11 +215,14 @@ Request Body Parameters
        .. versionadded:: 1.1
 
    * - ``verificationMode``
-     - string
+     - Document 
      - Optional
      - Configures the embedded verifier.
 
-       The default verification mode is ``full``.
+   * - ``verificationMode.enabled``
+     - Bool
+     - Enables the embedded verifier. The verifier is disabled
+       by default.
 
        The ``/start`` command returns an error when
        namespace filtering or reversible sync is started
@@ -522,29 +525,10 @@ Starting in 1.9, ``mongosync`` provides an embedded verifier to
 determine whether data transfer from the source cluster to the
 destination was successful.
 
-The specific verification checks performed by the embedded
-verifier are set using the ``verificationMode`` parameter.
+To enable the verifier, set the ``verificationMode.enabled``
+parameter in ``/start`` to ``true``.
 
-The ``verificationMode`` parameter supports the following
-verifier modes:
-
-.. list-table::
-   :header-rows: 1
-
-   * - Mode
-     - Description
-   * - ``full``
-     - Performs all available verification checks.
-
-       This is the default mode.
-
-       .. versionadded:: 1.9
-
-   * - ``none``
-     - Disables the embedded verifier.
-
-       .. versionadded:: 1.9
-
-The ``/start`` endpoint returns an error if you enable verification checks that
-are not supported by the source or destination cluster.
+The ``/start`` endpoint returns an error if you enable
+verification checks that are not supported by the source or
+destination cluster.
 
