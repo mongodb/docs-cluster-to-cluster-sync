@@ -142,7 +142,7 @@ Consistency
 ``mongosync`` supports :term:`eventual consistency` on the destination
 cluster. Read consistency is not guaranteed on the destination cluster until 
 commit. Before committing, the source and destination clusters may differ at a 
-given point in time. 
+given point in time. To learn more, see :ref:`mongosync-considerations`.
 
 While ``mongosync`` is syncing, individual writes may be reordered or combined 
 as they are relayed from source to destination. For a given document, the total 
