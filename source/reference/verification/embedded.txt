@@ -27,26 +27,10 @@ Verify with Embedded Verifier
 
    .. include:: /includes/fact-verifier-unsupported
 
- About this Task
+About this Task
 ---------------
 
-Compatibility
-~~~~~~~~~~~~~
-
-The embedded verifier is not available in ``mongosync`` 1.8 and
-earlier.
-
-For alternative verification methods, see
-:ref:`c2c-verification`.
-
-.. _c2c-verify-embedded-limitations:
-
-Limitations
-~~~~~~~~~~~
-
 .. include:: /includes/fact-verifier-limitations
-
-For alternative verification methods, see :ref:`c2c-verification`.
 
 Steps
 -----
