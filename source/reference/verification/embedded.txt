@@ -68,7 +68,9 @@ Steps
             --data ' {
                 "source": "cluster0",
                 "destination": "cluster1",
-                "verificationMode": "full"
+                "verificationMode": {
+                   "enabled": true
+                }
             } '
 
       Example output:
