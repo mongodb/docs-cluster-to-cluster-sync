@@ -14,7 +14,11 @@ Finalize Cutover Process
 
 You can finalize a migration and transfer your application
 workload from the source to the destination cluster using the
-:ref:`mongosync <c2c-mongosync>` cutover process. 
+:ref:`mongosync <c2c-mongosync>` cutover process.
+
+``mongosync`` should remain active until it reaches the
+:ref:`COMMITTED <c2c-state-commited>` state. This allows ``mongosync`` to sync
+any additional writes that occur during the migration.
 
 .. note::
 
