@@ -12,7 +12,7 @@ The embedded verifier has the following limitations:
 
 - The verifier isn't compatible with :ref:`reverse sync
   <c2c-api-reverse>`. The :ref:`/start <c2c-api-start>` endpoint
-  returns an error if you enable these features and the
+  returns an error if you enable this feature and the
   verifier.
 
 - The verifier doesn't perform any verification checks on
