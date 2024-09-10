@@ -148,9 +148,9 @@ Request Body Parameters
 
        .. include:: /includes/api/facts/namespace-explanation.rst
 
-       The ``/start`` command returns an error when
-       the namespace filtering is enabled and ``verificationMode`` is
-       not ``none``.
+       The ``/start`` command returns an error when the
+       namespace filtering is enabled and
+       ``verification.enabled`` is set to ``true``.
 
        .. versionadded:: 1.1
 
@@ -162,8 +162,8 @@ Request Body Parameters
        .. include:: /includes/api/facts/namespace-explanation.rst
 
        The ``/start`` command returns an error when
-       namespace filtering is enabled and ``verificationMode`` is
-       not ``none``.
+       namespace filtering is enabled and
+       ``verification.enabled`` is set to ``true``.
 
        .. versionadded:: 1.6
 
@@ -188,8 +188,8 @@ Request Body Parameters
        to ``true``.
 
        The ``/start`` command returns an error when
-       the reverse sync is enabled and ``verificationMode`` is
-       not ``none``.
+       the reverse sync is enabled and ``verification.enabled`` is
+       set to ``true``.
 
        This option is not supported for the following configurations:
 
@@ -214,21 +214,24 @@ Request Body Parameters
 
        .. versionadded:: 1.1
 
-   * - ``verificationMode``
+   * - ``verification``
      - Document 
      - Optional
      - Configures the embedded verifier.
 
-   * - ``verificationMode.enabled``
+       For more information, see :ref:`c2c-start-verifier`.
+
+       .. versionadded:: 1.9
+
+   * - ``verification.enabled``
      - Bool
+     - Optional
      - Enables the embedded verifier. The verifier is disabled
        by default.
 
        The ``/start`` command returns an error when
        namespace filtering or reversible sync is started
        with the verifier.
-
-       For more information, see :ref:`c2c-start-verifier`.
 
        .. versionadded:: 1.9
 
@@ -525,7 +528,7 @@ Starting in 1.9, ``mongosync`` provides an embedded verifier to
 determine whether data transfer from the source cluster to the
 destination was successful.
 
-To enable the verifier, set the ``verificationMode.enabled``
+To enable the verifier, set the ``verification.enabled``
 parameter in ``/start`` to ``true``.
 
 The ``/start`` endpoint returns an error if you enable
