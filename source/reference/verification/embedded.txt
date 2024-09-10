@@ -19,8 +19,21 @@ Verify with Embedded Verifier
 
 .. versionadded:: 1.9
 
-   ``mongosync`` includes an embedded verifier to confirm the correct and
-   successful sync of data from the source cluster to the destination cluster.
+   ``mongosync`` includes an embedded verifier to confirm the
+   correct and successful sync of data from the source cluster
+   to the destination cluster.
+
+.. important::
+
+   The verifier doesn't perform any checks on the following
+   data: 
+
+   - Capped collections
+   - Collections with TTL indexes
+   - Collections that don't use the default collation
+   - Collection metadata
+   - Indexes
+   - Views
 
 About this Task
 ---------------

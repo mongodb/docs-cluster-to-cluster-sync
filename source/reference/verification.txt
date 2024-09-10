@@ -28,8 +28,8 @@ application to using the destination cluster.
 
 .. _c2c-verify-method:
 
-Use Cases
----------
+Tasks
+-----
 
 You should verify your data after every sync. This is important
 in cases where you plan to move your application load from the
