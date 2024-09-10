@@ -35,12 +35,13 @@ You should verify your data after every sync. This is important
 in cases where you plan to move your application load from the
 source to the destination cluster.
 
-Verification methods:
-
 .. list-table::
    :widths: 20 80
+   :header-rows: 1
    :stub-columns: 1
 
+   * - Verification Method
+     - Description
    * - :ref:`Embedded Verifier <c2c-embedded-verifier>`
      - Starting in 1.9, ``mongosync`` includes an embedded
        verifier, which runs a series of verification checks on
