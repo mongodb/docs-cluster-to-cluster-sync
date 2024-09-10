@@ -177,6 +177,9 @@ Rolling Index Builds
 
 .. include:: /includes/rolling-build-limitation.rst
 
+.. _c2c-embedded-verifier-limitations:
+.. _c2c-verify-embedded-limitations:
+
 Embedded Verifier
 -----------------
 
