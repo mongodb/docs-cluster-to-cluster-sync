@@ -168,17 +168,19 @@ Steps
       .. code-block:: javascript
 
          db.adminCommand(
-           {
-             setUserWriteBlockMode: 1,
-             global: false
-           }
+            {
+               setUserWriteBlockMode: 1,
+               global: false
+            }
          )
+
+      Then, transfer your application workload to the destination cluster.
 
    .. step:: Call the ``progress`` endpoint to determine the status of the ``mongosync`` process.
 
-      When the ``mongosync`` progress response indicates that the 
+      When the ``mongosync`` progress response indicates that the
       ``mongosync`` state is ``COMMITTED``, the cutover process is
-      complete. 
+      complete.
 
       Request
       ~~~~~~~
