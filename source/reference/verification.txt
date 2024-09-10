@@ -48,7 +48,7 @@ source to the destination cluster.
        the source and destination clusters to ensure a
        successful sync. This is the preferred verification
        method for deployments that meet the :ref:`requirements
-       <c2c-verify-embedded-limitations>`
+       <c2c-verify-embedded-limitations>`.
        
 
    * - :ref:`Document Counts <c2c-verify-doc-counts>`
