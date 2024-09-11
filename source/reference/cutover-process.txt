@@ -201,7 +201,7 @@ Steps
       .. io-code-block::
 
          .. input::
-            :language: sh
+            :language: console
 
             curl localhost:27182/api/v1/progress -XGET | jq .progress.state
 
