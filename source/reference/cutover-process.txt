@@ -23,9 +23,8 @@ any additional writes that occur during the migration.
 .. note::
 
    Before you switch your application workload to the
-   destination cluster, you should always verify that the sync
-   was successful. For more information, see
-   :ref:`c2c-verification`.
+   destination cluster, you should always verify a successful sync.
+   For more information, see :ref:`c2c-verification`.
 
 Steps
 -----
