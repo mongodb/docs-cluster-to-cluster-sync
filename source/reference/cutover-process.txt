@@ -183,10 +183,11 @@ the ``COMMITTED`` state.
 In the initial sync, ``mongosync`` replicates unique indexes on the source
 cluster as non-unique indexes on the destination cluster. When writes are possible
 on the destination cluster, ``mongosync`` begins to convert these non-unique indexes
-to unique indexes. Queries on the destination cluster that require a unique
-index may return unexpected results.
+to unique indexes.
 
-This process may take a long time when syncing large collections.
+This process may take a long time when syncing large collections. Queries
+on the destination cluster that require a unique index may return unexpected
+results.
 
 Learn More
 ----------
