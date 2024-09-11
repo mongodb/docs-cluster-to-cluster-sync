@@ -157,15 +157,18 @@ Steps
       ``mongosync`` state is ``COMMITTED``, the cutover process is
       complete.
 
-      .. code-block:: bash
+      .. io-code-block::
+         :copyable: true
+
+         .. input::
+            :language: bash
 
             curl localhost:27182/api/v1/progress -XGET | jq ".progress.state"
 
-      Example Output:
+         .. output::
+            :language: json
 
-      .. code-block:: json
-
-         "COMMITTED"
+ .          "COMMITTED"
 
 Behavior
 --------
