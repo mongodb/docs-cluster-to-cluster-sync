@@ -217,7 +217,25 @@ Steps
             "success": true
          }
 
+Behavior
+--------
 
+.. _c2c-canWrite-committed:
+
+canWrite and COMMITTED
+~~~~~~~~~~~~~~~~~~~~~~
+
+``mongosync`` permits writes on the destination cluster at much earlier stage than
+the ``COMMITTED`` state. While you can write to the destination cluster after it
+reports ``canWrite: true``, you may encounter unexpected results until ``mongosync``
+reaches the ``COMMITTED`` state.
+
+- In the initial sync, ``mongosync`` replicates unique indexes on the source
+  cluster as non-unique indexes on the destination cluster. When writes are possible
+  on the destination cluster, ``mongosync`` begins to convert these non-unique indexes
+  to unique indexes.
+
+  This process may take a long time when syncing large collections.
 
 Learn More
 ----------
