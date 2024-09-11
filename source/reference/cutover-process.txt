@@ -161,6 +161,22 @@ Steps
 
       For more information, see :ref:`c2c-verification`.
 
+   .. step:: Check destination cluster write status
+
+      Use the ``/progress`` endpoint to examine the ``canWrite`` status.
+
+      .. io-code-block::
+
+         .. input::
+            :language: sh
+
+            curl localhost:27182/api/v1/progress -XGET | jq .progress.canWrite
+
+         .. output::
+            :language: json
+
+            true
+
    .. step:: Enable application writes on the destination cluster.
 
       To enable writes, update :dbcommand:`setUserWriteBlockMode`:
