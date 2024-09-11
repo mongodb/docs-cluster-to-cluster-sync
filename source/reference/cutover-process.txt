@@ -117,6 +117,7 @@ Steps
       shows ``canWrite`` is ``true``.
 
       .. io-code-block::
+         :copyable: true
 
          .. input::
             :language: sh
