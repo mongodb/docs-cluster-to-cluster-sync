@@ -158,9 +158,9 @@ snapshot of the source data. To learn more, see :ref:`c2c-behavior-consistency`.
 Sharded Clusters 
 ~~~~~~~~~~~~~~~~
 
-When used with sharded clusters, you must stop :ref:`balancers 
-<sharding-balancing>` on both the source and the destination for the lifetime 
-of the sync until commit.
+When running continuous sync with sharded clusters, you must stop 
+:ref:`balancers <sharding-balancing>` on both the source and the destination 
+for the lifetime of the sync until commit.
 
 Temporary Collection Characteristic Changes
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
