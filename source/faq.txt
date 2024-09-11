@@ -27,8 +27,8 @@ for the migration to commit. To learn more, see :ref:`mongosync-considerations`.
 
 If you write to a synced namespace before issuing a :ref:`commit 
 <c2c-api-commit>` and while ``canWrite`` is ``false``, the behavior is 
-undefined. To avoid this undefined behavior, you can enable :ref:`write blocking 
-<c2c-write-blocking>`.
+undefined. To ensure that no writes happen to synced namespaces, you can enable 
+:ref:`write blocking <c2c-write-blocking>`.
 
 To check the value of ``canWrite``, call the :ref:`progress <c2c-api-progress>` 
 API endpoint.
