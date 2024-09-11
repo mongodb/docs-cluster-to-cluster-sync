@@ -157,13 +157,6 @@ If the reverse sync is successful, ``mongosync`` enters the ``RUNNING`` state.
 The synchronization continues in the reverse direction from the original 
 sync job. 
 
-Sharded Clusters 
-~~~~~~~~~~~~~~~~
-
-When used with sharded clusters, you must stop :ref:`balancers 
-<sharding-balancing>` on both the source and the destination for the lifetime 
-of the sync until commit.
-
 Learn More
 ----------
 
