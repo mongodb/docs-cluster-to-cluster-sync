@@ -162,8 +162,8 @@ When running continuous sync with sharded clusters, you must stop
 :ref:`balancers <sharding-balancing>` on both the source and the destination 
 for the lifetime of the sync until commit.
 
-Temporary Collection Characteristic Changes
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Temporary Changes to Collection Characteristics
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ``mongosync`` temporarily alters the following collection characteristics during 
 synchronization. The original values are restored during the commit process.
