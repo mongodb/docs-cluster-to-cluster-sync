@@ -198,40 +198,17 @@ Steps
       ``mongosync`` state is ``COMMITTED``, the cutover process is
       complete.
 
-      Request
-      ~~~~~~~
+      .. io-code-block::
 
-      .. literalinclude:: /includes/api/requests/progress.sh
-         :language: shell
+         .. input::
+            :language: sh
 
-      Response
-      ~~~~~~~~
+            curl localhost:27182/api/v1/progress -XGET | jq .progress.state
 
-      .. code-block:: json
-         :emphasize-lines: 4
-         :copyable: false
+         .. output::
+            :language: json
 
-         {
-            "progress":
-               {
-                  "state":"COMMITTED",
-                  "canCommit":true,
-                  "canWrite":false,
-                  "info":"change event application",
-                  "lagTimeSeconds":0,
-                  "collectionCopy":
-                     {
-                        "estimatedTotalBytes":694,
-                        "estimatedCopiedBytes":694
-                     },
-                  "directionMapping":
-                     {
-                        "Source":"cluster0: localhost:27017",
-                        "Destination":"cluster1: localhost:27018"
-                     }
-               },
-            "success": true
-         }
+            "COMMITTED"
 
 Behavior
 --------
