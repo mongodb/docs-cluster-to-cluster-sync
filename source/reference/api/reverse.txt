@@ -147,10 +147,16 @@ To view the mapping direction for the synchronization of the source and
 destination clusters, use the :ref:`progress <c2c-api-progress>`
 endpoint and check the ``directionMapping`` object.
 
+
 Endpoint Protection
 ~~~~~~~~~~~~~~~~~~~
 
 .. |endpoint| replace:: ``reverse``
 .. include:: /includes/fact-api-endpoint
+
+Limitations
+~~~~~~~~~~~
+
+The reverse endpoint does not support :ref:`filtered sync <c2c-filtered-sync>`.
 
 
