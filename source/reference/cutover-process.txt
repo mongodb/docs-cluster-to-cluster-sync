@@ -121,7 +121,7 @@ Steps
          .. input::
             :language: sh
 
-            curl localhost:27182/api/v1/progress -XGET | jq .progress.canWrite
+            curl localhost:27182/api/v1/progress -XGET | jq ".progress.canWrite"
 
          .. output::
             :language: json
@@ -161,7 +161,7 @@ Steps
          .. input::
             :language: sh
 
-            curl localhost:27182/api/v1/progress -XGET | jq .progress.state
+            curl localhost:27182/api/v1/progress -XGET | jq ".progress.state"
 
          .. output::
             :language: json
