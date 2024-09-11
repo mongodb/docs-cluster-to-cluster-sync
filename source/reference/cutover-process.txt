@@ -120,7 +120,7 @@ Steps
          :copyable: true
 
          .. input::
-            :language: sh
+            :language: bash
 
             curl localhost:27182/api/v1/progress -XGET | jq ".progress.canWrite"
 
