@@ -168,7 +168,7 @@ Steps
          .. output::
             :language: json
 
- .          "COMMITTED"
+            "COMMITTED"
 
 Behavior
 --------
