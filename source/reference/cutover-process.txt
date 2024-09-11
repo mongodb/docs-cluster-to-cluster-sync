@@ -36,7 +36,7 @@ Steps
 
       Call the :ref:`progress <c2c-api-progress>` endpoint to determine
       the status of ``mongosync`` before starting the cutover process.
-      Ensure that the ``mongosync`` process  status indicates the
+      Ensure that the ``mongosync`` process status indicates the
       following values:
 
       - ``canCommit`` is ``true``.
