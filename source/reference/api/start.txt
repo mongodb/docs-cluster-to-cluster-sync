@@ -230,7 +230,7 @@ Request Body Parameters
        by default.
 
        The ``/start`` command returns an error when
-       namespace filtering or reversible sync is started
+       reversible sync is started
        with the verifier.
 
        The verifier does not check all collections or data.
