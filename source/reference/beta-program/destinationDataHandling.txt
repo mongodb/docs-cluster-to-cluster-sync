@@ -9,7 +9,7 @@ Handle Pre-Existing Data on the Destination
 .. contents:: On this page
    :local:
    :backlinks: none
-   :depth: 2
+   :depth: 1
    :class: singlecol
 
 .. include:: /includes/beta-feature.rst
