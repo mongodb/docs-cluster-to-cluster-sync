@@ -6,3 +6,6 @@ The verifier isn't compatible with these beta features:
 - :ref:`c2c-beta-document-filtering`
 - :ref:`c2c-beta-namespace-remapping`
 - :ref:`c2c-beta-destination-data-handling`
+
+The ``/start`` endpoint returns an error if you enable any of these features
+with the verifier.

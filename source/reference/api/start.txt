@@ -219,8 +219,6 @@ Request Body Parameters
      - Optional
      - Configures the embedded verifier.
 
-       .. include:: /includes/fact-verifier-beta-limitations
-
        For more information, see :ref:`c2c-start-verifier`.
 
        .. versionadded:: 1.9
@@ -232,11 +230,14 @@ Request Body Parameters
        by default.
 
        The ``/start`` command returns an error when
-       reversible sync is started
-       with the verifier.
+       reversible sync is started with the verifier.
+
+       .. include:: /includes/fact-verifier-beta-limitations
 
        The verifier does not check all collections or data.
        For details, see :ref:`c2c-verify-embedded-limitations`.
+
+
 
        .. versionadded:: 1.9
 
