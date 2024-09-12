@@ -102,6 +102,12 @@ Valid Namespace Remapping
 
 .. include:: /includes/fact-valid-namespace-remap
 
+Verification
+~~~~~~~~~~~~
+
+.. |beta-feature| replace:: Namespace Remapping
+.. include:: /includes/fact-verifier-beta-unsupport
+
 Steps
 -----
 
