@@ -47,7 +47,7 @@ Steps
         starts, cutover might take a long time.
 
       - When using the :ref:`c2c-start-verifier` check **both**
-        the ``verification.source`` and
+        the ``verification.source`` and the
         ``verification.destination`` return documents. The
         ``lagTimeSeconds`` fields in both documents should be
         near ``0`` and the ``phase`` field should show ``"stream
