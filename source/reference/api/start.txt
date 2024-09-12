@@ -219,6 +219,8 @@ Request Body Parameters
      - Optional
      - Configures the embedded verifier.
 
+       .. include:: /includes/fact-verifier-beta-limitations
+
        For more information, see :ref:`c2c-start-verifier`.
 
        .. versionadded:: 1.9
