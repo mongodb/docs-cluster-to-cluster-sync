@@ -95,8 +95,7 @@ Beta Features
      - In {+c2c-beta-program-short+}, you can perform migrations between 
        clusters running MongoDB server versions 4.2, 4.4, and 5.0. To see 
        guidelines and restrictions for migrating between older server 
-       versions, MongoDB must grant you access to the 
-       {+c2c-beta-program-short+} binary.
+       versions, you must have access to the {+c2c-beta-program-short+} binary.
 
 Feature Compatibility Matrix
 ----------------------------
