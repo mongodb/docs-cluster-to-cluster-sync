@@ -10,11 +10,13 @@
      - Namespace Remapping 
      - Oplog Rollover Resilience
      - Destination Data Handling 
+     - Pre-6.0 Version Support
 
    * - Many-to-One
      -
      - 
      - 
+     - |checkmark|
      - |checkmark|
      - |checkmark|
      - |checkmark|
@@ -26,6 +28,7 @@
      - |checkmark|
      - |checkmark|
      - |checkmark|
+     - |checkmark|
 
    * - Document Filtering 
      - 
@@ -34,6 +37,7 @@
      - |checkmark|
      - |checkmark|
      - |checkmark|
+     -
 
    * - Namespace Remapping 
      - |checkmark|
@@ -42,6 +46,7 @@
      - 
      - |checkmark|
      - |checkmark|
+     -
 
    * - Oplog Rollover Resilience
      - |checkmark|
@@ -49,6 +54,7 @@
      - |checkmark|
      - |checkmark|
      - 
+     - |checkmark|
      - |checkmark|
 
    * - Destination Data Handling 
@@ -58,3 +64,13 @@
      - |checkmark|
      - |checkmark|
      - 
+     - |checkmark|
+
+   * - Pre-6.0 Version Support
+     - |checkmark|
+     - |checkmark|
+     - 
+     -
+     - |checkmark|
+     - |checkmark|
+     -
