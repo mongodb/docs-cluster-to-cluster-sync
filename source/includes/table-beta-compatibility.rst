@@ -79,6 +79,6 @@
 .. [#pre-6.0-abc]
 
    A->B->C migrations are compatible with pre-6.0 version support only if 
-   cluster A uses a server version older than 6.0 . If cluster A and B are both 
+   cluster A uses a server version older than 6.0. If cluster A and B are both 
    pre-6.0 clusters, then the second migration (B->C) can start only after all
    ``mongosync``-generated :ref:`DDLs <txn-prod-considerations-ddl>` complete.
