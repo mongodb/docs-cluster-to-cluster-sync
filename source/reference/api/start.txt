@@ -91,13 +91,15 @@ Request Body Parameters
          on the destination cluster. These include both existing indexes and
          any indexes created during migration on the source cluster.
 
-       - ``never`` causes ``mongosync`` to skip building unnecessary indexes 
-         during sync. This can improve migration performance, especially with 
+       - ``never`` causes ``mongosync`` to skip building unnecessary indexes
+         during sync. This can improve migration performance, especially with
          index heavy workloads.
 
          :red:`WARNING:` Do **not** manually build indexes while ``mongosync`` is 
          performing a migration.  Wait until the migration is fully 
          committed.
+
+         .. include:: /includes/fact-verifier-buildIndexes
 
          For more information on the indexes it does build, see 
          :ref:`c2c-required-indexes`.

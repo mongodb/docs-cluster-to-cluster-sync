@@ -27,6 +27,8 @@ The embedded verifier has the following limitations:
   returns an error if you enable this feature and the
   verifier.
 
+- .. include:: /includes/fact-verifier-buildIndexes
+
 Unsupported Verification Checks
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
