@@ -50,7 +50,7 @@ Steps
         the ``verification.source`` and the
         ``verification.destination`` return documents. The
         ``lagTimeSeconds`` fields in both documents should be
-        near ``0`` and the ``phase`` field should show ``"stream
+        near ``0`` and the ``phase`` fields should show ``"stream
         hashing"``.
 
         If ``/commit`` is called and the values are not near
