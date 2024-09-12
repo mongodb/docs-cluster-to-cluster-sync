@@ -57,6 +57,15 @@ If you omit a ``"destinationDataHandling"`` string, and the destination
 cluster has user data, ``mongosync`` returns an error. Otherwise,
 ``mongosync`` continues the sync operation.
 
+Behavior
+--------
+
+Verification
+~~~~~~~~~~~~
+
+.. |beta-feature| replace:: Destination Data Handling
+.. include:: /includes/fact-verifier-beta-unsupport
+
 Steps
 -----
 
