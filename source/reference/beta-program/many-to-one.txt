@@ -70,6 +70,13 @@ Migration Name
 
 .. include:: /includes/migration-name-limitation.rst
 
+Verification
+~~~~~~~~~~~~
+
+.. |beta-feature| replace:: Many-to-One Migrations
+.. include:: /includes/fact-verifier-beta-unsupported
+
+
 .. _c2c-beta-many-to-one-example: 
 
 Example 
