@@ -22,7 +22,7 @@ Can I perform reads or writes to my destination cluster while ``mongosync`` is s
 
 You can perform reads during synchronization at any time. However, the data 
 that you read is :term:`eventually consistent <eventual consistency>`. For 
-up-to-date reads, wait for the migration to commit. To learn more, see 
+consistent reads, wait for the migration to commit. To learn more, see 
 :ref:`mongosync-considerations`.
 
 If you write to a synced namespace before issuing a :ref:`commit 
