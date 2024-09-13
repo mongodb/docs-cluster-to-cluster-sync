@@ -107,6 +107,13 @@ When the CEA phase begins, ``mongosync`` applies the change events
 that are received during the collection copy phase before processing the 
 events that are received during the CEA phase. 
 
+.. note::
+
+   Starting in MongoDB 8.0, ``movePrimary`` doesn't invalidate
+   collections that have change streams. The change streams can continue
+   to read events from collections after the collections are moved to a
+   new shard.
+
 Pause Sync
 ~~~~~~~~~~
 
