@@ -93,7 +93,7 @@ Beta Features
 
    * - Pre-6.0 Server Version Support 
      - In {+c2c-beta-program-short+}, you can perform migrations between 
-       clusters running MongoDB server versions 4.2, 4.4, and 5.0. To see 
+       clusters running MongoDB server versions older than 6.0. To see 
        guidelines and restrictions for migrating between older server 
        versions, you must have access to the {+c2c-beta-program-short+} binary.
 
