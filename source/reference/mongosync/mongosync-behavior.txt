@@ -150,8 +150,8 @@ snapshot of the source data. To learn more, see :ref:`c2c-behavior-consistency`.
   
    After commit, you can't resume continuous sync between two clusters since 
    ``mongosync`` can only sync into empty destination clusters. If you need to 
-   use the same two clusters after :ref:`cutover <c2c-cutover-process>`, you can 
-   call the :ref:`c2c-api-reverse` endpoint to keep the clusters in sync.
+   use the same two clusters after cutover, you can call the 
+   :ref:`c2c-api-reverse` endpoint to keep the clusters in sync.
    Otherwise, start a new continuous sync operation by using a new empty 
    destination cluster. 
 

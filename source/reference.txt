@@ -53,8 +53,6 @@ Reference
    mongosync States </reference/mongosync-states>
    Filtered Sync </reference/collection-level-filtering>
    oplog Sizing </reference/oplog-sizing>
-   Finalize Cutover Process </reference/cutover-process>
-   Disaster Recovery </reference/disaster-recovery>
    Limitations </reference/limitations>
    Logging </reference/logging>
    User Permissions </reference/permissions>
