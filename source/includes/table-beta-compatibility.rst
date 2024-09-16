@@ -81,4 +81,4 @@
    A->B->C migrations are compatible with pre-6.0 version support only if 
    cluster A uses a server version older than 6.0. If cluster B uses a pre-6.0 
    cluster, the second migration (B->C) can start only after the first migration 
-   (A->B) commits
+   (A->B) commits.
