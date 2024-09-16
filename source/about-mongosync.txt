@@ -111,8 +111,8 @@ events that are received during the CEA phase.
 
    Starting in MongoDB 8.0, the :dbcommand:`movePrimary` command doesn't
    invalidate collections that have change streams. Change streams
-   continue to read events from collections after the collections are
-   moved to new shards.
+   continue to read events from collections after the collections move
+   to new shards.
 
 Pause Sync
 ~~~~~~~~~~
