@@ -172,8 +172,7 @@ characteristics that ``mongosync`` alters during the synchronization process.
        - On the source cluster when ``commit`` is received.
 
        See also:
-
-          :ref:`c2c-write-blocking`
+       :ref:`c2c-write-blocking`
   
    * - Capped Collections
      - ``commit`` resets the required maximum size of capped collections
