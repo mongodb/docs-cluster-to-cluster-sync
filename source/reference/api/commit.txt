@@ -171,7 +171,7 @@ characteristics that ``mongosync`` alters during the synchronization process.
        - On the destination cluster during sync.
        - On the source cluster when ``commit`` is received.
 
-       .. seealso:: 
+       See also:
 
           :ref:`c2c-write-blocking`
   
