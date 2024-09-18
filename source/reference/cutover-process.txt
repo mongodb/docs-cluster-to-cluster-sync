@@ -121,7 +121,7 @@ Steps
          .. input::
             :language: bash
 
-            curl localhost:27182/api/v1/progress -XGET | jq ".progress.canWrite"
+            curl -sS localhost:27182/api/v1/progress -XGET | jq ".progress.canWrite"
 
          .. output::
             :language: json
@@ -162,7 +162,7 @@ Steps
          .. input::
             :language: bash
 
-            curl localhost:27182/api/v1/progress -XGET | jq ".progress.state"
+            curl -sS localhost:27182/api/v1/progress -XGET | jq ".progress.state"
 
          .. output::
             :language: json
@@ -177,17 +177,18 @@ Behavior
 canWrite and COMMITTED
 ~~~~~~~~~~~~~~~~~~~~~~
 
-``mongosync`` permits writes on the destination cluster at an earlier stage than
-the ``COMMITTED`` state.
+``mongosync`` permits writes on the destination cluster at an
+earlier stage than the ``COMMITTED`` state.
 
-In the initial sync, ``mongosync`` replicates unique indexes on the source
-cluster as non-unique indexes on the destination cluster. When ``mongosync``
-re-enables writes on the destination cluster, ``mongosync`` converts these
-non-unique indexes into unique indexes.
+In the initial sync, ``mongosync`` replicates unique indexes on
+the source cluster as non-unique indexes on the destination
+cluster. When the ``/progress`` endpoint sets ``canWrite`` to
+``true``, ``mongosync`` converts these non-unique indexes into
+unique indexes.
 
-This process may take a long time when syncing large collections. Queries
-on the destination cluster that require a unique index may return unexpected
-results.
+This process may take a long time when syncing large
+collections. Queries on the destination cluster that require a
+unique index may return unexpected results.
 
 Learn More
 ----------
