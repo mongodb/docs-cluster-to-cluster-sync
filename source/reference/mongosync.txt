@@ -184,7 +184,8 @@ Microsoft Azure Options
 Starting in ``mongosync`` 1.9.0, you can use ``mongosync`` to connect
 MongoDB clusters in Microsoft Azure.
 
-To connect to Microsoft Azure, add these options using the command line:
+If you're using Azure Managed Identities, you must add these options
+using the command line:
 
 .. option:: AZURE_TENANT_ID <id>
 
@@ -207,7 +208,8 @@ To connect to Microsoft Azure, add these options using the command line:
    Example:
    ``AZURE_FEDERATED_TOKEN_FILE=/var/run/secrets/azure/tokens/azure-identity-token``
 
-``mongosync`` example that connects MongoDB clusters in Azure:
+``mongosync` example that connects MongoDB clusters using Azure Managed
+Identities as the federated authentication mechanism:
 
 .. code-block:: shell
 
