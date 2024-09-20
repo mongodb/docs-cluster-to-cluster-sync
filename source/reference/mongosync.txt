@@ -187,11 +187,24 @@ To connect to Microsoft Azure, add these options using the command line:
 
 .. option:: AZURE_TENANT_ID <id>
 
-   Sets the Azure tenant ID. For example, 08206ab8-16a0-406d-85e4-2f15f5620fac.
+   Sets the Azure tenant identifier. For example,
+   ``AZURE_TENANT_ID=08206ab8-16a0-406d-85e4-2f15f5620fac``.
 
 .. option:: AZURE_APP_CLIENT_ID <id>
 
-   Sets the Azure application ID.
+   Sets the Azure application client identifier. Example:
+   ``AZURE_APP_CLIENT_ID=b6c835da-e536-425b-9405-64bc471e245b``
+
+.. option:: AZURE_CLIENT_ID <id>
+
+   Sets the Azure client identifier. Example:
+   ``AZURE_CLIENT_ID=f176d4eb-7dcd-4f66-bccf-aaa316ee61fd``
+
+.. option:: AZURE_FEDERATED_TOKEN_FILE <file>
+
+   Sets the Azure federated token file and path.
+   Example:
+   ``AZURE_FEDERATED_TOKEN_FILE=/var/run/secrets/azure/tokens/azure-identity-token``
 
 Complete example:
 
