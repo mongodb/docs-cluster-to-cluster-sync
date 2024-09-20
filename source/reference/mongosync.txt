@@ -183,8 +183,8 @@ Using mongosync with Microsoft Azure
 
 .. include:: /includes/mongosync-and-azure.rst
 
-If you're using Azure Managed Identities as for federated
-authentication, define these environment variables:
+If you're using Azure Managed Identities for federated authentication,
+define these environment variables:
 
 .. option:: AZURE_TENANT_ID <id>
 
@@ -207,8 +207,8 @@ authentication, define these environment variables:
    Example:
    ``AZURE_FEDERATED_TOKEN_FILE=/var/run/secrets/azure/tokens/azure-identity-token``
 
-``mongosync` example that connects MongoDB clusters using Azure Managed
-Identities:
+The following ``mongosync`` example connects MongoDB clusters using
+Azure Managed Identities:
 
 .. code-block:: shell
 
