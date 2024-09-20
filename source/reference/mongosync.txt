@@ -206,7 +206,7 @@ To connect to Microsoft Azure, add these options using the command line:
    Example:
    ``AZURE_FEDERATED_TOKEN_FILE=/var/run/secrets/azure/tokens/azure-identity-token``
 
-Complete example:
+``mongosync`` example that connects MongoDB clusters in Azure:
 
 .. code-block:: shell
 
