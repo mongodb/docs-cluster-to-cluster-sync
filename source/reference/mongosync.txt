@@ -181,7 +181,8 @@ Global Options
 Microsoft Azure Options
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-Starting in ``mongosync`` 1.9.0, you can connect to Microsoft Azure.
+Starting in ``mongosync`` 1.9.0, you can use ``mongosync`` to connect
+MongoDB clusters in Microsoft Azure.
 
 To connect to Microsoft Azure, add these options using the command line:
 
