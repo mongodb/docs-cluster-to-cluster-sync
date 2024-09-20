@@ -176,16 +176,16 @@ Global Options
 
    Prints ``mongosync`` version information to stdout.
 
-.. _c2c-cli-azure-options:
+.. _c2c-cli-azure:
 
-Microsoft Azure Options
-~~~~~~~~~~~~~~~~~~~~~~~
+Using mongosync with Microsoft Azure
+------------------------------------
 
 Starting in ``mongosync`` 1.9.0, you can use ``mongosync`` to connect
 MongoDB clusters in Microsoft Azure.
 
-If you're using Azure Managed Identities, you must add these options
-using the command line:
+If you're using Azure Managed Identities, add these environment
+variables:
 
 .. option:: AZURE_TENANT_ID <id>
 
@@ -217,6 +217,15 @@ Identities as the federated authentication mechanism:
    AZURE_APP_CLIENT_ID=b6c835da-e536-425b-9405-64bc471e245b \
    AZURE_CLIENT_ID=f176d4eb-7dcd-4f66-bccf-aaa316ee61fd \
    AZURE_FEDERATED_TOKEN_FILE=/var/run/secrets/azure/tokens/azure-identity-token \
+   ./bin/mongosync \
+         --logPath /var/log/mongosync \
+         --cluster0 "mongodb://clusterAdmin:superSecret@clusterOne01.fancyCorp.com:20020,clusterOne02.fancyCorp.com:20020,clusterOne03.fancyCorp.com:20020/?authMechanism=MONGODB-OIDC&authMechanismProperties=ENVIRONMENT=azure" \
+         --cluster1 "mongodb://clusterAdmin:superSecret@clusterTwo01.fancyCorp.com:20020,clusterTwo02.fancyCorp.com:20020,clusterTwo03.fancyCorp.com:20020/?authMechanism=MONGODB-OIDC&authMechanismProperties=ENVIRONMENT=azure"
+
+To use basic Azure, you omit the environment variables. For example:
+
+.. code-block:: shell
+
    ./bin/mongosync \
          --logPath /var/log/mongosync \
          --cluster0 "mongodb://clusterAdmin:superSecret@clusterOne01.fancyCorp.com:20020,clusterOne02.fancyCorp.com:20020,clusterOne03.fancyCorp.com:20020/?authMechanism=MONGODB-OIDC&authMechanismProperties=ENVIRONMENT=azure" \

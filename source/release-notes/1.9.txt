@@ -30,4 +30,4 @@ Azure Support
 -------------
 
 Starting in 1.9.0, ``mongosync`` supports Azure. For details, see
-:ref:`c2c-cli-azure-options`.
+:ref:`c2c-cli-azure`.
