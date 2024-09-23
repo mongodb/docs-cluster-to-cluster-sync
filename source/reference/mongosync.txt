@@ -209,8 +209,7 @@ define these environment variables:
 
 You must also set the :urioption:`authMechanism` option to
 ``MONGODB-OIDC`` and :urioption:`authMechanismProperties` to
-``ENVIRONMENT=azure``. For details about connection strings, see
-:ref:`mongodb-uri`. For details about OIDC for workloads, see
+``ENVIRONMENT=azure``. For more details, see :ref:`mongodb-uri` and
 :atlas:`</workload-oidc/#std-label-oidc-authentication-workload>`.
 
 The following ``mongosync`` example connects MongoDB clusters using
