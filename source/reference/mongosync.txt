@@ -184,17 +184,16 @@ Using mongosync with OpenID Connect (OIDC)
 .. include:: /includes/mongosync-and-OIDC.rst
 
 In the connection string, set :urioption:`authMechanism` to
-``MONGODB-OIDC`` and :urioption:`authMechanismProperties` to the
-required authentication mechanism. For example, to connect to a MongoDB
-cluster running on:
+``MONGODB-OIDC``. Set :urioption:`authMechanismProperties` as as needed.
+For example, to connect to a MongoDB cluster running on:
 
 - Microsoft Azure, set ``authMechanismProperties`` to
   ``ENVIRONMENT=azure``
 - Google Cloud Platform, set ``authMechanismProperties`` to
   ``ENVIRONMENT=gcp``
 
-For more details about connection strings, see
-:ref:`mongodb-uri` and :atlas:`Atlas Workload OIDC </workload-oidc/>`.
+For more details about connection strings, see :ref:`mongodb-uri` and
+:atlas:`Atlas Authentication and Authorization </security-oidc/>`.
 
 The following ``mongosync`` example connects to MongoDB clusters using
 Microsoft Azure Instance Metadata Service (IMDS):
