@@ -212,7 +212,7 @@ You must also set the :urioption:`authMechanism` option to
 ``ENVIRONMENT=azure``. For details, see :ref:`mongodb-uri` and
 :atlas:`</workload-oidc/#std-label-oidc-authentication-workload>`.
 
-The following ``mongosync`` example connects MongoDB clusters using
+The following ``mongosync`` example connects to MongoDB clusters using
 Azure Managed Identities:
 
 .. code-block:: shell
