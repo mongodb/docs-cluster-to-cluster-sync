@@ -26,8 +26,8 @@ In 1.9.0, the minimum supported versions of MongoDB are 6.0.16 and 7.0.9.
 
 .. include:: /includes/migration-upgrade-recommendation.rst
 
-mongosync Azure Support
------------------------
+mongosync OIDC Support
+----------------------
 
 .. include:: /includes/mongosync-and-OIDC.rst
 
