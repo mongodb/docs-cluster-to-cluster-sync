@@ -183,10 +183,10 @@ Using mongosync with Microsoft Azure
 
 .. include:: /includes/mongosync-and-azure.rst
 
-Set the :urioption:`authMechanism` option to ``MONGODB-OIDC`` and
-:urioption:`authMechanismProperties` to ``ENVIRONMENT=azure``. For more
-details, see :ref:`mongodb-uri` and
-:atlas:`</workload-oidc/#std-label-oidc-authentication-workload>`.
+To connect, set the :urioption:`authMechanism` option to
+``MONGODB-OIDC`` and :urioption:`authMechanismProperties` to
+``ENVIRONMENT=azure`` in the connection strings. For more details, see
+:ref:`mongodb-uri` and :atlas:`</workload-oidc/>`.
 
 The following ``mongosync`` example connects to MongoDB clusters using
 Azure Instance Metadata Service (IMDS):
