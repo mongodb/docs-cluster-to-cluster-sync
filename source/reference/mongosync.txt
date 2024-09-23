@@ -176,20 +176,28 @@ Global Options
 
    Prints ``mongosync`` version information to stdout.
 
-.. _c2c-cli-azure:
+.. _c2c-cli-OIDC:
 
-Using mongosync with Microsoft Azure
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Using mongosync with OpenID Connect (OIDC)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. include:: /includes/mongosync-and-azure.rst
+.. include:: /includes/mongosync-and-OIDC.rst
 
-To connect, set :urioption:`authMechanism` to ``MONGODB-OIDC`` and
-:urioption:`authMechanismProperties` to ``ENVIRONMENT=azure`` in the
-connection strings. For more details about connection strings, see
+In the connection string, set :urioption:`authMechanism` to
+``MONGODB-OIDC`` and :urioption:`authMechanismProperties` to the
+required authentication mechanism. For example, to connect to a MongoDB
+cluster running on:
+
+- Microsoft Azure, set ``authMechanismProperties`` to
+  ``ENVIRONMENT=azure``
+- Google Cloud Platform, set ``authMechanismProperties`` to
+  ``ENVIRONMENT=gcp``
+
+For more details about connection strings, see
 :ref:`mongodb-uri` and :atlas:`Atlas Workload OIDC </workload-oidc/>`.
 
 The following ``mongosync`` example connects to MongoDB clusters using
-Azure Instance Metadata Service (IMDS):
+Microsoft Azure Instance Metadata Service (IMDS):
 
 .. code-block:: shell
 
@@ -198,8 +206,8 @@ Azure Instance Metadata Service (IMDS):
          --cluster0 "mongodb://clusterAdmin:superSecret@clusterOne01.fancyCorp.com:20020,clusterOne02.fancyCorp.com:20020,clusterOne03.fancyCorp.com:20020/?authMechanism=MONGODB-OIDC&authMechanismProperties=ENVIRONMENT=azure" \
          --cluster1 "mongodb://clusterAdmin:superSecret@clusterTwo01.fancyCorp.com:20020,clusterTwo02.fancyCorp.com:20020,clusterTwo03.fancyCorp.com:20020/?authMechanism=MONGODB-OIDC&authMechanismProperties=ENVIRONMENT=azure"
 
-To use Azure Managed Identities for federated authentication, you must
-define these environment variables:
+To use Microsoft Azure Managed Identities for federated authentication,
+you must define these environment variables:
 
 .. option:: AZURE_TENANT_ID <id>
 
@@ -223,7 +231,7 @@ define these environment variables:
    ``AZURE_FEDERATED_TOKEN_FILE=/var/run/secrets/azure/tokens/azure-identity-token``
 
 The following ``mongosync`` example connects to MongoDB clusters using
-Azure Managed Identities:
+Microsoft Azure Managed Identities:
 
 .. code-block:: shell
 
