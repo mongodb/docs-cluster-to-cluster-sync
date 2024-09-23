@@ -178,8 +178,8 @@ Global Options
 
 .. _c2c-cli-OIDC:
 
-Using mongosync with OpenID Connect (OIDC)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Using mongosync with OpenID Connect
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. include:: /includes/mongosync-and-OIDC.rst
 
