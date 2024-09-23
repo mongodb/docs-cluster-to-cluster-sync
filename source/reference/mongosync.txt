@@ -193,7 +193,8 @@ For example, to connect to a MongoDB cluster running on:
   ``ENVIRONMENT=gcp``
 
 For more details about connection strings, see :ref:`mongodb-uri` and
-:atlas:`Atlas Authentication and Authorization </security-oidc/>`.
+:atlas:`Set up Workforce Identity Federation with OIDC
+</workforce-oidc/#std-label-oidc-authentication-workforce/>`.
 
 The following ``mongosync`` example connects to MongoDB clusters using
 Microsoft Azure Instance Metadata Service (IMDS):
