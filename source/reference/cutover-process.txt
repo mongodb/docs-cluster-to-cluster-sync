@@ -189,8 +189,10 @@ true``. ``mongosync`` then converts the ``prepareUnique``
 indexes into unique indexes. When this is done, ``mongosync``
 changes its state to ``COMMITTED``.
 
-This process may take a long time when syncing large
-collections.
+This process can be resource intensive when syncing large
+collections, which can result in a long time between the
+``/progress`` endpoint returning ``canWrite: true`` and
+``mongosync`` reaching the ``COMMITTED`` state.
 
 Learn More
 ----------
