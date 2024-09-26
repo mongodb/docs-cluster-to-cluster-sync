@@ -180,9 +180,9 @@ canWrite and COMMITTED
 ``mongosync`` permits writes on the destination cluster at an
 earlier stage than the ``COMMITTED`` state.
 
-During the initial sync, ``mongosync`` replicates unique indexes
-on the source cluster as non-unique indexes on the destination
-cluster. During the commit, the relevant indexes on the
+In the initial sync, ``mongosync`` replicates unique indexes on
+the source cluster as non-unique indexes on the destination
+cluster. During commit, the relevant non-unique indexes on the
 destination cluster are set to ``prepareUnique``. When this is
 done, the ``/progress`` endpoint begins to return ``canWrite:
 true``. ``mongosync`` then converts the ``prepareUnique``
