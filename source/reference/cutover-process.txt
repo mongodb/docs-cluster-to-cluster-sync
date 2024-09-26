@@ -195,7 +195,7 @@ changes its state to ``COMMITTED``.
 
    The conversion of ``prepareUnique`` indexes to unique
    indexes can be resource intensive when syncing large
-   collections, which can result in a long time between the
+   collections. This can result in a long time between the
    ``/progress`` endpoint returning ``canWrite: true`` and
    ``mongosync`` reaching the ``COMMITTED`` state.
 
