@@ -178,31 +178,10 @@ Global Options
 
 .. _c2c-cli-OIDC:
 
-Using mongosync with OpenID Connect
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Microsoft Azure Managed Identities Environment Variables
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. include:: /includes/mongosync-and-OIDC.rst
-
-In the connection string, set :urioption:`authMechanism` to
-``MONGODB-OIDC``. Set :urioption:`authMechanismProperties` as needed.
-For example, to connect to a MongoDB cluster running on:
-
-- Microsoft Azure, set ``authMechanismProperties`` to ``ENVIRONMENT:azure``
-- Google Cloud Platform, set ``authMechanismProperties`` to ``ENVIRONMENT:gcp``
-
-For more details about connection strings, see :ref:`mongodb-uri` and
-:atlas:`Set up Workforce Identity Federation with OIDC
-</workforce-oidc/#std-label-oidc-authentication-workforce/>`.
-
-The following ``mongosync`` example connects to MongoDB clusters using
-Microsoft Azure Instance Metadata Service (IMDS):
-
-.. code-block:: shell
-
-   ./bin/mongosync \
-         --logPath /var/log/mongosync \
-         --cluster0 "mongodb://clusterAdmin:superSecret@clusterOne01.fancyCorp.com:20020,clusterOne02.fancyCorp.com:20020,clusterOne03.fancyCorp.com:20020/?authMechanism=MONGODB-OIDC&authMechanismProperties=ENVIRONMENT=azure" \
-         --cluster1 "mongodb://clusterAdmin:superSecret@clusterTwo01.fancyCorp.com:20020,clusterTwo02.fancyCorp.com:20020,clusterTwo03.fancyCorp.com:20020/?authMechanism=MONGODB-OIDC&authMechanismProperties=ENVIRONMENT=azure"
 
 To use Microsoft Azure Managed Identities for federated authentication,
 you must define these environment variables:
@@ -227,6 +206,9 @@ you must define these environment variables:
    Sets the Azure federated token file and path.
    Example:
    ``AZURE_FEDERATED_TOKEN_FILE=/var/run/secrets/azure/tokens/azure-identity-token``
+
+For a complete example, see
+:ref:`c2c-conn-OIDC2OIDC-azure-managed-identities-example`.
 
 Behavior
 --------
