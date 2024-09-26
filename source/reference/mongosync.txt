@@ -187,10 +187,8 @@ In the connection string, set :urioption:`authMechanism` to
 ``MONGODB-OIDC``. Set :urioption:`authMechanismProperties` as needed.
 For example, to connect to a MongoDB cluster running on:
 
-- Microsoft Azure, set ``authMechanismProperties`` to
-  ``ENVIRONMENT=azure``
-- Google Cloud Platform, set ``authMechanismProperties`` to
-  ``ENVIRONMENT=gcp``
+- Microsoft Azure, set ``authMechanismProperties`` to ``ENVIRONMENT:azure``
+- Google Cloud Platform, set ``authMechanismProperties`` to ``ENVIRONMENT:gcp``
 
 For more details about connection strings, see :ref:`mongodb-uri` and
 :atlas:`Set up Workforce Identity Federation with OIDC
