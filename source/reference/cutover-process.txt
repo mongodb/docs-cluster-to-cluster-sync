@@ -185,14 +185,19 @@ the source cluster as non-unique indexes on the destination
 cluster. During commit, the relevant non-unique indexes on the
 destination cluster are set to ``prepareUnique``. When this is
 done, the ``/progress`` endpoint begins to return ``canWrite:
-true``. ``mongosync`` then converts the ``prepareUnique``
+true``. Collections with ``prepareUnique`` indexes reject
+new documents that violate the unique index constraint.
+``mongosync`` then converts the ``prepareUnique``
 indexes into unique indexes. When this is done, ``mongosync``
 changes its state to ``COMMITTED``.
 
-This process can be resource intensive when syncing large
-collections, which can result in a long time between the
-``/progress`` endpoint returning ``canWrite: true`` and
-``mongosync`` reaching the ``COMMITTED`` state.
+.. note::
+
+   The conversion of ``prepareUnique`` indexes to unique
+   indexes can be resource intensive when syncing large
+   collections, which can result in a long time between the
+   ``/progress`` endpoint returning ``canWrite: true`` and
+   ``mongosync`` reaching the ``COMMITTED`` state.
 
 Learn More
 ----------
