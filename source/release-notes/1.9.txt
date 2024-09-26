@@ -31,4 +31,4 @@ mongosync OpenID Connect Support
 
 .. include:: /includes/mongosync-and-OIDC.rst
 
-For details, see :ref:`c2c-cli-OIDC`.
+For details, see :ref:`c2c-conn-OIDC2OIDC`.
