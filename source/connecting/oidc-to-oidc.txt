@@ -14,8 +14,6 @@ Connect Two Clusters that Support OpenID Connect
 
 .. include:: /includes/mongosync-and-oidc.rst
 
-.. include:: /includes/fact-connect-intro
-
 This page provides instructions to connect clusters that support OpenID
 Connect (OIDC) using {+c2c-full-product-name+}.
 
