@@ -57,8 +57,7 @@ Connect to MongoDB Clusters Using Microsoft Azure Managed Identities
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 To connect to MongoDB clusters using Microsoft Azure Managed Identities
-and federated authentication, you must define these environment
-variables:
+and federated authentication, define these environment variables:
 
 - :option:`AZURE_TENANT_ID`
 - :option:`AZURE_APP_CLIENT_ID`

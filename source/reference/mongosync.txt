@@ -184,7 +184,7 @@ Microsoft Azure Managed Identities Environment Variables
 .. include:: /includes/mongosync-and-oidc.rst
 
 To use Microsoft Azure Managed Identities for federated authentication,
-you must define these environment variables:
+define these environment variables:
 
 .. option:: AZURE_TENANT_ID <id>
 
