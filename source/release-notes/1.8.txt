@@ -17,6 +17,16 @@ Release Notes for mongosync 1.8
 This page describes changes and new features introduced in  
 {+c2c-full-product-name+} 1.8 and the {+c2c-full-beta-program+}.
 
+1.8.1 Release
+-------------
+
+mongosync OpenID Connect Support
+--------------------------------
+
+.. include:: /includes/mongosync-and-OIDC.rst
+
+For details, see :ref:`c2c-conn-OIDC2OIDC`.
+
 1.8.0 Release
 -------------
 

@@ -25,10 +25,3 @@ Minimum Supported Version
 In 1.9.0, the minimum supported versions of MongoDB are 6.0.16 and 7.0.9.
 
 .. include:: /includes/migration-upgrade-recommendation.rst
-
-mongosync OpenID Connect Support
---------------------------------
-
-.. include:: /includes/mongosync-and-OIDC.rst
-
-For details, see :ref:`c2c-conn-OIDC2OIDC`.
