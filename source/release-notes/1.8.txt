@@ -20,7 +20,7 @@ This page describes changes and new features introduced in
 1.8.1 Release
 -------------
 
-**October XXX, 2024**
+**October XX, 2024**
 
 mongosync OpenID Connect Support
 --------------------------------
