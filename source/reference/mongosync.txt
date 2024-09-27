@@ -207,7 +207,7 @@ you must define these environment variables:
    ``AZURE_FEDERATED_TOKEN_FILE=/var/run/secrets/azure/tokens/azure-identity-token``
 
 For a complete example, see
-:ref:`c2c-conn-oidc2oidc-azure-managed-identities-example`. 
+:ref:`c2c-conn-oidc2oidc-azure-managed-identities-example`.
 
 Behavior
 --------
