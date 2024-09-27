@@ -17,19 +17,16 @@ Connect Two Clusters that Support OpenID Connect
 This page provides instructions to connect clusters that support OpenID
 Connect (OIDC) using {+c2c-full-product-name+}.
 
-About this Task
----------------
+The source and destination clusters must use MongoDB 8.0 or later.
 
-- Both the source and destination clusters must use MongoDB 8.0 or 
-  later.
-- ``mongosync`` supports replica sets and sharded clusters.
+``mongosync`` supports replica sets and sharded clusters.
 
 Examples
 --------
 
-In the connection string, set :urioption:`authMechanism` to
-``MONGODB-OIDC`` and set :urioption:`authMechanismProperties` as
-needed:
+In the :ref:`MongoDB URI connection string <mongodb-uri>`, set
+:urioption:`authMechanism` to ``MONGODB-OIDC`` and set
+:urioption:`authMechanismProperties` as needed:
 
 - For Microsoft Azure, set ``authMechanismProperties`` to
   ``ENVIRONMENT:azure``
