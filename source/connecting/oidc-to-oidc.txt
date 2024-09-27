@@ -24,9 +24,8 @@ The source and destination clusters must use MongoDB 8.0 or later.
 Examples
 --------
 
-In the :ref:`MongoDB URI connection string <mongodb-uri>`, set
-:urioption:`authMechanism` to ``MONGODB-OIDC`` and set
-:urioption:`authMechanismProperties` as needed:
+In the MongoDB connection string, set :urioption:`authMechanism` to
+``MONGODB-OIDC`` and set :urioption:`authMechanismProperties` as needed:
 
 - For Microsoft Azure, set ``authMechanismProperties`` to
   ``ENVIRONMENT:azure``.
@@ -103,3 +102,4 @@ Learn More
 - :ref:`c2c-states`
 - :ref:`c2c-api`
 - :ref:`c2c-cutover-process`
+- :ref:`Connection strings <mongodb-uri>`
