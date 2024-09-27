@@ -189,7 +189,7 @@ you must define these environment variables:
 .. option:: AZURE_TENANT_ID <id>
 
    Sets the Azure tenant identifier. Example:
-   ``AZURE_TENANT_ID=08206ab8-16a0-406d-85e4-2f15f5620fac``.
+   ``AZURE_TENANT_ID=08206ab8-16a0-406d-85e4-2f15f5620fac``
 
 .. option:: AZURE_APP_CLIENT_ID <id>
 
@@ -203,8 +203,7 @@ you must define these environment variables:
 
 .. option:: AZURE_FEDERATED_TOKEN_FILE <file>
 
-   Sets the Azure federated token file and path.
-   Example:
+   Sets the Azure federated token file and path. Example:
    ``AZURE_FEDERATED_TOKEN_FILE=/var/run/secrets/azure/tokens/azure-identity-token``
 
 For a complete example, see
