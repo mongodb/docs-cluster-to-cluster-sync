@@ -26,17 +26,17 @@ In the :ref:`connection string <connections-connection-options>`, set
 :urioption:`authMechanismProperties` as needed:
 
 - For Microsoft Azure, set ``authMechanismProperties`` to
-  ``ENVIRONMENT:azure``.
+  ``ENVIRONMENT:azure``
 - For Google Cloud Platform, set ``authMechanismProperties`` to
-  ``ENVIRONMENT:gcp``.
+  ``ENVIRONMENT:gcp``
 
 For more details about:
 
 - OIDC in connections strings, see
-  :ref:`connection-string-auth-options`.
+  :ref:`connection-string-auth-options`
 - Workforce Identity Federation and OIDC in Atlas, see
   :atlas:`Set up Workforce Identity Federation with OIDC
-  </workforce-oidc/#std-label-oidc-authentication-workforce/>`.
+  </workforce-oidc/#std-label-oidc-authentication-workforce/>`
 
 Connect to MongoDB Clusters Using Microsoft Azure Instance Metadata Service
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
