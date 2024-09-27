@@ -30,7 +30,8 @@ Examples
 --------
 
 In the connection string, set :urioption:`authMechanism` to
-``MONGODB-OIDC``. Set :urioption:`authMechanismProperties` as needed:
+``MONGODB-OIDC`` and set :urioption:`authMechanismProperties` as
+needed:
 
 - For Microsoft Azure, set ``authMechanismProperties`` to
   ``ENVIRONMENT:azure``
@@ -41,8 +42,8 @@ For more details about connection strings, see :ref:`mongodb-uri` and
 :atlas:`Set up Workforce Identity Federation with OIDC
 </workforce-oidc/#std-label-oidc-authentication-workforce/>`.
 
-Connect to Microsoft Azure Instance Metadata Service MongoDB Clusters
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Connect to MongoDB Clusters Using Microsoft Azure Instance Metadata Service
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The following ``mongosync`` example connects to MongoDB clusters using
 Microsoft Azure Instance Metadata Service (IMDS):
@@ -56,11 +57,12 @@ Microsoft Azure Instance Metadata Service (IMDS):
 
 .. _c2c-conn-OIDC2OIDC-azure-managed-identities-example:
 
-Connect to Microsoft Azure Managed Identities MongoDB Clusters
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Connect to MongoDB Clusters Using Microsoft Azure Managed Identities
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-To use Microsoft Azure Managed Identities for federated authentication,
-you must define these environment variables:
+To connect to MongoDB clusters using Microsoft Azure Managed Identities
+and federated authentication, you must define these environment
+variables:
 
 - :option:`AZURE_TENANT_ID`
 - :option:`AZURE_APP_CLIENT_ID`
@@ -68,8 +70,7 @@ you must define these environment variables:
 - :option:`AZURE_FEDERATED_TOKEN_FILE`
 
 The following ``mongosync`` example defines the environment variables
-and connects to MongoDB clusters using Microsoft Azure Managed
-Identities:
+and connects to MongoDB clusters in Microsoft Azure:
 
 .. code-block:: shell
 
@@ -82,11 +83,11 @@ Identities:
          --cluster0 "mongodb://clusterAdmin:superSecret@clusterOne01.fancyCorp.com:20020,clusterOne02.fancyCorp.com:20020,clusterOne03.fancyCorp.com:20020/?authMechanism=MONGODB-OIDC&authMechanismProperties=ENVIRONMENT:azure" \
          --cluster1 "mongodb://clusterAdmin:superSecret@clusterTwo01.fancyCorp.com:20020,clusterTwo02.fancyCorp.com:20020,clusterTwo03.fancyCorp.com:20020/?authMechanism=MONGODB-OIDC&authMechanismProperties=ENVIRONMENT:azure"
 
-Connect to Google Cloud Platform Clusters
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Connect to MongoDB Clusters in Google Cloud Platform
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The following ``mongosync`` example connects to MongoDB clusters using
-Microsoft Azure Instance Metadata Service (IMDS):
+The following ``mongosync`` example connects to MongoDB clusters in
+Google Cloud Platform:
 
 .. code-block:: shell
 
