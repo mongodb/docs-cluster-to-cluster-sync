@@ -176,12 +176,12 @@ Global Options
 
    Prints ``mongosync`` version information to stdout.
 
-.. _c2c-cli-OIDC:
+.. _c2c-cli-oidc:
 
 Microsoft Azure Managed Identities Environment Variables
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. include:: /includes/mongosync-and-OIDC.rst
+.. include:: /includes/mongosync-and-oidc.rst
 
 To use Microsoft Azure Managed Identities for federated authentication,
 you must define these environment variables:
