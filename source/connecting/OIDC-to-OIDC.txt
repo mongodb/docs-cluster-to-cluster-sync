@@ -1,4 +1,4 @@
-.. _c2c-conn-OIDC2OIDC:
+.. _c2c-conn-oidc2oidc:
 
 ================================================
 Connect Two Clusters that Support OpenID Connect
@@ -12,7 +12,7 @@ Connect Two Clusters that Support OpenID Connect
    :depth: 1
    :class: twocols
 
-.. include:: /includes/mongosync-and-OIDC.rst
+.. include:: /includes/mongosync-and-oidc.rst
 
 .. include:: /includes/fact-connect-intro
 
@@ -59,7 +59,7 @@ Microsoft Azure Instance Metadata Service (IMDS):
          --cluster0 "mongodb://clusterAdmin:superSecret@clusterOne01.fancyCorp.com:20020,clusterOne02.fancyCorp.com:20020,clusterOne03.fancyCorp.com:20020/?authMechanism=MONGODB-OIDC&authMechanismProperties=ENVIRONMENT:azure" \
          --cluster1 "mongodb://clusterAdmin:superSecret@clusterTwo01.fancyCorp.com:20020,clusterTwo02.fancyCorp.com:20020,clusterTwo03.fancyCorp.com:20020/?authMechanism=MONGODB-OIDC&authMechanismProperties=ENVIRONMENT:azure"
 
-.. _c2c-conn-OIDC2OIDC-azure-managed-identities-example:
+.. _c2c-conn-oidc2oidc-azure-managed-identities-example:
 
 Connect to MongoDB Clusters Using Microsoft Azure Managed Identities
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

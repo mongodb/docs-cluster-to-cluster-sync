@@ -20,12 +20,14 @@ This page describes changes and new features introduced in
 1.8.1 Release
 -------------
 
+**October XXX, 2024**
+
 mongosync OpenID Connect Support
 --------------------------------
 
-.. include:: /includes/mongosync-and-OIDC.rst
+.. include:: /includes/mongosync-and-oidc.rst
 
-For details, see :ref:`c2c-conn-OIDC2OIDC`.
+For details, see :ref:`c2c-conn-oidc2oidc`.
 
 1.8.0 Release
 -------------

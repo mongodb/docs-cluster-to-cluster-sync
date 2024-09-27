@@ -20,7 +20,7 @@ to the connection documentation that matches your environment:
 - :ref:`c2c-conn-atlas2atlas`
 - :ref:`c2c-conn-oprem2onprem`
 - :ref:`c2c-conn-onprem2atlas`
-- :ref:`c2c-conn-OIDC2OIDC`
+- :ref:`c2c-conn-oidc2oidc`
 
 .. toctree::
    :titlesonly: 
@@ -28,4 +28,4 @@ to the connection documentation that matches your environment:
    Atlas Clusters </connecting/atlas-to-atlas>
    Self-Managed Clusters </connecting/onprem-to-onprem>
    Self-Managed Cluster to Atlas </connecting/onprem-to-atlas>
-   OpenID Connect (OIDC) Clusters </connecting/OIDC-to-OIDC>
+   OpenID Connect (OIDC) Clusters </connecting/oidc-to-oidc>
