@@ -14,9 +14,6 @@ Connect Two Clusters that Support OpenID Connect
 
 .. include:: /includes/mongosync-and-oidc.rst
 
-This page provides instructions to connect clusters that support OpenID
-Connect (OIDC) using {+c2c-full-product-name+}.
-
 The source and destination clusters must use MongoDB 8.0 or later.
 
 ``mongosync`` supports replica sets and sharded clusters.
