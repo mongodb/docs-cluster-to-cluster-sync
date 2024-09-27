@@ -21,7 +21,7 @@ About this Task
 ---------------
 
 - Both the source and destination clusters must use MongoDB 8.0 or 
-  later. 
+  later.
 - ``mongosync`` supports replica sets and sharded clusters.
 
 Examples
