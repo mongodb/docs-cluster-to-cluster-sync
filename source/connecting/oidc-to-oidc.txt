@@ -1,8 +1,8 @@
 .. _c2c-conn-oidc2oidc:
 
-================================================
-Connect Two Clusters that Support OpenID Connect
-================================================
+==============================================================
+Connect Two Clusters that Support Workload Identity Federation
+==============================================================
 
 .. default-domain:: mongodb
 
