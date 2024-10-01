@@ -16,6 +16,16 @@ Authentication Using Workload Identity Federation
 
 The source and destination clusters must use MongoDB 7.0 or later.
 
+You can also use ``mongosync`` to sync data between a source cluster
+authenticated using Workload Identity Federation and a destination
+cluster that doesn't use Workload Identity Federation. You can also use
+the opposite configuration.
+
+For example, you can sync data between clusters running on Microsoft
+Azure and Google Cloud Platform (GCP). Also, you can sync data between
+clusters running in your own data center and clusters running
+externally.
+
 ``mongosync`` supports replica sets and sharded clusters.
 
 Examples
