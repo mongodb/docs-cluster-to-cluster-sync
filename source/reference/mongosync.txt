@@ -203,7 +203,7 @@ define these environment variables:
 
 .. option:: AZURE_FEDERATED_TOKEN_FILE <file>
 
-   Sets the Azure federated token file and path. Example:
+   Sets the Azure federated token file. Example:
    ``AZURE_FEDERATED_TOKEN_FILE=/var/run/secrets/azure/tokens/azure-identity-token``
 
 For a complete example, see
