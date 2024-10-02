@@ -20,8 +20,10 @@ Verify with Embedded Verifier
 .. versionadded:: 1.9
 
    ``mongosync`` includes an embedded verifier to confirm the
-   correct and successful sync of data from the source cluster
-   to the destination cluster.
+   the successful transfer of data from the source cluster
+   to the destination cluster. If the verifier encounters no
+   errors, ``mongosync`` transitions to the ``COMMITTED`` state.
+   If the verifier encounters errors, the migration fails.
 
 .. important::
 
