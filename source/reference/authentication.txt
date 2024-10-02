@@ -25,24 +25,27 @@ Behaviors
 ---------
 
 You can use ``mongosync`` to sync data between source and destination
-clusters and authenticate the cluster connections using various
+clusters, and authenticate the cluster connections using various
 combinations:
 
-- Sync source and destination clusters both authenticated using Workload
-  Identity Federation.
-- Sync a source cluster authenticated using Workload Identity Federation
-  and a destination cluster that doesn't use Workload Identity
-  Federation.
-- Sync a destination cluster authenticated using Workload Identity
-  Federation and a source cluster that doesn't use Workload Identity
-  Federation.
+- Sync source and destination clusters where both connections
+  are authenticated using Workload Identity Federation.
+- Sync a source cluster with the connection authenticated using Workload
+  Identity Federation and a destination cluster with the connection
+  authenticated using another method.
+- Sync a destination cluster with the connection authenticated using Workload
+  Identity Federation and a source cluster with the connection
+  authenticated using another method.
 
 Examples
 --------
 
-To use Workload Identity Federation, in the :ref:`connection string
-<connections-connection-options>`, set :urioption:`authMechanism` to
-``MONGODB-OIDC`` and set :urioption:`authMechanismProperties` as needed:
+This section shows  ``mongosync``  examples that use Workload Identity
+Federation.
+
+In the :ref:`connection string <connections-connection-options>`, set
+:urioption:`authMechanism` to ``MONGODB-OIDC`` and set
+:urioption:`authMechanismProperties` as needed:
 
 - For Microsoft Azure, set ``authMechanismProperties`` to
   ``ENVIRONMENT:azure``
