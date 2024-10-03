@@ -109,12 +109,12 @@ The following table shows supported combinations of beta features:
    Unsupported feature combinations do not have guardrails and can result in 
    undefined behavior.  
 
-.. include:: /includes/table-beta-compatibility.rst
-
 .. note:: 
 
    Currently, mongosync :ref:`c2c-api-reverse` mode is not compatible with 
    any of the above beta features. 
+
+.. include:: /includes/table-beta-compatibility.rst
 
 .. toctree::
    :titlesonly:
