@@ -81,17 +81,6 @@ Connect to MongoDB Clusters Using Microsoft Azure Managed Identities
 To connect to MongoDB clusters using Microsoft Azure Managed Identities
 and federated authentication, define these environment variables:
 
-
-.. _c2c-cli-oidc:
-
-Microsoft Azure Managed Identities Environment Variables
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-.. include:: /includes/mongosync-and-oidc.rst
-
-To use Microsoft Azure Managed Identities for federated authentication,
-define these environment variables:
-
 ``AZURE_TENANT_ID <id>``: Sets the Azure tenant identifier. For
 example, ``AZURE_TENANT_ID=08206ab8-16a0-406d-85e4-2f15f5620fac``.
 
@@ -129,8 +118,8 @@ and connects to MongoDB clusters in Microsoft Azure:
    AZURE_FEDERATED_TOKEN_FILE=/var/run/secrets/azure/tokens/azure-identity-token \
    ./bin/mongosync \
          --logPath /var/log/mongosync \
-         --cluster0 "mongodb://clusterAdmin:superSecret@clusterOne01.fancyCorp.com:20020,clusterOne02.fancyCorp.com:20020,clusterOne03.fancyCorp.com:20020/?authMechanism=MONGODB-OIDC&authMechanismProperties=ENVIRONMENT:azure" \
-         --cluster1 "mongodb://clusterAdmin:superSecret@clusterTwo01.fancyCorp.com:20020,clusterTwo02.fancyCorp.com:20020,clusterTwo03.fancyCorp.com:20020/?authMechanism=MONGODB-OIDC&authMechanismProperties=ENVIRONMENT:azure"
+         --cluster0 "mongodb://clusterOne01.fancyCorp.com:20020,clusterOne02.fancyCorp.com:20020,clusterOne03.fancyCorp.com:20020/?authMechanism=MONGODB-OIDC&authMechanismProperties=ENVIRONMENT:azure" \
+         --cluster1 "mongodb://clusterTwo01.fancyCorp.com:20020,clusterTwo02.fancyCorp.com:20020,clusterTwo03.fancyCorp.com:20020/?authMechanism=MONGODB-OIDC&authMechanismProperties=ENVIRONMENT:azure"
 
 For details about Azure and the variable values, see the Microsoft
 documentation.
@@ -145,8 +134,8 @@ Google Cloud Platform:
 
    ./bin/mongosync \
          --logPath /var/log/mongosync \
-         --cluster0 "mongodb://clusterAdmin:superSecret@clusterOne01.fancyCorp.com:20020,clusterOne02.fancyCorp.com:20020,clusterOne03.fancyCorp.com:20020/?authMechanism=MONGODB-OIDC&authMechanismProperties=ENVIRONMENT:gcp" \
-         --cluster1 "mongodb://clusterAdmin:superSecret@clusterTwo01.fancyCorp.com:20020,clusterTwo02.fancyCorp.com:20020,clusterTwo03.fancyCorp.com:20020/?authMechanism=MONGODB-OIDC&authMechanismProperties=ENVIRONMENT:gcp"
+         --cluster0 "mongodb://clusterOne01.fancyCorp.com:20020,clusterOne02.fancyCorp.com:20020,clusterOne03.fancyCorp.com:20020/?authMechanism=MONGODB-OIDC&authMechanismProperties=ENVIRONMENT:gcp" \
+         --cluster1 "mongodb://clusterTwo01.fancyCorp.com:20020,clusterTwo02.fancyCorp.com:20020,clusterTwo03.fancyCorp.com:20020/?authMechanism=MONGODB-OIDC&authMechanismProperties=ENVIRONMENT:gcp"
 
 No environment variables are required for Google Cloud Platform.
 

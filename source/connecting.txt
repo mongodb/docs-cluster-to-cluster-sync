@@ -20,7 +20,8 @@ to the connection documentation that matches your environment:
 - :ref:`c2c-conn-atlas2atlas`
 - :ref:`c2c-conn-oprem2onprem`
 - :ref:`c2c-conn-onprem2atlas`
-- :ref:`c2c-authentication`
+
+For addtional information, see :ref:`c2c-authentication`.
 
 .. toctree::
    :titlesonly: 
