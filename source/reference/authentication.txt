@@ -22,22 +22,6 @@ See https://www.mongodb.com/docs/atlas/workload-oidc/
 
 ``mongosync`` supports replica sets and sharded clusters.
 
-Behaviors
----------
-
-You can use ``mongosync`` to sync data between source and destination
-clusters, and authenticate the cluster connections using various
-combinations:
-
-- Sync source and destination clusters where both connections
-  are authenticated using Workload Identity Federation.
-- Sync a source cluster with the connection authenticated using Workload
-  Identity Federation and a destination cluster with the connection
-  authenticated using another method.
-- Sync a destination cluster with the connection authenticated using Workload
-  Identity Federation and a source cluster with the connection
-  authenticated using another method.
-
 Examples
 --------
 
