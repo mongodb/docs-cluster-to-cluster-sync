@@ -99,8 +99,8 @@ Beta Features
 
 .. note:: 
 
-   Currently, mongosync :ref:`c2c-api-reverse` mode is not compatible with 
-   any beta features. 
+   Mongosync :ref:`c2c-api-reverse` mode is not compatible with any beta 
+   features. 
 
 Feature Compatibility Matrix
 ----------------------------
