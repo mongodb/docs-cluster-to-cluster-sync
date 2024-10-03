@@ -14,10 +14,9 @@ Authentication Using Workload Identity Federation
 
 .. include:: /includes/mongosync-and-oidc.rst
 
-Compatibility
--------------
-
-The source and destination clusters must use MongoDB 7.0 or later.
+## Add this later
+## For Workforce External Provider software
+## requirements, see :ref:`workforce-external-provider`.
 
 ``mongosync`` supports replica sets and sharded clusters.
 
