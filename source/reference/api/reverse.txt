@@ -159,4 +159,6 @@ Limitations
 
 The ``reverse`` endpoint does not support :ref:`filtered sync <c2c-filtered-sync>`.
 
+Mongosync ``reverse`` mode is not compatible with any beta features. 
+
 
