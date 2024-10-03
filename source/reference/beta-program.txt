@@ -97,6 +97,11 @@ Beta Features
        guidelines and restrictions for migrating between older server 
        versions, you must have access to the {+c2c-beta-program-short+} binary.
 
+.. note:: 
+
+   Currently, mongosync :ref:`c2c-api-reverse` mode is not compatible with 
+   any beta features. 
+
 Feature Compatibility Matrix
 ----------------------------
 
@@ -108,11 +113,6 @@ The following table shows supported combinations of beta features:
 
    Unsupported feature combinations do not have guardrails and can result in 
    undefined behavior.  
-
-.. note:: 
-
-   Currently, mongosync :ref:`c2c-api-reverse` mode is not compatible with 
-   any of the beta features below. 
 
 .. include:: /includes/table-beta-compatibility.rst
 
