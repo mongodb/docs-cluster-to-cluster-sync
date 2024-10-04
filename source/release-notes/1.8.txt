@@ -25,8 +25,8 @@ Patch Releases
 
 **October XX, 2024**
 
-mongosync OpenID Connect Support
---------------------------------
+mongosync Supports Atlas Workload Identity Federation Authentication
+--------------------------------------------------------------------
 
 .. include:: /includes/mongosync-and-oidc.rst
 
