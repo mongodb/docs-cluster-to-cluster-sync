@@ -18,6 +18,9 @@ Authentication Using Workload Identity Federation
 ## For Workforce External Provider software
 ## requirements, see :ref:`workforce-external-provider`.
 
+For details about Atlas Workload Identity Federation, see
+:atlas:`Atlas Workload Identity Federation </workload-oidc>`.
+
 Examples
 --------
 
@@ -96,9 +99,6 @@ and connects to MongoDB clusters in Microsoft Azure:
          --logPath /var/log/mongosync \
          --cluster0 "mongodb://clusterOne01.fancyCorp.com:20020,clusterOne02.fancyCorp.com:20020,clusterOne03.fancyCorp.com:20020/?authMechanism=MONGODB-OIDC&authMechanismProperties=ENVIRONMENT:azure" \
          --cluster1 "mongodb://clusterTwo01.fancyCorp.com:20020,clusterTwo02.fancyCorp.com:20020,clusterTwo03.fancyCorp.com:20020/?authMechanism=MONGODB-OIDC&authMechanismProperties=ENVIRONMENT:azure"
-
-For details about Azure and the variable values, see the Microsoft
-documentation.
 
 Connect to MongoDB Clusters in Google Cloud Platform
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
