@@ -69,30 +69,19 @@ and federated authentication, define these environment variables:
      - Description
 
    * - ``AZURE_TENANT_ID``
-     - Azure tenant identifier. Example,
-       ``AZURE_TENANT_ID=08206ab8-16a0-406d-85e4-2f15f5620fac``
+     - Azure tenant identifier.
 
    * - ``AZURE_APP_CLIENT_ID``
-     - Azure application client identifier. Example,
-       ``AZURE_APP_CLIENT_ID=b6c835da-e536-425b-9405-64bc471e245b``
+     - Azure application client identifier.
 
-``AZURE_CLIENT_ID <id>``
+   * - ``AZURE_CLIENT_ID``
+     - Azure client identifier.
 
-Sets the Azure client identifier. Example:
-``AZURE_CLIENT_ID=f176d4eb-7dcd-4f66-bccf-aaa316ee61fd``
-
-``AZURE_FEDERATED_TOKEN_FILE <file>``
-
-Sets the Azure federated token file's path. Example:
-``AZURE_FEDERATED_TOKEN_FILE=/var/run/secrets/azure/tokens/azure-identity-token``
+   * - ``AZURE_FEDERATED_TOKEN_FILE``
+     - Azure federated token file's path.
 
 For details about Azure and the variable values, see the Microsoft
 documentation.
-
-- :option:`AZURE_TENANT_ID`
-- :option:`AZURE_APP_CLIENT_ID`
-- :option:`AZURE_CLIENT_ID`
-- :option:`AZURE_FEDERATED_TOKEN_FILE`
 
 The following ``mongosync`` example defines the environment variables
 and connects to MongoDB clusters in Microsoft Azure:
