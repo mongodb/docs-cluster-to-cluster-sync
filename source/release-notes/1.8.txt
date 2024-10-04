@@ -25,8 +25,8 @@ Patch Releases
 
 **October XX, 2024**
 
-mongosync Supports Atlas Workload Identity Federation Authentication
---------------------------------------------------------------------
+mongosync Authentication with Atlas Workload Identity Federation 
+----------------------------------------------------------------
 
 .. include:: /includes/mongosync-and-oidc.rst
 
