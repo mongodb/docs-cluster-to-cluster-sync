@@ -35,11 +35,8 @@ In the :ref:`connection string <connections-connection-options>`, set
 - For Google Cloud Platform, set ``authMechanismProperties`` to
   ``ENVIRONMENT:gcp``
 
-For more details about:
-
-- connection strings, see :ref:`connection-string-auth-options`
-- Atlas and OIDC, see :atlas:`Atlas OIDC Authentication
-  </workforce-oidc/#std-label-oidc-authentication-workforce/>`
+For details about connection string options, see
+:ref:`connection-string-auth-options`.
 
 Connect to MongoDB Clusters Using Microsoft Azure Instance Metadata Service
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
