@@ -14,9 +14,6 @@ Authentication Using Workload Identity Federation
 
 .. include:: /includes/mongosync-and-oidc.rst
 
-For details about Atlas Workload Identity Federation and OIDC, see
-:atlas:`Atlas Workload Identity Federation </workload-oidc>`.
-
 .. COMMENT Add the following link later
 .. COMMENT - :ref:`Workforce external provider </workforce-external-provider>`
 
