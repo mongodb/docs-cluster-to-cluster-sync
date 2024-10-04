@@ -80,7 +80,7 @@ and federated authentication, define these environment variables:
      - Azure client identifier.
 
    * - ``AZURE_FEDERATED_TOKEN_FILE``
-     - Azure federated token file's path.
+     - Azure federated token file path.
 
 For details about Azure and the variable values, see the Microsoft
 Azure documentation.
