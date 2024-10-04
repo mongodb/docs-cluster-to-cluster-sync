@@ -14,7 +14,7 @@ Authentication Using Workload Identity Federation
 
 .. include:: /includes/mongosync-and-oidc.rst
 
-For details about Atlas Workload Identity Federation, see
+For details about Atlas Workload Identity Federation and OIDC, see
 :atlas:`Atlas Workload Identity Federation </workload-oidc>`.
 
 ## Add this later
@@ -39,8 +39,7 @@ In the :ref:`connection string <connections-connection-options>`, set
 For more details about:
 
 - connections strings, see :ref:`connection-string-auth-options`
-- OIDC in Atlas, see :atlas:`Set up Workforce
-  Identity Federation with OIDC
+- Authentication in Atlas, see :atlas:`Atlas OIDC Authentication
   </workforce-oidc/#std-label-oidc-authentication-workforce/>`
 
 Connect to MongoDB Clusters Using Microsoft Azure Instance Metadata Service
@@ -84,7 +83,7 @@ and federated authentication, define these environment variables:
      - Azure federated token file's path.
 
 For details about Azure and the variable values, see the Microsoft
-documentation.
+Azure documentation.
 
 The following ``mongosync`` example defines the environment variables
 and connects to MongoDB clusters in Microsoft Azure:
