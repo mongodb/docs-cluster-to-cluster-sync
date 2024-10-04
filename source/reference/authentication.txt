@@ -78,8 +78,8 @@ and federated authentication, define these environment variables:
    * - ``AZURE_FEDERATED_TOKEN_FILE``
      - Azure federated token file path.
 
-For details about Azure and the variable values, see the Microsoft
-Azure documentation.
+For details about Azure and the variables, see the Microsoft Azure
+documentation.
 
 The following ``mongosync`` example defines the environment variables
 and connects to MongoDB clusters in Microsoft Azure:
