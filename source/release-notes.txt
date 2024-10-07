@@ -11,13 +11,13 @@ more information on types of MongoDB releases, see
 To see changes in {+c2c-product-name+} releases, see the following
 release notes.
 
-Current Stable Release
-~~~~~~~~~~~~~~~~~~~~~~
+Current Release
+~~~~~~~~~~~~~~~
 
 - :ref:`c2c-release-notes-1.8`
 
-Previous Rapid Releases
-~~~~~~~~~~~~~~~~~~~~~~~
+Previous Releases
+~~~~~~~~~~~~~~~~~
 
 - :ref:`c2c-release-notes-1.7`
 - :ref:`c2c-release-notes-1.6`
