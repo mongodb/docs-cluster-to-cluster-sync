@@ -42,9 +42,15 @@ To use the ``reverse`` endpoint:
   call to the :ref:`/start <c2c-api-start>` API endpoint must set:
   
   - ``reversible`` to ``true``
-  - :ref:`c2c-write-blocking` to ``true``
-  
-  You cannot update these options after the sync starts.
+  - ``enableUserWriteBlocking`` to ``true``.
+
+  You cannot update these options after the sync starts. 
+
+.. note::
+
+   :ref:`c2c-write-blocking` is a prerequisite for running ``reverse``.
+
+
 - ``mongosync`` must be in the ``COMMITTED`` state.
 - The destination cluster oplog must not roll over between 
   ``mongosync`` reaching ``canWrite=true`` and receiving
