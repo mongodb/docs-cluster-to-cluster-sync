@@ -23,7 +23,7 @@ Patch Releases
 1.8.1 Release
 -------------
 
-**October XX, 2024**
+**October 10, 2024**
 
 mongosync Authentication with Atlas Workload Identity Federation 
 ----------------------------------------------------------------
