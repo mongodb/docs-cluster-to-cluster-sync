@@ -537,7 +537,7 @@ determine whether data transfer from the source cluster to the
 destination was successful.
 
 To enable the verifier, set the ``verification.enabled``
-parameter in ``/start`` to ``true``.
+parameter in ``/start`` to ``true``. It's default is ``false``.
 
 The ``/start`` endpoint returns an error if you enable
 verification checks that are not supported by the source or

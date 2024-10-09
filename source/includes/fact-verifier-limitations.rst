@@ -17,20 +17,17 @@ The embedded verifier has the following limitations:
   checks, ``mongosync`` requires approximately 1 GB of memory
   for every 15 million documents.
 
-- Verification cannot be resumed. If a user stops and then starts
-  ``mongosync`` for any reason, the verification process
-  restarts from the beginning. This can cause verification to
-  fall substantially behind the migration.
+- Verification cannot be resumed. If a user stops or pauses sync
+  and then starts ``mongosync`` for any reason, the verification
+  process restarts from the beginning. This can cause
+  verification to fall substantially behind the migration.
 
 - The verifier isn't compatible with :ref:`reverse sync
   <c2c-api-reverse>`. The :ref:`/start <c2c-api-start>` endpoint
   returns an error if you enable this feature and the
   verifier.
 
-TTL Collections
-~~~~~~~~~~~~~~~
-
-.. include:: /includes/fact-verifier-buildIndexes
+- .. include:: /includes/fact-verifier-buildIndexes
 
 Unsupported Verification Checks
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
