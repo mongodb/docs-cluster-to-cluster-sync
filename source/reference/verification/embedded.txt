@@ -17,17 +17,17 @@ Verify with Embedded Verifier
    :depth: 1
    :class: singlecol
 
-.. versionadded:: 1.9
 
-   ``mongosync`` includes an embedded verifier to confirm the
-   the successful transfer of data from the source cluster
-   to the destination cluster. If the verifier encounters no
-   errors, ``mongosync`` transitions to the ``COMMITTED`` state.
-   If the verifier encounters errors, the migration fails.
+``mongosync`` includes an embedded verifier to check the
+migration to the destination cluster. The verifier checks all
+supported collections on the destination cluster to verify a
+successful sync. 
 
 .. important::
 
    .. include:: /includes/fact-verifier-unsupported
+
+.. versionadded:: 1.9
 
 About this Task
 ---------------
@@ -91,6 +91,21 @@ Steps
 
       Examine the ``verification`` response field for
       information on the status of the embedded verifier.
+
+Behavior
+--------
+
+Verification Checks
+~~~~~~~~~~~~~~~~~~~
+
+When enabled, the embedded verifier performs a series of check
+on the destination cluster. It checks all supported collections
+to confirm that ``mongosync`` was successful in transferring
+documents from the source cluster to the destination.
+
+If the verifier encounters errors, it fails the migration with
+an error. If the verifier finds no errors, ``mongosync``
+transitions to the ``COMMITTED`` state.
 
 Learn More
 ----------
