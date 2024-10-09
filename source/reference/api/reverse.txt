@@ -44,12 +44,11 @@ To use the ``reverse`` endpoint:
   - ``reversible`` to ``true``
   - ``enableUserWriteBlocking`` to ``true``.
 
-  You cannot update these options after the sync starts. 
-
 .. note::
 
    :ref:`c2c-write-blocking` is a prerequisite for running ``reverse``.
 
+  You cannot update these options after the sync starts. 
 
 - ``mongosync`` must be in the ``COMMITTED`` state.
 - The destination cluster oplog must not roll over between 
