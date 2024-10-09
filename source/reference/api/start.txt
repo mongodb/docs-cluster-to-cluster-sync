@@ -234,12 +234,8 @@ Request Body Parameters
        The ``/start`` command returns an error when
        reversible sync is started with the verifier.
 
-       .. include:: /includes/fact-verifier-beta-limitations
-
        The verifier does not check all collections or data.
        For details, see :ref:`c2c-verify-embedded-limitations`.
-
-
 
        .. versionadded:: 1.9
 
@@ -392,6 +388,29 @@ Response
 Behavior
 --------
 
+.. _c2c-start-verifier:
+
+Embedded Verifier
+~~~~~~~~~~~~~~~~~
+
+Starting in 1.9, ``mongosync`` provides an embedded verifier to
+determine whether data transfer from the source cluster to the
+destination was successful.
+
+When enabled, the verifier performs a series of verification
+checks on the destination cluster. If any of these checks return
+an error, the verifier fails the migration. If all of the checks
+succeed, ``mongosync`` transitions to the ``COMMITTED`` state.
+
+To enable the verifier, set the ``verification.enabled``
+parameter in ``/start`` to ``true``. It's default is ``false``.
+
+The ``/start`` endpoint returns an error if you enable
+verification checks that are not supported by the source or
+destination cluster.
+
+
+
 State
 ~~~~~
 
@@ -527,19 +546,4 @@ Endpoint Protection
 .. |endpoint| replace:: ``start``
 .. include:: /includes/fact-api-endpoint
 
-.. _c2c-start-verifier:
-
-Embedded Verifier
-~~~~~~~~~~~~~~~~~
-
-Starting in 1.9, ``mongosync`` provides an embedded verifier to
-determine whether data transfer from the source cluster to the
-destination was successful.
-
-To enable the verifier, set the ``verification.enabled``
-parameter in ``/start`` to ``true``. It's default is ``false``.
-
-The ``/start`` endpoint returns an error if you enable
-verification checks that are not supported by the source or
-destination cluster.
 
