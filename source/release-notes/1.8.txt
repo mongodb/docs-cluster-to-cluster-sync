@@ -29,8 +29,6 @@ Patch Releases
 
 New Features:
 
-- Supports MongoDB 6.0.16 and 7.0.9
-
 - Support added for OpenID Connect (OIDC) authentication with
   the workload (machine) flow.
 
