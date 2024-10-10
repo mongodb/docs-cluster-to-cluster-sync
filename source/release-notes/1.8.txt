@@ -28,9 +28,8 @@ Patch Releases
 New Features:
 
 - Support added for OpenID Connect (OIDC) authentication with
-  the workload (machine) flow.
-
-  For more information, see :ref:`c2c-rn-atlas-workload-identity`.
+  the workload (machine) flow. For more information, see
+  :ref:`c2c-rn-atlas-workload-identity`.
 
 Issues Fixed:
 
