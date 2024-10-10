@@ -32,12 +32,14 @@ mongosync Authentication with Atlas Workload Identity Federation
 
 For details, see :ref:`c2c-authentication`.
 
+
 .. _1.8.0-c2c-release-notes:
 
 1.8.0 Release
 -------------
 
 **August 6, 2024**
+
 
 Updates to ``mongosync`` ``/progress`` API endpoint
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
