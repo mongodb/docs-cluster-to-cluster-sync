@@ -21,7 +21,7 @@ Patch Releases
 .. _1.8.1-c2c-release-notes:
 
 1.8.1 Release
--------------
+~~~~~~~~~~~~~
 
 **October 10, 2024**
 
@@ -30,19 +30,13 @@ New Features:
 - Support added for OpenID Connect (OIDC) authentication with
   the workload (machine) flow.
 
+  For more information, see :ref:`c2c-rn-atlas-workload-identity`
+
 Issues Fixed:
 
 - Fixed bug introduced in ``mongosync`` 1.8.0, where
   ``mongosync`` crashes if it finds a replica set with 
   :rsconf:`settings.replicaSetId` unset.
-
-
-mongosync Authentication with Atlas Workload Identity Federation 
-----------------------------------------------------------------
-
-.. include:: /includes/mongosync-and-oidc.rst
-
-For details, see :ref:`c2c-authentication`.
 
 .. _1.8.0-c2c-release-notes:
 
@@ -103,6 +97,14 @@ Issues Fixed:
   ``/progress`` endpoint to potentially return incorrect 
   ``totalBytes`` for sharded clusters.
 
+.. _c2c-rn-atlas-workload-identity:
+
+mongosync Authentication with Atlas Workload Identity Federation 
+----------------------------------------------------------------
+
+.. include:: /includes/mongosync-and-oidc.rst
+
+For details, see :ref:`c2c-authentication`.
 
 {+c2c-full-beta-program+}
 ------------------------------------
