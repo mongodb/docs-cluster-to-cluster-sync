@@ -25,13 +25,28 @@ Patch Releases
 
 **October 10, 2024**
 
+**October 10, 2024**
+
+New Features:
+
+- Supports MongoDB 6.0.16 and 7.0.9
+
+- Support added for OpenID Connect (OIDC) authentication with
+  the workload (machine) flow.
+
+Issues Fixed:
+
+- Fixed bug introduced in ``mongosync`` 1.8.0, where
+  ``mongosync`` crashes if it finds a replica set with 
+  an unset :rsconf:`settings.replcaSetId`.
+
+
 mongosync Authentication with Atlas Workload Identity Federation 
 ----------------------------------------------------------------
 
 .. include:: /includes/mongosync-and-oidc.rst
 
 For details, see :ref:`c2c-authentication`.
-
 
 .. _1.8.0-c2c-release-notes:
 
