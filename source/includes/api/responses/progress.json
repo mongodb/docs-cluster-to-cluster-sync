@@ -15,6 +15,23 @@
             {
                "Source":"cluster0: localhost:27017",
                "Destination":"cluster1: localhost:27018"
+            },
+         "verification":
+            {
+               "source":
+                  {
+                     "lagTimeSeconds": 16,
+                     "totalCollectionCount": 42,
+                     "scannedCollectionCount": 10,
+                     "phase": "initial hashing"
+
+                  },
+               "destination": {
+                     "lagTimeSeconds": 16,
+                     "totalCollectionCount": 42,
+                     "scannedCollectionCount": 10,
+                     "phase": "initial hashing"
+               }
             }
       },
    "success": true
