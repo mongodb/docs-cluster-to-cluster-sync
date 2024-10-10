@@ -36,7 +36,7 @@ Issues Fixed:
 
 - Fixed bug introduced in ``mongosync`` 1.8.0, where
   ``mongosync`` crashes if it finds a replica set with 
-  an unset :rsconf:`settings.replcaSetId`.
+  an unset :rsconf:`settings.replicaSetId`.
 
 
 mongosync Authentication with Atlas Workload Identity Federation 
