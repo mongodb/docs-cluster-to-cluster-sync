@@ -33,8 +33,8 @@ In the :ref:`connection string <connections-connection-options>`, set
   ``ENVIRONMENT:gcp,TOKEN_RESOURCE:<audience>``.
 
 Replace ``<audience>`` with the application or service that the access
-token is intended for. For more details, see
-:ref:`oidcidentityproviders-fields`.
+token is intended for. For more details, see :ref:`Identity Provider
+Fields <oidcidentityproviders-fields>`.
 
 For details about connection string options, see
 :ref:`connection-string-auth-options`.
