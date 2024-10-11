@@ -33,9 +33,10 @@ New Features:
 
 Issues Fixed:
 
-- Fixed bug introduced in ``mongosync`` 1.8.0, where
-  ``mongosync`` crashes if it finds a replica set with 
-  :rsconf:`settings.replicaSetId` unset.
+- Fixed bug introduced in ``mongosync`` 1.8.0 to accommodate a
+  server issue where replica sets that fail to set the
+  :rsconf:`~settings.replicaSetId` configuration can cause
+  ``mongosync`` to crash.
 
 .. _1.8.0-c2c-release-notes:
 
