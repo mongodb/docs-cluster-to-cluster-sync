@@ -29,7 +29,7 @@ In the :ref:`connection string <connections-connection-options>`, set
 
 - For Microsoft Azure, set ``authMechanismProperties`` to
   ``ENVIRONMENT:azure,TOKEN_RESOURCE:<audience>``. Note:
-  ``TOKEN_RESOURCE`` isn't used for Microsoft Azure Kubernetes
+  Omit ``TOKEN_RESOURCE`` if using Microsoft Azure Kubernetes
   Service (AKS).
 - For Google Cloud Platform, set ``authMechanismProperties`` to
   ``ENVIRONMENT:gcp,TOKEN_RESOURCE:<audience>``.
