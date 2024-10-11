@@ -31,10 +31,10 @@ In the :ref:`connection string <connections-connection-options>`, set
   ``ENVIRONMENT:azure,TOKEN_RESOURCE:<audience>``.
 - For Google Cloud Platform, set ``authMechanismProperties`` to
   ``ENVIRONMENT:gcp,TOKEN_RESOURCE:<audience>``.
-- Replace ``<audience>`` with the value of the audience parameter
-  configured on your MongoDB deployment. For more details, see 
+- Replace ``<audience>`` with the application or service that the access
+  token is intended for. For more details, see
   :ref:`oidcidentityproviders-fields`.
-  
+
   :driver:`Java MONGODB-AWS documentation
    </java/sync/current/fundamentals/auth/#mongodb-aws>`
   :driver:`Go </go>` documentation.
