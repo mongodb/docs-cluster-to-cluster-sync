@@ -29,7 +29,7 @@ In the :ref:`connection string <connections-connection-options>`, set
 
 - For Microsoft Azure, set ``authMechanismProperties`` to
   ``ENVIRONMENT:azure,TOKEN_RESOURCE:<audience>``. ``TOKEN_RESOURCE``
-  isn't required for Azure Kubernetes Services.
+  isn't required for Microsoft Azure Kubernetes Service (AKS).
 - For Google Cloud Platform, set ``authMechanismProperties`` to
   ``ENVIRONMENT:gcp,TOKEN_RESOURCE:<audience>``.
 
@@ -55,11 +55,11 @@ Microsoft Azure Instance Metadata Service (IMDS):
 
 .. _c2c-authentication-azure-managed-identities-example:
 
-Connect to MongoDB Clusters from Azure Kubernetes Services
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Connect to MongoDB Clusters from Microsoft Azure Kubernetes Service
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-To connect to MongoDB clusters from Azure Kubernetes Services, define
-these environment variables:
+To connect to MongoDB clusters from Microsoft Azure Kubernetes Service,
+define these environment variables:
 
 .. list-table::
    :header-rows: 1
