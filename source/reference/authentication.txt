@@ -28,9 +28,14 @@ In the :ref:`connection string <connections-connection-options>`, set
 :urioption:`authMechanismProperties` as needed:
 
 - For Microsoft Azure, set ``authMechanismProperties`` to
-  ``ENVIRONMENT:azure``
+  ``ENVIRONMENT:azure,TOKEN_RESOURCE:<audience>``.
 - For Google Cloud Platform, set ``authMechanismProperties`` to
-  ``ENVIRONMENT:gcp``
+  ``ENVIRONMENT:gcp,TOKEN_RESOURCE:<audience>``.
+- Replace ``<audience>`` with the value of the audience parameter
+  configured on your MongoDB deployment. For more details, see the
+  :driver:`Java MONGODB-AWS documentation
+   </java/sync/current/fundamentals/auth/#mongodb-aws>`
+  :driver:`Go </go>` documentation.
 
 For details about connection string options, see
 :ref:`connection-string-auth-options`.
@@ -102,8 +107,8 @@ Google Cloud Platform:
 
    ./bin/mongosync \
          --logPath /var/log/mongosync \
-         --cluster0 "mongodb://clusterOne01.fancyCorp.com:20020,clusterOne02.fancyCorp.com:20020,clusterOne03.fancyCorp.com:20020/?authMechanism=MONGODB-OIDC&authMechanismProperties=ENVIRONMENT:gcp" \
-         --cluster1 "mongodb://clusterTwo01.fancyCorp.com:20020,clusterTwo02.fancyCorp.com:20020,clusterTwo03.fancyCorp.com:20020/?authMechanism=MONGODB-OIDC&authMechanismProperties=ENVIRONMENT:gcp"
+         --cluster0 "mongodb://clusterOne01.fancyCorp.com:20020,clusterOne02.fancyCorp.com:20020,clusterOne03.fancyCorp.com:20020/?authMechanism=MONGODB-OIDC&authMechanismProperties=ENVIRONMENT:gcp,TOKEN_RESOURCE:https://www.example.com" \
+         --cluster1 "mongodb://clusterTwo01.fancyCorp.com:20020,clusterTwo02.fancyCorp.com:20020,clusterTwo03.fancyCorp.com:20020/?authMechanism=MONGODB-OIDC&authMechanismProperties=ENVIRONMENT:gcp,TOKEN_RESOURCE:https://www.example.com"
 
 No environment variables are required for Google Cloud Platform.
 
