@@ -28,8 +28,9 @@ In the :ref:`connection string <connections-connection-options>`, set
 :urioption:`authMechanismProperties` as needed:
 
 - For Microsoft Azure, set ``authMechanismProperties`` to
-  ``ENVIRONMENT:azure,TOKEN_RESOURCE:<audience>``. ``TOKEN_RESOURCE``
-  isn't required for Microsoft Azure Kubernetes Service (AKS).
+  ``ENVIRONMENT:azure,TOKEN_RESOURCE:<audience>``. Note:
+  ``TOKEN_RESOURCE`` isn't required for Microsoft Azure Kubernetes
+  Service (AKS).
 - For Google Cloud Platform, set ``authMechanismProperties`` to
   ``ENVIRONMENT:gcp,TOKEN_RESOURCE:<audience>``.
 
