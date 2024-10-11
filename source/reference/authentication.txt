@@ -28,7 +28,8 @@ In the :ref:`connection string <connections-connection-options>`, set
 :urioption:`authMechanismProperties` as needed:
 
 - For Microsoft Azure, set ``authMechanismProperties`` to
-  ``ENVIRONMENT:azure,TOKEN_RESOURCE:<audience>``.
+  ``ENVIRONMENT:azure,TOKEN_RESOURCE:<audience>``. ``TOKEN_RESOURCE``
+  isn't required for Azure Kubernetes Services.
 - For Google Cloud Platform, set ``authMechanismProperties`` to
   ``ENVIRONMENT:gcp,TOKEN_RESOURCE:<audience>``.
 
@@ -96,6 +97,8 @@ and connects to MongoDB clusters in Microsoft Azure:
          --logPath /var/log/mongosync \
          --cluster0 "mongodb://clusterOne01.fancyCorp.com:20020,clusterOne02.fancyCorp.com:20020,clusterOne03.fancyCorp.com:20020/?authMechanism=MONGODB-OIDC&authMechanismProperties=ENVIRONMENT:azure" \
          --cluster1 "mongodb://clusterTwo01.fancyCorp.com:20020,clusterTwo02.fancyCorp.com:20020,clusterTwo03.fancyCorp.com:20020/?authMechanism=MONGODB-OIDC&authMechanismProperties=ENVIRONMENT:azure"
+
+``TOKEN_RESOURCE`` isn't required for this example.
 
 Connect to MongoDB Clusters in Google Cloud Platform
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
