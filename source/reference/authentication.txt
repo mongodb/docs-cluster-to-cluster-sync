@@ -59,7 +59,7 @@ Microsoft Azure Instance Metadata Service (IMDS):
 Connect to MongoDB Clusters Using Microsoft Azure Kubernetes Service
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-To connect to MongoDB clusters from Microsoft Azure Kubernetes Service,
+To connect to MongoDB clusters using Microsoft Azure Kubernetes Service,
 define these environment variables:
 
 .. list-table::
