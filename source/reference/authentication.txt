@@ -86,7 +86,7 @@ For details about Azure and the variables, see the Microsoft Azure
 documentation.
 
 The following ``mongosync`` example defines the environment variables
-and connects to MongoDB clusters in Microsoft Azure:
+and connects to MongoDB clusters:
 
 .. code-block:: shell
 
