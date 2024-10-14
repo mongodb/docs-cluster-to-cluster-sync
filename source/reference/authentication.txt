@@ -56,8 +56,8 @@ Microsoft Azure Instance Metadata Service (IMDS):
 
 .. _c2c-authentication-azure-managed-identities-example:
 
-Connect to MongoDB Clusters from Microsoft Azure Kubernetes Service
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Connect to MongoDB Clusters Using Microsoft Azure Kubernetes Service
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 To connect to MongoDB clusters from Microsoft Azure Kubernetes Service,
 define these environment variables:
