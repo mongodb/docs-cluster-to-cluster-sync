@@ -136,5 +136,5 @@
        - When ``mongosync`` starts up, this field returns ``null`` until
          ``mongosync`` identifies the coordinator.
 
-      .. versionadded:: 1.3
+       .. versionadded:: 1.3
 
