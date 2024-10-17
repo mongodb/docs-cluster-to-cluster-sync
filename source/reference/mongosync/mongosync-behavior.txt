@@ -136,8 +136,8 @@ see :ref:`connections-read-preference`.
 Rewrites
 ~~~~~~~~
 
-``mongosync`` rewrites any legacy index values from the source to ``1``, 
-a valid value, on the destination. Legacy index values include ``0`` or an empty
+``mongosync`` rewrites any legacy index values from the source to ``1``
+on the destination. Legacy index values include ``0`` or an empty
 string. 
 
 .. _mongosync-considerations:
