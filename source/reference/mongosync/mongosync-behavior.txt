@@ -133,6 +133,13 @@ Read Preference
 connecting to the source and destination clusters. For more information,
 see :ref:`connections-read-preference`. 
 
+Legacy Index Value Rewrites
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+``mongosync`` does not support legacy index values, like ``0`` or an empty
+string. Legacy index values from the source are rewritten to ``1`` on the 
+destination.
+
 .. _mongosync-considerations:
 
 Considerations for Continuous Sync
