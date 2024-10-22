@@ -30,8 +30,8 @@ About This Task
 
 .. note::
 
-   Migration Verifier does not support DDL operations. When using the Migration
-   Verifier, ensure that your source cluster does not use DDL commands.
+   Migration Verifier does not support DDL operations. Do not run any DDL 
+   operations on the source cluster while verifying data with Migration Verifier. 
 
 Migration Verifier is an experimental and unsupported tool.
 
