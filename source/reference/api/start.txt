@@ -91,9 +91,11 @@ Request Body Parameters
          on the destination cluster. These include both existing indexes and
          any indexes created during migration on the source cluster.
 
-       - ``never`` causes ``mongosync`` to skip building unnecessary indexes 
-         during sync.  This can improve migration performance, especially with 
+       - ``never`` causes ``mongosync`` to skip building unnecessary indexes
+         during sync. This can improve migration performance, especially with
          index heavy workloads.
+
+         .. include:: /includes/fact-verifier-buildIndexes
 
          :red:`WARNING:` Do **not** manually build indexes while ``mongosync`` is 
          performing a migration.  Wait until the migration is fully 
@@ -148,6 +150,10 @@ Request Body Parameters
 
        .. include:: /includes/api/facts/namespace-explanation.rst
 
+       The ``/start`` command returns an error when the
+       namespace filtering is enabled and
+       ``verification.enabled`` is set to ``true``.
+
        .. versionadded:: 1.1
 
    * - ``excludeNamespaces``
@@ -156,6 +162,10 @@ Request Body Parameters
      - Filters the databases or collections to exclude from sync.
 
        .. include:: /includes/api/facts/namespace-explanation.rst
+
+       The ``/start`` command returns an error when
+       namespace filtering is enabled and
+       ``verification.enabled`` is set to ``true``.
 
        .. versionadded:: 1.6
 
@@ -174,10 +184,14 @@ Request Body Parameters
      - boolean
      - Optional
      - If set to ``true``, enables the sync operation to be
-       reversed. 
+       reversed.
 
-       To reverse sync, the ``enableUserWriteBlocking`` field must be set 
-       to ``true``.      
+       To reverse sync, the ``enableUserWriteBlocking`` field must be set
+       to ``true``.
+
+       The ``/start`` command returns an error when
+       the reverse sync is enabled and ``verification.enabled`` is
+       set to ``true``.
 
        This option is not supported for the following configurations:
 
@@ -202,6 +216,30 @@ Request Body Parameters
 
        .. versionadded:: 1.1
 
+   * - ``verification``
+     - Document 
+     - Optional
+     - Configures the embedded verifier.
+
+       For more information, see :ref:`c2c-start-verifier`.
+
+       .. versionadded:: 1.9
+
+   * - ``verification.enabled``
+     - Bool
+     - Optional
+     - Enables the embedded verifier. The verifier is disabled
+       by default.
+
+       The ``/start`` command returns an error when
+       reversible sync is started with the verifier.
+
+       The verifier does not check all collections or data.
+       For details, see :ref:`c2c-verify-embedded-limitations`.
+
+       .. versionadded:: 1.9
+
+
 .. _c2c-api-start-sharding:
 
 Sharding Parameters
@@ -225,16 +263,16 @@ The ``sharding`` option has the following parameters:
 
    * - ``createSupportingIndexes``
      - boolean
-     - Optional. Sets whether sync creates a supporting index 
-       for the shard key, if none exists.  Defaults to ``false``.
+     - Optional. Sets whether sync creates a supporting index
+       for the shard key, if none exists. The default is ``false``.
 
    * - ``shardingEntries``
      - array of documents
-     - Required. Sets the namespace and key of collections to shard 
+     - Required. Sets the namespace and key of collections to shard
        during sync.
 
        Collections not included in this array sync to unsharded 
-       collections on the destination cluster.  If set with an empty
+       collections on the destination cluster. If set with an empty
        array, no collections are sharded.
 
    * - | ``shardingEntries``
@@ -261,7 +299,7 @@ The ``sharding`` option has the following parameters:
        For more information, see :ref:`shard-key`.
 
 ``mongosync`` throws an error if the ``sharding`` option is not set when
-syncing from a replica set to a sharded cluster.  ``mongosync`` also
+syncing from a replica set to a sharded cluster. ``mongosync`` also
 throws an error if the ``sharding`` option is set with any other
 configuration.
 
@@ -350,6 +388,29 @@ Response
 Behavior
 --------
 
+.. _c2c-start-verifier:
+
+Embedded Verifier
+~~~~~~~~~~~~~~~~~
+
+Starting in 1.9, ``mongosync`` provides an embedded verifier to
+determine whether data transfer from the source cluster to the
+destination was successful.
+
+When enabled, the verifier performs a series of verification
+checks on the destination cluster. If any of these checks return
+an error, the verifier fails the migration. If all of the checks
+succeed, ``mongosync`` transitions to the ``COMMITTED`` state.
+
+To enable the verifier, set the ``verification.enabled``
+parameter in ``/start`` to ``true``. It's default is ``false``.
+
+The ``/start`` endpoint returns an error if you enable
+verification checks that are not supported by the source or
+destination cluster.
+
+
+
 State
 ~~~~~
 
@@ -362,7 +423,7 @@ Pre-Split Chunks
 .. versionadded:: 1.1
 
 When ``mongosync`` syncs to a sharded cluster, it pre-splits chunks for
-sharded collections on the destination cluster.  This is supported in the
+sharded collections on the destination cluster. This is supported in the
 following configurations:
 
 * Sync from a replica set to a sharded cluster.
@@ -389,7 +450,7 @@ Supporting Indexes
 .. versionadded:: 1.1
 
 ``mongosync`` syncs indexes from the source cluster to the destination
-cluster.  But, when syncing from a replica set to a sharded cluster,
+cluster. When syncing from a replica set to a sharded cluster,
 ``mongosync`` may require an additional index to support the shard key,
 which may not exist on the source cluster.
 
@@ -447,7 +508,7 @@ to copy the collection can block the collection from sharding on the destination
 
 To check whether it is safe to rename collections, call the 
 :ref:`c2c-api-progress` endpoint and check the value of the 
-``collectionCopy.estimatedCopiedBytes`` field in the return document.  
+``collectionCopy.estimatedCopiedBytes`` field in the return document. 
 
 * A value of 0 indicates that ``mongosync`` has not started to copy the
   collection.
@@ -466,7 +527,7 @@ Required Indexes
 ~~~~~~~~~~~~~~~~
 
 When you call ``/start`` with the ``buildIndexes`` option set to ``never``,
-``mongosync`` skips building unnecessary indexes.  
+``mongosync`` skips building unnecessary indexes.
 
 Indexes that are always built include:
 
@@ -484,3 +545,5 @@ Endpoint Protection
 
 .. |endpoint| replace:: ``start``
 .. include:: /includes/fact-api-endpoint
+
+
