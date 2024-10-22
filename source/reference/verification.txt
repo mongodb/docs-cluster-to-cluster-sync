@@ -99,11 +99,14 @@ Migration Verifier connects to the source and destination clusters and performs
 a series of verification checks, comparing documents, views, and indexes to
 confirm the sync was successful.
 
+Migration Verifier does not support DDL operations. When using the Migration
+Verifier, ensure that your source cluster does not use DDL commands.
+
 .. important::
 
    Migration Verifier is an experimental and unsupported tool.
 
-   For installation instructions, see
+   For installation instructions and usage limitations, see
    `GitHub <https://github.com/mongodb-labs/migration-verifier>`__.
 
 Unlike other verification methods, Migration Verifier can run concurrent
