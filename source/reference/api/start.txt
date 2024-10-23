@@ -228,7 +228,7 @@ The ``sharding`` option has the following parameters:
      - Optional. Sets whether sync creates a supporting index 
        for the shard key, if none exists.  Defaults to ``false``.
 
-       For more information and current limitations, see 
+       For more information and limitations, see 
        :ref:`c2c-supporting-index-behavior`.
 
    * - ``shardingEntries``
