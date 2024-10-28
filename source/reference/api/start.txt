@@ -365,7 +365,11 @@ Pre-Split Chunks
 When ``mongosync`` syncs to a sharded destination cluster, it pre-splits chunks 
 for sharded collections on the destination cluster. For each sharded collection, 
 ``mongosync`` creates twice as many chunks as there are shards in the 
-destination cluster.
+destination cluster. This is supported in the following configurations:
+
+- Sync from a replica set to a sharded cluster.
+
+- Sync between sharded clusters.
 
 .. _c2c-shard-replica-sets:
 
