@@ -74,3 +74,7 @@ To migrate data between two 8.0 clusters:
 
 For limitations on using ``mongodump`` and ``mongorestore``, see 
 :ref:`mongorestore-behavior-access-usage`.
+
+Alternatively, you can :ref:`downgrade your 8.0 source cluster <8.0-downgrade>` 
+to 7.0, migrate your data into a 7.0 destination cluster, and then upgrade the 
+destination cluster to 8.0.
