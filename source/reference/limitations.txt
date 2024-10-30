@@ -176,7 +176,7 @@ Rolling Index Builds
 --------------------
 
 ``mongosync`` does not sync source cluster indexes that use a
-ref:`rolling index build <index-building-replica-sets>`. If your source
+:ref:`rolling index build <index-building-replica-sets>`. If your source
 cluster has an index with a rolling build, use one of the following
 options to ensure that your destination indexes match your source
 indexes:
