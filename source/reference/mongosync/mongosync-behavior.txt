@@ -211,7 +211,7 @@ synchronization. The original values are restored during the commit process.
 Rolling Index Builds
 ~~~~~~~~~~~~~~~~~~~~
 
-.. include:: /includes/collections/rolling-build-limitation.rst
+.. include:: /includes/rolling-build-limitation.rst
 
 Destination Clusters
 --------------------

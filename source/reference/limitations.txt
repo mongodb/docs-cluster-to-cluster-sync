@@ -175,4 +175,4 @@ System Collections
 Rolling Index Builds
 --------------------
 
-.. include:: /includes/collections/rolling-build-limitation.rst
+.. include:: /includes/rolling-build-limitation.rst
