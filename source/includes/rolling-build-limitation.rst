@@ -5,6 +5,6 @@ methods to ensure that your destination indexes match your source
 indexes:
 
 - Build the index on the source before migration.
-- Build the index on the source during migration with a non-rolling
-  index build. 
+- Build the index on the source during migration with a :ref:`default
+  index build <index-creation-background>`. 
 - Build the index on the destination after migration. 
