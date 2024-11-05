@@ -150,10 +150,6 @@ Request Body Parameters
 
        .. include:: /includes/api/facts/namespace-explanation.rst
 
-       The ``/start`` command returns an error when the
-       namespace filtering is enabled and
-       ``verification.enabled`` is set to ``true``.
-
        .. versionadded:: 1.1
 
    * - ``excludeNamespaces``
@@ -229,7 +225,9 @@ Request Body Parameters
      - Bool
      - Optional
      - Enables the embedded verifier. The verifier is disabled
-       by default.
+       by default. If the verifier finds no errors,
+       ``mongosync`` transitions to the ``COMMITTED`` state. If
+       it does encounter errors, it fails the migration.
 
        The ``/start`` command returns an error when
        reversible sync is started with the verifier.

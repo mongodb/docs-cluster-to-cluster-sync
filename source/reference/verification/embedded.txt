@@ -18,10 +18,9 @@ Verify with Embedded Verifier
    :class: singlecol
 
 
-``mongosync`` includes an embedded verifier to check the
-migration to the destination cluster. The verifier checks all
-supported collections on the destination cluster to verify a
-successful sync. 
+``mongosync`` includes an embedded verifier to perform a series
+of checks on destination cluster to verify the sync of supported
+collections. 
 
 .. important::
 
@@ -98,7 +97,7 @@ Behavior
 Verification Checks
 ~~~~~~~~~~~~~~~~~~~
 
-When enabled, the embedded verifier performs a series of check
+When enabled, the embedded verifier performs a series of checks
 on the destination cluster. It checks all supported collections
 to confirm that ``mongosync`` was successful in transferring
 documents from the source cluster to the destination.
