@@ -187,7 +187,7 @@
    * - ``verification.destination.`` ``lagTimeSeconds``
      - integer
      - Time in seconds since the last verification check
-       performed on the source cluster.
+       performed on the destination cluster.
 
        .. versionadded:: 1.9
 
