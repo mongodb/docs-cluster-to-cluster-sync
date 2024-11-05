@@ -16,9 +16,9 @@ Verify Data Transfer
    :depth: 2
    :class: singlecol
 
-After :program:`mongosync` has fully committed, you should
-always erify the successful transfer of your data before you
-switch your application to using the destination cluster.
+Before you switch your application load from the source cluster
+to the destination cluster, you should always verify that the
+sync was successful.
 
 Starting in 1.9, ``mongosync`` provides an embedded verifier
 that can perform a series of verification checks on the source
