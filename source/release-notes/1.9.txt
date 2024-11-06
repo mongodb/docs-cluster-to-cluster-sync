@@ -12,8 +12,6 @@ Release Notes for mongosync 1.9
    :depth: 2
    :class: singlecol
 
-.. include:: /includes/in-dev.rst
-
 .. _1.9.0-c2c-release-notes:
 
 This page describes changes and new features introduced in  
