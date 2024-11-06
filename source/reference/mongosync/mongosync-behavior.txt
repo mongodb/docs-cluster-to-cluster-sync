@@ -260,9 +260,9 @@ by default.
 
 .. code-block:: none
 
-   Embedded verification is enabled by default with compatible beta
-   features. Oplog Rollover Resilience and migrations with source
-   clusters running MongoDB 5.0+ are the only compatible beta
+   Embedded verification is enabled by default with compatible beta features.
+   Oplog Rollover Resilience and migrations with source clusters running MongoDB 5.0+
+   are the only compatible beta
    features. Verification checks for data consistency between the
    source and destination clusters. Verification will cause
    mongosync to fail if any inconsistencies are detected, but it
