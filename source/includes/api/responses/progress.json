@@ -20,6 +20,8 @@
             {
                "source":
                   {
+                     "estimatedDocumentCount": 42,
+                     "hashedDocumentCount": 42,
                      "lagTimeSeconds": 16,
                      "totalCollectionCount": 42,
                      "scannedCollectionCount": 10,
@@ -27,6 +29,8 @@
 
                   },
                "destination": {
+                     "estimatedDocumentCount": 42,
+                     "hashedDocumentCount": 42,
                      "lagTimeSeconds": 16,
                      "totalCollectionCount": 42,
                      "scannedCollectionCount": 10,

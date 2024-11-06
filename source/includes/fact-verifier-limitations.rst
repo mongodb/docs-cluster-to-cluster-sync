@@ -18,9 +18,9 @@ The embedded verifier has the following limitations:
   for every 1 million documents.
 
 - Verification cannot be resumed. If a user stops or pauses sync
-  and then starts ``mongosync`` for any reason, the verification
-  process restarts from the beginning. This can cause
-  verification to fall substantially behind the migration.
+  and then starts ``mongosync`` again for any reason, the
+  verification process restarts from the beginning. This can
+  cause verification to fall substantially behind the migration.
 
 - The verifier isn't compatible with :ref:`reverse sync
   <c2c-api-reverse>`. The :ref:`/start <c2c-api-start>` endpoint

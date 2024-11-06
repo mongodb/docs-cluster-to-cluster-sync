@@ -151,6 +151,19 @@
 
        .. versionadded:: 1.9
 
+   * - ``verification.source.`` ``estimatedDocumentCount``
+     - integer
+     - Estimated number of documents on the source cluster.
+
+       .. versionadded:: 1.9
+
+   * - ``verification.source.`` ``hashedDocumentCount``
+     - integer
+     - Number of documents hashed by the verifier on the
+       source cluster.
+
+       .. versionadded:: 1.9
+
    * - ``verification.source.`` ``lagTimeSeconds``
      - integer
      - Time in seconds after the last verification check was
@@ -181,6 +194,19 @@
      - document
      - Provides information on the phase and progress of
        verification checks running on the destination cluster.
+
+       .. versionadded:: 1.9
+
+   * - ``verification.destination.`` ``estimatedDocumentCount``
+     - integer
+     - Estimated number of documents on the destination cluster.
+
+       .. versionadded:: 1.9
+
+   * - ``verification.destination.`` ``hashedDocumentCount``
+     - integer
+     - Number of documents hashed by the verifier on the
+       destination cluster.
 
        .. versionadded:: 1.9
 
