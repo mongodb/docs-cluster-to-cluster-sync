@@ -4,7 +4,8 @@ for every 1 million documents in the migration. If the server
 ``mongosync`` runs on doesn't have sufficient memory available,
 the ``/start`` endpoint returns an error. If another process
 claims this memory before verification starts, it can result in
-the server stopping ``mongosync`` due to an out of memory error.
+the server stopping the ``mongosync`` process due to an out of
+memory error.
 
 When this occurs, you must either increase the memory of the
 server and resume the migration or restart ``mongosync`` with
