@@ -19,9 +19,36 @@ Release Notes for mongosync 1.9
 This page describes changes and new features introduced in  
 {+c2c-full-product-name+} 1.9 and the {+c2c-full-beta-program+}.
 
+1.9.0 Release 
+-------------
+
+**Upcoming**
+
+
+
+Other Notes 
+~~~~~~~~~~~
+
+New Features: 
+
+- ``mongosync`` now supports migrating documents that have an empty timestamp 
+  values, such as Timestamp(0,0) for source clusters using MongoDB version 6.0 
+  or later. 
+
+Optimizations: 
+
+- Increased internal timeout to reduce the occurrence of timeout failures during 
+  initialization
+
+Fixed Issues: 
+
+- Fixed a bug introduced in ``mongosync`` 1.8.0 where ``mongosync`` would crash 
+  if a replica set was missing a ``replicaSetId``.
+
+
 Minimum Supported Version
 -------------------------
 
-In 1.9.0, the minimum supported versions of MongoDB are 6.0.16 and 7.0.9.
+In 1.9.0, the minimum supported versions of MongoDB are 6.0.17 and 7.0.13.
 
 .. include:: /includes/migration-upgrade-recommendation.rst
