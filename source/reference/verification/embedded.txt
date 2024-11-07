@@ -104,6 +104,9 @@ If the verifier encounters errors, it fails the migration with
 an error. If the verifier finds no errors, ``mongosync``
 transitions to the ``COMMITTED`` state.
 
+Please `contact <https://mongodb.com/contact>`__ support to
+investigate verification issues.
+
 Memory Requirements
 ~~~~~~~~~~~~~~~~~~~
 
