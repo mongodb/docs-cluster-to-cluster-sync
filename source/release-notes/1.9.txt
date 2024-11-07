@@ -32,7 +32,7 @@ New Features:
   or later. 
 
 - Added a ``stdin`` disclaimer to the ``mongosync`` executable regarding 
-  verification. Users need to accept this disclaimer before ``mongosync``  
+  verification. Users must to accept this disclaimer before ``mongosync``  
   can run.
 
 - Added ``--acceptDisclaimer`` flag for users that have previously read the 
