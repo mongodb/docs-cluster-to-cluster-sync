@@ -372,7 +372,7 @@ The ``sharding.shardingEntries`` array specifies the collections to shard.
 Collections that are not listed in this array replicate as unsharded.
 
 For more information, see :ref:`Sharded Cluster Behavior
-<c2c-sharded-clusters>. 
+<c2c-sharded-clusters>`. 
 
 .. _c2c-supporting-index-behavior:
 
