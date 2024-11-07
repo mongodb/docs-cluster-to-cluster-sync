@@ -47,7 +47,12 @@ source to the destination cluster.
        successful sync. This is the preferred verification
        method for deployments that meet the :ref:`requirements
        <c2c-verify-embedded-limitations>`.
-       
+
+       When the ``mongosync`` process starts, it prompts the
+       user with a disclaimer about the embedded verifier. You
+       must accept the disclaimer or start ``mongosync`` with
+       the :option:`--acceptDisclaimer`` option to use the
+       verifier.
 
    * - :ref:`Document Counts <c2c-verify-doc-counts>`
      - The most basic method of verification is to compare the
