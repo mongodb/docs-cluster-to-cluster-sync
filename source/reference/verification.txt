@@ -82,7 +82,8 @@ source to the destination cluster.
        and destination clusters. 
 
        Write a script that queries collections on the source
-       cluster and then checks that the document exists with the
+       cluster and then checks that the correct documents,
+       indexes, collections, metadata, and views exist with the
        same values on the destination cluster.
 
    * - :ref:`Migration Verifier <c2c-migration-verifier>`

@@ -434,8 +434,6 @@ The ``/start`` endpoint returns an error if you enable
 verification checks that are not supported by the source or
 destination cluster.
 
-
-
 State
 ~~~~~
 
@@ -550,11 +548,9 @@ Indexes that are always built include:
   cluster. When ``buildIndexes`` is set to ``never``, ``mongosync`` 
   retains this index after commit.
 
-
 Endpoint Protection
 ~~~~~~~~~~~~~~~~~~~
 
 .. |endpoint| replace:: ``start``
 .. include:: /includes/fact-api-endpoint
-
 
