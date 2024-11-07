@@ -22,8 +22,6 @@ This page describes changes and new features introduced in
 
 **Upcoming**
 
-
-
 Other Notes 
 ~~~~~~~~~~~
 
@@ -32,6 +30,13 @@ New Features:
 - ``mongosync`` now supports migrating documents that have an empty timestamp 
   values, such as Timestamp(0,0) for source clusters using MongoDB version 6.0 
   or later. 
+
+- Added a ``stdin`` disclaimer to the ``mongosync`` executable regarding 
+  verification. Users will need to accept this disclaimer before ``mongosync``  
+  can run.
+
+- Added ``--acceptDisclaimer`` flag for users that have previously read the 
+  disclaimer to bypass it.
 
 Optimizations: 
 
