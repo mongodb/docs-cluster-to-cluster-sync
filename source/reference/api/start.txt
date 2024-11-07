@@ -235,7 +235,7 @@ Request Body Parameters
 
        The verifier is enabled by default.
 
-       You cannot :ref:`reverse <c2c-api-reverse` a sync that
+       You cannot :ref:`reverse <c2c-api-reverse>` a sync that
        uses the verifier.
 
        :red:`WARNING`: The verifier does not check all
