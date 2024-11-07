@@ -54,7 +54,7 @@ For information on available settings, see :ref:`Configuration <c2c-config>`.
 Cluster and Collection Types
 ----------------------------
 
-.. _c2c-sharded-clusters:
+.. _c2c-sharded-cluster-behavior:
 
 Sharded Clusters
 ~~~~~~~~~~~~~~~~
