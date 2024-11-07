@@ -152,6 +152,13 @@ To view the mapping direction for the synchronization of the source and
 destination clusters, use the :ref:`progress <c2c-api-progress>`
 endpoint and check the ``directionMapping`` object.
 
+Embedded Verifier
+~~~~~~~~~~~~~~~~~
+
+The embedded verifier is not compatible with reversible sync. If
+you start a migration with the verifier enabled, calling
+``/reverse`` disables it. Additionally, if you call ``/reverse``
+again, the verifier remains disabled.
 
 Endpoint Protection
 ~~~~~~~~~~~~~~~~~~~

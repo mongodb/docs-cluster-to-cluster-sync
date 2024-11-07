@@ -193,7 +193,9 @@ Request Body Parameters
 
        * Reversible sync when ``buildIndexes`` is set to ``never``.
 
-       * Reversible sync with the embedded verifier.
+       * Reversible sync with the embedded verifier. If you
+         attempt to reverse sync when the verifier is running it
+         disables verification.
 
        For more information, see the :ref:`reverse <c2c-api-reverse>` endpoint.
        
