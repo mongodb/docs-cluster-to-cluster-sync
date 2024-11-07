@@ -81,14 +81,14 @@ destination cluster.
 Primary Shards
 ``````````````
 
-When ``mongosync`` syncs to a sharded destination cluster, it assigns a
+When you sync to a sharded destination cluster, ``mongosync`` assigns a
 primary shard to each database by means of a round-robin. 
 
 .. warning::
 
    Running :dbcommand:`movePrimary` on the source or desintation cluster
    during migration may result in a fatal error or require you to
-   restart the migration from scratch. For more information, see
+   restart the migration from the start. For more information, see
    :ref:`c2c-sharded-limitations`. 
 
 Multiple Clusters
