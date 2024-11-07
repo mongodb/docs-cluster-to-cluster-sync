@@ -159,10 +159,6 @@ Request Body Parameters
 
        .. include:: /includes/api/facts/namespace-explanation.rst
 
-       The ``/start`` command returns an error when
-       namespace filtering is enabled and
-       ``verification.enabled`` is set to ``true``.
-
        .. versionadded:: 1.6
 
    * - ``namespaceRemap``
