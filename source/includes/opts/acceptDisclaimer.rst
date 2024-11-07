@@ -6,5 +6,9 @@ features (when using {+c2c-beta-program-short+}).
 When the ``mongosync`` process starts without this option, the
 user is prompted to accept each disclaimer.
 
+This option allows users who have already read and accepted
+disclaimers to skip the prompt and start the ``mongosync``
+process with the features enabled.
+
 .. versionadded:: 1.9
 
