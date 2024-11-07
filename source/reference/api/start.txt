@@ -314,26 +314,27 @@ Response
 
 .. include:: /includes/api/tables/basic-response.rst
 
-Example: Start a Sync Job
--------------------------
+Examples
+--------
+
+Start a Sync Job
+~~~~~~~~~~~~~~~~
 
 .. include:: /includes/intro-start-api-example-intro.rst
 
-Request
-~~~~~~~
+Request:
 
 .. literalinclude:: /includes/api/requests/start.sh
    :language: shell
 
-Response
-~~~~~~~~
+Response:
 
 .. literalinclude:: /includes/api/responses/success.json
    :language: json
    :copyable: false
 
-Example: Start a Reversible Sync Job
-------------------------------------
+Start a Reversible Sync Job
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. include:: /includes/intro-start-api-example-intro.rst
 
@@ -341,55 +342,67 @@ The ``reversible`` and ``enableUserWriteBlocking`` fields allow the sync
 to be reversed. To reverse the sync direction, see: :ref:`reverse
 <c2c-api-reverse>`.
 
-Request
-~~~~~~~
+Request:
 
 .. literalinclude:: /includes/api/requests/start-reversible.sh
    :language: shell
 
-Response
-~~~~~~~~
+Response:
 
 .. literalinclude:: /includes/api/responses/success.json
    :language: json
    :copyable: false
 
 
-Example: Start a Filtered Sync Job
-----------------------------------
+Start a Filtered Sync Job
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. include:: /includes/example-filter-collection.rst
 
 The ``includeNamespaces`` option creates a filter. To filter the sync,
 see: :ref:`c2c-filtered-sync`
 
-Request
-~~~~~~~
+Request:
 
 .. literalinclude:: /includes/api/requests/start-filtered.sh
    :language: shell
 
-Response
-~~~~~~~~
+Response:
 
 .. literalinclude:: /includes/api/responses/success.json
    :language: json
    :copyable: false
 
-Example: Start Sync from Replica Set to Sharded Cluster
--------------------------------------------------------
+Start Sync from Replica Set to Sharded Cluster
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Request
-~~~~~~~
+Request:
 
 .. literalinclude:: /includes/api/requests/start-rs-shard.sh
 
-Response
-~~~~~~~~
+Response:
 
 .. literalinclude:: /includes/api/responses/success.json
    :language: json
    :copyable: false
+
+
+.. _c2c-disabled-verifier:
+
+Start with the Verifier Disabled
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Request:
+
+.. literalinclude:: /includes/api/requests/start-no-verifier.sh
+
+Response:
+
+.. literalinclude:: /includes/api/responses/success.json
+   :language: json
+   :copyable: false
+
+
 
 Behavior
 --------
