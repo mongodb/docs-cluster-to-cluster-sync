@@ -185,10 +185,6 @@ Request Body Parameters
        To reverse sync, the ``enableUserWriteBlocking`` field must be set
        to ``true``.
 
-       The ``/start`` command returns an error when
-       the reverse sync is enabled and ``verification.enabled`` is
-       set to ``true``.
-
        This option is not supported for the following configurations:
 
        * Sync from a replica set to a sharded cluster
@@ -196,6 +192,8 @@ Request Body Parameters
        * Sync sharded clusters that have different numbers of shards
 
        * Reversible sync when ``buildIndexes`` is set to ``never``.
+
+       * Reversible sync with the embedded verifier.
 
        For more information, see the :ref:`reverse <c2c-api-reverse>` endpoint.
        
@@ -231,8 +229,8 @@ Request Body Parameters
 
        .. include:: /includes/fact-verifier-memory
 
-       The ``/start`` endpoint returns an error when
-       reversible sync is started with the verifier.
+       You cannot :ref:`reverse <c2c-api-reverse` a sync that
+       uses the verifier.
 
        The verifier does not check all collections or data.
        For details, see :ref:`c2c-verify-embedded-limitations`.
