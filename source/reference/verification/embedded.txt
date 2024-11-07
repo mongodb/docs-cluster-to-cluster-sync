@@ -54,8 +54,7 @@ Steps
 
       To start syncing data from the source cluster to the
       destination, use the :ref:`/start <c2c-api-start>`
-      endpoint. To use the embedded verifier, set the
-      ``verification.enabled`` field to ``true``.
+      endpoint.
 
       .. code-block:: sh
 
@@ -63,9 +62,6 @@ Steps
             --data ' {
                 "source": "cluster0",
                 "destination": "cluster1",
-                "verification": {
-                   "enabled": true
-                }
             } '
 
       Example output:
@@ -73,6 +69,8 @@ Steps
       .. literalinclude:: /includes/api/responses/success.json
          :language: json
          :copyable: false
+
+      Note, the verifier is enabled by default.
 
    .. step:: Examine Progress
 
@@ -97,9 +95,9 @@ Behavior
 Verification Checks
 ~~~~~~~~~~~~~~~~~~~
 
-When enabled, the embedded verifier performs a series of checks
-on the destination cluster. It checks all supported collections
-to confirm that ``mongosync`` was successful in transferring
+The embedded verifier performs a series of checks on the
+destination cluster. It checks all supported collections to
+confirm that ``mongosync`` was successful in transferring
 documents from the source cluster to the destination.
 
 If the verifier encounters errors, it fails the migration with
