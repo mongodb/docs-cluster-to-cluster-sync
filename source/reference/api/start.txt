@@ -392,8 +392,8 @@ Response:
 Start with the Verifier Disabled
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The embedded verifier runs by default when you start a
-migration. If you need to disable it, set
+Starting in 1.9, the embedded verifier runs by default when you
+start a migration. If you need to disable it, set
 ``verification.enabled`` to ``false``.
 
 Request:
