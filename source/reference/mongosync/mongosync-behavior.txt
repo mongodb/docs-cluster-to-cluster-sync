@@ -60,15 +60,9 @@ Sharded Clusters
 ~~~~~~~~~~~~~~~~
 
 {+c2c-product-name+} supports replication between sharded clusters.
-Individual shards are replicated in parallel from the source cluster to
-the destination cluster, however a :ref:`chunk migration
-<sharding-chunk-migration>` or similar source update could move
-documents to a new source shard during replication.
-
-Even if documents move between source shards during replication,
-{+c2c-product-name+} maintains the :term:`eventual consistency`
-guarantee on the destination cluster. For more information, see 
-:ref:`c2c-sharded-clusters`.
+``mongosync`` replicates individual shards in parallel from the source
+cluster to the destination cluster. However ``mongosync`` does not
+preserve the source cluster's sharding configuration.
 
 Pre-Split Chunks
 ````````````````
