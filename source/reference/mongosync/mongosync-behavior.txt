@@ -65,7 +65,7 @@ cluster to the destination cluster. However ``mongosync`` does not
 preserve the source cluster's sharding configuration.
 
 Pre-Split Chunks
-````````````````
+''''''''''''''''
 
 When ``mongosync`` syncs to a sharded destination cluster, it pre-splits chunks 
 for sharded collections on the destination cluster. For each sharded collection, 
@@ -73,7 +73,7 @@ for sharded collections on the destination cluster. For each sharded collection,
 destination cluster. 
 
 Primary Shards
-``````````````
+''''''''''''''
 
 When you sync to a sharded destination cluster, ``mongosync`` assigns a
 primary shard to each database by means of a round-robin. 
