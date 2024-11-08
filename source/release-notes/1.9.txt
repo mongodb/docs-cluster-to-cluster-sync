@@ -46,12 +46,6 @@ Optimizations:
 - Increased internal timeout to reduce the occurrence of timeout failures during 
   initialization
 
-Fixed Issues: 
-
-- Fixed a bug introduced in ``mongosync`` 1.8.0 where ``mongosync`` would crash 
-  if a replica set was missing a ``replicaSetId``.
-
-
 Minimum Supported Version
 -------------------------
 
