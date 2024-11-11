@@ -278,8 +278,9 @@ by default.
 
    Do you want to continue? (y/n): 
 
-To skip this notification, start ``mongosync`` with the
-:option:`--acceptDisclaimer` option.
+If you have already read and accepted the disclaimer, you can
+start ``mongosync`` with the :option:`--acceptDisclaimer` option
+to skip this notification.
 
 
 Profiling
