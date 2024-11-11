@@ -24,7 +24,7 @@ The embedded verifier has the following limitations:
 
 - The verifier isn't compatible with :ref:`reverse sync
   <c2c-api-reverse>`. If you call the :ref:`/start
-  <c2c-api-start>` endp;oint with reverse enabled, the verifier
+  <c2c-api-start>` endpoint with reverse enabled, the verifier
   runs its checks on the destination cluster. If you then call
   :ref:`/reverse <c2c-api-reverse>`, it disables the verifier.
 

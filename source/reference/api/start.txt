@@ -229,7 +229,7 @@ Request Body Parameters
        transitions to the ``COMMITTED`` state. If it does
        encounter errors, it fails the migration.
 
-       The verifier is enabled by default.
+       The verifier is enabled by default for replica set to replica set migrations.
 
        The verifier is not compatible with :ref:`reverse
        <c2c-api-reverse>`. If you attempt to reverse sync it
