@@ -260,21 +260,20 @@ by default.
 
 .. code-block:: none
 
-   Embedded verification is enabled by default with compatible beta features.
-   Oplog Rollover Resilience and migrations with source clusters running MongoDB 5.0+
-   are the only compatible beta features. Verification checks for data consistency
-   between the source and destination clusters. Verification will cause mongosync
-   to fail if any inconsistencies are detected, but it does not check for all possible
-   data inconsistencies. It is your responsibility to review the documentation at
+   Embedded verification is enabled by default for replica set to replica set migrations.
+   Verification checks for data consistency between the source and destination clusters.
+   Verification will cause mongosync to fail if any inconsistencies are detected, but it
+   does not check for all possible data inconsistencies. It is your responsibility to
+   review the documentation at
    https://www.mongodb.com/docs/cluster-to-cluster-sync/current/reference/verification/embedded
    to see what data the embedded verifier checks, and verify any other data yourself.
    Verification requires approximately 0.5 GB of memory per 1 million documents on the
    source cluster and will fail if insufficient memory is available. Accepting this
    disclaimer indicates that you understand the limitations, requirements, and failure
-   modes outlined in the documentation linked above. 
+   modes outlined in the documentation linked above.
 
-   To disable the embedded verifier, specify 'verification: false' when starting mongosync. Please see
-   https://www.mongodb.com/docs/cluster-to-cluster-sync/current/reference/verification/
+   To disable the embedded verifier, specify 'verification: false' when starting mongosync.
+   Please see https://www.mongodb.com/docs/cluster-to-cluster-sync/current/reference/verification/
    for alternative verification methods.
 
    Do you want to continue? (y/n): 
