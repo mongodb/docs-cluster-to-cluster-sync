@@ -424,11 +424,11 @@ destination was successful.
 
 When enabled, the verifier performs a series of verification
 checks on the destination cluster. If any of these checks return
-an error, the verifier fails the migration. If all of the checks
+an error, the verifier fails the migration. If all checks
 succeed, ``mongosync`` transitions to the ``COMMITTED`` state.
 
-To enable the verifier, set the ``verification.enabled``
-parameter in ``/start`` to ``true``. It's default is ``false``.
+To disable the verifier, set the ``verification.enabled``
+parameter in ``/start`` to ``false``. It's enabled by default. 
 
 The ``/start`` endpoint returns an error if you enable
 verification checks that are not supported by the source or
