@@ -7,8 +7,8 @@ When the ``mongosync`` process starts without this option, the
 user is prompted to accept each disclaimer.
 
 This option allows users who have already read and accepted
-disclaimers to skip the prompt and start the ``mongosync``
-process with the features enabled.
+disclaimers to accept the disclaimer and start the ``mongosync``
+process.
 
 .. versionadded:: 1.9
 

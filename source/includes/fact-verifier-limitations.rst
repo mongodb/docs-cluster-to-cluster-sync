@@ -24,11 +24,9 @@ The embedded verifier has the following limitations:
   verification process restarts from the beginning. This can
   cause verification to fall substantially behind the migration.
 
-- The verifier isn't compatible with :ref:`reverse sync
-  <c2c-api-reverse>`. If you call the :ref:`/start
-  <c2c-api-start>` endpoint with reverse enabled, the verifier
-  runs its checks on the destination cluster. If you then call
-  :ref:`/reverse <c2c-api-reverse>`, it disables the verifier.
+- The :ref:`/reverse <c2c-api-reverse>` endpoint disables the
+  verifier. It remains disabled after additional calls to the
+  ``/reverse`` endpoint.
 
 - .. include:: /includes/fact-verifier-buildIndexes
 
