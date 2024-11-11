@@ -9,7 +9,12 @@ for every 1 million documents in the migration.
   the server to stop the ``mongosync`` process due to an out of
   memory (OOM) error.
 
-When this occurs, you must either increase the memory of the
-server and resume the migration or restart ``mongosync`` with
-the verifier disabled.
+To use the verifier when this occurs, you must increase the
+memory of the server and resume the migration. Note, the
+verifier doesn't resume and instead restarts its checks from the
+beginning.
+
+If increasing server memory isn't an option, restart
+``mongosync`` with the verifier disabled.
+
 
