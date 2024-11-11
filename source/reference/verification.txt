@@ -54,6 +54,11 @@ source to the destination cluster.
        the :option:`--acceptDisclaimer` option to use the
        verifier.
 
+       The verifier doesn't check every aspect of a migration.
+       To verify sync for unsupported collections, indexes, and
+       metadata, write a custom script that compares the source
+       and destination clusters.
+
    * - :ref:`Document Counts <c2c-verify-doc-counts>`
      - The most basic method of verification is to compare the
        number of documents in each synced collection on the
