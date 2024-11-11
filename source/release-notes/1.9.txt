@@ -51,14 +51,10 @@ Embedded Verifier
 
 Starting in 1.9, ``mongosync`` includes an embedded verifier to
 confirm the successful sync of collections from the source
-cluster to the destination.
+cluster to the destination. The verifier is enabled by default. 
 
-- To enable the embedded verifier, use the
-  ``verification.enabled`` field in the :ref:`/start
-  <c2c-api-start>` request.
-
-- To check verification status, see the ``verification`` field
-  in the :ref:`/progress <c2c-api-progress>` response.
+To check verification status, see the ``verification`` field in
+the :ref:`/progress <c2c-api-progress>` response.
 
 Minimum Supported Version
 -------------------------
