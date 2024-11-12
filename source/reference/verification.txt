@@ -17,12 +17,12 @@ Verify Data Transfer
    :class: singlecol
 
 Before you switch your application load from the source cluster
-to the destination cluster, you should always verify that the
-sync was successful.
+to the destination cluster, you should verify that the migration
+was successful.
 
 Starting in 1.9, ``mongosync`` provides an embedded verifier
 that can perform a series of verification checks on the source
-and destination cluster to ensure a successful sync.
+and destination cluster to confirm the sync was successful. 
 
 .. _c2c-verify-method:
 

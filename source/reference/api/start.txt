@@ -223,8 +223,8 @@ Request Body Parameters
      - Optional
      - Enables the embedded verifier. The verifier performs a
        series of verification checks on supported collections on
-       the destination cluster to help ensure that the migration
-       was successful.
+       the destination cluster to confirm that the migration was
+       successful.
 
        If the verifier finds no errors, ``mongosync``
        transitions to the ``COMMITTED`` state. If it does
@@ -404,7 +404,7 @@ Response:
    :language: json
    :copyable: false
 
-You should always verify that a migration was successful before
+You should verify that a migration was successful before
 transferring your application load to the destination cluster.
 If you need to disable the verifier for any reason, use an
 alternative :ref:`method <c2c-verification>` to verify sync.
