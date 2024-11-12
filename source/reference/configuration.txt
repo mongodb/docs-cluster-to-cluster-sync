@@ -51,6 +51,7 @@ Options
 .. |opt-term| replace:: setting
 
 .. setting:: acceptDisclaimer
+
    *Type*: bool
 
    .. include:: /includes/opts/acceptDisclaimer
