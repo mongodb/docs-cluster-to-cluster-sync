@@ -106,6 +106,13 @@ source to the destination cluster.
        :dbcommand:`getIndexes` command on the source and
        destination clusters and compare the results. 
 
+   * - .. _c2c-metadata-comparison:
+
+       Metadata Comparison
+     - To verify the transfer of metadata, run the
+       :dbcommand:`getCollectionInfos` command on the source and
+       destination clusters and compare the results.
+
    * - :ref:`Migration Verifier <c2c-migration-verifier>`
      - Migration Verifier connects to the source and destination
        clusters and performs a series of verification checks,
