@@ -8,5 +8,5 @@ is in progress.
 
 To sync TTL collections without building indexes on the
 destination cluster, you must start sync with the :ref:`verifier
-disabled <c2c-verifier-disabled>`.
+disabled <c2c-disabled-disabled>`.
 
