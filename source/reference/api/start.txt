@@ -426,8 +426,7 @@ checks on the destination cluster. If any of these checks return
 an error, the verifier fails the migration. If all checks
 succeed, ``mongosync`` transitions to the ``COMMITTED`` state.
 
-To disable the verifier, set the ``verification.enabled``
-parameter in ``/start`` to ``false``. It's enabled by default. 
+To disable the verifier, see :ref:`c2c-disabled-verifier`.
 
 The ``/start`` endpoint returns an error if you enable
 verification checks that are not supported by the source or
