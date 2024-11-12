@@ -62,6 +62,9 @@ source to the destination cluster.
      - The most basic method of verification is to compare the
        number of documents in each synced collection on the
        source cluster to the number on the destination cluster.
+       
+       Before you can verify data transfer with this method,
+       ``mongosync`` must be in the ``COMMITTED`` state.
 
        This method only verifies a successful sync when run
        against clusters with insert-only workloads.
@@ -70,6 +73,9 @@ source to the destination cluster.
      - You can verify sync by comparing MD5 hashes of
        collections synced from the source cluster to the
        destination cluster.
+
+       Before you can verify data transfer with this method,
+       ``mongosync`` must be in the ``COMMITTED`` state.
 
        While hash comparison ensures that the destination
        cluster has received all changes from the source, the
@@ -89,6 +95,9 @@ source to the destination cluster.
        cluster and then checks that the correct documents,
        indexes, collections, metadata, and views exist with the
        same values on the destination cluster.
+
+       Before you can verify data transfer with this method,
+       ``mongosync`` must be in the ``COMMITTED`` state.
 
    * - :ref:`Migration Verifier <c2c-migration-verifier>`
      - Migration Verifier connects to the source and destination

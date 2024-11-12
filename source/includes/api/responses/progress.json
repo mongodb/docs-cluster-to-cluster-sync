@@ -25,7 +25,7 @@
                      "lagTimeSeconds": 2,
                      "totalCollectionCount": 42,
                      "scannedCollectionCount": 10,
-                     "phase": "initial hashing"
+                     "phase": "stream hashing"
 
                   },
                "destination": {
@@ -34,7 +34,7 @@
                      "lagTimeSeconds": 2,
                      "totalCollectionCount": 42,
                      "scannedCollectionCount": 10,
-                     "phase": "initial hashing"
+                     "phase": "stream hashing"
                }
             }
       },
