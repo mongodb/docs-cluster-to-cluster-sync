@@ -50,14 +50,13 @@ source to the destination cluster.
 
        When the ``mongosync`` process starts, it prompts the
        user with a disclaimer about the embedded verifier. You
-       must accept the disclaimer or start ``mongosync`` with
-       the :option:`--acceptDisclaimer` option to use the
-       verifier.
+       must accept the disclaimer, or if you have already read
+       and acknowledged it, start ``mongosync`` with the
+       :option:`--acceptDisclaimer` option to use the verifier.
 
        The verifier doesn't check every aspect of a migration.
        To verify sync for unsupported collections, indexes, and
-       metadata, write a custom script that compares the source
-       and destination clusters.
+       metadata, use a different verification method. 
 
    * - :ref:`Document Counts <c2c-verify-doc-counts>`
      - The most basic method of verification is to compare the
