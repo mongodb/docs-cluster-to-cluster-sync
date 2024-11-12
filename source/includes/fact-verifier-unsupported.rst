@@ -9,6 +9,7 @@ The verifier doesn't check the following namespaces:
 The verifier doesn't check the following collection features:
 
 - Collection metadata
+- Sharding configurations
 - Indexes
 
 To ensure a successful sync, set up additional checks for these
