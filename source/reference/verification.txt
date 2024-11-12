@@ -55,8 +55,8 @@ source to the destination cluster.
        :option:`--acceptDisclaimer` option to use the verifier.
 
        The verifier doesn't check every aspect of a migration.
-       To verify sync for unsupported collections, indexes, and
-       metadata, use a different verification method. 
+       For unsupported namespaces, use a different verification
+       method. 
 
    * - :ref:`Document Counts <c2c-verify-doc-counts>`
      - The most basic method of verification is to compare the
@@ -98,6 +98,13 @@ source to the destination cluster.
 
        Before you can verify data transfer with this method,
        ``mongosync`` must be in the ``COMMITTED`` state.
+
+   * - .. _c2c-index-comparison: 
+
+       Index Comparison
+     - To verify the transfer of indexes, run the
+       :dbcommand:`getIndexes` command on the source and
+       destination clusters and compare the results. 
 
    * - :ref:`Migration Verifier <c2c-migration-verifier>`
      - Migration Verifier connects to the source and destination
