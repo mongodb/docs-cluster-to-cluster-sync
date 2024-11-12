@@ -12,7 +12,7 @@ The verifier doesn't check the following collection features:
 - Sharding configurations
 - Indexes
 
-To ensure a successful sync, set up additional checks for these
+To ensure a successful migration, script additional checks for these
 collections and collection features. For more information, see
 :ref:`c2c-verification`.
 

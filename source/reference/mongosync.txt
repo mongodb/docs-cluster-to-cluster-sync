@@ -86,6 +86,8 @@ Global Options
    To set the ``--acceptDisclaimer`` option from a configuration file,
    see the :setting:`acceptDisclaimer` setting.
 
+   .. versionadded:: 1.9
+
 .. option:: --cluster0 <uri>
 
    .. include:: /includes/opts/cluster0.rst

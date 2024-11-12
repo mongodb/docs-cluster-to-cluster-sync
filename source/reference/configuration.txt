@@ -58,6 +58,8 @@ Options
    To set the ``acceptDisclaimer`` setting from the command line, see the
    :option:`--acceptDisclaimer` option.
 
+   .. versionadded:: 1.9
+
 .. setting:: cluster0
 
    *Type*: string
