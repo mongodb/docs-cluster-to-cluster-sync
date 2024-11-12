@@ -22,7 +22,7 @@
                   {
                      "estimatedDocumentCount": 42,
                      "hashedDocumentCount": 42,
-                     "lagTimeSeconds": 16,
+                     "lagTimeSeconds": 2,
                      "totalCollectionCount": 42,
                      "scannedCollectionCount": 10,
                      "phase": "initial hashing"
@@ -31,7 +31,7 @@
                "destination": {
                      "estimatedDocumentCount": 42,
                      "hashedDocumentCount": 42,
-                     "lagTimeSeconds": 16,
+                     "lagTimeSeconds": 2,
                      "totalCollectionCount": 42,
                      "scannedCollectionCount": 10,
                      "phase": "initial hashing"
