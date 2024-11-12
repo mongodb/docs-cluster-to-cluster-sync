@@ -43,7 +43,7 @@ source to the destination cluster.
    * - :ref:`Embedded Verifier <c2c-embedded-verifier>`
      - Starting in 1.9, ``mongosync`` includes an embedded
        verifier, which runs a series of verification checks on
-       the source and destination clusters to verify that the
+       the source and destination clusters to confirm that the
        migration was successful. This is the preferred
        verification method for deployments that meet the
        :ref:`requirements <c2c-verify-embedded-limitations>`.
