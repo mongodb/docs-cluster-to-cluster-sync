@@ -9,6 +9,6 @@ resume the migration.
 
 If increasing server memory isn't an option, restart
 ``mongosync`` with the :ref:`verifier disabled
-<c2c-disabled-veriifer>`.
+<c2c-disabled-verifier>`.
 
 
