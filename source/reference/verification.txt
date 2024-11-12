@@ -54,9 +54,14 @@ source to the destination cluster.
        and acknowledged it, start ``mongosync`` with the
        :option:`--acceptDisclaimer` option to use the verifier.
 
-       The verifier doesn't check every aspect of a migration.
-       For unsupported namespaces, use a different verification
-       method. 
+       The verifier doesn't check every aspect of a migration:
+
+       - For unsupported namespaces, use a different
+         verification method.
+       - To verify index sync, use the :ref:`Index Comparison
+         <c2c-index-comparison>` method. 
+       - To verify metdata sync, use the :ref:`Metadata
+         Comparison <c2c-metadata-comparison>` method.
 
    * - :ref:`Document Counts <c2c-verify-doc-counts>`
      - The most basic method of verification is to compare the
