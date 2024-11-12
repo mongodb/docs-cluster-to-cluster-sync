@@ -19,8 +19,8 @@ Verify with Embedded Verifier
 
 
 ``mongosync`` includes an embedded verifier to perform a series
-of checks on destination cluster to verify the sync of supported
-collections. 
+of checks on the destination cluster to verify the sync of
+supported collections. 
 
 .. important::
 
