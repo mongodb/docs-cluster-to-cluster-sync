@@ -141,7 +141,7 @@ Steps
          If the source cluster shuts down before mongosync can commit, such
          as in a disaster scenario, the destination cluster might not have
          a consistent snapshot of the source data. To learn more, see
-         Consistency.
+         :ref:`c2c-behavior-consistency`.
 
    .. step:: Wait until you can perform writes on the destination cluster.
 
