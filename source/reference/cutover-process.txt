@@ -132,11 +132,16 @@ Steps
          :language: json
          :copyable: false
 
-      .. note::
+      After you submit a ``commit`` request, call the ``progress`` endpoint
+      to ensure that the ``mongosync`` state is ``COMMITTING`` or
+      ``COMMITTED``.
 
-         After you submit a ``commit`` request, call the ``progress`` endpoint
-         to ensure that the ``mongosync`` state is ``COMMITTING`` or
-         ``COMMITTED``.
+      .. warning::
+
+         If the source cluster shuts down before mongosync can commit, such
+         as in a disaster scenario, the destination cluster might not have
+         a consistent snapshot of the source data. To learn more, see
+         Consistency.
 
    .. step:: Wait until you can perform writes on the destination cluster.
 
