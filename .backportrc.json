@@ -11,5 +11,4 @@
     "backportBranchName": "{{sourcePullRequest.title}}-{{targetBranch}}-backport",
   
     "prTitle": "{{sourcePullRequest.title}}-{{targetBranch}}-backport ({{sourcePullRequest.number}})"
-  }
-  
+}
