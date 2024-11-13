@@ -70,7 +70,8 @@ Steps
          :language: json
          :copyable: false
 
-      Note, the verifier is enabled by default.
+      Note, the verifier is enabled by default for replica set
+      migrations.
 
    .. step:: Examine Progress
 
