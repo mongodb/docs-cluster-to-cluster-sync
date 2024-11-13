@@ -12,9 +12,8 @@ Reverse Sync Direction
    :class: singlecol
    :depth: 1
 
-To reverse the direction of a committed sync operation, use the
-following procedure to finalize your cutover process and call the
-``reverse`` endpoint. 
+To reverse the direction of a sync operation, use the following
+procedure to commit your sync and call the ``reverse`` endpoint. 
 
 Before You Begin
 ----------------
@@ -114,6 +113,8 @@ Use these steps to reverse the direction of your sync:
          to ensure that the ``mongosync`` state is ``COMMITTING`` or
          ``COMMITTED``.
 
+      Once you complete this step, ``mongosync`` blocks writes on the source cluster.
+
    .. step:: Wait until you can perform writes on the destination cluster.
 
       Call the ``progress`` endpoint to determine if ``canWrite`` is
@@ -132,6 +133,10 @@ Use these steps to reverse the direction of your sync:
             :language: json
 
             true
+
+      When you finish reversing the direction of your sync operation,
+      ``mongosync`` replicates any writes that you perform on the destination 
+      cluster after this step to the source cluster.
 
    .. step:: Verify data transfer.
 
