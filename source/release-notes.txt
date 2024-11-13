@@ -35,7 +35,6 @@ Previous Releases
 .. toctree::
    :titlesonly: 
 
-   1.10 </release-notes/1.10>
    1.9 </release-notes/1.9>
    1.8 </release-notes/1.8>
    1.7 </release-notes/1.7>
