@@ -19,7 +19,7 @@ The embedded verifier has the following limitations:
 - ``mongosync`` stores the verifier state in memory, which can
   result in a significant memory overhead. To run the verifier,
   ``mongosync`` requires approximately 10 GB of memory, plus an
-  addition 500 MB for every 1 million documents.
+  additional 500 MB for every 1 million documents.
 
 - The verifier cannot be resumed. If a user stops or pauses sync
   and then starts ``mongosync`` again for any reason, the
