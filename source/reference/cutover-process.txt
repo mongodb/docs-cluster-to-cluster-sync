@@ -20,11 +20,22 @@ workload from the source to the destination cluster using the
 :ref:`COMMITTED <c2c-state-committed>` state. This allows ``mongosync`` to sync
 any additional writes that occur during the migration.
 
-.. note::
+.. warning::
 
-   Before you switch your application workload to the
-   destination cluster, you should always verify a successful sync.
-   For more information, see :ref:`c2c-verification`.
+   Failing to properly cutover from your source cluster to your
+   destination may result in the following application issues:
+
+   - Garbage data on the destination cluster
+   - Commit failures with no option to rollback the sync
+   - Unrecoverable and undiagnosable ``mongosync`` errors
+   - Reduced application availibility, especially if there is
+     application-side enforcement of document schema or other
+     characteristics
+   - Missing transactions on the destination cluster
+   - Other unexpected cluster behavior
+
+   You must use the following steps to safely finalize your cutover process and achieve
+   expected ``mongosync`` behavior. 
 
 Steps
 -----
