@@ -85,4 +85,3 @@ primer/source/includes/table-linux-kernel-version-production.yaml
 venv
 .vscode
 changelogs/.mongodb-jira.yaml
-.backportrc.json
