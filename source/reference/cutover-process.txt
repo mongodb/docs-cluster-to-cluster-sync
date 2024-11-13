@@ -16,14 +16,20 @@ You can finalize a migration and transfer your application
 workload from the source to the destination cluster using the
 :ref:`mongosync <c2c-mongosync>` cutover process.
 
+.. note::
+
+   Before you switch your application workload to the
+   destination cluster, you should always verify a successful sync.
+   For more information, see :ref:`c2c-verification`.
+
 ``mongosync`` should remain active until it reaches the
 :ref:`COMMITTED <c2c-state-committed>` state. This allows ``mongosync`` to sync
 any additional writes that occur during the migration.
 
 .. warning::
 
-   Failing to properly cutover from your source cluster to your
-   destination may result in the following application issues:
+   If you do not properly cutover from your source to your
+   destination, you may face the following issues:
 
    - Garbage data on the destination cluster
    - Commit failures with no option to rollback the sync
