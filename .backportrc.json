@@ -1,6 +1,6 @@
 {
     "repoOwner": "mongodb",
-    "repoName": "docs-mongodb-internal",
+    "repoName": "docs-cluster-to-cluster-sync",
   
     "targetBranchChoices": ["master", "v1.9", "v1.8"],
   
