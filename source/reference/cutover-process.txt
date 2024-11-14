@@ -31,10 +31,10 @@ any additional writes that occur during the migration.
    If you do not properly cutover from your source to your
    destination, you may face the following issues:
 
-   - Garbage data on the destination cluster
+   - Unstructured or unneeded data on the destination cluster
    - Commit failures with no option to rollback the sync
    - Unrecoverable and undiagnosable ``mongosync`` errors
-   - Reduced application availibility, especially if there is
+   - Reduced application availability, especially if there is
      application-side enforcement of document schema or other
      characteristics
    - Missing transactions on the destination cluster
