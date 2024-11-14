@@ -112,9 +112,8 @@ destination cluster.
 Chunk Distribution
 ''''''''''''''''''
 
-``mongosync`` distributes data from the source shard to all
-destination shards. ``mongosync`` does not preserve cross-shard document
-distribution, even with multiple ``mongosync`` binaries. It is not
+``mongosync`` does not preserve chunk distribution from the source to
+the destination, even with multiple ``mongosync`` instances. It is not
 posible to reproduce a particular pre-split of chunks from a source
 cluster on the destination cluster. 
 
