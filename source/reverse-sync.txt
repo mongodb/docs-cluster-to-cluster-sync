@@ -36,7 +36,7 @@ Use these steps to reverse the direction of your sync:
 .. procedure::
    :style: normal
 
-   .. step:: Verify the status of the ``mongosync`` process.
+   .. step:: Verify the status of mongosync.
 
       Call the :ref:`progress <c2c-api-progress>` endpoint to determine
       the status of ``mongosync`` before starting the cutover process.
@@ -68,11 +68,11 @@ Use these steps to reverse the direction of your sync:
 
    .. step:: Stop any write operations to the synced collections on the source.
 
-      - If you started ``mongosync`` with ``enableUserWriteBlocking``
+      - If you start ``mongosync`` with ``enableUserWriteBlocking``
         set to ``true``, ``mongosync`` blocks all write operations on
         the entire source cluster during the commit (step 4) for you.
       - If you didn't start ``mongosync`` with
-        ``enableUserWriteBlocking``, ensure that writes are disabled.
+        ``enableUserWriteBlocking``, ensure that you disable writes.
         For example, run the :dbcommand:`setUserWriteBlockMode` command on the
         source cluster:
 
@@ -90,7 +90,7 @@ Use these steps to reverse the direction of your sync:
 
    .. step:: Send a :ref:`commit <c2c-api-commit>` request to ``mongosync``.
 
-      If you started multiple ``mongosync`` instances for your
+      If you start multiple ``mongosync`` instances for your
       migration, you must issue a commit request for each ``mongosync``
       instance.
 
@@ -183,7 +183,8 @@ Use these steps to reverse the direction of your sync:
    
       Call the ``reverse`` endpoint to reverse the direction of your sync 
       operation. Your original source cluster becomes your new destination cluster 
-      and vice versa. 
+      and your original destination cluster becomes your new source cluster. 
       
-      ``mongosync`` replicates all writes that you performed on the new source
-      after you unblocked writes (during step 4) to the new destination. 
+      ``mongosync`` replicates all writes that you performed on your new
+      source cluster after you unblocked writes (during step 4) to the
+      new destination. 
