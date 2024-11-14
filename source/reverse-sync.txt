@@ -84,9 +84,9 @@ Use these steps to reverse the direction of your sync:
            } )
 
       - If ``mongosync`` uses filtered sync, it's not necessary to
-        disable writes to the entire source cluster. But you must ensure
-        that write operations are stopped for the collections included
-        by the filter.
+        disable writes to the entire source cluster. However, you must ensure
+        that you stop write operations for the collections that the
+        filter includes.
 
    .. step:: Send a :ref:`commit <c2c-api-commit>` request to ``mongosync``.
 
@@ -187,4 +187,4 @@ Use these steps to reverse the direction of your sync:
       
       ``mongosync`` replicates all writes that you performed on your new
       source cluster after you unblocked writes (during step 4) to the
-      new destination. 
+      new destination cluster. 
