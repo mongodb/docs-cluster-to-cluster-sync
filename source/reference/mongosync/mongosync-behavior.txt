@@ -101,9 +101,7 @@ Sharded Clusters
 cluster to the destination cluster. However ``mongosync`` does not
 preserve the source cluster's sharding configuration.
 
-.. seealso:: 
-
-   :ref:`Sharded Cluster Limitations <c2c-sharded-limitations>`
+.. include:: /includes/fact-mongosync-balancer.rst
 
 Pre-Split Chunks
 ''''''''''''''''
