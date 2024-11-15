@@ -136,8 +136,8 @@ call the :ref:`commit <c2c-api-commit>` endpoint.
    blocks writes on the source cluster when you use the ``commit``
    endpoint. 
 
-   If you did not set ``enableUserWriteBlocking`` to ``true``, use the
-   :dbcommand:`setUserWriteBlockMode` command on the source cluster to
+   If you did not set ``enableUserWriteBlocking`` to ``true``, run
+   :dbcommand:`setUserWriteBlockMode` on the source cluster to
    block writes. 
 
 The ``commit`` endpoint starts the :ref:`COMMITTING <c2c-state-committing>` 
