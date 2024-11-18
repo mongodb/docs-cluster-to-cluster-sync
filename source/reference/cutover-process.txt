@@ -31,16 +31,15 @@ any additional writes that occur during the migration.
    If you do not properly cutover from your source to your
    destination, you may face the following issues:
 
-   - Unstructured or unneeded data on the destination cluster
-   - Commit failures with no option to rollback the sync
+   - Inaccurate data on the destination cluster
    - Unrecoverable and undiagnosable ``mongosync`` errors
    - Reduced application availability, especially if there is
      application-side enforcement of document schema or other
      characteristics
-   - Missing transactions on the destination cluster
+   - Incomplete transactions on the destination cluster
    - Other unexpected cluster behavior
 
-   You must use the following steps to safely finalize your cutover process and achieve
+   Use the following steps to safely finalize your cutover process and achieve
    expected ``mongosync`` behavior. 
 
 Steps
@@ -138,10 +137,7 @@ Steps
 
       .. warning::
 
-         If the source cluster shuts down before mongosync can commit, such
-         as in a disaster scenario, the destination cluster might not have
-         a consistent snapshot of the source data. To learn more, see
-         :ref:`c2c-behavior-consistency`.
+         .. include:: /includes/cluster-shutdown-warning
 
    .. step:: Wait until you can perform writes on the destination cluster.
 
