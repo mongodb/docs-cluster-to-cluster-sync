@@ -35,7 +35,7 @@ General Limitations
 - Other clients must not write to the destination cluster while
   ``mongosync`` is running.
 - If you want to start the :ref:`commit <c2c-api-commit>`
-  process and if you previously disabled :ref:`write blocking
+  process and you previously disabled :ref:`write blocking
   <c2c-write-blocking>`, you must :ref:`prevent writes <c2c-api-start>`
   to the source cluster before you start the commit process. 
 - :ref:`system.* collections <metadata-system-collections>` aren't
