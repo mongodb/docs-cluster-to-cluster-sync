@@ -119,8 +119,8 @@ cluster on the destination cluster.
 
 The only sharding configuration that ``mongosync`` preserves from the
 source cluster to the destination cluster is the sharding key. Once the
-migration finishes, you can enable the destination cluster's balancer to
-distribute documents independently of the source cluster's distribution. 
+migration finishes, you can enable the destination cluster's balancer which
+distributes documents independently of the source cluster's distribution. 
 
 Primary Shards
 ''''''''''''''
