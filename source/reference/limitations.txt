@@ -64,6 +64,11 @@ General Limitations
 - You can't sync a collection with any documents that have an empty timestamp,
   such as ``Timestamp(0,0)`` on pre-6.0 source clusters. 
 
+.. important::
+
+   ``mongosync`` enforces the documented limitations, regardless of whether
+   ``mongosync`` is running, paused, or stopped.
+
 MongoDB Community Edition
 -------------------------
 
