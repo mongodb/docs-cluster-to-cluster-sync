@@ -66,7 +66,7 @@ General Limitations
 
 .. important::
 
-   ``mongosync`` enforces the documented limitations, regardless of whether
+   ``mongosync`` enforces the limitations, regardless of whether
    ``mongosync`` is running, paused, or stopped.
 
 MongoDB Community Edition
