@@ -21,6 +21,10 @@ Limitations
    these limitations could lead to undefined behavior on the destination
    cluster.
 
+   You must adhere to these limitations for the full duration of the the
+   migration, including when the migration is paused or stopped and will be
+   resumed.
+
 General Limitations
 -------------------
 
@@ -63,11 +67,6 @@ General Limitations
   <storage-wiredtiger>` storage engine.
 - You can't sync a collection with any documents that have an empty timestamp,
   such as ``Timestamp(0,0)`` on pre-6.0 source clusters. 
-
-.. important::
-
-   ``mongosync`` enforces the limitations, regardless of whether
-   ``mongosync`` is running, paused, or stopped.
 
 MongoDB Community Edition
 -------------------------
