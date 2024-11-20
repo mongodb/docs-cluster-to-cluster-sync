@@ -13,7 +13,8 @@ Reverse Sync Direction
    :depth: 1
 
 To reverse the direction of a sync operation, use the following
-procedure to commit your sync and call the ``reverse`` endpoint. 
+procedure to :ref:`commit your sync <c2c-cutover-process>` and call the
+``reverse`` endpoint. 
 
 Before You Begin
 ----------------
