@@ -155,6 +155,11 @@ Oplog Rollover Resilience
 
 To learn more, see :ref:`c2c-beta-orr`.
 
+Time Series Collections
+~~~~~~~~~~~~~~~~~~~~~~~
+
+Starting in ``mongosync`` 1.8.0, time series collections are
+synchronized between clusters.
 
 Minimum Supported Version
 -------------------------

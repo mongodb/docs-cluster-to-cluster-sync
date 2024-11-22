@@ -78,7 +78,9 @@ to discuss requirements and individualized options.
 Unsupported Collection Types
 ----------------------------
 
-- Time-series collections aren't supported.
+- ``mongosync`` 1.7 and earlier don't support time-series collections.
+  Starting in ``mongosync`` 1.8, time series collections are
+  synchronized between clusters.
 - Clustered collections with :ref:`expireAfterSeconds
   <db.createCollection.expireAfterSeconds>` set aren't supported.
 
