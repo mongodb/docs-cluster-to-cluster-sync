@@ -369,6 +369,25 @@ progress.
 For more information on DDL operations, see
 :ref:`txn-prod-considerations-ddl`. 
 
+Network Latency
+~~~~~~~~~~~~~~~
+
+Network latency or long physical distances between migration components
+can negatively affect sync speed.
+
+Latency between ``mongosync`` and destination shards
+  For each change event that ``mongosync`` applies, ``mongosync`` does 
+  an extra roundtrip to its metadata stored on the destination.
+
+Latency between destination shards
+  For each change event that ``mongosync`` applies, it must access a 
+  document that may live on a different shard. This can result in many
+  cross-shard transactions.
+
+Latency between a destination shards’ nodes
+  ``mongosync`` must use :writeconcern:`"majority"` writes, which 
+  require acknowledgement from multiple nodes within a shard.
+
 Learn More
 ----------
 
