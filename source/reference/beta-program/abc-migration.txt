@@ -1,3 +1,5 @@
+:orphan:
+
 .. _c2c-beta-abc-migration:
 
 ==================
@@ -92,9 +94,8 @@ The following example performs two consecutive migrations that:
 #. Connect the source cluster on port ``27001`` with a destination cluster 
    running on port ``27002``.
 
-The command also sets :option:`--migrationName`
-to describe the operations and store migration metadata for each 
-sync.
+The command also sets ``--migrationName`` to describe the operations and store 
+migration metadata for each sync.
 
 .. code-block:: shell
 
