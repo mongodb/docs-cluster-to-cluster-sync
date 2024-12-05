@@ -1,3 +1,5 @@
+:orphan:
+
 .. _c2c-beta-namespace-remapping:
 
 ===================
