@@ -16,6 +16,12 @@ To reverse the direction of a sync operation, use the following
 procedure to :ref:`commit your sync <c2c-cutover-process>` and call the
 ``reverse`` endpoint. 
 
+Reversing sync allows you to keep clusters in continuous sync after you
+commit. After you commit a sync, you can't resume continuous sync between
+two clusters since ``mongosync`` can only sync into empty destination
+clusters. If you need to use the same two clusters after cutover, you
+can call the ``reverse`` endpoint to keep the clusters in sync.
+
 Before You Begin
 ----------------
 
@@ -37,7 +43,13 @@ Use these steps to reverse the direction of your sync:
 .. procedure::
    :style: normal
 
-   .. include:: /includes/commit-process
+   .. step:: Finalize your sync.
+
+      Follow the :ref:`c2c-cutover-process` tutorial to enable write
+      blocking and finalize your data migration. 
+
+      :gold:`IMPORTANT:` ``mongosync`` does not support
+      :ref:`c2c-filtered-sync` during the reverse sync process. 
 
    .. step:: Call the ``reverse`` endpoint.
    
@@ -46,5 +58,6 @@ Use these steps to reverse the direction of your sync:
       and your original destination cluster becomes your new source cluster. 
       
       ``mongosync`` replicates all writes that you performed on your new
-      source cluster after you unblocked writes (during step 4) to the
+      source cluster after you unblocked writes (during step 4 of the
+      :ref:`c2c-cutover-process`) to the
       new destination cluster. 
