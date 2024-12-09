@@ -52,7 +52,7 @@ before the second migration (B->C) starts committing.
 
    Before you use any experimental {+c2c-beta-program-short+} features, 
    review the :ref:`{+c2c-full-beta-program+} Disclaimer 
-   <c2c-beta-program-disclaimer>`.
+   <c2c-beta-program>`.
 
 
 For better performance, ensure that the first migration (A->B) reaches 
