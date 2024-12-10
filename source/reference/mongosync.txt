@@ -38,8 +38,6 @@ Compatibility
 -------------
 
 - .. include:: /includes/fact-no-8.0-support.rst
-
-- .. include:: /includes/fact-minimum-server-version-support.rst
      
   You can migrate data on clusters (source) with versions of MongoDB
   lower than 6.0 to an Atlas cluster (destination). Migration from clusters with
