@@ -34,7 +34,7 @@ General Limitations
   :ref:`c2c-server-version-compatibility`.
 
 - ``mongosync`` does not support in-place server version upgrades that change the major or minor version during a migration. ``mongosync`` does allow patch version upgrades. 
-  To learn more, see :manual:`Upgrade to the Latest Self-Managed Patch Release of MongoDB </tutorial/upgrade-revision/>`.
+  To learn more, see :ref:`upgrade-to-latest-revision`.
 - The destination cluster must be empty.
 - ``mongosync`` doesn't validate that the clusters or the environment
   are properly configured.
