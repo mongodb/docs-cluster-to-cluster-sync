@@ -376,17 +376,22 @@ Network latency or long physical distances between migration components
 can negatively affect sync speed.
 
 Latency between ``mongosync`` and destination shards
-  For each change event that ``mongosync`` applies, ``mongosync`` does 
-  an extra roundtrip to its metadata stored on the destination.
+  For each operation on the source cluster, ``mongosync`` does two 
+  roundtrips to the destination server. The larger the latency, the 
+  slower the sync.
 
 Latency between destination shards
-  For each change event that ``mongosync`` applies, it must access a 
-  document that may live on a different shard. This can result in many
-  cross-shard transactions.
+  Mongosync writes operations and updates its own metadata on the 
+  destination cluster in batches in a transaction. This can result in 
+  cross-shard transactions, which may be more costly if the shards are 
+  far apart.
 
-Latency between a destination shards’ nodes
-  ``mongosync`` must use :writeconcern:`"majority"` writes, which 
-  require acknowledgement from multiple nodes within a shard.
+Latency between the nodes of each individual replica set on the source or destination
+  ``mongosync`` uses :writeconcern:`"majority"` writes and 
+  :readconcern:`"majority"` reads, which require acknowledgement from 
+  multiple nodes in a replica set. If the majority of these nodes aren't 
+  in the same region, there will be negative performance implications.
+
 
 Learn More
 ----------
