@@ -24,12 +24,11 @@ Get Started
 
 .. note:: 
 
-   Filing a support ticket does  *not* guarantee access to the 
-   {+c2c-beta-program-short+} binaries. 
+   The {+c2c-beta-program-short+} binaries program is invite only
+   at this time.
 
-To request access to the {+c2c-beta-program-short+} binaries, read the 
-following disclaimer and file a ticket with 
-`support <https://support.mongodb.com/>`_:
+After receiving an invitation to the {+c2c-beta-program-short+} binaries,
+read the following disclaimer:
 
 .. code-block:: shell
    :copyable: false
