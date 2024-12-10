@@ -19,16 +19,23 @@ version limitations and requirements:
 
 - ``mongosync`` doesn't support MongoDB rapid releases, such as 6.1 or 6.2.
 
-Minimum Supported Versions 
---------------------------
+- Your source cluster must run one of the following major supported versions: 
+  
+  - 4.4 (*New in version 1.10.0*)
+  - 5.0 (*New in version 1.10.0*)
+  - 6.0
+  - 7.0
+
+The following table lists the minimum MongoDB server version requirements for  
+source clusters:
 
 .. list-table::
    :header-rows: 1
    :class: compatibility 
 
    * - Major Version 
-     - Minimum Supported Patch Version 
-     - Minimum :ref:`Feature Compatibility Version <view-fcv>`
+     - Patch Version 
+     - Minimum Feature Compatibility Version
 
    * - 4.4
      - 4.4.23
