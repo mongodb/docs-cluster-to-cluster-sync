@@ -18,3 +18,10 @@ Release Notes for mongosync 1.10
 
 This page describes changes and new features introduced in  
 {+c2c-full-product-name+} 1.10 and the {+c2c-full-beta-program+}.
+
+Minimum Supported Version
+-------------------------
+
+.. include:: /includes/fact-version-compatibility.rst
+
+.. include:: /includes/migration-upgrade-recommendation.rst

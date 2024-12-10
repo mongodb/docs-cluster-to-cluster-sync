@@ -17,22 +17,44 @@ version limitations and requirements:
 
 - .. include:: /includes/fact-no-8.0-support.rst
 
-- .. include:: /includes/fact-minimum-server-version-support.rst
-
 - ``mongosync`` doesn't support MongoDB rapid releases, such as 6.1 or 6.2.
 
-- .. include:: /includes/fact-minimum-fcv.rst 
+Minimum Supported Versions 
+--------------------------
 
-Synchronize Data Between Clusters Running Older MongoDB Server Versions
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.. list-table::
+   :header-rows: 1
+   :class: compatibility 
 
-.. include:: /includes/fact-minimum-versions.rst
+   * - Major Version 
+     - 4.4 
+     - 5.0 
+     - 6.0
+     - 7.0 
 
+   * - Minimum Supported Patch Version 
+     - 4.4.23
+     - 5.0.29
+     - 6.0.16
+     - 7.0.9
+
+   * - Minimum :ref:`Feature Compatibility Version <view-fcv>`
+     - 4.4
+     - 5.0
+     - 6.0
+     - 6.0   
 
 Synchronize Data Between Clusters with Different MongoDB Server Major Versions
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+------------------------------------------------------------------------------
 
 .. include:: /includes/cross-version-sync.rst
+
+Starting in version 1.10.0, ``mongosync`` supports migrations from pre-6.0 
+source clusters. 
+
+- 4.4 source clusters to 6.0 destination clusters
+- 5.0 source clusters to 6.0 destination clusters
+- 5.0 source clusters to 7.0 destination clusters
 
 ``mongosync`` supports syncs between the following source and
 destination MongoDB server versions. 
@@ -42,9 +64,17 @@ destination MongoDB server versions.
    :stub-columns: 1
    :widths: 40 30 30 
 
-   * - 
+   * -
      - **6.0** Destination
      - **7.0** Destination
+
+   * - **4.4** Source
+     - √
+     - 
+
+   * - **5.0** Source
+     - √
+     - √
 
    * - **6.0** Source
      - √
