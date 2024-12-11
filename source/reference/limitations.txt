@@ -198,3 +198,11 @@ cluster.
 
 .. include:: /includes/fact-verifier-limitations
 
+Pre-6.0 Migrations 
+------------------
+
+Starting in 1.10, ``mongosync`` supports migrations from source clusters running 
+MongoDB server versions older than 6.0. For information on supported migration 
+paths, see :ref:`c2c-server-version-compatibility`.
+
+.. include:: /includes/fact-older-version-limitations.rst
