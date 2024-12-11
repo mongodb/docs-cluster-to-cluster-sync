@@ -17,14 +17,14 @@ version limitations and requirements:
 
 - .. include:: /includes/fact-no-8.0-support.rst
 
-- ``mongosync`` doesn't support MongoDB rapid releases, such as 6.1 or 6.2.
-
 - Your source cluster must run one of the following major supported versions: 
   
   - 4.4 (*New in version 1.10.0*)
   - 5.0 (*New in version 1.10.0*)
   - 6.0
   - 7.0
+
+- ``mongosync`` doesn't support MongoDB rapid releases, such as 6.1 or 6.2.
 
 The following table lists the minimum MongoDB server version requirements for  
 clusters:
