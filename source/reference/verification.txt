@@ -118,6 +118,15 @@ source to the destination cluster.
        :method:`db.getCollectionInfos` method on the source and
        destination clusters and compare the results.
 
+   * - .._c2c-shardkey-comparison: 
+
+       Shard Key Comparison
+     - To verify the transfer of shard keys, run a query on the source and 
+       destination clusters that searches the ``config.collections``
+       for a document with an ``_id`` value that matches the current namespace. 
+       The document's ``key`` value should remain consistent between the 
+       source and destination clusters. 
+
    * - :ref:`Migration Verifier <c2c-migration-verifier>`
      - Migration Verifier connects to the source and destination
        clusters and performs a series of verification checks,
