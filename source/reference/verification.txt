@@ -118,15 +118,15 @@ source to the destination cluster.
        :method:`db.getCollectionInfos` method on the source and
        destination clusters and compare the results.
 
-   * - .._c2c-shardkey-comparison: 
+   * - .. _c2c-shardkey-comparison: 
 
        Shard Key Comparison
      - To verify the transfer of shard keys in a synced collection, run a query on the :data:`~config.collections`
        collection to find a document whose ``_id`` value is the namespace of the target collection. 
        Compare the ``key`` field value of this document in the source and destination clusters.
 
-       For a collection named ``pets`` in the ``records`` database, you identify the shard key 
-       using the following query in :binary:`mongosh`:
+       You can identify the shard key for a collection named ``pets`` in the ``records`` database 
+       using the following query in :binary:`mongosh`: 
 
        .. io-code-block:: 
           :copyable: true
@@ -134,14 +134,16 @@ source to the destination cluster.
           .. input::
              :language: javascript 
 
-             db.collections.find({ _id : "db.collection" }) 
+             use config
+
+             db.collections.find({ _id : "records.pets" }) 
 
           .. output:: 
              :language: javascript
              :emphasize-lines: 5-7
 
              {
-                 "_id" : "db.collection",
+                 "_id" : "records.pets",
                  "lastmod" : ISODate("2021-07-21T15:48:15.193Z"),
                  "timestamp": Timestamp(1626882495, 1),
                  "key" : {
@@ -150,7 +152,7 @@ source to the destination cluster.
                  "unique" : false,
                  "lastmodEpoch" : ObjectId("5078407bd58b175c5c225fdc"),
                  "uuid" :  UUID("f8669e52-5c1b-4ea2-bbdc-a00189b341da")
-            }
+             }
 
    * - :ref:`Migration Verifier <c2c-migration-verifier>`
      - Migration Verifier connects to the source and destination
