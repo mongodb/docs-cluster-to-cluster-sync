@@ -29,13 +29,14 @@
 - You can't enable the ``enableUserWriteBlocking`` option in the ``/start`` 
   request. 
 
-- :ref:`SRV connection strings <connections-dns-seedlist>` for 4.4 source 
-  clusters are not supported. You must use a :ref:`standard connection string
-  <connections-standard-connection-string-format>`.
-
 - You can't enable the ``createSupportingIndexes`` :ref:`sharding parameter 
   <c2c-api-start-sharding>` with a pre-6.0 cluster. 
 
 - Indexes with inconsistent specs or that are missing on some shards are not 
   supported. To check for index inconsistencies, see 
   :ref:`manage-indexes-find-inconsistent-indexes`.
+
+- For source clusters running MongoDB 4.4, :ref:`SRV connection strings 
+  <connections-dns-seedlist>` are not supported. You must use a 
+  :ref:`standard connection string 
+  <connections-standard-connection-string-format>`.
