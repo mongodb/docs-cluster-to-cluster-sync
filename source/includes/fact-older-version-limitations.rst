@@ -24,7 +24,7 @@
 - ``geoHaystack`` indexes are not supported.
 
 - :ref:`/reverse <c2c-api-reverse>` endpoints are not supported. You can't 
-  enable ``reversible`` in the :ref:`/start <c2c-api-start>` request.
+  enable the ``reversible`` option in the :ref:`/start <c2c-api-start>` request.
 
 - You can't enable the ``enableUserWriteBlocking`` option in the ``/start`` 
   request. 
