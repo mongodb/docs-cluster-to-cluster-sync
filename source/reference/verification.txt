@@ -121,11 +121,11 @@ source to the destination cluster.
    * - .. _c2c-shardkey-comparison: 
 
        Shard Key Comparison
-     - To verify the transfer of shard keys in a synced collection, run a query on the :data:`~config.collections`
+     - To verify the transfer of shard keys in a synced collection, run a query on the ``config.collections``
        collection to find a document whose ``_id`` value is the namespace of the target collection. 
        Compare the ``key`` field value of this document in the source and destination clusters.
 
-       You can identify the shard key for a collection named ``pets`` in the ``records`` database 
+       For a collection named ``pets`` in the ``records`` database, you can identify the shard key
        using the following query in :binary:`mongosh`: 
 
        .. io-code-block:: 
@@ -134,13 +134,12 @@ source to the destination cluster.
           .. input::
              :language: javascript 
 
-             use config
-
-             db.collections.find({ _id : "records.pets" }) 
+             db.getSiblingDB("config").find({ _id : "records.pets" }) 
 
           .. output:: 
              :language: javascript
              :emphasize-lines: 5-7
+             :visible: false
 
              {
                  "_id" : "records.pets",
