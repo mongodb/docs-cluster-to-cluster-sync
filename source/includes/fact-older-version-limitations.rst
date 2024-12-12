@@ -21,7 +21,7 @@
      Writes that produce DDL events on source collections outside of the 
      :ref:`namespace filter <c2c-filtered-sync>` are allowed.
 
-- geoHaystack indexes <index-geohaystack-index>` are not supported.
+- ``geoHaystack`` indexes are not supported.
 
 - :ref:`/reverse <c2c-api-reverse>` endpoints are not supported. You can't 
   enable ``reversible`` in the :ref:`/start <c2c-api-start>` request.
