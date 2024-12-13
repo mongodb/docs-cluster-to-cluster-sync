@@ -47,6 +47,7 @@ version-dev = "{+version-dev+}"
 # Warning for non-genuine deployment usage with tool binaries.
 targets = [
         "index.txt",
+        "about-mongosync.txt",
         "mongosync.txt"
         ]
 variant = "warning"
