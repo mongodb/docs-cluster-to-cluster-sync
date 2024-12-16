@@ -1,12 +1,13 @@
 - Writes that produce DDL events cannot occur on the source cluster during the 
   migration. The following events cannot occur: 
   
+  - ``collMod``
   - ``create``
+  - ``createIndexes``
   - ``drop``
   - ``dropDatabase``
-  - ``createIndexes``
   - ``dropIndexes``
-  - ``collModrefineCollectionShardKey``
+  - ``refineCollectionShardKey``  
   - ``rename``
   - ``reshardCollection``
   - ``shardCollection``
@@ -23,14 +24,14 @@
 
 - ``geoHaystack`` indexes are not supported.
 
-- :ref:`/reverse <c2c-api-reverse>` endpoints are not supported. You can't 
+- :ref:`/reverse <c2c-api-reverse>` endpoint is not supported. You can't 
   enable the ``reversible`` option in the :ref:`/start <c2c-api-start>` request.
 
 - You can't enable the ``enableUserWriteBlocking`` option in the ``/start`` 
   request. 
 
 - You can't enable the ``createSupportingIndexes`` :ref:`sharding parameter 
-  <c2c-api-start-sharding>` with a pre-6.0 cluster. 
+  <c2c-api-start-sharding>`. 
 
 - Indexes with inconsistent specs or that are missing on some shards are not 
   supported. To check for index inconsistencies, see 
