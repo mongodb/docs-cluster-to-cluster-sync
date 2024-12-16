@@ -19,6 +19,13 @@ Support.
 
 .. _c2c-faq-read-write-during-sync:
 
+Can I change my ``mongosync`` load level while ``mongosync`` is syncing? 
+-----------------------------------------------------------------------
+
+You can adjust the load level of an active ``mongosync`` migration . 
+This will not reset
+
+
 Can I perform reads or writes to my destination cluster while ``mongosync`` is syncing?
 ---------------------------------------------------------------------------------------
 
