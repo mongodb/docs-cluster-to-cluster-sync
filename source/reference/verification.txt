@@ -134,7 +134,7 @@ source to the destination cluster.
           .. input::
              :language: javascript 
 
-             db.getSiblingDB("config").find({ _id : "records.pets" }) 
+             db.getSiblingDB("config").collections.find({ _id : "records.pets" }) 
 
           .. output:: 
              :language: javascript
