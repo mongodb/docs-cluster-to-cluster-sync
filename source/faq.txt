@@ -17,27 +17,25 @@ This page provides answers to some frequently asked questions we have
 encountered. If you have additional questions please contact MongoDB
 Support.
 
-Can I change my ``mongosync`` load level while ``mongosync`` is syncing? 
------------------------------------------------------------------------
+Can I change the load level while ``mongosync`` is syncing? 
+------------------------------------------------------------------------
 
 You can adjust the load level of an active ``mongosync`` migration by 
 performing the following steps:
 
-1. Terminate all ``mongosync`` processes. Any in-progress partitions are
-   ended and then restarted in the next step.
-   
-#. Restart your ``mongosync`` sync with the ``--loadLevel`` option set to your 
-   updated load level: 
+1. Terminate all ``mongosync`` processes.
+
+#. Restart your ``mongosync`` sync with the ``--loadLevel`` option set to the 
+   new load level: 
 
    .. code-block:: javascript 
 
       mongosync \
             --cluster0 "<cluster0_connection_string>" \
-            --loadLevel <newLoadLevel> 
+            --loadLevel <level> 
 
-Any partitions that were in-progress at the time of termiantion are then restarted when the ``mongosync`` processes
-are restarted. are restarted after the ``mongosync`` is restarted, but any 
-complete partitions are retained. 
+Any partitions that are in-progress at the time of termination are restarted 
+when you restart ``mongosync``. 
 
 Can I perform reads or writes to my destination cluster while ``mongosync`` is syncing?
 ---------------------------------------------------------------------------------------
