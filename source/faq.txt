@@ -17,6 +17,7 @@ This page provides answers to some frequently asked questions we have
 encountered. If you have additional questions please contact MongoDB
 Support.
 
+.. _c2c-faq-change-load:
 
 Can I change my ``mongosync`` load level while ``mongosync`` is syncing? 
 -----------------------------------------------------------------------
