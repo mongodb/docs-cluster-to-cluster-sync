@@ -16,6 +16,10 @@ You can configure :ref:`mongosync <c2c-mongosync>` instances at startup
 using a configuration file.  The configuration file contains settings that are
 the equivalent of ``mongosync`` command line options.
 
+If ``mongosync`` is currently syncing, you can update certain ``mongosync`` configuration settings
+by stopping and then re-initializing your ``mongosync`` processes with an updated configuration file.
+To learn more, see :ref:`c2c-update-config`. 
+
 Configuration File
 ==================
 
@@ -37,10 +41,13 @@ To use a configuration file, start ``mongosync`` with the
 
 .. code-block:: console
 
-   $ mongosync --config mongosync.conf
+   mongosync --config <configPath>
 
-Options
-=======
+Settings
+~~~~~~~~
+
+The following settings can be specified in a configuration file at startup. 
+To set these settings using the equivalent command line options, see :ref:`c2c-cli-options`. 
 
 .. note::
 
@@ -144,3 +151,89 @@ Options
 
    To set the ``verbosity`` setting from the command line, see the
    :option:`--verbosity` option.
+
+.. _c2c-update-config: 
+
+Reconfigure During Synchronization
+==================================
+
+.. important:: 
+
+   You can *not* change the :setting:`cluster0`, :setting:`cluster1`, or :setting:`id` settings after starting your migration. 
+
+You can reconfigure the following configuration options while ``mongosync`` is syncing: 
+
+- :option:`--config`
+- :option:`--disableTelemetry`
+- :option:`--loadLevel`
+- :option:`--logPath`
+- :option:`--port`
+- :option:`--verbosity` 
+
+To do this, perform the following steps: 
+
+.. If ``mongosync`` is currently syncing, you can reconfigure the fo
+.. :option:`--config`, :option:`--loadLevel`, :option:`--logPath`, :option:`--port`, and :option:`verbosity` configuration options 
+.. by performing the following steps: 
+
+.. procedure::
+   :style: normal
+
+   .. step:: (Optional) Pause the ``mongosync`` processes
+   
+      Run :ref:`c2c-api-pause` on each running ``mongosync`` process.
+      
+      You can resume the ``mongosync`` processes later from the paused
+      state, as shown in the final step.
+      
+      .. tip::
+
+         If you don't want to immediately resume data synchronization
+         operations after live upgrade, consider pausing the
+         ``mongosync`` processes. This is useful if you're coordinating
+         operations from multiple ``mongosync`` processes.
+      
+   .. step:: Stop the ``mongosync`` processes 
+
+      Use your operating system to stop each running ``mongosync`` process. 
+      To stop a process, see your operating system documentation for the specific steps.
+   
+   .. step:: (Optional) Update your configuration file
+
+      If you used the :option:`--config` option to set the path to a configuration file 
+      when you initialized ``mongosync``, update this configuration file with the new value for each setting
+      that you want to change. 
+
+   .. step:: Initialize the ``mongosync`` processes
+
+      If you updated a configuration file in the last step, initialize 
+      the ``mongosync`` processes with the :option:`--config` option 
+      set to the path of the updated configuration file:
+      
+      .. code-block:: console
+
+         mongosync --config <configPath>
+
+      If you did  *not*  use the :option:`--config` option when you first initialized ``mongosync``, 
+      initialize the ``mongosync`` processes using the updated command line option(s):
+
+      .. code-block:: console
+
+         mongosync \
+               --cluster0 "<cluster0_connection_string>" \
+               --cluster1 "<cluster1_connection_string>" \
+               --loadLevel <newLevel> 
+
+      To learn more, see :ref:`Initialize mongosync <c2c-initialize>`.
+
+   .. step:: Restart or Resume the ``mongosync`` processes. 
+
+      If you paused any ``mongosync`` processes earlier in the optional first step, 
+      run :ref:`c2c-api-resume` on the paused ``mongosync`` processes.
+
+      If you stopped any ``mongosync`` processes without using :ref:`c2c-api-pause`, 
+      run :ref:`c2c-api-start` on the stopped ``mongosync`` processes. 
+      For more detailed instructions, see :ref:`c2c-quickstart-synchronize`. 
+
+      ``mongosync`` resumes the sync roughly where it was before you stopped the earlier proceses.
+      Any partitions that were in progress at the time of termination will restart from the beginning. 
