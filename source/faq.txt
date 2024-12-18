@@ -25,12 +25,9 @@ Can I change my ``mongosync`` load level while ``mongosync`` is syncing?
 You can adjust the load level during a ``mongosync`` migration by 
 performing the following steps:
 
-1. (Optional) Pause the ``mongosync`` processes by running the :ref:`c2c-api-pause` endpoint
-   on each running ``mongosync`` process. 
-#. Terminate the ``mongosync`` processes. 
+1. Terminate the ``mongosync`` processes. 
    
-   To stop a running ``mongosync`` process, see your operating system
-   documentation for the specific steps.
+   For directions on how to terminate a process, see your operating system documentation. 
 #. Initialize ``mongosync`` with the ``--loadLevel`` option set to the new load level: 
 
    .. code-block:: javascript 
