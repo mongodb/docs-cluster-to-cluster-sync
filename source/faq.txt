@@ -25,18 +25,23 @@ that you read is :term:`eventually consistent <eventual consistency>`. For
 consistent reads, wait for the migration to commit. To learn more, see 
 :ref:`mongosync-considerations`.
 
-If you write to a synced namespace before issuing a :ref:`commit 
-<c2c-api-commit>` and while ``canWrite`` is ``false``, the behavior is 
-undefined. To ensure that you don't write to any synced namespaces, enable 
-:ref:`write blocking <c2c-write-blocking>`.
+Attempting to commit without pausing writes on both the source and the destination, or forgoing mongosync commit altogether during cutover, are not supported or tested workflows for mongosync
+
+Performing writes to your destination cluster during synchronization is not a supported or tested 
+workflow for ``mongosync``. 
+``mongosync`` combines and reorders writes from the source to destination during the sync, and also temporarily modifies collection characteristics. 
+As a result, the destination is not guaranteed to match the source at any point in time while the sync is executing. 
+
+To ensure that the destination matches the source, only call the :ref:`commit <c2c-api-commit>` API endpoint 
+with writes paused on the source and destination clusters. To ensure that you don't write to any synced namespaces, enable :ref:`write blocking <c2c-write-blocking>`. 
+
+Upon commit, it is only safe to write to the destination cluster when :ref:``canWrite`` is ``true``. 
+To check the value of ``canWrite``, call the :ref:`progress <c2c-api-progress>` API endpoint.
 
 .. note::
    
    Index builds on the destination cluster are treated as writes 
    while ``mongosync`` is syncing.
-
-To check the value of ``canWrite``, call the :ref:`progress <c2c-api-progress>` 
-API endpoint.
 
 Can ``mongosync`` run on its own hardware? 
 ------------------------------------------
