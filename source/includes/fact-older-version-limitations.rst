@@ -1,5 +1,6 @@
-- Writes that produce DDL events cannot occur on the source cluster during the 
-  migration. The following events cannot occur: 
+- Writes that produce :term:`DDL <DDL (Data Definition Language)>` events cannot 
+  occur on the source cluster during the migration. The following events cannot 
+  occur: 
   
   - ``collMod``
   - ``create``
@@ -28,13 +29,15 @@
   enable the ``reversible`` option in the :ref:`/start <c2c-api-start>` request.
 
 - You can't enable the ``enableUserWriteBlocking`` option in the ``/start`` 
-  request. 
+  request. Ensure that no writes are made to the source or destination cluster 
+  during the migration.
 
 - You can't enable the ``createSupportingIndexes`` :ref:`sharding parameter 
-  <c2c-api-start-sharding>`. 
+  <c2c-api-start-sharding>`. Instead, create an index to support your shard key 
+  on the source cluster. 
 
-- Indexes with inconsistent specs or that are missing on some shards are not 
-  supported. To check for index inconsistencies, see 
+- If there are any indexes with inconsistent specs or that are missing 
+  ``mongosync`` returns an error. To check for index inconsistencies, see 
   :ref:`manage-indexes-find-inconsistent-indexes`.
 
 - For source clusters running MongoDB 4.4, :ref:`SRV connection strings 

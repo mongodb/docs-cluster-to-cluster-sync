@@ -115,7 +115,7 @@ Sharded Clusters
 - Shards cannot be added or removed while syncing.
 - ``mongosync`` only syncs indexes that exist on all shards.
 - ``mongosync`` only syncs indexes that have consistent index
-  specifications on all shards.
+  specifications on all shards. 
 
   .. note::
 
