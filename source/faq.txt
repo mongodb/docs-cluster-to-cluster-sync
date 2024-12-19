@@ -17,6 +17,8 @@ This page provides answers to some frequently asked questions we have
 encountered. If you have additional questions please contact MongoDB
 Support.
 
+.. _c2c-faq-read-write-during-sync:
+
 Can I perform reads or writes to my destination cluster while ``mongosync`` is syncing?
 ---------------------------------------------------------------------------------------
 
