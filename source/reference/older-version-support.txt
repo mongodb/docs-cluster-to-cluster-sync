@@ -1,0 +1,31 @@
+.. _c2c-older-version-support:
+
+==================================
+Migrate Data From Pre-6.0 Clusters
+==================================
+
+.. default-domain:: mongodb
+
+.. contents:: On this page
+   :local:
+   :backlinks: none
+   :depth: 2
+   :class: singlecol
+
+.. include:: /includes/fact-pre-6.0-migration.rst
+
+Before You Begin 
+----------------
+
+.. include:: /includes/table-pre-6.0-compatibilty.rst
+
+.. include:: /includes/table-patch-versions.rst
+
+Steps 
+-----
+
+
+Learn More 
+----------
+
+- :ref:`c2c-server-version-compatibility`
