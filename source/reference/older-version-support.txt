@@ -57,4 +57,5 @@ This example
 Learn More 
 ----------
 
+- :ref:`c2c-older-version-limitations`
 - :ref:`c2c-server-version-compatibility`
