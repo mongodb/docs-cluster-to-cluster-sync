@@ -42,7 +42,13 @@ Synchronize Data Between Clusters with Different MongoDB Server Major Versions
    
    ``mongosync`` does not support migrations to pre-6.0 destination clusters.
 
+``mongosync`` supports syncs between the following source and
+destination MongoDB server versions. 
+
 .. include:: /includes/table-pre-6.0-compatibilty.rst
+
+To learn more about syncing from pre-6.0 source clusters, see 
+:ref:`c2c-older-version-support`.
 
 .. _c2c-server-pre-8.0-to-8.0:
 

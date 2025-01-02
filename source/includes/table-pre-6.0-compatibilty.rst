@@ -1,6 +1,3 @@
-``mongosync`` supports syncs between the following source and
-destination MongoDB server versions. 
-
 .. list-table:: 
    :header-rows: 1
    :stub-columns: 1

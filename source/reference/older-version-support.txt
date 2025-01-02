@@ -14,15 +14,44 @@ Migrate Data From Pre-6.0 Clusters
 
 .. include:: /includes/fact-pre-6.0-migration.rst
 
-Before You Begin 
-----------------
+About this Task 
+---------------
+
+``mongosync`` supports syncs between the following source and
+destination MongoDB server versions:
 
 .. include:: /includes/table-pre-6.0-compatibilty.rst
 
+Before You Begin 
+----------------
+
+Embedded Verifier 
+~~~~~~~~~~~~~~~~~
+
+Before you sync from a pre-6.0 source cluster, enable the 
+:ref:`embedded verifier <c2c-embedded-verifier>`.
+
+mongosync Version
+~~~~~~~~~~~~~~~~~
+
+If you are migrating from a pre-6.0 cluster, you must run ``mongosync`` 1.10 or 
+later. 
+
+Server Version Compatibility 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Ensure that you are at least using a minimum supported server version on your 
+source and destination clusters: 
+
 .. include:: /includes/table-patch-versions.rst
+
+To learn more about supported server versions, see 
+:ref:`c2c-server-version-compatibility`.
 
 Steps 
 -----
+
+This example 
 
 
 Learn More 

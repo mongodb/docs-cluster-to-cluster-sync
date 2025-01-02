@@ -61,6 +61,7 @@ Reference
    Reverse Sync Direction </reverse-sync>
    Limitations </reference/limitations>
    Logging </reference/logging>
+   Migrate From Pre-6.0 Clusters </reference/older-version-support>
    User Permissions </reference/permissions>
    Telemetry </reference/telemetry>
    Data Transfer Verification </reference/verification>
