@@ -209,8 +209,7 @@ Request Body Parameters
        encounter errors, it fails the migration.
 
        The verifier is enabled by default for replica set to
-       replica set migrations. If the migration includes a
-       sharded cluster, the verifier is disabled.
+       replica set migrations.
 
        :red:`WARNING`: The verifier does not check all
        collections or data. For details, see
