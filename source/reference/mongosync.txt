@@ -30,6 +30,9 @@ For an overview of the ``mongosync`` process, see :ref:`about-mongosync`.
 To get started with ``mongosync``, refer to the :ref:`Quick Start Guide
 <c2c-quickstart>`.
 
+The :ref:`Frequently Asked Questions (FAQ) <c2c-faq>` page addresses
+common questions users have asked about ``mongosync``.
+
 Compatibility
 -------------
 

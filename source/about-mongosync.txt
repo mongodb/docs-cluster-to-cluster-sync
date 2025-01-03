@@ -36,6 +36,9 @@ and API operations:
    :alt: Diagram of relationship between ``mongosync`` states and API operations
    :figwidth: 600px
 
+The :ref:`Frequently Asked Questions (FAQ) <c2c-faq>` page addresses
+common questions users have asked about ``mongosync``.
+
 Details
 -------
 
