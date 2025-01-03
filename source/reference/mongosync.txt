@@ -23,8 +23,7 @@ destination cluster and keeps the clusters in continuous sync until you
 :ref:`finalize <c2c-about-finalizing>` the sync. 
 
 In addition to continuous data synchronization, ``mongosync`` can also
-facilitate a one time data migration between clusters. To learn more, see 
-:ref:`mongosync-considerations`.
+facilitate a one time data migration between clusters.
 
 For an overview of the ``mongosync`` process, see :ref:`about-mongosync`.
 
