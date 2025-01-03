@@ -19,10 +19,6 @@ The :ref:`mongosync <c2c-mongosync>` binary is the primary process used in
 destination cluster and keeps the clusters in continuous sync until you 
 :ref:`finalize <c2c-about-finalizing>` the sync. 
 
-You can use ``mongosync`` to create 
-dedicated analytics, development, or testing clusters that mirror your 
-production environment. 
-
 ``mongosync`` keeps track of its current actions through 
 :ref:`states <c2c-states>`. ``mongosync`` enters different states depending on 
 the requests it receives. The current ``mongosync`` state determines which API 

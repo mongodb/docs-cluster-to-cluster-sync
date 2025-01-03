@@ -32,14 +32,13 @@ workflow for ``mongosync``.
 ``mongosync`` combines and reorders writes from the source to destination during the sync, and also temporarily modifies collection characteristics. 
 As a result, the destination is not guaranteed to match the source at any point in time while the sync is executing. 
 
-To ensure that you don't write to any synced namespaces, enable :ref:`write blocking <c2c-write-blocking>` when you start ``mongosync``. 
-The only way to ensure that the destination matches the source is to commit mongosync with writes paused on both source and destination. 
-
-To ensure that the destination matches the source, only call the :ref:`commit <c2c-api-commit>` API endpoint 
-with writes paused on the source and destination clusters. To block writing on synced namespaces, enable :ref:`write blocking <c2c-write-blocking>`. 
+To ensure that the destination matches the source when you finalize the sync, only call the :ref:`commit <c2c-api-commit>` endpoint 
+when writes are blocked on the source and destination clusters. To block writes on the destination cluster during sync and 
+on the source cluster when ``commit`` is received, enable :ref:`write blocking <c2c-write-blocking>` when you run the :ref:`c2c-api-start` endpoint.
+If you did not enable write blocking, run :dbcommand:`setUserWriteBlockMode` on the source cluster to block writes.
 
 Upon commit, it is only safe to write to the destination cluster when ``canWrite`` is ``true``. 
-To check the value of ``canWrite``, call the :ref:`progress <c2c-api-progress>` API endpoint.
+To check the value of ``canWrite``, call the :ref:`c2c-api-progress` endpoint.
 
 .. note::
    
