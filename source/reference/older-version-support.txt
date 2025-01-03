@@ -25,17 +25,13 @@ destination MongoDB server versions:
 Before You Begin 
 ----------------
 
+:ref:`Download and install <c2c-install>` ``mongosync`` 1.10 or later.
+
 Embedded Verifier 
 ~~~~~~~~~~~~~~~~~
 
 Before you sync from a pre-6.0 source cluster, enable the 
-:ref:`embedded verifier <c2c-embedded-verifier>`.
-
-mongosync Version
-~~~~~~~~~~~~~~~~~
-
-If you are migrating from a pre-6.0 cluster, you must run ``mongosync`` 1.10 or 
-later. 
+:ref:`embedded verifier <c2c-embedded-verifier>`. 
 
 Server Version Compatibility 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -51,11 +47,38 @@ To learn more about supported server versions, see
 Steps 
 -----
 
-This example 
+In the following example, ``cluster0`` is an Atlas cluster running MongoDB 6.0, 
+and ``cluster1`` is an Atlas cluster running MongoDB 7.0.
 
+.. procedure:: 
+   :style: normal 
+
+   .. step:: Format your connection strings 
+
+      The connection strings for the source and destination clusters should 
+      resemble the following: 
+
+      .. code-block:: shell
+         
+         cluster0:
+         mongodb+srv://<user>:<password>@<cluster0Name>.<hostname>.mongodb.net
+         cluster1:
+         mongodb+srv://<user>:<password>@<cluster1Name>.<hostname>.mongodb.net
+
+   .. step:: Connect the source and destination clusters with mongosync 
+
+      To connect ``cluster0`` to ``cluster1`` with ``mongosync``, enter the 
+      following command on the command line:
+
+      .. code-block:: shell
+         
+         mongosync \
+            --cluster0 "mongodb+srv://<user>:<password>@<cluster0Name>.<hostname>.mongodb.net" \
+            --cluster1 "mongodb+srv://<user>:<password>@<cluster1Name>.<hostname>.mongodb.net"
 
 Learn More 
 ----------
 
-- :ref:`c2c-older-version-limitations`
+- :ref:`c2c-connecting`
+- :ref:`Pre-6.0 Migration Limitations <c2c-older-version-limitations>`
 - :ref:`c2c-server-version-compatibility`
