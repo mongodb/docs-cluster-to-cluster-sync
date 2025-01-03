@@ -37,8 +37,7 @@ collections on the destination cluster to confirm that
 it was successful in transferring documents from the
 source cluster to the destination.
 
-When you start the ``mongosync`` process, it provides a disclaimer advising the 
-user that the verifier is enabled by default.
+When you start the ``mongosync`` process, it provides the following disclaimer: 
 
 .. code-block:: none
 
