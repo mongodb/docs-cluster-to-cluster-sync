@@ -208,8 +208,7 @@ Request Body Parameters
        transitions to the ``COMMITTED`` state. If it does
        encounter errors, it fails the migration.
 
-       The verifier is enabled by default for replica set to
-       replica set migrations.
+       The verifier is enabled by default.
 
        :red:`WARNING`: The verifier does not check all
        collections or data. For details, see
