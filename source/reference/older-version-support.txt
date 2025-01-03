@@ -36,7 +36,7 @@ Before you sync from a pre-6.0 source cluster, enable the
 Server Version Compatibility 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Ensure that you are at least using a minimum supported server version on your 
+Ensure that you are at least using a compatible patch version on your 
 source and destination clusters: 
 
 .. include:: /includes/table-patch-versions.rst
@@ -47,34 +47,45 @@ To learn more about supported server versions, see
 Steps 
 -----
 
-In the following example, ``cluster0`` is an Atlas cluster running MongoDB 6.0, 
-and ``cluster1`` is an Atlas cluster running MongoDB 7.0.
+In the following example, ``cluster0`` is an source cluster running MongoDB 6.0, 
+and ``cluster1`` is a destination cluster running MongoDB 7.0.
 
 .. procedure:: 
    :style: normal 
 
-   .. step:: Format your connection strings 
+   .. step:: Initialize ``mongosync``
+      
+      Initialize the ``mongosync`` process:
 
-      The connection strings for the source and destination clusters should 
-      resemble the following: 
+      .. code-block:: sh
 
-      .. code-block:: shell
-         
-         cluster0:
-         mongodb+srv://<user>:<password>@<cluster0Name>.<hostname>.mongodb.net
-         cluster1:
-         mongodb+srv://<user>:<password>@<cluster1Name>.<hostname>.mongodb.net
-
-   .. step:: Connect the source and destination clusters with mongosync 
-
-      To connect ``cluster0`` to ``cluster1`` with ``mongosync``, enter the 
-      following command on the command line:
-
-      .. code-block:: shell
-         
          mongosync \
-            --cluster0 "mongodb+srv://<user>:<password>@<cluster0Name>.<hostname>.mongodb.net" \
-            --cluster1 "mongodb+srv://<user>:<password>@<cluster1Name>.<hostname>.mongodb.net"
+            --logPath /var/log/mongosync \
+            --cluster0 "mongodb://clusterAdmin:superSecret@clusterOne01.fancyCorp.com:20020,clusterOne02.fancyCorp.com:20020,clusterOne03.fancyCorp.com:20020" \
+            --cluster1 "mongodb://clusterAdmin:superSecret@clusterTwo01.fancyCorp.com:20020,clusterTwo02.fancyCorp.com:20020,clusterTwo03.fancyCorp.com:20020"
+
+
+   .. step:: Start the sync operation
+
+      To start syncing data from the source cluster to the
+      destination, use the :ref:`/start <c2c-api-start>`
+      endpoint.
+
+      .. code-block:: sh
+
+        curl localhost:27182/api/v1/start -XPOST \
+            --data ' {
+                "source": "cluster0",
+                "destination": "cluster1",
+            } '
+
+      Example output:
+
+      .. literalinclude:: /includes/api/responses/success.json
+         :language: json
+         :copyable: false
+
+   .. step:: 
 
 Learn More 
 ----------
