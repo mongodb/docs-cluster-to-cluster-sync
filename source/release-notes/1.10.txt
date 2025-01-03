@@ -19,6 +19,13 @@ Release Notes for mongosync 1.10
 This page describes changes and new features introduced in  
 {+c2c-full-product-name+} 1.10.
 
+Older Version Support
+---------------------
+
+.. include:: /includes/fact-pre-6.0-migration.rst
+
+To learn more, see :ref:`c2c-older-version-support`.
+
 Minimum Supported Version
 -------------------------
 
