@@ -85,8 +85,6 @@ and ``cluster1`` is a destination cluster running MongoDB 7.0.
          :language: json
          :copyable: false
 
-   .. step:: 
-
 Learn More 
 ----------
 
