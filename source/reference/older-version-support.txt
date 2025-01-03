@@ -47,7 +47,7 @@ To learn more about supported server versions, see
 Steps 
 -----
 
-In the following example, ``cluster0`` is an source cluster running MongoDB 6.0, 
+In the following example, ``cluster0`` is a source cluster running MongoDB 6.0, 
 and ``cluster1`` is a destination cluster running MongoDB 7.0.
 
 .. procedure:: 
