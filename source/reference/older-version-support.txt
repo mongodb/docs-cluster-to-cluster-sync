@@ -9,7 +9,7 @@ Migrate Data From Pre-6.0 Clusters
 .. contents:: On this page
    :local:
    :backlinks: none
-   :depth: 2
+   :depth: 1
    :class: singlecol
 
 .. include:: /includes/fact-pre-6.0-migration.rst
@@ -30,7 +30,7 @@ Before You Begin
 Embedded Verifier 
 ~~~~~~~~~~~~~~~~~
 
-Before you sync from a pre-6.0 source cluster, enable the 
+When you sync from a pre-6.0 source cluster, enable the 
 :ref:`embedded verifier <c2c-embedded-verifier>`. 
 
 Server Version Compatibility 
