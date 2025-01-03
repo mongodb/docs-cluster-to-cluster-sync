@@ -205,7 +205,7 @@ Pre-6.0 Migrations
 
 Starting in 1.10, ``mongosync`` supports migrations from source clusters running 
 MongoDB server versions older than 6.0. For information on supported migration 
-paths, see :ref:`c2c-older-version-support`.
+paths, see :ref:`c2c-server-version-compatibility`.
 
 The following limitations apply to pre-6.0 migrations:
 
@@ -213,4 +213,4 @@ The following limitations apply to pre-6.0 migrations:
 
 .. seealso:: 
 
-   :ref:`c2c-server-version-compatibility`
+   :ref:`c2c-older-version-support`
