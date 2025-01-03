@@ -18,6 +18,8 @@ The :ref:`mongosync <c2c-mongosync>` binary is the primary process used in
 {+c2c-product-name+}. ``mongosync`` migrates data from a source cluster to a 
 destination cluster and keeps the clusters in continuous sync until you 
 :ref:`finalize <c2c-about-finalizing>` the sync. 
+In addition to continuous data synchronization, ``mongosync`` can also
+facilitate a one time data migration between clusters.
 
 ``mongosync`` keeps track of its current actions through 
 :ref:`states <c2c-states>`. ``mongosync`` enters different states depending on 
