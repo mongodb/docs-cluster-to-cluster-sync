@@ -23,8 +23,7 @@ restrictions and the :ref:`c2c-mongosync-behavior` page for behavior information
 
 .. include:: /includes/limitations-warning
 
-The :ref:`Frequently Asked Questions (FAQ) <c2c-faq>` page addresses
-common questions users have asked about ``mongosync``.
+The :ref:`Frequently Asked Questions (FAQ) <c2c-faq>` page addresses questions users have asked about ``mongosync``.
 
 .. toctree::
    :titlesonly:
