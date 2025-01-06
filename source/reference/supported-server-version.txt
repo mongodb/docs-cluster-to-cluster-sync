@@ -68,4 +68,4 @@ For limitations on using ``mongodump`` and ``mongorestore``, see
 :ref:`mongorestore-behavior-access-usage`.
 
 Alternatively, you can :ref:`downgrade your 8.0 source cluster <8.0-downgrade>` 
-to 7.0 and then migrate your data into a 8.0 destination cluster.
+to 7.0 and then migrate your data into an 8.0 destination cluster.
