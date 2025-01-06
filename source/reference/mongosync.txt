@@ -141,7 +141,7 @@ Global Options
    To set the ``--loadLevel`` option from a configuration file, see the
    :setting:`loadLevel` setting.
 
-   For instructions on how to adjust load level during a migration, see :ref:`c2c-faq-change-load`. 
+   For instructions on how to adjust load level during a migration, see the :ref:`Frequently Asked Questions (FAQ) <c2c-faq-change-load>` page. 
 
    .. include:: /includes/opts/loadlevel-warning.rst
 
