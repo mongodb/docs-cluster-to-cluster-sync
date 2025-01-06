@@ -33,6 +33,12 @@ Embedded Verifier
 When you sync from a pre-6.0 source cluster, enable the 
 :ref:`embedded verifier <c2c-embedded-verifier>`. 
 
+Limitations 
+~~~~~~~~~~~
+
+Before you migrate, review the :ref:`limitations 
+<c2c-older-version-limitations>` for pre-6.0 migrations. 
+
 Server Version Compatibility 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -47,7 +53,7 @@ To learn more about supported server versions, see
 Steps 
 -----
 
-In the following example, ``cluster0`` is a source cluster running MongoDB 6.0, 
+In the following example, ``cluster0`` is a source cluster running MongoDB 5.0, 
 and ``cluster1`` is a destination cluster running MongoDB 7.0.
 
 .. procedure:: 
@@ -89,5 +95,4 @@ Learn More
 ----------
 
 - :ref:`c2c-connecting`
-- :ref:`Pre-6.0 Migration Limitations <c2c-older-version-limitations>`
 - :ref:`c2c-server-version-compatibility`
