@@ -205,7 +205,7 @@ by performing the following steps:
          mongosync --config <configPath>
 
       If you did  *not*  use the :option:`--config` option when you first initialized ``mongosync``, 
-      initialize the ``mongosync`` processes using the updated command line option(s):
+      initialize the ``mongosync`` processes with the command line options set to their updated values:
 
       .. code-block:: console
 
