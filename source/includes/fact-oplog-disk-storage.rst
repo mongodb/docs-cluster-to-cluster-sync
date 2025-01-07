@@ -6,12 +6,13 @@ entries from the initial sync.
 
 .. important:: 
   
-   To use embedded verification, you must have a larger oplog on the 
-   destination. If you enable the embedded verifier and reduce the size of the 
-   destination oplog, the embedded verifier can fall off the oplog.
+   To use :ref:`embedded verification <c2c-embedded-verifier>`, you must have a 
+   larger oplog on the destination. If you enable the embedded verifier and 
+   reduce the size of the destination oplog, the embedded verifier can fall off 
+   the oplog.
 
 If you need to reduce the overhead of the destination oplog entries and the 
-:ref:`embedded verifier <c2c-embedded-verifier>` is disabled, you can: 
+embedded verifier is disabled, you can: 
 
 - Use the :setting:`~replication.oplogSizeMB` setting to lower the destination 
   cluster's oplog size.
