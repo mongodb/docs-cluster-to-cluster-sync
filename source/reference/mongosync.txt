@@ -71,7 +71,7 @@ For more information on how to format your connection strings, see
 Command Line Options
 --------------------
 
-The following command line options can be set to configure ``mongosync`` at startup. 
+The following options can be set from the command line to configure ``mongosync`` at startup. 
 
 To set these options from a configuration file, see :ref:`c2c-configuration-file`.
 
@@ -111,7 +111,7 @@ Global Options
 
    Sets the path to the configuration file.
 
-   To set the ``--config`` option while ``mongosync`` is syncing, 
+   To set the ``--config`` option during synchronization, 
    see :ref:`c2c-reconfigure-mid-migration`. 
 
    For more information, see :ref:`c2c-mongosync-config`.
@@ -125,7 +125,7 @@ Global Options
    To set the ``--disableTelemetry`` option from a configuration file,
    see the :setting:`disableTelemetry` setting.
 
-   To set the ``--disableTelemetry`` option while ``mongosync`` is syncing, 
+   To set the ``--disableTelemetry`` option during synchronization, 
    see :ref:`c2c-reconfigure-mid-migration`. 
 
    For more information, see :ref:`User Data Collection
@@ -151,7 +151,7 @@ Global Options
    To set the ``--loadLevel`` option from a configuration file,
    see the :setting:`loadLevel` setting.
 
-   To set the ``--loadLevel`` option while ``mongosync`` is syncing, 
+   To set the ``--loadLevel`` option during synchronization, 
    see :ref:`c2c-reconfigure-mid-migration`. 
 
    .. include:: /includes/opts/loadlevel-warning.rst
@@ -165,7 +165,7 @@ Global Options
    To set the ``--logPath`` option from a configuration file,
    see the :setting:`logPath` setting.
 
-   To set the ``--logPath`` option while ``mongosync`` is syncing, 
+   To set the ``--logPath`` option during synchronization, 
    see :ref:`c2c-reconfigure-mid-migration`. 
 
    .. note:: 
@@ -179,7 +179,7 @@ Global Options
    To set the ``--port`` option from a configuration file,
    see the :setting:`port` setting.
 
-   To set the ``--port`` option while ``mongosync`` is syncing, 
+   To set the ``--port`` option during synchronization, 
    see :ref:`c2c-reconfigure-mid-migration`. 
 
 .. option:: --verbosity <level>
@@ -192,7 +192,7 @@ Global Options
    To set the ``--verbosity`` option from a configuration file,
    see the :setting:`verbosity` setting.
    
-   To set the ``--verbosity`` option while ``mongosync`` is syncing, 
+   To set the ``--verbosity`` option during synchronization, 
    see :ref:`c2c-reconfigure-mid-migration`. 
 
 .. option:: --version, -v

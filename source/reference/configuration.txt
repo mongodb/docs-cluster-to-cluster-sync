@@ -47,9 +47,9 @@ To use a configuration file, start ``mongosync`` with the
 Settings
 ~~~~~~~~
 
-The following settings can be set in a configuration file to configure ``mongosync`` at startup.
+The following settings can be set from a configuration file to configure ``mongosync`` at startup.
 
-To configure these settings from the command line, see :ref:`c2c-cli-options`. 
+To set these settings from the command line, see :ref:`c2c-cli-options`. 
 
 .. note::
 
