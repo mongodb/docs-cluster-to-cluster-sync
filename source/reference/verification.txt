@@ -45,8 +45,8 @@ source to the destination cluster.
        verifier, which runs a series of verification checks on
        the source and destination clusters to confirm that the
        migration was successful. **This is the preferred
-       verification method for deployments that meet the
-       :ref:`requirements <c2c-verify-embedded-limitations>`.**
+       verification method for deployments that meet the**
+       :ref:`requirements <c2c-verify-embedded-limitations>`.
 
        When the ``mongosync`` process starts, it prompts the
        user with a disclaimer about the embedded verifier. You
