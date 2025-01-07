@@ -43,8 +43,8 @@ To use a configuration file, start ``mongosync`` with the
 
    mongosync --config <configPath>
 
-Options
-=======
+Settings
+~~~~~~~~
 
 The following settings can be set in a ``mongosync`` configuration file.
 
