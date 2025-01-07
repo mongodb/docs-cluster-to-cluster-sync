@@ -161,7 +161,7 @@ Reconfigure ``mongosync`` During Synchronization
 
 .. important:: 
 
-   You can't reconfigure the :option:`--cluster0`, :option:`--cluster1`, or :option:`--id` options after starting your migration. 
+   You can't adjust the :setting:`cluster0`, :setting:`cluster1`, or :setting:`id` settings during a migration. 
 
 While ``mongosync`` is syncing, you can reconfigure the :option:`--config`, :option:`--disableTelemetry`,
 :option:`--loadLevel`, :option:`--logPath`, :option:`--port`, and :option:`--verbosity` options 
