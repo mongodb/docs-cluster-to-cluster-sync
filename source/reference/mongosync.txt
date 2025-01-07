@@ -107,8 +107,7 @@ Global Options
 
    Sets the path to the configuration file.
 
-   To change the configuration file while ``mongosync`` is syncing, 
-   see the directions in :ref:`c2c-update-config`. 
+   To set the configuration file path while ``mongosync`` is syncing, see :ref:`c2c-update-config`. 
 
    For more information, see :ref:`c2c-mongosync-config`.
 
@@ -144,8 +143,7 @@ Global Options
    To set the ``--loadLevel`` option from a configuration file, see the
    :setting:`loadLevel` setting.
 
-   To set the ``loadLevel`` during synchronization, see
-   :ref:`c2c-update-config`. 
+   To set the load level while ``mongosync`` is syncing, see :ref:`c2c-update-config`. 
 
    .. include:: /includes/opts/loadlevel-warning.rst
 
@@ -157,6 +155,8 @@ Global Options
 
    To set the ``--logPath`` option from a configuration file,
    see the :setting:`logPath` setting.
+
+   To set the load level while ``mongosync`` is syncing, see :ref:`c2c-update-config`. 
 
    .. note:: 
 
@@ -179,6 +179,8 @@ Global Options
    To set the ``--verbosity`` option from a configuration file,
    see the :setting:`verbosity` setting.
    
+   To set the verbosity level while ``mongosync`` is syncing, see :ref:`c2c-update-config`. 
+
 .. option:: --version, -v
 
    Prints ``mongosync`` version information to stdout.
