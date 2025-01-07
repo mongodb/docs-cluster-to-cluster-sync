@@ -20,6 +20,10 @@ If ``mongosync`` is currently syncing, you can update certain ``mongosync`` conf
 by stopping and then re-initializing your ``mongosync`` processes with an updated configuration file.
 To learn more, see :ref:`c2c-update-config`. 
 
+If ``mongosync`` is currently syncing, you can update certain ``mongosync`` configuration settings
+by stopping and then re-initializing your ``mongosync`` processes with an updated configuration file.
+To learn more, see :ref:`c2c-update-config`. 
+
 Configuration File
 ==================
 

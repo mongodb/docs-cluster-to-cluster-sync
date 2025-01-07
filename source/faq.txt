@@ -22,51 +22,8 @@ Support.
 Can I change my ``mongosync`` load level while ``mongosync`` is syncing? 
 -----------------------------------------------------------------------
 
-You can adjust the load level during a ``mongosync`` migration by 
-performing the following steps:
-
-1. (Optional) Pause the ``mongosync`` processes.
-   
-   To pause ``mongosync``, run :ref:`c2c-api-pause` on each running
-   ``mongosync`` process.
-      
-   You can resume the ``mongosync`` processes later from the paused
-   state, as shown in the final step.
-      
-   .. tip::
-
-      If you don't want to immediately resume data synchronization
-      operations after live upgrade, consider pausing the
-      ``mongosync`` processes. This is useful if you're coordinating
-      operations from multiple ``mongosync`` processes.
-
-#. Terminate the ``mongosync`` processes. 
-   
-   For directions on how to terminate a process, see your operating system documentation. 
-#. Initialize the ``mongosync`` processes with the :option:`--loadLevel` option set to the new load level: 
-
-   .. code-block:: javascript 
-
-      ./bin/mongosync \
-      mongosync \
-            --cluster0 "<cluster0_connection_string>" \
-            --cluster1 "<cluster1_connection_string>" \
-            --loadLevel <newLevel> 
-
-   For more detailed instructions, see the :ref:`Quickstart <c2c-quickstart>` guide.
-#. Restart or Resume the ``mongosync`` processes. 
-
-   If you paused any ``mongosync`` processes earlier in the optional
-   first step, run :ref:`c2c-api-resume` on all ``mongosync`` processes.
-
-   Call the :ref:`c2c-api-resume` endpoint on all paused ``mongosync`` processes.
-
-   If you terminated any ``mongosync`` processes without using :ref:`c2c-api-pause`, 
-   use the :ref:`c2c-api-start` endpoint to initiate data synchronization on these ``mongosync`` processes. 
-   For more instructions, see :ref:`c2c-quickstart-synchronize`. 
-
-   ``mongosync`` resumes the sync roughly where it was before you stopped the earlier proceses.
-   Any partitions that were in progress at the time of termination will restart from the beginning. 
+Yes, you can adjust the load level during a ``mongosync`` migration by 
+performing the steps in :ref:`c2c-update-config`. 
 
 Can I perform reads or writes to my destination cluster while ``mongosync`` is syncing?
 ---------------------------------------------------------------------------------------

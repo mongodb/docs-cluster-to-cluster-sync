@@ -107,6 +107,9 @@ Global Options
 
    Sets the path to the configuration file.
 
+   To change the configuration file while ``mongosync`` is syncing, 
+   see the directions in :ref:`c2c-update-config`. 
+
    For more information, see :ref:`c2c-mongosync-config`.
 
 .. option:: --disableTelemetry
@@ -141,7 +144,8 @@ Global Options
    To set the ``--loadLevel`` option from a configuration file, see the
    :setting:`loadLevel` setting.
 
-   For instructions on how to adjust load level during a migration, see the :ref:`Frequently Asked Questions (FAQ) <c2c-faq-change-load>` page. 
+   To set the ``loadLevel`` during synchronization, see
+   :ref:`c2c-update-config`. 
 
    .. include:: /includes/opts/loadlevel-warning.rst
 
