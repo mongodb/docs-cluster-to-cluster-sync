@@ -23,7 +23,7 @@ Can I change my ``mongosync`` load level while ``mongosync`` is syncing?
 -----------------------------------------------------------------------
 
 Yes, you can adjust the load level during a ``mongosync`` migration by 
-performing the steps in :ref:`c2c-update-config`. 
+following the steps in :ref:`c2c-update-config`. 
 
 Can I perform reads or writes to my destination cluster while ``mongosync`` is syncing?
 ---------------------------------------------------------------------------------------
