@@ -122,11 +122,11 @@ Global Options
 
    .. include:: /includes/opts/disableTelemetry
 
-   To set the ``--disableTelemetry`` option from a configuration file,
-   see the :setting:`disableTelemetry` setting.
+   To disable telemetry data collection during a migration, 
+   see :ref:`c2c-reconfigure-mid-migration`.
 
-   To set the ``--disableTelemetry`` option during a migration, 
-   see :ref:`c2c-reconfigure-mid-migration`. 
+   To set the ``--disableTelemetry`` option from a configuration file,
+   see the :setting:`disableTelemetry` setting. 
 
    For more information, see :ref:`User Data Collection
    <c2c-telemetry>`.
@@ -147,12 +147,12 @@ Global Options
    *Type*: integer
 
    .. include:: /includes/opts/loadLevel.rst
+   
+   To change the load level during a migration, 
+   see :ref:`c2c-reconfigure-mid-migration`. 
 
    To set the ``--loadLevel`` option from a configuration file,
    see the :setting:`loadLevel` setting.
-
-   To set the ``--loadLevel`` option during a migration, 
-   see :ref:`c2c-reconfigure-mid-migration`. 
 
    .. include:: /includes/opts/loadlevel-warning.rst
 
@@ -162,11 +162,11 @@ Global Options
 
    .. include:: /includes/opts/logPath.rst
 
+   To change the path to the log directory during a migration, 
+   see :ref:`c2c-reconfigure-mid-migration`. 
+
    To set the ``--logPath`` option from a configuration file,
    see the :setting:`logPath` setting.
-
-   To set the ``--logPath`` option during a migration, 
-   see :ref:`c2c-reconfigure-mid-migration`. 
 
    .. note:: 
 
@@ -176,11 +176,11 @@ Global Options
 
    .. include:: /includes/opts/port.rst
 
+   To change the port during a migration, 
+   see :ref:`c2c-reconfigure-mid-migration`. 
+
    To set the ``--port`` option from a configuration file,
    see the :setting:`port` setting.
-
-   To set the ``--port`` option during a migration, 
-   see :ref:`c2c-reconfigure-mid-migration`. 
 
 .. option:: --verbosity <level>
 
@@ -189,11 +189,11 @@ Global Options
 
    .. include:: /includes/opts/verbosity.rst
 
+   To change the verbosity level during a migration, 
+   see :ref:`c2c-reconfigure-mid-migration`. 
+
    To set the ``--verbosity`` option from a configuration file,
    see the :setting:`verbosity` setting.
-   
-   To set the ``--verbosity`` option during a migration, 
-   see :ref:`c2c-reconfigure-mid-migration`. 
 
 .. option:: --version, -v
 

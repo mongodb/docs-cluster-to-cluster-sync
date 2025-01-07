@@ -156,14 +156,14 @@ To set these settings from the command line, see :ref:`c2c-cli-options`.
 
 .. _c2c-reconfigure-mid-migration: 
 
-Reconfigure During Migration
-============================
+Reconfigure ``mongosync`` During Synchronization
+================================================
 
 .. important:: 
 
    You can't reconfigure the :option:`--cluster0`, :option:`--cluster1`, or :option:`--id` options after starting your migration. 
 
-During a migration, you can reconfigure the :option:`--config`, :option:`--disableTelemetry`,
+While ``mongosync`` is syncing, you can reconfigure the :option:`--config`, :option:`--disableTelemetry`,
 :option:`--loadLevel`, :option:`--logPath`, :option:`--port`, and :option:`--verbosity` options 
 by performing the following steps: 
 
