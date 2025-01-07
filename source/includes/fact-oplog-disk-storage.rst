@@ -8,8 +8,8 @@ entries from the initial sync.
   
    To use :ref:`embedded verification <c2c-embedded-verifier>`, you must have a 
    larger oplog on the destination. If you enable the embedded verifier and 
-   reduce the size of the destination oplog, the embedded verifier might be 
-   omitted from the oplog.
+   reduce the size of the destination oplog, the embedded verifier might not be 
+   able to keep up, causing ``mongosync`` to error.
 
 If you need to reduce the overhead of the destination oplog entries and the 
 embedded verifier is disabled, you can: 
