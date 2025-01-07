@@ -16,13 +16,9 @@ You can configure :ref:`mongosync <c2c-mongosync>` instances at startup
 using a configuration file.  The configuration file contains settings that are
 the equivalent of ``mongosync`` command line options.
 
-If ``mongosync`` is currently syncing, you can update certain ``mongosync`` configuration settings
-by stopping and then re-initializing your ``mongosync`` processes with an updated configuration file.
-To learn more, see :ref:`c2c-update-config`. 
-
-If ``mongosync`` is currently syncing, you can update certain ``mongosync`` configuration settings
-by stopping and then re-initializing your ``mongosync`` processes with an updated configuration file.
-To learn more, see :ref:`c2c-update-config`. 
+While ``mongosync`` is syncing, you can adjust certain ``mongosync`` settings
+by stopping and then re-initializing your ``mongosync`` processes with the updated configuration.
+To learn more, see :ref:`c2c-reconfigure-mid-migration`. 
 
 Configuration File
 ==================
@@ -47,10 +43,11 @@ To use a configuration file, start ``mongosync`` with the
 
    mongosync --config <configPath>
 
-Settings
-~~~~~~~~
+Options
+=======
 
-The following settings can be specified in a configuration file at startup. 
+The following settings can be set in a configuration file to configure ``mongosync`` instances at startup.
+
 To set these settings using the equivalent command line options, see :ref:`c2c-cli-options`. 
 
 .. note::
@@ -156,17 +153,17 @@ To set these settings using the equivalent command line options, see :ref:`c2c-c
    To set the ``verbosity`` setting from the command line, see the
    :option:`--verbosity` option.
 
-.. _c2c-update-config: 
+.. _c2c-reconfigure-mid-migration: 
 
-Reconfigure During Synchronization
-==================================
+Reconfigure ``mongosync`` During Sync
+=====================================
 
 .. important:: 
 
-   You can *not* change the values of the :setting:`cluster0`, :setting:`cluster1`, or :setting:`id` settings after starting your migration. 
+   You can't reconfigure the :option:`--cluster0`, :option:`--cluster1`, or :option:`--id` options after starting your migration. 
 
 While ``mongosync`` is syncing, you can reconfigure the :option:`--config`, :option:`--disableTelemetry`,
- :option:`--loadLevel`, :option:`--logPath`, :option:`--port`, and :option:`verbosity` configuration options 
+:option:`--loadLevel`, :option:`--logPath`, :option:`--port`, and :option:`--verbosity` options 
 by performing the following steps: 
 
 .. procedure::
@@ -182,14 +179,14 @@ by performing the following steps:
       .. tip::
 
          If you don't want to immediately resume data synchronization
-         operations after live upgrade, consider pausing the
+         operations after reconfiguration, consider pausing the
          ``mongosync`` processes. This is useful if you're coordinating
          operations from multiple ``mongosync`` processes.
       
    .. step:: Stop the ``mongosync`` processes 
 
       Use your operating system to stop each running ``mongosync`` process. 
-      To stop a process, see your operating system documentation for the specific steps.
+      For the specific steps, see your operating system documentation.
    
    .. step:: (Optional) Update your configuration file
 
@@ -219,7 +216,7 @@ by performing the following steps:
 
       To learn more, see :ref:`Initialize mongosync <c2c-initialize>`.
 
-   .. step:: Restart or Resume the ``mongosync`` processes. 
+   .. step:: Start or Resume the ``mongosync`` processes 
 
       If you paused any ``mongosync`` processes earlier in the optional first step, 
       run :ref:`c2c-api-resume` on the paused ``mongosync`` processes.
