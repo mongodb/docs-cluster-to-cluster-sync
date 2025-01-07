@@ -111,7 +111,7 @@ Global Options
 
    Sets the path to the configuration file.
 
-   To set the ``--config`` option during synchronization, 
+   To set the ``--config`` option during a migration, 
    see :ref:`c2c-reconfigure-mid-migration`. 
 
    For more information, see :ref:`c2c-mongosync-config`.
@@ -125,7 +125,7 @@ Global Options
    To set the ``--disableTelemetry`` option from a configuration file,
    see the :setting:`disableTelemetry` setting.
 
-   To set the ``--disableTelemetry`` option during synchronization, 
+   To set the ``--disableTelemetry`` option during a migration, 
    see :ref:`c2c-reconfigure-mid-migration`. 
 
    For more information, see :ref:`User Data Collection
@@ -151,7 +151,7 @@ Global Options
    To set the ``--loadLevel`` option from a configuration file,
    see the :setting:`loadLevel` setting.
 
-   To set the ``--loadLevel`` option during synchronization, 
+   To set the ``--loadLevel`` option during a migration, 
    see :ref:`c2c-reconfigure-mid-migration`. 
 
    .. include:: /includes/opts/loadlevel-warning.rst
@@ -165,7 +165,7 @@ Global Options
    To set the ``--logPath`` option from a configuration file,
    see the :setting:`logPath` setting.
 
-   To set the ``--logPath`` option during synchronization, 
+   To set the ``--logPath`` option during a migration, 
    see :ref:`c2c-reconfigure-mid-migration`. 
 
    .. note:: 
@@ -179,7 +179,7 @@ Global Options
    To set the ``--port`` option from a configuration file,
    see the :setting:`port` setting.
 
-   To set the ``--port`` option during synchronization, 
+   To set the ``--port`` option during a migration, 
    see :ref:`c2c-reconfigure-mid-migration`. 
 
 .. option:: --verbosity <level>
@@ -192,7 +192,7 @@ Global Options
    To set the ``--verbosity`` option from a configuration file,
    see the :setting:`verbosity` setting.
    
-   To set the ``--verbosity`` option during synchronization, 
+   To set the ``--verbosity`` option during a migration, 
    see :ref:`c2c-reconfigure-mid-migration`. 
 
 .. option:: --version, -v
