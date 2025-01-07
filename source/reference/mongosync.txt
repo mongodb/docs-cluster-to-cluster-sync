@@ -111,7 +111,7 @@ Global Options
 
    Sets the path to the configuration file.
 
-   To set the ``--config`` option during a migration, 
+   To set the configuration file path during a migration, 
    see :ref:`c2c-reconfigure-mid-migration`. 
 
    For more information, see :ref:`c2c-mongosync-config`.
