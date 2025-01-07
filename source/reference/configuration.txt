@@ -20,6 +20,8 @@ While ``mongosync`` is syncing, you can adjust certain ``mongosync`` settings
 by stopping and then re-initializing your ``mongosync`` processes with the updated configuration.
 To learn more, see :ref:`c2c-reconfigure-mid-migration`. 
 
+.. _c2c-configuration-file: 
+
 Configuration File
 ==================
 
@@ -46,9 +48,9 @@ To use a configuration file, start ``mongosync`` with the
 Settings
 ~~~~~~~~
 
-The following settings can be set in a ``mongosync`` configuration file.
+The following settings can be set in a configuration file to configure ``mongosync`` at startup.
 
-To configure these settings using the equivalent command line options, see :ref:`c2c-cli-options`. 
+To configure these settings from the command line, see :ref:`c2c-cli-options`. 
 
 .. note::
 
@@ -191,8 +193,7 @@ by performing the following steps:
    .. step:: (Optional) Update your configuration file
 
       If you used the :option:`--config` option to set the path to a configuration file 
-      when you initialized ``mongosync``, update this configuration file with the new value for each setting
-      that you want to change. 
+      when you first initialized ``mongosync``, update this configuration file with the new value for each setting.
 
    .. step:: Initialize the ``mongosync`` processes
 

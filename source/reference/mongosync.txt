@@ -71,6 +71,10 @@ For more information on how to format your connection strings, see
 Command Line Options
 --------------------
 
+The following command line options can be set to configure ``mongosync`` at startup. 
+
+To set these options from a configuration file, see :ref:`c2c-configuration-file`.
+
 .. |opt-term| replace:: option
 
 Global Options
