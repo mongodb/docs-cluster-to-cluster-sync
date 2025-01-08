@@ -24,7 +24,10 @@ Older Version Support
 
 .. include:: /includes/fact-pre-6.0-migration.rst
 
-To learn more, see :ref:`c2c-older-version-support`.
+To learn more, see: 
+
+- :ref:`c2c-older-version-limitations`.
+- :ref:`c2c-sync-different-versions`.
 
 Minimum Supported Version
 -------------------------

@@ -210,7 +210,3 @@ paths, see :ref:`c2c-server-version-compatibility`.
 The following limitations apply to pre-6.0 migrations:
 
 .. include:: /includes/fact-older-version-limitations.rst
-
-.. seealso:: 
-
-   :ref:`c2c-older-version-support`

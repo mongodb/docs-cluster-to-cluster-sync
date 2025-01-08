@@ -31,6 +31,8 @@ clusters:
 
 .. include:: /includes/table-patch-versions.rst
 
+.. _c2c-sync-different-versions:
+
 Synchronize Data Between Clusters with Different MongoDB Server Major Versions
 ------------------------------------------------------------------------------
 
@@ -47,8 +49,9 @@ destination MongoDB server versions.
 
 .. include:: /includes/table-pre-6.0-compatibilty.rst
 
-To learn more about syncing from pre-6.0 source clusters, see 
-:ref:`c2c-older-version-support`.
+.. seealso::
+  
+   :ref:`c2c-older-version-limitations`.
 
 .. _c2c-server-pre-8.0-to-8.0:
 
