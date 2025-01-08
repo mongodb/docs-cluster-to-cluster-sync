@@ -23,7 +23,7 @@ steps in  :ref:`c2c-reconfigure-mid-migration`.
 .. _c2c-configuration-file: 
 
 Configuration File
-==================
+------------------
 
 You can write most ``mongosync`` 
 :ref:`command line options <c2c-cli-options>` to a YAML file. The 
@@ -46,7 +46,7 @@ To use a configuration file, start ``mongosync`` with the
    mongosync --config <configPath>
 
 Settings
---------
+~~~~~~~~
 
 You can configure the following ``mongosync`` settings using a configuration file. 
 
@@ -158,7 +158,7 @@ To configure ``mongosync`` from the command line, see :ref:`c2c-cli-options`.
 .. _c2c-reconfigure-mid-migration: 
 
 Reconfigure ``mongosync`` During Synchronization
-================================================
+------------------------------------------------
 
 .. important:: 
 
