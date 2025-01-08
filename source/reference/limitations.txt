@@ -96,7 +96,7 @@ Unsupported Collection Types
 
   .. note::
 
-     TTL collections are collections that specify an
+     TTL collections are collections that contain an
      :ref:`expireAfterSeconds <db.createCollection.expireAfterSeconds>`
      value to remove data after a specific amount of time. TTL
      collections are **not** collections that contain a :ref:`TTL index
