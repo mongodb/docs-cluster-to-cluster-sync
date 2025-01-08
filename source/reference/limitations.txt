@@ -87,6 +87,8 @@ to discuss requirements and individualized options.
 Unsupported Collection Types
 ----------------------------
 
+``mongosync`` does not support the following collection types:
+
 - Time-series collections
 - Clustered collections with :ref:`expireAfterSeconds
   <db.createCollection.expireAfterSeconds>` set
