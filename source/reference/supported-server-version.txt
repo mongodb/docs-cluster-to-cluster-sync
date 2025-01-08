@@ -29,7 +29,29 @@ version limitations and requirements:
 The following table lists the minimum MongoDB server version requirements for  
 clusters:
 
-.. include:: /includes/table-patch-versions.rst
+.. list-table::
+   :header-rows: 1
+   :class: compatibility 
+
+   * - Major Version 
+     - Patch Version 
+     - Minimum Feature Compatibility Version
+
+   * - 4.4
+     - 4.4.23
+     - 4.4
+
+   * - 5.0
+     - 5.0.29
+     - 5.0
+
+   * - 6.0
+     - 6.0.16
+     - 6.0
+
+   * - 7.0
+     - 7.0.9
+     - 6.0
 
 .. _c2c-sync-different-versions:
 
@@ -45,9 +67,32 @@ Synchronize Data Between Clusters with Different MongoDB Server Major Versions
    ``mongosync`` does not support migrations to pre-6.0 destination clusters.
 
 ``mongosync`` supports syncs between the following source and
-destination MongoDB server versions. 
+destination MongoDB server versions:
 
-.. include:: /includes/table-pre-6.0-compatibilty.rst
+.. list-table:: 
+   :header-rows: 1
+   :stub-columns: 1
+   :widths: 40 30 30 
+
+   * -
+     -  **6.0 Destination** 
+     -  **7.0 Destination** 
+
+   * - **4.4 Source**
+     - √
+     - 
+
+   * - **5.0 Source**
+     - √
+     - √
+
+   * - **6.0 Source**
+     - √
+     - √
+
+   * - **7.0 Source**
+     -  
+     - √
 
 .. seealso::
   
