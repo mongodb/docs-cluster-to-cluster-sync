@@ -71,9 +71,9 @@ For more information on how to format your connection strings, see
 Command Line Options
 --------------------
 
-The following options can be set from the command line to configure ``mongosync`` at startup. 
+You can configure the following ``mongosync`` options using the command line.
 
-To set these options from a configuration file, see :ref:`c2c-configuration-file`.
+To configure ``mongosync`` from a configuration file, see :ref:`c2c-configuration-file`.
 
 .. |opt-term| replace:: option
 
@@ -122,12 +122,12 @@ Global Options
 
    .. include:: /includes/opts/disableTelemetry
 
-   To disable telemetry data collection during a migration, 
-   see :ref:`c2c-reconfigure-mid-migration`.
-
    To set the ``--disableTelemetry`` option from a configuration file,
    see the :setting:`disableTelemetry` setting. 
 
+   To disable telemetry data collection during a migration, 
+   see :ref:`c2c-reconfigure-mid-migration`.
+   
    For more information, see :ref:`User Data Collection
    <c2c-telemetry>`.
 
@@ -147,13 +147,13 @@ Global Options
    *Type*: integer
 
    .. include:: /includes/opts/loadLevel.rst
-   
-   To change the load level during a migration, 
-   see :ref:`c2c-reconfigure-mid-migration`. 
 
    To set the ``--loadLevel`` option from a configuration file,
    see the :setting:`loadLevel` setting.
 
+   To change the load level during a migration, 
+   see :ref:`c2c-reconfigure-mid-migration`. 
+   
    .. include:: /includes/opts/loadlevel-warning.rst
 
    .. versionadded:: 1.4
@@ -162,12 +162,12 @@ Global Options
 
    .. include:: /includes/opts/logPath.rst
 
-   To change the path to the log directory during a migration, 
-   see :ref:`c2c-reconfigure-mid-migration`. 
-
    To set the ``--logPath`` option from a configuration file,
    see the :setting:`logPath` setting.
 
+   To change the path to the log directory during a migration, 
+   see :ref:`c2c-reconfigure-mid-migration`. 
+   
    .. note:: 
 
       .. include:: /includes/fact-log-rotation-usr1-signal
@@ -176,11 +176,11 @@ Global Options
 
    .. include:: /includes/opts/port.rst
 
-   To change the port during a migration, 
-   see :ref:`c2c-reconfigure-mid-migration`. 
-
    To set the ``--port`` option from a configuration file,
    see the :setting:`port` setting.
+
+   To change the port during a migration, 
+   see :ref:`c2c-reconfigure-mid-migration`. 
 
 .. option:: --verbosity <level>
 
@@ -189,11 +189,11 @@ Global Options
 
    .. include:: /includes/opts/verbosity.rst
 
-   To change the verbosity level during a migration, 
-   see :ref:`c2c-reconfigure-mid-migration`. 
-
    To set the ``--verbosity`` option from a configuration file,
    see the :setting:`verbosity` setting.
+
+   To change the verbosity level during a migration, 
+   see :ref:`c2c-reconfigure-mid-migration`. 
 
 .. option:: --version, -v
 
