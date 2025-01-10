@@ -31,7 +31,7 @@ destination MongoDB server versions:
 
 To learn more, see: 
 
-- :ref:`c2c-older-version-limitations`.
+- :ref:`Pre-6.0 Migration Limitations <c2c-older-version-limitations>`.
 - :ref:`c2c-sync-different-versions`.
 
 Minimum Supported Version
