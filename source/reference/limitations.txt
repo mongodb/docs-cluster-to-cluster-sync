@@ -198,6 +198,8 @@ cluster.
 
 .. include:: /includes/fact-verifier-limitations
 
+.. _c2c-older-version-limitations:
+
 Pre-6.0 Migrations 
 ------------------
 
