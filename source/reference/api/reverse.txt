@@ -174,5 +174,6 @@ Endpoint Protection
 Limitations
 ~~~~~~~~~~~
 
-The ``reverse`` endpoint does not support :ref:`filtered sync
-<c2c-filtered-sync>`.
+The ``reverse`` endpoint does not support:
+
+- :ref:`filtered sync <c2c-filtered-sync>`.
