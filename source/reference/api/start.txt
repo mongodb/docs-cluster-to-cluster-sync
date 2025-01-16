@@ -198,7 +198,7 @@ Request Body Parameters
          endpoint it disables the verifier.
 
        :gold:`IMPORTANT:` If you are migrating from a pre-6.0 source cluster, 
-       you cannot set ``enableUserWriteBlocking`` to ``true``.
+       you cannot set ``reversible`` to ``true``.
 
        For more information, see the :ref:`reverse <c2c-api-reverse>` endpoint.
        
