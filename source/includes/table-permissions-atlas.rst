@@ -12,15 +12,12 @@
 
    * - default
      - - atlasAdmin
-       - backup
      - - atlasAdmin
 
    * - write-blocking, reversing, or multiple reversals
      - - atlasAdmin
-       - backup
        - bypassWriteBlockMode privilege
      - - atlasAdmin
-       - backup
        - bypassWriteBlockMode privilege
 
 For details on Atlas roles, see: :atlas:`Atlas User Roles
