@@ -4,6 +4,7 @@
 
 .. list-table::
    :header-rows: 1
+   :stub-columns: 1
 
    * - Sync Type
      - Target
@@ -22,7 +23,7 @@
 
          - atlasAdmin
 
-   * - write-blocking or reversing (including multiple reversals)
+   * - write-blocking, reversing, or multiple reversals
      - source cluster
      -
 
@@ -30,7 +31,7 @@
          - backup
          - bypassWriteBlockMode privilege
 
-   * - write-blocking or reversing (including multiple reversals)
+   * - write-blocking, reversing, or multiple reversals
      - destination cluster
      -
 
