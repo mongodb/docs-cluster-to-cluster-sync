@@ -25,4 +25,4 @@ This page describes changes and new features introduced in
 Upgrades to Embedded Verifier
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-- ..include:: /includes/verify-reversible-migrations.rst
+- .. include:: /includes/verify-reversible-migrations.rst

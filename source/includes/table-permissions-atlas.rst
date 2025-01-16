@@ -22,7 +22,7 @@
 
          - atlasAdmin
 
-   * - write-blocking or reversing
+   * - write-blocking or reversing (including multiple reversals)
      - source cluster
      -
 
@@ -30,7 +30,7 @@
          - backup
          - bypassWriteBlockMode privilege
 
-   * - write-blocking or reversing
+   * - write-blocking or reversing (including multiple reversals)
      - destination cluster
      -
 
