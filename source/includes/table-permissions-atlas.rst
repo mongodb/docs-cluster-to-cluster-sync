@@ -7,37 +7,21 @@
    :stub-columns: 1
 
    * - Sync Type
-     - Target
-     - Required Permissions
+     - Required Source Permissions
+     - Required Destination Permissions
 
    * - default
-     - source cluster
-     -
-
-         - atlasAdmin
-         - backup
-
-   * - default
-     - destination cluster
-     -
-
-         - atlasAdmin
+     - - atlasAdmin
+       - backup
+     - - atlasAdmin
 
    * - write-blocking, reversing, or multiple reversals
-     - source cluster
-     -
-
-         - atlasAdmin
-         - backup
-         - bypassWriteBlockMode privilege
-
-   * - write-blocking, reversing, or multiple reversals
-     - destination cluster
-     -
-
-         - atlasAdmin
-         - backup
-         - bypassWriteBlockMode privilege
+     - - atlasAdmin
+       - backup
+       - bypassWriteBlockMode privilege
+     - - atlasAdmin
+       - backup
+       - bypassWriteBlockMode privilege
 
 For details on Atlas roles, see: :atlas:`Atlas User Roles
 </reference/user-roles/>`.
