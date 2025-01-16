@@ -1,7 +1,7 @@
 The verifier doesn't check the following namespaces: 
 
 - Capped collections
-- Collections with TTL indexes, including indexes that are added or dropped
+- Collections with TTL indexes, including TTL indexes that are added or dropped
   during migration
 - Collections that don't use the default collation
 - Views
