@@ -34,6 +34,6 @@ Pre-6.0 Migrations
 ------------------
 
 - When migrating from a 4.4 source cluster, you must have 
-  :authrole:`clusterManager` permissions.
+  :authrole:`clusterManager` permissions on the source cluster.
 
 - Write blocking and reverse sync are not supported.
