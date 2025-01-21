@@ -32,10 +32,20 @@ The embedded verifier has the following limitations:
 
 - .. include:: /includes/fact-verifier-buildIndexes
 
+.. note:: 
+
+   Starting in version 1.10, the verifier checks metadata and indexes 
+   for DDL events only when migrating from a pre-6.0 source cluster.
+
 Unsupported Verification Checks
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. include:: /includes/fact-verifier-unsupported
+
+.. note:: 
+
+   Starting in version 1.10, the verifier checks metadata and indexes 
+   for DDL events only when migrating from a pre-6.0 source cluster.
 
 Unsupported Beta Features
 ~~~~~~~~~~~~~~~~~~~~~~~~~
