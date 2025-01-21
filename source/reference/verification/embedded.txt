@@ -22,10 +22,6 @@ Verify with Embedded Verifier
 of checks on the destination cluster to verify the sync of
 supported collections. 
 
-.. important::
-
-   .. include:: /includes/fact-verifier-unsupported
-
 .. versionadded:: 1.9
 
 About this Task
@@ -92,6 +88,16 @@ Steps
 
 Behavior
 --------
+
+Limitations 
+~~~~~~~~~~~
+
+.. include:: /includes/fact-verifier-unsupported
+
+.. note:: 
+
+   Starting in version 1.10, the verifier checks metadata and indexes 
+   for DDL events only when migrating from a pre-6.0 source cluster.
 
 Verification Checks
 ~~~~~~~~~~~~~~~~~~~
