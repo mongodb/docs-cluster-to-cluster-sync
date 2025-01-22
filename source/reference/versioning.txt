@@ -67,6 +67,10 @@ Live Upgrade
 
 .. versionadded:: 1.7.0
 
+.. note::
+
+   MongoDB does not support live upgrading from or to a beta binary. 
+
 .. include:: /includes/live-upgrade.rst
 
 After the live upgrade, ``mongosync`` continues operations that were in
