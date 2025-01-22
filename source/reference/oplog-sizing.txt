@@ -64,10 +64,10 @@ Monitor oplog Size Needed for Initial Sync
         to set ``minRetentionHours`` greater than the current ``oplog`` 
         window.
 
-      .. note:: 
+        .. note:: 
 
-         :dbcommand:`replSetResizeOplog` is unsupported in Atlas. To resize 
-         the oplog in Atlas, see :ref:`set-oplog-size`.    
+           :dbcommand:`replSetResizeOplog` is unsupported in Atlas. To resize 
+           the oplog in Atlas, see :ref:`set-oplog-size`.    
 
       - Scale up the ``mongosync`` instance. Add CPU or memory to scale
         up the ``mongosync`` node so that it has a higher copy rate.
