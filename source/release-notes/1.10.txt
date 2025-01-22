@@ -14,8 +14,6 @@ Release Notes for mongosync 1.10
 
 .. include:: /includes/in-dev.rst
 
-.. _1.10.0-c2c-release-notes:
-
 This page describes changes and new features introduced in  
 {+c2c-full-product-name+} 1.10.
 
@@ -36,6 +34,11 @@ To learn more, see:
 - :ref:`Pre-6.0 Migration Limitations <c2c-older-version-limitations>`.
 - :ref:`Pre-6.0 Migration Permissions <c2c-older-version-permissions>`.
 - :ref:`c2c-sync-different-versions`.
+
+.. _1.10.0-c2c-release-notes:
+
+1.10.0 Release
+--------------
 
 Upgrades to Embedded Verifier
 -----------------------------
