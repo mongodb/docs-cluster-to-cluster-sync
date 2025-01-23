@@ -109,7 +109,7 @@ To configure ``mongosync`` from the command line, see :ref:`c2c-cli-options`.
 
    .. include:: /includes/opts/disableVerification
 
-   To set disable verification from the command-line, see
+   To disable verification from the command-line, see
    the :option:`--disableVerification` option.
 
    .. versionadded:: 1.10
