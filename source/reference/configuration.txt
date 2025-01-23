@@ -103,6 +103,10 @@ To configure ``mongosync`` from the command line, see :ref:`c2c-cli-options`.
    For more information, see :ref:`User Data Collection
    <c2c-telemetry>`.
 
+.. setting:: disableVerification
+
+   .. include:: /includes/opt/disableVerification
+
 .. setting:: id
 
    *Type*: string

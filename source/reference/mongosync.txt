@@ -131,6 +131,10 @@ Global Options
    For more information, see :ref:`User Data Collection
    <c2c-telemetry>`.
 
+.. option:: --disableVerification
+
+   .. include:: /includes/opts/disableVerification
+
 .. option:: --help, -h
 
    Prints usage information to stdout.
