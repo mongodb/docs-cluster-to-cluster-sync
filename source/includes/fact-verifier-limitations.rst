@@ -39,8 +39,12 @@ Unsupported Verification Checks
 
 .. note:: 
 
-   Starting in version 1.10, the verifier checks metadata and indexes 
-   for DDL events only when migrating from a pre-6.0 source cluster.
+   Starting in version 1.10, the verifier checks for data inconsistencies from 
+   a :ref:`DDL event <c2c-older-version-limitations>` that occurred on the 
+   pre-6.0 source cluster during migration.
+
+   To learn more about pre-6.0 migrations and DDL events, see 
+   :ref:`Pre-6.0 Migration Limitations <c2c-older-version-limitations>`.
 
 Unsupported Beta Features
 ~~~~~~~~~~~~~~~~~~~~~~~~~

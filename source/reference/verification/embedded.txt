@@ -22,6 +22,17 @@ Verify with Embedded Verifier
 of checks on the destination cluster to verify the sync of
 supported collections. 
 
+.. note:: 
+
+   ``mongosync`` preserves document field order from the source cluster's 
+   primary node because it reads using :readmode:`primary` read preference. The 
+   embedded verifier checks documents in the destination cluster based on the 
+   source cluster’s primary node, so it cannot verify discrepancies between 
+   the different source cluster nodes. If an :term:`election` occurs, 
+   discrepancies in document field order between the source cluster’s nodes will 
+   cause the embedded verifier to fail the migration, even if ``mongosync`` 
+   copied the documents correctly.
+
 .. versionadded:: 1.9
 
 About this Task
