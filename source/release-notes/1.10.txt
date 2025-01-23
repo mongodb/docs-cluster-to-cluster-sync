@@ -40,6 +40,8 @@ To learn more, see:
 1.10.0 Release
 --------------
 
+**Upcoming**
+
 Upgrades to Embedded Verifier
 -----------------------------
 
