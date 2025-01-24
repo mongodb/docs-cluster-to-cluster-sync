@@ -28,10 +28,10 @@ supported collections.
    preserves document field order from the source cluster's primary node. The 
    embedded verifier also checks documents based on the source cluster’s primary 
    node. Because of this read preference, the verifier cannot verify 
-   discrepancies between the different source cluster nodes. If an 
-   :term:`election` occurs, discrepancies in document field order between the 
-   source cluster’s nodes will cause the embedded verifier to fail the 
-   migration, even if ``mongosync`` copied the documents correctly.
+   discrepancies between the different source cluster nodes. In rare cases, 
+   discrepancies in document field order between the source cluster’s nodes will 
+   cause the embedded verifier to fail the migration, even if ``mongosync`` 
+   copied the documents correctly.
 
 .. versionadded:: 1.9
 
