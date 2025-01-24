@@ -41,10 +41,11 @@ Unsupported Verification Checks
 
    Starting in version 1.10, the verifier checks for data inconsistencies from 
    a :ref:`DDL event <c2c-older-version-limitations>` that occurred on the 
-   pre-6.0 source cluster during migration.
+   pre-6.0 source cluster during migration. This is because pre-6.0 migrations 
+   do not support DDL events.
 
-   To learn more about pre-6.0 migrations and DDL events, see 
-   :ref:`Pre-6.0 Migration Limitations <c2c-older-version-limitations>`.
+   To learn more, see :ref:`Pre-6.0 Migration Limitations 
+   <c2c-older-version-limitations>`.
 
 Unsupported Beta Features
 ~~~~~~~~~~~~~~~~~~~~~~~~~
