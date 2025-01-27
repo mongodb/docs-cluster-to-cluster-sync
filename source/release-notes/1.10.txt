@@ -47,6 +47,68 @@ Upgrades to Embedded Verifier
 
 - .. include:: /includes/verify-reversible-migrations.rst
 
+Other Notes
+^^^^^^^^^^^
+
+Fixed Issues:
+
+- Fixed a bug introduced in v1.3.0 that could result in a
+  descending index with a small negative float index key value
+  to be migrated as an ascending index.
+
+- Fixed a bug introduced in v1.9.0 where the embedded verifier
+  could incorrectly report failure if a TTL index was dropped on
+  the source cluster during a migration.
+
+- Fixed a bug introduced in v1.0.0 that could result in an
+  unversioned 2dsphere index to be migrated as a v3 2dsphere
+  index.
+
+- Fixed a bug introduced in v1.9.0 where the embedded verifier
+  incorrectly reported failure for collections with TTLs with a
+  0-second ``expireAfterSeconds`` value.
+
+- Mitigated an issue introduced in v1.0.0 that could result in
+  ``mongosync`` timing out during initialization when sampling a
+  source collection and pre-splitting the corresponding
+  destination collection.
+
+- Added the number of empty source collections that mongosync
+  detects and creates on the destination to Atlas migration
+  metrics ``NumCollectionsTotal`` and ``NumCollections``.
+
+New Features:
+
+- Added support for migrations with 4.4 and 5.0 source clusters.
+
+- Added full support for embedded verification of reversible
+  migrations. Previously, verification was only supported in the
+  initial forward-direction of a reversible migration.
+
+- Added support for embedded verification of sharded clusters
+
+- Added support for migrations from 6.0 and 7.0 sources to 8.0
+  destinations.
+
+- Added a new :option:`--disableVerification` option and
+  :setting:`disableVerification` setting to ``mongosync``.
+
+Performance Improvements:
+
+- Improved the partitioning algorithm for large source
+  collections. ``mongosync`` now directly samples documents from
+  WiredTiger instead of scanning the whole ``_id`` index.
+
+Other:
+
+- ``mongosync`` now provides RHEL 9 builds.
+
+- ``mongosync`` now disallows setting ``socketTimeoutMS`` in
+  connection strings. This is a deprecated parameter.
+
+- ``mongosync`` now disallows being restarted during commit if
+  verification is enabled.
+
 Minimum Supported Version
 -------------------------
 
