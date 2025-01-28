@@ -61,7 +61,7 @@ Fixed Issues:
   the source cluster during a migration.
 
 - Fixed a bug introduced in v1.0.0 that could result in an
-  unversioned 2dsphere index to be migrated as a v3 2dsphere
+  unversioned 2dsphere index being migrated as a v3 2dsphere
   index.
 
 - Fixed a bug introduced in v1.9.0 where the embedded verifier
