@@ -4,7 +4,7 @@
    :widths: 30 14 14 14 14 14
 
    * -
-     - **4.4 Destination
+     - **4.4 Destination**
      - **5.0 Destination**
      - **6.0 Destination** 
      - **7.0 Destination** 
