@@ -75,13 +75,6 @@ destination MongoDB server versions:
   
    :ref:`Pre-6.0 Migration Limitations <c2c-older-version-limitations>`
 
-   * - **8.0** Source
-     - 
-     -
-     -
-     -
-     -
-
 .. _c2c-server-8.0-to-8.0:
 
 Synchronize Data Between Two 8.0 Clusters
