@@ -38,9 +38,9 @@ To learn more, see:
 - :ref:`c2c-sync-different-versions`.
 
 Upgrades to Embedded Verifier
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-----------------------------
 
-- .. include:: /includes/verify-reversible-migrations.rst
+.. include:: /includes/verify-reversible-migrations.rst
 
 Minimum Supported Version
 -------------------------
