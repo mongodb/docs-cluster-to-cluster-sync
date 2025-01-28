@@ -53,7 +53,7 @@ Other Notes
 Fixed Issues:
 
 - Fixed a bug introduced in v1.3.0 where descending indexes with
-  key values between -1e-9 and 0 could be incorrectly migrated
+  key values between -1e-9 and 0 could incorrectly migrate
   as ascending.
 
 - Fixed a bug introduced in v1.9.0 where the embedded verifier
@@ -61,10 +61,10 @@ Fixed Issues:
   the source cluster during a migration.
 
 - Fixed a bug introduced in v1.0.0 that caused unversioned
-  2dsphere indexes to be migrated as v3 2dsphere indexes.
+  2dsphere indexes to migrate as v3 2dsphere indexes.
 
 - Fixed a bug introduced in v1.9.0 where the embedded verifier
-  incorrectly reported failure for collections with TTLs where
+  incorrectly report failure for collections with TTLs where
   ``expireAfterSeconds: 0``.
 
 - Mitigated an issue introduced in v1.0.0 that could result in
@@ -72,9 +72,10 @@ Fixed Issues:
   source collection and pre-splitting the corresponding
   destination collection.
 
-- Added the number of empty source collections that mongosync
-  detects and creates on the destination to Atlas migration
-  metrics ``NumCollectionsTotal`` and ``NumCollections``.
+- Added the number of empty source collections that
+  ``mongosync`` detects and creates on the destination to Atlas
+  migration metrics ``NumCollectionsTotal`` and
+  ``NumCollections``.
 
 New Features:
 
