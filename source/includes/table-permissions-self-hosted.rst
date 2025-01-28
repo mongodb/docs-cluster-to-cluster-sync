@@ -28,8 +28,7 @@
        - :authrole:`readWriteAnyDatabase`
        - :authrole:`restore`
 
-     - - :authrole:`backup`
-       - :authrole:`clusterManager`
+     - - :authrole:`clusterManager`
        - :authrole:`clusterMonitor`
        - :authrole:`readWriteAnyDatabase`
        - :authrole:`restore`
@@ -38,6 +37,21 @@
      - - :authrole:`backup`
        - :authrole:`clusterManager`
        - :authrole:`clusterMonitor`
+       - :authrole:`readWriteAnyDatabase`
+       - :authrole:`restore`
+
+     - - :authrole:`backup`
+       - :authrole:`clusterManager`
+       - :authrole:`clusterMonitor`
+       - :authrole:`dbAdminAnyDatabase`
+       - :authrole:`readWriteAnyDatabase`
+       - :authrole:`restore`
+
+   * - Multiple Reversals
+     - - :authrole:`backup`
+       - :authrole:`clusterManager`
+       - :authrole:`clusterMonitor`
+       - :authrole:`dbAdminAnyDatabase`
        - :authrole:`readWriteAnyDatabase`
        - :authrole:`restore`
 

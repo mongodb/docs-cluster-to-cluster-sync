@@ -37,9 +37,16 @@ To learn more, see:
 - :ref:`Pre-6.0 Migration Permissions <c2c-older-version-permissions>`.
 - :ref:`c2c-sync-different-versions`.
 
+Upgrades to Embedded Verifier
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+- .. include:: /includes/verify-reversible-migrations.rst
+
 Minimum Supported Version
 -------------------------
 
 .. include:: /includes/fact-version-compatibility.rst
 
 .. include:: /includes/migration-upgrade-recommendation.rst
+
+{+c2c-full-product-name+} 1.10.
