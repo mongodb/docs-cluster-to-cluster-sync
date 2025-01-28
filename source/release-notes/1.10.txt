@@ -60,9 +60,8 @@ Fixed Issues:
   could incorrectly report failure if a TTL index was dropped on
   the source cluster during a migration.
 
-- Fixed a bug introduced in v1.0.0 that could result in an
-  unversioned 2dsphere index being migrated as a v3 2dsphere
-  index.
+- Fixed a bug introduced in v1.0.0 that caused unversioned
+  2dsphere indexes to be migrated as v3 2dsphere indexes.
 
 - Fixed a bug introduced in v1.9.0 where the embedded verifier
   incorrectly reported failure for collections with TTLs where
