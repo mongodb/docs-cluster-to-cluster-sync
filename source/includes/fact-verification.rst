@@ -4,12 +4,10 @@ destination, check your data to ensure that the sync was successful.
 
 .. note::
 
-   If ``mongosync`` stops while in the
-   ``WaitingForCommitComplete`` phase, such as due to memory
-   limitations, you must disable the verifier when you restart it.
-
-   To disable the verifier, see the
-   :option:`--disableVerification` option.
+   If``mongosync`` stops during a commit, before the
+   :ref:`/progress <c2c-api-progress>` endpoint reports
+   ``canWrite: true``, you must restart the entire migration to
+   ensure that it's verified.
 
 For more information, see :ref:`c2c-verification`.
 
