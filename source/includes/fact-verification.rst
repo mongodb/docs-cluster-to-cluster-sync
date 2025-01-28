@@ -4,7 +4,7 @@ destination, check your data to ensure that the sync was successful.
 
 .. note::
 
-   If ``mongosync`` stops during a commit, before the
+   If ``mongosync`` stops during commit, before the
    :ref:`/progress <c2c-api-progress>` endpoint reports
    ``canWrite: true``, you must restart the entire migration to
    ensure that it's verified.
