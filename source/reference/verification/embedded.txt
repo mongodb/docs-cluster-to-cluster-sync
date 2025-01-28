@@ -27,11 +27,10 @@ supported collections.
    ``mongosync`` reads using :readmode:`primary` read preference, so it 
    preserves document field order from the source cluster's primary node. The 
    embedded verifier also checks documents based on the source cluster’s primary 
-   node. Because of this read preference, the verifier cannot verify 
-   discrepancies between the different source cluster nodes. In rare cases, 
-   discrepancies in document field order between the source cluster’s nodes will 
-   cause the embedded verifier to fail the migration, even if ``mongosync`` 
-   copied the documents correctly.
+   node, but at a different time from when ``mongosync`` reads them. Because of 
+   this, in rare cases, discrepancies in document field order between the source 
+   cluster’s nodes can cause the embedded verifier to fail the migration, even 
+   if ``mongosync`` copied the documents correctly.
 
 .. versionadded:: 1.9
 
