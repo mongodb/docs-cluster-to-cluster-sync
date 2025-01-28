@@ -40,7 +40,7 @@ To learn more, see:
 1.10.0 Release
 --------------
 
-**Upcoming**
+**January 29, 2025**
 
 Upgrades to Embedded Verifier
 -----------------------------
