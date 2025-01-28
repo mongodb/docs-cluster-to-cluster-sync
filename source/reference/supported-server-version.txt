@@ -73,7 +73,7 @@ destination MongoDB server versions:
 
 .. seealso::
   
-   :ref:`c2c-older-version-limitations`.
+   :ref:`Pre-6.0 Migration Limitations <c2c-older-version-limitations>`
 
 .. _c2c-server-8.0-to-8.0:
 
