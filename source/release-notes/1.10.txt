@@ -72,11 +72,6 @@ Fixed Issues:
   source collection and pre-splitting the corresponding
   destination collection.
 
-- Added the number of empty source collections that
-  ``mongosync`` detects and creates on the destination to Atlas
-  migration metrics ``NumCollectionsTotal`` and
-  ``NumCollections``.
-
 New Features:
 
 - Added support for migrations with 4.4 and 5.0 source clusters.
