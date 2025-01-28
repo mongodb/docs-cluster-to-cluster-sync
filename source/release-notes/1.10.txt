@@ -106,7 +106,7 @@ Other:
 - ``mongosync`` now disallows setting ``socketTimeoutMS`` in
   connection strings. This is a deprecated parameter.
 
-- ``mongosync`` now disallows being restarted during commit if
+- ``mongosync`` now disallows being restarted during commit when 
   verification is enabled.
 
 Minimum Supported Version
