@@ -52,9 +52,9 @@ Other Notes
 
 Fixed Issues:
 
-- Fixed a bug introduced in v1.3.0 that could result in a
-  descending index with a small negative float index key value
-  to be migrated as an ascending index.
+- Fixed a bug introduced in v1.3.0 where descending indexes with
+  key values between -1e-9 and 0 could be incorrectly migrated
+  as ascending.
 
 - Fixed a bug introduced in v1.9.0 where the embedded verifier
   could incorrectly report failure if a TTL index was dropped on
@@ -85,7 +85,7 @@ New Features:
   migrations. Previously, verification was only supported in the
   initial forward-direction of a reversible migration.
 
-- Added support for embedded verification of sharded clusters
+- Added support for embedded verification of sharded clusters.
 
 - Added support for migrations from 6.0 and 7.0 sources to 8.0
   destinations.
