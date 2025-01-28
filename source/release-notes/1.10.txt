@@ -65,8 +65,8 @@ Fixed Issues:
   index.
 
 - Fixed a bug introduced in v1.9.0 where the embedded verifier
-  incorrectly reported failure for collections with TTLs with a
-  0-second ``expireAfterSeconds`` value.
+  incorrectly reported failure for collections with TTLs where
+  ``expireAfterSeconds: 0``.
 
 - Mitigated an issue introduced in v1.0.0 that could result in
   ``mongosync`` timing out during initialization when sampling a
