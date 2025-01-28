@@ -17,10 +17,22 @@ Release Notes for mongosync 1.10
 This page describes changes and new features introduced in  
 {+c2c-full-product-name+} 1.10.
 
+.. _1.10.0-c2c-release-notes:
+
+1.10.0 Release
+--------------
+
+**January 29, 2025**
+
+Upgrades to Embedded Verifier
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+- .. include:: /includes/verify-reversible-migrations.rst
+
 .. _c2c-older-version-support:
 
 Older Version Support
----------------------
+~~~~~~~~~~~~~~~~~~~~~
 
 .. include:: /includes/fact-pre-6.0-migration.rst
 
@@ -35,20 +47,8 @@ To learn more, see:
 - :ref:`Pre-6.0 Migration Permissions <c2c-older-version-permissions>`.
 - :ref:`c2c-sync-different-versions`.
 
-.. _1.10.0-c2c-release-notes:
-
-1.10.0 Release
---------------
-
-**January 29, 2025**
-
-Upgrades to Embedded Verifier
------------------------------
-
-- .. include:: /includes/verify-reversible-migrations.rst
-
 Other Notes
-^^^^^^^^^^^
+~~~~~~~~~~~
 
 Fixed Issues:
 
