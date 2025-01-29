@@ -394,6 +394,26 @@ Latency between the nodes of any replica set on the source or destination cluste
   sets. If the majority of these nodes aren't in the same region, there 
   will be negative performance implications.
 
+Interruptions During Sync
+-------------------------
+
+The following considerations pertain to interruptions during the
+``mongosync`` process. 
+
+System Crashes
+~~~~~~~~~~~~~~
+
+Paused Sync
+~~~~~~~~~~~
+
+If ``mongosync`` is in the :ref:`c2c-state-paused` state, MongoDB does
+not support the following actions:
+
+- Upgrading the MongoDB version of the source or destination cluster
+- Enabling and then disabling the balancer
+
+However, you can upgrade ``mongosync`` during while it is in the
+``PAUSED`` state. 
 
 Learn More
 ----------
