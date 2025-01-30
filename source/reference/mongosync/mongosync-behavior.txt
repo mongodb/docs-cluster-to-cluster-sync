@@ -413,6 +413,8 @@ and use the same parameters as your interupted sync. Once you restart,
 ``mongosync``, ``mongosync`` resumes the operation from where it
 stopped.
 
+.. _c2c-pause-behavior:
+
 Paused Sync
 ~~~~~~~~~~~
 
