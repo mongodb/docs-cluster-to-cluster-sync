@@ -409,7 +409,7 @@ it stopped. The ``mongosync`` binary is stateless and stores the
 metadata for a restart on the destination cluster. 
 
 To continue sync, restart ``mongosync`` once it becomes available again
-and use the same parameters as your interupted sync. Once you restart,
+and use the same parameters as your interupted sync. Once you restart
 ``mongosync``, the process resumes from where it stopped.
 
 .. _c2c-pause-behavior:
