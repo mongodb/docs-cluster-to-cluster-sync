@@ -417,7 +417,7 @@ and use the same parameters as your interupted sync. Once you restart,
 Paused Sync
 ~~~~~~~~~~~
 
-If ``mongosync`` is in the :ref<`c2c-state-paused> state, MongoDB does
+If ``mongosync`` is in the :ref<c2c-state-paused> state, MongoDB does
 not support the following actions:
 
 - Upgrading the MongoDB version of the source or destination cluster
