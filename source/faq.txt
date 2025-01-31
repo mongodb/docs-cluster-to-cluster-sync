@@ -64,7 +64,7 @@ Use the following methods to mitigate an increase in index size:
   :ref:`parameter <c2c-api-start-params>` set to ``never``. When the migration 
   is complete, manually build indexes on the destination cluster.
 - After the migration, perform a rolling sync on the destination cluster.
-- After the migration, run :command:`compact` on the destination cluster. This 
+- After the migration, run :ref:`<compact>` on the destination cluster. This 
   rebuilds indexes and releases unneeded disk space to the OS.
 
 Can ``mongosync`` run on its own hardware? 
