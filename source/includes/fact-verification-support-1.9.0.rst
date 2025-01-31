@@ -1,1 +1,1 @@
-If you live upgrade from any version before 1.9.0 to any version 1.9.0 onwards, ``mongosync`` disables embedded verification.
+If you live upgrade from any version pre-1.9.0 to any version starting from 1.9.0 and onwards, ``mongosync`` disables embedded verification.
