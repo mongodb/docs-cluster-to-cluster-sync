@@ -176,8 +176,6 @@ Request Body Parameters
 
        * Reversible sync when ``buildIndexes`` is set to ``never``.
 
-       * Reversible sync with the embedded verifier.
-
        :gold:`IMPORTANT:` If you are migrating from a pre-6.0 source cluster, 
        you cannot set ``reversible`` to ``true``.
 
