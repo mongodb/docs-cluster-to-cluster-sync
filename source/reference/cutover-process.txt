@@ -123,7 +123,8 @@ Steps
       Once you complete this step, ``mongosync`` blocks writes on the source
       cluster.
       
-      If your source cluster contains Persistant Query Settings (PQS), you must :ref:`manually migrate PQS <c2c-migrate-pqs>` at this point in the cutover process. 
+      If your source cluster contains Persistant Query Settings (PQS), you must
+      :ref:`manually migrate PQS <c2c-migrate-pqs>` to your destination cluster.
 
    .. step:: Wait until you can perform writes on the destination cluster.
 
