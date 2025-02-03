@@ -48,8 +48,8 @@ To learn more about permissable reads and writes during synchronization, see :re
 Why are the destination cluster indexes larger than the source cluster indexes?
 -------------------------------------------------------------------------------
 
-An increase in index size on destination clusters may be caused by the following 
-factors:
+The following factors may contribute to an increase in index size on destination
+clusters:
 
 - ``mongosync`` inserts and removes data during a migration, which may cause disk 
   fragmentation.
