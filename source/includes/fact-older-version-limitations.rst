@@ -29,8 +29,8 @@
   enable the ``reversible`` option in the :ref:`/start <c2c-api-start>` request.
 
 - You can't enable the ``enableUserWriteBlocking`` option in the ``/start`` 
-  request, so destination-only write-blocking is enabled. Ensure that no writes 
-  are made to the source cluster during the migration.
+  request, so destination-only write-blocking is enabled by default. 
+  Ensure that no writes are made to the destination cluster during the migration.
 
 - You can't enable the ``createSupportingIndexes`` :ref:`sharding parameter 
   <c2c-api-start-sharding>`. Instead, create an index to support your shard key 
