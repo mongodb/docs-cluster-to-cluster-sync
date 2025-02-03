@@ -54,7 +54,7 @@ clusters:
 - ``mongosync`` inserts and removes data during a migration, which may cause disk 
   fragmentation.
 - By default, ``mongosync`` builds indexes before copying data. ``mongosync`` 
-  copies data in ``_id`` order. If the index is not correlated with  ``_id``, 
+  copies data in ``_id`` order. If an index is not correlated with  ``_id``, 
   the index size can become large. For more information, see the MongoDB Manual
   :ref:`FAQ: Indexes<faq-indexes-random-data-performance>` page.
 
