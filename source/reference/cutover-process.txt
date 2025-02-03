@@ -120,7 +120,10 @@ Steps
          to ensure that the ``mongosync`` state is ``COMMITTING`` or
          ``COMMITTED``.
 
-      Once you complete this step, ``mongosync`` blocks writes on the source cluster.
+      Once you complete this step, ``mongosync`` blocks writes on the source
+      cluster.
+      
+      If your source cluster contains Persistant Query Settings (PQS), you must :ref:`manually migrate PQS <c2c-migrate-pqs>` at this point in the cutover process. 
 
    .. step:: Wait until you can perform writes on the destination cluster.
 

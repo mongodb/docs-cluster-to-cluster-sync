@@ -39,14 +39,14 @@ Steps
 
       If your source cluster contains query settings that you do not want to migrate to your destination cluster, remove those settings from your ``querySettings`` array. 
 
-   .. step:: (Optional) Import your PQS to the desination cluster.
+   .. step:: Import your PQS to the desination cluster.
 
       For each query setting in your ``querySettings`` array, use
       :dbcommand:`setQuerySettings` to apply that setting to your destination
       cluster. 
       
-      If the query setting includes a ``representativeQuery`` field, use that field value as the ``setQuerySettings`` value. 
+      If the query setting includes a ``representativeQuery`` field value, use that field value as the ``setQuerySettings`` value. 
       
-      Otherwise, use the ``queryShapeHas`` field value from the
+      Otherwise, use the ``queryShapeHash`` field value from the
       ``querySettings`` array as the ``setQuerySettings`` value. 
 
