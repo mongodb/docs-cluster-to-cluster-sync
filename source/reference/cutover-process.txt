@@ -78,7 +78,7 @@ Steps
       - If you start ``mongosync`` with ``enableUserWriteBlocking``
         set to ``true``, ``mongosync`` blocks all write operations
         on the destination cluster and unblocks them right before ``canWrite``
-        is set to ``true``. It blocks writes on the source after it calls
+        is set to ``true``. ``mongosync`` blocks writes on the source after it calls
         ``/commit``.
       - If you start ``mongosync`` with ``enableUserWriteBlocking`` set
         to ``"destinationOnly"``, ``mongosync`` only blocks writes on the 
@@ -126,8 +126,9 @@ Steps
          to ensure that the ``mongosync`` state is ``COMMITTING`` or
          ``COMMITTED``.
 
-      Once you complete this step, if you previously set ``enableUserWriteBlocking``
-      to ``true`` then ``mongosync`` blocks writes on the source cluster.
+      If you previously set ``enableUserWriteBlocking``
+      to ``true``, ``mongosync`` blocks writes on the source cluster
+      once you complete this step.
 
    .. step:: Wait until you can perform writes on the destination cluster.
 

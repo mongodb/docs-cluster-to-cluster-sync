@@ -20,6 +20,6 @@
 
   For more information, see :ref:`c2c-filter-with-out`.
 - Filtering does not support dual :ref:`write 
-  blocking <c2c-write-blocking>`. It supports destination-only
+  blocking <c2c-write-blocking>`. You can use destination-only
   write-blocking. 
 

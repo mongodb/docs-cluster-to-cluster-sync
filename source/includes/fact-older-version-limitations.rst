@@ -29,7 +29,7 @@
   enable the ``reversible`` option in the :ref:`/start <c2c-api-start>` request.
 
 - You can't enable the ``enableUserWriteBlocking`` option in the ``/start`` 
-  request, so destination-only write-blocking is enabled by default. 
+  request, so ``mongosync`` enables destination-only write-blocking by default. 
   Ensure that no writes are made to the destination cluster during the migration.
 
 - You can't enable the ``createSupportingIndexes`` :ref:`sharding parameter 

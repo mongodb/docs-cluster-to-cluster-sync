@@ -163,8 +163,8 @@ Write Blocking
 
 .. include:: /includes/fact-write-blocking-enable.rst
 
-You must enable dual write-blocking when you start ``mongosync`` if you want
-to use :ref:`reverse synchronization <c2c-api-reverse>` later.
+If you want to use :ref:`reverse synchronization <c2c-api-reverse>` later,
+you must enable dual write-blocking when you start ``mongosync``.
 
 User Permissions
 ''''''''''''''''
@@ -263,7 +263,7 @@ synchronization. The original values are restored during the commit process.
 
        ``mongosync`` enables destination-only write-blocking
        by default.
-       
+
        To learn more, see :ref:`c2c-write-blocking`.
 
    * - Capped Collections
