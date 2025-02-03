@@ -62,7 +62,7 @@ Use the following methods to mitigate an increase in index size:
 
 - Restart the migration with the ``buildIndexes`` 
   :ref:`parameter <c2c-api-start-params>` set to ``never``. When the migration 
-  is complete, manually build indexes on the destination cluster.
+  finishes, manually build indexes on the destination cluster.
 - After the migration, perform a rolling sync on the destination cluster.
 - After the migration, run :ref:`<compact>` on the destination cluster. This 
   rebuilds indexes and releases unneeded disk space to the OS.
