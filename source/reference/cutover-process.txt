@@ -224,5 +224,5 @@ Learn More
 .. toctree::
    :titlesonly: 
 
-   Migrate Persistent Query Settings
+   Migrate Persistent Query Settings </reference/c2c-migrate-pqs>
 
