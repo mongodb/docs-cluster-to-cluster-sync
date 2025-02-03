@@ -35,11 +35,11 @@ Steps
 
          mongosh --eval 'console.log(db.aggregate([{$querySettings:{}}]).toArray())'
 
-   .. step::(Optional) Remove unwanted settings.
+   .. step:: (Optional) Remove unwanted settings.
 
       If your source cluster contains query settings that you do not want to migrate to your destination cluster, remove those settings from your ``querySettings`` array. 
 
-   .. step::(Optional) Import your PQS to the desination cluster.
+   .. step:: (Optional) Import your PQS to the desination cluster.
 
       For each query setting in your ``querySettings`` array, use
       :dbcommand:`setQuerySettings` to apply that setting to your destination
