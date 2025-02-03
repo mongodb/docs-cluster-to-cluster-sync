@@ -21,4 +21,4 @@ This page describes changes and new features introduced in
 Destination-Only Write-Blocking
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-- .. include:: /includes/fact-write-blocking-enable.rst
+.. include:: /includes/fact-write-blocking-enable.rst
