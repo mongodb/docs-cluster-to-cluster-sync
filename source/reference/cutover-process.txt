@@ -221,3 +221,8 @@ Learn More
 - :ref:`c2c-api-progress`
 - :ref:`c2c-states`
 
+.. toctree::
+   :titlesonly: 
+
+   Migrate Persistent Query Settings
+
