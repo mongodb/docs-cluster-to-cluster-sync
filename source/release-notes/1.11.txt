@@ -46,12 +46,12 @@ Other Notes
 Fixed Issues:
 
 - Fixed a bug introduced in v1.9.0, where the embedded verifier could 
-  incorrectly report failure if a collection with a TTL index was renamed and 
+  incorrectly report a failure if a collection with a TTL index was renamed and 
   later recreated without a TTL index.
 
-- Fixed a bug introduced in v1.0.0 where a prepareUnique index could be made 
-  unique on the destination collection/a previously unique index could be left 
-  in a prepareUnique state on the destination collection after cutover.
+- Fixed a bug introduced in v1.0.0 where a ``prepareUnique`` index could be made 
+  unique on the destination collection or a previously unique index could be 
+  left in a ``prepareUnique`` state on the destination collection after cutover.
 
 Other Changes:
 
