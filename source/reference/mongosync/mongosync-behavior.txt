@@ -404,7 +404,7 @@ Errors and Crashes
 ~~~~~~~~~~~~~~~~~~
 
 If ``mongosync`` encounters an error or becomes unavailable during
-synchronization, you can resume your ``mongosync`` operation from where
+synchronization, or you can resume your ``mongosync`` operation from where
 it stopped. The ``mongosync`` binary is stateless and stores the
 metadata for a restart on the destination cluster. 
 
@@ -412,13 +412,21 @@ To continue sync, restart ``mongosync`` once it becomes available again
 and use the same parameters as your interupted sync. Once you restart
 ``mongosync``, the process resumes from where it stopped.
 
+Cluster Availability
+~~~~~~~~~~~~~~~~~~~~
+
+If your source or destination cluster crashes unexpectedly, you can safely
+restart ``mongosync`` from where it left off. Once your cluster is available
+again, restart ``mongosync`` and use the same parameters as your interupted
+sync. 
+
 .. _c2c-pause-behavior:
 
 Paused Sync
 ~~~~~~~~~~~
 
 If ``mongosync`` is in the :ref:`PAUSED <c2c-state-paused>` state,
-MongoDB does not support the following actions:
+``mongosync`` does not support the following actions:
 
 - Upgrading the MongoDB version of the source or destination cluster
 - Enabling and then disabling the balancer
