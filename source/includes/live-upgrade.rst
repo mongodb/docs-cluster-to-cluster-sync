@@ -1,4 +1,4 @@
-.. list-table
+.. list-table::
    :header-rows: 1
    :stub-columns: 1
 
