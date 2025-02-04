@@ -7,8 +7,7 @@ enable destination-only write-blocking by using
 the :ref:`/start <c2c-api-start>` endpoint to set
 ``enableUserWriteBlocking`` to ``"destinationOnly"``.
 
-You can enable dual write-blocking, which blocks
-writes on both the source and destination clusters. 
+You can enable dual write-blocking. 
 If you enable dual write-blocking, ``mongosync`` blocks writes:
 
 - On the destination cluster during the migration. ``mongosync``

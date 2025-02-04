@@ -75,15 +75,17 @@ Steps
 
    .. step:: Stop any write operations to the synced collections on the source.
 
+      - ``mongosync`` enables destination-only write-blocking by default. 
+        You can explicitly enable it by starting ``mongosync`` with
+        ``enableUserWriteBlocking`` set to ``"destinationOnly"``.
+        ``mongosync`` only blocks writes on the 
+        destination and unblocks them right before ``canWrite`` is
+        set to ``true``.
       - If you start ``mongosync`` with ``enableUserWriteBlocking``
         set to ``true``, ``mongosync`` blocks all write operations
         on the destination cluster and unblocks them right before ``canWrite``
         is set to ``true``. ``mongosync`` blocks writes on the source after you call
         ``/commit``.
-      - If you start ``mongosync`` with ``enableUserWriteBlocking`` set
-        to ``"destinationOnly"``, ``mongosync`` only blocks writes on the 
-        destination and unblocks them right before ``canWrite`` is
-        set to ``true``.
       - If you start ``mongosync`` with ``enableUserWriteBlocking`` set
         to ``false``, ensure that you disable writes.
         For example, run the :dbcommand:`setUserWriteBlockMode` command on the
