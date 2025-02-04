@@ -68,9 +68,9 @@ Live Upgrade
 Starting in ``mongosync`` 1.7.0, you can upgrade ``mongosync`` without
 restarting data synchronization operations from the beginning.
 
-``mongosync`` supports live upgrades between the following versions:
+.. important::
 
-.. include:: /includes/live-upgrade.rst
+   ``mongosync`` does not support upgrades to version 1.11.
 
 After the live upgrade, ``mongosync`` continues operations that were in
 progress before the upgrade.
