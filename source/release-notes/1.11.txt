@@ -53,10 +53,6 @@ Fixed Issues:
   unique on the destination collection or a previously unique index could be 
   left in a ``prepareUnique`` state on the destination collection after cutover.
 
-Other Changes:
-
-- Added destination-only write blocking, which is enabled by default.
-
 Minimum Supported Version
 -------------------------
 
