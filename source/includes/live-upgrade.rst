@@ -1,4 +1,14 @@
-Starting in ``mongosync`` 1.7.0, you can upgrade ``mongosync`` without
-restarting data synchronization operations from the beginning. You can 
-only live upgrade to ``mongosync`` 1.7.3 or later from ``mongosync`` 
-1.7.2 or later. You cannot live upgrade to ``mongosync`` 1.11.
+.. list-table
+   :header-rows: 1
+   :stub-columns: 1
+
+   * - Version
+     - 1.11
+     - 1.7.2 and later
+     - 1.7.0 
+
+   * - Notes
+     - Live upgrades to 1.11 not supported
+     - Can only live upgrade to ``mongosync``
+       1.7.3 or later
+     - Upgrade to any version except 1.11

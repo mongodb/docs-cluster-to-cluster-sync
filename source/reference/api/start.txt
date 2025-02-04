@@ -115,13 +115,14 @@ Request Body Parameters
    * - ``enableUserWriteBlocking``
      - boolean or string
      - Optional
-     - If set to ``true`` or ``"true"``, blocks writes on the destination 
+     - If set to ``true``, blocks writes on the destination 
        cluster while the migration is in progress, and unblocks writes right
-       before ``canWrite`` is ``true``. Blocks writes on the source
+       before the :ref:`/progress <c2c-api-progress>` endpoint reports 
+       that ``canWrite`` is ``true``.  Blocks writes on the source
        cluster after ``mongosync`` calls the :ref:`/commit <c2c-api-commit>`
        endpoint.
 
-       If set to ``false`` or ``"false"``, no write blocking occurs.
+       If set to ``false``, no write blocking occurs.
 
        If set to ``"destinationOnly"``, blocks writes on the destination
        cluster while migration is in progress, and unblocks writes right
@@ -131,7 +132,7 @@ Request Body Parameters
        you cannot set ``enableUserWriteBlocking`` to ``true``.
 
        To reverse sync, the ``enableUserWriteBlocking`` field must be set
-       to ``true`` or ``"true"``. To allow the source cluster to accept writes again,
+       to ``true``. To allow the source cluster to accept writes again,
        for example after running migration tests, run the following
        command: 
 
@@ -166,7 +167,7 @@ Request Body Parameters
        reversed.
 
        To reverse sync, the ``enableUserWriteBlocking`` field must be set
-       to ``true`` or ``"true"``.
+       to ``true``.
 
        This option is not supported for the following configurations:
 

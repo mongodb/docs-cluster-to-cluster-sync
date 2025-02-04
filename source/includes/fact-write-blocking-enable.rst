@@ -1,6 +1,11 @@
 By default, ``mongosync`` enables destination-only 
 write-blocking on the destination cluster. 
-``mongosync`` unblocks writes right before ``canWrite`` is set to ``true``.
+``mongosync`` unblocks writes right before the 
+:ref:`/progress <c2c-api-progress>` endpoint reports 
+that ``canWrite`` is ``true``. You can explicitly
+enable destination-only write-blocking by using
+the :ref:`/start <c2c-api-start>` endpoint to set
+``enableUserWriteBlocking`` to ``"destinationOnly"``.
 
 You can enable dual write-blocking, which blocks
 writes on both the source and destination clusters. 
@@ -10,11 +15,11 @@ If you enable dual write-blocking, ``mongosync`` blocks writes:
   unblocks writes right before it sets ``canWrite`` to ``true``
 - On the source cluster after you call ``/commit``
 
-To enable dual write-blocking, use the :ref:`start API <c2c-api-start>`
+To enable dual write-blocking, use :ref:`/start <c2c-api-start>`
 to set ``enableUserWriteBlocking`` to ``true``.
 
 You can use
-the :ref:`start API <c2c-api-start>`
+:ref:`/start <c2c-api-start>`
 to set ``enableUserWriteBlocking`` to ``false``.
 
 You cannot enable dual write-blocking or disable

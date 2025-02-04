@@ -21,6 +21,8 @@ The self-managed permissions are:
 
 .. include:: /includes/table-permissions-self-hosted.rst
 
+.. _c2c-atlas-permissions:
+
 Atlas Clusters
 --------------
 

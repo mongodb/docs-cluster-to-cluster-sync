@@ -29,8 +29,8 @@
   enable the ``reversible`` option in the :ref:`/start <c2c-api-start>` request.
 
 - You can't enable the ``enableUserWriteBlocking`` option in the ``/start`` 
-  request, so ``mongosync`` enables destination-only write-blocking by default. 
-  Ensure that no writes are made to the destination cluster during the migration.
+  request, so dual write-blocking is not supported. Destination-only 
+  write-blocking is supported.
 
 - You can't enable the ``createSupportingIndexes`` :ref:`sharding parameter 
   <c2c-api-start-sharding>`. Instead, create an index to support your shard key 
