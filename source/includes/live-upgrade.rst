@@ -2,13 +2,32 @@
    :header-rows: 1
    :stub-columns: 1
 
-   * - Version
-     - 1.11
-     - 1.7.2 and later
-     - 1.7.0 
+   * - 
+     - 1.11 Destination
+     - 1.7.3 to 1.10 Destination
+     - 1.7.2 Destination
+     - 1.7.0 to 1.7.1 Destination
 
-   * - Notes
-     - Live upgrades to 1.11 not supported
-     - Can only live upgrade to ``mongosync``
-       1.7.3 or later
-     - Upgrade to any version except 1.11
+   * - 1.11 Source
+     -
+     -
+     -
+     -
+
+   * - 1.7.3 to 1.10 Source
+     - 
+     - √
+     -
+     -
+ 
+   * - 1.7.2 Source
+     - 
+     - √
+     - 
+     - 
+  
+   * - 1.7.0 to 1.7.1 Source
+     -
+     - √
+     - √
+     -
