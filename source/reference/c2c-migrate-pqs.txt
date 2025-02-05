@@ -12,11 +12,10 @@ Migrate Persistent Query Settings
 If your source cluster uses Persistent Query Settings (PQS), you must manually
 migrate those settings to your destination cluster to finalize sync. 
 
-``mongosync`` checks for PQS during the ``mongosync`` initialization and the
-:ref:`cutover process <c2c-cutover-process>`. If ``mongosync`` finds PQS on the
-source cluster during cutover, {+c2c-product-name+} shows a warning. Use the
-following procedure to address the warning and migrate your PQS to your
-destination cluster.
+``mongosync`` checks for PQS during initialization and the :ref:`cutover process
+<c2c-cutover-process>`. If ``mongosync`` finds PQS on the source cluster during
+cutover, {+c2c-product-name+} shows a warning. Use the following procedure to
+address the warning and migrate your PQS to your destination cluster.
 
 Steps 
 -----
