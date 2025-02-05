@@ -30,8 +30,7 @@
 
 - You can't set the ``enableUserWriteBlocking`` option to ``true``
   in the ``/start`` request, so dual write-blocking is not supported. 
-  Destination-only write-blocking is supported. Ensure that no writes are 
-  made to the source cluster after you call the ``/commit`` endpoint.
+  Destination-only write-blocking is supported.
 
 - You can't enable the ``createSupportingIndexes`` :ref:`sharding parameter 
   <c2c-api-start-sharding>`. Instead, create an index to support your shard key 
