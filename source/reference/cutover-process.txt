@@ -164,9 +164,7 @@ Steps
 
       For more information, see :ref:`c2c-verification`.
 
-   .. step:: If you did not start ``mongosync`` with 
-             :ref:`write-blocking <c2c-write-blocking>`, 
-             enable application writes on the destination cluster.
+   .. step:: If you did not start ``mongosync`` with :ref:`write-blocking <c2c-write-blocking>`, enable application writes on the destination cluster.
 
       To enable writes, update :dbcommand:`setUserWriteBlockMode`:
 
