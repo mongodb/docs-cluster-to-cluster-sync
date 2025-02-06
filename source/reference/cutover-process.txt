@@ -164,7 +164,9 @@ Steps
 
       For more information, see :ref:`c2c-verification`.
 
-   .. step:: Enable application writes on the destination cluster.
+   .. step:: If you did not start ``mongosync`` with 
+      :ref:`write-blocking <c2c-write-blocking>`, 
+      enable application writes on the destination cluster.
 
       To enable writes, update :dbcommand:`setUserWriteBlockMode`:
 
@@ -178,6 +180,10 @@ Steps
          )
 
       Then, transfer your application workload to the destination cluster.
+
+      You do not need to do this step if you start ``mongosync``
+      with write-blocking using the ``enableUserWriteBlocking`` option when
+      you call the :ref:`/start <c2c-api-start>` API endpoint.
 
    .. step:: Call the ``progress`` endpoint to determine the status of the ``mongosync`` process.
 
