@@ -49,11 +49,8 @@ the following parameter to the :ref:`/start <c2c-api-start>` requests:
 
    "destinationDataHandling": "ignorePreExistingNamespaces"
 
-``mongosync`` uses the ``--migrationName`` command line option 
-to create a customized migration metadata database for each migration 
-following the ``mongosync_internal_<migrationName>`` pattern. Setting 
-``"destinationDataHandling"`` to ``"ignorePreExistingNamespaces"`` allows
-each migration to write to the destination cluster that may have 
+Setting ``"destinationDataHandling"`` to ``"ignorePreExistingNamespaces"`` 
+allows each migration to write to the destination cluster that may have 
 pre-existing namespaces from the other many-to-one migrations.
 
 Behavior 
