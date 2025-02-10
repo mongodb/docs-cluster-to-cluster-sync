@@ -179,7 +179,7 @@ Steps
 
       Then, transfer your application workload to the destination cluster.
 
-      If you start ``mongosync``
+      If you started ``mongosync``
       with write-blocking by using the ``enableUserWriteBlocking`` option on
       the :ref:`/start <c2c-api-start>` endpoint, you do not need
       to complete this step.
