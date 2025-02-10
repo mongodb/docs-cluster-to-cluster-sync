@@ -164,7 +164,7 @@ Steps
 
       For more information, see :ref:`c2c-verification`.
 
-   .. step:: If you manually :ref:`blocked writes <c2c-write-blocking>` on the destination cluster by using :dbcommand:`setUserWriteBlockMode`, enable application writes on the destination cluster.
+   .. step:: If you manually blocked writes on the destination cluster by using :dbcommand:`setUserWriteBlockMode`, enable application writes on the destination cluster.
 
       To enable writes, update :dbcommand:`setUserWriteBlockMode`:
 
