@@ -28,10 +28,11 @@ Can I perform reads or writes to my destination cluster while ``mongosync`` is s
 
 ``mongosync`` combines and reorders writes from the source to destination during 
 synchronization, and temporarily modifies various collection characteristics. 
-As a result, the destination is not guaranteed to match the source, including a 
-stale version of the source, at any point in time when the sync is running. To 
-safely accept traffic to the destination cluster, wait for the migration to 
-:ref:`c2c-api-commit`. To learn more, see :ref:`mongosync-considerations`. 
+As a result, ``mongosync`` can't guarantee that the destination matches the 
+source, including a stale version of the source, at any point in time when the 
+sync is running. To safely accept traffic to the destination cluster, wait for 
+the migration to :ref:`c2c-api-commit`. To learn more, see 
+:ref:`mongosync-considerations`. 
 
 Performing writes to your destination cluster during synchronization results in 
 undefined behavior. ``mongosync`` blocks writes on the destination cluster by 
