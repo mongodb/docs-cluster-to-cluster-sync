@@ -5,4 +5,4 @@ only live upgrade to ``mongosync`` 1.7.3 or later from ``mongosync``
 
 .. important::
    
-   ``mongosync`` does not support live upgrades to version 1.11.
+   ``mongosync`` does not support live upgrades to version 1.11 or 1.12.
