@@ -92,66 +92,8 @@ source to the destination cluster.
        and replica sets that use MongoDB 4.4 or earlier
        releases, since the document field order can vary.
 
-   * - Document Comparison
-     - You can verify sync by comparing documents on the source
-       and destination clusters. 
-
-       Write a script that queries collections on the source
-       cluster and then checks that the correct documents,
-       indexes, collections, metadata, and views exist with the
-       same values on the destination cluster.
-
-       Before you can verify data transfer with this method,
-       ``mongosync`` must be in the ``COMMITTED`` state.
-
-   * - .. _c2c-index-comparison: 
-
-       Index Comparison
-     - To verify the transfer of indexes, run the
-       :method:`db.collection.getIndexes` method on the source
-       and destination clusters and compare the results. 
-
-   * - .. _c2c-metadata-comparison:
-
-       Metadata Comparison
-     - To verify the transfer of metadata, run the
-       :method:`db.getCollectionInfos` method on the source and
-       destination clusters and compare the results.
-
-   * - .. _c2c-shardkey-comparison: 
-
-       Shard Key Comparison
-     - To verify the transfer of shard keys to a synced collection, run a query on the ``config.collections``
-       collection to find a document whose ``_id`` value is the namespace of the target collection. 
-       Compare the ``key`` value of this document in the source and destination clusters.
-
-       For example, for a collection named ``pets`` in the ``records`` database, you can verify the shard key
-       using the following query in :binary:`mongosh`: 
-
-       .. io-code-block:: 
-          :copyable: true
-
-          .. input::
-             :language: javascript 
-
-             db.getSiblingDB("config").collections.find({ _id : "records.pets" }) 
-
-          .. output:: 
-             :language: javascript
-             :emphasize-lines: 5-7
-             :visible: false
-
-             {
-                 "_id" : "records.pets",
-                 "lastmod" : ISODate("2021-07-21T15:48:15.193Z"),
-                 "timestamp": Timestamp(1626882495, 1),
-                 "key" : {
-                       "_id" : 1
-                 },
-                 "unique" : false,
-                 "lastmodEpoch" : ObjectId("5078407bd58b175c5c225fdc"),
-                 "uuid" :  UUID("f8669e52-5c1b-4ea2-bbdc-a00189b341da")
-             }
+   * - :ref:`Custom or Manual Verification <c2c-custom-manual-verification>`
+     - Different types of data require different methods of verification. 
 
    * - :ref:`Migration Verifier <c2c-migration-verifier>`
      - Migration Verifier connects to the source and destination
@@ -169,6 +111,7 @@ application workload and the complexity of the data.
    Use Document Counts </reference/verification/count>
    Use Hash Comparison </reference/verification/hash>
    Use Migration Verifier </reference/verification/verifier>
+   Custom or Manual Verification </reference/verification/custom-manual>
 
 Learn More
 ----------
