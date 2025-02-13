@@ -3,4 +3,4 @@ restarting data synchronization operations from the beginning.
 
 .. important::
    
-   ``mongosync`` does not support live upgrades to version 1.11 or 1.12.
+   ``mongosync`` does not support live upgrades to version 1.12.
