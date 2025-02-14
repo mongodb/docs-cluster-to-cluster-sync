@@ -64,9 +64,9 @@ can verify the shard key using the following query in :binary:`mongosh`:
    :copyable: true
 
    .. input::
-       :language: javascript 
+      :language: javascript 
 
-       db.getSiblingDB("config").collections.find({ _id : "records.pets" }) 
+      db.getSiblingDB("config").collections.find({ _id : "records.pets" }) 
 
    .. output:: 
       :language: javascript
