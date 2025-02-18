@@ -46,9 +46,7 @@ to version 1.12 are not supported.
 Other Notes 
 ~~~~~~~~~~~
 
-Fixed Issues:
-
-- Fixed 
+- Added a machine-friendly label to warnings about Persisted Query Settings
 
 Minimum Supported Version
 -------------------------
