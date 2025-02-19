@@ -30,8 +30,7 @@ Destination-Only Write-Blocking
 Live Upgrades
 ~~~~~~~~~~~~~
 
-Starting in version 1.11.0, ``mongosync`` does not support :ref:`live upgrades
-<c2c-versioning-live-upgrade>`.
+Starting in version 1.11.0, ``mongosync`` does not support live upgrades.
 
 Permissions
 ~~~~~~~~~~~
