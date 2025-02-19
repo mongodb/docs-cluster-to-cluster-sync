@@ -61,7 +61,7 @@ same time, version 1.3 would continue to receive patches until version
 Upgrade or Downgrade
 ~~~~~~~~~~~~~~~~~~~~
 
-To upgrade or downgrade ``mongosync``, perform these steps:
+Use the following steps to upgrade or downgrade ``mongosync``:
 
 - Stop all currently running ``mongosync`` processes.
 - Drop all non-system databases in the destination cluster.
