@@ -25,8 +25,11 @@ This page describes changes and new features introduced in
 MongoDB 8.0 support
 ~~~~~~~~~~~~~~~~~~~
 
-{+c2c-full-product-name+} 1.12 adds support for MongoDB 8.0. For a full list of
-supported versions, see :ref:`c2c-server-version-compatibility`.
+{+c2c-full-product-name+} 1.12 adds support for MongoDB 8.0. However, it does
+not migrate Persistent Query Settings (PQS), which are new in 8.0. If your 
+source cluster uses PQS, you must :ref:`migrate them manually <c2c-migrate-pqs>`.
+
+For a full list of supported versions, see :ref:`c2c-server-version-compatibility`.
 
 
 ``enableUserWriteBlocking`` parameters
