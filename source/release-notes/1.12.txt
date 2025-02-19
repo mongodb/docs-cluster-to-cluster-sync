@@ -29,6 +29,9 @@ The ``enableUserWriteBlocking`` parameter in the
 - ``"sourceAndDestination"`` for dual write-blocking
 - ``"none"`` for no write-blocking
 
+These options are identical to the ``true`` and ``false`` values, which
+``enableUserWriteBlocking`` still accepts for backward compatibility.
+
 See :ref:`c2c-api-start-params`. 
 
 Live Upgrades
