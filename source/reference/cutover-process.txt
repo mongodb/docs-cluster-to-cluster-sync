@@ -46,7 +46,8 @@ Steps
         If ``lagTimeSeconds`` isn't close to ``0`` when the cutover
         starts, cutover might take a long time.
 
-      The following example returns the status of the synchronization process.
+      The following example returns the status of the
+      synchronization process.
 
       Request
       ~~~~~~~
@@ -64,17 +65,8 @@ Steps
 
    .. step:: Stop any write operations to the synced collections on the source.
 
-<<<<<<< HEAD
-=======
       - Wait for all transactions on the source cluster to either commit or 
         abort.
-      - ``mongosync`` enables destination-only write-blocking by default. 
-        You can explicitly enable it by starting ``mongosync`` with
-        ``enableUserWriteBlocking`` set to ``"destinationOnly"``.
-        ``mongosync`` only blocks writes on the 
-        destination and unblocks them right before ``canWrite`` is
-        set to ``true``.
->>>>>>> 74d175d (DOCSP-45442 (#621))
       - If you start ``mongosync`` with ``enableUserWriteBlocking``
         set to ``true``, ``mongosync`` blocks all write operations on
         the entire source cluster during the commit (step 4) for you.
