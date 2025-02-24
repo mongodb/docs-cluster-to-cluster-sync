@@ -31,6 +31,9 @@ progress before the upgrade.
 
 To live upgrade ``mongosync``, perform these steps:
 
+Steps
+-----
+
 .. procedure::
    :style: normal
 
