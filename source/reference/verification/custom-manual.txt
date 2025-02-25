@@ -1,7 +1,7 @@
 .. _c2c-custom-manual-verification:
 
 ==================================
-Custom or Manual Verification Page
+Verifying Data with Custom Scripts
 ==================================
 
 .. default-domain:: mongodb
@@ -16,40 +16,38 @@ Custom or Manual Verification Page
    :depth: 1
    :class: singlecol
 
+You can write a script to query your source cluster and compare the documents,
+indexes, collections, metadata, and views with the destination cluster. 
+
 .. _c2c-document-comparison: 
 
-Document Comparison
+Comparing Documents
 -------------------
 
-You can verify sync by comparing documents on the source and destination 
-clusters. 
-
-Write a script that queries collections on the source cluster and then checks 
-that the correct documents, indexes, collections, metadata, and views exist with
-the same values on the destination cluster.
+You can verify sync by comparing documents on the source and destination clusters. 
 
 Before you can verify data transfer with this method, ``mongosync`` must be in 
 the ``COMMITTED`` state.
 
 .. _c2c-index-comparison: 
 
-Index Comparison
-----------------
+Comparing Indexes
+-----------------
 
-To verify the transfer of indexes, run the :method:`db.collection.getIndexes` 
-method on the source and destination clusters and compare the results. 
+To verify the transfer of indexes, run :method:`db.collection.getIndexes` 
+on the source and destination clusters and compare the results. 
 
 .. _c2c-metadata-comparison:
 
-Metadata Comparison
--------------------
+Comparing Metadata
+------------------
 
-To verify the transfer of metadata, run the :method:`db.getCollectionInfos` method
+To verify the transfer of metadata, run :method:`db.getCollectionInfos`
 on the source and destination clusters and compare the results.
 
 .. _c2c-shardkey-comparison: 
 
-Shard Key Comparison
+Comparing Shard Keys
 --------------------
 
 To verify the transfer of shard keys to a synced collection, run a query on the 
