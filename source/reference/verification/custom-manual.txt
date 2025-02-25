@@ -59,26 +59,26 @@ For example, for a collection named ``pets`` in the ``records`` database, you
 can verify the shard key using the following query in :binary:`mongosh`: 
 
 .. io-code-block:: 
-   :copyable: true
+    :copyable: true
 
-   .. input::
-      :language: javascript 
+    .. input::
+       :language: javascript 
 
-      db.getSiblingDB("config").collections.find({ _id : "records.pets" }) 
+       db.getSiblingDB("config").collections.find({ _id : "records.pets" }) 
 
-   .. output:: 
-      :language: javascript
-      :emphasize-lines: 5-7
-      :visible: false
+    .. output:: 
+       :language: javascript
+       :emphasize-lines: 5-7
+       :visible: false
 
-      {
-       "_id" : "records.pets",
-       "lastmod" : ISODate("2021-07-21T15:48:15.193Z"),
-       "timestamp": Timestamp(1626882495, 1),
-          "key" : {
-          "_id" : 1
-          },
-       "unique" : false,
-       "lastmodEpoch" : ObjectId("5078407bd58b175c5c225fdc"),
-       "uuid" :  UUID("f8669e52-5c1b-4ea2-bbdc-a00189b341da")
-   }
+       {
+        "_id" : "records.pets",
+        "lastmod" : ISODate("2021-07-21T15:48:15.193Z"),
+        "timestamp": Timestamp(1626882495, 1),
+           "key" : {
+           "_id" : 1
+           },
+        "unique" : false,
+        "lastmodEpoch" : ObjectId("5078407bd58b175c5c225fdc"),
+        "uuid" :  UUID("f8669e52-5c1b-4ea2-bbdc-a00189b341da")
+        }
