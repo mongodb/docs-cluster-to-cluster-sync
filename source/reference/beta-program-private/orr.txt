@@ -28,6 +28,10 @@ recent position in the :term:`oplog`. For source clusters with a high write
 rate, ORR significantly lowers the risk of oplog rollover during initial sync 
 and reduces the need to restart the sync.
 
+.. note::
+
+  ORR is compatible with :ref:`embedded verification<c2c-embedded-verifier>`. 
+
 Syntax 
 ------
 
