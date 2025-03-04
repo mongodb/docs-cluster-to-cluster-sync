@@ -34,8 +34,8 @@ The :ref:`Frequently Asked Questions (FAQ) <c2c-faq>` page addresses questions u
 Compatibility
 -------------
 
-- For full details on compatibility and version requirements, refer 
-  to :ref:`MongoDB Server Version Compatibility<c2c-server-version-compatibility>`.
+- For details on compatibility and version requirements, see 
+  :ref:`MongoDB Server Version Compatibility<c2c-server-version-compatibility>`.
 - ``mongosync`` supports replica sets and sharded clusters.
 - Standalone MongoDB instances are not supported. :ref:`Convert the
   standalone instance <server-replica-set-deploy-convert>` to a
