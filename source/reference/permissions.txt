@@ -30,6 +30,20 @@ The Atlas permissions are:
 
 .. include:: /includes/table-permissions-atlas.rst
 
+.. _c2c-minimum-privileges:
+
+Minimum Privileges
+------------------
+
+The minimum source privileges are:
+
+.. include:: /includes/minimum-source-privileges.rst
+
+The minimum destination privileges are:
+
+.. include:: /includes/minimum-destination-privileges.rst
+
+
 .. _c2c-older-version-permissions:
 
 Pre-6.0 Migrations 
