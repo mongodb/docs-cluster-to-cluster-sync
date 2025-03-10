@@ -1,7 +1,7 @@
 .. list-table::
    :header-rows: 1
    :stub-columns: 1
-   :widths: 20 40 40
+   :widths: 30 20 
 
    * - Sync Type
      - Minimum Source Privileges
@@ -93,6 +93,7 @@
 
    * - V4.4 Migration (insert footnote)
      - .. code-block:: javascript
+  
           [
 	        {
 		        "resource": { "cluster": true },
