@@ -145,7 +145,7 @@
 	    {
 		        "resource": { "db": "config", "collection": "settings" },
 		        "actions": [ "find" ]
-	    }
-       ]
+	      }
+         ]
 
 
