@@ -13,33 +13,33 @@
 	        {
 		        "resource": { "cluster": true },
 		        "actions": [
-			          "appendOplogNote"    ,
-			          "getDefaultRWConcern",
-			          "getShardMap"        ,
-			          "hostInfo"           ,
-			          "listDatabases"      ,
-			          "listShards"         ,
-			          "replSetGetConfig"   ,
-			          "replSetGetStatus"   ,
-			          "serverStatus"
+			        "appendOplogNote",
+			        "getDefaultRWConcern",
+			        "getShardMap",
+			        "hostInfo",
+			        "listDatabases",
+			        "listShards",
+			        "replSetGetConfig",
+			        "replSetGetStatus",
+			        "serverStatus"
 		          ]
-	      },
-	      {
+	        },
+	        {
 		        "resource": { "db": "", "collection": "" },
 		        "actions": [
-			          "changeStream"   ,
-			          "collStats"      ,
-			          "find"           ,
-			          "indexStats"     ,
-			          "listCollections",
-			          "listIndexes"
+			        "changeStream",
+			        "collStats",
+			        "find",
+			        "indexStats",
+			        "listCollections",
+			        "listIndexes"
 		        ]
-	      },
-	      {
+	        },
+	        {
 		        "resource": { "db": "admin", "collection": "system.version" },
 		        "actions": [ "find" ]
-	       },
-	       {
+	        },
+	        {
 		        "resource": { "db": "", "collection": "system.js" },
 		        "actions": [ "listCollections", "listIndexes" ]
 	        },
@@ -50,20 +50,20 @@
 	        {
 		        "resource": { "db": "config", "collection": "collections" },
 		        "actions": [ "find" ]
-	         },
-	         {
+	        },
+	        {
 		        "resource": { "db": "config", "collection": "version" },
 		        "actions": [ "find" ]
-	         },
-	         {
+	        },
+	        {
 		        "resource": { "db": "config", "collection": "settings" },
 		        "actions": [ "find" ]
 	        },
 	        {
 		        "resource": { "system_buckets": "" },
 		        "actions": [ "listCollections", "listIndexes" ]
-	         }
-             ]
+	        }
+          ]
 
    * - Write-blocking
      - Everything from the default source privileges with the addition of:
@@ -88,7 +88,7 @@
        .. code-block:: javascript
 
           [
-	          { "resource": { "db": "", "collection": "" }, "actions": [ "dropDatabase" ] }
+	        { "resource": { "db": "", "collection": "" }, "actions": [ "dropDatabase" ] }
           ]
 
    * - V4.4 Migration (insert footnote)
@@ -98,54 +98,54 @@
 	        {
 		        "resource": { "cluster": true },
 		        "actions": [
-			          "addShard"           ,
-			          "appendOplogNote"    ,
-			          "flushRouterConfig"  ,
-			          "getDefaultRWConcern",
-			          "getShardMap"        ,
-			          "hostInfo"           ,
-			          "listDatabases"      ,
-			          "listShards"         ,
-			          "replSetGetConfig"   ,
-			          "replSetGetStatus"   ,
-			          "serverStatus"
+			        "addShard",
+			        "appendOplogNote",
+			        "flushRouterConfig",
+			        "getDefaultRWConcern",
+			        "getShardMap",
+			        "hostInfo",
+			        "listDatabases",
+			        "listShards",
+			        "replSetGetConfig",
+			        "replSetGetStatus",
+			        "serverStatus"
 		    ]
-	    },
-	    {
-		            "resource": { "db": "", "collection": "" },
-		            "actions": [
-			              "changeStream"   ,
-			              "collStats"      ,
-			              "find"           ,
-			              "indexStats"     ,
-			              "listCollections",
-			              "listIndexes"
+	        },
+	        {
+		        "resource": { "db": "", "collection": "" },
+		        "actions": [
+			        "changeStream",
+			        "collStats",
+			        "find",
+			        "indexStats",
+			        "listCollections",
+			        "listIndexes"
 		           ]
-	    },
-	    {
+	        },
+	        {
 		        "resource": { "db": "admin", "collection": "system.version" },
 		        "actions": [ "find" ]
-	    },
-	    {
+	        },
+	        {
 		        "resource": { "db": "", "collection": "system.js" },
 		        "actions": [ "listCollections", "listIndexes" ]
-	    },
-	    {
+	        },
+	        {
 		        "resource": { "db": "config", "collection": "shards" },
 		        "actions": [ "find" ]
-	    },
-	    {
+	        },
+	        {
 		        "resource": { "db": "config", "collection": "collections" },
 		        "actions": [ "find" ]
-	    },
-	    {
+	        },
+	        {
 		        "resource": { "db": "config", "collection": "version" },
 		        "actions": [ "find" ]
-	    },
-	    {
+	        },
+	        {
 		        "resource": { "db": "config", "collection": "settings" },
 		        "actions": [ "find" ]
-	      }
+	        }
          ]
 
 
