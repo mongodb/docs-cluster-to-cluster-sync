@@ -1,7 +1,7 @@
 .. list-table::
    :header-rows: 1
    :stub-columns: 1
-   :widths: 30 10
+   :widths: 10 20
 
    * - Sync Type
      - Minimum Destination Privileges

@@ -1,7 +1,7 @@
 .. list-table::
    :header-rows: 1
    :stub-columns: 1
-   :widths: 30 20 
+   :widths: 10 30
 
    * - Sync Type
      - Minimum Source Privileges
