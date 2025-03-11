@@ -10,7 +10,7 @@
      - .. code-block:: javascript
 
           [
-	        {
+	         {
 		        "resource": { "cluster": true },
 		        "actions": [
 			        "appendOplogNote",
@@ -23,8 +23,8 @@
 			        "replSetGetStatus",
 			        "serverStatus"
 		          ]
-	        },
-	        {
+	         },
+	         {
 		        "resource": { "db": "", "collection": "" },
 		        "actions": [
 			        "changeStream",
@@ -34,35 +34,35 @@
 			        "listCollections",
 			        "listIndexes"
 		        ]
-	        },
-	        {
+	         },
+	         {
 		        "resource": { "db": "admin", "collection": "system.version" },
 		        "actions": [ "find" ]
-	        },
-	        {
+	         },
+	         {
 		        "resource": { "db": "", "collection": "system.js" },
 		        "actions": [ "listCollections", "listIndexes" ]
-	        },
-	        {
+	         },
+	         {
 		        "resource": { "db": "config", "collection": "shards" },
 		        "actions": [ "find" ]
-	        },
-	        {
+	         },
+	         {
 		        "resource": { "db": "config", "collection": "collections" },
 		        "actions": [ "find" ]
-	        },
-	        {
+	         },
+	         {
 		        "resource": { "db": "config", "collection": "version" },
 		        "actions": [ "find" ]
-	        },
-	        {
+	         },
+	         {
 		        "resource": { "db": "config", "collection": "settings" },
 		        "actions": [ "find" ]
-	        },
-	        {
+	         },
+	         {
 		        "resource": { "system_buckets": "" },
 		        "actions": [ "listCollections", "listIndexes" ]
-	        }
+	         }
           ]
 
    * - Write-blocking
@@ -88,14 +88,14 @@
        .. code-block:: javascript
 
           [
-	        { "resource": { "db": "", "collection": "" }, "actions": [ "dropDatabase" ] }
+	         { "resource": { "db": "", "collection": "" }, "actions": [ "dropDatabase" ] }
           ]
 
    * - V4.4 Migration (insert footnote)
      - .. code-block:: javascript
   
           [
-	        {
+	         {
 		        "resource": { "cluster": true },
 		        "actions": [
 			        "addShard",
@@ -109,9 +109,9 @@
 			        "replSetGetConfig",
 			        "replSetGetStatus",
 			        "serverStatus"
-		    ]
-	        },
-	        {
+		        ]
+	         },
+	         {
 		        "resource": { "db": "", "collection": "" },
 		        "actions": [
 			        "changeStream",
@@ -120,32 +120,32 @@
 			        "indexStats",
 			        "listCollections",
 			        "listIndexes"
-		           ]
-	        },
-	        {
+		        ]
+	         },
+	         {
 		        "resource": { "db": "admin", "collection": "system.version" },
 		        "actions": [ "find" ]
-	        },
-	        {
+	         },
+	         {
 		        "resource": { "db": "", "collection": "system.js" },
 		        "actions": [ "listCollections", "listIndexes" ]
-	        },
-	        {
+	         },
+	         {
 		        "resource": { "db": "config", "collection": "shards" },
 		        "actions": [ "find" ]
-	        },
-	        {
+	         },
+	         {
 		        "resource": { "db": "config", "collection": "collections" },
 		        "actions": [ "find" ]
-	        },
-	        {
+	         },
+	         {
 		        "resource": { "db": "config", "collection": "version" },
 		        "actions": [ "find" ]
-	        },
-	        {
+	         },
+	         {
 		        "resource": { "db": "config", "collection": "settings" },
 		        "actions": [ "find" ]
-	        }
-         ]
+	         }
+          ]
 
 
