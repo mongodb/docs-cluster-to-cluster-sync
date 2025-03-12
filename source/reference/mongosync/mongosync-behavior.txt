@@ -281,7 +281,7 @@ Rolling Index Builds
 
 .. include:: /includes/rolling-build-limitation.rst
 
-``mongosync`` metadata
+``mongosync`` Metadata
 ~~~~~~~~~~~~~~~~~~~~~~
 
 ``mongosync`` stores its metadata in a database during migration. The metadata
