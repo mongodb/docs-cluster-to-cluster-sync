@@ -8,7 +8,7 @@
 
    * - Default
      - .. code-block:: javascript
-       
+
           [
 	         {
 		        "resource": { "cluster": true },
