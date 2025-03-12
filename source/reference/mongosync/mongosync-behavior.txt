@@ -285,7 +285,7 @@ Rolling Index Builds
 ~~~~~~~~~~~~~~~~~~~~~~
 
 ``mongosync`` stores its metadata in a database during migration. The metadata
-database may be named any of the following: 
+database will be named any of the following: 
 
 - ``mongosync_reserved_for_internal_use``
 - Anything beginning with ``mongosync_internal_``
