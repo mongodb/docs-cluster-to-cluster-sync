@@ -5,6 +5,7 @@
 .. list-table::
    :header-rows: 1
    :stub-columns: 1
+   :widths: 15 20 20
 
    * - Sync Type
      - Required Source Permissions
