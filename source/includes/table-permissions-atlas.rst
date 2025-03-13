@@ -10,12 +10,12 @@
      - Required Source Permissions
      - Required Destination Permissions
 
-   * - default
+   * - Default
      - - atlasAdmin
      - - atlasAdmin
        - :authaction`bypassWriteBlockingMode` privilege
        
-   * - dual write-blocking, reversing, or multiple reversals
+   * - Dual write-blocking, reversing, or multiple reversals
      - - atlasAdmin
        - :authaction`bypassWriteBlockingMode` privilege
      - - atlasAdmin
