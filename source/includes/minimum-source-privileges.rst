@@ -91,7 +91,7 @@
               { "resource": { "db": "", "collection": "" }, "actions": [ "dropDatabase" ] }
           ]
 
-   * - V4.4 Migration (insert footnote)
+   * - V4.4 Migration
      - .. code-block:: javascript
   
           [
