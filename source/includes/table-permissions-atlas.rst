@@ -13,13 +13,13 @@
    * - Default
      - - atlasAdmin
      - - atlasAdmin
-       - :authaction`bypassWriteBlockingMode` privilege
+       - :authaction:`bypassWriteBlockingMode`
        
    * - Dual write-blocking, reversing, or multiple reversals
      - - atlasAdmin
-       - :authaction`bypassWriteBlockingMode` privilege
+       - :authaction:`bypassWriteBlockingMode`
      - - atlasAdmin
-       - :authaction`bypassWriteBlockingMode` privilege
+       - :authaction:`bypassWriteBlockingMode`
 
 For details on Atlas roles, see: :atlas:`Atlas User Roles
 </reference/user-roles/>`.
