@@ -102,6 +102,29 @@ preserve the source cluster's sharding configuration.
 
 .. include:: /includes/fact-mongosync-balancer.rst
 
+.. _enabling-balancer-filtered:
+
+Enabling Balancer in Filtered Sync
+''''''''''''''''''''''''''''''''''
+
+Before starting ``mongosync`` with a :ref:`namespace filter 
+<c2c-filtered-sync>`, enable the balancer for the source cluster
+by running the :method:`sh.startBalancer()` method in ``mongosh``. 
+Then, disable the balancer for each collection within the
+namespace filter by running the :dbcommand:`setAllowMigrations` command:
+
+.. code-block:: shell
+   
+   db.adminCommand(
+     { 
+       setAllowMigrations: “<db>.<collection>”,
+       allowMigrations: false
+     }
+   )
+
+Run the preceding command for every collection within the
+namespace filter.
+
 Pre-Split Chunks
 ''''''''''''''''
 
@@ -131,7 +154,7 @@ primary shard to each database by means of a round-robin.
 
 .. warning::
 
-   Running :dbcommand:`movePrimary` on the source or desintation cluster
+   Running :dbcommand:`movePrimary` on the source or destination cluster
    during migration may result in a fatal error or require you to
    restart the migration from the start. For more information, see
    :ref:`c2c-sharded-limitations`. 
