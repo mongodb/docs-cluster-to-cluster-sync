@@ -128,6 +128,8 @@ Sharded Clusters
   the source cluster's balancer on collections within the :ref:`namespace
   filter <c2c-filtered-sync>`. You can enable the source cluster's balancer on
   the cluster level and for collections outside the namespace filter. 
+  If you are not running a filtered sync, you must stop the source cluster's
+  balancer.
   You must also stop the destination cluster's balancer. See 
   :ref:`enabling-balancer-filtered` to learn how to enable the balancer during
   filtered sync.
