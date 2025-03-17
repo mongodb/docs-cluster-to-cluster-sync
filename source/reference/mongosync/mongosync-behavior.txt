@@ -372,6 +372,15 @@ error occurs, the ``mongosync`` log may contain the word "error' but
 ``mongosync`` is still able to complete the sync. In the case that a
 sync does not complete, ``mongosync`` writes a fatal log entry. 
 
+``mongosync`` only exits with an info level log when it sees a normal 
+cancellation and crashes with a fatal level log for all other cases.
+
+The known normal cancellations are: 
+
+- If the user calls ``pause``
+- If a test calls ``cancel`` as part of normal operation
+- If ``mongosync`` encounters signals from the ``sigChan`` in ``cmd``/``mongosync``/``main.go``
+
 .. _c2c-mongosync-ddl:
 
 Data Definition Language (DDL) Operations
