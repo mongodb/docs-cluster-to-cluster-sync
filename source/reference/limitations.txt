@@ -137,7 +137,10 @@ Sharded Clusters
 - If you have enabled the source cluster's
   balancer, but disabled it for collections within the namespace
   filter, do not run :dbcommand:`shardCollection` on collections
-  within the namespace filter.
+  within the namespace filter. If you run :dbcommand:`shardCollection` on 
+  collections within the namespace filter during the migration, ``mongosync``
+  returns an error and stops, which requires you to start the migration
+  from scratch.
 
 - You must not run the :dbcommand:`moveChunk` and
   :dbcommand:`moveRange` commands on the source or destination clusters.
