@@ -12,4 +12,5 @@
    filter, do not run :dbcommand:`shardCollection` on collections
    within the namespace filter. If you run :dbcommand:`shardCollection` on 
    collections within the namespace filter during the migration, ``mongosync``
-   returns an error and stops.
+   returns an error and stops, which requires you to start the migration
+   from scratch.
