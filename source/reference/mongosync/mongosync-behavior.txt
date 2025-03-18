@@ -125,6 +125,17 @@ namespace filter by running the :dbcommand:`setAllowMigrations` command:
 Run the preceding command for every collection within the
 namespace filter.
 
+Then, run the :dbcommand:`balancerStop` command to stop
+the balancer on the destination cluster and wait for the command to complete.
+
+After stopping the balancer, wait fifteen minutes before
+starting ``mongosync``. This gives the cluster time to
+finish any in progress chunk migrations.
+
+If you enable the source cluster's balancer but do not use a
+namespace filter, or if you disable the balancer for all
+collections within the namespace filter, ``mongosync`` fails.
+
 Pre-Split Chunks
 ''''''''''''''''
 
