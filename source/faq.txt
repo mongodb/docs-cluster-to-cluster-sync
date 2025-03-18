@@ -236,9 +236,9 @@ on a destination sharded cluster.  ``mongosync`` samples each collection
 during initialization to determine how to distribute documents
 efficiently across the destination cluster’s shards after migration.
 
-Can I use mongosync to set up a Disaster Recovery cluster?
+Can I use ``mongosync`` to set up a Disaster Recovery cluster?
 ----------------------------------------------------------
 
-This is not possible to do with ``mongosync`` today, since 
-``mongosync`` must commit in order to safely accept traffic to the 
+No, you can't currently set up a Disaster Recovery cluster with ``mongosync``, 
+since ``mongosync`` must commit in order to safely accept traffic to the 
 destination cluster. For more information, see :ref:`c2c-faq-reads-writes-mongosync`.
