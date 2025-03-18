@@ -55,9 +55,9 @@
 
        With the introduction of the :ref:`embdedded verfier<c2c-embedded-verifier>`
        in version 1.9, there are now three different ``lagTimeSeconds`` fields: 
-        - ``lagTimeSeconds`` for ``mongosync``
-        - ``lagTimeSeconds`` for the source cluster for the verifier
-        - ``lagTimeSeconds`` for the destination cluster for the verifier
+       - ``lagTimeSeconds`` for ``mongosync``
+       - ``lagTimeSeconds`` for the source cluster for the verifier
+       - ``lagTimeSeconds`` for the destination cluster for the verifier
 
    * - ``totalEventsApplied``
      - integer
