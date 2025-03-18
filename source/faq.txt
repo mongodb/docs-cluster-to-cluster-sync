@@ -237,7 +237,7 @@ during initialization to determine how to distribute documents
 efficiently across the destination cluster’s shards after migration.
 
 Can I use ``mongosync`` to set up a Disaster Recovery cluster?
-----------------------------------------------------------
+--------------------------------------------------------------
 
 No, you can't currently set up a Disaster Recovery cluster with ``mongosync``, 
 since ``mongosync`` must commit in order to safely accept traffic to the 
