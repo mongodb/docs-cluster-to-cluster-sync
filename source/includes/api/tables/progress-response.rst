@@ -54,10 +54,14 @@
        when ``mongosync`` commits the migration.
 
        With the introduction of the :ref:`embdedded verfier<c2c-embedded-verifier>`
-       in version 1.9, there are now three different ``lagTimeSeconds`` fields: 
+       in version 1.9, there are three different ``lagTimeSeconds`` fields whenever
+       embedded verification is enabled: 
        - ``lagTimeSeconds`` for ``mongosync``
        - ``lagTimeSeconds`` for the source cluster for the verifier
        - ``lagTimeSeconds`` for the destination cluster for the verifier
+
+       When embdedded verification is disabled, ``lagTimeSeconds`` only applies
+       to ``mongosync``.
 
    * - ``totalEventsApplied``
      - integer
