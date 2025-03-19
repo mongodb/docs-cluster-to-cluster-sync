@@ -58,7 +58,7 @@ Can I use ``mongosync`` to maintain a Disaster Recovery cluster?
 ----------------------------------------------------------------
 
 No, you can't currently maintain a Disaster Recovery cluster with ``mongosync``, 
-since ``mongosync`` **must :ref:`<c2c-api-commit>`** in order to 
+since ``mongosync`` must :ref:`c2c-api-commit` in order to 
 safely accept traffic to the destination cluster. 
 For more information, see :ref:`c2c-faq-reads-writes-mongosync`.
 
