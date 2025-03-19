@@ -54,6 +54,14 @@ To learn more about permissable reads and writes during synchronization, see
    Index builds on the destination cluster are treated as writes 
    while ``mongosync`` is syncing.
 
+Can I use ``mongosync`` to maintain a Disaster Recovery cluster?
+----------------------------------------------------------------
+
+No, you can't currently maintain a Disaster Recovery cluster with ``mongosync``, 
+since ``mongosync`` **must :ref:`<c2c-api-commit>`** in order to 
+safely accept traffic to the destination cluster. 
+For more information, see :ref:`c2c-faq-reads-writes-mongosync`.
+
 Why are the destination cluster indexes larger than the source cluster indexes?
 -------------------------------------------------------------------------------
 
@@ -235,10 +243,3 @@ No, you can't configure ``mongosync`` to customize chunk distributions
 on a destination sharded cluster.  ``mongosync`` samples each collection
 during initialization to determine how to distribute documents
 efficiently across the destination cluster’s shards after migration.
-
-Can I use ``mongosync`` to set up a Disaster Recovery cluster?
---------------------------------------------------------------
-
-No, you can't currently set up a Disaster Recovery cluster with ``mongosync``, 
-since ``mongosync`` **must commit** in order to safely accept traffic to the 
-destination cluster. For more information, see :ref:`c2c-faq-reads-writes-mongosync`.

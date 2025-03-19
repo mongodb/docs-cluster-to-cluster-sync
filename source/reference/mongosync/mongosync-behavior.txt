@@ -215,10 +215,6 @@ invalid index options on the destination.
 Considerations for Continuous Sync
 ----------------------------------
 
-For any continuous synchronization use cases with ``mongosync``, ensure that 
-``mongosync`` commits before cutting over from the source to the 
-destination.
-
 .. important::
 
    .. include:: /includes/fact-no-mongosync-disaster-recovery.rst
