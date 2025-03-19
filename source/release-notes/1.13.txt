@@ -34,8 +34,8 @@ New Features
   
   .. note::
 
-     You don't need to disable the source balancer on a per-collection
-     basis. You can still disable the source balancer globally.
+     You don't need to disable the source balancer on individual
+     collections. You can still disable the source balancer globally.
 
 Platform Support
 ~~~~~~~~~~~~~~~~
