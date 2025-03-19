@@ -1,4 +1,4 @@
-Until you've called commit on mongosync and canWrite successfully 
-returns true, the destination cluster cannot be used to accept 
+Until you've called commit on ``mongosync`` and ``canWrite`` successfully 
+returns ``true``, the destination cluster cannot be used to accept 
 application read or write traffic. 
-Do not use mongosync for maintaining Disaster Recovery clusters.
+Do not use ``mongosync`` for maintaining Disaster Recovery clusters.
