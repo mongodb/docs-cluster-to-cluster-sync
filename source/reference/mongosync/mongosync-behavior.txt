@@ -113,6 +113,13 @@ destination cluster.
 Chunk Distribution
 ''''''''''''''''''
 
+.. important::
+   
+   Even if the source cluster is balanced, ``mongosync`` does not
+   ensure balance of the destination cluster. To balance the destination
+   cluster, enable the destination cluster's balancer after your
+   migration finishes.
+
 ``mongosync`` does not preserve chunk distribution from the source to
 the destination, even with multiple ``mongosync`` instances. It is not
 possible to reproduce a particular pre-split of chunks from a source
