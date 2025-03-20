@@ -147,7 +147,7 @@ within the namespace filter.
       for the command to complete.
       After stopping the balancer, wait **fifteen minutes** before
       starting ``mongosync``. This gives the cluster time to
-      finish any in progress chunk migrations.
+      finish any in-progress chunk migrations.
 
 .. important:: 
 
