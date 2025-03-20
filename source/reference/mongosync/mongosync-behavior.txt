@@ -139,15 +139,6 @@ starting ``mongosync``.
       Run the preceding command for every collection within the
       namespace filter.
 
-   .. step:: Stop the balancer on the destination cluster.
-
-      Run the :dbcommand:`balancerStop` command to stop
-      the balancer on the destination cluster and wait 
-      for the command to complete.
-      After stopping the balancer, wait **fifteen minutes** before
-      starting ``mongosync``. This gives the cluster time to
-      finish any in-progress chunk migrations.
-
 .. important:: 
 
    If you enable the source cluster's balancer but do not use a
