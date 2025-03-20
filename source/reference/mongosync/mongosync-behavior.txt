@@ -108,11 +108,10 @@ Disabling Balancer for Collections in Filtered Sync
 '''''''''''''''''''''''''''''''''''''''''''''''''''
 
 If you are using a :ref:`namespace filter <c2c-filtered-sync>`
-and want to enable your source cluster's balancer,
+and want to enable your source cluster's balancer for 
+collections outside the namespace filter,
 use the following instructions before
-starting ``mongosync``. These instructions allow you to enable the balancer 
-for the source cluster and disable the balancer for collections 
-within the namespace filter.
+starting ``mongosync``.
 
 .. procedure::
    :style: normal

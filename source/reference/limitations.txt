@@ -132,10 +132,11 @@ Sharded Clusters
   for the command to complete.
 
   If the source or destination cluster is a sharded cluster and you
-  are running ``mongosync`` with namespace filtering, you can enable the source cluster's
-  balancer overall but you must disable it for 
+  are running ``mongosync`` with namespace filtering, you can 
+  globally enable the source cluster's
+  balancer but you must disable it for 
   all collections within the namespace filter. 
-  See :ref:`disabling-balancer-filtered`. You can also disable
+  See :ref:`disabling-balancer-filtered`. You can also fully disable
   the source cluster's balancer.
 
   You must always disable the balancer on a sharded destination
