@@ -107,13 +107,15 @@ preserve the source cluster's sharding configuration.
 Disabling Balancer for Collections in Filtered Sync
 '''''''''''''''''''''''''''''''''''''''''''''''''''
 
-If you want to enable the balancer for collections that are not
-included in the namespace filter, use the following instructions before
+If you are using a :ref:`namespace filter <c2c-filtered-sync>`
+and want to enable your source cluster's balancer,
+use the following instructions before
 starting ``mongosync``. These instructions allow you to enable the balancer 
 for the source cluster and disable the balancer for collections 
 within the namespace filter.
 
 .. procedure::
+   :style: normal
 
    .. step:: Enable the balancer for the source cluster.
     
@@ -126,7 +128,7 @@ within the namespace filter.
       Disable the balancer for each collection within the
       namespace filter by running the :dbcommand:`setAllowMigrations` command:
 
-      .. code-block:: shell
+      .. code-block:: javascript
         
         db.adminCommand(
           { 
