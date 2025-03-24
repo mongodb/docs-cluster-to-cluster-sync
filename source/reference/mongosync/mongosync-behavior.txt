@@ -172,6 +172,13 @@ Primary Shards
 When you sync to a sharded destination cluster, ``mongosync`` assigns a
 primary shard to each database by means of a round-robin. 
 
+.. warning::
+
+   Running :dbcommand:`movePrimary` on the source or destination cluster
+   during migration may result in a fatal error or require you to
+   restart the migration from the start. For more information, see
+   :ref:`c2c-sharded-limitations`. 
+
 Embedded Config Server Shards
 '''''''''''''''''''''''''''''
 
@@ -180,13 +187,6 @@ Starting in 8.0. MongoDB introduces support for embedded config server shards.
 ``mongosync`` supports sync from dedicated config server sharded clusters to 
 embedded config server sharded clusters and vice versa. Additionally, ``mongosync`` 
 supports sync from replica sets to embedded config sharded clusters.
-
-.. warning::
-
-   Running :dbcommand:`movePrimary` on the source or destination cluster
-   during migration may result in a fatal error or require you to
-   restart the migration from the start. For more information, see
-   :ref:`c2c-sharded-limitations`. 
 
 Multiple Clusters
 ~~~~~~~~~~~~~~~~~
