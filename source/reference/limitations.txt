@@ -150,8 +150,8 @@ Sharded Clusters
   returns an error and stops, which requires you to start the migration
   from scratch.
 
-- :dbcommand:`transitionFromDedicatedConfigServer` is not supported during 
-  ``mongosync`` execution.
+- ``mongosync`` doesn't support running the command :dbcommand:`transitionFromDedicatedConfigServer`
+  during ``mongosync`` execution.
 
 - You must not run the :dbcommand:`moveChunk` and
   :dbcommand:`moveRange` commands on the source or destination clusters.
