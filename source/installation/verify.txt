@@ -16,7 +16,7 @@ Verify Integrity of mongosync Packages
 
 .. include:: /includes/verify-signatures-intro.rst
 
-To learn how to verify Database Tools packages, see the corresponding
+To learn how to verify ``mongosync`` packages, see the corresponding
 page for your verification method:
 
 - :ref:`c2c-verify-signatures-macos`

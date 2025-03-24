@@ -43,8 +43,6 @@ Steps
       command, replacing the placeholder values with your platform,
       architecture, and ``mongosync`` version:
 
-https://fastdl.mongodb.org/tools/mongosync/mongosync-amazon2-x86_64-1.12.0.tgz
-
       .. code-block:: sh
 
          curl -LO https://s3.amazonaws.com/downloads.mongodb.org/tools/mongosync/mongosync-<platform>-<architecture>-<version>.tgz.sig
