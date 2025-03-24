@@ -1,4 +1,4 @@
-.. _db-tools-verify-signatures-rpm:
+.. _c2c-verify-signatures-rpm:
 
 ==========================
 Verify RPM Packages (RHEL)
@@ -51,4 +51,4 @@ Steps
       .. code-block:: sh
          :copyable: false
 
-         <path_to_db_tools_rpm_file> digests signatures OK
+         <path_to_mongosync_rpm_file> digests signatures OK
