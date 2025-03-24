@@ -188,7 +188,7 @@ Starting in 8.0, MongoDB introduces support for embedded config server shards.
 embedded config server sharded clusters and vice versa. Additionally, ``mongosync`` 
 supports sync from replica sets to embedded config sharded clusters.
 
-For more information, see :ref:`config-shard-concept`. 
+To learn more about embedded config servers, see :ref:`config-shard-concept`. 
 
 Multiple Clusters
 ~~~~~~~~~~~~~~~~~

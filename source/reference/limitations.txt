@@ -151,7 +151,7 @@ Sharded Clusters
   from scratch.
 
 - ``mongosync`` doesn't support running the command :dbcommand:`transitionFromDedicatedConfigServer`
-  during ``mongosync`` execution.
+  during execution.
 
 - You must not run the :dbcommand:`moveChunk` and
   :dbcommand:`moveRange` commands on the source or destination clusters.
