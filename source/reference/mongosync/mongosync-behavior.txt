@@ -182,11 +182,14 @@ primary shard to each database by means of a round-robin.
 Config Shard Cluster
 ''''''''''''''''''''
 
-Starting in 8.0, MongoDB introduces support for :ref:`config-shard-concept`.
+Starting in 8.0, MongoDB introduces support for config shard clusters, also known
+as embedded config server clusters.
 
 ``mongosync`` supports sync from dedicated config server sharded clusters to 
-config server sharded clusters and vice versa. Additionally, ``mongosync`` 
+embedded config server sharded clusters and vice versa. Additionally, ``mongosync`` 
 supports sync from replica sets to config sharded clusters.
+
+To learn more about embedded config servers, see :ref:`config-shard-concept`.
 
 Multiple Clusters
 ~~~~~~~~~~~~~~~~~
