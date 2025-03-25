@@ -120,7 +120,8 @@ Chunk Distribution
    does not support the execution of sharding operations during
    migration, you must wait until it is safe to accept writes 
    to rebalance the destination cluster. See :ref:`sharding-balancing`
-   for guidance on how to rebalance the cluster.
+   for guidance on how to rebalance the cluster and :ref:`c2c-sharded-limitations`
+   for information on sharded cluster limitations in ``mongosync``.
 
 ``mongosync`` does not preserve chunk distribution from the source to
 the destination, even with multiple ``mongosync`` instances. It is not
