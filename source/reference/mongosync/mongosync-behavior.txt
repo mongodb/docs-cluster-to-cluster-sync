@@ -118,7 +118,7 @@ Chunk Distribution
    Even if the source cluster is balanced, ``mongosync`` does not
    ensure balance of the destination cluster. To balance the destination
    cluster, enable the destination cluster's balancer after your
-   migration finishes.
+   migration finishes by running the :dbcommand:`balancerStart` command.
 
 ``mongosync`` does not preserve chunk distribution from the source to
 the destination, even with multiple ``mongosync`` instances. It is not
