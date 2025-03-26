@@ -27,7 +27,7 @@ Upgrades to Embedded Verifier
 
 - .. include:: /includes/verify-reversible-migrations.rst
 
-- ``mongosync`` now enables the embedded verifier on
+- ``mongosync`` enables the embedded verifier on
   sharded clusters by default.
 
 .. _c2c-older-version-support:
