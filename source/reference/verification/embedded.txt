@@ -21,9 +21,8 @@ Verify with Embedded Verifier
 
 ``mongosync`` includes an embedded verifier to perform a series
 of checks on the destination cluster to verify the sync of
-supported collections. 
-
-``mongosync`` enables the verifier by default on replica set clusters. 
+supported collections. ``mongosync`` enables the verifier by 
+default on replica set clusters. 
 
 Starting in version 1.10, ``mongosync`` enables the verifier by 
 default on sharded clusters.
