@@ -187,7 +187,7 @@ as embedded config server clusters.
 
 ``mongosync`` supports sync from dedicated config server sharded clusters to 
 embedded config server sharded clusters and vice versa. Additionally, ``mongosync`` 
-supports sync from replica sets to config sharded clusters.
+supports sync from replica sets to config sharded clusters, but not vice versa.
 
 To learn more about embedded config servers, see :ref:`config-shard-concept`.
 
