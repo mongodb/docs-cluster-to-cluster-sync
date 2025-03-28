@@ -52,7 +52,7 @@ variant = "info"
 value = """\
 This version of the documentation is archived and no longer supported. View 
 the `current documentation <https://www.mongodb.com/docs/cluster-to-cluster-sync/current/>`__ 
-to learn how to upgrade your version of ``mongosync``__.\
+to learn how to upgrade your version of ``mongosync``.\
 """
 
 [[banners]]
