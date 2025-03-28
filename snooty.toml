@@ -55,6 +55,7 @@ the `current documentation <https://www.mongodb.com/docs/cluster-to-cluster-sync
 to learn how to upgrade your version of ``mongosync``__.\
 """
 
+[[banners]]
 # Warning for non-genuine deployment usage with tool binaries.
 targets = [
         "index.txt",
