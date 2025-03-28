@@ -47,7 +47,6 @@ version-dev = "{+version-dev+}"
 
 [[banners]]
 # EOL banner
-[[banners]]
 targets = ["*"]
 variant = "info"
 value = """\
