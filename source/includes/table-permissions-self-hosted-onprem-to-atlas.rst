@@ -20,7 +20,7 @@
        - :authrole:`clusterManager`
        - :authrole:`clusterMonitor`
        - :authrole:`readWriteAnyDatabase`
-       - :authrole:`restore``
+       - :authrole:`restore`
 
    * - Reversing
      - - :authrole:`backup`
