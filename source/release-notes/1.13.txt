@@ -24,7 +24,7 @@ Patch Releases
 Issues Fixed:
 
 - Fixes a bug introduced in ``mongosync`` 1.10 where ``mongosync`` failed
-  to retry on some network errors, which could cause it to unnecessarily 
+  to retry on some transient network errors, which could cause it to unnecessarily 
   exit with an error.
 
 .. _1.13.0-c2c-release-notes:
