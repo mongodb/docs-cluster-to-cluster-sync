@@ -38,8 +38,7 @@ you can use regular expressions:
 
 The regular expression pattern you pass into a filter must follow the :query:`regex <$regex>` syntax supported by the MongoDB server.
 
-The following ``options`` are available for use with regular
-expressions:
+Regular expressions in filter documents use the following ``options``:
 
 .. list-table::
    :header-rows: 1
