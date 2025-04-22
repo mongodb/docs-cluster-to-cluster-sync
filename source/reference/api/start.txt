@@ -142,10 +142,9 @@ Request Body Parameters
          before ``canWrite`` is ``true``.
 
        To reverse sync, the ``enableUserWriteBlocking`` field must be set
-       to ``"sourceAndDestination"`` and the user must have assigned the 
-       :authrole:`restore` role for both source and destination.
+       to ``"sourceAndDestination"``.
        
-       For more information, see :ref:`c2c-permissions-and-roles`.
+       .. include:: /includes/fact-permissions-body.rst
        
        To allow the source cluster to accept writes again, for example
        after running migration tests, run the following command: 
@@ -181,10 +180,9 @@ Request Body Parameters
        reversed.
 
        To reverse sync, the ``enableUserWriteBlocking`` field must be set
-       to ``sourceAndDestination`` and the user must have assigned the 
-       :authrole:`restore` role for both source and destination.
-
-       For more information, see :ref:`c2c-permissions-and-roles`.
+       to ``sourceAndDestination``.
+       
+       .. include:: /includes/fact-permissions-body.rst
 
        This option is not supported for the following configurations:
 
