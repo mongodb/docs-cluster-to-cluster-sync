@@ -141,10 +141,11 @@ Request Body Parameters
          cluster while migration is in progress, and unblocks writes right
          before ``canWrite`` is ``true``.
 
-       To reverse sync, the ``enableUserWriteBlocking`` field must be set
-       to ``"sourceAndDestination"``.
-       
        .. include:: /includes/fact-permissions-body.rst
+       
+       To reverse sync, the user must have assigned the :authrole:`restore`
+       role for both source and destination and the ``enableUserWriteBlocking``
+       field must be set to ``"sourceAndDestination"``.
        
        To allow the source cluster to accept writes again, for example
        after running migration tests, run the following command: 
@@ -179,10 +180,11 @@ Request Body Parameters
      - If set to ``true``, enables the sync operation to be
        reversed.
 
-       To reverse sync, the ``enableUserWriteBlocking`` field must be set
-       to ``sourceAndDestination``.
-       
        .. include:: /includes/fact-permissions-body.rst
+       
+       To reverse sync, the user must have assigned the :authrole:`restore`
+       role for both source and destination and the ``enableUserWriteBlocking``
+       field must be set to ``sourceAndDestination``.
 
        This option is not supported for the following configurations:
 
