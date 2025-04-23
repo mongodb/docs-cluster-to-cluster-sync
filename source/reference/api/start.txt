@@ -35,8 +35,8 @@ Permissions
 
 The user specified in the ``mongosync`` connection string must have the
 required permissions on the source and destination clusters. Refer to
-:ref:`user permissions <c2c-permissions-and-roles>` to ensure that the 
-user has the correct permissions to start the synchronization.
+:ref:`<c2c-permissions-and-roles>` to ensure that the user has the
+correct permissions to start the synchronization.
 
 Multiple ``mongosync`` Instances
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
