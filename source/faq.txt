@@ -156,8 +156,9 @@ your configuration must meet the following criteria:
 - Your cluster configurations and connection string options must share at least 
   one common compressor
 
-For more information about network compression configuration options, see  
-:option:`--networkMessageCompressors <mongos --networkMessageCompressors>`.
+For more information about network compression configuration options, see the 
+:option:`--networkMessageCompressors <mongos --networkMessageCompressors>` option
+in the Database Manual.
 
 Which security and authentication options are supported?
 --------------------------------------------------------
