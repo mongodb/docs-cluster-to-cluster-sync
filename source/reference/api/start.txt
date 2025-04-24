@@ -141,7 +141,7 @@ Request Body Parameters
          cluster while migration is in progress, and unblocks writes right
          before ``canWrite`` is ``true``.
 
-       .. include:: /includes/api/facts/reverse-sync.rst
+       .. include:: /includes/api/facts/reverse-sync-requirements.rst
        
        To allow the source cluster to accept writes again, for example
        after running migration tests, run the following command: 
@@ -176,7 +176,7 @@ Request Body Parameters
      - If set to ``true``, enables the sync operation to be
        reversed.
        
-       .. include:: /includes/api/facts/reverse-sync.rst
+       .. include:: /includes/api/facts/reverse-sync-requirements.rst
 
        This option is not supported for the following configurations:
 
